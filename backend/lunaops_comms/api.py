@@ -48,15 +48,19 @@ class RelayIn(BaseModel):
     m0_deg: float | None = None
     epoch_utc: str | None = None
     frame: Literal["J2000", "LME_EPOCH"] | None = None
-    step_s: float = Field(60.0, ge=RL.MIN_STEP_S, le=RL.MAX_STEP_S)
-    grazing_alt_km: float = Field(0.0, ge=0.0, le=500.0)
+    # step and grazing altitude are range-checked by the service, which reports a problem for the relay alone instead of
+    # failing the whole simulation (a schema bound here returned 422 for everything, direct-to-Earth included)
+    step_s: float | None = None
+    grazing_alt_km: float | None = None
     name: str | None = Field(None, max_length=80)
 
 
 class DtnIn(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    volume_mbit: float | None = Field(None, gt=0, le=1e9)
-    rate_kbps: float | None = Field(None, gt=0, le=1e9)
+    # checked by the planner (store_and_forward), which reports why it was not evaluated; a schema bound here returned
+    # 422 for the whole simulation while the user was still typing (e.g. a volume of 0)
+    volume_mbit: float | None = None
+    rate_kbps: float | None = None
     path: Literal["direct_rf", "earth_visible", "relay_rf", "relay_geometric", "any_rf", "any_geometric"] = "direct_rf"
     start_utc: str | None = None
 

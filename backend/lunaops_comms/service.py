@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import threading
 from collections import OrderedDict
 
@@ -38,6 +39,15 @@ _LOCK = threading.Lock()
 
 class CommsInputError(ValueError):
     pass
+
+
+class RelayConfigError(CommsInputError):
+    """The hypothetical relay cannot be simulated with the entered configuration (missing or invalid elements, step or
+    grazing altitude). Reported with the relay only: direct-to-Earth, its link budget and the planner are still computed."""
+
+    def __init__(self, problems: list[str]):
+        self.problems = [p for p in problems if p] or ["The relay configuration is not valid."]
+        super().__init__("; ".join(self.problems))
 
 
 def _iso(et: float) -> str:
@@ -129,12 +139,18 @@ def _margin_series(link, dist_km):
 # ------------------------------------------------------------------ relay (cached per result and orbit)
 def relay_geometry(res: dict, relay_cfg: dict) -> dict:
     el, probs = RL.validate_elements(relay_cfg, parse_utc)
-    if el is None:
-        raise CommsInputError("; ".join(probs))
-    step = float(relay_cfg.get("step_s") or 60.0)
-    graze = float(relay_cfg.get("grazing_alt_km") or 0.0)
-    if not (0.0 <= graze <= 500.0):
-        raise CommsInputError("The grazing altitude must be between 0 and 500 km.")
+    probs = list(probs)
+    # sampling step: 60 s when not given (a numerical sampling choice, not a hardware value); an entered 0 is an error,
+    # not "not given" (it used to be replaced by 60 s silently)
+    step_in, graze_in = relay_cfg.get("step_s"), relay_cfg.get("grazing_alt_km")
+    step = 60.0 if step_in is None else float(step_in)
+    graze = 0.0 if graze_in is None else float(graze_in)
+    if not (math.isfinite(step) and RL.MIN_STEP_S <= step <= RL.MAX_STEP_S):
+        probs.append(f"The relay sampling step must be between {RL.MIN_STEP_S:g} and {RL.MAX_STEP_S:g} s.")
+    if not (math.isfinite(graze) and 0.0 <= graze <= 500.0):
+        probs.append("The grazing altitude must be between 0 and 500 km.")
+    if el is None or probs:
+        raise RelayConfigError(probs)
     key = hashlib.sha256(json.dumps([res["id"], el.__dict__, step, graze], sort_keys=True, default=str).encode()).hexdigest()
     with _LOCK:
         hit = _RELAYS.get(key)
@@ -144,7 +160,7 @@ def relay_geometry(res: dict, relay_cfg: dict) -> dict:
     try:
         g = RL.simulate(el, et0, et1, step, site_of(res), horizon_profile(res), graze)
     except RL.RelayInputError as exc:
-        raise CommsInputError(str(exc))
+        raise RelayConfigError([str(exc)])
     g["elements"] = el
     g["step_s"] = step
     g["grazing_km"] = graze
@@ -168,6 +184,8 @@ def store_and_forward(tl: list[dict] | None, volume_mbit: float | None, rate_kbp
         return {"evaluated": False, "reason": "The chosen path has no evaluated timeline (complete its link budget or relay)."}
     if not volume_mbit or volume_mbit <= 0 or not rate_kbps or rate_kbps <= 0:
         return {"evaluated": False, "reason": "Enter a data volume and a transmission rate greater than 0."}
+    if not (math.isfinite(volume_mbit) and math.isfinite(rate_kbps)) or volume_mbit > 1e9 or rate_kbps > 1e9:
+        return {"evaluated": False, "reason": "The data volume and the transmission rate must not exceed 1e9 (Mbit, kbit/s)."}
     need_s = volume_mbit * 1e6 / (rate_kbps * 1e3)
     sent_s, plan = 0.0, []
     for s in tl:
@@ -206,9 +224,15 @@ def simulate(body: dict) -> dict:
     direct_rf, direct_link = rf_timeline(d["visible"], ets, dist, body.get("direct_link"))
     out_rows = {"earth_visible": d["visible"], "terrain_blocked": d["terrain_blocked"], "direct_rf": direct_rf}
     relay_out = None
+    relay_problems = None
     relay_geo_tl = relay_rf_tl = None
+    g = None
     if body.get("relay"):
-        g = relay_geometry(res, body["relay"])
+        try:
+            g = relay_geometry(res, body["relay"])
+        except RelayConfigError as exc:
+            relay_problems = exc.problems
+    if g is not None:
         up_m = _margin_series(body.get("relay_up_link"), g["leg1"]["range_km"])
         dn_m = _margin_series(body.get("relay_down_link"), g["leg2"]["range_km"])
         relay_geo_tl = g["both_tl"]
@@ -268,11 +292,14 @@ def simulate(body: dict) -> dict:
     if dtn_cfg:
         path = dtn_cfg.get("path") or "direct_rf"
         tl = out_rows.get(path)
-        try:
-            start = parse_utc(dtn_cfg["start_utc"]) if dtn_cfg.get("start_utc") else ref_et
-        except Exception:  # noqa: BLE001
-            start = ref_et
-        dtn = {"path": path, **store_and_forward(tl, dtn_cfg.get("volume_mbit"), dtn_cfg.get("rate_kbps"), start, et1)}
+        start, start_problem = ref_et, None
+        if dtn_cfg.get("start_utc"):
+            try:
+                start = parse_utc(dtn_cfg["start_utc"])
+            except Exception as exc:  # noqa: BLE001 - the parser's message is shown
+                start_problem = f"Start time: {exc}"   # never replaced by another time silently
+        dtn = ({"path": path, "evaluated": False, "reason": start_problem} if start_problem else
+               {"path": path, **store_and_forward(tl, dtn_cfg.get("volume_mbit"), dtn_cfg.get("rate_kbps"), start, et1)})
     se = res["series"]
     return plain({
         "comms_version": COMMS_VERSION, "comms_status": VALIDATION_STATUS, "result_id": res["id"],
@@ -286,6 +313,7 @@ def simulate(body: dict) -> dict:
                               "light_time_s": se["earth"]["light_time_s"], "clearance_deg": se["earth"]["c"], "f": se["earth"]["f"]},
                    "link": direct_link},
         "relay": relay_out,
+        "relay_problems": relay_problems,
         "timeline": {k: (None if v is None else W.to_json(v, _iso)) for k, v in out_rows.items()},
         "next": nxt, "comparison": comparison, "dtn": dtn,
         "provenance": provenance(res, body),

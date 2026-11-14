@@ -188,6 +188,9 @@ export interface CommsResult {
     series: { utc: string[]; el_deg: (number | null)[]; clearance_deg: (number | null)[]; range_km: (number | null)[];
       earth_limb_clearance_deg: (number | null)[]; earth_range_km: (number | null)[]; alt_km: (number | null)[]; decimated: boolean };
   };
+  /** why the requested hypothetical relay could not be simulated (missing or invalid elements, step or grazing altitude);
+   *  null when no relay was requested or it was simulated. The rest of the simulation is still computed. */
+  relay_problems?: string[] | null;
   timeline: Record<CommsRow, CommsSegment[] | null>;
   next: Partial<Record<CommsRow, CommsNext | null>>;
   comparison: Record<string, CommsStats | number | null> & { direct_geometric: CommsStats; direct_rf: CommsStats | null;

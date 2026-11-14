@@ -154,10 +154,72 @@ def test_store_and_forward(client):
 
 def test_errors(client):
     assert client.post("/api/comms/simulate", json={"result_id": "nope00000"}).status_code == 404
+    # an invalid or incomplete relay is reported with the relay; it no longer fails the whole simulation (see below)
     r = client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "relay": {**RELAY, "e": 1.5}})
-    assert r.status_code == 422 and "Eccentricity" in r.json()["detail"]
-    assert client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "relay": {**RELAY, "a_km": None}}).status_code == 422
+    assert r.status_code == 200 and r.json()["relay"] is None
+    assert any("Eccentricity" in p for p in r.json()["relay_problems"])
+    r = client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "relay": {**RELAY, "a_km": None}})
+    assert r.status_code == 200 and "Semi-major axis (km) is missing" in r.json()["relay_problems"]
     assert client.post("/api/comms/linkbudget", json={"link": {}, "distance_km": 384400}).json()["complete"] is False
+    assert client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "relay": {**RELAY, "bogus": 1}}).status_code == 422
+
+
+# ---------------------------------------------------------------- regression tests, communication repair 2026-11-14
+def test_incomplete_relay_does_not_block_direct_to_earth(client):
+    """Turning the relay on sends an orbit with only its epoch. That used to return 422 for the whole simulation, so the
+    direct-to-Earth panel, its link budget and the planner stopped updating until every element was typed."""
+    base = client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "direct_link": FULL}).json()
+    r = client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "direct_link": FULL,
+                                                 "relay": {"epoch_utc": "2026-11-13T00:00:00Z"}})
+    assert r.status_code == 200
+    d = r.json()
+    assert d["relay"] is None and "Eccentricity is missing" in d["relay_problems"]
+    assert "Element frame is missing" in d["relay_problems"]
+    assert d["direct"]["link"]["complete"] and d["timeline"]["direct_rf"] == base["timeline"]["direct_rf"]
+    assert d["comparison"]["direct_geometric"] == base["comparison"]["direct_geometric"]
+    assert "relay_leg1" not in d["timeline"] and "relay_geometric" not in d["timeline"]   # no relay rows at all
+    assert d["comparison"]["relay_geometric"] is None              # nothing about the relay is claimed
+    ok = client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "relay": RELAY}).json()
+    assert ok["relay_problems"] is None and ok["relay"] is not None
+
+
+def test_relay_step_and_grazing_ranges_are_relay_problems(client):
+    """Out-of-range step or grazing altitude used to fail schema validation (raw 422 JSON for the whole request); an
+    entered step of 0 was silently replaced by 60 s."""
+    for bad in ({"step_s": 5.0}, {"step_s": 0.0}, {"step_s": 7200.0}):
+        d = client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "relay": {**RELAY, **bad}}).json()
+        assert d["relay"] is None and any("sampling step" in p for p in d["relay_problems"]), bad
+    d = client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "relay": {**RELAY, "grazing_alt_km": 600.0}}).json()
+    assert d["relay"] is None and any("grazing altitude" in p for p in d["relay_problems"])
+    d = client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "relay": {**RELAY, "step_s": None}}).json()
+    assert d["relay_problems"] is None and d["relay"]["step_s"] == 60.0    # not given: the documented 60 s sampling step
+
+
+def test_planner_inputs_are_reported_not_rejected(client):
+    """A planner volume or rate of 0 used to fail schema validation for the whole simulation; an invalid start time was
+    silently replaced by the reference time."""
+    body = {"result_id": "synthetic0001", "direct_link": {**FULL, "rb_bps": 1.0}}
+    for dtn in ({"volume_mbit": 0, "rate_kbps": 1.0}, {"volume_mbit": 10.0}, {"rate_kbps": 1.0}, {"volume_mbit": -1, "rate_kbps": 1.0}):
+        r = client.post("/api/comms/simulate", json={**body, "dtn": {**dtn, "path": "direct_rf"}})
+        assert r.status_code == 200 and r.json()["dtn"]["evaluated"] is False and "greater than 0" in r.json()["dtn"]["reason"], dtn
+    big = client.post("/api/comms/simulate", json={**body, "dtn": {"volume_mbit": 2e9, "rate_kbps": 1.0}}).json()["dtn"]
+    assert big["evaluated"] is False and "1e9" in big["reason"]
+    bad = client.post("/api/comms/simulate", json={**body, "dtn": {"volume_mbit": 1.0, "rate_kbps": 1.0, "start_utc": "not a time"}}).json()
+    assert bad["dtn"]["evaluated"] is False and bad["dtn"]["reason"].startswith("Start time")
+    good = client.post("/api/comms/simulate", json={**body, "dtn": {"volume_mbit": 1.0, "rate_kbps": 1.0,
+                                                                    "start_utc": "2026-11-13T06:00:00Z"}}).json()["dtn"]
+    assert good["evaluated"] and good["start_utc"] == "2026-11-13T06:00:00Z"
+
+
+def test_rf_feasible_never_from_geometry_alone(client):
+    """Geometric visibility without a complete budget is never RF-feasible; a negative margin closes every RF window."""
+    none = client.post("/api/comms/simulate", json={"result_id": "synthetic0001"}).json()
+    assert none["timeline"]["direct_rf"] is None and none["comparison"]["direct_rf"] is None and none["comparison"]["any_rf"] is None
+    part = client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "direct_link": {k: v for k, v in FULL.items() if k != "ebn0_req_db"}}).json()
+    assert part["timeline"]["direct_rf"] is None and part["direct"]["link"]["complete"] is False
+    neg = client.post("/api/comms/simulate", json={"result_id": "synthetic0001", "direct_link": {**FULL, "ebn0_req_db": 60.0}}).json()
+    assert neg["direct"]["link"]["margin_db"]["max"] < 0 and neg["comparison"]["direct_rf"]["open_h"] == 0.0
+    assert neg["comparison"]["direct_geometric"]["open_h"] > 0
 
 
 def test_no_reliability_or_ranking_vocabulary(client):

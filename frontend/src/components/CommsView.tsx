@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { api } from "../api/client";
-import type { CommsBreakdown, CommsDtnForm, CommsInputs, CommsLink, CommsLinkForm, CommsRelayForm, CommsRow, CommsStats } from "../api/types";
+import type { CommsBreakdown, CommsDtnForm, CommsInputs, CommsLink, CommsLinkForm, CommsRelayForm, CommsRow, CommsStats, Result } from "../api/types";
 import { S } from "../i18n";
 import { fmtDuration, fmtLatLon, fmtNum, fmtUTC } from "../lib/format";
 import { landingKey, useStore } from "../state/store";
@@ -28,6 +28,16 @@ const num = (v: string | undefined): number | null => (v == null || v.trim() ===
 const scaled = (v: string | undefined, k: number) => { const n = num(v); return n == null ? null : n * k; };
 const same = (a: { lat: number; lon: number }, b: { lat: number; lon: number }) =>
   Math.abs(a.lat - b.lat) < NEAR && Math.abs(((a.lon - b.lon + 540) % 360) - 180) < NEAR;
+/** two UTC instants within one second (settings and results write the same instant in slightly different forms) */
+const sameTime = (a: string | null | undefined, b: string | null | undefined) => {
+  const x = Date.parse(a ?? ""), y = Date.parse(b ?? "");
+  return Number.isFinite(x) && Number.isFinite(y) && Math.abs(x - y) < 1000;
+};
+/** an analysis result the simulation can use: what it was computed for (from the result itself, nothing derived) */
+interface AnalysisRef { id: string; site: { lat: number; lon: number }; window: { start_utc: string; end_utc: string };
+  dte?: string; observerH?: number; observerProfile?: string }
+const refOf = (r: Result): AnalysisRef => ({ id: r.id, site: r.site, window: r.window, dte: r.provenance?.parameters?.rules?.dte,
+  observerH: r.provenance?.parameters?.observer?.height_m, observerProfile: r.provenance?.parameters?.observer?.profile });
 
 function linkBody(f: CommsLinkForm) {
   const p = num(f.power);
@@ -45,7 +55,9 @@ function relayBody(r: CommsRelayForm) {
 }
 
 function body(rid: string, inp: CommsInputs) {
-  const dtnOk = num(inp.dtn.volume) != null && num(inp.dtn.rate) != null;
+  // the planner is sent as soon as either value is entered, so the server can say what is missing or invalid
+  // (it used to be left out until both were valid numbers, and the planner then showed nothing at all)
+  const dtnOk = !!inp.dtn.volume?.trim() || !!inp.dtn.rate?.trim();
   return {
     result_id: rid,
     direct_link: hasAny(inp.direct) ? linkBody(inp.direct) : null,
@@ -176,13 +188,26 @@ export function CommsView() {
   const [cursor, setCursor] = useState(0);
   const running = !!state.job;
 
-  // the analysis result for the selected site: the open one, the one kept while exploring, or the latest in this session
-  const rid = useMemo(() => {
-    if (!site) return null;
-    if (state.result && same(state.result.site, site)) return state.result.id;
-    if (state.parked && same(state.parked.result.site, site)) return state.parked.result.id;
-    return state.history.find((x) => same(x.site, site))?.id ?? null;
-  }, [site, state.result, state.parked, state.history]);
+  // The analysis result for the selected site AND the current Mission parameters (period, Earth-visibility rule,
+  // observer). It used to be chosen by site alone, so after the period or rule changed the tab kept simulating the old
+  // analysis without saying so. An analysis of this site with other settings is still shown, marked as such, with a
+  // button to run the current settings; the open result, the one kept while exploring, then the session history.
+  const ss = state.settings;
+  const pick = useMemo(() => {
+    if (!site) return { rid: null as string | null, stale: false, ref: null as AnalysisRef | null };
+    const cands: AnalysisRef[] = [];
+    if (state.result) cands.push(refOf(state.result));
+    if (state.parked) cands.push(refOf(state.parked.result));
+    for (const x of state.history) cands.push({ id: x.id, site: x.site, window: x.window, dte: x.rules?.dte });
+    const atSite = cands.filter((x) => same(x.site, site));
+    const current = (x: AnalysisRef) => sameTime(x.window.start_utc, ss.start) && sameTime(x.window.end_utc, ss.end)
+      && (x.dte == null || x.dte === ss.dteRule) && (x.observerH == null || Math.abs(x.observerH - ss.observerH) < 1e-9)
+      && (x.observerProfile == null || x.observerProfile === ss.observerProfile);
+    const fresh = atSite.find(current);
+    if (fresh) return { rid: fresh.id, stale: false, ref: fresh };
+    return { rid: atSite[0]?.id ?? null, stale: atSite.length > 0, ref: atSite[0] ?? null };
+  }, [site, state.result, state.parked, state.history, ss.start, ss.end, ss.dteRule, ss.observerH, ss.observerProfile]);
+  const rid = pick.rid;
 
   const seq = useRef(0);
   const reqBody = useMemo(() => (rid ? JSON.stringify(body(rid, inp)) : null), [rid, inp]);
@@ -245,13 +270,16 @@ export function CommsView() {
   return (
     <div className="comms">
       <ViewHeader eyebrow={C.eyebrow} title={C.title} subtitle={site ? fmtLatLon(site.lat, site.lon) : C.noSite}
-                  actions={!rid && site ? <button type="button" className="run-button comms-run" disabled={!covered || running || !state.status?.kernels.loaded}
-                                                  onClick={() => { void analyse(); }}>{running ? S.sidebar.analysing : C.runAnalysis}</button> : undefined} />
+                  actions={(!rid || pick.stale) && site ? <button type="button" className="run-button comms-run" disabled={!covered || running || !state.status?.kernels.loaded}
+                                                  onClick={() => { void analyse(); }}>{running ? S.sidebar.analysing : pick.stale ? C.runCurrent : C.runAnalysis}</button> : undefined} />
       <div className="landing-disclaimer comms-disclaimer" role="note">
         <StatusBadge word={shown?.comms_status ?? C.preliminary} />
         <p>{C.disclaimer}</p>
       </div>
       {error && <p className="hint bad comms-pad" role="alert">{C.failed(error)}</p>}
+      {pick.stale && pick.ref && (
+        <p className="hint warn comms-pad comms-stale" role="status">{C.staleResult(fmtUTC(pick.ref.window.start_utc), fmtUTC(pick.ref.window.end_utc))}</p>
+      )}
       {state.job && <p className="hint comms-pad" aria-live="polite">{state.job.message}</p>}
 
       {/* UI review: every Communication card is full width and sized by its own content. The configuration cards used to
@@ -365,6 +393,12 @@ export function CommsView() {
               {R.enable}
             </label>
             <p className="hint warn">{R.hypothetical}</p>
+            {inp.relayOn && shown?.relay_problems && shown.relay_problems.length > 0 && (
+              <div className="comms-relay-problems" role="status">
+                <p className="hint warn">{R.problems}</p>
+                <ul className="hint bad">{shown.relay_problems.map((p, i) => <li key={i}>{p}</li>)}</ul>
+              </div>
+            )}
             {inp.relayOn && (
               <>
                 <div className="comms-relay-fields">
