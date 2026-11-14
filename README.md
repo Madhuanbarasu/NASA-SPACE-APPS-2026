@@ -10,18 +10,34 @@ Two preliminary modules sit beside the scientific engine:
 - **landing hazard screening** from terrain models;
 - **communication simulation**: RF link budgets and a hypothetical relay.
 
-Built for the NASA Space Apps Challenge 2026.
+**NASA Space Apps Challenge 2026** · Event start: **November 14, 2026, 9:00 a.m.** (local time)
 
 > **Read before using any result.**
 > - LUNA-OPS has **no NASA approval or certification** and is **not integrated with the Deep Space Network or LunaNet**.
 > - It does **not** certify a landing site as safe and gives no landing probability, score or recommendation.
 > - Validation status is reported exactly as measured: **V-10 failed** (see [Validation status](#validation-status-2026-11-14)).
 
-![Mission overview](docs/screenshots_current/01-mission-1920.png)
+## Screenshots
 
-| Landing hazard map (Site01, 5 m terrain) | Site analysis: events and intervals |
-|---|---|
-| ![Landing hazard map](docs/screenshots_current/05-landing-hazard-map-site01-1920.png) | ![Events timeline](docs/screenshots_current/03-site-events-timeline-1440.png) |
+**South polar map** — server hillshade of the registered NASA LOLA terrain, with the selected site (Site01, 89.463° S, 222.510° E)
+
+![South polar map](docs/screenshots_current/15-south-polar-map-site01.png)
+
+**3D Moon globe** — south polar view with the selected site (globe imagery is for orientation; elevations come only from LOLA terrain)
+
+![3D Moon globe](docs/screenshots_current/16-3d-moon-globe-site01.png)
+
+**Local terrain in 3D** — 16 km window, vertical exaggeration ×4, NASA PGDA 90 20 m LOLA heights
+
+![Local terrain, 16 km window, vertical x4](docs/screenshots_current/17-local-terrain-16km-vertical-x4.png)
+
+**Landing hazard map** — preliminary terrain screening at Site01 (5 m terrain): slope layer, depression candidates, landing footprint
+
+![Landing hazard map](docs/screenshots_current/05-landing-hazard-map-site01-1920.png)
+
+**Communication** — mission communication simulation: direct-to-Earth geometry and communication timeline
+
+![Communication simulation](docs/screenshots_current/08-communication-1920.png)
 
 More screenshots: [`docs/screenshots_current/`](docs/screenshots_current/). Feature list: [PROJECT_FEATURES.md](PROJECT_FEATURES.md).
 
@@ -306,7 +322,7 @@ start.py                  one-command launcher
 
 ## Event rules
 
-The Space Apps 2026 Team Formation Guide says project work should not begin before November 14, 2026, 9:00 a.m. local time. This code was written before that date at the team's request. Treat it as a non-competition build unless your Local Lead confirms otherwise.
+NASA Space Apps Challenge 2026 starts on November 14, 2026, at 9:00 a.m. local time. Parts of this project were developed before the event start; eligibility is to be confirmed with the Local Lead.
 
 ## Licence
 

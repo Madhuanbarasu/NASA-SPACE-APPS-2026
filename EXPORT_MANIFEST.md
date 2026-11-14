@@ -7,7 +7,7 @@
 | Intended repository | https://github.com/Madhuanbarasu/NASA-SPACE-APPS-2026 (public) |
 | Export date | 2026-11-14 |
 | Git | Not initialised; nothing pushed |
-| Size | **4,750 files, about 527 MB.** 477.5 MB of that is PNG screenshots in `docs/validation_evidence/`; code and documentation are about 4 MB. |
+| Size | **4,753 files, about 529 MB** (excluding `.git`). 477.5 MB of that is PNG screenshots in `docs/validation_evidence/`; code and documentation are about 4 MB. |
 | Largest file | 1.6 MB. No file is larger than 25 MB, and none exceeds GitHub's 50 MB warning or 100 MB limit. |
 
 ## 1. What is included
@@ -38,7 +38,7 @@
 | New `README.md` | The previous README described the validation status of 2026-11-12, before Phase 7. The new one states the current status (V-10 Failed, pytest skipped, no Validated label). It keeps setup steps 1–5 and the CI section word for word; the interface refers to "README, step 4". |
 | Previous README moved to `docs/TECHNICAL_REFERENCE_2026-11-12.md` | Kept as the detailed technical reference, with a note at the top saying its validation status is out of date. Text below the note is unchanged. |
 | New `PROJECT_FEATURES.md`, `PRESENTATION_SOURCE_GUIDE.md`, `EXPORT_MANIFEST.md` | Requested documents |
-| New `docs/screenshots_current/` (14 PNG, 4.1 MB) | Copies of the latest screenshots from the evidence folders (the originals stay in place), for the README |
+| New `docs/screenshots_current/` (17 PNG) | Copies of the latest screenshots from the evidence folders (the originals stay in place), plus 3 captured on 2026-11-14 for the README (south polar map, 3D Moon globe, local terrain 16 km ×4) |
 | `data/comms/gm_de440.tpc` removed | NAIF kernel. Not redistributed under licence decision D5. Its URL and SHA-256 are in `data/comms/manifest.json`, and README step 6 shows how to download it. |
 | `data/cache/.gitkeep` added (empty) | Keeps the folder, as in the original repository |
 
@@ -102,7 +102,7 @@ No other personal data was found. Screenshots show only the application (no desk
 
 ## 5. Before uploading
 
-- **Use the Git command line or GitHub Desktop.** The GitHub web uploader accepts at most 100 files per upload, and this export has 4,750 files.
+- **Use the Git command line or GitHub Desktop.** The GitHub web uploader accepts at most 100 files per upload, and this export has 4,753 files.
 - **`.gitignore` (unchanged from the project) ignores `backend/validation/report.json`.** A normal `git add .` therefore leaves out the historical report. Use `git add -f backend/validation/report.json` if it should be published. The Phase 7 interim report in `docs/validation_evidence/` is not ignored.
 - **About 478 MB of the 527 MB is evidence screenshots.** This is within GitHub's recommended repository size (under 1 GB). Pruning can be done on request.
 - **Before every later commit**, check that `git status` lists no `.env`, `data/dem/*.tif`, `data/kernels/*.bsp` or `data/reference_validation/` files.
