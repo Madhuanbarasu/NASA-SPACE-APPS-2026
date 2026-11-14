@@ -540,6 +540,9 @@ export function LandingView() {
       {a && prov && (
         <section className="landing-card landing-wide" aria-labelledby="landing-provenance">
           <h2 id="landing-provenance">{L.provHeading}</h2>
+          {/* UI simplification: the full provenance is one click away (nothing removed) */}
+          <details className="ws-details">
+          <summary>{S.common.showDetails}</summary>
           <dl className="landing-prov">
             <dt>{L.prov.status}</dt><dd>{prov.validation_status}. {prov.validation_note}</dd>
             <dt>{L.prov.dataset}</dt><dd>{prov.dem.product}{prov.dem.synthetic ? L.prov.synthetic : ""}</dd>
@@ -560,6 +563,7 @@ export function LandingView() {
             {prov.notes.length > 0 && <><dt>{L.prov.notes}</dt><dd><ul>{prov.notes.map((n, i) => <li key={i}>{n}</li>)}</ul></dd></>}
             <dt>{L.prov.limitations}</dt><dd><ul>{prov.limitations.map((n, i) => <li key={i}>{n}</li>)}</ul></dd>
           </dl>
+          </details>
           <button type="button" className="quiet-button" onClick={exportJson}>{L.export}</button>
         </section>
       )}

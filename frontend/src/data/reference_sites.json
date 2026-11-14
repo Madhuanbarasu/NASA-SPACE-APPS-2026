@@ -1,0 +1,450 @@
+{
+ "title": "LUNA-OPS reference mission sites (sourced)",
+ "version": "2026-11-14",
+ "convention": "Latitude in degrees (north positive); longitude in degrees east, 0 to 360 (the app's convention). West longitudes from a source were converted as 360 + lon; no other value was changed. Coordinates are copied from the cited source; rounding is the source's own.",
+ "analysis_scope": "LUNA-OPS analyses only 60-90 S, where NASA LOLA terrain products are registered. Entries outside that band are reference only. For entries inside it, terrain coverage was checked against the registered products on 2026-11-14; the app re-checks coverage live when a site is selected.",
+ "categories": {
+  "landed": "Landed (historical): the spacecraft soft-landed; coordinates are its measured position.",
+  "crashed": "Crashed or impacted: the mission ended in an impact; coordinates are the impact site.",
+  "target": "Intended target, not reached: a published landing target that the spacecraft did not reach."
+ },
+ "sources": {
+  "nssdca_apollo": {
+   "title": "NASA NSSDCA, Apollo Landing Site Coordinates (Lunar Module positions; planetocentric ME system, DE421; from LRO images, Wagner et al., Icarus 283, 2017). Last updated 06 March 2017",
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html"
+  },
+  "lroc_2016": {
+   "title": "LROC (NASA/GSFC/Arizona State University), Spacecraft Related Coordinates - 2016 Update (mean Earth/polar axis system; about +/-15 m). Published 25 November 2016",
+   "url": "https://lroc.im-ldi.com/images/938"
+  },
+  "lroc_1087": {
+   "title": "LROC, Chang'e 4 Lander Coordinates. Published 11 January 2019",
+   "url": "https://lroc.im-ldi.com/images/1087"
+  },
+  "lroc_1172": {
+   "title": "LROC, First Look: Chang'e 5. Published 4 December 2020",
+   "url": "https://lroc.im-ldi.com/images/1172"
+  },
+  "lroc_1374": {
+   "title": "LROC, First Look: Chang'e 6. Published 14 June 2024",
+   "url": "https://lroc.im-ldi.com/images/1374"
+  },
+  "lroc_1314": {
+   "title": "LROC, Chandrayaan-3 Landing Site. Published 5 September 2023",
+   "url": "https://lroc.im-ldi.com/images/1314"
+  },
+  "lroc_1358": {
+   "title": "LROC, JAXA SLIM Landing. Published 26 January 2024",
+   "url": "https://lroc.im-ldi.com/images/1358"
+  },
+  "lroc_1360": {
+   "title": "LROC, Intuitive Machines IM-1 On The Moon! Published 26 February 2024",
+   "url": "https://lroc.im-ldi.com/images/1360"
+  },
+  "lroc_1408": {
+   "title": "LROC, IM-2 Athena Seen Obliquely. Published 10 March 2025",
+   "url": "https://lroc.im-ldi.com/images/1408"
+  },
+  "lroc_1407": {
+   "title": "LROC, Blue Ghost Lunar Lander Seen From Above. Published 7 March 2025",
+   "url": "https://lroc.im-ldi.com/images/1407"
+  },
+  "lroc_1311": {
+   "title": "LROC, Luna 25 Impact Crater. Published 29 November 2023",
+   "url": "https://lroc.im-ldi.com/images/1311"
+  },
+  "lroc_1302": {
+   "title": "LROC, Impact Site of the HAKUTO-R Mission 1 Lunar Lander. Published 23 May 2023",
+   "url": "https://lroc.im-ldi.com/images/1302"
+  },
+  "lroc_1456": {
+   "title": "LROC, ispace Mission 2 SMBC x HAKUTO-R Venture Moon Impact Site. Published 20 June 2025",
+   "url": "https://lroc.im-ldi.com/images/1456"
+  }
+ },
+ "sites": [
+  {
+   "id": "apollo-11",
+   "name": "Apollo 11 (Lunar Module Eagle)",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Crewed landing, 1969",
+   "lat": 0.67416,
+   "lon": 23.47314,
+   "source": "nssdca_apollo",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "apollo-12",
+   "name": "Apollo 12 (Lunar Module Intrepid)",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Crewed landing, 1969",
+   "lat": -3.0128,
+   "lon": 336.5781,
+   "source": "nssdca_apollo",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "apollo-14",
+   "name": "Apollo 14 (Lunar Module Antares)",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Crewed landing, 1971",
+   "lat": -3.64589,
+   "lon": 342.52806,
+   "source": "nssdca_apollo",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "apollo-15",
+   "name": "Apollo 15 (Lunar Module Falcon)",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Crewed landing, 1971",
+   "lat": 26.13239,
+   "lon": 3.6333,
+   "source": "nssdca_apollo",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "apollo-16",
+   "name": "Apollo 16 (Lunar Module Orion)",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Crewed landing, 1972",
+   "lat": -8.9734,
+   "lon": 15.5011,
+   "source": "nssdca_apollo",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "apollo-17",
+   "name": "Apollo 17 (Lunar Module Challenger)",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Crewed landing, 1972",
+   "lat": 20.1911,
+   "lon": 30.7723,
+   "source": "nssdca_apollo",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "surveyor-1",
+   "name": "Surveyor 1",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Robotic soft landing, 1966",
+   "lat": -2.4745,
+   "lon": 316.6602,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "surveyor-3",
+   "name": "Surveyor 3",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Robotic soft landing, 1967",
+   "lat": -3.0162,
+   "lon": 336.582,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "surveyor-5",
+   "name": "Surveyor 5",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Robotic soft landing, 1967",
+   "lat": 1.4551,
+   "lon": 23.1943,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "surveyor-6",
+   "name": "Surveyor 6",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Robotic soft landing, 1967",
+   "lat": 0.4742,
+   "lon": 358.5725,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "surveyor-7",
+   "name": "Surveyor 7",
+   "operator": "NASA",
+   "country": "United States",
+   "category": "landed",
+   "status": "Robotic soft landing, 1968",
+   "lat": -40.9812,
+   "lon": 348.4873,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "luna-16",
+   "name": "Luna 16",
+   "operator": "Soviet space programme",
+   "country": "USSR",
+   "category": "landed",
+   "status": "Robotic soft landing and sample return, 1970",
+   "lat": -0.5137,
+   "lon": 56.3638,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "luna-17",
+   "name": "Luna 17 (lander that carried Lunokhod 1)",
+   "operator": "Soviet space programme",
+   "country": "USSR",
+   "category": "landed",
+   "status": "Robotic soft landing, 1970",
+   "lat": 38.23764,
+   "lon": 324.99837,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "luna-20",
+   "name": "Luna 20",
+   "operator": "Soviet space programme",
+   "country": "USSR",
+   "category": "landed",
+   "status": "Robotic soft landing and sample return, 1972",
+   "lat": 3.7863,
+   "lon": 56.6242,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "luna-21",
+   "name": "Luna 21 (lander that carried Lunokhod 2)",
+   "operator": "Soviet space programme",
+   "country": "USSR",
+   "category": "landed",
+   "status": "Robotic soft landing, 1973",
+   "lat": 25.9994,
+   "lon": 30.4076,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "luna-23",
+   "name": "Luna 23",
+   "operator": "Soviet space programme",
+   "country": "USSR",
+   "category": "landed",
+   "status": "Robotic landing, 1974 (hardware located by LRO)",
+   "lat": 12.6667,
+   "lon": 62.1511,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "luna-24",
+   "name": "Luna 24",
+   "operator": "Soviet space programme",
+   "country": "USSR",
+   "category": "landed",
+   "status": "Robotic soft landing and sample return, 1976",
+   "lat": 12.7142,
+   "lon": 62.2129,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "change-3",
+   "name": "Chang'e 3 lander",
+   "operator": "CNSA",
+   "country": "China",
+   "category": "landed",
+   "status": "Robotic soft landing, 2013",
+   "lat": 44.1214,
+   "lon": 340.4883,
+   "source": "lroc_2016",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "change-4",
+   "name": "Chang'e 4 lander",
+   "operator": "CNSA",
+   "country": "China",
+   "category": "landed",
+   "status": "Robotic soft landing on the far side, 2019",
+   "lat": -45.457,
+   "lon": 177.589,
+   "accuracy_m": 20,
+   "source": "lroc_1087",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "change-5",
+   "name": "Chang'e 5 lander",
+   "operator": "CNSA",
+   "country": "China",
+   "category": "landed",
+   "status": "Robotic soft landing and sample return, 2020",
+   "lat": 43.0576,
+   "lon": 308.0839,
+   "elevation_m": -2570,
+   "accuracy_m": 20,
+   "source": "lroc_1172",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "change-6",
+   "name": "Chang'e 6 lander",
+   "operator": "CNSA",
+   "country": "China",
+   "category": "landed",
+   "status": "Robotic far-side landing and sample return, 2024",
+   "lat": -41.6385,
+   "lon": 206.0148,
+   "elevation_m": -5256,
+   "accuracy_m": 30,
+   "source": "lroc_1374",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "slim",
+   "name": "SLIM",
+   "operator": "JAXA",
+   "country": "Japan",
+   "category": "landed",
+   "status": "Robotic landing, 2024",
+   "lat": -13.316,
+   "lon": 25.251,
+   "elevation_m": -912,
+   "source": "lroc_1358",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "blue-ghost-1",
+   "name": "Blue Ghost Mission 1",
+   "operator": "Firefly Aerospace (NASA CLPS)",
+   "country": "United States",
+   "category": "landed",
+   "status": "Commercial robotic landing, 2025",
+   "lat": 18.5623,
+   "lon": 61.8103,
+   "elevation_m": -3650,
+   "source": "lroc_1407",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "chandrayaan-3",
+   "name": "Chandrayaan-3 (Vikram lander)",
+   "operator": "ISRO",
+   "country": "India",
+   "category": "landed",
+   "status": "Robotic soft landing near the south pole, 2023",
+   "lat": -69.3741,
+   "lon": 32.32,
+   "elevation_m": 532,
+   "source": "lroc_1314",
+   "analysis": "eligible"
+  },
+  {
+   "id": "im-1",
+   "name": "IM-1 Odysseus",
+   "operator": "Intuitive Machines (NASA CLPS)",
+   "country": "United States",
+   "category": "landed",
+   "status": "Commercial robotic landing near Malapert A, 2024",
+   "lat": -80.13,
+   "lon": 1.44,
+   "elevation_m": 2579,
+   "source": "lroc_1360",
+   "analysis": "eligible"
+  },
+  {
+   "id": "im-2",
+   "name": "IM-2 Athena",
+   "operator": "Intuitive Machines (NASA CLPS)",
+   "country": "United States",
+   "category": "landed",
+   "status": "Commercial landing on Mons Mouton, 2025; came to rest on its side in a small crater (per LROC)",
+   "lat": -84.7906,
+   "lon": 29.1957,
+   "source": "lroc_1408",
+   "analysis": "eligible"
+  },
+  {
+   "id": "luna-25-target",
+   "name": "Luna 25 intended landing point",
+   "operator": "Roscosmos",
+   "country": "Russia",
+   "category": "target",
+   "status": "Published intended landing point; not reached (the spacecraft crashed about 400 km short, 2023)",
+   "lat": -69.545,
+   "lon": 43.544,
+   "source": "lroc_1311",
+   "analysis": "eligible"
+  },
+  {
+   "id": "luna-25-impact",
+   "name": "Luna 25 impact crater",
+   "operator": "Roscosmos",
+   "country": "Russia",
+   "category": "crashed",
+   "status": "Crashed during descent, 2023",
+   "lat": -57.865,
+   "lon": 61.36,
+   "elevation_m": -360,
+   "accuracy_m": 40,
+   "source": "lroc_1311",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "hakuto-r-1",
+   "name": "HAKUTO-R Mission 1 impact site",
+   "operator": "ispace",
+   "country": "Japan",
+   "category": "crashed",
+   "status": "Crashed during landing, 2023 (LROC: location of the surface change attributed to the impact)",
+   "lat": 47.581,
+   "lon": 44.094,
+   "source": "lroc_1302",
+   "analysis": "reference_only"
+  },
+  {
+   "id": "hakuto-r-2",
+   "name": "HAKUTO-R Mission 2 (RESILIENCE) impact site",
+   "operator": "ispace",
+   "country": "Japan",
+   "category": "crashed",
+   "status": "Crashed during landing, 2025",
+   "lat": 60.4445,
+   "lon": 355.412,
+   "elevation_m": -2431.6,
+   "source": "lroc_1456",
+   "analysis": "reference_only"
+  }
+ ],
+ "coverage_checked": {
+  "date": "2026-11-14",
+  "method": "GET /api/coverage on the registered LOLA products (PGDA 78 Site01 5 m, PGDA 90 20 m, 80 m, 240 m)",
+  "results": {
+   "chandrayaan-3": "covered: 240m",
+   "im-1": "covered: 20m, 80m, 240m",
+   "im-2": "covered: 20m, 80m, 240m",
+   "luna-25-target": "covered: 240m",
+   "all others": "outside 60-90 S: reference only"
+  }
+ }
+}

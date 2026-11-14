@@ -252,13 +252,25 @@ export function MissionView() {
   const st = state.status;
   const nLevels = st ? Object.keys(st.terrain.levels).length : 0;
 
-  const nav: { label: string; icon: IconName; disabled: boolean; go: () => void }[] = [
-    { label: M.navGlobe, icon: "globe", disabled: false, go: () => toExplorer(VIEW.globe) },
-    { label: M.navMap, icon: "map", disabled: false, go: () => toExplorer(VIEW.map) },
-    { label: M.navTerrain, icon: "terrain", disabled: !covered, go: () => toExplorer(VIEW.terrain) },
-    { label: M.navAnalysis, icon: "chart", disabled: !r && !state.parked && !state.history.length, go: () => { void toAnalysis(); } },
-    { label: M.navCompare, icon: "compare", disabled: false, go: toCompare },
+  // UI simplification: the dashboard is one journey (choose a site -> inspect its terrain -> analyse -> compare), each
+  // step with its main action first. Every former shortcut (3D Moon, map, local terrain, analysis, comparison) is in it.
+  type JAction = { label: string; icon?: IconName; disabled: boolean; go: () => void };
+  const hasResultHere = !!site && (!!(cr && sameSite(cr.site, site)) || state.history.some((h) => sameSite(h.site, site)));
+  const journey: { title: string; text: string; done: boolean; actions: JAction[] }[] = [
+    { title: M.j1Title, done: !!site && !!covered, text: site ? M.j1Done(s.siteName || fmtLatLon(site.lat, site.lon)) : M.j1Text,
+      actions: [{ label: M.navMap, icon: "map", disabled: false, go: () => toExplorer(VIEW.map) },
+                { label: M.navGlobe, icon: "globe", disabled: false, go: () => toExplorer(VIEW.globe) }] },
+    { title: M.j2Title, done: hasResultHere, text: covered ? M.j2Text : M.j2Need,
+      actions: [{ label: M.navTerrain, icon: "terrain", disabled: !covered, go: () => toExplorer(VIEW.terrain) }] },
+    { title: M.j3Title, done: hasResultHere, text: hasResultHere ? M.j3Done : M.j3Text,
+      actions: [{ label: busy ? S.sidebar.analysing : E.analyse, disabled: !covered || !kernelsReady || busy || !windowValid(s.start, s.end), go: () => runAnalysis() },
+                { label: M.navAnalysis, icon: "chart", disabled: !r && !state.parked && !state.history.length, go: () => { void toAnalysis(); } }] },
+    { title: M.j4Title, done: sites.length >= 2, text: M.j4Text(sites.length),
+      actions: [{ label: M.navCompare, icon: "compare", disabled: false, go: toCompare },
+                { label: M.addSelected, disabled: !site || selectedIsCandidate, go: addSelected }] },
   ];
+  const nextStep = journey.findIndex((j) => !j.done);
+  const sysOk = !!st && st.kernels.loaded && st.kernels.profile === "production" && nLevels > 0 && !st.terrain.synthetic_in_use;
   // Phase 4: every section of the Phase 3 analysis workspace (the data tables exist in Technical mode only)
   const links: { label: string; id: string; show: boolean }[] = [
     { label: M.linkSummary, id: RESULT_SECTIONS.summary, show: true },
@@ -283,7 +295,30 @@ export function MissionView() {
     <div className="mission">
       <ViewHeader eyebrow={S.shell.eyebrows.mission} title={M.title} subtitle={M.intro} />
 
-      {/* status strip: states and counts the app already holds (GET /api/status and this session) */}
+      <ol className="journey" aria-label={M.journeyLabel}>
+        {journey.map((j, k) => (
+          <li key={j.title} className={`journey-step${j.done ? " is-done" : ""}${k === nextStep ? " is-next" : ""}`}>
+            <span className="journey-n" aria-hidden>{k + 1}</span>
+            <div className="journey-body">
+              <h2 className="journey-title">{j.title}{j.done && <span className="sr-only"> {M.stepDone}</span>}</h2>
+              <p className="journey-text">{j.text}</p>
+              <div className="journey-actions">
+                {j.actions.map((a, ai) => (
+                  <button key={a.label} type="button" className={ai === 0 ? "journey-primary" : "quiet-button"} disabled={a.disabled} onClick={a.go}>
+                    {a.icon && <Icon name={a.icon} />}{a.label}</button>
+                ))}
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      {/* status strip and readiness rows, folded into one line (GET /api/status and this session) */}
+      <details className="mission-system">
+        <summary>
+          <span className={`dot ${sysOk ? "ok" : "warn"}`} aria-hidden />
+          <span>{M.systemLine(!st ? S.common.unknown : st.kernels.loaded ? (st.kernels.profile ?? S.common.unknown) : M.stripNotLoaded, M.stripProducts(nLevels))}</span>
+        </summary>
       <section className="mission-strip" aria-label={M.stripLabel}>
         <dl className="metrics">
           <Metric label={M.stripKernels} value={!st ? S.common.unknown : st.kernels.loaded ? (st.kernels.profile ?? S.common.unknown) : M.stripNotLoaded}
@@ -295,14 +330,14 @@ export function MissionView() {
           <Metric label={M.stripComparison} value={state.compareJob ? M.stripRunning : cmp ? M.stripCells(cmp.sites.length, cmp.windows.length) : M.stripNone} />
         </dl>
       </section>
-
-      <nav className="mission-nav" aria-label={M.navLabel}>
-        {nav.map((n) => (
-          <button key={n.label} type="button" className="quiet-button mission-action" disabled={n.disabled} onClick={n.go}>
-            <Icon name={n.icon} />{n.label}</button>
-        ))}
-      </nav>
-      <p className="hint mission-pad">{M.navNote}</p>
+        {state.statusError ? <p className="hint bad">{S.common.apiUnreachable(state.statusError)}</p> : (
+          <ul className="welcome-status mission-pad">
+            {readinessRows(state).map((row, k) => (
+              <li key={k}><span className={`dot ${row.ok === null ? "" : row.ok ? "ok" : "warn"}`} aria-hidden /> {row.text}</li>
+            ))}
+          </ul>
+        )}
+      </details>
 
       <div className="mission-grid">
         {/* UI review: two independent stacks (selected site and system status; the locator, whose plot fills the height
@@ -330,16 +365,6 @@ export function MissionView() {
                   {state.error && <p className="hint bad" role="alert">{state.error}</p>}
                   <p className="hint">{E.analysisNote}</p>
                 </>
-              )}
-            </section>
-            <section className="mission-card" aria-labelledby="mission-status">
-              <h2 id="mission-status">{M.statusHeading}</h2>
-              {state.statusError ? <p className="hint bad">{S.common.apiUnreachable(state.statusError)}</p> : (
-                <ul className="welcome-status">
-                  {readinessRows(state).map((row, k) => (
-                    <li key={k}><span className={`dot ${row.ok === null ? "" : row.ok ? "ok" : "warn"}`} aria-hidden /> {row.text}</li>
-                  ))}
-                </ul>
               )}
             </section>
           </div>

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { api } from "../api/client";
 import type { CommsBreakdown, CommsDtnForm, CommsInputs, CommsLink, CommsLinkForm, CommsRelayForm, CommsRow, CommsStats, Result } from "../api/types";
 import { S } from "../i18n";
+import { hasAny, linkBody } from "../lib/commsLink";
 import { fmtDuration, fmtLatLon, fmtNum, fmtUTC } from "../lib/format";
 import { landingKey, useStore } from "../state/store";
 import { CommsTimeline, ElevationChart } from "./CommsCharts";
@@ -25,7 +26,6 @@ const LINK_KEYS = ["direct", "up", "down"] as const;
 type LinkKey = (typeof LINK_KEYS)[number];
 const DTN_PATHS = ["direct_rf", "earth_visible", "relay_rf", "relay_geometric", "any_rf", "any_geometric"] as const;
 const num = (v: string | undefined): number | null => (v == null || v.trim() === "" || !isFinite(Number(v)) ? null : Number(v));
-const scaled = (v: string | undefined, k: number) => { const n = num(v); return n == null ? null : n * k; };
 const same = (a: { lat: number; lon: number }, b: { lat: number; lon: number }) =>
   Math.abs(a.lat - b.lat) < NEAR && Math.abs(((a.lon - b.lon + 540) % 360) - 180) < NEAR;
 /** two UTC instants within one second (settings and results write the same instant in slightly different forms) */
@@ -39,14 +39,6 @@ interface AnalysisRef { id: string; site: { lat: number; lon: number }; window: 
 const refOf = (r: Result): AnalysisRef => ({ id: r.id, site: r.site, window: r.window, dte: r.provenance?.parameters?.rules?.dte,
   observerH: r.provenance?.parameters?.observer?.height_m, observerProfile: r.provenance?.parameters?.observer?.profile });
 
-function linkBody(f: CommsLinkForm) {
-  const p = num(f.power);
-  return { pt_w: f.powerUnit === "dbw" ? null : p, pt_dbw: f.powerUnit === "dbw" ? p : null, gt_dbi: num(f.gt), ltx_db: num(f.ltx),
-    gr_dbi: num(f.gr), lrx_db: num(f.lrx), lother_db: num(f.lother), ts_k: num(f.ts), freq_hz: scaled(f.freqMHz, 1e6),
-    bandwidth_hz: scaled(f.bwkHz, 1e3), rb_bps: scaled(f.rbkbps, 1e3), ebn0_req_db: num(f.ebn0),
-    basis: f.basis === "specification" ? "specification" : "illustrative", reference: f.reference?.trim() || null };
-}
-const hasAny = (f: CommsLinkForm) => Object.entries(f).some(([k, v]) => k !== "basis" && k !== "powerUnit" && !!v && v.trim() !== "");
 
 function relayBody(r: CommsRelayForm) {
   return { name: r.name?.trim() || null, a_km: num(r.a), e: num(r.e), i_deg: num(r.i), raan_deg: num(r.raan), argp_deg: num(r.argp),
@@ -513,6 +505,9 @@ export function CommsView() {
       {shown && (
         <section className="landing-card landing-wide" aria-labelledby="comms-provenance">
           <h2 id="comms-provenance">{C.prov.heading}</h2>
+          {/* UI simplification: the full provenance is one click away (nothing removed) */}
+          <details className="ws-details">
+          <summary>{S.common.showDetails}</summary>
           <dl className="landing-prov">
             <dt>{C.prov.status}</dt><dd>{shown.provenance.status}. {shown.provenance.status_note}</dd>
             <dt>{C.prov.engine}</dt><dd className="mono">{C.prov.engineValue(shown.provenance.engine.result_id, shown.provenance.engine.algorithm_version, String(shown.provenance.engine.code_fingerprint).slice(0, 16))}</dd>
@@ -531,6 +526,7 @@ export function CommsView() {
               <li>{C.prov.refLsp}</li><li>{C.prov.refDtn}</li><li>{C.prov.refGm}</li>
             </ul></dd>
           </dl>
+          </details>
         </section>
       )}
     </div>

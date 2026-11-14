@@ -1,0 +1,35 @@
+PASS navigation tab names Mission | Explore & analyse | Landing terrain | Communication | Compare sites | Guide
+PASS catalogue lists sourced sites, search works 30 entries; hit: ANALYSABLE (60-90° S, NASA LOLA TERRAIN) Chandrayaan-3 (Vikram lander) Landed · Robotic soft landing near the south pole
+PASS catalogue entry links its source https://lroc.im-ldi.com/images/1314
+PASS selecting a catalogue site fills coordinates and name; coverage checked -69.374100 32.320000 Chandrayaan-3 (Vikram lander) / Terrain coverage: 240m LOLA levels.
+PASS reference-only site: no analysis possible No terrain-adjusted results here: The registered LOLA products cover 60-90 S only (south-pole-first 
+PASS 7-day preset sets the end 2026-11-20T00:00
+PASS 1-day preset 
+PASS lunar-day preset (29.53 d) 2026-12-12T12:44
+PASS advanced settings folded with a summary; fields still present ADVANCED SETTINGS Surface observer · sunlit: Any part · Earth: Centre
+PASS mission journey: 4 steps, next step highlighted journey-step is-done:Choose a site (done) | journey-step is-next:Inspect the terrain | journey-step:Analyse sunlight and Earth | journey-step:Compare sites
+PASS system status folded into one line System status: NAIF kernels production; LOLA terrain 4 products. Show details
+PASS guide: five steps and a Data link 
+PASS guide step opens its tab 
+PASS map legend lists sourced mission sites 
+PASS globe legend: mission sites inside and outside coverage 
+PASS result: section bar present 
+PASS result: validation details folded, open on request 
+PASS builder: selected site + a mission site added 2 sites
+PASS compare opens on the Summary Each panel compares the sites for one objective using the calculated values. Nothing is combined into a score: a site is called Favourable only for criteria you
+PASS leads stated with values Most sunlight: Chandrayaan-3 (Vikram lander) (82.
+PASS without criteria: Not assessed, values still shown 
+PASS RF: Not assessed without a link budget 
+PASS criteria give Favourable / Needs review with reasons Sunlit at least (%) Longest darkness at most (h)
+PASS terrain screened at every site with product and findings Preliminary terrain assessment Slope, roughness, relief and depression candidates in a landing footprint at each site, from NASA LOLA terrain. A preliminary screening, not a safety certificate; boulders are not detectable. Screen the terrain at all sites Site 
+PASS coarse 240 m site reported as Insufficient data / too coarse 
+PASS never claims safety 
+PASS RF evaluated per site from the user's link budget RF-feasible link needs your own link budget as well.
+PASS Matrix view keeps cards, matrix and CSV 
+PASS Charts view renders charts 
+PASS Landing screening still works; provenance folded 
+PASS Communication tab still shows direct-to-Earth; provenance folded 
+PASS no console errors []
+PASS no failed API requests []
+SUMMARY 33/33
+exit 0

@@ -3,6 +3,8 @@ import { S } from "../i18n";
 import { PANEL_NAMES, RULE_NAMES, fmtLatLon, fromInputValue, toInputValue } from "../lib/format";
 import { lon360, parseSite } from "../lib/moonGeo";
 import { windowValid } from "../lib/timeWindow";
+import { REF_SITES, REF_VERSION, refSource, searchRefSites } from "../lib/referenceSites";
+import { useState } from "react";
 import { useStore } from "../state/store";
 import { Icon } from "../ui/Icon";
 
@@ -54,6 +56,20 @@ export function Sidebar({ open, onClose }: SidebarProps) {
   const azUsed = lon360(s.panelAz);
   const canRun = coordsGiven && cov?.covered && kernelsReady && !busy && !windowBad;
 
+  // sourced reference mission sites: searchable; analysable ones (60-90 S) first, the rest marked reference only
+  const [refQuery, setRefQuery] = useState("");
+  const refHits = searchRefSites(refQuery);
+  const pickRef = (id: string) => {
+    const r = REF_SITES.find((x) => x.id === id);
+    if (r) set({ lat: r.lat.toFixed(6), lon: r.lon.toFixed(6), siteName: r.name, siteId: null });
+  };
+  // quick date ranges: the end moves, the start stays (UTC)
+  const preset = (days: number) => {
+    const t0 = Date.parse(s.start);
+    if (!Number.isFinite(t0)) return;
+    set({ end: new Date(t0 + days * 86400_000).toISOString().replace(/\.\d{3}Z$/, "Z") });
+  };
+
   const addToCompare = () => {
     if (!coordsGiven) return;
     // a site without a name is named by its coordinates, in the same format as every other view
@@ -72,7 +88,35 @@ export function Sidebar({ open, onClose }: SidebarProps) {
       </div>
       <section className="side-section">
         <h2>{T.siteHeading}</h2>
-        {state.catalog.length > 0 ? (
+        <details className="ref-sites">
+          <summary>{T.refHeading(REF_SITES.length)}</summary>
+          <div className="field">
+            <label htmlFor="ref-search">{T.refSearch}</label>
+            <input id="ref-search" type="search" placeholder={T.refSearchPlaceholder} value={refQuery} onChange={(e) => setRefQuery(e.target.value)} />
+          </div>
+          {refHits.length === 0 ? <p className="hint">{T.refNone}</p> : (
+            <ul className="ref-list" aria-label={T.refHeading(refHits.length)}>
+              {refHits.map((r, i) => {
+                const src = refSource(r);
+                const first = i === 0 || refHits[i - 1].analysis !== r.analysis;
+                return (
+                  <li key={r.id} className={r.analysis === "eligible" ? "is-eligible" : "is-reference"}>
+                    {first && <p className="ref-group">{r.analysis === "eligible" ? T.refEligible : T.refReferenceOnly}</p>}
+                    <button type="button" aria-pressed={s.siteName === r.name && Math.abs(Number(s.lat) - r.lat) < 1e-6} onClick={() => pickRef(r.id)}>
+                      <span className="site-name">{r.name}</span>
+                      <span className="site-meta">{`${T.refCategory[r.category]} · ${r.status}`}</span>
+                      <span className="site-meta mono">{fmtLatLon(r.lat, r.lon)}</span>
+                    </button>
+                    {src && <a className="ref-source" href={src.url} target="_blank" rel="noreferrer" title={src.title}>{T.refSource}</a>}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+          <p className="hint">{T.refNote(REF_VERSION)}</p>
+          {state.catalog.length === 0 && <p className="hint">{T.registerHint}</p>}
+        </details>
+        {state.catalog.length > 0 && (
           <ul className="site-list" aria-label={T.curatedSitesLabel}>
             {state.catalog.map((c) => (
               <li key={c.id}>
@@ -84,8 +128,6 @@ export function Sidebar({ open, onClose }: SidebarProps) {
               </li>
             ))}
           </ul>
-        ) : (
-          <p className="empty-note">{state.catalogReason ?? T.loadingCatalogue}</p>
         )}
         <div className="field-row">
           <div className="field">
@@ -128,6 +170,20 @@ export function Sidebar({ open, onClose }: SidebarProps) {
                  aria-invalid={windowBad || undefined} aria-describedby={windowBad ? "window-hint" : undefined} />
         </div>
         {windowBad && <p id="window-hint" className="hint bad" aria-live="polite">{T.invalidWindow}</p>}
+        <div className="segmented date-presets" role="group" aria-label={T.presetsLabel}>
+          <button type="button" onClick={() => preset(1)}>{T.presetDay}</button>
+          <button type="button" onClick={() => preset(7)}>{T.presetWeek}</button>
+          <button type="button" onClick={() => preset(29.530589)}>{T.presetLunarDay}</button>
+        </div>
+        <p className="hint">{T.utcNote}</p>
+      </section>
+
+      <details className="side-advanced">
+        <summary>
+          <span className="adv-title">{T.advancedHeading}</span>
+          <span className="adv-summary">{T.advancedSummary(S.observerProfiles[s.observerProfile], S.ruleOptions[s.sunlitRule], S.ruleOptions[s.dteRule])}</span>
+        </summary>
+      <section className="side-section">
         <div className="field">
           <label htmlFor="step">{T.displayStep}</label>
           <select id="step" value={s.stepMin} onChange={(e) => set({ stepMin: Number(e.target.value) })}>
@@ -189,6 +245,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         )}
         <p className="hint">{T.panelHint}</p>
       </section>
+      </details>
 
       <section className="side-section" style={{ borderBottom: 0 }}>
         <button className="run-button" type="button" disabled={!canRun} onClick={() => runAnalysis()}>

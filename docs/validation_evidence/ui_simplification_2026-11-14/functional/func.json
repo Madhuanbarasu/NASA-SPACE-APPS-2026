@@ -1,0 +1,171 @@
+{
+ "results": [
+  {
+   "name": "navigation tab names",
+   "pass": true,
+   "detail": "Mission | Explore & analyse | Landing terrain | Communication | Compare sites | Guide"
+  },
+  {
+   "name": "catalogue lists sourced sites, search works",
+   "pass": true,
+   "detail": "30 entries; hit: ANALYSABLE (60-90° S, NASA LOLA TERRAIN) Chandrayaan-3 (Vikram lander) Landed · Robotic soft landing near the south pole"
+  },
+  {
+   "name": "catalogue entry links its source",
+   "pass": true,
+   "detail": "https://lroc.im-ldi.com/images/1314"
+  },
+  {
+   "name": "selecting a catalogue site fills coordinates and name; coverage checked",
+   "pass": true,
+   "detail": "-69.374100 32.320000 Chandrayaan-3 (Vikram lander) / Terrain coverage: 240m LOLA levels."
+  },
+  {
+   "name": "reference-only site: no analysis possible",
+   "pass": true,
+   "detail": "No terrain-adjusted results here: The registered LOLA products cover 60-90 S only (south-pole-first "
+  },
+  {
+   "name": "7-day preset sets the end",
+   "pass": true,
+   "detail": "2026-11-20T00:00"
+  },
+  {
+   "name": "1-day preset",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "lunar-day preset (29.53 d)",
+   "pass": true,
+   "detail": "2026-12-12T12:44"
+  },
+  {
+   "name": "advanced settings folded with a summary; fields still present",
+   "pass": true,
+   "detail": "ADVANCED SETTINGS Surface observer · sunlit: Any part · Earth: Centre"
+  },
+  {
+   "name": "mission journey: 4 steps, next step highlighted",
+   "pass": true,
+   "detail": "journey-step is-done:Choose a site (done) | journey-step is-next:Inspect the terrain | journey-step:Analyse sunlight and Earth | journey-step:Compare sites"
+  },
+  {
+   "name": "system status folded into one line",
+   "pass": true,
+   "detail": "System status: NAIF kernels production; LOLA terrain 4 products. Show details"
+  },
+  {
+   "name": "guide: five steps and a Data link",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "guide step opens its tab",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "map legend lists sourced mission sites",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "globe legend: mission sites inside and outside coverage",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "result: section bar present",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "result: validation details folded, open on request",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "builder: selected site + a mission site added",
+   "pass": true,
+   "detail": "2 sites"
+  },
+  {
+   "name": "compare opens on the Summary",
+   "pass": true,
+   "detail": "Each panel compares the sites for one objective using the calculated values. Nothing is combined into a score: a site is called Favourable only for criteria you"
+  },
+  {
+   "name": "leads stated with values",
+   "pass": true,
+   "detail": "Most sunlight: Chandrayaan-3 (Vikram lander) (82."
+  },
+  {
+   "name": "without criteria: Not assessed, values still shown",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "RF: Not assessed without a link budget",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "criteria give Favourable / Needs review with reasons",
+   "pass": true,
+   "detail": "Sunlit at least (%) Longest darkness at most (h)"
+  },
+  {
+   "name": "terrain screened at every site with product and findings",
+   "pass": true,
+   "detail": "Preliminary terrain assessment Slope, roughness, relief and depression candidates in a landing footprint at each site, from NASA LOLA terrain. A preliminary screening, not a safety certificate; boulders are not detectable. Screen the terrain at all sites Site "
+  },
+  {
+   "name": "coarse 240 m site reported as Insufficient data / too coarse",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "never claims safety",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "RF evaluated per site from the user's link budget",
+   "pass": true,
+   "detail": "RF-feasible link needs your own link budget as well."
+  },
+  {
+   "name": "Matrix view keeps cards, matrix and CSV",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Charts view renders charts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Landing screening still works; provenance folded",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Communication tab still shows direct-to-Earth; provenance folded",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "no console errors",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "name": "no failed API requests",
+   "pass": true,
+   "detail": "[]"
+  }
+ ],
+ "failedRequests": [],
+ "console": []
+}

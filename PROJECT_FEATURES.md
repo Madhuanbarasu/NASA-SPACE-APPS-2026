@@ -33,12 +33,21 @@ No quantity currently carries a "Validated" label (see README, Validation status
 - **Text:** all interface text is in one dictionary (`frontend/src/i18n/en.ts`).
 
 ### Mission
+- A four-step planning journey: choose a site → inspect its terrain → analyse sunlight and Earth → compare sites. The next step is highlighted, and each step has its main action.
+- System status (kernels, terrain, validation report) folds into one line with details on request.
 - Selected site, terrain coverage at that point (5/20/80/240 m), system status (kernels, terrain, validation report).
 - Current analysis summary: sunlit time, longest darkness, Earth in view, longest Earth gap, sunlit with Earth in view.
 - South polar locator, candidate sites, analyses of the session, comparison shortcut.
 - Validation badges were removed from this view on 2026-11-14 at the owner's request. The validation record remains on the Data page.
 
-### Site
+### Explore & analyse (Site)
+- Site choice:
+  - search 30 sourced mission sites (Apollo, Surveyor, Luna, Chang'e, SLIM, Blue Ghost, Chandrayaan-3, IM-1, IM-2 and impact sites; NASA NSSDCA and LROC positions);
+  - click the south polar map or the 3D globe, or type coordinates.
+  - Only sites inside 60–90° S can be analysed; the others are marked "Reference only — outside LUNA-OPS terrain coverage".
+- Mission sites appear on the map (inside 60–90° S, with names) and on the globe (all; reference-only ones dimmed). Comparison sites are cyan rings and the selected site is gold.
+- Dates: presets (1 day, 7 days, one lunar day of 29.5 d) and custom start and end, all in UTC. Observer, visibility rules and panel settings sit under "Advanced settings".
+- The analysis result has a section bar that stays in view (Summary, Horizon, Timeline, Sunlight, Earth, Terrain, Validation). Validation details open on request.
 - Horizon panorama (D3) with the Sun and Earth paths.
 - Sunlight and illumination, Earth visibility, events and intervals timeline (with an expandable interval list).
 - Power indicator.
@@ -76,8 +85,22 @@ No quantity currently carries a "Validated" label (see README, Validation status
 - A hypothetical relay orbit (never an actual NASA spacecraft), window algebra and a store-and-forward planner.
 - Geometric visibility is not called a radio link: a link is "RF-feasible" only when the user's budget meets the user's required Eb/N0.
 
-### Compare
-- Several sites × several date windows in one matrix, with links to each cell's result and CSV export.
+### Compare sites
+- **Builder:**
+  - several sites × several date windows;
+  - quick-add the selected site or a sourced mission site inside 60–90° S;
+  - add the panel's dates or one synodic month later.
+- **Summary (opens first):** answers "which site is better for what".
+  - **Trade-offs at a glance:** the leader per objective, or "no clear leader".
+  - **Sunlight:** % sunlit, sunlit time, longest darkness, windows, power indicator (Estimated), highest Sun elevation, first sunrise and sunset.
+  - **Earth and communication:** % Earth in view, longest gap, windows, sunlit with Earth in view, Earth elevation and azimuth, clearance above the horizon. RF-feasible time appears only after "Evaluate RF with my Communication link budget"; otherwise "Not assessed".
+  - **Preliminary terrain assessment:** "Screen the terrain at all sites" runs the Landing method per site and reports slope, roughness, relief, depression candidates, product, footprint size and data coverage. A product that is too coarse is reported as Insufficient data.
+- **Assessments:**
+  - optional user criteria, none pre-filled;
+  - each site gets Favourable / Needs review / Insufficient data / Not assessed, with the exact values and reasons;
+  - leads are stated with both values, and ties or uncertain time are flagged;
+  - no overall score.
+- **Matrix and Charts:** as before; links to each cell's result and CSV export.
 
 ### Guide
 - How to read the results, labels and limitations.

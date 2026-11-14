@@ -1,0 +1,216 @@
+{
+ "consoleErrors": [],
+ "screenshotTimeouts": [],
+ "layout": [
+  {
+   "view": "mission",
+   "width": 1920,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "site",
+   "width": 1920,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "landing",
+   "width": 1920,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "comms",
+   "width": 1920,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "compare",
+   "width": 1920,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "guide",
+   "width": 1920,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "data",
+   "width": 1920,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "mission",
+   "width": 1440,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "site",
+   "width": 1440,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "landing",
+   "width": 1440,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "comms",
+   "width": 1440,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "compare",
+   "width": 1440,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "guide",
+   "width": 1440,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "data",
+   "width": 1440,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "mission",
+   "width": 1024,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "site",
+   "width": 1024,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "landing",
+   "width": 1024,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "comms",
+   "width": 1024,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "compare",
+   "width": 1024,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "guide",
+   "width": 1024,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "data",
+   "width": 1024,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "mission",
+   "width": 390,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "site",
+   "width": 390,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "landing",
+   "width": 390,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "comms",
+   "width": 390,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "compare",
+   "width": 390,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "guide",
+   "width": 390,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "data",
+   "width": 390,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "mission",
+   "width": 320,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "site",
+   "width": 320,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "landing",
+   "width": 320,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "comms",
+   "width": 320,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "compare",
+   "width": 320,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "guide",
+   "width": 320,
+   "hscroll": false,
+   "outside": 0
+  },
+  {
+   "view": "data",
+   "width": 320,
+   "hscroll": false,
+   "outside": 0
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+/* LUNA-OPS 2.0 UI simplification (2026-11-14): the sourced mission-site picker, date presets, the collapsible
+   advanced settings and the Guide's getting-started steps. Same tokens and palette as the rest of the app. */
+
+/* ---------------------------------------------------------------- mission-site picker (sidebar) */
+.ref-sites { margin: 0 0 12px; border: 1px solid var(--line-soft); border-radius: var(--r-s); background: var(--panel); }
+.ref-sites > summary { cursor: pointer; padding: 9px 12px; font-weight: 600; font-size: var(--fs-s); list-style-position: inside; }
+.ref-sites > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.ref-sites[open] > summary { border-bottom: 1px solid var(--line-soft); }
+.ref-sites > .field, .ref-sites > .hint { margin: 10px 12px; }
+.ref-list { list-style: none; margin: 0; padding: 0; max-height: 300px; overflow-y: auto; border-top: 1px solid var(--line-soft); }
+.ref-list li { position: relative; }
+.ref-list .ref-group { margin: 0; padding: 8px 12px 4px; font-size: var(--fs-2xs); font-weight: 650; letter-spacing: var(--tracking-label);
+  text-transform: uppercase; color: var(--muted); background: var(--panel-raised); }
+.ref-list li.is-eligible .ref-group { color: var(--accent); }
+.ref-list li button { width: 100%; text-align: left; background: none; border: 0; padding: 8px 64px 8px 12px; cursor: pointer;
+  display: grid; gap: 2px; color: inherit; }
+.ref-list li + li button { border-top: 1px solid var(--line-soft); }
+.ref-list li button:hover, .ref-list li button[aria-pressed="true"] { background: var(--panel-raised); }
+.ref-list li button[aria-pressed="true"] { box-shadow: inset 3px 0 0 var(--accent); }
+.ref-list .site-name { font-weight: 560; }
+.ref-list .site-meta { font-size: var(--fs-xs); color: var(--muted); }
+.ref-list li.is-reference .site-name { color: var(--muted); }
+.ref-source { position: absolute; right: 12px; bottom: 9px; font-size: var(--fs-xs); }
+
+/* ---------------------------------------------------------------- dates and advanced settings (sidebar) */
+.date-presets { margin-top: 10px; }
+.date-presets button { font-size: var(--fs-xs); }
+.side-advanced { border-bottom: 1px solid var(--line-soft); }
+.side-advanced > summary { cursor: pointer; padding: 12px 0; display: grid; gap: 2px; list-style: none; }
+.side-advanced > summary::-webkit-details-marker { display: none; }
+.side-advanced > summary::before { content: "▸"; float: left; margin-right: 8px; color: var(--accent); }
+.side-advanced[open] > summary::before { content: "▾"; }
+.side-advanced > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.side-advanced .adv-title { font-size: var(--fs-2xs); font-weight: 650; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--muted); }
+.side-advanced .adv-summary { font-size: var(--fs-xs); color: var(--faint); padding-left: 18px; }
+.side-advanced > .side-section:last-child { border-bottom: 0; }
+
+/* ---------------------------------------------------------------- Guide: getting started */
+.guide-start { margin-top: 8px; }
+.guide-steps { list-style: none; padding: 0; margin: 14px 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.guide-step { width: 100%; height: 100%; text-align: left; display: grid; gap: 6px; align-content: start; padding: 14px 16px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-m); color: inherit; cursor: pointer; }
+.guide-step:hover { border-color: var(--accent-line); background: var(--panel-raised); }
+.guide-step:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.guide-step strong { color: var(--accent); font-size: var(--fs-m); }
+.guide-step span { color: var(--muted); font-size: var(--fs-s); line-height: 1.45; }
+.guide-data-link { font-weight: 600; }
+
+/* ---------------------------------------------------------------- Mission: the planning journey */
+.journey { list-style: none; margin: 4px var(--gutter) 14px; padding: 0; display: grid; gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); counter-reset: none; }
+.journey-step { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: start; padding: 16px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-m); }
+.journey-step.is-next { border-color: var(--accent-line); box-shadow: inset 0 3px 0 var(--accent); }
+.journey-n { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-weight: 700;
+  border: 1.5px solid var(--line-strong); color: var(--muted); }
+.journey-step.is-next .journey-n { border-color: var(--accent); color: var(--accent); }
+.journey-step.is-done .journey-n { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.journey-body { display: grid; gap: 6px; min-width: 0; }
+.journey-title { margin: 0; font-size: var(--fs-m); font-weight: 650; }
+.journey-text { margin: 0; color: var(--muted); font-size: var(--fs-s); line-height: 1.45; }
+.journey-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.journey-actions button { display: inline-flex; align-items: center; gap: 6px; }
+.journey-primary { min-height: 34px; padding: 6px 12px; border-radius: var(--r-s); border: 1px solid var(--accent-line);
+  background: var(--accent-soft); color: var(--text); font-weight: 600; cursor: pointer; }
+.journey-primary:hover:not(:disabled) { background: var(--panel-hover); border-color: var(--accent); }
+.journey-primary:disabled { opacity: 0.55; cursor: not-allowed; }
+.journey-primary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.mission-system { margin: 0 var(--gutter) 16px; border: 1px solid var(--line-soft); border-radius: var(--r-m); background: var(--panel); }
+.mission-system > summary { cursor: pointer; padding: 10px 14px; display: flex; align-items: center; gap: 8px; font-size: var(--fs-s); color: var(--muted); }
+.mission-system > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.mission-system[open] > summary { border-bottom: 1px solid var(--line-soft); }
+.mission-system .mission-strip { margin: 12px 14px; }
+@media (max-width: 1100px) { .journey { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .journey { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------------------------------------------------------------- Compare: views and the summary */
+.cmp-viewbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 6px var(--gutter) 4px; }
+.cmp-views { min-width: min(100%, 360px); }
+.cmp-summary { display: grid; gap: 16px; }
+.cmp-criteria { border: 1px solid var(--line); border-radius: var(--r-m); background: var(--panel); padding: 0 14px; }
+.cmp-criteria > summary { cursor: pointer; padding: 11px 0; font-weight: 600; }
+.cmp-criteria > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.crit-groups { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 8px 0 12px; }
+.crit-groups fieldset { border: 1px solid var(--line-soft); border-radius: var(--r-s); padding: 8px 12px 10px; margin: 0; display: grid; gap: 8px; }
+.crit-groups legend { padding: 0 4px; font-size: var(--fs-xs); font-weight: 650; color: var(--muted); }
+.objective { border: 1px solid var(--line); border-radius: var(--r-m); background: var(--panel); padding: 14px 16px; min-width: 0; }
+.objective > h3 { margin: 0 0 4px; font-size: var(--fs-l); }
+.obj-sun { box-shadow: inset 4px 0 0 var(--sun); }
+.obj-earth { box-shadow: inset 4px 0 0 var(--earth); }
+.obj-terrain { box-shadow: inset 4px 0 0 var(--alert); }
+.obj-trade { box-shadow: inset 4px 0 0 var(--accent); }
+.lead-list, .trade-list { margin: 8px 0; padding-left: 20px; display: grid; gap: 4px; }
+.lead-list li, .trade-list li { line-height: 1.45; }
+.trade-list li { font-weight: 600; }
+.obj-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 6px 0 10px; }
+.obj-actions .hint { margin: 0; }
+.obj-table th, .obj-table td { vertical-align: top; }
+.obj-table td.rf-cell { min-width: 160px; }
+.verdict { display: inline-block; font-size: var(--fs-xs); font-weight: 650; padding: 2px 9px; border-radius: var(--r-pill); border: 1px solid var(--line-strong); white-space: nowrap; }
+.verdict.is-favourable { color: var(--valid); border-color: rgba(127, 200, 169, 0.6); }
+.verdict.is-review { color: var(--alert); border-color: var(--alert); }
+.verdict.is-insufficient { color: var(--text); border-style: dashed; }
+.verdict.is-not_assessed { color: var(--muted); }
+.verdict-why { margin: 6px 0 0; padding-left: 16px; font-size: var(--fs-xs); color: var(--muted); display: grid; gap: 2px; min-width: 200px; }
+p.verdict-why { padding-left: 0; }
+.verdict-why .is-unmet { color: var(--alert); }
+
+/* layout fixes after the first check: icon size in the journey buttons, compact objective tables */
+.journey-actions svg { width: 16px; height: 16px; flex: none; }
+.journey-actions button { white-space: nowrap; }
+.obj-table { font-size: var(--fs-s); }
+.obj-table th[scope="row"] { min-width: 120px; }
+.obj-table .verdict-why { min-width: 180px; max-width: 280px; }
+
+/* ---------------------------------------------------------------- progressive disclosure and the result's section bar */
+.ws-details > summary { cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; margin: 4px 0 10px;
+  border: 1px solid var(--line); border-radius: var(--r-pill); font-size: var(--fs-s); font-weight: 600; color: var(--muted); list-style: none; }
+.ws-details > summary::-webkit-details-marker { display: none; }
+.ws-details > summary::before { content: "▸"; color: var(--accent); }
+.ws-details[open] > summary::before { content: "▾"; }
+.ws-details > summary:hover { color: var(--text); border-color: var(--accent-line); }
+.ws-details > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.ws-details.ws-pad { margin: 0 var(--gutter); }
+/* the section bar of an analysis result stays in view while scrolling (wide screens, where the main pane scrolls) */
+@media (min-width: 901px) {
+  .section-nav { position: sticky; top: 8px; z-index: 5; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35); }
+}
