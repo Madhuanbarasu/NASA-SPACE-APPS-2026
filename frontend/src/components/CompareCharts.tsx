@@ -5,6 +5,7 @@ import { S } from "../i18n";
 import { fmtPct } from "../lib/format";
 import { useWidth } from "../lib/useWidth";
 import { ChartTooltip } from "../ui/ChartTooltip";
+import { SiteVerdict } from "./SiteVerdict";
 
 // LUNA-OPS 2.0 Phase 3: the comparison charts (loaded on demand with the Compare tab's results). Both draw only values
 // the API returned for each cell (site x window); a cell without a value is listed as Unavailable and never drawn as
@@ -13,16 +14,19 @@ import { ChartTooltip } from "../ui/ChartTooltip";
 const C = S.compare;
 export interface ChartMetric { id: string; label: string; get: (c: CompareCell) => number | null; fmt: (v: number | null) => string; percent: boolean }
 interface Props { cmp: Comparison; metric: ChartMetric; sunlit: (c: CompareCell) => number | null; earth: (c: CompareCell) => number | null;
-  siteName: (si: number) => string; windowName: (wi: number) => string }
+  siteName: (si: number) => string; windowName: (wi: number) => string; sr: string; dr: string }
 
 // categorical colours for sites (none is the Sun gold or Earth blue, which keep their meaning elsewhere)
 const SITE_COLORS = ["#4cc9d6", "#c79bf2", "#9fd27c", "#f29cc4", "#e9dfb8", "#8fb3d1", "#f0a868", "#7fd6c2"];
 const ink = "#e7ecf1", axis = "#a3b1bf", grid = "#2a3a4b";
 
-export function CompareCharts({ cmp, metric, sunlit, earth, siteName, windowName }: Props) {
+export function CompareCharts({ cmp, metric, sunlit, earth, siteName, windowName, sr, dr }: Props) {
   return (
     <div className="compare-charts">
-      <MetricBars cmp={cmp} metric={metric} siteName={siteName} windowName={windowName} />
+      <div className="compare-col">
+        <MetricBars cmp={cmp} metric={metric} siteName={siteName} windowName={windowName} />
+        <SiteVerdict cmp={cmp} win={0} sr={sr} dr={dr} siteName={siteName} />
+      </div>
       <SunEarthScatter cmp={cmp} sunlit={sunlit} earth={earth} siteName={siteName} windowName={windowName} />
     </div>
   );

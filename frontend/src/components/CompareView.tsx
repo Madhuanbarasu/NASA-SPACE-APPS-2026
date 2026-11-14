@@ -10,6 +10,7 @@ import { SectionHeader } from "../ui/SectionHeader";
 import { ViewHeader } from "../ui/ViewHeader";
 import type { ChartMetric } from "./CompareCharts";
 import { CompareSummary } from "./CompareSummary";
+import { SiteVerdict } from "./SiteVerdict";
 
 // LUNA-OPS 2.0 Phase 3: the comparison workspace. The builder (sites and date windows) and the run are unchanged; the
 // results show the sites side by side for one window, the matrix (bars, better/worse shading and label counts as
@@ -198,6 +199,7 @@ export function CompareView() {
           {view === "summary" && (
             <section className="section ws-section" aria-labelledby="cmp-sum-h">
               <SectionHeader id="cmp-sum-h" eyebrow={T.eyebrowCards} title={T.sum.heading} />
+              <SiteVerdict cmp={cmp} win={win} sr={sr} dr={dr} siteName={siteName} />
               <CompareSummary cmp={cmp} win={win} siteName={siteName} sr={sr} dr={dr} pm={pm} />
             </section>
           )}
@@ -295,7 +297,7 @@ export function CompareView() {
             <SectionHeader id="cmp-charts-h" eyebrow={T.eyebrowCharts} title={T.chartsHeading} />
             <Suspense fallback={<p className="hint">{T.chartsLoading}</p>}>
               <CompareCharts cmp={cmp} metric={chartMetric} siteName={siteName} windowName={windowName}
-                             sunlit={(c) => metricById("sunlit").get(c, sr, dr, pm)} earth={(c) => metricById("dte").get(c, sr, dr, pm)} />
+                             sunlit={(c) => metricById("sunlit").get(c, sr, dr, pm)} earth={(c) => metricById("dte").get(c, sr, dr, pm)} sr={sr} dr={dr} />
             </Suspense>
           </section>
           )}
