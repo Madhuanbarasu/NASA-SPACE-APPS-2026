@@ -27,8 +27,6 @@ export interface MoonGlobeProps {
   startAt?: GlobeLocation | null;
   /** LUNA-OPS 2.0 Phase 2: comparison candidates, marked with small rings (the same sites the map marks). */
   candidates?: GlobeLocation[];
-  /** UI simplification: sourced reference mission sites (small dots; dimmed when outside LUNA-OPS terrain coverage) */
-  missions?: (GlobeLocation & { reference: boolean })[];
 }
 
 const G = S.globe;
@@ -56,7 +54,7 @@ type Viewpoint = "nearside" | "farside" | "north" | "south";
 const VIEWPOINTS: Record<Viewpoint, GlobeLocation> = {
   nearside: { lat: 0, lon: 0 }, farside: { lat: 0, lon: 180 }, north: { lat: MAX_LAT, lon: 0 }, south: { lat: -MAX_LAT, lon: 0 } };
 const COLORS = { marker: 0xf2b544, covered: 0x7fc8a9, uncovered: 0xee9a6b, grid: 0x8fb3d1, gridMain: 0xffd98a, axis: 0xcfd8e0,
-  limit: 0x7fc8a9, poleInk: "#ffd98a", candidate: 0x4cc9d6, mission: 0xe8eef5, missionRef: 0x8b9bad };
+  limit: 0x7fc8a9, poleInk: "#ffd98a", candidate: 0x4cc9d6 };
 
 /**
  * Camera distance (globe radii) at which the whole disc spans FIT_HEIGHT of a w x h stage (FIT_WIDTH of its width when
@@ -168,14 +166,6 @@ function marker(): THREE.Group {
 }
 
 /** Comparison candidate: a small ring on the surface (no pin), depth-tested like the selection marker. */
-function missionDot(reference: boolean): THREE.Mesh {
-  const m = new THREE.Mesh(new THREE.CircleGeometry(reference ? 0.006 : 0.008, 20),
-    new THREE.MeshBasicMaterial({ color: reference ? COLORS.missionRef : COLORS.mission, side: THREE.DoubleSide, transparent: true,
-      opacity: reference ? 0.75 : 0.95, polygonOffset: true, polygonOffsetFactor: -4 }));
-  m.renderOrder = 8;
-  return m;
-}
-
 function candidateRing(): THREE.Mesh {
   const m = new THREE.Mesh(new THREE.RingGeometry(0.011, 0.017, 32),
     new THREE.MeshBasicMaterial({ color: COLORS.candidate, side: THREE.DoubleSide, transparent: true, opacity: 0.95,
@@ -207,11 +197,10 @@ interface Ctx {
   /** the whole-disc framing distance for the current stage size */
   fit: () => number;
   candidates: THREE.Group;
-  missions: THREE.Group;
 }
 
 export function MoonGlobe({ selected, onSelect, selectedCovered = null, selectionPanel = true, startAt = null,
-  candidates = [], missions = [] }: MoonGlobeProps) {
+  candidates = [] }: MoonGlobeProps) {
   const host = useRef<HTMLDivElement>(null);
   const startRef = useRef(startAt);   // read once, when the scene is built
   const ctx = useRef<Ctx | null>(null);
@@ -281,8 +270,7 @@ export function MoonGlobe({ selected, onSelect, selectedCovered = null, selectio
     };
     const mk = marker();
     const cands = new THREE.Group();
-    const missionGroup = new THREE.Group();
-    scene.add(mk, cands, missionGroup);
+    scene.add(mk, cands);
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enablePan = false;
@@ -366,7 +354,7 @@ export function MoonGlobe({ selected, onSelect, selectedCovered = null, selectio
     cv.addEventListener("webglcontextlost", onLost);
 
     ctx.current = { renderer, scene, camera, controls, moon, grid: gridGroup, marker: mk, key, ambient, render, sync: onChange,
-      settle, fit: () => fitNow, candidates: cands, missions: missionGroup };
+      settle, fit: () => fitNow, candidates: cands };
 
     // imagery: colour map plus relief (bump) shading; failures leave an untextured sphere and a visible note
     let alive = true;
@@ -463,23 +451,6 @@ export function MoonGlobe({ selected, onSelect, selectedCovered = null, selectio
     }
     c.render();
   }, [candKey, pick?.lat, pick?.lon, phase]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // sourced mission sites: rebuilt when the list changes
-  const missionKey = missions.map((p) => `${p.lat},${p.lon},${p.reference}`).join(";");
-  useEffect(() => {
-    const c = ctx.current;
-    if (!c) return;
-    disposeTree(c.missions);
-    c.missions.clear();
-    for (const p of missions) {
-      const u = latLonToUnit(p.lat, p.lon);
-      const dot = missionDot(p.reference);
-      dot.position.set(u[0] * 1.001, u[1] * 1.001, u[2] * 1.001);
-      dot.lookAt(u[0] * 2, u[1] * 2, u[2] * 2);
-      c.missions.add(dot);
-    }
-    c.render();
-  }, [missionKey, phase]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => { const c = ctx.current; if (c) { c.grid.visible = grid; c.render(); } }, [grid, phase]);
   useEffect(() => {
@@ -600,8 +571,6 @@ export function MoonGlobe({ selected, onSelect, selectedCovered = null, selectio
   const legend: LegendItem[] = [
     ...(pick ? [markerItem] : []),
     ...(candidates.length ? [{ swatch: "ring", color: "var(--candidate)", text: S.stage.candidates } as LegendItem] : []),
-    ...(missions.length ? [{ swatch: "dot", color: "var(--text)", text: G.legendMissions } as LegendItem,
-                           { swatch: "dot", color: "var(--faint)", text: G.legendMissionsRef } as LegendItem] : []),
     { swatch: "line", color: "var(--valid)", text: G.legendLimit },
   ];
   const navButton = (label: string, icon: IconName, onClick: () => void, disabled = false) => (

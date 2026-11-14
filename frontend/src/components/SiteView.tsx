@@ -2,7 +2,6 @@ import { Suspense, lazy, useEffect, useMemo } from "react";
 import { S } from "../i18n";
 import { fmtLatLon } from "../lib/format";
 import { siteCoords, type GlobeLocation } from "../lib/moonGeo";
-import { REF_SITES } from "../lib/referenceSites";
 import { useStore, type SiteViewMode } from "../state/store";
 import { LazyBoundary } from "./LazyBoundary";
 import { SiteExplorer, useSiteCoverage } from "./SiteExplorer";
@@ -16,9 +15,6 @@ const MoonGlobe = lazy(() => import("./MoonGlobe").then((m) => ({ default: m.Moo
 const TerrainPreview = lazy(() => import("./TerrainPreview").then((m) => ({ default: m.TerrainPreview })));
 // welcome-pane views (internal tokens, never displayed); the current one lives in the store (state.siteView)
 const VIEW = { map: "map", globe: "globe", terrain: "terrain" } as const;
-// sourced reference mission sites: the map shows those inside it (60-90 S), the globe all of them (reference only dimmed)
-const MISSIONS_ON_MAP = REF_SITES.filter((r) => r.lat <= -60).map((r) => ({ lat: r.lat, lon: r.lon, name: r.name }));
-const MISSIONS_ON_GLOBE = REF_SITES.map((r) => ({ lat: r.lat, lon: r.lon, reference: r.analysis !== "eligible" }));
 
 function PaneLoading({ text }: { text: string }) {
   return <div className="pane-body"><div className="pane-empty">{text}</div></div>;
@@ -83,14 +79,14 @@ export function SiteView() {
                 {view === VIEW.map && (
                   <Suspense fallback={<PaneLoading text={S.map.loadingTiles} />}>
                     <MapView lat={latN} lon={lonN} catalog={state.catalog} selectedId={s.siteId} onPick={pick}
-                             instruments candidates={candidates} missions={MISSIONS_ON_MAP} />
+                             instruments candidates={candidates} />
                   </Suspense>
                 )}
                 {view === VIEW.globe && (
                   <LazyBoundary fallback={<PaneLoading text={S.globe.loadFailed} />}>
                     <Suspense fallback={<PaneLoading text={S.globe.loadingModule} />}>
                       <MoonGlobe selected={site} onSelect={onGlobePick} selectedCovered={coverage ? coverage.covered : null} selectionPanel={false}
-                                 startAt={site} candidates={candidateLocs} missions={MISSIONS_ON_GLOBE} />
+                                 startAt={site} candidates={candidateLocs} />
                     </Suspense>
                   </LazyBoundary>
                 )}

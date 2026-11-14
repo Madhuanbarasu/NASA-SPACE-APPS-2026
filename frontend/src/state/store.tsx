@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useReducer, useRef, type ReactNode } from "react";
 import { api, waitForJob } from "../api/client";
-import type { CatalogSite, CommsInputs, CommsResult, Comparison, Coverage, Job, LandingAssessment, LandingFinding, LandingFootprint, ObserverProfile, PanelModel, Result, Rule, Status } from "../api/types";
+import type { CatalogSite, CommsInputs, CommsResult, Comparison, Coverage, Job, LandingAssessment, ObserverProfile, PanelModel, Result, Rule, Status } from "../api/types";
 import { S } from "../i18n";
 import { isoNoMs } from "../lib/format";
 import { lon360, parseSite } from "../lib/moonGeo";
@@ -14,16 +14,6 @@ export interface Settings {
   panel: PanelModel; panelAz: number;
 }
 export interface CompareSite { lat: number; lon: number; name: string; id?: string | null }
-/** UI simplification (Compare summary): the preliminary terrain screening of one compared site, copied from
- *  POST /api/landing/assess (nothing derived), or why it could not be run. */
-export interface CompareTerrain { ok: boolean; error?: string; product?: string; pixelM?: number; findings?: LandingFinding[];
-  coverage?: LandingFootprint["coverage"]; pixelsAcross?: number }
-/** the RF evaluation of one comparison cell with the user's direct link budget (POST /api/comms/simulate), or why not */
-export interface CompareRf { ok: boolean; error?: string; complete?: boolean; rfOpenH?: number | null; geoOpenH?: number | null;
-  marginDb?: { min: number; max: number } | null }
-/** extra results fetched for one comparison (keyed by its id, so they are never shown for another comparison) */
-export interface CompareExtra { cmpId: string; terrain?: Record<number, CompareTerrain>; terrainKey?: string;
-  rf?: Record<number, CompareRf>; rfKey?: string }
 export interface CompareWindow { start: string; end: string; label: string }
 export type Tab = "mission" | "site" | "landing" | "comms" | "compare" | "data" | "guide";
 /** Phase 5: which view the Site tab shows before an analysis (kept here so it survives tab switches). */
@@ -68,8 +58,6 @@ export interface State {
   mode: Mode; tab: Tab;
   compareSites: CompareSite[]; compareWindows: CompareWindow[];
   comparison: Comparison | null; compareJob: Job | null; compareError: string | null; compareMetric: string;
-  /** Compare summary: the user's mission criteria as typed (empty = not set; no defaults) and its extra results */
-  compareCriteria: Record<string, string>; compareExtra: CompareExtra | null;
   /** Phase 5: terrain coverage of the current site coordinates (one lookup shared by the sidebar, explorer and globe);
    *  `coverageFor` is the "lat,lon" text it was fetched for, so a stale answer is never shown for new coordinates. */
   coverage: Coverage | null; coverageError: string | null; coverageFor: string | null;
@@ -137,8 +125,6 @@ type Action =
   | { type: "compareJob"; job: Job | null }
   | { type: "compareError"; error: string | null }
   | { type: "compareMetric"; metric: string }
-  | { type: "compareCriteria"; criteria: Record<string, string> }
-  | { type: "compareExtra"; extra: CompareExtra | null }
   | { type: "coverage"; coverage: Coverage | null; error: string | null; key: string | null }
   | { type: "siteView"; view: SiteViewMode }
   | { type: "closeResult" } | { type: "restoreResult" }
@@ -164,7 +150,7 @@ const initial: State = {
               panel: "vertical_tracking", panelAz: 0 },
   result: null, job: null, error: null, cursor: 0, playing: false, mode: "technical", tab: "site",
   compareSites: [], compareWindows: [], comparison: null, compareJob: null, compareError: null,
-  compareMetric: "sunlit", compareCriteria: {}, compareExtra: null, coverage: null, coverageError: null, coverageFor: null, siteView: "map", history: [], parked: null,
+  compareMetric: "sunlit", coverage: null, coverageError: null, coverageFor: null, siteView: "map", history: [], parked: null,
   landing: null, landingSummaries: [], landingRequest: null,
   comms: null, commsInputs: EMPTY_COMMS_INPUTS, commsSummaries: [], commsRequest: null,
 };
@@ -209,8 +195,6 @@ function reducer(s: State, a: Action): State {
     case "compareJob": return { ...s, compareJob: a.job };
     case "compareError": return { ...s, compareError: a.error };
     case "compareMetric": return { ...s, compareMetric: a.metric };
-    case "compareCriteria": return { ...s, compareCriteria: a.criteria };
-    case "compareExtra": return { ...s, compareExtra: a.extra };
     case "coverage": return { ...s, coverage: a.coverage, coverageError: a.error, coverageFor: a.key };
     case "siteView": return { ...s, siteView: a.view };
     case "closeResult": return s.result ? { ...s, parked: { result: s.result, cursor: s.cursor }, result: null, playing: false } : s;

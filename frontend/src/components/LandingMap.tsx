@@ -34,6 +34,8 @@ proj4.defs("LUNAOPS:SPS", SPS);
 proj4.defs("LUNAOPS:GEO", "+proj=longlat +R=1737400 +no_defs");
 register(proj4);
 const R_MOON = 1737400;
+/** DEM pixel size (m) from which the hazard layers are drawn smoothed (80 m and 240 m products) */
+const COARSE_PIXEL_M = 80;
 const toXY = (lon: number, lat: number) => proj4("LUNAOPS:GEO", "LUNAOPS:SPS", [lon > 180 ? lon - 360 : lon, lat]);
 const toLonLat = (x: number, y: number) => proj4("LUNAOPS:SPS", "LUNAOPS:GEO", [x, y]);
 /** point scale of the projection: map distance = k x distance on the sphere */
@@ -101,6 +103,7 @@ export function LandingMap({ assessment, layers, slopeThreshold, footprint, onMo
   const idRef = useRef(assessment.id);
   idRef.current = assessment.id;
   const extent = assessment.extent_xy_m;
+  const coarse = assessment.provenance.dem.pixel_m >= COARSE_PIXEL_M;
 
   // map, backdrop and interactions (once)
   useEffect(() => {
@@ -184,7 +187,9 @@ export function LandingMap({ assessment, layers, slopeThreshold, footprint, onMo
     if (!layers.raster || (layers.raster === "slope_exceed" && slopeThreshold == null)) { L.setSource(null); return; }
     const src = new ImageStatic({
       url: api.landingLayerUrl(assessment.id, layers.raster, layers.raster === "slope_exceed" ? slopeThreshold : null, rev),
-      imageExtent: extent, projection: "LUNAOPS:SPS", interpolate: false,
+      // coarse products (80 m, 240 m: a 3 km window is only 13-40 pixels) are drawn smoothed so the map is readable;
+      // finer products keep one sharp image pixel per DEM pixel. Display only: values, readout and findings are unchanged.
+      imageExtent: extent, projection: "LUNAOPS:SPS", interpolate: coarse,
     });
     // A failed overlay image (for example a screening the server no longer holds) is removed, so no image of another
     // layer stays under this layer's legend; the backdrop, outlines and footprint stay, and LandingView is told.
@@ -197,7 +202,7 @@ export function LandingMap({ assessment, layers, slopeThreshold, footprint, onMo
     });
     L.setSource(src);
     return () => { live = false; };
-  }, [assessment.id, layers.raster, slopeThreshold, extent, rev]);
+  }, [assessment.id, layers.raster, slopeThreshold, extent, rev, coarse]);
   useEffect(() => { rasterRef.current?.setOpacity(layers.opacity); }, [layers.opacity]);
 
   // analysis window outline
@@ -277,6 +282,7 @@ export function LandingMap({ assessment, layers, slopeThreshold, footprint, onMo
         </div>
       </div>
       {tileNote && <div className="pane-note">{tileNote}</div>}
+      {coarse && <div className="pane-note">{S.landing.map.smoothed(fmt(assessment.provenance.dem.pixel_m, 0))}</div>}
     </>
   );
 }

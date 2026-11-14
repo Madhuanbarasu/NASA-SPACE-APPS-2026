@@ -287,3 +287,11 @@
   .section-nav { border-radius: var(--r-m); }
   .countdown + .countdown { border-left: 0; border-top-width: 2px; }
 }
+
+/* preliminary suitability box (Landing footprint, Communication direct-to-Earth) */
+.suit-box { margin: 10px 0; padding: 10px 14px; border: 1px solid var(--line-strong); border-left-width: 4px; border-radius: var(--r-s); background: var(--panel-raised); }
+.suit-box .suit-head { margin: 0 0 4px; font-weight: 700; }
+.suit-box ul { margin: 0; padding-left: 18px; font-size: var(--fs-s); color: var(--muted); display: grid; gap: 2px; }
+.suit-box.is-good { border-left-color: var(--valid); } .suit-box.is-good .suit-head { color: var(--valid); }
+.suit-box.is-limited { border-left-color: var(--sun); } .suit-box.is-limited .suit-head { color: var(--sun); }
+.suit-box.is-poor { border-left-color: var(--alert); } .suit-box.is-poor .suit-head { color: var(--alert); }

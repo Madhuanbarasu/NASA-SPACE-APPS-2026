@@ -65,8 +65,6 @@ interface Props {
    *  edge drawn clearly and comparison candidates. Off in the analysis result, whose map is redesigned in Phase 3. */
   instruments?: boolean;
   candidates?: { lat: number; lon: number; name: string }[];
-  /** UI simplification: sourced reference mission sites inside the map (60-90 S), drawn like catalogue sites with names */
-  missions?: { lat: number; lon: number; name: string }[];
   /** whether the legend starts open on wide screens (Phase 3: closed in the smaller analysis map) */
   legendOpen?: boolean;
 }
@@ -93,7 +91,7 @@ function graticule(): Feature[] {
   return out;
 }
 
-export function MapView({ lat, lon, catalog, selectedId, onPick, instruments = false, candidates = [], missions = [], legendOpen = true }: Props) {
+export function MapView({ lat, lon, catalog, selectedId, onPick, instruments = false, candidates = [], legendOpen = true }: Props) {
   const host = useRef<HTMLDivElement>(null);
   const mapRef = useRef<OlMap | null>(null);
   const siteSrc = useRef(new VectorSource());
@@ -308,13 +306,7 @@ export function MapView({ lat, lon, catalog, selectedId, onPick, instruments = f
         catSrc.current.addFeature(new Feature(new Polygon([c.polygon_latlon.map(([la, lo]) => toXY(lo, la))])));
       }
     }
-    for (const m of missions) {
-      if (m.lat > LIMIT_LAT) continue;
-      const pt = new Feature(new Point(toXY(m.lon, m.lat)));
-      pt.set("name", m.name);
-      catSrc.current.addFeature(pt);
-    }
-  }, [catalog, selectedId, missions]);
+  }, [catalog, selectedId]);
 
   // AUD-08 (pre-Phase 7 audit): the selected site is drawn and named only for coordinates that parseSite accepts (the
   // backend's and the sidebar's rules: a number, latitude -90 to 90, longitude -360 to 360). Out-of-range values (for
@@ -344,7 +336,6 @@ export function MapView({ lat, lon, catalog, selectedId, onPick, instruments = f
     { swatch: "hatch", text: S.map.legendHatched },
     { swatch: "ring", color: "var(--sun)", text: S.map.legendSelected },
     ...(catalog.length ? [{ swatch: "dot", color: "var(--text)", text: S.map.legendCatalogue } as LegendItem] : []),
-    ...(missions.length ? [{ swatch: "dot", color: "var(--text)", text: S.map.legendMissions } as LegendItem] : []),
     ...(candidates.length ? [{ swatch: "ring", color: "var(--candidate)", text: S.stage.candidates } as LegendItem] : []),
   ];
   const readout = pointer ? (pointer.inside ? S.globe.pointer(fmtLatLon(pointer.lat, pointer.lon)) : S.map.pointerOutside)

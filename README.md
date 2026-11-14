@@ -45,21 +45,13 @@ More screenshots: [`docs/screenshots_current/`](docs/screenshots_current/). Feat
 
 | View | Purpose |
 |---|---|
-| **Mission** | A four-step planning journey (choose a site → inspect its terrain → analyse → compare), the selected site, the current analysis and a south polar locator; system status folds into one line |
-| **Explore & analyse** | Pick a site (sourced mission-site search, south polar map, 3D Moon globe or coordinates), then the Sun and Earth analysis: horizon, sunlight, Earth in view, events and intervals, power indicator, local 3D terrain |
-| **Landing terrain** | Preliminary terrain screening:<ul><li>hazard map (elevation, slope, roughness, data coverage, height uncertainty, slope above threshold);</li><li>depression candidates;</li><li>landing-footprint findings.</li></ul> |
+| **Mission** | Overview of the selected site, terrain coverage, system status, current analysis, south polar locator |
+| **Site** | Sun and Earth visibility analysis: horizon, sunlight and illumination, Earth-in-view, events and intervals, power indicator, 3D Moon, south polar map, local 3D terrain |
+| **Landing** | Preliminary terrain hazard screening:<ul><li>hazard map (elevation, slope, roughness, data coverage, height uncertainty, slope above threshold);</li><li>depression candidates;</li><li>landing-footprint findings.</li></ul> |
 | **Communication** | Direct-to-Earth windows from the engine; user-entered RF link budgets; a hypothetical relay orbit; store-and-forward planning |
-| **Compare sites** | Several sites × several date windows. Opens on a **Summary** that answers "which site is better for sunlight, Earth contact and terrain", with the values behind every statement and optional user criteria (Favourable / Needs review / Insufficient data / Not assessed; no default limits, no overall score). The **Matrix** (with CSV export) and **Charts** are one click away |
-| **Guide** | Getting started in five steps, and how to read the results; links to **Data and validation** (`/#data`: data products, provenance and the validation record) |
-
-### Reference mission sites (sourced)
-
-The site search lists 30 lunar landing sites with published positions: Apollo 11–17, Surveyor 1/3/5/6/7, Luna 16/17/20/21/23/24, Chang'e 3/4/5/6, SLIM, Blue Ghost Mission 1, Chandrayaan-3, IM-1, IM-2, plus the Luna 25, HAKUTO-R 1 and 2 impact sites and the Luna 25 intended landing point.
-- **Data file:** [`frontend/src/data/reference_sites.json`](frontend/src/data/reference_sites.json). Every entry carries its operator, category (landed / crashed / intended target, not reached), status and source.
-- **Sources:** the coordinates are copied unchanged from NASA NSSDCA (Apollo; Wagner et al. 2017) and LROC (NASA/GSFC/Arizona State University) publications, as cited in the file.
-- **Analysable entries:** only sites inside 60–90° S can be analysed, because that is where NASA LOLA terrain is registered: Chandrayaan-3, IM-1, IM-2 and the Luna 25 target. Coverage was checked against the registered products, and the app re-checks it live.
-- **Reference only:** every other site is shown on the globe and in the list as "Reference only — outside LUNA-OPS terrain coverage" and cannot be analysed.
-- **Not included:** no Artemis candidate regions or other unverified targets. Your own USGS Artemis III grids or PGDA region files can still be registered (setup step 4).
+| **Compare** | Several sites × several date windows in one matrix, with CSV export |
+| **Guide** | How to read the results |
+| **Data and validation** (`/#data`) | Data products, provenance and the validation record. Reachable by URL; it is no longer in the navigation bar. |
 
 All scientific quantities are computed by the Python engine (`backend/lunaops`). The API serves them unchanged; the browser only displays them.
 

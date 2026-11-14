@@ -361,11 +361,7 @@ export function ResultWorkspace({ r, onPick }: { r: Result; onPick: (lat: number
 
       <section className="ws-section" id={RESULT_SECTIONS.validation} aria-labelledby="result-validation-h">
         <SectionHeader id="result-validation-h" eyebrow={A.eyebrows.validation} title={A.validationHeading} />
-        {/* UI simplification: validation tests, reasons and provenance one click away (nothing removed) */}
-        <details className="ws-details ws-pad">
-          <summary>{S.common.showDetails}</summary>
-          <ValidationPanel r={r} />
-        </details>
+        <ValidationPanel r={r} />
       </section>
 
       <div className="notes">

@@ -1,16 +1,12 @@
 import { Suspense, lazy, useMemo, useState } from "react";
 import type { CompareCell } from "../api/types";
 import { S } from "../i18n";
-import { PANEL_NAMES, RULE_NAMES, fmtDuration, fmtLatLon, fmtNum, fmtPct, fmtUTC, fromInputValue, isoNoMs, toInputValue } from "../lib/format";
+import { PANEL_NAMES, RULE_NAMES, fmtDuration, fmtNum, fmtPct, fmtUTC, fromInputValue, isoNoMs, toInputValue } from "../lib/format";
 import { useStore } from "../state/store";
-import { parseSite } from "../lib/moonGeo";
-import { REF_SITES } from "../lib/referenceSites";
 import { Metric } from "../ui/Metric";
 import { SectionHeader } from "../ui/SectionHeader";
 import { ViewHeader } from "../ui/ViewHeader";
 import type { ChartMetric } from "./CompareCharts";
-import { CompareSummary } from "./CompareSummary";
-import { SiteVerdict } from "./SiteVerdict";
 
 // LUNA-OPS 2.0 Phase 3: the comparison workspace. The builder (sites and date windows) and the run are unchanged; the
 // results show the sites side by side for one window, the matrix (bars, better/worse shading and label counts as
@@ -48,15 +44,6 @@ export function CompareView() {
   const wins = state.compareWindows;
   const setWins = (w: typeof wins) => dispatch({ type: "compareWindows", windows: w });
   const [cardWin, setCardWin] = useState(0);
-  // UI simplification: the results open on the Summary (which site is better for what); Matrix and Charts are one click away
-  const [view, setView] = useState<"summary" | "matrix" | "charts">("summary");
-
-  // quick ways to fill the builder: the site selected in the left panel, or a sourced mission site inside 60-90 S
-  const sel = parseSite(s.lat, s.lon);
-  const inCompare = (lat: number, lon: number) => sites.some((x) => Math.abs(x.lat - lat) < 1e-6 && Math.abs(x.lon - lon) < 1e-6);
-  const selName = sel ? (s.siteName || fmtLatLon(sel.lat, sel.lon)) : "";
-  const addSelected = () => { if (sel && !inCompare(sel.lat, sel.lon)) dispatch({ type: "compareSites", sites: [...sites, { lat: sel.lat, lon: sel.lon, name: selName, id: s.siteId }] }); };
-  const refEligible = REF_SITES.filter((r) => r.analysis === "eligible");
 
   const addCurrentWindow = () => setWins([...wins, { start: s.start, end: s.end, label: T.windowLabel(wins.length + 1) }]);
   const addNextMonth = () => {
@@ -118,19 +105,6 @@ export function CompareView() {
                         aria-label={T.removeSite(x.name)}>{S.common.remove}</button></li>
             ))}
           </ul>
-          <div className="builder-actions">
-            <button className="quiet-button" disabled={!sel || inCompare(sel.lat, sel.lon)} onClick={addSelected}>{T.addSelectedSite(selName || S.common.na)}</button>
-          </div>
-          <details className="builder-more">
-            <summary className="hint">{T.addReference(refEligible.length)}</summary>
-            <ul className="list-edit">
-              {refEligible.map((r) => (
-                <li key={r.id}><span>{r.name} <span className="hint mono">{fmtLatLon(r.lat, r.lon)}</span></span>
-                  <button className="quiet-button" disabled={inCompare(r.lat, r.lon)}
-                          onClick={() => dispatch({ type: "compareSites", sites: [...sites, { lat: r.lat, lon: r.lon, name: r.name }] })}>{S.common.add}</button></li>
-              ))}
-            </ul>
-          </details>
           {state.catalog.length > 0 && (
             <details className="builder-more">
               <summary className="hint">{T.addCurated}</summary>
@@ -180,33 +154,15 @@ export function CompareView() {
               base.step_s != null ? (Number(base.step_s) / 60).toFixed(0) : S.common.na)}
           </p>
 
-          <div className="cmp-viewbar">
-            <div className="segmented cmp-views" role="group" aria-label={T.tabsLabel}>
-              {(["summary", "matrix", "charts"] as const).map((v) => (
-                <button key={v} type="button" aria-pressed={view === v} onClick={() => setView(v)}>{T.tabs[v]}</button>
-              ))}
-            </div>
-            {nW > 1 && view !== "charts" && (
-              <div className="segmented-mini" role="group" aria-label={T.windowPick}>
-                {cmp.windows.map((w: any, wi: number) => (
-                  <button key={wi} type="button" aria-pressed={wi === win} onClick={() => setCardWin(wi)}
-                          title={T.windowRange(fmtUTC(w.start_utc), fmtUTC(w.end_utc))}>{windowName(wi)}</button>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {view === "summary" && (
-            <section className="section ws-section" aria-labelledby="cmp-sum-h">
-              <SectionHeader id="cmp-sum-h" eyebrow={T.eyebrowCards} title={T.sum.heading} />
-              <SiteVerdict cmp={cmp} win={win} sr={sr} dr={dr} siteName={siteName} />
-              <CompareSummary cmp={cmp} win={win} siteName={siteName} sr={sr} dr={dr} pm={pm} />
-            </section>
-          )}
-
-          {view === "matrix" && (<>
           <section className="section ws-section" aria-labelledby="cmp-cards-h">
-            <SectionHeader id="cmp-cards-h" eyebrow={T.eyebrowCards} title={T.cardsHeading} />
+            <SectionHeader id="cmp-cards-h" eyebrow={T.eyebrowCards} title={T.cardsHeading}
+                           actions={nW > 1 ? (
+                             <div className="segmented-mini" role="group" aria-label={T.windowPick}>
+                               {cmp.windows.map((w: any, wi: number) => (
+                                 <button key={wi} type="button" aria-pressed={wi === win} onClick={() => setCardWin(wi)}
+                                         title={T.windowRange(fmtUTC(w.start_utc), fmtUTC(w.end_utc))}>{windowName(wi)}</button>
+                               ))}
+                             </div>) : undefined} />
             <p className="hint">{T.cardsWindow(fmtUTC(cmp.windows[win].start_utc), fmtUTC(cmp.windows[win].end_utc))}</p>
             <ul className="site-cards">
               {cmp.sites.map((_site: any, si: number) => {
@@ -290,9 +246,7 @@ export function CompareView() {
             <p className="hint">{T.shadingHint}</p>
             <p className="hint">{V.compareNote}</p>
           </section>
-          </>)}
 
-          {view === "charts" && (
           <section className="section ws-section" aria-labelledby="cmp-charts-h">
             <SectionHeader id="cmp-charts-h" eyebrow={T.eyebrowCharts} title={T.chartsHeading} />
             <Suspense fallback={<p className="hint">{T.chartsLoading}</p>}>
@@ -300,7 +254,6 @@ export function CompareView() {
                              sunlit={(c) => metricById("sunlit").get(c, sr, dr, pm)} earth={(c) => metricById("dte").get(c, sr, dr, pm)} sr={sr} dr={dr} />
             </Suspense>
           </section>
-          )}
         </>
       )}
       <div className="footer-space" />

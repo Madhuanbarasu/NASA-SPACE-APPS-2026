@@ -336,8 +336,6 @@ function hardcodedProblems(program) {
   for (const sf of program.getSourceFiles()) {
     const f = norm(sf.fileName);
     if (!f.startsWith(norm(SRC) + "/") || f.startsWith(norm(I18N) + "/")) continue;
-    // src/data/*.json are sourced datasets (e.g. the reference mission sites with their citations), not interface text
-    if (f.startsWith(norm(path.join(SRC, "data")) + "/") && f.endsWith(".json")) continue;
     for (const h of findHardcoded(sf)) {
       const ai = ALLOWLIST.findIndex((a) => a.file === rel(sf.fileName) && a.text === h.text);
       if (ai >= 0) { allowUsed.add(ai); continue; }

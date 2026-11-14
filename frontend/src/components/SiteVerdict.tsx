@@ -66,7 +66,8 @@ export function SiteVerdict({ cmp, win, sr, dr, siteName }: Props) {
   return (
     <section className="site-verdict" aria-labelledby="site-verdict-h">
       <h3 id="site-verdict-h">{V.heading}</h3>
-      {best.length > 1 && <p className="verdict-best">{bestTie || !best[0].good.length ? V.noBest : V.best(siteName(best[0].si), best[0].good.length)}</p>}
+      {best.length > 1 && <p className="verdict-best">{bestTie || !best[0].good.length ? V.noBest
+        : V.recommend(siteName(best[0].si), join(best[0].good), best[0].poor.length ? join(best[0].poor) : null)}</p>}
       <ul className="verdict-sites">
         {rows.map((row) => (
           <li key={row.si} className="verdict-site">

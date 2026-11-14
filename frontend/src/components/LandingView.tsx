@@ -108,6 +108,35 @@ function Finding({ f }: { f: LandingFinding }) {
   );
 }
 
+// Preliminary landing suitability of the footprint (same guideline thresholds as the Compare site verdict): median slope
+// good <= 8 deg, limited <= 15 deg; a depression candidate in the footprint makes it unsuitable. Boulders are never assessed.
+const SLOPE_GOOD = 8, SLOPE_LIMITED = 15;
+function SuitBox({ fp }: { fp: LandingFootprint }) {
+  const U = L.suit;
+  const f = (k: string) => fp.findings.find((x) => x.key === k);
+  const coarse = ["slope", "roughness", "relief"].some((k) => { const s = f(k)?.status; return s === "higher_res" || s === "insufficient"; });
+  const med = f("slope")?.stats?.median;
+  const dep = f("depressions");
+  const reasons: string[] = [];
+  let r: "good" | "limited" | "poor" | "unknown" = "unknown";
+  if (coarse || med == null) reasons.push(U.coarse);
+  else {
+    r = med <= SLOPE_GOOD ? "good" : med <= SLOPE_LIMITED ? "limited" : "poor";
+    reasons.push(U.slope(fmtNum(med, 1)));
+    if (dep?.status === "hazard") { r = "poor"; reasons.push(U.depYes(dep.candidates?.length ?? 1)); }
+    else reasons.push(U.depNo);
+    const rough = f("roughness")?.stats?.median;
+    if (rough != null) reasons.push(U.rough(fmtNum(rough, 2)));
+  }
+  reasons.push(U.boulders);
+  return (
+    <div className={`suit-box is-${r}`} role="status">
+      <p className="suit-head">{U.verdict[r]}</p>
+      <ul>{reasons.map((x) => <li key={x}>{x}</li>)}</ul>
+    </div>
+  );
+}
+
 export function LandingView() {
   const { state, dispatch } = useStore();
   const { site, coverage, error: covError, checking, covered } = useSiteCoverage();
@@ -440,6 +469,15 @@ export function LandingView() {
             : L.fpCoarseNone(a.provenance.dem.key, fmtNum(a.provenance.dem.pixel_m, 0))}
         </p>
       )}
+      {/* the smallest footprint this terrain resolves: at least 3 DEM pixels across (the server's own rule), so the radius
+          is 1.5 ground pixels, rounded up; applied only when the user asks, and the findings then describe that larger area */}
+      {coarseFp && (
+        <p className="hint landing-footprint-hint">
+          <button type="button" className="quiet-button" onClick={() => setRadius(String(Math.ceil(1.5 * fp.pixel_m_ground) + 1))}>
+            {L.fpUseMin(String(Math.ceil(1.5 * fp.pixel_m_ground) + 1))}</button>{" "}{L.fpUseMinNote}
+        </p>
+      )}
+      <SuitBox fp={fp} />
       <ul className="landing-findings" aria-live="polite">{fp.findings.map((f) => <Finding key={f.key} f={f} />)}</ul>
       <p className="hint">{L.findingsNote}</p>
     </section>
@@ -540,9 +578,6 @@ export function LandingView() {
       {a && prov && (
         <section className="landing-card landing-wide" aria-labelledby="landing-provenance">
           <h2 id="landing-provenance">{L.provHeading}</h2>
-          {/* UI simplification: the full provenance is one click away (nothing removed) */}
-          <details className="ws-details">
-          <summary>{S.common.showDetails}</summary>
           <dl className="landing-prov">
             <dt>{L.prov.status}</dt><dd>{prov.validation_status}. {prov.validation_note}</dd>
             <dt>{L.prov.dataset}</dt><dd>{prov.dem.product}{prov.dem.synthetic ? L.prov.synthetic : ""}</dd>
@@ -563,7 +598,6 @@ export function LandingView() {
             {prov.notes.length > 0 && <><dt>{L.prov.notes}</dt><dd><ul>{prov.notes.map((n, i) => <li key={i}>{n}</li>)}</ul></dd></>}
             <dt>{L.prov.limitations}</dt><dd><ul>{prov.limitations.map((n, i) => <li key={i}>{n}</li>)}</ul></dd>
           </dl>
-          </details>
           <button type="button" className="quiet-button" onClick={exportJson}>{L.export}</button>
         </section>
       )}
