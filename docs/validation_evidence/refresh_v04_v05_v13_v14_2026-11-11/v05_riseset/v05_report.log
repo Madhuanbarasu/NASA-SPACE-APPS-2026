@@ -1,0 +1,15 @@
+{
+ "formal_status": "PROVISIONAL",
+ "reason": "event sets agree (0 missed, 0 spurious); the timing differences cannot be judged PASS/FAIL because the proposed 1.0 s V-05 threshold is not approved",
+ "n_matched": 18,
+ "n_missed": 0,
+ "n_spurious": 0,
+ "max_abs_dt_s": 0.4999523162841797,
+ "mean_dt_s": 0.2906475133366055,
+ "median_abs_dt_s": 0.3389323353767395,
+ "min_dt_s": -0.1093369722366333,
+ "max_dt_s": 0.4999523162841797,
+ "n_within_proposed_threshold": 18,
+ "n_within_detector_half_bracket_0p5s": 18
+}
+{'hourly_scan': 11, 'minute_refine': 18, 'second_refine': 18, 'confirm_window': 0}

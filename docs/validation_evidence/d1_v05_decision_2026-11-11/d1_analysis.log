@@ -1,0 +1,25 @@
+matched 18 missed 0 spurious 0
+max|dt| from horizons.json 0.4999523162841797 | v05_report 0.4999523162841797
+V05_TOL_S 1.0 MATCH 600.0 EVENT_TOL_S 1.0 floor 1.0 cap 600.0
+south-polar A        earth rise dt=-0.1000s  rate=1.848e-05 deg/s  geom<= 2.67e-03s  ref_print<= 5.4e-05s
+south-polar A        earth set  dt=-0.0534s  rate=1.848e-05 deg/s  geom<= 2.67e-03s  ref_print<= 5.4e-05s
+south-polar B        sun   set  dt=+0.5000s  rate=8.988e-06 deg/s  geom<= 3.87e-03s  ref_print<= 1.1e-04s
+south-polar B        sun   rise dt=+0.4483s  rate=8.988e-06 deg/s  geom<= 3.87e-03s  ref_print<= 1.1e-04s
+south-polar B        earth rise dt=+0.1065s  rate=1.647e-05 deg/s  geom<= 3.63e-03s  ref_print<= 6.1e-05s
+south-polar B        earth set  dt=+0.3295s  rate=1.647e-05 deg/s  geom<= 3.63e-03s  ref_print<= 6.1e-05s
+north-polar          sun   rise dt=+0.4466s  rate=6.260e-06 deg/s  geom<= 4.95e-03s  ref_print<= 1.6e-04s
+north-polar          sun   set  dt=+0.4514s  rate=6.260e-06 deg/s  geom<= 4.95e-03s  ref_print<= 1.6e-04s
+north-polar          earth set  dt=-0.1093s  rate=1.828e-05 deg/s  geom<= 3.00e-03s  ref_print<= 5.5e-05s
+north-polar          earth rise dt=+0.3047s  rate=1.828e-05 deg/s  geom<= 3.00e-03s  ref_print<= 5.5e-05s
+nearside equatorial  sun   rise dt=+0.4987s  rate=1.407e-04 deg/s  geom<= 2.27e-04s  ref_print<= 7.1e-06s
+nearside equatorial  sun   set  dt=+0.4925s  rate=1.407e-04 deg/s  geom<= 2.27e-04s  ref_print<= 7.1e-06s
+limb                 sun   set  dt=+0.3484s  rate=1.411e-04 deg/s  geom<= 1.42e-04s  ref_print<= 7.1e-06s
+limb                 sun   rise dt=+0.4950s  rate=1.411e-04 deg/s  geom<= 1.42e-04s  ref_print<= 7.1e-06s
+limb                 earth rise dt=+0.1424s  rate=1.538e-05 deg/s  geom<= 3.40e-02s  ref_print<= 6.5e-05s
+limb                 earth set  dt=+0.2281s  rate=1.538e-05 deg/s  geom<= 3.40e-02s  ref_print<= 6.5e-05s
+farside              sun   set  dt=+0.2195s  rate=1.407e-04 deg/s  geom<= 2.28e-04s  ref_print<= 7.1e-06s
+farside              sun   rise dt=+0.4832s  rate=1.407e-04 deg/s  geom<= 2.28e-04s  ref_print<= 7.1e-06s
+sun n 10 min 0.2194969654083252 max 0.4999523162841797 mean 0.4383338809013367 all positive True
+earth n 8 min -0.1093369722366333 max 0.32950615882873535 mean 0.10603955388069153
+max geometric timing bound 0.03398208153247275 max reference print bound 0.0001597444089456869
+P(all 10 sun dt > 0 | symmetric error) = 0.0009765625

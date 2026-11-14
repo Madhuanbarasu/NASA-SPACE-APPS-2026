@@ -1,0 +1,20 @@
+DEM pgda78_site01/Site01_final_adj_5mpp_surf.tif [5.0, 0.0, -19000.0, 0.0, -5.0, -4000.0] 3200 3200
+
+ldec: dtype=float32 size=3200x3200 nodata=nan transform=[5.0, 0.0, -19000.0, 0.0, -5.0, -4000.0]
+  tags: {'NC_GLOBAL#Conventions': 'COARDS, CF-1.5', 'NC_GLOBAL#GMT_version': '5.4.5 [64-bit]', 'NC_GLOBAL#history': 'xyz2grd -bi3 -I5 -R-1.90000000000e+04/-3.00000000000e+03/-2.00000000000e+04/-4.00000000000e+03 -Gtest.grd -r', 'NC_GLOBAL#node_offset': '1', 'x#actual_range': '{-19000,-3000}', 'x#long_name': 'x', 'y#actual_range': '{-20000,-4000}', 'y#long_name': 'y', 'z#actual_range': '{0,5}', 'z#long_name': 'z', 'z#_FillValue': 'nan', 'AREA_OR_POINT': 'Area'} {'actual_range': '{0,5}', 'long_name': 'z', 'NETCDF_VARNAME': 'z', '_FillValue': 'nan'}
+  CRS equal to DEM CRS: True
+  same grid as DEM: True
+  finite=10240000/10240000  min=0 max=5 mean=0.09999
+  share of pixels with >=1 return: 0.0949  unique sample: [0. 1. 2. 3. 4. 5.]
+
+slp: dtype=float32 size=3200x3200 nodata=nan transform=[5.0, 0.0, -19000.0, 0.0, -5.0, -4000.0]
+  tags: {'NC_GLOBAL#Conventions': 'COARDS, CF-1.5', 'NC_GLOBAL#GMT_version': '5.4.5 [64-bit]', 'NC_GLOBAL#history': 'xyz2grd -bi3 -I5 -R-1.90000000000e+04/-3.00000000000e+03/-2.00000000000e+04/-4.00000000000e+03 -Gtest.grd -r', 'NC_GLOBAL#node_offset': '1', 'x#actual_range': '{-19000,-3000}', 'x#long_name': 'x', 'y#actual_range': '{-20000,-4000}', 'y#long_name': 'y', 'z#actual_range': '{0,64.58820343017578}', 'z#long_name': 'z', 'z#_FillValue': 'nan', 'AREA_OR_POINT': 'Area'} {'actual_range': '{0,64.58820343017578}', 'long_name': 'z', 'NETCDF_VARNAME': 'z', '_FillValue': 'nan'}
+  CRS equal to DEM CRS: True
+  same grid as DEM: True
+  finite=10240000/10240000  min=0 max=64.59 mean=12.6
+
+slperr: dtype=float32 size=3200x3200 nodata=nan transform=[5.0, 0.0, -19000.0, 0.0, -5.0, -4000.0]
+  tags: {'NC_GLOBAL#Conventions': 'COARDS, CF-1.5', 'NC_GLOBAL#GMT_version': '5.4.5 [64-bit]', 'NC_GLOBAL#history': 'xyz2grd -bi3 -I5 -R-1.90000000000e+04/-3.00000000000e+03/-2.00000000000e+04/-4.00000000000e+03 -Gtest.grd -r', 'NC_GLOBAL#node_offset': '1', 'x#actual_range': '{-19000,-3000}', 'x#long_name': 'x', 'y#actual_range': '{-20000,-4000}', 'y#long_name': 'y', 'z#actual_range': '{0.6137070655822754,21.51097869873047}', 'z#long_name': 'z', 'z#_FillValue': 'nan', 'AREA_OR_POINT': 'Area'} {'actual_range': '{0.6137070655822754,21.51097869873047}', 'long_name': 'z', 'NETCDF_VARNAME': 'z', '_FillValue': 'nan'}
+  CRS equal to DEM CRS: True
+  same grid as DEM: True
+  finite=10240000/10240000  min=0.6137 max=21.51 mean=2.002

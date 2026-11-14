@@ -1,0 +1,173 @@
+{
+  "tests": {
+    "U-06": {
+      "status": "passed",
+      "detail": "Scoped U-06 (D3, approved 2026-11-11): LCP max 192/632/1044 ms (<= 2500), CLS max 0 (<= 0.1), interaction p95 32/40 ms (<= 200; Event Timing, native/4x CPU), no progressive memory leak (+0.3 MB over 5 remounts); HP 15-fd0xxx Core 5 120U, Chrome 157 headless, profiles native / 4x CPU / 4x CPU + 10 Mbit/s; TBT information only; two slow backend map tiles (0/0/0, 1/0/1) excluded; lab measurement, not a field Core Web Vitals claim"
+    }
+  },
+  "decision": "D3",
+  "criterion": {
+    "lcp_ms_max": 2500,
+    "cls_max": 0.1,
+    "interaction_response_p95_ms_max": 200,
+    "memory": "no progressive leak over repeated remount cycles",
+    "tbt": "information only, not gated",
+    "scope": "HP Laptop 15-fd0xxx (Intel Core 5 120U, 15.7 GB), Windows 11, Chrome 157 headless 1440x900; profiles native, 4x CPU, 4x CPU + 10 Mbit/s 40 ms",
+    "exclusion": "two unusually slow backend basemap tiles (/api/tiles/0/0/0.png, /api/tiles/1/0/1.png) were blocked during measurement",
+    "not_claimed": "formal field Core Web Vitals compliance (field metrics are 75th-percentile real-user data)"
+  },
+  "result": {
+    "per_profile": {
+      "native": {
+        "lcp_ms_max": 192,
+        "lcp_ms_median_cold": 180,
+        "lcp_ms_median_warm": 170,
+        "cls_max": 0,
+        "tbt_ms_cold_info": 0,
+        "tbt_ms_warm_info": 0,
+        "interaction_p95_ms": 32,
+        "interaction_basis": "Event Timing, 20 keyboard time-cursor interactions",
+        "single_frame_ui_ms_info": {
+          "tabs": {
+            "Compare": 23.1,
+            "Data and validation": 58,
+            "Guide": 17.8,
+            "Site": 31.5
+          },
+          "rotate3D_max": 32.2,
+          "mode_switch": [
+            31.6,
+            32
+          ],
+          "metric_switch": 31.6,
+          "cell_to_result": 73.6
+        },
+        "data_loading_ms_info": {
+          "analysis_to_result": 298.6,
+          "analysis_to_3d_data": 675,
+          "compare_to_matrix": 650.7
+        },
+        "memory": {
+          "cycles": 5,
+          "before": {
+            "heapMB": 29.6,
+            "nodes": 1066,
+            "listeners": 202
+          },
+          "after": {
+            "heapMB": 29.9,
+            "nodes": 1071,
+            "listeners": 207
+          },
+          "heapGrowthMB": 0.3,
+          "nodeGrowth": 5,
+          "listenerGrowth": 5,
+          "canvasesInDom": 2,
+          "newConsoleWarnings": []
+        },
+        "blocked_requests": [
+          "*/api/tiles/0/0/0.png",
+          "*/api/tiles/1/0/1.png"
+        ]
+      },
+      "cpu4x": {
+        "lcp_ms_max": 632,
+        "lcp_ms_median_cold": 480,
+        "lcp_ms_median_warm": 444,
+        "cls_max": 0,
+        "tbt_ms_cold_info": 410,
+        "tbt_ms_warm_info": 248.5,
+        "interaction_p95_ms": 40,
+        "interaction_basis": "Event Timing, 20 keyboard time-cursor interactions",
+        "single_frame_ui_ms_info": {
+          "tabs": {
+            "Compare": 41.4,
+            "Data and validation": 117.1,
+            "Guide": 34.6,
+            "Site": 62.9
+          },
+          "rotate3D_max": 35.9,
+          "mode_switch": [
+            30.7,
+            32.2
+          ],
+          "metric_switch": 25.9,
+          "cell_to_result": 193.5
+        },
+        "data_loading_ms_info": {
+          "analysis_to_result": 631.6,
+          "analysis_to_3d_data": 954.9,
+          "compare_to_matrix": 657.4
+        },
+        "memory": null,
+        "blocked_requests": [
+          "*/api/tiles/0/0/0.png",
+          "*/api/tiles/1/0/1.png"
+        ]
+      },
+      "cpu4x-net10mbps": {
+        "lcp_ms_max": 1044,
+        "lcp_ms_median_cold": 852,
+        "lcp_ms_median_warm": 540,
+        "cls_max": 0,
+        "tbt_ms_cold_info": 214,
+        "tbt_ms_warm_info": 281.5,
+        "interaction_p95_ms": null,
+        "interaction_basis": "not measured in this profile (loads only)",
+        "single_frame_ui_ms_info": null,
+        "data_loading_ms_info": null,
+        "memory": null,
+        "blocked_requests": [
+          "*/api/tiles/0/0/0.png",
+          "*/api/tiles/1/0/1.png"
+        ]
+      }
+    },
+    "checks": {
+      "lcp_le_2500ms": true,
+      "cls_le_0.1": true,
+      "interaction_p95_le_200ms": true,
+      "no_progressive_memory_leak": true
+    },
+    "evidence": {
+      "docs/validation_evidence/u06_2026-11-11/summary.json": "46abf5a23a9d5f6bd9df6cd3c76c212549d0a2a64e098d3b22040f00231dd87a",
+      "docs/validation_evidence/u06_2026-11-11/raw/perf-variant-noprefetch-cpu4x-net10mbps.json": "45ad8e03e446fba6bf623c6df99ae374532d34f6602b7f83b85786c485d86119",
+      "docs/validation_evidence/u06_2026-11-11/raw/perf-variant-noprefetch-cpu4x.json": "560b57b02371cabc20ac33d647e81f1ab02c61283535778814d4b9c3f7a22c95",
+      "docs/validation_evidence/u06_2026-11-11/raw/perf-variant-noprefetch-native.json": "6bab2ba0c48e754869a194af7c71755561f0c130ddd0e4df958637b497099931"
+    }
+  },
+  "frontend_build": {
+    "frontend_dist_sha256": {
+      "assets/archivo-latin-ext-wdth-normal-7khWdh9v.woff2": "5717f37059660ca5c899bad6c48ee22c3ac55cb3c484055241689d0f905a1a86",
+      "assets/archivo-latin-wdth-normal-DY7AcnAa.woff2": "e3a28eade21a900c7155a247757f4b2834c07bb7ef07ad7efa55cebaac1e8f5e",
+      "assets/archivo-vietnamese-wdth-normal-rJmnGBSt.woff2": "332e6f66de84927cdffc60894e4e186ced783f5cb4b3e88200f45b7c1d306810",
+      "assets/index-Dj8BEKWr.css": "abec53f9bbfe30b17038764c1536516bf4eacb9f2ff3a3a9dcc948e6ff7cc4b2",
+      "assets/index-kvDT7UBF.js": "007dbb5b1b2d4eb9d16b67b3e5382c8146ad8eec0a1942ffebf8f630b9c588b4",
+      "assets/MapView-CSDBvknB.js": "fc936ee08d836b6e71fe962e0fe5b5b21730f02f636569fb25a601704d152d1e",
+      "assets/Terrain3D-_0dC8YFW.js": "f87864a206ccb43c5885c12834cfc89f02f39932937cf391c00df5586be905e1",
+      "index.html": "9a105b9a7202c7f084d31ec375e9d13ab3e400c1a186cde6e1b5f6d433ca4298"
+    },
+    "equals_u06_final_build": true
+  },
+  "approved": {
+    "by": "project owner (working-session instruction, 2026-11-11)",
+    "decision": "D3"
+  },
+  "meta": {
+    "script": "frontend_u06",
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "kernels": [
+      "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+      "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+      "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+      "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+      "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+      "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+      "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    ],
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-11T18:19:06Z"
+  }
+}

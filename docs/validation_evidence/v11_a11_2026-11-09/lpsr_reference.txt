@@ -1,0 +1,1 @@
+ad95311b81db773039af441dd66a017f024327858c6e0314b8c92bf2f470834e  LPSR_80S_20MPP_ADJ.TIF  154221202 bytes  from https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LPSR_80S_20MPP_ADJ.TIF (Last-Modified Sat, 03 Jun 2023 00:59:02 GMT), downloaded 2026-11-09; not stored in the repository

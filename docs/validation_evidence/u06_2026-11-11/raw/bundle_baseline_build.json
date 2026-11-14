@@ -1,0 +1,74 @@
+{
+  "entry": "assets/index-gL-Ccy3m.js",
+  "preloads": [],
+  "files": [
+    {
+      "file": "assets/archivo-latin-ext-wdth-normal-7khWdh9v.woff2",
+      "initial": false,
+      "type": "woff2",
+      "raw": 86240,
+      "gzip": 86288,
+      "brotli": 86245,
+      "libraries": []
+    },
+    {
+      "file": "assets/archivo-latin-wdth-normal-DY7AcnAa.woff2",
+      "initial": false,
+      "type": "woff2",
+      "raw": 90104,
+      "gzip": 90152,
+      "brotli": 90109,
+      "libraries": []
+    },
+    {
+      "file": "assets/archivo-vietnamese-wdth-normal-rJmnGBSt.woff2",
+      "initial": false,
+      "type": "woff2",
+      "raw": 34464,
+      "gzip": 34497,
+      "brotli": 34468,
+      "libraries": []
+    },
+    {
+      "file": "assets/index-Dj8BEKWr.css",
+      "initial": false,
+      "type": "css",
+      "raw": 20862,
+      "gzip": 5318,
+      "brotli": 4681,
+      "libraries": []
+    },
+    {
+      "file": "assets/index-gL-Ccy3m.js",
+      "initial": true,
+      "type": "js",
+      "raw": 1243968,
+      "gzip": 356759,
+      "brotli": 297258,
+      "libraries": [
+        "three.js",
+        "OpenLayers"
+      ]
+    }
+  ],
+  "initialJs": {
+    "files": 1,
+    "raw": 1243968,
+    "gzip": 356759,
+    "brotli": 297258
+  },
+  "lazyJs": {
+    "files": 0,
+    "raw": 0,
+    "gzip": 0
+  },
+  "totalJs": {
+    "raw": 1243968,
+    "gzip": 356759
+  },
+  "baseline": null,
+  "problems": [
+    "three.js is in the initial bundle (assets/index-gL-Ccy3m.js); it must be loaded on demand",
+    "OpenLayers is in the initial bundle (assets/index-gL-Ccy3m.js); it must be loaded on demand"
+  ]
+}

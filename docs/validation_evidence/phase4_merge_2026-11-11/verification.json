@@ -1,0 +1,324 @@
+{
+  "all_ok": true,
+  "checks": [
+    {
+      "check": "report_before.json SHA-256 is the original",
+      "ok": true,
+      "detail": "00d2cda1bf3fe38fe98cc8a76e92acabdf9cb771ab900119750203586b15c239"
+    },
+    {
+      "check": "report.json was rewritten by this run",
+      "ok": true,
+      "detail": "5e6c76d75eff6c3454f68edc76ab5e08f48733e3ad2cfff72eac3e55db812e7b"
+    },
+    {
+      "check": "pytest exit code 0",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "zero rejected merges",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "code fingerprint = current build",
+      "ok": true,
+      "detail": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8"
+    },
+    {
+      "check": "suite fingerprint = current build",
+      "ok": true,
+      "detail": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc"
+    },
+    {
+      "check": "kernel profile production",
+      "ok": true,
+      "detail": "production"
+    },
+    {
+      "check": "kernel SHA-256 = loaded kernels",
+      "ok": true,
+      "detail": "7 files"
+    },
+    {
+      "check": "label rules digest = current",
+      "ok": true,
+      "detail": "8d8e229fd52cbe79"
+    },
+    {
+      "check": "terrain products recorded",
+      "ok": true,
+      "detail": "4 products"
+    },
+    {
+      "check": "terrain products unchanged vs before",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "terrain acceptance digest (current) unchanged",
+      "ok": true,
+      "detail": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce"
+    },
+    {
+      "check": "algorithm version 1.5.0",
+      "ok": true,
+      "detail": "1.5.0"
+    },
+    {
+      "check": "no report-level label blockers",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "V-04 = passed (external, horizons_compare)",
+      "ok": true,
+      "detail": "status=passed source=external script=horizons_compare external=passed automated=not run"
+    },
+    {
+      "check": "V-05 = not run",
+      "ok": true,
+      "detail": "status=not run source=None script=None external=None automated=None"
+    },
+    {
+      "check": "V-09 = not run (external, v09_v10_avgvisib)",
+      "ok": true,
+      "detail": "status=not run source=external script=v09_v10_avgvisib external=not run automated=not run"
+    },
+    {
+      "check": "V-10 = not run (external, v09_v10_avgvisib)",
+      "ok": true,
+      "detail": "status=not run source=external script=v09_v10_avgvisib external=not run automated=not run"
+    },
+    {
+      "check": "V-11 = passed (external, v11_psr)",
+      "ok": true,
+      "detail": "status=passed source=external script=v11_psr external=passed automated=not run"
+    },
+    {
+      "check": "V-12 = passed (external, v12_lroc)",
+      "ok": true,
+      "detail": "status=passed source=external script=v12_lroc external=passed automated=not run"
+    },
+    {
+      "check": "V-13 = passed (external, v13_eclipse)",
+      "ok": true,
+      "detail": "status=passed source=external script=v13_eclipse external=passed automated=not run"
+    },
+    {
+      "check": "V-14 = passed (external, v14_month)",
+      "ok": true,
+      "detail": "status=passed source=external script=v14_month external=passed automated=passed"
+    },
+    {
+      "check": "U-04 = not run",
+      "ok": true,
+      "detail": "status=not run source=None script=None external=None automated=None"
+    },
+    {
+      "check": "U-06 = not run",
+      "ok": true,
+      "detail": "status=not run source=None script=None external=None automated=None"
+    },
+    {
+      "check": "V-05 not marked passed",
+      "ok": true,
+      "detail": "not run"
+    },
+    {
+      "check": "V-09 not marked passed",
+      "ok": true,
+      "detail": "not run"
+    },
+    {
+      "check": "V-10 not marked passed",
+      "ok": true,
+      "detail": "not run"
+    },
+    {
+      "check": "U-04 not marked passed",
+      "ok": true,
+      "detail": "not run"
+    },
+    {
+      "check": "U-06 not marked passed",
+      "ok": true,
+      "detail": "not run"
+    },
+    {
+      "check": "no failed entries (blueprint or other)",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "automated blueprint statuses unchanged vs before",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "every quantity label stays 'Pending validation'",
+      "ok": true,
+      "detail": "{\"sun_earth_azel\": \"Pending validation\", \"horizon\": \"Pending validation\", \"disk_visibility\": \"Pending validation\", \"events\": \"Pending validation\", \"power_indicator\": \"Pending validation\"}"
+    }
+  ],
+  "status_counts": {
+    "passed": 417,
+    "not run": 5,
+    "skipped": 2
+  },
+  "blueprint_status_before_after": {
+    "V-01": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-02a": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-02b": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-02c": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-02d": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-02e": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-03": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-04": {
+      "before": "not run",
+      "after": "passed"
+    },
+    "V-05": {
+      "before": "not run",
+      "after": "not run"
+    },
+    "V-06": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-07": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-08": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-08b": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-09": {
+      "before": "not run",
+      "after": "not run"
+    },
+    "V-10": {
+      "before": "not run",
+      "after": "not run"
+    },
+    "V-11": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-12": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "V-13": {
+      "before": "not run",
+      "after": "passed"
+    },
+    "V-14": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "U-01": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "U-02": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "U-03": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "U-04": {
+      "before": "not run",
+      "after": "not run"
+    },
+    "U-05": {
+      "before": "passed",
+      "after": "passed"
+    },
+    "U-06": {
+      "before": "not run",
+      "after": "not run"
+    },
+    "U-07": {
+      "before": "passed",
+      "after": "passed"
+    }
+  },
+  "labels": {
+    "sun_earth_azel": {
+      "validation": "Pending validation",
+      "reasons": [
+        "U-04: not run (required for every Validated label)",
+        "U-06: not run (required for every Validated label)"
+      ]
+    },
+    "horizon": {
+      "validation": "Pending validation",
+      "reasons": [
+        "U-04: not run (required for every Validated label)",
+        "U-06: not run (required for every Validated label)"
+      ]
+    },
+    "disk_visibility": {
+      "validation": "Pending validation",
+      "reasons": [
+        "U-04: not run (required for every Validated label)",
+        "U-06: not run (required for every Validated label)",
+        "V-09: not run",
+        "V-10: not run"
+      ]
+    },
+    "events": {
+      "validation": "Pending validation",
+      "reasons": [
+        "U-04: not run (required for every Validated label)",
+        "U-06: not run (required for every Validated label)",
+        "V-05: not run",
+        "V-09: not run",
+        "V-10: not run"
+      ]
+    },
+    "power_indicator": {
+      "validation": "Pending validation",
+      "reasons": [
+        "U-04: not run (required for every Validated label)",
+        "U-06: not run (required for every Validated label)",
+        "V-09: not run"
+      ]
+    }
+  },
+  "report": {
+    "sha256": "5e6c76d75eff6c3454f68edc76ab5e08f48733e3ad2cfff72eac3e55db812e7b",
+    "run_utc": "2026-11-11T17:24:21Z"
+  },
+  "verified_utc": "2026-11-11T17:24:31Z"
+}

@@ -1,0 +1,25 @@
+view                    tabStops(release -> phase5)  problems
+site-welcome              34 -> 36   (expected 36)  none
+site-result-technical     52 -> 52   (expected 52)  none
+site-result-public      None -> None (expected None)  none
+compare-matrix            76 -> 76   (expected 76)  none
+data                      34 -> 34   (expected 34)  none
+guide                     33 -> 33   (expected 33)  none
+functional tests (release -> phase5):
+  skipLink                     same
+  tabsArrowKeys                same
+  invalidCoordinates           same
+  slider                       same
+  readoutLive                  same
+  panoramaHoverEscape          same
+  readoutLiveWhilePlaying      same
+  mapKeyboard                  same
+  terrain3dKeyboard            same
+  panoramaKeyboard             equivalent (start azimuth differs by the hover position; same steps; identical horizon at shared azimuths)
+  pointerAlternatives          same
+  statusAfterAnalysis          same
+  statusAfterComparison        same
+  matrixCellSpace              same
+  matrixCellEnter              same
+  reducedMotionTransition      same
+EXISTING FEATURES AND ACCESSIBILITY UNCHANGED

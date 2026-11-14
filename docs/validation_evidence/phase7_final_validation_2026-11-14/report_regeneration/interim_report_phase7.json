@@ -1,0 +1,573 @@
+{
+  "INTERIM": "Interim Phase 7 report, NOT the official validation report (backend/validation/report.json is unchanged). The full pytest suite was not completed (stopped on the owner's instruction), so no Validated label may be derived from this file.",
+  "run_utc": "2026-11-14T06:48:17Z",
+  "code_version": "0.1.0+c621f98",
+  "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8",
+  "suite_fingerprint": "70606628abed3fdee2704e0b8e2891f648da27266b04791d7690531a517cd546",
+  "kernel_profile": "production",
+  "kernels": [
+    {
+      "name": "naif0012.tls",
+      "sha256": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b"
+    },
+    {
+      "name": "pck00011.tpc",
+      "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1"
+    },
+    {
+      "name": "de440s.bsp",
+      "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    },
+    {
+      "name": "moon_pa_de440_200625.bpc",
+      "sha256": "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f"
+    },
+    {
+      "name": "moon_de440_250416.tf",
+      "sha256": "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768"
+    },
+    {
+      "name": "moon_pa_de421_1900-2050.bpc",
+      "sha256": "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf"
+    },
+    {
+      "name": "moon_080317.tf",
+      "sha256": "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993"
+    }
+  ],
+  "pytest_exit_code": null,
+  "pytest_status": {
+    "status": "not run to completion: stopped on the owner instruction (2026-11-14) after 325 of 572 collected tests (549 s wall, 06:38:00Z to 06:47:09Z); no JUnit XML was produced",
+    "scope": "backend/ (tests/ plus lunaops_comms, lunaops_landing, lunaops_tiles package tests)",
+    "completed": 325,
+    "collected": 572,
+    "not_reached": 247,
+    "packages_completed": {
+      "passed": 98,
+      "failed": 12,
+      "skipped": 15
+    },
+    "tests_dir_completed": {
+      "passed": 198,
+      "failed": 0,
+      "skipped": 2
+    },
+    "tests_dir_collected": 447,
+    "failures": [
+      "F lunaops_comms/tests/test_relay.py::test_gm_read_from_verified_naif_file",
+      "F lunaops_comms/tests/test_relay.py::test_circular_orbit_radius_period_and_energy",
+      "F lunaops_comms/tests/test_relay.py::test_elliptic_vis_viva_and_apsides",
+      "F lunaops_comms/tests/test_relay.py::test_lunar_equator_frame_at_epoch",
+      "F lunaops_comms/tests/test_service_api.py::test_meta_precedes_catch_all_and_reports_gm",
+      "F lunaops_comms/tests/test_service_api.py::test_direct_windows_are_the_engine_intervals_and_labels_pass_through",
+      "F lunaops_comms/tests/test_service_api.py::test_terrain_blocks_earth",
+      "F lunaops_comms/tests/test_service_api.py::test_rf_feasible_needs_margin_and_geometry",
+      "F lunaops_comms/tests/test_service_api.py::test_relay_two_legs_and_assisted_contacts",
+      "F lunaops_comms/tests/test_service_api.py::test_incomplete_horizon_gives_unknown_not_open",
+      "F lunaops_comms/tests/test_service_api.py::test_store_and_forward",
+      "F lunaops_comms/tests/test_service_api.py::test_no_reliability_or_ranking_vocabulary"
+    ],
+    "failure_cause": "test-isolation in the combined run: tests/conftest.py sets LUNAOPS_DATA_DIR to a temporary directory at import (line 49), so the comms GM file in data/comms is not found; the same tests pass alone (test_relay.py 17/17 in comms_relay_isolated.log; 57/57 package run earlier in Phase 7). Not a product fault; not fixed (no development authorised). The official run_validation collects tests/ only."
+  },
+  "tests": {
+    "V-01": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-02a": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-02b": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-02c": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-02d": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-02e": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-03": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-04": {
+      "status": "passed",
+      "detail": "max |dAz cos El| 5.235e-07 deg, max |dEl| 5.226e-07 deg (tolerance 0.01 deg); 7931 epochs; kernel profile production",
+      "source": "external",
+      "script": "horizons_compare",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-14T04:31:23Z"
+    },
+    "V-05": {
+      "status": "passed",
+      "detail": "18 matched centre crossings, 0 missed, 0 spurious; max |t_LUNA - t_Horizons| 0.500 s (tolerance 1.0 s); kernel profile production",
+      "source": "external",
+      "script": "horizons_compare",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-14T04:31:23Z"
+    },
+    "V-06": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-07": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-08": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-08b": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-09": {
+      "status": "passed",
+      "detail": "200/200 points scored (0 inconclusive) over 18.6 years; R1 smooth (113 points): RMSE 1.84 pp, bias -0.66 pp (limits 2.0 / 1.0: met); R2 area-weighted: RMSE 2.41 pp, bias -0.77 pp (limits 5.0 / 2.0: met); R3 (diagnostic) equal-weight RMSE 9.40 pp, bias -4.68 pp, max |d| 36.32 pp",
+      "source": "external",
+      "script": "v09_v10_avgvisib",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-14T04:24:24Z"
+    },
+    "V-10": {
+      "status": "failed",
+      "detail": "200/200 points scored (0 inconclusive) over 18.6 years; R1 smooth (152 points): RMSE 3.26 pp, bias 0.25 pp (limits 2.0 / 1.0: not met); R2 area-weighted: RMSE 5.41 pp, bias -0.29 pp (limits 5.0 / 2.0: not met); R3 (diagnostic) equal-weight RMSE 4.22 pp, bias -0.35 pp, max |d| 39.80 pp",
+      "source": "external",
+      "script": "v09_v10_avgvisib",
+      "external_status": "failed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-14T04:24:24Z"
+    },
+    "V-11": {
+      "status": "passed",
+      "detail": "200/200 formal points dark with a complete horizon (100.0%; criterion >= 99%), 0 lit, 0 inconclusive (incomplete terrain coverage: not scored, never counted as dark)",
+      "source": "external",
+      "script": "v11_psr",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-14T04:47:05Z"
+    },
+    "V-12": {
+      "status": "passed",
+      "detail": "200/200 samples scored (0 inconclusive); C1 (TWI <= 1 % where LUNA-OPS predicts permanent shadow): passed (26 samples, 0 above); C2 TWI in [full, any] 127/200, with 1.31 pp 157/200, with 3.0 pp 175/200 (reported, not gating)",
+      "source": "external",
+      "script": "v12_lroc",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-14T05:07:53Z"
+    },
+    "V-13": {
+      "status": "passed",
+      "detail": "4 GSFC eclipses x 5 nearside sites: 20/20 pass; smallest margins (s): partial_start_after_P1 502.6, partial_end_before_P4 482.6, total_start_after_U1 600.8, total_end_before_U4 516.7",
+      "source": "external",
+      "script": "v13_eclipse",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-14T04:24:35Z"
+    },
+    "V-14": {
+      "status": "passed",
+      "detail": "full V-14: 29.5306 days x 3 site(s), 1 s brute force; 955 required window edges, 0 missed, 0 beyond 1.0 s, 0 spurious; worst offset 0.5 s",
+      "source": "external",
+      "script": "v14_month",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-14T04:29:24Z"
+    },
+    "U-01": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-02": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-03": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-04": {
+      "status": "passed",
+      "detail": "Scoped U-04 (criteria and scope of D4, approved 2026-11-11) re-evaluated in Phase 7 (2026-11-14, npm run audit:a11y extended with the Landing and Communication views): 0 automated problems in 12 views; every Tab walk cycled (no trap); 13/13 keyboard and announcement functional checks passed. Four findings of the first Phase 7 audit were fixed first (text-spacing overflow of the figure cards and their label badges, an invisible chart label counted as text, a clipped focus ring in the comparison matrix, a long label chip at 320 px). Tab-stop counts are re-registered for the LUNA-OPS 2.0 views. Scope: Chrome headless only; no real screen-reader (assistive-technology) user session; zoom emulated through the viewport; speech input not tested. Not a claim of unrestricted WCAG 2.2 AA conformance",
+      "source": "external",
+      "script": "frontend_u04",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-14T06:39:03Z"
+    },
+    "U-05": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-06": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-07": {
+      "status": "not run",
+      "detail": null
+    }
+  },
+  "merged": {
+    "../docs/validation_evidence/phase7_final_validation_2026-11-14/engine_regression/external/v09_v10_holdout.json": {
+      "sha256": "2bbd77ee16491d4359bfdc7c4779db72f224e5d5087f287f4717e035c52b4163",
+      "tests": [
+        "V-09",
+        "V-10"
+      ]
+    },
+    "../docs/validation_evidence/phase7_final_validation_2026-11-14/engine_regression/external/v13.json": {
+      "sha256": "e9fd11d7f5e4294520a12d9cf79d018d0f72ffee61eeb70030a161b068e86eba",
+      "tests": [
+        "V-13"
+      ]
+    },
+    "../docs/validation_evidence/phase7_final_validation_2026-11-14/engine_regression/external/v14.json": {
+      "sha256": "a2267ac3e6f92dd338937112ceed3c0b6570f04a0fb816f2d512dd16789d5b26",
+      "tests": [
+        "V-14"
+      ]
+    },
+    "../docs/validation_evidence/phase7_final_validation_2026-11-14/engine_regression/external/horizons.json": {
+      "sha256": "3e91d13e3866780f44c2f0621b3bccc3b3527659ee89cefbee3d4fa19f1c44da",
+      "tests": [
+        "V-04",
+        "V-05"
+      ]
+    },
+    "../docs/validation_evidence/phase7_final_validation_2026-11-14/engine_regression/external/v11.json": {
+      "sha256": "c6277fe5f7ba0a7249ec6f08c84a609d9bae878a254b303b3409494c000480be",
+      "tests": [
+        "V-11"
+      ]
+    },
+    "../docs/validation_evidence/phase7_final_validation_2026-11-14/engine_regression/external/v12.json": {
+      "sha256": "887f79621b14613a017ad2338fcd1fad7e00cb7af4869d292d2d99ef9b21a83c",
+      "tests": [
+        "V-12"
+      ]
+    },
+    "../docs/validation_evidence/phase7_final_validation_2026-11-14/accessibility/frontend_u04.json": {
+      "sha256": "f4a19e8ed44f0a058a3d8e2b7ddc9de7d0c0875f3679bb357e3d3015783a49d9",
+      "tests": [
+        "U-04"
+      ]
+    }
+  },
+  "rejected_merges": {},
+  "terrain_products": [
+    {
+      "key": "20m:LDEM_80S_20MPP_ADJ.TIF",
+      "sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+      "error_map_sha256": "d64045b8aa58a24010f009ab5667ae02cc06cffa7796784dd5e2d48b3059d8cf"
+    },
+    {
+      "key": "240m:LDEM_60S_240MPP_ADJ.TIF",
+      "sha256": "3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34",
+      "error_map_sha256": "6b987570acf20cba527d29a519a9b1fd9d4550e98a81d4b8c1be4903b6d38fab"
+    },
+    {
+      "key": "5m:Site01_final_adj_5mpp_surf.tif",
+      "sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+      "error_map_sha256": "cf2cf52f52d2aa51e60d058010d10b0ebfb1d3e920f5a2b9a46eb6c51054ab1c"
+    },
+    {
+      "key": "80m:LDEM_80S_80MPP_ADJ.tiff",
+      "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+      "error_map_sha256": "e89306914bb209143f61ba66d341703d75221339424b774c6a1eb3c6c370ffc6"
+    }
+  ],
+  "label_rules_digest": "8d8e229fd52cbe79",
+  "label_check": {
+    "interim_report": {
+      "blockers": [
+        "the automated test suite did not pass completely (pytest exit code None); every test, including integrity tests, must pass"
+      ],
+      "labels": {
+        "sun_earth_azel": {
+          "kind": "Geometric",
+          "validation": "Pending validation",
+          "tests": {
+            "V-01": "not run",
+            "V-02a": "not run",
+            "V-02b": "not run",
+            "V-02c": "not run",
+            "V-02d": "not run",
+            "V-02e": "not run",
+            "V-03": "not run",
+            "V-04": "passed"
+          },
+          "reasons": [
+            "the automated test suite did not pass completely (pytest exit code None); every test, including integrity tests, must pass",
+            "U-06: not run (required for every Validated label)",
+            "V-01: not run",
+            "V-02a: not run",
+            "V-02b: not run",
+            "V-02c: not run",
+            "V-02d: not run",
+            "V-02e: not run",
+            "V-03: not run"
+          ]
+        },
+        "horizon": {
+          "kind": "Geometric",
+          "validation": "Pending validation",
+          "tests": {
+            "V-02a": "not run",
+            "V-02b": "not run",
+            "V-02c": "not run",
+            "V-02d": "not run",
+            "V-02e": "not run",
+            "V-06": "not run",
+            "V-07": "not run",
+            "V-11": "passed",
+            "V-12": "passed"
+          },
+          "reasons": [
+            "the automated test suite did not pass completely (pytest exit code None); every test, including integrity tests, must pass",
+            "U-06: not run (required for every Validated label)",
+            "V-02a: not run",
+            "V-02b: not run",
+            "V-02c: not run",
+            "V-02d: not run",
+            "V-02e: not run",
+            "V-06: not run",
+            "V-07: not run"
+          ]
+        },
+        "disk_visibility": {
+          "kind": "Geometric",
+          "validation": "Pending validation",
+          "tests": {
+            "V-02a": "not run",
+            "V-02b": "not run",
+            "V-02c": "not run",
+            "V-02d": "not run",
+            "V-02e": "not run",
+            "V-06": "not run",
+            "V-07": "not run",
+            "V-08": "not run",
+            "V-09": "passed",
+            "V-10": "failed",
+            "V-11": "passed",
+            "V-12": "passed",
+            "V-13": "passed"
+          },
+          "reasons": [
+            "the automated test suite did not pass completely (pytest exit code None); every test, including integrity tests, must pass",
+            "U-06: not run (required for every Validated label)",
+            "V-02a: not run",
+            "V-02b: not run",
+            "V-02c: not run",
+            "V-02d: not run",
+            "V-02e: not run",
+            "V-06: not run",
+            "V-07: not run",
+            "V-08: not run",
+            "V-10: failed"
+          ]
+        },
+        "events": {
+          "kind": "Geometric",
+          "validation": "Pending validation",
+          "tests": {
+            "V-02a": "not run",
+            "V-02b": "not run",
+            "V-02c": "not run",
+            "V-02d": "not run",
+            "V-02e": "not run",
+            "V-05": "passed",
+            "V-06": "not run",
+            "V-07": "not run",
+            "V-08": "not run",
+            "V-09": "passed",
+            "V-10": "failed",
+            "V-11": "passed",
+            "V-12": "passed",
+            "V-13": "passed",
+            "V-14": "passed"
+          },
+          "reasons": [
+            "the automated test suite did not pass completely (pytest exit code None); every test, including integrity tests, must pass",
+            "U-06: not run (required for every Validated label)",
+            "V-02a: not run",
+            "V-02b: not run",
+            "V-02c: not run",
+            "V-02d: not run",
+            "V-02e: not run",
+            "V-06: not run",
+            "V-07: not run",
+            "V-08: not run",
+            "V-10: failed"
+          ]
+        },
+        "power_indicator": {
+          "kind": "Estimated",
+          "validation": "Pending validation",
+          "tests": {
+            "V-02a": "not run",
+            "V-02b": "not run",
+            "V-02c": "not run",
+            "V-02d": "not run",
+            "V-02e": "not run",
+            "V-06": "not run",
+            "V-07": "not run",
+            "V-08": "not run",
+            "V-08b": "not run",
+            "V-09": "passed",
+            "V-11": "passed",
+            "V-13": "passed"
+          },
+          "reasons": [
+            "the automated test suite did not pass completely (pytest exit code None); every test, including integrity tests, must pass",
+            "U-06: not run (required for every Validated label)",
+            "V-02a: not run",
+            "V-02b: not run",
+            "V-02c: not run",
+            "V-02d: not run",
+            "V-02e: not run",
+            "V-06: not run",
+            "V-07: not run",
+            "V-08: not run",
+            "V-08b: not run"
+          ]
+        }
+      }
+    },
+    "official_report_installed": {
+      "sha256": "8c03ebafc72c5c41a238565f51464413bd63f3132302491cc518587d93ebe10d",
+      "code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109",
+      "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+      "blockers": [
+        "the validation report was produced by different code",
+        "the validation report was produced by a different version of the tests or validation scripts"
+      ],
+      "labels": {
+        "sun_earth_azel": {
+          "kind": "Geometric",
+          "validation": "Pending validation",
+          "tests": {
+            "V-01": "passed",
+            "V-02a": "passed",
+            "V-02b": "passed",
+            "V-02c": "passed",
+            "V-02d": "passed",
+            "V-02e": "passed",
+            "V-03": "passed",
+            "V-04": "passed"
+          },
+          "reasons": [
+            "the validation report was produced by different code",
+            "the validation report was produced by a different version of the tests or validation scripts"
+          ]
+        },
+        "horizon": {
+          "kind": "Geometric",
+          "validation": "Pending validation",
+          "tests": {
+            "V-02a": "passed",
+            "V-02b": "passed",
+            "V-02c": "passed",
+            "V-02d": "passed",
+            "V-02e": "passed",
+            "V-06": "passed",
+            "V-07": "passed",
+            "V-11": "passed",
+            "V-12": "passed"
+          },
+          "reasons": [
+            "the validation report was produced by different code",
+            "the validation report was produced by a different version of the tests or validation scripts"
+          ]
+        },
+        "disk_visibility": {
+          "kind": "Geometric",
+          "validation": "Pending validation",
+          "tests": {
+            "V-02a": "passed",
+            "V-02b": "passed",
+            "V-02c": "passed",
+            "V-02d": "passed",
+            "V-02e": "passed",
+            "V-06": "passed",
+            "V-07": "passed",
+            "V-08": "passed",
+            "V-09": "not run",
+            "V-10": "not run",
+            "V-11": "passed",
+            "V-12": "passed",
+            "V-13": "passed"
+          },
+          "reasons": [
+            "the validation report was produced by different code",
+            "the validation report was produced by a different version of the tests or validation scripts",
+            "V-09: not run",
+            "V-10: not run"
+          ]
+        },
+        "events": {
+          "kind": "Geometric",
+          "validation": "Pending validation",
+          "tests": {
+            "V-02a": "passed",
+            "V-02b": "passed",
+            "V-02c": "passed",
+            "V-02d": "passed",
+            "V-02e": "passed",
+            "V-05": "passed",
+            "V-06": "passed",
+            "V-07": "passed",
+            "V-08": "passed",
+            "V-09": "not run",
+            "V-10": "not run",
+            "V-11": "passed",
+            "V-12": "passed",
+            "V-13": "passed",
+            "V-14": "passed"
+          },
+          "reasons": [
+            "the validation report was produced by different code",
+            "the validation report was produced by a different version of the tests or validation scripts",
+            "V-09: not run",
+            "V-10: not run"
+          ]
+        },
+        "power_indicator": {
+          "kind": "Estimated",
+          "validation": "Pending validation",
+          "tests": {
+            "V-02a": "passed",
+            "V-02b": "passed",
+            "V-02c": "passed",
+            "V-02d": "passed",
+            "V-02e": "passed",
+            "V-06": "passed",
+            "V-07": "passed",
+            "V-08": "passed",
+            "V-08b": "passed",
+            "V-09": "not run",
+            "V-11": "passed",
+            "V-13": "passed"
+          },
+          "reasons": [
+            "the validation report was produced by different code",
+            "the validation report was produced by a different version of the tests or validation scripts",
+            "V-09: not run"
+          ]
+        }
+      }
+    }
+  }
+}

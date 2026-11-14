@@ -1,0 +1,27 @@
+independent top-edge elevations (deg): {'earth': 8.948313, 'sun': 8.266449}
+earth: fully visible (horizon 3 deg below the centre)                                | engine f=1 g_top=+3.94834 unk=False | indep f=1 g_top=+3.94742 | |df|=0.0e+00 |dg|=9.1e-04 | rules agree=True
+earth: fully blocked (horizon 3 deg above the centre)                                | engine f=0 g_top=-2.05166 unk=False | indep f=0 g_top=-2.05258 | |df|=0.0e+00 |dg|=9.1e-04 | rules agree=True
+earth: half (flat horizon through the centre)                                        | engine f=0.499782 g_top=+0.94834 unk=False | indep f=0.49972 g_top=+0.94803 | |df|=6.2e-05 |dg|=3.0e-04 | rules agree=True
+earth: partial, upper part visible (horizon half a radius above the centre)          | engine f=0.194865 g_top=+0.47334 unk=False | indep f=0.194812 g_top=+0.47303 | |df|=5.4e-05 |dg|=3.0e-04 | rules agree=True
+earth: crater wall (steep horizon, 0.8 deg per deg of azimuth, through the centre)   | engine f=0.499755 g_top=+1.22081 unk=False | indep f=0.499757 g_top=+1.22077 | |df|=1.5e-06 |dg|=3.8e-05 | rules agree=True
+earth: jagged horizon (random nodes, sigma 0.6 deg, around the centre)               | engine f=0.651201 g_top=+2.60950 unk=False | indep f=0.6512 g_top=+2.60478 | |df|=9.6e-07 |dg|=4.7e-03 | rules agree=True
+earth: below the local horizontal but above a lower terrain horizon (peak site)      | engine f=1 g_top=+3.14797 unk=False | indep f=1 g_top=+3.14742 | |df|=0.0e+00 |dg|=5.5e-04 | rules agree=True
+earth: below the local horizontal and below the terrain horizon                      | engine f=0 g_top=-1.05212 unk=False | indep f=0 g_top=-1.05258 | |df|=0.0e+00 |dg|=4.5e-04 | rules agree=True
+earth: grazing, sliver visible (horizon 0.002 deg below the top edge)                | engine f=5.91395e-05 g_top=+0.00203 unk=False | indep f=3.64947e-05 g_top=+0.00200 | |df|=2.3e-05 |dg|=8.2e-04 | rules agree=True
+earth: grazing, just hidden (horizon 0.002 deg above the top edge)                   | engine f=0 g_top=-0.00197 unk=False | indep f=0 g_top=-0.00200 | |df|=0.0e+00 |dg|=8.2e-04 | rules agree=True
+sun: fully visible (horizon 3 deg below the centre)                                  | engine f=1 g_top=+3.26645 unk=False | indep f=1 g_top=+3.26621 | |df|=0.0e+00 |dg|=2.4e-04 | rules agree=True
+sun: fully blocked (horizon 3 deg above the centre)                                  | engine f=0 g_top=-2.73355 unk=False | indep f=0 g_top=-2.73379 | |df|=0.0e+00 |dg|=2.4e-04 | rules agree=True
+sun: half (flat horizon through the centre)                                          | engine f=0.499931 g_top=+0.26645 unk=False | indep f=0.499795 g_top=+0.26638 | |df|=1.4e-04 |dg|=6.8e-05 | rules agree=True
+sun: partial, upper part visible (horizon half a radius above the centre)            | engine f=0.195921 g_top=+0.13345 unk=False | indep f=0.195923 g_top=+0.13338 | |df|=2.6e-06 |dg|=6.8e-05 | rules agree=True
+sun: crater wall (steep horizon, 0.8 deg per deg of azimuth, through the centre)     | engine f=0.499925 g_top=+0.34257 unk=False | indep f=0.499925 g_top=+0.34256 | |df|=3.9e-07 |dg|=1.3e-05 | rules agree=True
+sun: jagged horizon (random nodes, sigma 0.6 deg, around the centre)                 | engine f=0.696417 g_top=+0.86179 unk=False | indep f=0.696416 g_top=+0.86161 | |df|=1.2e-06 |dg|=1.8e-04 | rules agree=True
+sun: below the local horizontal but above a lower terrain horizon (peak site)        | engine f=1 g_top=+2.46645 unk=False | indep f=1 g_top=+2.46621 | |df|=0.0e+00 |dg|=2.4e-04 | rules agree=True
+sun: below the local horizontal and below the terrain horizon                        | engine f=0 g_top=-1.73355 unk=False | indep f=0 g_top=-1.73379 | |df|=0.0e+00 |dg|=2.4e-04 | rules agree=True
+sun: grazing, sliver visible (horizon 0.002 deg below the top edge)                  | engine f=0.000389757 g_top=+0.00200 unk=False | indep f=0.000425277 g_top=+0.00200 | |df|=3.6e-05 |dg|=2.4e-04 | rules agree=True
+sun: grazing, just hidden (horizon 0.002 deg above the top edge)                     | engine f=0 g_top=-0.00200 unk=False | indep f=0 g_top=-0.00200 | |df|=0.0e+00 |dg|=2.4e-04 | rules agree=True
+earth: missing terrain over the disk, horizon (lower bound) through the centre       | engine f=nan g_top=+0.94834 unk=True | indep f=0.499624 g_top=+0.94742 | |df|=nan |dg|=0.0e+00 | rules agree=None
+earth: missing terrain over the disk, lower bound already above the disk             | engine f=0 g_top=-2.05166 unk=False | indep f=0 g_top=-2.05258 | |df|=0.0e+00 |dg|=9.1e-04 | rules agree=True
+earth: perigee distance 356,500 km, partial                                          | engine f=0.315728 g_top=+0.72257 unk=False | indep f=0.315746 g_top=+0.72224 | |df|=1.9e-05 |dg|=3.3e-04 | rules agree=True
+earth: apogee 406,700 km, pole along the line of sight, partial                      | engine f=0.773565 g_top=+1.29859 unk=False | indep f=0.773594 g_top=+1.29836 | |df|=2.9e-05 |dg|=2.2e-04 | rules agree=True
+
+worst |f| difference 1.36e-04; worst edge-clearance difference 4.72e-03 deg; grid steps: 1601 -> 1.2e-03 deg, 3201 -> about half that, zoom -> about 1e-5 deg

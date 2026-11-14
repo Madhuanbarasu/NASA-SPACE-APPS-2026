@@ -1,0 +1,17 @@
+# python -I fk_compare.py data/kernels <dir with moon_de440_220930.tf>  (2026-11-09T17:56:06Z, SpiceyPy 8.3.0 CSPICE_N0067)
+A: 250416 (pinned)
+   frame IDs/relatives: {'MOON_ME_DE440_ME421': (31009, 'MOON_PA_DE440'), 'MOON_PA_DE440': (31008, None), 'MOON_ME': (31001, 'MOON_ME_DE440_ME421'), 'MOON_PA': (31000, 'MOON_PA_DE440'), 'MOON_ME_DE421': (0, None)}
+   alias MOON_ME vs MOON_ME_DE440_ME421 at the surface: max 0.000 m
+B: 220930 (pck readme)
+   frame IDs/relatives: {'MOON_ME_DE440_ME421': (31009, 'MOON_PA_DE440'), 'MOON_PA_DE440': (31008, None), 'MOON_ME': (31011, 'MOON_ME_DE440_ME421'), 'MOON_PA': (31010, 'MOON_PA_DE440'), 'MOON_ME_DE421': (0, None)}
+   alias MOON_ME vs MOON_ME_DE440_ME421 at the surface: max 0.000 m
+C: production load order (250416, then DE421 PCK + 080317)
+   frame IDs/relatives: {'MOON_ME_DE440_ME421': (31009, 'MOON_PA_DE440'), 'MOON_PA_DE440': (31008, None), 'MOON_ME': (31001, 'MOON_ME_DE421'), 'MOON_PA': (31000, 'MOON_PA_DE421'), 'MOON_ME_DE421': (31007, 'MOON_PA_DE421')}
+   alias MOON_ME vs MOON_ME_DE440_ME421 at the surface: max 0.863 m
+D: 220930 + DE421 PCK + 080317
+   frame IDs/relatives: {'MOON_ME_DE440_ME421': (31009, 'MOON_PA_DE440'), 'MOON_PA_DE440': (31008, None), 'MOON_ME': (31001, 'MOON_ME_DE421'), 'MOON_PA': (31000, 'MOON_PA_DE421'), 'MOON_ME_DE421': (31007, 'MOON_PA_DE421')}
+   alias MOON_ME vs MOON_ME_DE440_ME421 at the surface: max 0.863 m
+B: 220930 (pck readme) vs A: max |delta R(J2000->MOON_ME_DE440_ME421)| = 0.000e+00; max Sun/Earth direction difference = 0.000e+00 rad
+C: production load order (250416, then DE421 PCK + 080317) vs A: max |delta R(J2000->MOON_ME_DE440_ME421)| = 0.000e+00; max Sun/Earth direction difference = 0.000e+00 rad
+D: 220930 + DE421 PCK + 080317 vs A: max |delta R(J2000->MOON_ME_DE440_ME421)| = 0.000e+00; max Sun/Earth direction difference = 0.000e+00 rad
+epochs: 2001 from 1900 to 2050

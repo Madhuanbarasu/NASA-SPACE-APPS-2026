@@ -1,0 +1,10 @@
+# reference_analysis.py (2026-11-10T11:09:21Z)
+# LROC maps: image offset 9712, valid 1,155,716, missing 318,080
+1. TWI - PCT over 1,155,716 px: mean 0.009, RMS 1.314, median |d| 0.435, p95 |d| 3.024, max |d| 7.89 pp
+2. TWI at 71,346 LPSR interior points: == 0 0.994; > 1 % 0.00000; p99.9 0.033; max 0.87 %
+2. PCT at 71,346 LPSR interior points: == 0 0.994; > 1 % 0.00000; p99.9 0.028; max 0.06 %
+3. co-registration: IoU at zero shift 0.8632; best 0.8632 at shift (+0,+0); one-pixel shifts 0.8576-0.8601
+4. TWI - AVGVISIB (100 m block mean): mean -1.90 pp, RMSE 4.32, corr 0.954
+4. PCT - AVGVISIB (100 m block mean): mean -1.91 pp, RMSE 4.45, corr 0.950
+5. WAC frames in 2010-02-15..2011-02-05: 3559 (README: 3807 + 229); interval median 1.88 h, p99 5.7 h, max 98.1 h; gaps > 6 h: 31 totalling 581 h
+# exit 0

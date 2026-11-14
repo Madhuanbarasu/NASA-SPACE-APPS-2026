@@ -1,0 +1,27 @@
+view                    tabStops(rel->cur)  problems(current build)
+site-welcome              34 -> 34         none
+site-result-technical     52 -> 52         none
+site-result-public      None -> None       none
+compare-matrix            76 -> 76         none
+data                      34 -> 34         none
+guide                     33 -> 33         none
+
+functional tests (release -> current):
+  skipLink                     same
+  tabsArrowKeys                same
+  invalidCoordinates           same
+  slider                       same
+  readoutLive                  same
+  panoramaHoverEscape          same
+  readoutLiveWhilePlaying      same
+  mapKeyboard                  same
+  terrain3dKeyboard            same
+  panoramaKeyboard             same
+  pointerAlternatives          same
+  statusAfterAnalysis          same
+  statusAfterComparison        same
+  matrixCellSpace              same
+  matrixCellEnter              same
+  reducedMotionTransition      same
+
+AUTOMATED CHECKS: 0 problems in every view

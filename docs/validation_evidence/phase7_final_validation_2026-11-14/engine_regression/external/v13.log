@@ -1,0 +1,8 @@
+# ./.venv/Scripts/python.exe -m validation.v13_eclipse --reference validation/reference/gsfc_lunar_eclipses_2025_2026.json --out ../docs/validation_evidence/phase7_final_validation_2026-11-14/engine_regression/external/v13.json (start 2026-11-14T04:24:25Z; fingerprints 9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8 70606628abed3fdee2704e0b8e2891f648da27266b04791d7690531a517cd546)
+{
+  "V-13": {
+    "status": "passed",
+    "detail": "4 GSFC eclipses x 5 nearside sites: 20/20 pass; smallest margins (s): partial_start_after_P1 502.6, partial_end_before_P4 482.6, total_start_after_U1 600.8, total_end_before_U4 516.7"
+  }
+}
+# exit 0; wall time 10 s (end 2026-11-14T04:24:35Z)

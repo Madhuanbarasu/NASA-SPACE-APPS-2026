@@ -1,0 +1,15 @@
+# python -m lunaops.acquire verify-kernels  (2026-11-08T21:24:50Z)
+Kernel set: /home/user/LUNA-OPS/data/kernels
+  profile production; frame MOON_ME_DE440_ME421; created 2026-11-08T21:24:43Z
+  ok       lsk            naif0012.tls                         5257 B  sha256 678e32bdb5a74411...  SHA-256 matches lock; NAIF MD5 ok
+  ok       text_pck       pck00011.tpc                       131226 B  sha256 3dff7b1dbeceaa01...  SHA-256 matches lock; NAIF publishes no checksum for this file (trusted on first download)
+  ok       spk            de440s.bsp                       32726016 B  sha256 c1c7feeab882263f...  SHA-256 matches lock; NAIF aa_checksums ok
+  ok       lunar_pck      moon_pa_de440_200625.bpc         12863488 B  sha256 60cd55aa401ea2ea...  SHA-256 matches lock; NAIF publishes no checksum for this file (trusted on first download)
+  ok       lunar_fk       moon_de440_250416.tf                19478 B  sha256 a47c71e9c9f33796...  SHA-256 matches lock; NAIF MD5 ok
+  ok       de421_pck      moon_pa_de421_1900-2050.bpc       1770496 B  sha256 656f90616403d75a...  SHA-256 matches lock; NAIF publishes no checksum for this file (trusted on first download)
+  ok       de421_fk       moon_080317.tf                      21437 B  sha256 78732477b96f9863...  SHA-256 matches lock; NAIF publishes no checksum for this file (trusted on first download)
+  load: ok; frame MOON_ME_DE440_ME421 defined; coverage 1849-12-25T23:59:19 to 2150-01-21T23:58:51
+  Moon radii in kernels: (1737.4, 1737.4, 1737.4) km (engine uses 1737.4 km)
+  V-02e prerequisites (production profile + DE421 PCK/FK + MOON_ME_DE421 frame): met
+Kernel set verified.
+# exit 0

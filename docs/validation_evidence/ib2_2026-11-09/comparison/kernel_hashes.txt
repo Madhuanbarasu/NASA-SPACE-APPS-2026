@@ -1,0 +1,6 @@
+# file hashes (2026-11-09)
+moon_de440_250416.tf  19478 bytes  md5 3556dde4bb7ca54a89917c301e650bbf  sha256 a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768
+moon_de440_220930.tf  19571 bytes  md5 f0db81aa247bc53fac8545823fc9d4da  sha256 73eb6b216c06a27c3419c4cfeaded7ffce46a714e3d4f9f5142dda51c0710f76
+moon_080317.tf  21437 bytes  md5 93b7d5f7c2c3678590149a652e9d8835  sha256 78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993
+# moon_de440_220930.tf was fetched for comparison from https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/a_old_versions/moon_de440_220930.tf (HTTP 200);
+# https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_de440_220930.tf returned HTTP 404. The kernel itself is not stored here.

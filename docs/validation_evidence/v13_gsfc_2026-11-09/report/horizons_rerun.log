@@ -1,0 +1,12 @@
+# python -m validation.horizons_compare (re-run for current fingerprints; raw responses kept outside the repository)  (2026-11-09T19:55:25Z)
+{
+  "V-04": {
+    "status": "passed",
+    "detail": "max |dAz cos El| 5.235e-07 deg, max |dEl| 5.226e-07 deg (tolerance 0.01 deg); 7931 epochs; kernel profile production"
+  },
+  "V-05": {
+    "status": "passed",
+    "detail": "18 matched centre crossings, 0 missed, 0 spurious; max |t_LUNA - t_Horizons| 0.500 s (tolerance 1.0 s); kernel profile production"
+  }
+}
+# exit 0

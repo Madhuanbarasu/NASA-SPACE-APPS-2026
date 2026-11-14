@@ -1,0 +1,268 @@
+{
+ "cases": [
+  {
+   "tag": "s85-auto",
+   "paint": {
+    "host": [
+     568,
+     652
+    ],
+    "canvases": [
+     {
+      "w": 568,
+      "h": 652,
+      "painted": 100
+     }
+    ],
+    "notes": [],
+    "findings": [
+     "Slope\nNo thre hold configured (value   hown)\n\n9.53 to 10.72 ° (median 9.99)\n\nBa eline: 59.9 m\n\nBa i : calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughne \nNo thre hold configured (value   hown)\n\n0.18 to 0.55 m (median 0.38)\n\nBa eline: 99.8 m\n\nBa i : calculated: RMS re idual about a lea t- quare  plane",
+     "Elevation range\nNo thre hold configured (value   hown)\n\nRelief: 15.50 m\n\nBa i : calculated: maximum minu  minimum DEM height in ide the footprint",
+     "Depre ion candidate \nNo candidate detected at thi  re olution\n\nNo candidate inter ect  the footprint. Depre ion   maller than about 60 m or  hallower than 1 m b",
+     "Ob tacle  (boulder )\nNot available - manual review required\n\nNo imagery-ba ed ob tacle product i  regi tered. Thi   creening u e  20 m DEM pixel , and even the "
+    ],
+    "product": "auto",
+    "productOptions": [
+     "auto",
+     "20m:LDEM_80S_20MPP_ADJ.TIF",
+     "80m:LDEM_80S_80MPP_ADJ.tiff",
+     "240m:LDEM_60S_240MPP_ADJ.TIF"
+    ]
+   },
+   "tiles": {
+    "n": 9,
+    "codes": [
+     200
+    ],
+    "maxMs": 516,
+    "pendingAfter6s": 0
+   },
+   "landing": [
+    "200 184ms /api/landing/assess",
+    "200 21ms /api/landing/ac4933775c25ea281be5/layer/slope.png",
+    "200 41ms /api/landing/ac4933775c25ea281be5/footprint"
+   ]
+  },
+  {
+   "tag": "s85-240m",
+   "paint": {
+    "host": [
+     568,
+     358
+    ],
+    "canvases": [
+     {
+      "w": 568,
+      "h": 358,
+      "painted": 100
+     }
+    ],
+    "notes": [],
+    "findings": [
+     "Slope\nRequire  higher-re olution data\n\nNo DEM pixel centre lie  in ide the footprint.",
+     "Roughne \nRequire  higher-re olution data\n\nNo DEM pixel centre lie  in ide the footprint.",
+     "Elevation range\nRequire  higher-re olution data\n\nNo DEM pixel centre lie  in ide the footprint.",
+     "Depre ion candidate \nRequire  higher-re olution data\n\nNo DEM pixel centre lie  in ide the footprint.",
+     "Ob tacle  (boulder )\nNot available - manual review required\n\nNo imagery-ba ed ob tacle product i  regi tered. Thi   creening u e  240 m DEM pixel , and even the"
+    ],
+    "product": "240m:LDEM_60S_240MPP_ADJ.TIF",
+    "productOptions": [
+     "auto",
+     "20m:LDEM_80S_20MPP_ADJ.TIF",
+     "80m:LDEM_80S_80MPP_ADJ.tiff",
+     "240m:LDEM_60S_240MPP_ADJ.TIF"
+    ]
+   },
+   "tiles": {
+    "n": 6,
+    "codes": [
+     200
+    ],
+    "maxMs": 406,
+    "pendingAfter6s": 0
+   },
+   "landing": [
+    "200 62ms /api/landing/assess",
+    "200 5ms /api/landing/78ca74e24498fe174d02/layer/slope.png",
+    "200 2ms /api/landing/78ca74e24498fe174d02/footprint"
+   ]
+  },
+  {
+   "tag": "s85-80m",
+   "paint": {
+    "host": [
+     568,
+     741
+    ],
+    "canvases": [
+     {
+      "w": 568,
+      "h": 741,
+      "painted": 100
+     }
+    ],
+    "notes": [],
+    "findings": [
+     "Slope\nRequire  higher-re olution data\n\n10.32 to 10.32 ° (median 10.32)\n\nBa eline: 239.6 m\n\nThe footprint  pan  1.3 DEM pixel ; at lea t 3 are needed to re olve ",
+     "Roughne \nRequire  higher-re olution data\n\n2.00 to 2.00 m (median 2.00)\n\nBa eline: 399.3 m\n\nThe footprint  pan  1.3 DEM pixel ; at lea t 3 are needed to re olve ",
+     "Elevation range\nRequire  higher-re olution data\n\nRelief: 0.00 m\n\nThe footprint  pan  1.3 DEM pixel ; at lea t 3 are needed to re olve it with a 3 x 3  tencil.\n\n",
+     "Depre ion candidate \nRequire  higher-re olution data\n\nThe footprint  pan  1.3 DEM pixel ; depre ion  in ide it cannot be re olved at thi  re olution.\n\nBa i : e ",
+     "Ob tacle  (boulder )\nNot available - manual review required\n\nNo imagery-ba ed ob tacle product i  regi tered. Thi   creening u e  80 m DEM pixel , and even the "
+    ],
+    "product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+    "productOptions": [
+     "auto",
+     "20m:LDEM_80S_20MPP_ADJ.TIF",
+     "80m:LDEM_80S_80MPP_ADJ.tiff",
+     "240m:LDEM_60S_240MPP_ADJ.TIF"
+    ]
+   },
+   "tiles": {
+    "n": 0,
+    "codes": [],
+    "maxMs": 0,
+    "pendingAfter6s": 0
+   },
+   "landing": [
+    "200 48ms /api/landing/assess",
+    "200 7ms /api/landing/56a17281dddf894e264e/layer/slope.png",
+    "200 4ms /api/landing/56a17281dddf894e264e/footprint"
+   ]
+  },
+  {
+   "tag": "s88-auto",
+   "paint": {
+    "host": [
+     568,
+     652
+    ],
+    "canvases": [
+     {
+      "w": 568,
+      "h": 652,
+      "painted": 100
+     }
+    ],
+    "notes": [],
+    "findings": [
+     "Slope\nNo thre hold configured (value   hown)\n\n24.21 to 26.28 ° (median 25.07)\n\nBa eline: 60.0 m\n\nBa i : calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughne \nNo thre hold configured (value   hown)\n\n0.34 to 0.64 m (median 0.38)\n\nBa eline: 100.0 m\n\nBa i : calculated: RMS re idual about a lea t- quare  plane",
+     "Elevation range\nNo thre hold configured (value   hown)\n\nRelief: 38.13 m\n\nBa i : calculated: maximum minu  minimum DEM height in ide the footprint",
+     "Depre ion candidate \nNo candidate detected at thi  re olution\n\nNo candidate inter ect  the footprint. Depre ion   maller than about 60 m or  hallower than 1 m b",
+     "Ob tacle  (boulder )\nNot available - manual review required\n\nNo imagery-ba ed ob tacle product i  regi tered. Thi   creening u e  20 m DEM pixel , and even the "
+    ],
+    "product": "auto",
+    "productOptions": [
+     "auto",
+     "20m:LDEM_80S_20MPP_ADJ.TIF",
+     "80m:LDEM_80S_80MPP_ADJ.tiff",
+     "240m:LDEM_60S_240MPP_ADJ.TIF"
+    ]
+   },
+   "tiles": {
+    "n": 9,
+    "codes": [
+     200
+    ],
+    "maxMs": 496,
+    "pendingAfter6s": 0
+   },
+   "landing": [
+    "200 68ms /api/landing/assess",
+    "200 10ms /api/landing/648e3596ac9767f048e9/layer/slope.png",
+    "200 3ms /api/landing/648e3596ac9767f048e9/footprint"
+   ]
+  },
+  {
+   "tag": "site01-auto",
+   "paint": {
+    "host": [
+     568,
+     702
+    ],
+    "canvases": [
+     {
+      "w": 568,
+      "h": 702,
+      "painted": 100
+     }
+    ],
+    "notes": [],
+    "findings": [
+     "Slope\nNo thre hold configured (value   hown)\n\n1.46 to 10.89 ° (median 5.79)\n\nBa eline: 15.0 m\n\nBa i : calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughne \nNo thre hold configured (value   hown)\n\n0.04 to 0.32 m (median 0.13)\n\nBa eline: 25.0 m\n\nBa i : calculated: RMS re idual about a lea t- quare  plane",
+     "Elevation range\nNo thre hold configured (value   hown)\n\nRelief: 8.74 m\n\nBa i : calculated: maximum minu  minimum DEM height in ide the footprint",
+     "Depre ion candidate \nNo candidate detected at thi  re olution\n\nNo candidate inter ect  the footprint. Depre ion   maller than about 15 m or  hallower than 1 m b",
+     "Ob tacle  (boulder )\nNot available - manual review required\n\nNo imagery-ba ed ob tacle product i  regi tered. Thi   creening u e  5 m DEM pixel , and even the f"
+    ],
+    "product": "auto",
+    "productOptions": [
+     "auto",
+     "5m:Site01_final_adj_5mpp_surf.tif",
+     "20m:LDEM_80S_20MPP_ADJ.TIF",
+     "80m:LDEM_80S_80MPP_ADJ.tiff",
+     "240m:LDEM_60S_240MPP_ADJ.TIF"
+    ]
+   },
+   "tiles": {
+    "n": 6,
+    "codes": [
+     200
+    ],
+    "maxMs": 339,
+    "pendingAfter6s": 0
+   },
+   "landing": [
+    "200 471ms /api/landing/assess",
+    "200 243ms /api/landing/d83ff9d8877b9c896f57/layer/slope.png",
+    "200 11ms /api/landing/d83ff9d8877b9c896f57/footprint"
+   ]
+  },
+  {
+   "tag": "s85-auto-12km",
+   "paint": {
+    "host": [
+     568,
+     652
+    ],
+    "canvases": [
+     {
+      "w": 568,
+      "h": 652,
+      "painted": 100
+     }
+    ],
+    "notes": [],
+    "findings": [
+     "Slope\nNo thre hold configured (value   hown)\n\n9.53 to 10.72 ° (median 9.99)\n\nBa eline: 59.9 m\n\nBa i : calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughne \nNo thre hold configured (value   hown)\n\n0.18 to 0.55 m (median 0.38)\n\nBa eline: 99.8 m\n\nBa i : calculated: RMS re idual about a lea t- quare  plane",
+     "Elevation range\nNo thre hold configured (value   hown)\n\nRelief: 15.50 m\n\nBa i : calculated: maximum minu  minimum DEM height in ide the footprint",
+     "Depre ion candidate \nNo candidate detected at thi  re olution\n\nNo candidate inter ect  the footprint. Depre ion   maller than about 60 m or  hallower than 1 m b",
+     "Ob tacle  (boulder )\nNot available - manual review required\n\nNo imagery-ba ed ob tacle product i  regi tered. Thi   creening u e  20 m DEM pixel , and even the "
+    ],
+    "product": "auto",
+    "productOptions": [
+     "auto",
+     "20m:LDEM_80S_20MPP_ADJ.TIF",
+     "80m:LDEM_80S_80MPP_ADJ.tiff",
+     "240m:LDEM_60S_240MPP_ADJ.TIF"
+    ]
+   },
+   "tiles": {
+    "n": 9,
+    "codes": [
+     200
+    ],
+    "maxMs": 492,
+    "pendingAfter6s": 0
+   },
+   "landing": [
+    "200 482ms /api/landing/assess",
+    "200 175ms /api/landing/b3be9164cdf4147151c1/layer/slope.png",
+    "200 23ms /api/landing/b3be9164cdf4147151c1/footprint"
+   ]
+  }
+ ],
+ "console": []
+}

@@ -1,0 +1,23 @@
+LUNA-OPS 2.0 Phase 1: map and end-to-end live checks on the final build. Status: DEFERRED (not run to completion; not passed).
+
+Map live check (scripts/map-live-check.mjs)
+  started   2026-11-13 05:37:35 (node PID 21948, headless Chrome PID 3336, profile E:\Temp\LUNA-OPS\luna-globe-cP7PAJ, DevTools port 9788)
+  inspected 2026-11-13 17:30 (about 11 h 53 min later)
+  evidence of the stall:
+    - log 16_map_live_check.log stayed 0 bytes (no check line ever written; kept as 16_map_live_check_STALLED_empty.log)
+    - checks/map/screenshots/ created but empty
+    - node and every Chrome process at 0 % CPU; DevTools socket established but idle
+    - server log last written 05:37:37, no later activity
+  action: background chain stopped (task b5xk6r4vj); node and Chrome exited with it. App server left running and healthy
+          (PID 25476 listening on 127.0.0.1:8000, /api/status HTTP 200).
+  completed test count: 0 of 21
+
+End-to-end live check (scripts/e2e-live-check.mjs)
+  never started (queued after the map check in the same chain); completed test count: 0 of 16
+
+Context: the same two checks passed (map 21/21, e2e 16/16) on the build before the last three CSS-only fixes
+  (16_map_live_check_pre_final_css.log, 17_e2e_live_check_pre_final_css.log). Those fixes touched only the amber button
+  background colour, Data-page table height and the welcome eyebrow selector. That is context, not a pass on the final build.
+Not repeated, by instruction. To finish later: from frontend/, with TEMP on E:,
+  node scripts/map-live-check.mjs --base http://127.0.0.1:8000 --out <EV>/checks/map
+  node scripts/e2e-live-check.mjs --base http://127.0.0.1:8000 --out <EV>/checks/e2e

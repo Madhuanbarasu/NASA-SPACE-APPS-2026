@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-11-10T11:10:35Z",
+  "product": {
+    "product_id": "pgda90_20m",
+    "level": "20m",
+    "path": "pgda90_20m/LDEM_80S_20MPP_ADJ.TIF",
+    "sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+    "bytes": 2696082051,
+    "product": "PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_20MPP_ADJ",
+    "page": "https://pgda.gsfc.nasa.gov/products/90",
+    "citation": "Barker et al. 2023, PSJ 4, 183, doi:10.3847/PSJ/acf3e1; data doi:10.60903/gsfcpgda-lola-spole",
+    "priority": 50,
+    "width": 30400,
+    "height": 30400,
+    "pixel_m": 20.0,
+    "transform": [20.0, 0.0, -304000.0, 0.0, -20.0, 304000.0],
+    "crs_wkt": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+    "has_overviews": true,
+    "area_or_point": "Area",
+    "sample_abs_max": 1416.5552978515625,
+    "stereo_check_max_m": 2.0372681319713593e-10
+  },
+  "error_map": {
+    "key": "20m:LDEM_80S_20MPP_ADJ.TIF",
+    "path": "pgda90_20m/LDEM_80S_20MPP_ADJ_ERR.TIF",
+    "sha256": "d64045b8aa58a24010f009ab5667ae02cc06cffa7796784dd5e2d48b3059d8cf",
+    "bytes": 3954709201,
+    "product": "LDEM_80S_20MPP_ADJ_ERR.TIF (3.7 GB): LDEM surface height error in metres",
+    "dem_sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+    "dem_file": "LDEM_80S_20MPP_ADJ.TIF",
+    "same_grid_as_dem": true,
+    "width": 30400,
+    "height": 30400,
+    "pixel_m": 20.0,
+    "transform": [20.0, 0.0, -304000.0, 0.0, -20.0, 304000.0],
+    "crs_wkt": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+    "has_overviews": true,
+    "area_or_point": "Area",
+    "sample_abs_max": 1.4775385856628418,
+    "stereo_check_max_m": 2.0372681319713593e-10
+  }
+}

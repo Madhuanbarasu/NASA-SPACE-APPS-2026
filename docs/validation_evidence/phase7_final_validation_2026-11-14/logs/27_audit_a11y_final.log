@@ -1,0 +1,192 @@
+┌─────────┬─────────────────────────┬───────────┬─────────────────┬──────────────┬────────────┬──────────┬──────────────────┬──────────────┬──────────┬───────────────┬─────────────────┬────────────────┬───────────┬────────┬─────────────────┐
+│ (index) │ view                    │ axUnnamed │ focusableNoRole │ contrastFail │ targetFail │ tabStops │ noFocusIndicator │ focusClipped │ obscured │ reflowHScroll │ reflowOffenders │ spacingClipped │ unlabeled │ dupIds │ roleApplication │
+├─────────┼─────────────────────────┼───────────┼─────────────────┼──────────────┼────────────┼──────────┼──────────────────┼──────────────┼──────────┼───────────────┼─────────────────┼────────────────┼───────────┼────────┼─────────────────┤
+│ 0       │ 'site-welcome'          │ 0         │ 0               │ 0            │ 0          │ 39       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 1       │ 'site-result-technical' │ 0         │ 0               │ 0            │ 0          │ 71       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 2       │ 'site-result-public'    │ 0         │ 0               │ 0            │ 0          │ '-'      │ '-'              │ '-'          │ '-'      │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 3       │ 'compare-matrix'        │ 0         │ 0               │ 0            │ 0          │ 81       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 4       │ 'data'                  │ 0         │ 0               │ 0            │ 0          │ 35       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 5       │ 'guide'                 │ 0         │ 0               │ 0            │ 0          │ 34       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 6       │ 'site-explorer-globe'   │ 0         │ 0               │ 0            │ 0          │ 58       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 7       │ 'site-explorer-terrain' │ 0         │ 0               │ 0            │ 0          │ 51       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 8       │ 'mission'               │ 0         │ 0               │ 0            │ 0          │ 66       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 9       │ 'mission-empty'         │ 0         │ 0               │ 0            │ 0          │ 36       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 10      │ 'landing'               │ 0         │ 0               │ 0            │ 0          │ 103      │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 11      │ 'communication'         │ 0         │ 0               │ 0            │ 0          │ 58       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+└─────────┴─────────────────────────┴───────────┴─────────────────┴──────────────┴────────────┴──────────┴──────────────────┴──────────────┴──────────┴───────────────┴─────────────────┴────────────────┴───────────┴────────┴─────────────────┘
+{
+ "skipLink": {
+  "firstTabStop": "a.skip-link \"Skip to main content\"",
+  "afterEnter": "main"
+ },
+ "tabsArrowKeys": {
+  "afterRight": {
+   "selected": "Site",
+   "focused": "South polar explorerWhere does the Sun reach, and where can you see Earth?South polar mapSouth polar map3D Moon globeLocal terrain+–200 km at the map centreLegendHillshade of the registered LOLA terrain, rendered by the server60° S: edge of the south polar mapHatched: no hillshade image here yet (the tile is still loading, was not rendered in time or failed; the notes below the map say which). The terrain data is not missing.Selected siteCartographic hillshade from LOLA heights (fixed light direction); not the lunar Sun. Click the map to set coordinates.Selected siteNo site selected. Click the 3D globe or the south polar map, choose a curated site, or type coordinates in the sidebar.Elevation values come only from the registered LOLA DEMs; the globe imagery is not elevation data.Before you startChoose a south polar site and a date range. LUNA-OPS traces the real terrain horizon from LOLA elevation data, places the Sun and Earth with NASA's SPICE ephemerides, and shows when the site is sunlit, when Earth is in view, and when both happen at once. NAIF kernels loaded, frame MOON_ME_DE440_ME421 LOLA terrain products: 5m:Site01_final_adj_5mpp_surf.tif, 20m:LDEM_80S_20MPP_ADJ.TIF, 80m:LDEM_80S_80MPP_ADJ.tiff, 240m:LDEM_60S_240MPP_ADJ.TIF No curated sites registered; custom coordinates work Validation report from 2026-11-12T17:23:45Z (production kernels)Pick a siteUse a curated site, click the map or the 3D Moon above, or type coordinates in the mission parameters.Set the datesAny UTC window inside the kernel coverage. Event times are found to the second.Read the resultsThe horizon panorama, timeline, map and 3D view all show the same computed result.",
+   "tabStops": 1
+  },
+  "afterLeft": "Site"
+ },
+ "invalidCoordinates": {
+  "hint": "Latitude must be a number from -90 to 90 and longitude a number from -360 to 360 degrees, for example -89.5 and 222.5.",
+  "latInvalid": "true",
+  "describedBy": "coord-hint",
+  "runDisabled": true
+ },
+ "slider": {
+  "valuenow": "0",
+  "valuetext": "14 Nov 2026, 00:00 UTC"
+ },
+ "readoutLive": "polite",
+ "panoramaHoverEscape": {
+  "shown": false,
+  "afterEscape": false
+ },
+ "readoutLiveWhilePlaying": "off",
+ "mapKeyboard": {
+  "pan": {
+   "focused": true,
+   "changed": true
+  },
+  "zoom": {
+   "focused": true,
+   "changed": true
+  }
+ },
+ "terrain3dKeyboard": {
+  "pan": {
+   "focused": true,
+   "changed": true
+  },
+  "rotate": {
+   "focused": true,
+   "changed": true
+  },
+  "zoom": {
+   "focused": true,
+   "changed": true
+  }
+ },
+ "panoramaKeyboard": {
+  "onFocus": {
+   "role": "slider",
+   "now": "264",
+   "text": "Az 264.0°  horizon -1.55°  ±0.09° (1σ)  near field",
+   "visibleReadout": false
+  },
+  "afterArrowRight": {
+   "role": "slider",
+   "now": "265",
+   "text": "Az 265.0°  horizon -1.51°  ±0.09° (1σ)  near field",
+   "visibleReadout": false
+  },
+  "afterPageUp": {
+   "role": "slider",
+   "now": "275",
+   "text": "Az 275.0°  horizon -1.07°  ±0.09° (1σ)  near field",
+   "visibleReadout": false
+  },
+  "afterBlur": {
+   "role": "slider",
+   "now": "0",
+   "text": null,
+   "visibleReadout": false
+  }
+ },
+ "pointerAlternatives": {
+  "mapZoomIn": {
+   "button": {
+    "name": "Zoom map in",
+    "size": [
+     30,
+     30
+    ]
+   },
+   "changed": true
+  },
+  "mapZoomOut": {
+   "button": {
+    "name": "Zoom map out",
+    "size": [
+     30,
+     30
+    ]
+   },
+   "changed": true
+  },
+  "view3dRotateLeft": {
+   "button": {
+    "name": "Show the whole south polar map",
+    "size": [
+     30,
+     30
+    ]
+   },
+   "changed": false
+  },
+  "view3dRotateRight": {
+   "button": {
+    "name": "Centre the map on the selected site",
+    "size": [
+     30,
+     30
+    ]
+   },
+   "changed": false
+  },
+  "view3dZoomIn": {
+   "button": {
+    "name": "Rotate view right",
+    "size": [
+     30,
+     30
+    ]
+   },
+   "changed": true
+  },
+  "view3dZoomOut": {
+   "button": {
+    "name": "Zoom view in",
+    "size": [
+     30,
+     30
+    ]
+   },
+   "changed": true
+  }
+ },
+ "statusAfterAnalysis": "Results ready for Custom site.",
+ "statusAfterComparison": "Comparison ready: 2 sites × 2 windows.",
+ "matrixCellSpace": "Site",
+ "matrixCellEnter": "Site",
+ "reducedMotionTransition": "0s",
+ "mobileSite": "screenshots/phase7-mobile-390-site.png",
+ "globeKeyboard": {
+  "rotate": {
+   "focused": true,
+   "changed": true
+  },
+  "zoom": {
+   "focused": true,
+   "changed": true
+  }
+ },
+ "terrainPreviewKeyboard": {
+  "pan": {
+   "focused": true,
+   "changed": true
+  },
+  "rotate": {
+   "focused": true,
+   "changed": true
+  },
+  "zoom": {
+   "focused": true,
+   "changed": true
+  }
+ },
+ "returnToResult": true,
+ "missionDeepLinkFocus": "result-visibility",
+ "mobileMission": "screenshots/phase7-mobile-390-mission.png"
+}
+exit 0

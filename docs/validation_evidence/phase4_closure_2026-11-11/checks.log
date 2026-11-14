@@ -1,0 +1,22 @@
+# Phase 4 closure checks (2026-11-11T16:46:41Z)
+## python -m pytest -q -p no:cacheprovider tests/test_phase3_labels.py  (documentation-consistency tests only)
+C:\Users\THILAKHAESH\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py:23: UnicodeDecodeError
+=========================== short test summary info ===========================
+FAILED tests/test_phase3_labels.py::test_readme_requirements_match_the_code
+FAILED tests/test_phase3_labels.py::test_traceability_table_matches_the_code
+2 failed, 16 passed in 18.55s
+## report.json
+00d2cda1bf3fe38fe98cc8a76e92acabdf9cb771ab900119750203586b15c239 *validation/report.json
+byte-identical to report_production_merged.json
+## terrain_acceptance.json
+c04650699f1cdade46b29614fc4f9b2dd20d27eb3b99fd32b9a8e72a892356ae *validation/reference/terrain_acceptance.json
+## README line 99
+Production kernels alone do not make results Validated: V-04, V-05, V-09 to V-13, U-04 and U-06 must also pass (see Validation).
+
+## Diagnosis of the 2 failures above (UnicodeDecodeError, cp1252)
+tests/test_phase3_labels.py reads README.md and docs/TRACEABILITY.md with Path.read_text() and no encoding, so Windows decodes UTF-8 as cp1252.
+The undecodable bytes (0x81) come from characters that were in these files before this review: README lines 207, 232, 280-282 ('10⁻⁷', '10⁻⁹', '10⁻¹⁶', '10⁻¹⁰') and TRACEABILITY line 12 ('10⁴-case') and line 18 ('ρ_up'). None is in text added by this review.
+Pre-existing Windows portability defect in the test (not fixed: editing a test changes the suite fingerprint and would invalidate every merge file).
+
+## Same tests in UTF-8 mode: PYTHONUTF8=1 python -m pytest -q -p no:cacheprovider tests/test_phase3_labels.py
+18 passed in 11.86s

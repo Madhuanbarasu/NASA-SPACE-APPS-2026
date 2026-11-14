@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1L00.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<Product_SPICE_Kernel xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1L00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:clps.spice:spice_kernels:fk_moon_de440_250416.tf</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>moon_de440_250416.tf</title>
+    <information_model_version>1.21.0.0</information_model_version>
+    <product_class>Product_SPICE_Kernel</product_class>
+    <Citation_Information>
+      <publication_year>2026</publication_year>
+      <keyword>Observation Geometry</keyword>
+      <description>SPICE FK file defining lunar body-fixed reference frames, associated with high-accuracy lunar orientation data provided by the JPL Solar System Dynamics Group's planetary ephemerides DE440, created by NAIF, JPL.</description>
+    </Citation_Information>
+  </Identification_Area>
+  <Context_Area>
+    <Time_Coordinates>
+      <start_date_time>2024-01-08T08:09:02Z</start_date_time>
+      <stop_date_time>2050-01-01T00:00:00Z</stop_date_time>
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Observation Geometry</purpose>
+      <processing_level>Derived</processing_level>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>CLPS</name>
+      <type>Other Investigation</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:other_investigation.clps</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>CLPS Task Order 2 AB Peregrine Lunar Lander</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.clps_to_2ab_pll</lid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>MOON</name>
+      <type>Satellite</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:satellite.earth.moon</lid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Context_Area>
+  <Reference_List>
+    <Internal_Reference>
+      <lid_reference>urn:nasa:pds:clps.spice:document:spiceds</lid_reference>
+      <reference_type>data_to_document</reference_type>
+    </Internal_Reference>
+  </Reference_List>
+  <File_Area_SPICE_Kernel>
+    <File>
+      <file_name>moon_de440_250416.tf</file_name>
+      <creation_date_time>2026-03-05T12:51:44</creation_date_time>
+      <file_size unit="byte">19478</file_size>
+      <md5_checksum>3556dde4bb7ca54a89917c301e650bbf</md5_checksum>
+    </File>
+    <SPICE_Kernel>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">19478</object_length>
+      <parsing_standard_id>SPICE</parsing_standard_id>
+      <description>SPICE FK file defining lunar body-fixed reference frames, associated with high-accuracy lunar orientation data provided by the JPL Solar System Dynamics Group's planetary ephemerides DE440, created by NAIF, JPL.</description>
+      <kernel_type>FK</kernel_type>
+      <encoding_type>Character</encoding_type>
+    </SPICE_Kernel>
+  </File_Area_SPICE_Kernel>
+</Product_SPICE_Kernel>

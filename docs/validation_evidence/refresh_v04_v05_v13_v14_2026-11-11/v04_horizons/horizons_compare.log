@@ -1,0 +1,12 @@
+# python -m validation.horizons_compare --out ../docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11/v04_horizons/horizons.json --raw-dir ../docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11/v04_horizons/horizons_raw  (start 2026-11-11T16:24:20Z; production kernels; working tree, no Git operations)
+{
+  "V-04": {
+    "status": "passed",
+    "detail": "max |dAz cos El| 5.235e-07 deg, max |dEl| 5.226e-07 deg (tolerance 0.01 deg); 7931 epochs; kernel profile production"
+  },
+  "V-05": {
+    "status": "passed",
+    "detail": "18 matched centre crossings, 0 missed, 0 spurious; max |t_LUNA - t_Horizons| 0.500 s (tolerance 1.0 s); kernel profile production"
+  }
+}
+# exit 0; wall time 137 s (end 2026-11-11T16:26:37Z)

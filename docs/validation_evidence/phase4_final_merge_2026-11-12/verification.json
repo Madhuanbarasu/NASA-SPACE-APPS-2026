@@ -1,0 +1,243 @@
+{
+  "all_ok": true,
+  "checks": [
+    {
+      "check": "backup report_before.json is the original",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "report.json rewritten by this run",
+      "ok": true,
+      "detail": "2279606ceab9354b8616ba9216e12e89e399f34cfc3cbfcbd7502d12d077d376"
+    },
+    {
+      "check": "run_validation exit 0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "pytest: 0 failed / 0 errors in output",
+      "ok": true,
+      "detail": "438 passed, 2 skipped, 1 warning in 1345.91s"
+    },
+    {
+      "check": "pytest exit code 0 in report",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "no 'NOT merged' lines",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "zero rejected merges",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "algorithm 1.5.0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "code_fingerprint = current build",
+      "ok": true,
+      "detail": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8"
+    },
+    {
+      "check": "suite_fingerprint = current build",
+      "ok": true,
+      "detail": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc"
+    },
+    {
+      "check": "kernel profile production; SHA-256 = loaded",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "terrain acceptance digest unchanged",
+      "ok": true,
+      "detail": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce"
+    },
+    {
+      "check": "terrain products unchanged vs before",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "label rules digest current",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no report-level label blockers",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "V-04 = passed (external, horizons_compare)",
+      "ok": true,
+      "detail": "status=passed script=horizons_compare external=passed automated=not run"
+    },
+    {
+      "check": "V-05 = passed (external, horizons_compare)",
+      "ok": true,
+      "detail": "status=passed script=horizons_compare external=passed automated=not run"
+    },
+    {
+      "check": "V-09 = not run (external, v09_v10_avgvisib)",
+      "ok": true,
+      "detail": "status=not run script=v09_v10_avgvisib external=not run automated=not run"
+    },
+    {
+      "check": "V-10 = not run (external, v09_v10_avgvisib)",
+      "ok": true,
+      "detail": "status=not run script=v09_v10_avgvisib external=not run automated=not run"
+    },
+    {
+      "check": "V-11 = passed (external, v11_psr)",
+      "ok": true,
+      "detail": "status=passed script=v11_psr external=passed automated=not run"
+    },
+    {
+      "check": "V-12 = passed (external, v12_lroc)",
+      "ok": true,
+      "detail": "status=passed script=v12_lroc external=passed automated=not run"
+    },
+    {
+      "check": "V-13 = passed (external, v13_eclipse)",
+      "ok": true,
+      "detail": "status=passed script=v13_eclipse external=passed automated=not run"
+    },
+    {
+      "check": "V-14 = passed (external, v14_month)",
+      "ok": true,
+      "detail": "status=passed script=v14_month external=passed automated=passed"
+    },
+    {
+      "check": "U-04 = passed (external, frontend_u04)",
+      "ok": true,
+      "detail": "status=passed script=frontend_u04 external=passed automated=not run"
+    },
+    {
+      "check": "U-06 = passed (external, frontend_u06)",
+      "ok": true,
+      "detail": "status=passed script=frontend_u06 external=passed automated=not run"
+    },
+    {
+      "check": "no failed entry anywhere",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "newly passed = exactly V-05, U-04, U-06 (no unsupported PASS)",
+      "ok": true,
+      "detail": "['U-04', 'U-06', 'V-05']"
+    },
+    {
+      "check": "automated (non-external) statuses unchanged vs before",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "labels (status page) follow engine rule as expected",
+      "ok": true,
+      "detail": "{'sun_earth_azel': 'Validated', 'horizon': 'Validated', 'disk_visibility': 'Pending validation', 'events': 'Pending validation', 'power_indicator': 'Pending validation'}"
+    },
+    {
+      "check": "labels (result with horizon sigma) keep L_corr limitation",
+      "ok": true,
+      "detail": "{'sun_earth_azel': 'Validated', 'horizon': 'Pending validation', 'disk_visibility': 'Pending validation', 'events': 'Pending validation', 'power_indicator': 'Pending validation'}"
+    }
+  ],
+  "status_counts": {
+    "passed": 420,
+    "not run": 2,
+    "skipped": 2
+  },
+  "pytest_summary": "438 passed, 2 skipped, 1 warning in 1345.91s",
+  "report": {
+    "sha256": "2279606ceab9354b8616ba9216e12e89e399f34cfc3cbfcbd7502d12d077d376",
+    "run_utc": "2026-11-11T18:57:17Z"
+  },
+  "statuses": {
+    "V-04": "passed",
+    "V-05": "passed",
+    "V-09": "not run",
+    "V-10": "not run",
+    "V-11": "passed",
+    "V-12": "passed",
+    "V-13": "passed",
+    "V-14": "passed",
+    "U-04": "passed",
+    "U-06": "passed"
+  },
+  "labels": {
+    "status_page": {
+      "sun_earth_azel": {
+        "validation": "Validated",
+        "reasons": []
+      },
+      "horizon": {
+        "validation": "Validated",
+        "reasons": []
+      },
+      "disk_visibility": {
+        "validation": "Pending validation",
+        "reasons": [
+          "V-09: not run",
+          "V-10: not run"
+        ]
+      },
+      "events": {
+        "validation": "Pending validation",
+        "reasons": [
+          "V-09: not run",
+          "V-10: not run"
+        ]
+      },
+      "power_indicator": {
+        "validation": "Pending validation",
+        "reasons": [
+          "V-09: not run"
+        ]
+      }
+    },
+    "result_with_horizon_sigma": {
+      "sun_earth_azel": {
+        "validation": "Validated",
+        "reasons": []
+      },
+      "horizon": {
+        "validation": "Pending validation",
+        "reasons": [
+          "L_corr = 250 m is an uncalibrated assumption (no published source); horizon uncertainty and uncertain flags depend on it"
+        ]
+      },
+      "disk_visibility": {
+        "validation": "Pending validation",
+        "reasons": [
+          "V-09: not run",
+          "V-10: not run"
+        ]
+      },
+      "events": {
+        "validation": "Pending validation",
+        "reasons": [
+          "V-09: not run",
+          "V-10: not run",
+          "L_corr = 250 m is an uncalibrated assumption (no published source); horizon uncertainty and uncertain flags depend on it"
+        ]
+      },
+      "power_indicator": {
+        "validation": "Pending validation",
+        "reasons": [
+          "V-09: not run",
+          "L_corr = 250 m is an uncalibrated assumption (no published source); horizon uncertainty and uncertain flags depend on it"
+        ]
+      }
+    }
+  }
+}

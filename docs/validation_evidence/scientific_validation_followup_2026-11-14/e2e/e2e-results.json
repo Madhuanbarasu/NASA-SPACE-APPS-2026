@@ -1,0 +1,573 @@
+{
+ "base": "http://127.0.0.1:8000",
+ "run_utc": "2026-11-14T02:49:25.636Z",
+ "tests": [
+  {
+   "id": "E2E-01",
+   "workstream": "V-09 / V-10",
+   "steps": [
+    "open Data and validation",
+    "read the V-09 and V-10 rows, the blockers note and the labels table",
+    "compare with /api/validation"
+   ],
+   "expected": "V-09: not run, RMSE 14.09 pp, bias -7.19 pp, provisional criteria; V-10: not run, 3.13 / -0.74, provisional; blockers note says the report was produced by different code; every label Pending validation",
+   "actual": {
+    "v09_row": [
+     "V-09",
+     "LOLA average illumination",
+     "not run",
+     "200/200 points scored (0 inconclusive); RMSE 14.09 pp, bias -7.19 pp, max |d| 53.09 pp over 18.6 years; criteria (RMSE <= 5.0 pp, |bias| <= 2.0 pp) are provisional and not approved, so no pass/fail is reported"
+    ],
+    "v10_row": [
+     "V-10",
+     "LOLA average Earth visibility",
+     "not run",
+     "200/200 points scored (0 inconclusive); RMSE 3.13 pp, bias -0.74 pp, max |d| 22.27 pp over 18.6 years; criteria (RMSE <= 5.0 pp, |bias| <= 2.0 pp) are provisional and not approved, so no pass/fail is reported"
+    ],
+    "blockers": "No result can be labelled Validated yet: the validation report was produced by different code; the validation report was produced by a different version of the tests or validation scripts.",
+    "labels": [
+     [
+      "sun earth azel",
+      "Geometric",
+      "Pending validation"
+     ],
+     [
+      "horizon",
+      "Geometric",
+      "Pending validation"
+     ],
+     [
+      "disk visibility",
+      "Geometric",
+      "Pending validation"
+     ],
+     [
+      "events",
+      "Geometric",
+      "Pending validation"
+     ],
+     [
+      "power indicator",
+      "Estimated",
+      "Pending validation"
+     ]
+    ]
+   },
+   "api": {
+    "V-09": {
+     "status": "not run",
+     "detail": "200/200 points scored (0 inconclusive); RMSE 14.09 pp, bias -7.19 pp, max |d| 53.09 pp over 18.6 years; criteria (RMSE <= 5.0 pp, |bias| <= 2.0 pp) are provisional and not approved, so no pass/fail is reported",
+     "source": "external",
+     "script": "v09_v10_avgvisib",
+     "external_status": "not run",
+     "automated_status": "not run",
+     "run_utc": "2026-11-12T12:37:19Z"
+    },
+    "V-10": {
+     "status": "not run",
+     "detail": "200/200 points scored (0 inconclusive); RMSE 3.13 pp, bias -0.74 pp, max |d| 22.27 pp over 18.6 years; criteria (RMSE <= 5.0 pp, |bias| <= 2.0 pp) are provisional and not approved, so no pass/fail is reported",
+     "source": "external",
+     "script": "v09_v10_avgvisib",
+     "external_status": "not run",
+     "automated_status": "not run",
+     "run_utc": "2026-11-12T12:37:19Z"
+    },
+    "code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109"
+   },
+   "evidence": [
+    "screenshots/e2e01-validation-table.png"
+   ],
+   "result": "Pass",
+   "actual_summary": "V-09 row found true, V-10 row found true, blockers mention different code true, labels 5 all pending true"
+  },
+  {
+   "id": "E2E-02",
+   "workstream": "Event detection (missing terrain)",
+   "steps": [
+    "Site: -60.482591, 266.96912 (the a667129a site), 12 Nov - 12 Dec 2026",
+    "Analyse",
+    "read the Sunlight card's Unknown and the timeline's hatched (unknown) segments",
+    "fetch the result"
+   ],
+   "expected": "Unknown time shown, equal to the backend's sun_any unknown hours (display rounding); hatched segments present; backend shows no visible time over incomplete bins (checked separately)",
+   "actual": {
+    "result_id": "5998e02917bc98ba4ad6d994",
+    "analysis_s": 42,
+    "request": {
+     "url": "/api/analysis",
+     "status": 200,
+     "body": {
+      "lat": -60.482591,
+      "lon": 266.96912,
+      "start_utc": "2026-11-12T00:00:00Z",
+      "end_utc": "2026-12-12T00:00:00Z",
+      "step_s": 1800,
+      "observer_profile": "surface",
+      "observer_h_m": 0,
+      "sunlit_rule": "any",
+      "dte_rule": "centre",
+      "margin_deg": 0,
+      "panel_model": "vertical_tracking",
+      "panel_az_deg": 0,
+      "site_name": null,
+      "site_id": null
+     }
+    },
+    "sunlight_card": {
+     "title": "Sunlight",
+     "big": "29.5%",
+     "metrics": {
+      "Sunlit time": "8 d 20 h",
+      "Longest darkness": "12 d 0 h",
+      "Sunlit windows": "2",
+      "Unknown": "5 d 20 h",
+      "Uncertain windows": "0"
+     }
+    },
+    "ui_unknown_h": 140,
+    "backend_unknown_h": 140.05821628146703,
+    "hatched_rects": 1,
+    "backend_unknown_intervals": {
+     "sun_any": 1,
+     "earth_centre": 0
+    },
+    "incomplete_share": 0.1925,
+    "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8"
+   },
+   "api": {
+    "summary_sun_any": {
+     "brief_windows": 0,
+     "hours": 212.1554415664408,
+     "longest_gap_h": 288.0262167633573,
+     "longest_window_h": 186.49269560843706,
+     "near_field_windows": 1,
+     "percent": 29.466033543225596,
+     "subbin_peak_windows": 0,
+     "transitions": 3,
+     "uncertain_gaps": 0,
+     "uncertain_windows": 0,
+     "unknown_hours": 140.05821628146703,
+     "windows": 2
+    }
+   },
+   "evidence": [
+    "screenshots/e2e02-missing-terrain-timeline.png",
+    "screenshots/e2e02-missing-terrain-figures.png"
+   ],
+   "result": "Pass",
+   "actual_summary": "UI unknown 140 h vs backend 140.06 h; hatched rects 1; analysis 42 s"
+  },
+  {
+   "id": "E2E-03",
+   "workstream": "Event detection (complete terrain)",
+   "steps": [
+    "Site01, 13 Nov - 13 Dec 2026",
+    "Analyse (new fingerprint: recomputed)",
+    "compare every interval with the pre-fix cached result 976a3d8f",
+    "read the Sunlight card"
+   ],
+   "expected": "intervals identical to the pre-fix result (complete horizon: no change); Unknown 0 min; no hatched segments; displayed % = backend",
+   "actual": {
+    "result_id": "eda9338a7a50e3d57fa5bca9",
+    "analysis_s": 17,
+    "intervals_vs_prefix": {
+     "earth_any": {
+      "old": 3,
+      "new": 3,
+      "identical": true
+     },
+     "earth_centre": {
+      "old": 3,
+      "new": 3,
+      "identical": true
+     },
+     "earth_full": {
+      "old": 3,
+      "new": 3,
+      "identical": true
+     },
+     "overlap": {
+      "old": 3,
+      "new": 3,
+      "identical": true
+     },
+     "sun_any": {
+      "old": 3,
+      "new": 3,
+      "identical": true
+     },
+     "sun_centre": {
+      "old": 3,
+      "new": 3,
+      "identical": true
+     },
+     "sun_full": {
+      "old": 3,
+      "new": 3,
+      "identical": true
+     }
+    },
+    "sunlight_card": {
+     "title": "Sunlight",
+     "big": "55.5%",
+     "metrics": {
+      "Sunlit time": "16 d 15 h",
+      "Longest darkness": "13 d 8 h",
+      "Sunlit windows": "2",
+      "Unknown": "0 min",
+      "Uncertain windows": "0"
+     }
+    },
+    "hatched_rects": 0,
+    "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8",
+    "old_code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109"
+   },
+   "api": {
+    "summary_sun_any": {
+     "brief_windows": 0,
+     "hours": 399.9208519324329,
+     "longest_gap_h": 320.0791482575072,
+     "longest_window_h": 208.70112150808174,
+     "near_field_windows": 2,
+     "percent": 55.544562753740486,
+     "subbin_peak_windows": 0,
+     "transitions": 2,
+     "uncertain_gaps": 0,
+     "uncertain_windows": 0,
+     "unknown_hours": 0,
+     "windows": 2
+    }
+   },
+   "evidence": [
+    "screenshots/e2e03-complete-terrain-site01.png"
+   ],
+   "result": "Pass",
+   "actual_summary": "intervals identical to pre-fix: true; UI 55.5% vs backend 55.54 %; analysis 17 s"
+  },
+  {
+   "id": "E2E-06",
+   "workstream": "Power indicator",
+   "steps": [
+    "Site01 result (vertical tracking panel): read the Power indicator card",
+    "switch the panel to horizontal, Analyse, read again",
+    "compare with the result JSON"
+   ],
+   "expected": "displayed mean = backend mean (3 decimals); equivalent full-Sun time = backend (display rounding); horizontal value = backend horizontal mean; no watt / kW claim; labelled Estimated",
+   "actual": {
+    "card_vertical": {
+     "title": "Power indicator",
+     "big": "0.539",
+     "metrics": {
+      "Equivalent full-Sun": "16 d 3 h",
+      "Mean visible Sun": "52.4%",
+      "Time with a known value": "100.0%",
+      "Unknown": "0 min"
+     }
+    },
+    "backend_vertical": {
+     "coverage": 1,
+     "equivalent_full_sun_h": 387.8055493487124,
+     "known_hours": 720.0000001899401,
+     "lower_bound": false,
+     "mean": 0.5386188183977876,
+     "policy": "known-intervals-only/v1",
+     "unknown_hours": 0
+    },
+    "card_horizontal": {
+     "title": "Power indicator",
+     "big": "0.014",
+     "metrics": {
+      "Equivalent full-Sun": "9 h 59 min",
+      "Mean visible Sun": "52.4%",
+      "Time with a known value": "100.0%",
+      "Unknown": "0 min"
+     }
+    },
+    "backend_horizontal": {
+     "coverage": 1,
+     "equivalent_full_sun_h": 9.981992645712472,
+     "known_hours": 720.0000001899401,
+     "lower_bound": false,
+     "mean": 0.013863878670943283,
+     "policy": "known-intervals-only/v1",
+     "unknown_hours": 0
+    },
+    "request_panel": "horizontal",
+    "watt_claim_in_card": false,
+    "card_text": "Power indicatorEstimated, vertical, tracking the sun0.539Equivalent full-Sun16 d 3 hMean visible Sun52.4%Time with a known value100.0%Unknown0 minPower indicatorPending validation"
+   },
+   "api": {
+    "labels_power_indicator": {
+     "kind": "Estimated",
+     "reasons": [
+      "the validation report was produced by different code",
+      "the validation report was produced by a different version of the tests or validation scripts",
+      "V-09: not run",
+      "L_corr = 250 m is an uncalibrated assumption (no published source); horizon uncertainty and uncertain flags depend on it"
+     ],
+     "tests": {
+      "V-02a": "passed",
+      "V-02b": "passed",
+      "V-02c": "passed",
+      "V-02d": "passed",
+      "V-02e": "passed",
+      "V-06": "passed",
+      "V-07": "passed",
+      "V-08": "passed",
+      "V-08b": "passed",
+      "V-09": "not run",
+      "V-11": "passed",
+      "V-13": "passed"
+     },
+     "validation": "Pending validation"
+    }
+   },
+   "evidence": [
+    "screenshots/e2e06-power-vertical.png",
+    "screenshots/e2e06-power-horizontal.png"
+   ],
+   "result": "Pass",
+   "actual_summary": "vertical UI 0.539 vs 0.5386; horizontal UI 0.014 vs 0.0139; watt claim false"
+  },
+  {
+   "id": "E2E-07",
+   "workstream": "Power indicator / inputs",
+   "steps": [
+    "latitude -95",
+    "end before start",
+    "fixed panel azimuth 400 deg (UI and API)",
+    "unknown panel model (API)"
+   ],
+   "expected": "invalid latitude flagged, Analyse disabled, no request; end-before-start refused (UI or API 4xx); unknown panel model refused (4xx); panel azimuth 400: recorded as found",
+   "actual": {
+    "latitude": {
+     "invalid": "true",
+     "hint": "Latitude must be a number from -90 to 90 and longitude a number from -360 to 360 degrees, for example -89.5 and 222.5.",
+     "analyse": true
+    },
+    "coverage_requests_for_minus95": 0,
+    "window": {
+     "analyse": false,
+     "text": [
+      "Add to comparisonDates (UTC)StartEndDisplay step5 minutes15 minutes30 minutes60 minutesEvent times are found adaptively to 1 s; the step only sets chart resolution."
+     ]
+    },
+    "window_api": {
+     "status": 200,
+     "body": "{\"result_id\":null,\"job_id\":\"3af686ed8f6f4de5\"}"
+    },
+    "panel_az_400_ui": {
+     "value": "400",
+     "valid": false,
+     "analyse": false
+    },
+    "panel_az_400_api": {
+     "status": 200,
+     "body": "{\"result_id\":null,\"job_id\":\"2405ce9f421f433e\"}"
+    },
+    "unknown_panel_api": {
+     "status": 422,
+     "body": "{\"detail\":[{\"type\":\"literal_error\",\"loc\":[\"body\",\"panel_model\"],\"msg\":\"Input should be 'vertical_tracking', 'horizontal' or 'fixed_vertical'\",\"input\":\"solar_array_5kW\",\"ctx\":{\"expected\":\"'vertical_tracking', 'horizontal' or 'fixed_vertical'\"}}]}"
+    }
+   },
+   "evidence": [
+    "screenshots/e2e07-invalid-window.png"
+   ],
+   "result": "Fail",
+   "actual_summary": "lat flagged true, analyse disabled true; window: analyse disabled false api 200; panel az 400 api 200; unknown panel api 422"
+  },
+  {
+   "id": "E2E-04",
+   "workstream": "Earth-disk visibility",
+   "steps": [
+    "Site -84.313534, 359.048681, 13 Nov - 13 Dec 2026",
+    "Analyse",
+    "read the Direct-to-Earth card",
+    "inspect the Earth visible-fraction series and the any/centre summaries"
+   ],
+   "expected": "displayed % = backend; samples with a partly visible disk (0<f<1) present; any-part hours >= centre hours",
+   "actual": {
+    "result_id": "47c26f2a9d4fa870f23f24a9",
+    "analysis_s": 15,
+    "card": {
+     "title": "Direct-to-Earth",
+     "big": "75.7%",
+     "metrics": {
+      "Earth in view": "22 d 17 h",
+      "Longest window": "20 d 12 h",
+      "Longest gap": "6 d 13 h",
+      "Unknown": "0 min",
+      "Uncertain windows": "0"
+     }
+    },
+    "earth_f_samples": {
+     "partial": 266,
+     "full": 964,
+     "none": 212
+    },
+    "earth_any_h": 614.0797010757194,
+    "earth_centre_h": 545.0203188583918,
+    "previous": {
+     "old_earth_any_h": 614.0797010757194,
+     "new_earth_any_h": 614.0797010757194
+    }
+   },
+   "api": {
+    "summary_earth": {
+     "any": {
+      "brief_windows": 0,
+      "hours": 614.0797010757194,
+      "longest_gap_h": 105.92029911422067,
+      "longest_window_h": 536.7684214056201,
+      "near_field_windows": 0,
+      "percent": 85.28884734912802,
+      "subbin_peak_windows": 0,
+      "transitions": 2,
+      "uncertain_gaps": 0,
+      "uncertain_windows": 0,
+      "unknown_hours": 0,
+      "windows": 2
+     },
+     "centre": {
+      "brief_windows": 0,
+      "hours": 545.0203188583918,
+      "longest_gap_h": 157.57385499116447,
+      "longest_window_h": 492.64337031182316,
+      "near_field_windows": 0,
+      "percent": 75.69726648814058,
+      "subbin_peak_windows": 0,
+      "transitions": 3,
+      "uncertain_gaps": 0,
+      "uncertain_windows": 0,
+      "unknown_hours": 0,
+      "windows": 2
+     }
+    }
+   },
+   "evidence": [
+    "screenshots/e2e-04-earth-disk.png"
+   ],
+   "result": "Pass",
+   "actual_summary": "UI 75.7% vs backend 75.70 %; f samples partial 266 full 964 none 212; any 614.08 h centre 545.02 h; 15 s"
+  },
+  {
+   "id": "E2E-05",
+   "workstream": "Earth-disk visibility",
+   "steps": [
+    "Site -78.398411, 21.869043, 13 Nov - 13 Dec 2026",
+    "Analyse",
+    "read the Direct-to-Earth card",
+    "inspect the Earth visible-fraction series and the any/centre summaries"
+   ],
+   "expected": "displayed 0.0 % = backend 0; every Earth visible-fraction sample 0 (fully blocked)",
+   "actual": {
+    "result_id": "f9d5518f3565a47004a176b2",
+    "analysis_s": 12,
+    "card": {
+     "title": "Direct-to-Earth",
+     "big": "0.0%",
+     "metrics": {
+      "Earth in view": "0 min",
+      "Longest window": "0 min",
+      "Longest gap": "30 d 0 h",
+      "Unknown": "0 min",
+      "Uncertain windows": "0"
+     }
+    },
+    "earth_f_samples": {
+     "partial": 0,
+     "full": 0,
+     "none": 1442
+    },
+    "earth_any_h": 0,
+    "earth_centre_h": 0,
+    "previous": null
+   },
+   "api": {
+    "summary_earth": {
+     "any": {
+      "brief_windows": 0,
+      "hours": 0,
+      "longest_gap_h": 720.0000001899401,
+      "longest_window_h": 0,
+      "near_field_windows": 0,
+      "percent": 0,
+      "subbin_peak_windows": 0,
+      "transitions": 0,
+      "uncertain_gaps": 0,
+      "uncertain_windows": 0,
+      "unknown_hours": 0,
+      "windows": 0
+     },
+     "centre": {
+      "brief_windows": 0,
+      "hours": 0,
+      "longest_gap_h": 720.0000001899401,
+      "longest_window_h": 0,
+      "near_field_windows": 0,
+      "percent": 0,
+      "subbin_peak_windows": 0,
+      "transitions": 0,
+      "uncertain_gaps": 0,
+      "uncertain_windows": 0,
+      "unknown_hours": 0,
+      "windows": 0
+     }
+    }
+   },
+   "evidence": [
+    "screenshots/e2e-05-earth-disk.png"
+   ],
+   "result": "Pass",
+   "actual_summary": "UI 0.0% vs backend 0.00 %; f samples partial 0 full 0 none 1442; any 0.00 h centre 0.00 h; 12 s"
+  }
+ ],
+ "console": [
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  }
+ ],
+ "analysis_requests": [
+  {
+   "url": "/api/analysis",
+   "method": "POST",
+   "status": 200
+  },
+  {
+   "url": "/api/analysis",
+   "method": "POST",
+   "status": 200
+  },
+  {
+   "url": "/api/analysis",
+   "method": "POST",
+   "status": 200
+  },
+  {
+   "url": "/api/analysis",
+   "method": "POST",
+   "status": 200
+  },
+  {
+   "url": "/api/analysis",
+   "method": "POST",
+   "status": 200
+  },
+  {
+   "url": "/api/analysis",
+   "method": "POST",
+   "status": 422
+  },
+  {
+   "url": "/api/analysis",
+   "method": "POST",
+   "status": 200
+  },
+  {
+   "url": "/api/analysis",
+   "method": "POST",
+   "status": 200
+  }
+ ]
+}

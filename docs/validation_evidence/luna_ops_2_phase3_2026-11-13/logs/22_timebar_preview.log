@@ -1,0 +1,240 @@
+{
+ "sizes": {
+  "desktop": {
+   "links": [
+    {
+     "id": "result-summary",
+     "headingTop": 170,
+     "barBottom": 666,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-panorama",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-timeline",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-visibility",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-earth",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-terrain",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-validation",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-tables",
+     "headingTop": 765,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    }
+   ],
+   "bar": {
+    "h": 54,
+    "top": 60,
+    "bottom": 114,
+    "display": "flex",
+    "rows": "none"
+   },
+   "hscroll": false
+  },
+  "tablet": {
+   "links": [
+    {
+     "id": "result-summary",
+     "headingTop": 170,
+     "barBottom": 893,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-panorama",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-timeline",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-visibility",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-earth",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-terrain",
+     "headingTop": 170,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-validation",
+     "headingTop": 169,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-tables",
+     "headingTop": 633,
+     "barBottom": 114,
+     "stuck": false,
+     "clear": true
+    }
+   ],
+   "bar": {
+    "h": 54,
+    "top": 60,
+    "bottom": 114,
+    "display": "flex",
+    "rows": "none"
+   },
+   "hscroll": false
+  },
+  "phone": {
+   "links": [
+    {
+     "id": "result-summary",
+     "headingTop": 112,
+     "barBottom": 1476,
+     "stuck": false,
+     "clear": true
+    },
+    {
+     "id": "result-panorama",
+     "headingTop": 112,
+     "barBottom": 62,
+     "stuck": true,
+     "clear": true
+    },
+    {
+     "id": "result-timeline",
+     "headingTop": 112,
+     "barBottom": 62,
+     "stuck": true,
+     "clear": true
+    },
+    {
+     "id": "result-visibility",
+     "headingTop": 112,
+     "barBottom": 62,
+     "stuck": true,
+     "clear": true
+    },
+    {
+     "id": "result-earth",
+     "headingTop": 112,
+     "barBottom": 62,
+     "stuck": true,
+     "clear": true
+    },
+    {
+     "id": "result-terrain",
+     "headingTop": 111,
+     "barBottom": 62,
+     "stuck": true,
+     "clear": true
+    },
+    {
+     "id": "result-validation",
+     "headingTop": 112,
+     "barBottom": 62,
+     "stuck": true,
+     "clear": true
+    },
+    {
+     "id": "result-tables",
+     "headingTop": 708,
+     "barBottom": 62,
+     "stuck": true,
+     "clear": true
+    }
+   ],
+   "bar": {
+    "h": 62,
+    "top": 0,
+    "bottom": 62,
+    "display": "grid",
+    "rows": "32px 15.5938px"
+   },
+   "nextEvent": {
+    "before": "14 Nov 2026, 00:00 UTC",
+    "after": "20 Nov 2026, 10:30 UTC"
+   },
+   "controls": [
+    {
+     "name": "Play animation",
+     "w": 32,
+     "h": 32,
+     "visible": true
+    },
+    {
+     "name": "Previous event",
+     "w": 30,
+     "h": 30,
+     "visible": true
+    },
+    {
+     "name": "Time cursor",
+     "w": 198,
+     "h": 16,
+     "visible": true
+    },
+    {
+     "name": "Next event",
+     "w": 30,
+     "h": 30,
+     "visible": true
+    }
+   ],
+   "hscroll": false
+  }
+ },
+ "consoleErrors": []
+}
+exit 0

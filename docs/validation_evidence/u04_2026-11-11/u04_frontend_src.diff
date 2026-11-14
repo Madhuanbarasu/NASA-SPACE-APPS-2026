@@ -1,0 +1,592 @@
+diff -ru before/frontend/src/App.tsx frontend/src/App.tsx
+--- before/frontend/src/App.tsx	2026-11-11 13:43:50.783399500 +0530
++++ frontend/src/App.tsx	2026-11-11 13:56:43.454201000 +0530
+@@ -4,20 +4,24 @@
+ import { CompareView } from "./components/CompareView";
+ import { DataView } from "./components/DataView";
+ import { GuideView } from "./components/GuideView";
++import { S } from "./i18n";
+ import { useStore } from "./state/store";
+ 
+ export default function App() {
+   const { state } = useStore();
+   return (
+     <div className="shell">
++      <a className="skip-link" href="#main">{S.app.skipToContent}</a>
+       <TopBar />
+       <div className="workspace">
+         <Sidebar />
+         <main className="main" id="main" tabIndex={-1}>
++          <div role="tabpanel" id="view-panel" aria-labelledby={`tab-${state.tab}`}>
+           {state.tab === "site" && <SiteView />}
+           {state.tab === "compare" && <CompareView />}
+           {state.tab === "data" && <DataView />}
+           {state.tab === "guide" && <GuideView />}
++          </div>
+         </main>
+       </div>
+     </div>
+diff -ru before/frontend/src/components/CompareView.tsx frontend/src/components/CompareView.tsx
+--- before/frontend/src/components/CompareView.tsx	2026-11-11 13:43:50.799296000 +0530
++++ frontend/src/components/CompareView.tsx	2026-11-11 14:30:53.412927700 +0530
+@@ -52,7 +52,6 @@
+     return `rgba(242, 181, 68, ${0.06 + 0.3 * t})`;
+   };
+ 
+-  const target = sites.length >= 4 && wins.length >= 3;
+   const busy = !!state.compareJob;
+ 
+   return (
+@@ -109,15 +108,15 @@
+       <div style={{ padding: "16px 24px 0", display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
+         <button className="run-button" style={{ width: "auto", marginTop: 0 }} disabled={!sites.length || !wins.length || busy}
+                 onClick={() => runComparison()}>{busy ? T.comparing : T.run(sites.length, wins.length)}</button>
+-        <span className="hint">{target ? T.targetMet : T.target}</span>
+         {state.compareJob && <span className="hint" aria-live="polite">{state.compareJob.message}</span>}
+         {state.compareError && <span className="hint bad" role="alert">{state.compareError}</span>}
++        <span className="sr-only" role="status">{!busy && cmp ? T.ready(cmp.sites.length, cmp.windows.length) : ""}</span>
+       </div>
+ 
+       {cmp && (
+         <section className="section" aria-label={T.matrixRegion}>
+           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 10 }}>
+-            <div className="segmented" role="group" aria-label={T.metricLabel} style={{ maxWidth: 820 }}>
++            <div className="segmented segmented-wrap" role="group" aria-label={T.metricLabel} style={{ maxWidth: 820 }}>
+               {METRICS.map((m) => (
+                 <button key={m.id} aria-pressed={metric.id === m.id} onClick={() => dispatch({ type: "compareMetric", metric: m.id })}>{m.label}</button>
+               ))}
+@@ -139,12 +138,13 @@
+                       const cell = cmp.cells[si * cmp.windows.length + wi];
+                       const v = cell ? metric.get(cell, sr, dr, pm) : null;
+                       return (
+-                        <td key={wi} style={{ background: shade(v) }} tabIndex={0}
+-                            onClick={() => cell?.result_id && openResult(cell.result_id)}
+-                            onKeyDown={(e) => { if (e.key === "Enter" && cell?.result_id) openResult(cell.result_id); }}
+-                            aria-label={T.cellLabel(site.name, wi + 1, cell?.error ? cell.error : metric.fmt(v))}>
+-                          {cell?.error ? <span className="cell-sub" style={{ color: "var(--alert)" }}>{cell.error}</span> : metric.fmt(v)}
+-                          {cell && !cell.error && <span className="cell-sub">{T.openResult}</span>}
++                        <td key={wi} style={{ background: shade(v) }}>
++                          {cell?.error ? <span className="cell-sub" style={{ color: "var(--alert)" }}>{cell.error}</span>
++                            : cell?.result_id ? (
++                              <button type="button" className="cell-open" onClick={() => openResult(cell.result_id!)}>
++                                {metric.fmt(v)}<span className="cell-sub">{T.openResult}</span>
++                              </button>)
++                            : metric.fmt(v)}
+                         </td>
+                       );
+                     })}
+diff -ru before/frontend/src/components/DataView.tsx frontend/src/components/DataView.tsx
+--- before/frontend/src/components/DataView.tsx	2026-11-11 13:43:50.824319400 +0530
++++ frontend/src/components/DataView.tsx	2026-11-11 13:56:43.456313900 +0530
+@@ -68,7 +68,7 @@
+       )}
+ 
+       <h2>{D.attributionHeading}</h2>
+-      <table className="data"><tbody>{D.attribution.map(([a, b]) => <tr key={a}><td>{a}</td><td>{b}</td></tr>)}</tbody></table>
++      <table className="data"><tbody>{D.attribution.map(([a, b]) => <tr key={a}><th scope="row">{a}</th><td>{b}</td></tr>)}</tbody></table>
+       <p className="hint">{rich(D.footer, { version: st.version, code: st.code_version, algorithm: st.algorithm_version,
+         fingerprint: <span className="mono">{st.code_fingerprint?.slice(0, 16)}</span> })}</p>
+     </div>
+diff -ru before/frontend/src/components/HorizonPanorama.tsx frontend/src/components/HorizonPanorama.tsx
+--- before/frontend/src/components/HorizonPanorama.tsx	2026-11-11 13:43:50.803354100 +0530
++++ frontend/src/components/HorizonPanorama.tsx	2026-11-11 14:16:29.933219000 +0530
+@@ -1,5 +1,5 @@
+ import * as d3 from "d3";
+-import { useMemo, useState } from "react";
++import { useEffect, useMemo, useState } from "react";
+ import type { Result } from "../api/types";
+ import { S } from "../i18n";
+ import { useWidth } from "../lib/useWidth";
+@@ -24,6 +24,13 @@
+   const [ref, width] = useWidth<HTMLDivElement>();
+   const [hover, setHover] = useState<number | null>(null);
+   const h = result.horizon;
++  // U-04 (1.4.13): the hover readout can be dismissed with Escape without moving the pointer
++  useEffect(() => {
++    if (hover == null) return;
++    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setHover(null); };
++    window.addEventListener("keydown", onKey);
++    return () => window.removeEventListener("keydown", onKey);
++  }, [hover]);
+   const s = result.series;
+   const m = { l: 44, r: 12, t: 14, b: 30 };
+   const W = Math.max(320, width), H = height;
+@@ -76,8 +83,21 @@
+ 
+   return (
+     <div className="panorama" ref={ref}>
+-      <svg viewBox={`0 0 ${W} ${H}`} role="img"
+-           aria-label={S.panorama.label(h.max_deg.toFixed(2))}
++      <svg viewBox={`0 0 ${W} ${H}`} role="slider" tabIndex={0}
++           aria-label={`${S.panorama.label(h.max_deg.toFixed(2))} ${S.panorama.keyboardHint}`}
++           aria-valuemin={0} aria-valuemax={360} aria-valuenow={hover == null ? 0 : Math.round(hover)}
++           aria-valuetext={hoverBin == null || hover == null ? undefined
++             : S.panorama.hover(hover.toFixed(1), h.h_deg[hoverBin].toFixed(2), h.incomplete[hoverBin])}
++           onFocus={() => setHover((v) => v ?? Math.round(s.sun.az[cursor] ?? 0))}
++           onBlur={() => setHover(null)}
++           onKeyDown={(e) => {
++             const step = e.key === "ArrowRight" || e.key === "ArrowUp" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowDown" ? -1
++               : e.key === "PageUp" ? 10 : e.key === "PageDown" ? -10 : 0;
++             if (e.key === "Home" || e.key === "End") { e.preventDefault(); setHover(e.key === "Home" ? 0 : 359); return; }
++             if (!step) return;
++             e.preventDefault();
++             setHover((v) => ((Math.round(v ?? 0) + step) % 360 + 360) % 360);
++           }}
+            onMouseMove={(e) => {
+              const r = (e.currentTarget as SVGSVGElement).getBoundingClientRect();
+              const az = x.invert(((e.clientX - r.left) / r.width) * W);
+diff -ru before/frontend/src/components/MapView.tsx frontend/src/components/MapView.tsx
+--- before/frontend/src/components/MapView.tsx	2026-11-11 13:43:50.807817500 +0530
++++ frontend/src/components/MapView.tsx	2026-11-11 14:30:53.274880100 +0530
+@@ -11,6 +11,7 @@
+ import { Circle as CircleStyle, Fill, Stroke, Style, Text } from "ol/style";
+ import { get as getProjection } from "ol/proj";
+ import { register } from "ol/proj/proj4";
++import { Zoom } from "ol/control";
+ import proj4 from "proj4";
+ import { api } from "../api/client";
+ import type { CatalogSite } from "../api/types";
+@@ -67,17 +68,23 @@
+       style: (f) => f.getGeometry() instanceof Polygon
+         ? new Style({ stroke: new Stroke({ color: "rgba(231,236,241,0.55)", width: 1, lineDash: [4, 4] }) })
+         : new Style({
+-            image: new CircleStyle({ radius: 4, fill: new Fill({ color: "#e7ecf1" }) }),
++            image: new CircleStyle({ radius: 4, fill: new Fill({ color: "#e7ecf1" }), stroke: new Stroke({ color: "#17212c", width: 2 }) }),
+             text: new Text({ text: f.get("name"), offsetY: -12, font: "12px 'Archivo Variable', sans-serif",
+                              fill: new Fill({ color: "#e7ecf1" }), stroke: new Stroke({ color: "#17212c", width: 3 }) }),
+           }),
+     });
+     const site = new VectorLayer({
+       source: siteSrc.current,
+-      style: new Style({ image: new CircleStyle({ radius: 8, stroke: new Stroke({ color: "#f2b544", width: 2.5 }),
+-                                                   fill: new Fill({ color: "rgba(242,181,68,0.25)" }) }) }),
++      // U-04 (1.4.11): a dark halo keeps the gold ring visible on bright hillshade
++      style: [new Style({ image: new CircleStyle({ radius: 8, stroke: new Stroke({ color: "#17212c", width: 6 }) }) }),
++              new Style({ image: new CircleStyle({ radius: 8, stroke: new Stroke({ color: "#f2b544", width: 2.5 }),
++                                                   fill: new Fill({ color: "rgba(242,181,68,0.25)" }) }) })],
+     });
+-    const map = new OlMap({ target: host.current, layers: [grat, cat, site], view, controls: [] });
++    // U-04 (2.5.7): zoom buttons give a single-pointer alternative to wheel and drag (double-click zooms to a point)
++    const map = new OlMap({ target: host.current, layers: [grat, cat, site], view,
++      controls: [new Zoom({ zoomInTipLabel: S.map.zoomIn, zoomOutTipLabel: S.map.zoomOut })] });
++    host.current.querySelector(".ol-zoom-in")?.setAttribute("aria-label", S.map.zoomIn);
++    host.current.querySelector(".ol-zoom-out")?.setAttribute("aria-label", S.map.zoomOut);
+     mapRef.current = map;
+     map.on("singleclick", (e) => {
+       const [lo, la] = toLonLat(e.coordinate[0], e.coordinate[1]);
+@@ -122,7 +129,7 @@
+   return (
+     <>
+       <div className="pane-body">
+-        <div className="map-host" ref={host} aria-label={S.map.label} role="application" />
++        <div className="map-host" ref={host} aria-label={S.map.label} role="region" tabIndex={0} />
+       </div>
+       <div className="pane-note">{S.map.note(note)}</div>
+     </>
+diff -ru before/frontend/src/components/Sidebar.tsx frontend/src/components/Sidebar.tsx
+--- before/frontend/src/components/Sidebar.tsx	2026-11-11 13:43:50.807817500 +0530
++++ frontend/src/components/Sidebar.tsx	2026-11-11 14:30:53.370929900 +0530
+@@ -30,6 +30,7 @@
+ 
+   const latN = Number(s.lat), lonN = Number(s.lon);
+   const coordsGiven = s.lat.trim() !== "" && s.lon.trim() !== "" && isFinite(latN) && isFinite(lonN);
++  const latBad = s.lat.trim() !== "" && !isFinite(latN), lonBad = s.lon.trim() !== "" && !isFinite(lonN);
+ 
+   useEffect(() => {
+     setCov(null); setCovErr(null);
+@@ -74,11 +75,13 @@
+           <div className="field">
+             <label htmlFor="lat">{T.latitude}</label>
+             <input id="lat" type="text" inputMode="decimal" placeholder={T.latitudePlaceholder} value={s.lat}
++                   aria-invalid={latBad || undefined} aria-describedby="coord-hint"
+                    onChange={(e) => set({ lat: e.target.value, siteId: null })} />
+           </div>
+           <div className="field">
+             <label htmlFor="lon">{T.longitude}</label>
+             <input id="lon" type="text" inputMode="decimal" placeholder={T.longitudePlaceholder} value={s.lon}
++                   aria-invalid={lonBad || undefined} aria-describedby="coord-hint"
+                    onChange={(e) => set({ lon: e.target.value, siteId: null })} />
+           </div>
+         </div>
+@@ -86,8 +89,9 @@
+           <label htmlFor="sname">{T.siteName}</label>
+           <input id="sname" type="text" value={s.siteName ?? ""} onChange={(e) => set({ siteName: e.target.value || null })} />
+         </div>
+-        <p className={`hint ${cov ? (cov.covered ? "good" : "bad") : covErr ? "bad" : ""}`} aria-live="polite">
+-          {!coordsGiven ? T.pickHint
++        <p id="coord-hint" className={`hint ${latBad || lonBad ? "bad" : cov ? (cov.covered ? "good" : "bad") : covErr ? "bad" : ""}`} aria-live="polite">
++          {latBad || lonBad ? T.invalidCoordinates
++            : !coordsGiven ? T.pickHint
+             : covErr ? covErr
+             : !cov ? T.checkingCoverage
+             : cov.covered ? T.coverage(cov.levels.join(", "))
+@@ -178,6 +182,7 @@
+           </>
+         )}
+         {state.error && <p className="hint bad" role="alert">{state.error}</p>}
++        <p className="sr-only" role="status">{!busy && state.result ? T.resultReady(state.result.site.name ?? S.site.customSite) : ""}</p>
+       </section>
+     </aside>
+   );
+diff -ru before/frontend/src/components/SiteView.tsx frontend/src/components/SiteView.tsx
+--- before/frontend/src/components/SiteView.tsx	2026-11-11 13:43:50.820250700 +0530
++++ frontend/src/components/SiteView.tsx	2026-11-11 13:56:43.454201000 +0530
+@@ -28,12 +28,12 @@
+   );
+ }
+ 
+-function Readout({ r, i }: { r: Result; i: number }) {
++function Readout({ r, i, playing }: { r: Result; i: number; playing: boolean }) {
+   const s = r.series;
+   const pm = r.provenance.parameters.panel.model;
+   const R = S.readout;
+   return (
+-    <div className="readout" aria-live="polite" aria-atomic="true">
++    <div className="readout" aria-live={playing ? "off" : "polite"} aria-atomic="true">
+       <div><div className="k">{R.sunElevation}</div><div className="v sun">{fmtDeg(s.sun.el[i])}</div>
+         <div className="sub">{R.azimuth(fmtDeg(s.sun.az[i], 1))}</div></div>
+       <div><div className="k">{R.sunVisible}</div><div className="v sun">{fmtFraction(s.sun.f[i])}</div>
+@@ -242,11 +242,12 @@
+         <p className="hint" style={{ margin: "2px 0 0" }}>{T.panoramaHint}</p>
+       </section>
+ 
+-      <Readout r={r} i={i} />
++      <Readout r={r} i={i} playing={state.playing} />
+       <div className="scrubber">
+         <button className="play" onClick={() => dispatch({ type: "playing", playing: !state.playing })}
+                 aria-label={state.playing ? T.pause : T.play}>{state.playing ? T.pauseIcon : T.playIcon}</button>
+         <input type="range" min={0} max={r.series.et.length - 1} value={i} aria-label={T.timeCursor}
++               aria-valuetext={fmtUTC(r.series.utc[i])}
+                onChange={(e) => dispatch({ type: "cursor", cursor: Number(e.target.value) })} />
+         <span className="cursor-time">{fmtUTC(r.series.utc[i])}</span>
+       </div>
+diff -ru before/frontend/src/components/Terrain3D.tsx frontend/src/components/Terrain3D.tsx
+--- before/frontend/src/components/Terrain3D.tsx	2026-11-11 13:43:50.837219800 +0530
++++ frontend/src/components/Terrain3D.tsx	2026-11-11 14:30:53.326776400 +0530
+@@ -61,6 +61,18 @@
+       requestAnimationFrame(() => { pending = false; renderer.render(scene, camera); });
+     };
+     controls.addEventListener("change", render);
++    // U-04 (2.1.1): keyboard operation when the view has focus: arrows pan, Shift/Ctrl + arrows rotate (OrbitControls),
++    // + and - zoom toward the site
++    controls.listenToKeyEvents(el);
++    const onZoomKey = (e: KeyboardEvent) => {
++      const f = e.key === "+" || e.key === "=" ? 0.85 : e.key === "-" || e.key === "_" ? 1 / 0.85 : 0;
++      if (!f) return;
++      e.preventDefault();
++      camera.position.sub(controls.target).multiplyScalar(f).add(controls.target);
++      controls.update();
++      render();
++    };
++    el.addEventListener("keydown", onZoomKey);
+     three.current = { renderer, scene, camera, sun, earth, sunMarker, controls, render };
+     const resize = () => {
+       const w = el.clientWidth, h = el.clientHeight;
+@@ -75,7 +87,8 @@
+     ro.observe(el);
+     resize();
+     render();
+-    return () => { controls.removeEventListener("change", render); ro.disconnect(); controls.dispose(); renderer.dispose();
++    return () => { controls.removeEventListener("change", render); el.removeEventListener("keydown", onZoomKey); ro.disconnect();
++                   controls.stopListenToKeyEvents(); controls.dispose(); renderer.dispose();
+                    el.removeChild(renderer.domElement); three.current = null; };
+   }, []);
+ 
+@@ -115,10 +128,29 @@
+     t.render();
+   }, [sunU, earthU, grid]);
+ 
++  // U-04 (2.5.7): the same view changes as dragging, from buttons
++  const nudge = (kind: "left" | "right" | "in" | "out") => {
++    const t = three.current;
++    if (!t) return;
++    const off = t.camera.position.clone().sub(t.controls.target);
++    if (kind === "left" || kind === "right") off.applyAxisAngle(new THREE.Vector3(0, 0, 1), (kind === "left" ? 1 : -1) * Math.PI / 12);
++    else off.multiplyScalar(kind === "in" ? 0.85 : 1 / 0.85);
++    t.camera.position.copy(t.controls.target).add(off);
++    t.controls.update();
++    t.render();
++  };
++  const V = S.terrain3d;
++
+   return (
+     <>
+       <div className="pane-body">
+-        <div className="three-host" ref={host} aria-label={S.terrain3d.label} role="img" />
++        <div className="view-controls" role="group" aria-label={V.viewControls}>
++          <button type="button" aria-label={V.rotateLeft} title={V.rotateLeft} onClick={() => nudge("left")}>{V.rotateLeftIcon}</button>
++          <button type="button" aria-label={V.rotateRight} title={V.rotateRight} onClick={() => nudge("right")}>{V.rotateRightIcon}</button>
++          <button type="button" aria-label={V.zoomIn} title={V.zoomIn} onClick={() => nudge("in")}>{V.zoomInIcon}</button>
++          <button type="button" aria-label={V.zoomOut} title={V.zoomOut} onClick={() => nudge("out")}>{V.zoomOutIcon}</button>
++        </div>
++        <div className="three-host" ref={host} aria-label={S.terrain3d.label} role="region" tabIndex={0} />
+         {(err || !grid) && <div className="pane-empty">{err ?? S.terrain3d.loading}</div>}
+       </div>
+       <div className="pane-note" style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+diff -ru before/frontend/src/components/TopBar.tsx frontend/src/components/TopBar.tsx
+--- before/frontend/src/components/TopBar.tsx	2026-11-11 13:43:50.835193300 +0530
++++ frontend/src/components/TopBar.tsx	2026-11-11 13:56:43.454201000 +0530
+@@ -6,6 +6,16 @@
+ 
+ export function TopBar() {
+   const { state, dispatch } = useStore();
++  // WAI-ARIA tabs: one tab stop for the list; arrows, Home and End move between tabs and select them
++  const onTabKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
++    const i = TABS.indexOf(state.tab);
++    const next = e.key === "ArrowRight" ? (i + 1) % TABS.length : e.key === "ArrowLeft" ? (i - 1 + TABS.length) % TABS.length
++      : e.key === "Home" ? 0 : e.key === "End" ? TABS.length - 1 : -1;
++    if (next < 0) return;
++    e.preventDefault();
++    dispatch({ type: "tab", tab: TABS[next] });
++    document.getElementById(`tab-${TABS[next]}`)?.focus();
++  };
+   const ks = state.status?.kernels;
+   const terrain = state.status?.terrain;
+   const nLevels = terrain ? Object.keys(terrain.levels).length : 0;
+@@ -18,7 +28,8 @@
+       </div>
+       <nav className="tabs" role="tablist" aria-label={T.tabsLabel}>
+         {TABS.map((id) => (
+-          <button key={id} role="tab" className="tab" aria-selected={state.tab === id}
++          <button key={id} id={`tab-${id}`} role="tab" className="tab" aria-selected={state.tab === id} aria-controls="view-panel"
++                  tabIndex={state.tab === id ? 0 : -1} onKeyDown={onTabKey}
+                   onClick={() => dispatch({ type: "tab", tab: id })}>{T.tabs[id]}</button>
+         ))}
+       </nav>
+diff -ru before/frontend/src/i18n/en.ts frontend/src/i18n/en.ts
+--- before/frontend/src/i18n/en.ts	2026-11-11 13:43:50.870723600 +0530
++++ frontend/src/i18n/en.ts	2026-11-11 14:30:53.238666300 +0530
+@@ -19,6 +19,7 @@
+ export const en = {
+   app: {
+     documentTitle: "LUNA-OPS: Lunar Landing Site Navigator",
++    skipToContent: "Skip to main content",
+     brand: "LUNA-OPS",
+     tagline: "Lunar Landing Site Navigator",
+   },
+@@ -146,6 +147,7 @@
+     longitudePlaceholder: "0 to 360",
+     siteName: "Name (optional)",
+     pickHint: "Pick a curated site, click the map, or type planetocentric coordinates.",
++    invalidCoordinates: "Latitude and longitude must be numbers in degrees, for example -89.5 and 222.5.",
+     checkingCoverage: "Checking terrain coverage.",
+     coverage: (levels: string) => `Terrain coverage: ${levels} LOLA levels.`,
+     noCoverage: (reason: string | null) => `No terrain-adjusted results here: ${reason}`,
+@@ -172,6 +174,7 @@
+     panelAzimuth: "Panel facing azimuth (°)",
+     panelHint: "A relative estimate of available sunlight, not electrical output.",
+     analysing: "Analysing",
++    resultReady: (site: string) => `Results ready for ${site}.`,
+     analyse: "Analyse site",
+   },
+ 
+@@ -296,6 +299,7 @@
+     compass: { 0: "N", 90: "E", 180: "S", 270: "W" },
+     hover: (az: string, horizon: string, lowerBound: boolean) =>
+       `Az ${az}°  horizon ${horizon}°${lowerBound ? " (lower bound)" : ""}`,
++    keyboardHint: "Left and right arrow keys read the horizon at each azimuth; Page Up and Page Down move 10 degrees.",
+   },
+ 
+   timeline: {
+@@ -307,18 +311,20 @@
+   },
+ 
+   map: {
+-    label: "South polar map. Click to choose a site.",
++    label: "South polar map. Arrow keys pan, plus and minus zoom. Click the map or type coordinates to choose a site.",
+     latitudeLine: (lat: number) => `${lat}°`,
+     longitudeLine: (lon: number) => `${lon}°E`,
+     loadingTiles: "Loading terrain tiles.",
+     noTerrain: "No terrain registered: map shows the graticule only.",
+     syntheticTerrain: "Synthetic test terrain shown: not lunar data.",
+     tilesUnavailable: "Terrain tiles unavailable.",
++    zoomIn: "Zoom map in",
++    zoomOut: "Zoom map out",
+     note: (note: string) => `${note} Click the map to set coordinates.`,
+   },
+ 
+   terrain3d: {
+-    label: "3D terrain around the site lit by the computed Sun direction",
++    label: "3D terrain around the site lit by the computed Sun direction. Arrow keys pan, Shift with arrow keys rotates, plus and minus zoom.",
+     noWebGL: "WebGL is not available in this browser, so the 3D view is off.",
+     loading: "Loading terrain.",
+     syntheticHeights: (level: string) => `Synthetic test heights (${level}), not lunar data`,
+@@ -327,6 +333,15 @@
+       `${heights}, ${radiusKm} km radius, display-averaged. Gold marks the Sun, blue marks Earth; faint fill light is for legibility only.`,
+     exaggeration: "Vertical ×",
+     exaggerationLabel: "Vertical exaggeration",
++    viewControls: "3D view controls",
++    rotateLeft: "Rotate view left",
++    rotateRight: "Rotate view right",
++    zoomIn: "Zoom view in",
++    zoomOut: "Zoom view out",
++    rotateLeftIcon: "⟲",
++    rotateRightIcon: "⟳",
++    zoomInIcon: "+",
++    zoomOutIcon: "−",
+   },
+ 
+   compare: {
+@@ -354,9 +369,8 @@
+     addPanelDates: "Add the panel's dates",
+     addNextMonth: "Add one synodic month later",
+     comparing: "Comparing",
++    ready: (sites: number, windows: number) => `Comparison ready: ${sites} sites × ${windows} windows.`,
+     run: (sites: number, windows: number) => `Compare ${sites} × ${windows}`,
+-    targetMet: "Meets the team target of at least 4 sites × 3 windows (C01).",
+-    target: "Team target: at least 4 sites × 3 windows (C01).",
+     matrixRegion: "Comparison matrix",
+     metricLabel: "Metric",
+     csv: "Comparison CSV",
+@@ -364,8 +378,6 @@
+     siteColumn: "Site",
+     windowTo: (end: string) => `to ${end}`,
+     siteCoords: (lat: string, lon: string) => `${lat}, ${lon}`,
+-    cellLabel: (site: string | null | undefined, window: number, value: string) =>
+-      `${site ?? "site"}, window ${window}: ${value}. Press Enter to open.`,
+     openResult: "open full result",
+     shadingHint: "Shading runs from worst (light) to best (strong) for the chosen metric within this table.",
+   },
+diff -ru before/frontend/src/styles/app.css frontend/src/styles/app.css
+--- before/frontend/src/styles/app.css	2026-11-11 13:43:50.863176200 +0530
++++ frontend/src/styles/app.css	2026-11-11 14:30:53.439941000 +0530
+@@ -11,7 +11,7 @@
+   --line-soft: #2a3a4b;
+   --text: #e7ecf1;
+   --muted: #a3b1bf;
+-  --faint: #7d8d9d;
++  --faint: #8b9bab;          /* U-04: was #7d8d9d (3.77-4.28:1 on panels); now >= 4.5:1 on every surface */
+   --sun: #f2b544;
+   --sun-soft: rgba(242, 181, 68, 0.18);
+   --earth: #5fa8e8;
+@@ -23,6 +23,7 @@
+   --valid: #7fc8a9;
+   --alert: #ee9a6b;
+   --focus: #ffd98a;
++  --control-edge: #617588;   /* U-04: input/select boundary, >= 3:1 against page and fill (1.4.11) */
+   --font: "Archivo Variable", "Archivo", "Segoe UI", system-ui, sans-serif;
+   --r-s: 3px;
+   --r-m: 6px;
+@@ -41,12 +42,16 @@
+   font-feature-settings: "tnum" 1;
+ }
+ button, input, select { font: inherit; color: inherit; }
++input, select { min-width: 0; } /* U-04 reflow: no intrinsic minimum width that widens the page */
+ a { color: var(--earth); }
+ :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
++.skip-link { position: absolute; left: 12px; top: -60px; z-index: 20; background: var(--focus); color: #1b1406; padding: 8px 14px;
++  border-radius: var(--r-s); font-weight: 700; text-decoration: none; }
++.skip-link:focus { top: 8px; }
+ .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+ 
+ /* ---------------------------------------------------------- shell */
+-.shell { display: grid; grid-template-rows: auto 1fr; height: 100%; }
++.shell { display: grid; grid-template-rows: auto 1fr; grid-template-columns: minmax(0, 1fr); height: 100%; } /* U-04 reflow */
+ .topbar {
+   display: flex; align-items: center; gap: 24px; padding: 0 20px; height: 58px;
+   border-bottom: 1px solid var(--line); background: var(--night); position: sticky; top: 0; z-index: 5;
+@@ -64,7 +69,7 @@
+ .topbar-right { margin-left: auto; display: flex; gap: 14px; align-items: center; }
+ .mode-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; }
+ .mode-switch button { border: 0; background: none; padding: 4px 12px; border-radius: 999px; cursor: pointer; color: var(--muted); font-size: 13px; }
+-.mode-switch button[aria-pressed="true"] { background: var(--panel-raised); color: var(--text); }
++.mode-switch button[aria-pressed="true"] { background: var(--panel-raised); color: var(--text); box-shadow: inset 0 0 0 1px var(--sun); }
+ .data-pill { font-size: 12.5px; font-stretch: 85%; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+ .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: var(--faint); }
+ .dot.ok { background: var(--valid); }
+@@ -82,10 +87,14 @@
+ .field label, .field .label { font-size: 12.5px; color: var(--muted); }
+ .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+ input[type="text"], input[type="number"], input[type="datetime-local"], select {
+-  width: 100%; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-s);
++  width: 100%; background: var(--panel); border: 1px solid var(--control-edge); border-radius: var(--r-s);
+   padding: 7px 9px; font-stretch: 90%;
+ }
+ input[type="datetime-local"] { color-scheme: dark; }
++/* U-04: Chrome focuses the inner date/time fields, so :focus-visible never matches the input itself */
++input[type="datetime-local"]:focus, input[type="datetime-local"]:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; }
++/* U-04: leave room around a focused control so its whole ring stays inside scrolling panels */
++a, button, input, select, summary, [tabindex], .table-scroll { scroll-margin: 12px; }
+ input:hover, select:hover { border-color: var(--terrain-edge); }
+ .hint { font-size: 12.5px; color: var(--faint); margin: 2px 0 0; }
+ .hint.bad { color: var(--alert); }
+@@ -98,6 +107,7 @@
+ .site-list li button { width: 100%; text-align: left; background: none; border: 0; padding: 7px 10px; cursor: pointer; display: grid; gap: 1px; }
+ .site-list li + li button { border-top: 1px solid var(--line-soft); }
+ .site-list li button:hover, .site-list li button[aria-pressed="true"] { background: var(--panel); }
++.site-list li button[aria-pressed="true"] { box-shadow: inset 3px 0 0 var(--sun); }
+ .site-list .site-name { font-weight: 550; }
+ .site-list .site-meta { font-size: 12px; color: var(--faint); font-stretch: 85%; }
+ .empty-note { font-size: 13px; color: var(--muted); background: var(--panel); border-left: 2px solid var(--line); padding: 9px 11px; margin: 0 0 10px; }
+@@ -156,6 +166,14 @@
+ .pane-body { position: relative; flex: 1; min-height: 300px; }
+ .map-host, .three-host { position: absolute; inset: 0; }
+ .pane-note { font-size: 12px; color: var(--faint); padding: 7px 12px; border-top: 1px solid var(--line-soft); }
++/* U-04 (2.5.7): view buttons on the 3D pane and the map; >= 24 px targets, compliant borders */
++.view-controls { position: absolute; top: 8px; left: 8px; z-index: 2; display: flex; gap: 4px; }
++.view-controls button, .map-host .ol-zoom button { width: 28px; height: 28px; display: grid; place-items: center; padding: 0;
++  background: var(--panel-raised); color: var(--text); border: 1px solid var(--control-edge); border-radius: var(--r-s);
++  font-size: 16px; line-height: 1; cursor: pointer; margin: 0; }
++.map-host .ol-zoom { background: none; display: flex; flex-direction: column; gap: 4px; top: 8px; left: 8px; }
++.view-controls button:hover, .map-host .ol-zoom button:hover { border-color: var(--terrain-edge); }
++.map-host .ol-zoom button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+ .pane-empty { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 24px; color: var(--muted); font-size: 14px; }
+ 
+ .figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 22px 24px 0; border: 1px solid var(--line); border-radius: var(--r-m); }
+@@ -185,6 +203,7 @@
+ table.data th, table.data td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+ table.data th { color: var(--muted); font-weight: 550; position: sticky; top: 0; background: var(--night); }
+ table.data td.num, table.data th.num { text-align: right; }
++table.data th[scope="row"] { position: static; background: none; color: var(--text); font-weight: inherit; }
+ .table-scroll { max-height: 340px; overflow: auto; border: 1px solid var(--line-soft); border-radius: var(--r-s); }
+ .footer-space { height: 40px; }
+ 
+@@ -208,7 +227,9 @@
+ .matrix thead th { color: var(--muted); font-weight: 550; text-align: left; font-size: 12.5px; }
+ .matrix td { text-align: right; font-stretch: 80%; font-size: 17px; cursor: pointer; }
+ .matrix td:hover { outline: 1px solid var(--terrain-edge); }
+-.matrix td .cell-sub { display: block; font-size: 11.5px; color: var(--faint); font-stretch: 85%; }
++.matrix td .cell-sub { display: block; font-size: 11.5px; color: var(--text); font-stretch: 85%; } /* U-04: readable on the strongest shading */
++.matrix .cell-open { all: unset; display: block; width: 100%; text-align: right; cursor: pointer; box-sizing: border-box; }
++.matrix .cell-open:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; } /* restores what all: unset removed */
+ .matrix th[scope="row"] { text-align: left; font-weight: 550; font-size: 14px; }
+ 
+ /* ---------------------------------------------------------- data + guide */
+@@ -218,6 +239,7 @@
+ .prose p, .prose li { color: var(--muted); }
+ .prose dt { font-weight: 600; margin-top: 12px; }
+ .prose dd { margin: 2px 0 0; color: var(--muted); }
++.prose table.data td, .prose table.data th { overflow-wrap: anywhere; }
+ .mono { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: 12px; }
+ 
+ .public-summary { margin: 18px 24px 0; max-width: 820px; }
+@@ -232,12 +254,27 @@
+   .figure:nth-child(n + 3) { border-top: 1px solid var(--line); }
+ }
+ @media (max-width: 900px) {
+-  .workspace { grid-template-columns: 1fr; }
++  .workspace { grid-template-columns: minmax(0, 1fr); }
+   .sidebar { border-right: 0; border-bottom: 1px solid var(--line); max-height: none; }
+   .grid-2, .compare-builder, .steps { grid-template-columns: 1fr; }
+   .topbar { flex-wrap: wrap; height: auto; padding: 8px 14px; gap: 10px; }
+-  .tabs { width: 100%; overflow-x: auto; height: 40px; }
++  .tabs { width: 100%; flex-wrap: wrap; height: auto; } /* U-04 reflow: wrap instead of a sideways-scrolling strip */
++  .tab { height: 40px; }
++  /* U-04 (zoom/small screens): one document scroll instead of two cramped scroll panes; the bar no longer sticks
++     over focused controls */
++  .shell { height: auto; min-height: 100%; }
++  .sidebar, .main { overflow: visible; }
++  .topbar { position: static; }
+   .brand-sub { display: none; }
++  /* U-04 reflow (1.4.10): the status and mode controls wrap instead of widening the page */
++  .topbar-right { margin-left: 0; flex-wrap: wrap; min-width: 0; }
++  .data-pill { flex-wrap: wrap; }
++  .segmented-wrap { grid-auto-flow: row; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
++}
++@media (max-width: 600px) {
++  .figures { grid-template-columns: minmax(0, 1fr); }
++  .figure + .figure { border-left: 0; border-top: 1px solid var(--line); }
++  .cursor-time { min-width: 0; }
+ }
+ @media (prefers-reduced-motion: reduce) {
+   * { transition: none !important; animation: none !important; }

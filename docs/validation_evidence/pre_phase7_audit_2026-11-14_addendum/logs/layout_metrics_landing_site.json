@@ -1,0 +1,215 @@
+{
+ "source": "pre_phase7_audit_2026-11-14/browser_run2/audit-results.json (copied fields, unchanged)",
+ "layout": {
+  "1920-site": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "outside": [],
+   "clippedText": [],
+   "blanks": [
+    {
+     "card": "figure is-sun",
+     "gap": 2835,
+     "h": 311
+    },
+    {
+     "card": "figure is-earth",
+     "gap": 2835,
+     "h": 311
+    },
+    {
+     "card": "figure is-both",
+     "gap": 2835,
+     "h": 311
+    },
+    {
+     "card": "figure is-power",
+     "gap": 2835,
+     "h": 311
+    }
+   ],
+   "overlaps": [],
+   "cards": 6,
+   "zeroWidthCharts": 0,
+   "viewH": 5878
+  },
+  "1920-landing": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "outside": [],
+   "clippedText": [],
+   "blanks": [
+    {
+     "card": "landing-footprint",
+     "gap": 76,
+     "h": 1252
+    }
+   ],
+   "overlaps": [],
+   "cards": 6,
+   "zeroWidthCharts": 0,
+   "viewH": 3487
+  },
+  "1440-site": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "outside": [],
+   "clippedText": [],
+   "blanks": [
+    {
+     "card": "figure is-sun",
+     "gap": 2769,
+     "h": 359
+    },
+    {
+     "card": "figure is-earth",
+     "gap": 2769,
+     "h": 359
+    },
+    {
+     "card": "figure is-both",
+     "gap": 2769,
+     "h": 359
+    },
+    {
+     "card": "figure is-power",
+     "gap": 2769,
+     "h": 359
+    }
+   ],
+   "overlaps": [],
+   "cards": 6,
+   "zeroWidthCharts": 0,
+   "viewH": 6248
+  },
+  "1440-landing": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "outside": [],
+   "clippedText": [],
+   "blanks": [],
+   "overlaps": [],
+   "cards": 6,
+   "zeroWidthCharts": 0,
+   "viewH": 3866
+  },
+  "1024-site": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "outside": [],
+   "clippedText": [],
+   "blanks": [
+    {
+     "card": "figure is-both",
+     "gap": 3045,
+     "h": 287
+    },
+    {
+     "card": "figure is-power",
+     "gap": 3045,
+     "h": 287
+    }
+   ],
+   "overlaps": [],
+   "cards": 6,
+   "zeroWidthCharts": 0,
+   "viewH": 6770
+  },
+  "1024-landing": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "outside": [],
+   "clippedText": [],
+   "blanks": [],
+   "overlaps": [],
+   "cards": 6,
+   "zeroWidthCharts": 0,
+   "viewH": 5244
+  },
+  "390-site": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "outside": [],
+   "clippedText": [],
+   "blanks": [
+    {
+     "card": "figure is-power",
+     "gap": 4625,
+     "h": 259
+    }
+   ],
+   "overlaps": [],
+   "cards": 6,
+   "zeroWidthCharts": 0,
+   "viewH": 11858
+  },
+  "390-landing": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "outside": [],
+   "clippedText": [],
+   "blanks": [],
+   "overlaps": [],
+   "cards": 6,
+   "zeroWidthCharts": 0,
+   "viewH": 7751
+  },
+  "320-site": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "outside": [],
+   "clippedText": [],
+   "blanks": [
+    {
+     "card": "figure is-power",
+     "gap": 5030,
+     "h": 275
+    }
+   ],
+   "overlaps": [],
+   "cards": 6,
+   "zeroWidthCharts": 0,
+   "viewH": 12668
+  },
+  "320-landing": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "outside": [],
+   "clippedText": [],
+   "blanks": [],
+   "overlaps": [],
+   "cards": 6,
+   "zeroWidthCharts": 0,
+   "viewH": 8641
+  }
+ },
+ "SITE02": {
+  "id": "SITE-02-invalid-coordinates",
+  "area": "site",
+  "ok": false,
+  "detail": {
+   "invalid": null,
+   "hint": "Latitude -95.0 is outside -90 to 90 degrees.",
+   "runDisabled": true
+  },
+  "console": [
+   {
+    "type": "log-error",
+    "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+   }
+  ]
+ },
+ "net": [
+  {
+   "step": "SITE-02-invalid-coordinates",
+   "status": 422,
+   "url": "http://127.0.0.1:8000/api/coverage?lat=-95&lon=222.510447"
+  }
+ ],
+ "console": [
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  }
+ ]
+}

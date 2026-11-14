@@ -1,0 +1,9 @@
+ERFA reference used for the coefficient extraction and for tests/reference/erfa_cip_2000_2049.json
+
+pyerfa sdist: https://files.pythonhosted.org/packages/71/39/63cc8291b0cf324ae710df41527faf7d331bce573899199d926b3e492260/pyerfa-2.0.1.5.tar.gz
+  sha256 17d6b24fe4846c65d5e7d8c362dcb08199dc63b30a236aedd73875cc83e1f6c0 (matches PyPI), uploaded 2024-11-11
+  source files read: liberfa/erfa/src/nut00b.c, pfw06.c, obl06.c, fw2m.c, fw2xy.c, pn06.c, erfam.h, t_erfa_c.c
+  the 77-term IAU 2000B table in backend/lunaops/engine/earth_orientation.py was extracted from nut00b.c by script (77 rows asserted)
+Reference values generated with pyerfa 2.0.1.5 (wheel) in a separate virtualenv: liberfa 2.0.1, SOFA release 20231011, numpy 2.5.4
+  generator: backend/tests/reference/generate_erfa_cip.py
+ERFA is not a LUNA-OPS dependency (backend/requirements.txt unchanged).

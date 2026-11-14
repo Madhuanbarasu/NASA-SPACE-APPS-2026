@@ -1,0 +1,94 @@
+{
+ "scenarios": 54,
+ "renderErrors": 0,
+ "visibleTextIdentical": 32,
+ "textDiffersOnlyByCleanupHint": 5,
+ "otherTextChanges": 17,
+ "details": [
+  {
+   "scenario": "SiteView/welcome-connecting",
+   "at": "Loading terrain tiles. Click the map to set coordinates.",
+   "now": "Loading terrain tiles."
+  },
+  {
+   "scenario": "SiteView/welcome-ready",
+   "at": "Loading terrain tiles. Click the map to set coordinates.",
+   "now": "Loading terrain tiles."
+  },
+  {
+   "scenario": "SiteView/welcome-demo",
+   "at": "Loading terrain tiles. Click the map to set coordinates.",
+   "now": "Loading terrain tiles."
+  },
+  {
+   "scenario": "SiteView/welcome-no-kernels",
+   "at": "Loading terrain tiles. Click the map to set coordinates.",
+   "now": "Loading terrain tiles."
+  },
+  {
+   "scenario": "SiteView/technical",
+   "at": "Loading terrain tiles. Click the map to set coordinates. Terrain in",
+   "now": "Loading terrain tiles. Terrain in 3D at the cursor time Loading"
+  },
+  {
+   "scenario": "SiteView/technical-cursor",
+   "at": "Loading terrain tiles. Click the map to set coordinates. Terrain in",
+   "now": "Loading terrain tiles. Terrain in 3D at the cursor time Loading"
+  },
+  {
+   "scenario": "SiteView/public",
+   "at": "Loading terrain tiles. Click the map to set coordinates. Terrain in",
+   "now": "Loading terrain tiles. Terrain in 3D at the cursor time Loading"
+  },
+  {
+   "scenario": "SiteView/public-synthetic-custom",
+   "at": "Loading terrain tiles. Click the map to set coordinates. Terrain in",
+   "now": "Loading terrain tiles. Terrain in 3D at the cursor time Loading"
+  },
+  {
+   "scenario": "SiteView/cursor-end",
+   "at": "Loading terrain tiles. Click the map to set coordinates. Terrain in",
+   "now": "Loading terrain tiles. Terrain in 3D at the cursor time Loading"
+  },
+  {
+   "scenario": "CompareView/matrix-sunlit",
+   "at": "2 × 2 Sunlit time Longest darkness Earth in view Longest",
+   "now": "2 × 2 Comparison ready: 2 sites × 2 windows. Sunlit"
+  },
+  {
+   "scenario": "CompareView/matrix-dark",
+   "at": "2 × 2 Sunlit time Longest darkness Earth in view Longest",
+   "now": "2 × 2 Comparison ready: 2 sites × 2 windows. Sunlit"
+  },
+  {
+   "scenario": "CompareView/matrix-dte",
+   "at": "2 × 2 Sunlit time Longest darkness Earth in view Longest",
+   "now": "2 × 2 Comparison ready: 2 sites × 2 windows. Sunlit"
+  },
+  {
+   "scenario": "CompareView/matrix-dtegap",
+   "at": "2 × 2 Sunlit time Longest darkness Earth in view Longest",
+   "now": "2 × 2 Comparison ready: 2 sites × 2 windows. Sunlit"
+  },
+  {
+   "scenario": "CompareView/matrix-overlap",
+   "at": "2 × 2 Sunlit time Longest darkness Earth in view Longest",
+   "now": "2 × 2 Comparison ready: 2 sites × 2 windows. Sunlit"
+  },
+  {
+   "scenario": "CompareView/matrix-power",
+   "at": "2 × 2 Sunlit time Longest darkness Earth in view Longest",
+   "now": "2 × 2 Comparison ready: 2 sites × 2 windows. Sunlit"
+  },
+  {
+   "scenario": "CompareView/matrix-efsh",
+   "at": "2 × 2 Sunlit time Longest darkness Earth in view Longest",
+   "now": "2 × 2 Comparison ready: 2 sites × 2 windows. Sunlit"
+  },
+  {
+   "scenario": "CompareView/matrix-bogus",
+   "at": "2 × 2 Sunlit time Longest darkness Earth in view Longest",
+   "now": "2 × 2 Comparison ready: 2 sites × 2 windows. Sunlit"
+  }
+ ]
+}

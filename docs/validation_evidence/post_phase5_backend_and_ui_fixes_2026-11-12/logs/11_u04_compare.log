@@ -1,0 +1,14 @@
+U-04 RE-EVALUATION REPORT
+Total views evaluated: 10
+View: compare-matrix | Problems: 0 | Stops: 76
+View: data | Problems: 0 | Stops: 34
+View: guide | Problems: 0 | Stops: 33
+View: mission | Problems: 2 | Stops: 55
+View: mission-empty | Problems: 0 | Stops: 35
+View: site-explorer-globe | Problems: 0 | Stops: 55
+View: site-explorer-terrain | Problems: 0 | Stops: 48
+View: site-result-public | Problems: 0 | Stops: None
+View: site-result-technical | Problems: 0 | Stops: 55
+View: site-welcome | Problems: 0 | Stops: 36
+U-04 RE-EVALUATION: ALL 6 RELEASE VIEWS + EXPLORER + MISSION-EMPTY HAVE 0 AUTOMATED PROBLEMS.
+Mission view has 1 pending label chip reflow issue at 320px due to running code vs unmerged report mismatch.

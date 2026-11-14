@@ -1,0 +1,29 @@
+Phase 7 interruption record (written 2026-11-14, about 04:47 UTC)
+
+What happened
+  The Claude Code host stopped two background shells because the system was critically low on memory:
+    * the application server on port 8000 (started from scientific_validation_followup_2026-11-14, PID 452);
+    * the bash wrapper of scripts/external_chain.sh.
+  This was a host action, not a failure of either command. Neither was restarted automatically.
+
+State of the external chain at the stop (engine_regression/external/chain_progress.txt)
+  V-09/V-10 holdout  exit 0  3430 s   (V-09 passed, V-10 failed; see V10_holdout/)
+  V-13               exit 0    10 s   passed
+  V-14               exit 0   290 s   passed
+  V-04/V-05          exit 0   119 s   passed / passed
+  V-11               exit 0   942 s   passed (200/200 dark, 0 lit, 0 inconclusive)
+  V-12               started 04:47:06Z; the Python process (PID 4756) survived the wrapper's stop and was left to
+                     finish (not restarted). Because the wrapper is gone, v12.log will lack the "# exit" line and
+                     chain_progress.txt will lack the V-12 line and "chain done"; completion is judged from v12.json
+                     and its run_meta fingerprints.
+
+Correction (05:08 UTC): only the outer tool shell was stopped; the chain script itself kept running. V-12 finished
+normally and the chain wrote all its lines: "V-12 exit 0 1247 s" and "chain done 2026-11-14T05:07:53Z". v12.log has
+its "# exit 0" line. v12.json run_meta: code 9cd7b08b..., suite 70606628..., owner v12_lroc. V-12: passed
+(200/200 scored, 0 inconclusive; C1 passed, 26 shadow samples, 0 above 1 %; C2 reported, not gating).
+The external chain is therefore complete and unaffected by the interruption.
+
+Memory at the check: 3,973 MB free of 16,028 MB; the user's own Chrome (not a test browser) used about 2 GB.
+
+Not yet run because the server is down (needs the owner's go-ahead to restart it):
+  U-06 performance audit, backend performance timings, UI/API label verification after report regeneration.

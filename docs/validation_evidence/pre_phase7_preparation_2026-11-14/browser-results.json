@@ -1,0 +1,144 @@
+{
+ "note": "built from logs/04_e2e07_rerun.log (UTF-8); a first post-processing step had decoded the browser output with the Windows code page and was discarded",
+ "cases": [
+  {
+   "name": "valid 30-day window",
+   "start": "2026-11-13T00:00",
+   "end": "2026-12-13T00:00",
+   "expectValid": true,
+   "endInvalid": null,
+   "describedBy": null,
+   "hint": null,
+   "sidebarAnalyseDisabled": false,
+   "explorerAnalyseDisabled": false,
+   "analysis_requests_sent": 0,
+   "evidence": null,
+   "result": "Pass"
+  },
+  {
+   "name": "equal start and end",
+   "start": "2026-11-13T00:00",
+   "end": "2026-11-13T00:00",
+   "expectValid": false,
+   "endInvalid": "true",
+   "describedBy": "window-hint",
+   "hint": "The end must be after the start (UTC). Analyse is disabled until it is.",
+   "sidebarAnalyseDisabled": true,
+   "explorerAnalyseDisabled": true,
+   "analysis_requests_sent": 0,
+   "evidence": "screenshots/window-equal-start-and-end.png",
+   "result": "Pass"
+  },
+  {
+   "name": "reversed",
+   "start": "2026-12-13T00:00",
+   "end": "2026-11-13T00:00",
+   "expectValid": false,
+   "endInvalid": "true",
+   "describedBy": "window-hint",
+   "hint": "The end must be after the start (UTC). Analyse is disabled until it is.",
+   "sidebarAnalyseDisabled": true,
+   "explorerAnalyseDisabled": true,
+   "analysis_requests_sent": 0,
+   "evidence": "screenshots/window-reversed.png",
+   "result": "Pass"
+  },
+  {
+   "name": "reversed by one minute",
+   "start": "2026-11-13T00:01",
+   "end": "2026-11-13T00:00",
+   "expectValid": false,
+   "endInvalid": "true",
+   "describedBy": "window-hint",
+   "hint": "The end must be after the start (UTC). Analyse is disabled until it is.",
+   "sidebarAnalyseDisabled": true,
+   "explorerAnalyseDisabled": true,
+   "analysis_requests_sent": 0,
+   "evidence": "screenshots/window-reversed-by-one-minute.png",
+   "result": "Pass"
+  },
+  {
+   "name": "one minute (boundary, valid)",
+   "start": "2026-11-13T00:00",
+   "end": "2026-11-13T00:01",
+   "expectValid": true,
+   "endInvalid": null,
+   "describedBy": null,
+   "hint": null,
+   "sidebarAnalyseDisabled": false,
+   "explorerAnalyseDisabled": false,
+   "analysis_requests_sent": 0,
+   "evidence": null,
+   "result": "Pass"
+  }
+ ],
+ "azimuth": {
+  "hint": "Azimuth in degrees; values are normalized modulo 360° (400° → 40°).",
+  "input": {
+   "staticHint": "Azimuth in degrees; values are normalized modulo 360° (400° → 40°).",
+   "describedBy": "paz-hint",
+   "min": null,
+   "max": null,
+   "browserValid": true
+  },
+  "request_panel_az_deg": [
+   40
+  ],
+  "result_id": "e7e4861f4363eb93bfab17bc",
+  "stored_panel": {
+   "azimuth_deg": 40,
+   "description": "Vertical panel fixed at a chosen azimuth",
+   "model": "fixed_vertical"
+  },
+  "backend_fixed_vertical_mean": 0,
+  "displayed": {
+   "big": "0.000",
+   "rule": "Estimated, vertical, fixed azimuth"
+  },
+  "evidence": "screenshots/panel-azimuth-400-used-as-40.png",
+  "result": "Pass (requested hint and normalisation); dynamic note not re-verified",
+  "script_result": "Fail",
+  "assessment": {
+   "static_hint_exact": true,
+   "min_max_removed": true,
+   "browser_marks_400_valid": true,
+   "request_panel_az_deg": [
+    40
+   ],
+   "stored_azimuth_deg": 40,
+   "dynamic_note_used_as_40": "NOT re-verified in this cycle: the script took the first hint containing \"modulo 360\", now the new static hint, so its /used as 40/ assertion failed; the note is below the screenshot fold. Its code is unchanged since date_validation_fix_2026-11-14, where it was verified."
+  }
+ },
+ "console_errors": 0,
+ "e2e07_rerun": {
+  "date_cases": [
+   [
+    "valid 30-day window",
+    "Pass",
+    0
+   ],
+   [
+    "equal start and end",
+    "Pass",
+    0
+   ],
+   [
+    "reversed",
+    "Pass",
+    0
+   ],
+   [
+    "reversed by one minute",
+    "Pass",
+    0
+   ],
+   [
+    "one minute (boundary, valid)",
+    "Pass",
+    0
+   ]
+  ],
+  "azimuth": "Pass (requested hint and normalisation); dynamic note not re-verified",
+  "console_errors": 0
+ }
+}

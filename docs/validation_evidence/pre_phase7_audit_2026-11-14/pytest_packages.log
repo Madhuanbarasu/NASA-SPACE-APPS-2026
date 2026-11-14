@@ -1,0 +1,32 @@
+...........................................................F.sss........ [ 78%]
+....sssssssss.......                                                     [100%]
+================================== FAILURES ===================================
+____________________ test_gm_read_from_verified_naif_file _____________________
+
+    def test_gm_read_from_verified_naif_file():
+>       gm = moon_gm()
+             ^^^^^^^^^
+
+lunaops_comms\tests\test_relay.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+lunaops_comms\constants.py:58: in moon_gm
+    man = _manifest()
+          ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def _manifest() -> dict:
+        p = comms_dir() / "manifest.json"
+        if not p.exists():
+>           raise ConstantError(f"{p} is missing; the lunar GM source is not installed.")
+E           lunaops_comms.constants.ConstantError: E:\Temp\LUNA-OPS\lunaops_landing_test_t7idhb9f\comms\manifest.json is missing; the lunar GM source is not installed.
+
+lunaops_comms\constants.py:31: ConstantError
+============================== warnings summary ===============================
+lunaops_landing/tests/test_api.py::test_routes_precede_the_spa_catch_all
+  E:\LUNA-OPS\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED lunaops_comms/tests/test_relay.py::test_gm_read_from_verified_naif_file
+1 failed, 79 passed, 12 skipped, 1 warning in 2.37s

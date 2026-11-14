@@ -1,0 +1,8 @@
+shell: shell-live-check: 14/14 checks passed [exit 0]
+mission: mission-live-check: 42/42 checks passed [exit 0]
+viz: viz-live-check: 25/25 checks passed [exit 0]
+explorer: explorer-live-check: 27/27 checks passed [exit 0]
+globe: globe-live-check: 31/31 checks passed [exit 0]
+globe-target: globe-target-live-check: 9/9 checks passed [exit 0]
+map: map-live-check: 21/21 checks passed [exit 0]
+e2e: e2e-live-check: 16/16 checks passed [exit 0]

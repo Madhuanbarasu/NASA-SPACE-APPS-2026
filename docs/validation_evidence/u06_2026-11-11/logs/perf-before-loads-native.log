@@ -1,0 +1,7 @@
+09:52:48 native cold 1
+09:53:20 native cold 2
+09:53:52 native cold 3
+09:54:24 native warm 1
+09:54:57 native warm 2
+native: cold appReady 1133.7 ms, FCP 720, LCP 720, TBT 0, JS 1215.1 KB; warm appReady 1598.9; complete=true
+exit=0

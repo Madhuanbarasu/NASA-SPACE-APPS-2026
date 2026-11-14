@@ -1,0 +1,95 @@
+{
+ "views": {
+  "desktopDefault": {
+   "findings": [
+    "Slope | No threshold configured (values shown)",
+    "Roughness | No threshold configured (values shown)",
+    "Elevation range | No threshold configured (values shown)",
+    "Depression candidates | No candidate detected at this resolution",
+    "Obstacles (boulders) | Not available - manual review required"
+   ],
+   "hscroll": false
+  },
+  "desktopThresholds": [
+   "Slope | Potential hazard detected",
+   "Roughness | No configured threshold exceeded",
+   "Elevation range | No configured threshold exceeded",
+   "Depression candidates | No candidate detected at this resolution",
+   "Obstacles (boulders) | Not available - manual review required"
+  ],
+  "site20m": {
+   "findings": [
+    "Slope | Potential hazard detected",
+    "Roughness | Potential hazard detected",
+    "Elevation range | Potential hazard detected",
+    "Depression candidates | No candidate detected at this resolution",
+    "Obstacles (boulders) | Not available - manual review required"
+   ],
+   "measured": "Analysis resolution20 m20m | Analysis window3.0 km square, 151 x 151 pixels | Terrain data present100.0% | Pixels with a LOLA returnunavailableNo count map for this product, so measured and interpolated heights cannot be told apart. | Pixels in footprint172 | Terrain data present100.0% | Pixels with a LOLA returnunavailableunavailable: this product has no count map | Height uncertainty0.23 m mean, 0.58 m max | Slope uncertaintyunavailable | NASA slope productunavailable"
+  },
+  "tablet": {
+   "hscroll": false,
+   "mapBox": {
+    "w": 942,
+    "h": 445
+   }
+  },
+  "phone": {
+   "hscroll": false,
+   "mapBox": {
+    "w": 324,
+    "h": 359
+   }
+  },
+  "phone320": {
+   "hscroll": false,
+   "mapBox": {
+    "w": 254,
+    "h": 300
+   }
+  }
+ },
+ "tabs": [
+  "Mission",
+  "Site",
+  "Landing",
+  "Compare",
+  "Data and validation",
+  "Guide"
+ ],
+ "firstRunMs": 1706,
+ "readout": "Pointer 89.464° S, 221.430° Eheight 1914.1 m, slope 17.3°, roughness 0.19 m (height ± 0.21 m) LOLA returns 0",
+ "drag": {
+  "before": "-89.463163,222.510447",
+  "after": "-89.481291,221.915980",
+  "findings": [
+   "Slope | Potential hazard detected",
+   "Roughness | Potential hazard detected",
+   "Elevation range | No configured threshold exceeded",
+   "Depression candidates | Potential hazard detected",
+   "Obstacles (boulders) | Not available - manual review required"
+  ]
+ },
+ "resize": {
+  "pixels": "Pixels in footprint2825Terrain data present100.0%Pixels with a LOLA return10.2%LDEC count map (pixels with >= 1 LOLA ret",
+  "findings": [
+   "Slope | Potential hazard detected",
+   "Roughness | Potential hazard detected",
+   "Elevation range | Potential hazard detected",
+   "Depression candidates | Potential hazard detected",
+   "Obstacles (boulders) | Not available - manual review required"
+  ]
+ },
+ "provenanceText": "StatusPreliminary screening - not part of the validated engine. The official LUNA-OPS validation report covers the science engine (backend/lunaops) only. This screening package is outside that fingerprint and has not been validated.DatasetPGDA 78: High-Resolution LOLA Topography for Lunar South Pole Sites (one LDEM per site)Productpgda78_site (5m:Site01_final_adj_5mpp_surf.tif)Filepgda78_site01/Site01_final_adj_5mpp_surf.tif SHA-256 3ba7b97cb00a2bcf…Resolution5 mFrame and projectionMOON_ME (DE421), south polar stereographic; south polar stereographic on the 1737.4 km sphere (true scale at the ",
+ "mission": {
+  "landingBlock": "Landing screening in this sessionSlope: Potential hazard detectedRoughness: Potential hazard detectedElevation range: Potential hazard detectedDepression candidates: Potential hazard detectedObstacles (boulders): Not available - manual review required5m:Site01_final_adj_5mpp_surf.tif, footprint radius 150 m, 42 depression candidates in the window",
+  "integrity": false,
+  "nestedLi": 0,
+  "h2": 6
+ },
+ "openedFromMission": "Landing hazard screening | Run again",
+ "returnInputs": "150 / 10 / 0.5 / 10 | The footprint is 60.0 pixels across (pixel 5.00 m on the ground).",
+ "staleBanner": "The screening below is for 89.463° S, 222.510° E. Run it again to screen the selected site.",
+ "consoleErrors": [],
+ "landingRequests": 19
+}

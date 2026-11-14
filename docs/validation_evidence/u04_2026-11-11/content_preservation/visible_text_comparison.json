@@ -1,0 +1,9 @@
+{
+ "scenarios": 54,
+ "renderErrors": 0,
+ "markupChanged": 45,
+ "visibleTextIdentical": 41,
+ "textDiffersOnlyByCleanupHint": 13,
+ "otherTextChanges": [],
+ "method": "C10 SSR harness; baseline = frontend/src before the hackathon cleanup and U-04; text = markup with tags stripped"
+}

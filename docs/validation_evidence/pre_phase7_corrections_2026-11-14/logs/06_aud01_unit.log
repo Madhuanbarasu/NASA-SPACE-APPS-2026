@@ -1,0 +1,20 @@
+PASS  lat="-89.463163" lon="222.510447" -> {"coordsGiven":true,"latBad":false,"lonBad":false}
+PASS  lat="-95" lon="222.510447" -> {"coordsGiven":false,"latBad":true,"lonBad":false}
+PASS  lat="95" lon="222.510447" -> {"coordsGiven":false,"latBad":true,"lonBad":false}
+PASS  lat="-90.0001" lon="0" -> {"coordsGiven":false,"latBad":true,"lonBad":false}
+PASS  lat="-90" lon="0" -> {"coordsGiven":true,"latBad":false,"lonBad":false}
+PASS  lat="90" lon="0" -> {"coordsGiven":true,"latBad":false,"lonBad":false}
+PASS  lat="-89.5" lon="400" -> {"coordsGiven":false,"latBad":false,"lonBad":true}
+PASS  lat="-89.5" lon="-361" -> {"coordsGiven":false,"latBad":false,"lonBad":true}
+PASS  lat="-85" lon="360" -> {"coordsGiven":true,"latBad":false,"lonBad":false}
+PASS  lat="-85" lon="-360" -> {"coordsGiven":true,"latBad":false,"lonBad":false}
+PASS  lat="-85" lon="-10" -> {"coordsGiven":true,"latBad":false,"lonBad":false}
+PASS  lat="abc" lon="222.5" -> {"coordsGiven":false,"latBad":true,"lonBad":false}
+PASS  lat="-89.5" lon="1e3" -> {"coordsGiven":false,"latBad":false,"lonBad":true}
+PASS  lat="-95" lon="400" -> {"coordsGiven":false,"latBad":true,"lonBad":true}
+PASS  lat="" lon="222.5" -> {"coordsGiven":false,"latBad":false,"lonBad":false}
+PASS  lat="-89.5" lon="" -> {"coordsGiven":false,"latBad":false,"lonBad":false}
+PASS  lat="  -89.5 " lon=" 222.5" -> {"coordsGiven":true,"latBad":false,"lonBad":false}
+PASS  lat="Infinity" lon="0" -> {"coordsGiven":false,"latBad":true,"lonBad":false}
+PASS  lat="NaN" lon="0" -> {"coordsGiven":false,"latBad":true,"lonBad":false}
+aud01-unit: 19/19 passed

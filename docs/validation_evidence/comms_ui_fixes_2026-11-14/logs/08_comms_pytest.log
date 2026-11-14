@@ -1,0 +1,8 @@
+.........................................................                [100%]
+============================== warnings summary ===============================
+lunaops_comms/tests/test_service_api.py::test_meta_precedes_catch_all_and_reports_gm
+  E:\LUNA-OPS\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+57 passed, 1 warning in 1.93s

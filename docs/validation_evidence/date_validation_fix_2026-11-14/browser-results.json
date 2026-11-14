@@ -1,0 +1,105 @@
+{
+ "note": "reconstructed from logs/04_browser.log: every check completed; the run then stopped in its clean-up step (resetting #paz after it was removed); no check was repeated",
+ "cases": [
+  {
+   "name": "valid 30-day window",
+   "start": "2026-11-13T00:00",
+   "end": "2026-12-13T00:00",
+   "expectValid": true,
+   "endInvalid": null,
+   "describedBy": null,
+   "hint": null,
+   "sidebarAnalyseDisabled": false,
+   "explorerAnalyseDisabled": false,
+   "analysis_requests_sent": 0,
+   "evidence": null,
+   "result": "Pass"
+  },
+  {
+   "name": "equal start and end",
+   "start": "2026-11-13T00:00",
+   "end": "2026-11-13T00:00",
+   "expectValid": false,
+   "endInvalid": "true",
+   "describedBy": "window-hint",
+   "hint": "The end must be after the start (UTC). Analyse is disabled until it is.",
+   "sidebarAnalyseDisabled": true,
+   "explorerAnalyseDisabled": true,
+   "analysis_requests_sent": 0,
+   "evidence": "screenshots/window-equal-start-and-end.png",
+   "result": "Pass"
+  },
+  {
+   "name": "reversed",
+   "start": "2026-12-13T00:00",
+   "end": "2026-11-13T00:00",
+   "expectValid": false,
+   "endInvalid": "true",
+   "describedBy": "window-hint",
+   "hint": "The end must be after the start (UTC). Analyse is disabled until it is.",
+   "sidebarAnalyseDisabled": true,
+   "explorerAnalyseDisabled": true,
+   "analysis_requests_sent": 0,
+   "evidence": "screenshots/window-reversed.png",
+   "result": "Pass"
+  },
+  {
+   "name": "reversed by one minute",
+   "start": "2026-11-13T00:01",
+   "end": "2026-11-13T00:00",
+   "expectValid": false,
+   "endInvalid": "true",
+   "describedBy": "window-hint",
+   "hint": "The end must be after the start (UTC). Analyse is disabled until it is.",
+   "sidebarAnalyseDisabled": true,
+   "explorerAnalyseDisabled": true,
+   "analysis_requests_sent": 0,
+   "evidence": "screenshots/window-reversed-by-one-minute.png",
+   "result": "Pass"
+  },
+  {
+   "name": "one minute (boundary, valid)",
+   "start": "2026-11-13T00:00",
+   "end": "2026-11-13T00:01",
+   "expectValid": true,
+   "endInvalid": null,
+   "describedBy": null,
+   "hint": null,
+   "sidebarAnalyseDisabled": false,
+   "explorerAnalyseDisabled": false,
+   "analysis_requests_sent": 0,
+   "evidence": null,
+   "result": "Pass"
+  }
+ ],
+ "azimuth": {
+  "hint": "Azimuths are taken modulo 360\u00b0: this value is used as 40\u00b0.",
+  "request_panel_az_deg": [
+   40
+  ],
+  "result_id": "e7e4861f4363eb93bfab17bc",
+  "stored_panel": {
+   "azimuth_deg": 40,
+   "description": "Vertical panel fixed at a chosen azimuth",
+   "model": "fixed_vertical"
+  },
+  "backend_fixed_vertical_mean": 0,
+  "displayed": {
+   "big": "0.000",
+   "rule": "Estimated, vertical, fixed azimuth"
+  },
+  "evidence": "screenshots/panel-azimuth-400-used-as-40.png",
+  "result": "Pass",
+  "compare_with_400_deg_result": {
+   "result_400": "0e0522dbe9f5b21b4677625e",
+   "stored_azimuth_400_result": 400.0,
+   "same_window": true,
+   "fixed_vertical_series_identical": false,
+   "samples": 50,
+   "nonzero_samples": 0,
+   "note": "not comparable: the 400 deg result came from a direct API call with a 900 s step, the UI run used 1800 s; both series are entirely zero (Sun at 264-276 deg, behind a panel facing 40 deg). Superseded by azimuth_equivalence.json"
+  },
+  "equivalence": "azimuth_equivalence.json: engine p_rel at 40 / 400 / -320 deg on 1,442 real samples (230 non-zero): max difference 2.0e-15"
+ },
+ "console_errors": "not captured (the run stopped before writing them)"
+}

@@ -1,0 +1,430 @@
+{
+ "registration": {
+  "pgda_crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sph",
+  "ground_h_pds40_m": -628.5936119147518,
+  "ground_h_pgda20_m": -628.5484771728525
+ },
+ "patch": {
+  "zero_patch": {
+   "cells_60m": 41,
+   "nasa_earth_mean_pct": 0.0,
+   "h_pds40_mean_m": -620.4801829268292,
+   "h_pgda20_mean_m": -621.6893544347103,
+   "pds_minus_pgda_mean_m": 1.209171507880938,
+   "pds_minus_pgda_rms_m": 2.9914395438256935,
+   "pds40_pixels": 98,
+   "lola_shots_per_pixel_mean": 1.969387755102041,
+   "share_pixels_without_shots": 0.2857142857142857
+  },
+  "ring_2_4px": {
+   "cells_60m": 118,
+   "nasa_earth_mean_pct": 35.13105084745764,
+   "h_pds40_mean_m": -610.4870233050848,
+   "h_pgda20_mean_m": -612.8812780864663,
+   "pds_minus_pgda_mean_m": 2.3942547813815738,
+   "pds_minus_pgda_rms_m": 4.896233397538025,
+   "pds40_pixels": 269,
+   "lola_shots_per_pixel_mean": 2.442379182156134,
+   "share_pixels_without_shots": 0.21561338289962825
+  },
+  "ring_5_12px": {
+   "cells_60m": 340,
+   "nasa_earth_mean_pct": 40.019505882352945,
+   "h_pds40_mean_m": -615.884375,
+   "h_pgda20_mean_m": -618.7822891310626,
+   "pds_minus_pgda_mean_m": 2.8979141310626177,
+   "pds_minus_pgda_rms_m": 6.588639459722349,
+   "pds40_pixels": 782,
+   "lola_shots_per_pixel_mean": 2.554987212276215,
+   "share_pixels_without_shots": 0.19437340153452684
+  }
+ },
+ "points": [
+  {
+   "kind": "point",
+   "lat": -85.3305,
+   "lon": 285.2104,
+   "nasa_pct": 0.0,
+   "engine_pct": 39.8,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 10.236862764339335,
+   "earth_az_range_deg": [
+    67.1261771499509,
+    82.51594742069935
+   ],
+   "earth_el_max_deg": 8.370554470420569,
+   "horizon_toward_earth_pds40_deg": [
+    8.155323678270062,
+    9.879806533936822
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    7.240709833654844,
+    9.132509550051447
+   ]
+  },
+  {
+   "kind": "blob",
+   "lat": -85.34090634412686,
+   "lon": 285.29564508341673,
+   "nasa_pct": 0.0,
+   "engine_pct": 48.15269123202983,
+   "indep_pds40_pct": 19.28757175800991,
+   "indep_pgda20_pct": 21.431112310485258,
+   "earth_az_range_deg": [
+    67.04170942128471,
+    82.42990489342286
+   ],
+   "earth_el_max_deg": 8.373040875086929,
+   "horizon_toward_earth_pds40_deg": [
+    6.336860279571643,
+    8.665183032793722
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    6.046336519635732,
+    8.515608267039429
+   ]
+  },
+  {
+   "kind": "blob",
+   "lat": -85.32824841621486,
+   "lon": 285.12748769935945,
+   "nasa_pct": 0.0,
+   "engine_pct": 38.24395270104509,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 5.857170894460527,
+   "earth_az_range_deg": [
+    67.20850278146624,
+    82.59891844673618
+   ],
+   "earth_el_max_deg": 8.365145588343086,
+   "horizon_toward_earth_pds40_deg": [
+    8.891264854655974,
+    10.234878311844355
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    7.41989421961909,
+    9.286314770862328
+   ]
+  },
+  {
+   "kind": "blob",
+   "lat": -85.33293512118512,
+   "lon": 285.19336840714016,
+   "nasa_pct": 0.0,
+   "engine_pct": 38.62604877091408,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 0.29132525391295816,
+   "earth_az_range_deg": [
+    67.14317341607313,
+    82.53267966311047
+   ],
+   "earth_el_max_deg": 8.36835153549248,
+   "horizon_toward_earth_pds40_deg": [
+    9.410341211883615,
+    11.944233343711229
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    7.920882377771777,
+    9.839533586675783
+   ]
+  },
+  {
+   "kind": "blob",
+   "lat": -85.3315458512089,
+   "lon": 285.16358517567284,
+   "nasa_pct": 0.0,
+   "engine_pct": 37.160222756488885,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 1.1039693832491047,
+   "earth_az_range_deg": [
+    67.17280683477624,
+    82.56254859071235
+   ],
+   "earth_el_max_deg": 8.366629163326797,
+   "horizon_toward_earth_pds40_deg": [
+    8.862946583067382,
+    10.875498640124874
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    7.761438586838621,
+    9.782967506796012
+   ]
+  },
+  {
+   "kind": "blob",
+   "lat": -85.33518980277141,
+   "lon": 285.27642220812294,
+   "nasa_pct": 0.0,
+   "engine_pct": 39.45034591040675,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 0.0,
+   "earth_az_range_deg": [
+    67.06052648636066,
+    82.44955724126186
+   ],
+   "earth_el_max_deg": 8.373759291656027,
+   "horizon_toward_earth_pds40_deg": [
+    8.261408041936892,
+    10.242410543549559
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    8.196480893224388,
+    10.798661876259462
+   ]
+  },
+  {
+   "kind": "blob",
+   "lat": -85.34038484314166,
+   "lon": 285.3191005631326,
+   "nasa_pct": 0.0,
+   "engine_pct": 42.640817427996666,
+   "indep_pds40_pct": 12.157156174868751,
+   "indep_pgda20_pct": 3.2567096805848585,
+   "earth_az_range_deg": [
+    67.01834740795563,
+    82.40655620776805
+   ],
+   "earth_el_max_deg": 8.375003329256284,
+   "horizon_toward_earth_pds40_deg": [
+    6.829741157913785,
+    9.19167350780468
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    7.504367737748285,
+    9.851884926434447
+   ]
+  },
+  {
+   "kind": "blob",
+   "lat": -85.34142706518132,
+   "lon": 285.27218435042175,
+   "nasa_pct": 0.0,
+   "engine_pct": 50.045998724302045,
+   "indep_pds40_pct": 22.177518276826454,
+   "indep_pgda20_pct": 23.53908051616702,
+   "earth_az_range_deg": [
+    67.06507667862012,
+    82.4532588419022
+   ],
+   "earth_el_max_deg": 8.37107835180121,
+   "horizon_toward_earth_pds40_deg": [
+    5.796010868475283,
+    8.931690693855716
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    5.462561844388029,
+    8.431968945294074
+   ]
+  },
+  {
+   "kind": "blob",
+   "lat": -85.33743468747036,
+   "lon": 285.359556248137,
+   "nasa_pct": 0.0,
+   "engine_pct": 41.632525391295815,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 2.625607183160787,
+   "earth_az_range_deg": [
+    66.97794473187948,
+    82.36648555509493
+   ],
+   "earth_el_max_deg": 8.379166762560427,
+   "horizon_toward_earth_pds40_deg": [
+    8.906067572169443,
+    10.811647065166868
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    7.530950701755013,
+    9.884832745020894
+   ]
+  },
+  {
+   "kind": "beside",
+   "lat": -85.32252736909143,
+   "lon": 285.1085227315505,
+   "nasa_pct": 36.54,
+   "engine_pct": 34.45304450223247,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 0.0,
+   "earth_az_range_deg": [
+    67.2269310096847,
+    82.61840255330367
+   ],
+   "earth_el_max_deg": 8.365861795436071,
+   "horizon_toward_earth_pds40_deg": [
+    16.07051837711563,
+    24.69733443401135
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    8.407167614414204,
+    9.92211079450321
+   ]
+  },
+  {
+   "kind": "beside",
+   "lat": -85.33395725302552,
+   "lon": 285.4233721254991,
+   "nasa_pct": 47.42000000000001,
+   "engine_pct": 45.117388744418825,
+   "indep_pds40_pct": 23.180903782935086,
+   "indep_pgda20_pct": 19.65985476669447,
+   "earth_az_range_deg": [
+    66.91429140686577,
+    82.30305401621355
+   ],
+   "earth_el_max_deg": 8.38529092135721,
+   "horizon_toward_earth_pds40_deg": [
+    5.800403806111935,
+    7.988179567832076
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    6.224617643904595,
+    8.742505778676325
+   ]
+  },
+  {
+   "kind": "beside",
+   "lat": -85.32704696448296,
+   "lon": 285.2742584104454,
+   "nasa_pct": 48.660000000000004,
+   "engine_pct": 40.75425641528875,
+   "indep_pds40_pct": 23.577719444580737,
+   "indep_pgda20_pct": 8.033830528433345,
+   "earth_az_range_deg": [
+    67.06246227979828,
+    82.45259633546556
+   ],
+   "earth_el_max_deg": 8.376675542268416,
+   "horizon_toward_earth_pds40_deg": [
+    5.912244704669436,
+    7.66667308262496
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    7.437950792556321,
+    9.021937032021208
+   ]
+  },
+  {
+   "kind": "beside",
+   "lat": -85.32790977106379,
+   "lon": 285.3274376498196,
+   "nasa_pct": 33.652,
+   "engine_pct": 29.094499779206124,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 0.0,
+   "earth_az_range_deg": [
+    67.00954476810993,
+    82.39944021799003
+   ],
+   "earth_el_max_deg": 8.380361379058186,
+   "horizon_toward_earth_pds40_deg": [
+    10.634720611813329,
+    12.09210189789282
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    9.501164255976086,
+    11.461120040638697
+   ]
+  },
+  {
+   "kind": "beside",
+   "lat": -85.33221197944215,
+   "lon": 285.04009021903363,
+   "nasa_pct": 13.248000000000001,
+   "engine_pct": 43.599430842451305,
+   "indep_pds40_pct": 5.7314410480349345,
+   "indep_pgda20_pct": 7.19604042981208,
+   "earth_az_range_deg": [
+    67.29568311512622,
+    82.68570152421205
+   ],
+   "earth_el_max_deg": 8.357057130116578,
+   "horizon_toward_earth_pds40_deg": [
+    6.802821462565837,
+    10.496947740420898
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    7.070956516993825,
+    9.703165452046333
+   ]
+  },
+  {
+   "kind": "beside",
+   "lat": -85.32597620326558,
+   "lon": 285.04462973713913,
+   "nasa_pct": 21.688000000000002,
+   "engine_pct": 39.41906677788136,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 1.5547568814091557,
+   "earth_az_range_deg": [
+    67.29070556375187,
+    82.68183588257762
+   ],
+   "earth_el_max_deg": 8.359737859713771,
+   "horizon_toward_earth_pds40_deg": [
+    9.58573751285823,
+    11.363775080135701
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    7.695500626925684,
+    9.828360751588203
+   ]
+  },
+  {
+   "kind": "beside",
+   "lat": -85.32113452381158,
+   "lon": 285.0788310883954,
+   "nasa_pct": 36.228,
+   "engine_pct": 26.68110004415877,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 0.0,
+   "earth_az_range_deg": [
+    67.25642573835374,
+    82.64813626305099
+   ],
+   "earth_el_max_deg": 8.36413916942928,
+   "horizon_toward_earth_pds40_deg": [
+    8.42730683956115,
+    21.419363183932763
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    8.514517573996784,
+    10.075569653813043
+   ]
+  },
+  {
+   "kind": "beside",
+   "lat": -85.33272419321834,
+   "lon": 285.0166449489347,
+   "nasa_pct": 17.356,
+   "engine_pct": 44.014645993817766,
+   "indep_pds40_pct": 0.0,
+   "indep_pgda20_pct": 7.465899612384083,
+   "earth_az_range_deg": [
+    67.31902934214679,
+    82.70904054645216
+   ],
+   "earth_el_max_deg": 8.355095115414326,
+   "horizon_toward_earth_pds40_deg": [
+    8.298705795153499,
+    11.582501637391976
+   ],
+   "horizon_toward_earth_pgda20_deg": [
+    6.8022145455087,
+    10.229559386077742
+   ]
+  }
+ ],
+ "summary_blob": {
+  "nasa_pct": 0.0,
+  "engine_pct": 41.99407536430989,
+  "indep_pgda20_pct": 7.263121902752564,
+  "indep_pds40_pct": 6.70278077621314
+ },
+ "summary_beside": {
+  "nasa_pct": 31.849000000000004,
+  "engine_pct": 37.89167913743192,
+  "indep_pgda20_pct": 5.488797777341642,
+  "indep_pds40_pct": 6.561258034443846
+ }
+}

@@ -1,0 +1,17 @@
+{"name":"valid 30-day window","start":"2026-11-13T00:00","end":"2026-12-13T00:00","expectValid":true,"endInvalid":null,"describedBy":null,"hint":null,"sidebarAnalyseDisabled":false,"explorerAnalyseDisabled":false,"analysis_requests_sent":0,"evidence":null,"result":"Pass"}
+{"name":"equal start and end","start":"2026-11-13T00:00","end":"2026-11-13T00:00","expectValid":false,"endInvalid":"true","describedBy":"window-hint","hint":"The end must be after the start (UTC). Analyse is disabled until it is.","sidebarAnalyseDisabled":true,"explorerAnalyseDisabled":true,"analysis_requests_sent":0,"evidence":"screenshots/window-equal-start-and-end.png","result":"Pass"}
+{"name":"reversed","start":"2026-12-13T00:00","end":"2026-11-13T00:00","expectValid":false,"endInvalid":"true","describedBy":"window-hint","hint":"The end must be after the start (UTC). Analyse is disabled until it is.","sidebarAnalyseDisabled":true,"explorerAnalyseDisabled":true,"analysis_requests_sent":0,"evidence":"screenshots/window-reversed.png","result":"Pass"}
+{"name":"reversed by one minute","start":"2026-11-13T00:01","end":"2026-11-13T00:00","expectValid":false,"endInvalid":"true","describedBy":"window-hint","hint":"The end must be after the start (UTC). Analyse is disabled until it is.","sidebarAnalyseDisabled":true,"explorerAnalyseDisabled":true,"analysis_requests_sent":0,"evidence":"screenshots/window-reversed-by-one-minute.png","result":"Pass"}
+{"name":"one minute (boundary, valid)","start":"2026-11-13T00:00","end":"2026-11-13T00:01","expectValid":true,"endInvalid":null,"describedBy":null,"hint":null,"sidebarAnalyseDisabled":false,"explorerAnalyseDisabled":false,"analysis_requests_sent":0,"evidence":null,"result":"Pass"}
+{"hint":"Azimuths are taken modulo 360°: this value is used as 40°.","request_panel_az_deg":[40],"result_id":"e7e4861f4363eb93bfab17bc","stored_panel":{"azimuth_deg":40,"description":"Vertical panel fixed at a chosen azimuth","model":"fixed_vertical"},"backend_fixed_vertical_mean":0,"displayed":{"big":"0.000","rule":"Estimated, vertical, fixed azimuth"},"evidence":"screenshots/panel-azimuth-400-used-as-40.png","result":"Pass"}
+file:///E:/LUNA-OPS/docs/validation_evidence/date_validation_fix_2026-11-14/scripts/window.mjs:43
+  if (r.exceptionDetails) throw new Error("page error: " + (r.exceptionDetails.exception?.description || r.exceptionDetails.text));
+                                ^
+
+Error: page error: TypeError: Illegal invocation
+    at <anonymous>:1:142
+    at <anonymous>:1:284
+    at evaluate (file:///E:/LUNA-OPS/docs/validation_evidence/date_validation_fix_2026-11-14/scripts/window.mjs:43:33)
+    at async file:///E:/LUNA-OPS/docs/validation_evidence/date_validation_fix_2026-11-14/scripts/window.mjs:138:49
+
+Node.js v24.19.0

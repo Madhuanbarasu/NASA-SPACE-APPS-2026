@@ -1,0 +1,87 @@
+{
+  "scenarios": 54,
+  "identical": 41,
+  "different": 13,
+  "renderErrors": 0,
+  "totalMarkupChars": 374869,
+  "diffs": [
+    {
+      "scenario": "CompareView/empty",
+      "at": 1004,
+      "baseline": "\"run-button\" style=\"width:auto;margin-top:0\" disabled=\"\">Compare 0 × 0</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><div class=\"footer-space\"></div></div>",
+      "c10": "\"run-button\" style=\"width:auto;margin-top:0\" disabled=\"\">Compare 0 × 0</button></div><div class=\"footer-space\"></div></div>"
+    },
+    {
+      "scenario": "CompareView/catalog",
+      "at": 1510,
+      "baseline": "\"run-button\" style=\"width:auto;margin-top:0\" disabled=\"\">Compare 2 × 0</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><div class=\"footer-space\"></div></div>",
+      "c10": "\"run-button\" style=\"width:auto;margin-top:0\" disabled=\"\">Compare 2 × 0</button></div><div class=\"footer-space\"></div></div>"
+    },
+    {
+      "scenario": "CompareView/windows",
+      "at": 2158,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 3</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><div class=\"footer-space\"></div></div>",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 3</button></div><div class=\"footer-space\"></div></div>"
+    },
+    {
+      "scenario": "CompareView/target",
+      "at": 2418,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 4 × 3</button><span class=\"hint\">Meets the team target of at least 4 sites × 3 windows (C01).</span></div><div class=\"footer-space\"></d",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 4 × 3</button></div><div class=\"footer-space\"></div></div>"
+    },
+    {
+      "scenario": "CompareView/busy-error",
+      "at": 2443,
+      "baseline": "style=\"width:auto;margin-top:0\" disabled=\"\">Comparing</button><span class=\"hint\">Meets the team target of at least 4 sites × 3 windows (C01).</span><span class=\"hint\" aria-live=\"polite\">Cell 2 of 12</",
+      "c10": "style=\"width:auto;margin-top:0\" disabled=\"\">Comparing</button><span class=\"hint\" aria-live=\"polite\">Cell 2 of 12</span><span class=\"hint bad\" role=\"alert\">The comparison stopped.</span></div><div clas"
+    },
+    {
+      "scenario": "CompareView/matrix-sunlit",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-dark",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-dte",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-dtegap",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-overlap",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-power",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-efsh",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-bogus",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    }
+  ]
+}

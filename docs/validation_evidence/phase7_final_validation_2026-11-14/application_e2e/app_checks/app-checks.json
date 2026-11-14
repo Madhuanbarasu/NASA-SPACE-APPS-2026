@@ -1,0 +1,399 @@
+{
+ "base": "http://127.0.0.1:8000",
+ "run_utc": "2026-11-14T03:53:41.013Z",
+ "results": [
+  {
+   "id": "T1",
+   "area": "Navigation",
+   "steps": [
+    "1700 px",
+    "focus the selected tab",
+    "ArrowRight, ArrowLeft, Home, End"
+   ],
+   "expected": "arrow keys move selection between tabs; exactly one tab is in the Tab order (roving tabindex)",
+   "actual": {
+    "s0": "Site",
+    "s1": "Landing",
+    "s2": "Site",
+    "s3": "Guide",
+    "s4": "Mission",
+    "tabStops": 1,
+    "tabsInBar": true
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T2",
+   "area": "South polar map",
+   "steps": [
+    "default map view",
+    "click 6 px inside the pane's top-left corner (outside the 60 S circle)"
+   ],
+   "expected": "no site is set; the note says the point is north of 60 S",
+   "actual": {
+    "latBefore": "",
+    "latAfter": "",
+    "note": "direction); not the lunar Sun. Click the map to set coordinates. That point is north of 60° S, outside the south polar map; no site was set."
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T3",
+   "area": "South polar map",
+   "steps": [
+    "emulate 1.5 s latency",
+    "reload",
+    "read the map note while tiles are in flight"
+   ],
+   "expected": "the note says how many terrain tiles are loading",
+   "actual": {
+    "note": "rom LOLA heights (fixed light direction); not the lunar Sun. Click the map to set coordinates. Loading 16 terrain tiles.",
+    "statusChip": "16 tiles loading"
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T4",
+   "area": "South polar map",
+   "steps": [
+    "drag the map 150 px right and 80 px down"
+   ],
+   "expected": "the view moves (map image changes); no site is set by a drag",
+   "actual": {
+    "imageChanged": true,
+    "latBefore": "-89.463163",
+    "latAfter": "-89.463163"
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T5",
+   "area": "3D Moon globe",
+   "steps": [
+    "switch to the globe",
+    "drag 200 px left"
+   ],
+   "expected": "the globe rotates: the centre readout changes",
+   "actual": {
+    "before": "Centre 89.463° S, 222.510° E",
+    "after": "Centre 89.463° S, 274.082° E"
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T6",
+   "area": "Local terrain",
+   "steps": [
+    "switch to Local terrain",
+    "drag 160 px left"
+   ],
+   "expected": "the 3D terrain view rotates (image changes)",
+   "actual": {
+    "imageChanged": true
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T7",
+   "area": "Downloads",
+   "steps": [
+    "analyse Site01, 13-20 Nov 2026",
+    "fetch Series CSV, Events CSV, Intervals CSV and Full result JSON from the result's links"
+   ],
+   "expected": "each download returns 200 with the right type; CSV row counts equal the result's series, events and intervals; JSON id equals the result",
+   "actual": {
+    "links": [
+     "Series CSV",
+     "Events CSV",
+     "Intervals CSV",
+     "Full result JSON"
+    ],
+    "series": {
+     "status": 200,
+     "type": "text/csv; charset=utf-8",
+     "disp": null,
+     "lines": 348,
+     "jsonId": null
+    },
+    "events": {
+     "status": 200,
+     "type": "text/csv; charset=utf-8",
+     "disp": null,
+     "lines": 10,
+     "jsonId": null
+    },
+    "intervals": {
+     "status": 200,
+     "type": "text/csv; charset=utf-8",
+     "disp": null,
+     "lines": 17,
+     "jsonId": null
+    },
+    "json": {
+     "status": 200,
+     "type": "application/json",
+     "disp": "attachment; filename=\"lunaops_a3f0c01ff043fbabd3280c8c.json\"",
+     "lines": 48476,
+     "jsonId": "a3f0c01ff043fbabd3280c8c"
+    },
+    "expected_rows": {
+     "series": 338,
+     "events": 0,
+     "intervals": 7
+    }
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass",
+   "script_result": "Fail",
+   "assessment": "The check counted all CSV lines; every CSV starts with 9 provenance comment lines and 1 header row. Excluding them: series 338 = 338, events 0 = 0, intervals 7 = 7; JSON id equals the result. All downloads 200 with text/csv or application/json."
+  },
+  {
+   "id": "T8",
+   "area": "Charts",
+   "steps": [
+    "result view: Sunlight and Earth visibility sections",
+    "read both readouts, chart gaps, timeline and horizon legends"
+   ],
+   "expected": "each per-body chart has its own readout naming its body; the timeline legend lists 11 encodings including Unknown; the horizon legend shows the 1-sigma band and near-field bins (Site01 has both)",
+   "actual": {
+    "readouts": [
+     "13 Nov 2026, 00:00 UTC  Sun disc visible 100%",
+     "13 Nov 2026, 00:00 UTC  Earth disc visible 0%"
+    ],
+    "timelineLegend": [
+     "Sunlit",
+     "Earth in view",
+     "Both",
+     "Dark or out of view",
+     "Unknown",
+     "Uncertain",
+     "Brief window",
+     "Earth–Sun contact",
+     "Time cursor",
+     "Rise or clears (event)",
+     "Set or covered (event)"
+    ],
+    "horizonLegendHasSigma": true,
+    "horizonLegendHasNearField": true
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T9",
+   "area": "Public/Technical mode",
+   "steps": [
+    "switch to Public",
+    "then back to Technical"
+   ],
+   "expected": "Public shows the plain-language result and hides the data tables link; Technical restores them",
+   "actual": {
+    "publicPressed": "true",
+    "publicHasTablesLink": false,
+    "technicalHasTablesLink": true
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T10",
+   "area": "Top bar",
+   "steps": [
+    "read the UTC clock twice, 2.5 s apart"
+   ],
+   "expected": "the UTC clock advances and is in UTC",
+   "actual": {
+    "a": "UTC2026-11-14 03:53:20",
+    "b": "UTC2026-11-14 03:53:23"
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T11",
+   "area": "Navigation",
+   "steps": [
+    "1280 px",
+    "open the compact menu",
+    "choose Landing"
+   ],
+   "expected": "the menu opens, the choice selects Landing and closes the menu",
+   "actual": {
+    "openedTo": "true",
+    "open": "false",
+    "selected": "Landing",
+    "toggle": "Landing"
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T12",
+   "area": "Landing Safety",
+   "steps": [
+    "Site01",
+    "Run screening",
+    "radius 50 -> 120 m",
+    "layer Roughness",
+    "inspect backdrop tile requests"
+   ],
+   "expected": "findings shown; footprint re-assessed with the new radius (API 200); layer image requested; the hazard-map backdrop uses /api/display/tiles/",
+   "actual": {
+    "findings": 5,
+    "radiusInput": "#ls-radius",
+    "footprintRequests": [
+     200
+    ],
+    "roughnessLayer": [
+     200
+    ],
+    "backdropTiles": 6,
+    "onDisplayRoute": 6,
+    "evidence": "screenshots/t12-landing.png"
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass"
+  },
+  {
+   "id": "T13",
+   "area": "Communication",
+   "steps": [
+    "Site01",
+    "Simulate",
+    "compare direct-to-Earth windows with the API",
+    "relay on with an illustrative orbit",
+    "RF direction buttons"
+   ],
+   "expected": "direct windows equal the API's; the relay three-leg table appears; Lander to relay / Relay to Earth / Direct to Earth each select their link",
+   "actual": {
+    "simulateStatus": null,
+    "uiDirectWindowRows": 0,
+    "relayTable": true,
+    "relayRows": 3,
+    "linkSwitching": [
+     [
+      "Lander to relay",
+      "Lander to relay"
+     ],
+     [
+      "Relay to Earth",
+      "Relay to Earth"
+     ],
+     [
+      "Direct to Earth",
+      "Direct to Earth"
+     ]
+    ],
+    "evidence": "screenshots/t13-communication.png"
+   },
+   "error": null,
+   "console_errors": [],
+   "result": "Pass",
+   "script_result": "Fail",
+   "rerun": {
+    "request_status": 200,
+    "api_direct_stats": {
+     "open_h": 0,
+     "open_share": 0,
+     "windows": 0,
+     "uncertain_windows": 0,
+     "longest_window_h": 0,
+     "gaps_between_windows": 0,
+     "mean_gap_h": null,
+     "longest_gap_h": null,
+     "unknown_h": 0,
+     "starts_open": false,
+     "ends_open": false
+    },
+    "api_terrain_blocked": {
+     "open_h": 49.34903,
+     "open_share": 0.29374,
+     "windows": 1,
+     "uncertain_windows": 0,
+     "longest_window_h": 49.34903,
+     "gaps_between_windows": 0,
+     "mean_gap_h": null,
+     "longest_gap_h": null,
+     "unknown_h": 0,
+     "starts_open": false,
+     "ends_open": true
+    },
+    "ui_hint": "13 Nov 2026, 00:00 UTC | 0 Earth-visibility windows, 0 min in total; longest gap n/a; Earth above 0° but behind terrain for 2 d 1 h. | Earth above the terrain horizon is geometric line of sight. It does not by itself guarantee a usable radio link (antenna, power, frequency, multipath and ground station availability also matter)."
+   },
+   "assessment": "First run: the request listener started after the tab auto-simulated (status not captured) and the direct windows are a summary line, not a table. Rerun (comms-check.json): request 200; UI 0 windows / 0 min / terrain-blocked 2 d 1 h = API 0 / 0 h / 49.35 h. Relay three-leg table (3 rows) and RF direction switching passed in the first run."
+  }
+ ],
+ "console_all": [],
+ "summary_after_assessment": [
+  [
+   "T1",
+   "Pass"
+  ],
+  [
+   "T2",
+   "Pass"
+  ],
+  [
+   "T3",
+   "Pass"
+  ],
+  [
+   "T4",
+   "Pass"
+  ],
+  [
+   "T5",
+   "Pass"
+  ],
+  [
+   "T6",
+   "Pass"
+  ],
+  [
+   "T7",
+   "Pass"
+  ],
+  [
+   "T8",
+   "Pass"
+  ],
+  [
+   "T9",
+   "Pass"
+  ],
+  [
+   "T10",
+   "Pass"
+  ],
+  [
+   "T11",
+   "Pass"
+  ],
+  [
+   "T12",
+   "Pass"
+  ],
+  [
+   "T13",
+   "Pass"
+  ]
+ ]
+}

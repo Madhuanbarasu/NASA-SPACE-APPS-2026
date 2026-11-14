@@ -1,0 +1,111 @@
+{
+ "label": "iter1",
+ "h2": 6,
+ "wording": null,
+ "candidates": [
+  {
+   "name": "89.463° S, 222.510° E",
+   "coverage": "Registered LOLA terrain covers this point: 5m, 20m, 80m, 240m.",
+   "window": "14 Nov 2026, 00:00 UTC to 21 Nov 2026, 00:00 UTC",
+   "values": [
+    "100.0%",
+    "0.0%"
+   ],
+   "none": null
+  },
+  {
+   "name": "89.200° S, 200.000° E",
+   "coverage": "Registered LOLA terrain covers this point: 20m, 80m, 240m.",
+   "window": "14 Nov 2026, 00:00 UTC to 21 Nov 2026, 00:00 UTC",
+   "values": [
+    "66.5%",
+    "0.0%"
+   ],
+   "none": null
+  }
+ ],
+ "history": [
+  [
+   "89.200° S, 200.000° E",
+   "14 Nov 2026, 00:00 UTC to 21 Nov 2026, 00:00 UTC",
+   "66.5%",
+   "2 d 8 h",
+   "0.0%"
+  ],
+  [
+   "89.463° S, 222.510° E",
+   "14 Nov 2026, 00:00 UTC to 21 Nov 2026, 00:00 UTC",
+   "100.0%",
+   "0 min",
+   "0.0%"
+  ]
+ ],
+ "comparison": [
+  [
+   "89.463° S, 222.510° E",
+   "14 Nov 2026, 00:00 UTC to 21 Nov 2026, 00:00 UTC",
+   "100.0%",
+   "0.0%",
+   "1 validated, 4 pending"
+  ],
+  [
+   "89.200° S, 200.000° E",
+   "14 Nov 2026, 00:00 UTC to 21 Nov 2026, 00:00 UTC",
+   "66.5%",
+   "0.0%",
+   "1 validated, 4 pending"
+  ]
+ ],
+ "compareApi": null,
+ "links": [
+  "Window summary",
+  "Horizon panorama",
+  "Timeline",
+  "Sunlight",
+  "Earth visibility",
+  "3D terrain and map",
+  "Validation and provenance",
+  "Events and data tables"
+ ],
+ "figures": {
+  "Sunlit time": "66.5%",
+  "Longest darkness": "2 d 8 h",
+  "Earth in view": "0.0%",
+  "Longest Earth gap": "7 d 0 h",
+  "Sunlit and Earth in view": "0.0%"
+ },
+ "layout-desktop": {
+  "hscroll": false,
+  "columns": 2,
+  "overflow": 0
+ },
+ "layout-tablet": {
+  "hscroll": false,
+  "columns": 2,
+  "overflow": 0
+ },
+ "layout-phone": {
+  "hscroll": false,
+  "columns": 1,
+  "overflow": 0
+ },
+ "locator": {
+  "before": "89.200° S, 200.000° E",
+  "marks": [
+   {
+    "label": "Select 89.463° S, 222.510° E",
+    "disabled": false
+   },
+   {
+    "label": "89.200° S, 200.000° E (selected)",
+    "disabled": true
+   }
+  ],
+  "after": "89.463° S, 222.510° E",
+  "sidebar": [
+   "-89.463163",
+   "222.510447"
+  ]
+ },
+ "consoleErrors": []
+}

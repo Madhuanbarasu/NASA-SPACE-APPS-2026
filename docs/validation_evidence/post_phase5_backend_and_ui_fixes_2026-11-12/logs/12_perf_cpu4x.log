@@ -1,0 +1,10 @@
+15:43:33 cpu4x cold 1
+15:43:38 cpu4x cold 2
+15:43:43 cpu4x cold 3
+15:43:47 cpu4x warm 1
+15:43:50 cpu4x warm 2
+15:44:12 cpu4x workflow done
+15:44:52 cpu4x phase5 done
+cpu4x: cold appReady 1377.6 ms, FCP 512, LCP 512, TBT 289, JS 771.7 KB; warm appReady 1732.4; complete=true
+interactions {"tabs":{"Compare":41.9,"Data and validation":281.1,"Guide":28.3,"Site":72.9},"analysisToResultMs":492.7,"analysisTo3DDataMs":828.2,"analysisToMapTilesMs":1034.2,"resultJsonKB":319.8,"resultFetchMs":26.9,"terrainGridKB":190.2,"series":"337","cursorStep":{"interactions":20,"medianMs":32,"p95Ms":48,"maxMs":64},"playback":{"steps":31,"frames":301,"fps":60,"frameP95":16.9,"frameMax":33.2,"longTasks":0,"longestTask":0,"blockingMs":0,"expectedSteps":35,"scriptMsPerStep":12.6,"layoutMs":85.3,"domNodes":5376},"playbackTablesOpen":{"steps":29,"frames":296,"fps":59,"frameP95":16.9,"frameMax":50.1,"longTasks":0,"longestTask":0,"blockingMs":0,"expectedSteps":35,"scriptMsPerStep":17.8,"layoutMs":68.3,"domNodes":6399},"rotate3D":{"medianMs":30.2,"maxMs":44.2},"modeToPublicMs":179.8,"modeToTechnicalMs":31.1,"resultToDataMs":225.3,"dataToResultMs":487.1,"compareToMatrixMs":114.1,"metricSwitchMs":24.5,"cellToResultMs":320.7,"heapAfterWorkflowMB":41.4,"domNodesAfterWorkflow":2321}
+phase5 {"tabToMissionMs":87.7,"tabMissionToSiteMs":65.9,"globeToCanvasMs":399.1,"globeToImageryMs":376.1,"globeImageryKB":556.7,"globeKeySteps":{"interactions":10,"medianMs":16,"p95Ms":32,"maxMs":32},"terrainToCanvasMs":99.7,"terrainToDataMs":155.4,"terrainKeySteps":{"interactions":10,"medianMs":16,"p95Ms":32,"maxMs":32},"globeRemount":{"cycles":5,"before":{"heapMB":26,"nodes":431,"listeners":196},"after":{"heapMB":26.5,"nodes":456,"listeners":201},"heapGrowthMB":0.5,"nodeGrowth":25,"listenerGrowth":5,"canvasesInDom":1,"newConsoleWarnings":[]},"terrainRemount":{"cycles":5,"before":{"heapMB":26.9,"nodes":514,"listeners":191},"after":{"heapMB":27.2,"nodes":519,"listeners":196},"heapGrowthMB":0.3,"nodeGrowth":5,"listenerGrowth":5,"canvasesInDom":1,"newConsoleWarnings":[]},"heapAfterPhase5MB":27.2}

@@ -1,0 +1,40 @@
+/* LUNA-OPS 2.0 base: reset, typography, focus, scrollbars and utilities. */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.45;
+  font-feature-settings: "tnum" 1;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, select { font: inherit; color: inherit; }
+input, select { min-width: 0; } /* U-04 reflow: no intrinsic minimum width that widens the page */
+a { color: var(--earth); }
+a:hover { color: var(--text); }
+h1, h2, h3, h4 { text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+/* U-04: leave room around a focused control so its whole ring stays inside scrolling panels */
+a, button, input, select, summary, [tabindex], .table-scroll { scroll-margin: 12px; }
+
+/* thin instrument-style scrollbars */
+* { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+
+.skip-link { position: absolute; left: 12px; top: -60px; z-index: 40; background: var(--focus); color: var(--on-sun); padding: 8px 14px;
+  border-radius: var(--r-s); font-weight: 700; text-decoration: none; }
+.skip-link:focus { top: 8px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* utilities */
+.mono { font-family: var(--font-mono); font-size: var(--fs-xs); }
+.telemetry { font-family: var(--font-mono); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+/* eyebrow: the small uppercase label above titles and on panel headers (mission-control labelling) */
+.eyebrow { margin: 0; font-size: var(--fs-2xs); font-weight: 650; letter-spacing: var(--tracking-label); text-transform: uppercase;
+  font-stretch: 90%; color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}

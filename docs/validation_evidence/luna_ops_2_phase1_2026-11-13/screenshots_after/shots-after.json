@@ -1,0 +1,146 @@
+[
+ {
+  "size": [
+   1440,
+   900
+  ],
+  "view": "site-welcome-map",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1440,
+   900
+  ],
+  "view": "mission",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1440,
+   900
+  ],
+  "view": "compare",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1440,
+   900
+  ],
+  "view": "data",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1440,
+   900
+  ],
+  "view": "guide",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1440,
+   900
+  ],
+  "view": "site-globe",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1024,
+   768
+  ],
+  "view": "site-welcome-map",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1024,
+   768
+  ],
+  "view": "mission",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1024,
+   768
+  ],
+  "view": "compare",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1024,
+   768
+  ],
+  "view": "data",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1024,
+   768
+  ],
+  "view": "guide",
+  "hscroll": false
+ },
+ {
+  "size": [
+   1024,
+   768
+  ],
+  "view": "site-globe",
+  "hscroll": false
+ },
+ {
+  "size": [
+   390,
+   844
+  ],
+  "view": "site-welcome-map",
+  "hscroll": false
+ },
+ {
+  "size": [
+   390,
+   844
+  ],
+  "view": "mission",
+  "hscroll": false
+ },
+ {
+  "size": [
+   390,
+   844
+  ],
+  "view": "compare",
+  "hscroll": false
+ },
+ {
+  "size": [
+   390,
+   844
+  ],
+  "view": "data",
+  "hscroll": false
+ },
+ {
+  "size": [
+   390,
+   844
+  ],
+  "view": "guide",
+  "hscroll": false
+ },
+ {
+  "size": [
+   390,
+   844
+  ],
+  "view": "site-globe",
+  "hscroll": false
+ }
+]

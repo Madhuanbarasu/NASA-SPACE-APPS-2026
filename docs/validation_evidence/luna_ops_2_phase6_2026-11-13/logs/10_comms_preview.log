@@ -1,0 +1,111 @@
+{
+ "views": {
+  "wide": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "timelineW": 1498
+  },
+  "tablet": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "timelineW": 942
+  },
+  "phone": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "timelineW": 324
+  },
+  "phone320": {
+   "hscroll": false,
+   "overflowPx": 0,
+   "timelineW": 254
+  }
+ },
+ "tabs": [
+  "Mission",
+  "Site",
+  "Landing",
+  "Comms",
+  "Compare",
+  "Data and validation",
+  "Guide"
+ ],
+ "topbarOverflow1440": 0,
+ "firstSimulationMs": 651,
+ "engineLabels": [
+  "Earth azimuth and elevationValidated",
+  "Terrain horizonPending validation",
+  "Earth-disk visibilityPending validation",
+  "Visibility eventsPending validation"
+ ],
+ "directRfBefore": "not evaluated",
+ "directBudget": [
+  "Free-space path loss222.41dB20 log10(4 pi R / lambda), lambda = c / f",
+  "EIRP32.01dBWPt + Gt - Ltx",
+  "Received carrier power-134.40dBWEIRP - FSPL - Lother + Gr - Lrx",
+  "Carrier-to-noise density C/N077.21dB-HzPr - 10 log10(k) - 10 log10(Ts)",
+  "Eb/N017.21dBC/N0 - 10 log10(Rb)",
+  "Link margin14.71dBEb/N0 - required Eb/N0",
+  "C/N in the bandwidth14.20dBC/N0 - 10 log10(B)"
+ ],
+ "directStatus": "Direct to Earth complete margin 13.98 to 14.71 dB over the window",
+ "invalidRate": {
+  "status": "Direct to Earth incomplete: some terms not evaluated",
+  "problems": "Data rate must be greater than 0 bit/s"
+ },
+ "relayTable": [
+  "Lander to relay5 d 8 h233999 to 8133 kmAgainst the site's terrain horizon and the lunar sphere; unknown 0.0% of samples; highest elevation 54.5°",
+  "Relay to Earth6 d 19 h7373425 to 409909 kmLine from the relay to the Earth's centre clears the lunar sphere (plus the grazing altitude)",
+  "Both legs5 d 8 h23n/aRelay-assisted contact needs both legs at once; longest gap 2 h 49 min"
+ ],
+ "relayDownStatus": "Relay to Earth complete margin 27.86 to 28.67 dB over the window",
+ "relayUpStatus": "Lander to relay complete margin -11.63 to -5.46 dB over the window",
+ "timelineRows": [
+  "Earth geometrically visible",
+  "Earth above 0° but blocked by terrain",
+  "Relay leg 1: lander to relay",
+  "Relay leg 2: relay to Earth",
+  "Relay-assisted (both legs open)",
+  "Any geometric path",
+  "No geometric path",
+  "Direct link meets required Eb/N0",
+  "Relay-assisted, both link budgets met",
+  "Any path meeting its link budget"
+ ],
+ "directAtCursor": [
+  "Earth elevation (centre)2.943°Engine value",
+  "Earth azimuth129.887°Degrees east of north at the site",
+  "Distance to the Earth's centre390003 kmApparent (light time and aberration), from the site",
+  "One-way light time1.301 s",
+  "Clearance above the terrain horizon-1.393°Earth-centre elevation minus the horizon at its azimuth",
+  "Earth geometrically visiblenot visible",
+  "Terrain blocking an Earth above 0°blocked by terrain",
+  "Direct link budget meets the required Eb/N0no",
+  "Next visibility change18 Dec 2026, 10:19 UTCin 1 d 5 h",
+  "Current or next visibility window18 Dec 2026, 10:19 UTClasting 1 d 13 h"
+ ],
+ "dtn": [
+  "Transmission time needed5 h 33 min",
+  "Contacts used1",
+  "Delivery completed18 Dec 2026, 15:52 UTC5 d 15 h after the data was ready",
+  "Data still queued at the window end0.0 Mbit"
+ ],
+ "comparison": [
+  "Earth geometrically visible1 d 13 h1n/an/a0 min0",
+  "Direct link meets required Eb/N01 d 13 h1n/an/a0 min0",
+  "Relay-assisted (both legs open)5 d 8 h232 h 45 min2 h 49 min0 min8",
+  "Relay-assisted, both link budgets met0 min0n/an/a0 min0",
+  "Any geometric path5 d 16 h222 h 46 min2 h 49 min0 min8",
+  "Any path meeting its link budget1 d 13 h5n/an/a0 min2"
+ ],
+ "provenance": "StatusPreliminary simulation, not part of the validated engine. The official LUNA-OPS validation report covers the science engine (backend/lunaops) only. RF, relay, timeline-algebra and planner results here are outside it and have not been validated. Direct-to-Earth geometry and its labels come unchanged from the engine result.Engine analysis usedresult 5703519acbf1e250a1648953, algorithm 1.5.0, code 84cbd4ea34f6606a…Engine labels of this result (unchanged)Earth azimuth and elevation: ValidatedTerrain horizon: Pending validation (engine's reasons: L_corr = 250 m is an uncalibrated assumption (no published source); horizon uncertainty and uncertain flags depend on it)Earth-disk visibility: Pe",
+ "mission": {
+  "commsBlock": "Landing screening in this sessionLanding screening not run in this session. || Communication simulation in this sessionEarth geometrically visible: 1 window, 1 d 13 h in the analysis windowNext Earth-visibility window: 18 Dec 2026, 10:19 UTCHypothetical relay H1 illustrative: 23 two-leg windows, 5 d 8 hDirect RF link budget evaluated with the user's parameters (see the Communication tab)",
+  "integrity": false,
+  "nestedLi": 0,
+  "h2": 6
+ },
+ "returnInputs": "6000 / 90 / 20000",
+ "consoleErrors": [],
+ "commsRequests": 8
+}

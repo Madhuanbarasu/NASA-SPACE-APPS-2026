@@ -1,0 +1,2 @@
+full-resolution scan of 30400x30400: value 1 (PSR) 55,856,975 px, value 0 868,303,025 px, NaN 0 px, other 0 []
+PSR area 22,342.8 km^2; scanned in 11.8 s

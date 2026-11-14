@@ -1,0 +1,154 @@
+{
+ "label": "after",
+ "report": {
+  "desktop": {
+   "heads": [
+    {
+     "text": "Test",
+     "w": 120
+    },
+    {
+     "text": "What it checks",
+     "w": 315
+    },
+    {
+     "text": "Status",
+     "w": 120
+    },
+    {
+     "text": "Detail",
+     "w": 495
+    }
+   ],
+   "rows": 424,
+   "statusWords": [
+    "passed",
+    "not run",
+    "skipped"
+   ],
+   "wrappedStatuses": 0,
+   "wrappedExamples": [],
+   "scrollable": false,
+   "boxW": 1050,
+   "tableW": 1050
+  },
+  "phone": {
+   "heads": [
+    {
+     "text": "Test",
+     "w": 120
+    },
+    {
+     "text": "What it checks",
+     "w": 228
+    },
+    {
+     "text": "Status",
+     "w": 120
+    },
+    {
+     "text": "Detail",
+     "w": 292
+    }
+   ],
+   "rows": 424,
+   "statusWords": [
+    "passed",
+    "not run",
+    "skipped"
+   ],
+   "wrappedStatuses": 0,
+   "wrappedExamples": [],
+   "scrollable": true,
+   "boxW": 356,
+   "tableW": 760
+  }
+ },
+ "map": {
+  "desktop": {
+   "mapPaneH": 782,
+   "terrainPaneH": 782,
+   "stageH": 690,
+   "stageW": 499,
+   "blankBelowCaption": 1,
+   "canvasH": 690,
+   "controls": true
+  },
+  "tablet": {
+   "mapPaneH": 730,
+   "terrainPaneH": 730,
+   "stageH": 637,
+   "stageW": 461,
+   "blankBelowCaption": 1,
+   "canvasH": 637,
+   "controls": true
+  },
+  "phone": {
+   "mapPaneH": 548,
+   "terrainPaneH": 942,
+   "stageH": 439,
+   "stageW": 330,
+   "blankBelowCaption": 1,
+   "canvasH": 439,
+   "controls": true
+  }
+ },
+ "layout": {
+  "data-desktop": {
+   "left": 340,
+   "width": 1100,
+   "headerLeft": 364,
+   "h2Left": 364,
+   "h2Width": 1052,
+   "firstTextWidth": 1052,
+   "hscroll": false
+  },
+  "guide-desktop": {
+   "left": 340,
+   "width": 1100,
+   "headerLeft": 364,
+   "h2Left": 364,
+   "h2Width": 1052,
+   "firstTextWidth": 1052,
+   "hscroll": false
+  },
+  "data-tablet": {
+   "left": 0,
+   "width": 1024,
+   "headerLeft": 24,
+   "h2Left": 24,
+   "h2Width": 976,
+   "firstTextWidth": 976,
+   "hscroll": false
+  },
+  "guide-tablet": {
+   "left": 0,
+   "width": 1024,
+   "headerLeft": 24,
+   "h2Left": 24,
+   "h2Width": 976,
+   "firstTextWidth": 976,
+   "hscroll": false
+  },
+  "data-phone": {
+   "left": 0,
+   "width": 390,
+   "headerLeft": 16,
+   "h2Left": 16,
+   "h2Width": 358,
+   "firstTextWidth": 358,
+   "hscroll": false
+  },
+  "guide-phone": {
+   "left": 0,
+   "width": 390,
+   "headerLeft": 16,
+   "h2Left": 16,
+   "h2Width": 358,
+   "firstTextWidth": 358,
+   "hscroll": false
+  }
+ },
+ "consoleErrors": []
+}
+exit 0

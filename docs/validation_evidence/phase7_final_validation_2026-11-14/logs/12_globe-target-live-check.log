@@ -1,0 +1,10 @@
+PASS Show on the globe centres the 3D Moon on the selected site (centre readout within 0.001 degrees; at the pole within the 89.9 degree camera limit) with the marker at the centre, for 10 sites incl. 0/360, west-negative input, 180, the pole, unsupported and northern points  [{"note":"Site01 (polar, covered)","centre":{"lat":-89.463,"lon":222.51},"marker":311,"ok":true},{"note":"longitude 0","centre":{"lat":-85,"lon":0},"marker":332,"ok":true},{"note":"longitude just below 360","centre":{"lat":-85,"lon":359.999},"marker":332,"ok":true},{"note":"west-negative longitude typed: east 340","centre":{"lat":-80,"lon":340},"marker":333,"ok":true},{"note":"longitude 180","centre":{"lat":-75.5,"lon":180},"marker":343,"ok":true},{"note":"near the 60 S coverage edge","centre":{"lat":-60.5,"lon":90},"marker":364,"ok":true},{"note":"within 0.1 degree of the pole (camera held at
+PASS conversions: the explorer shows the east longitude 0-360 for a west-negative input (-20 -> 340.000 E)  {"lat":"-80","lon":"-20","explorer":"80.000° S, 340.000° E"}
+PASS no stale coordinates: typing a new site while the globe is open moves the view to it  {"lat":-80,"lon":120}
+PASS typing: half-typed values are not flown to; the view settles on the final value  {"lat":-80.5,"lon":120}
+PASS a click on the globe selects that point (sidebar updated) without moving the camera  {"before":{"lat":-80.5,"lon":120},"after":{"lat":-80.5,"lon":120},"picked":{"lat":"-81.497157","lon":"143.613385"}}
+PASS map pick then Show on the globe: the globe is centred on the newly picked site (no stale coordinates)  {"mapPick":{"lat":-81.473644,"lon":142.736098},"c4":{"lat":-81.474,"lon":142.736}}
+PASS Mission dashboard 3D Moon opens the globe centred on the selected site  {"lat":-87.5,"lon":300}
+PASS no site selected: the globe opens at the default nearside viewpoint (0, 0) as before  {"lat":0,"lon":0}
+PASS no page exceptions or console errors  []
+globe-target-live-check: 9/9 checks passed

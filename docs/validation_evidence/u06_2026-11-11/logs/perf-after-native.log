@@ -1,0 +1,11 @@
+10:04:28 native cold 1
+10:04:59 native cold 2
+10:05:31 native cold 3
+10:06:02 native warm 1
+10:06:34 native warm 2
+10:07:45 native workflow done
+10:07:54 native leak check done
+native: cold appReady 499.9 ms, FCP 228, LCP 228, TBT 0, JS 1216.1 KB; warm appReady 830.9; complete=true
+interactions {"tabs":{"Compare":21.5,"Data and validation":69.8,"Guide":17.7,"Site":34.9},"analysisToResultMs":1385.5,"analysisTo3DDataMs":1813.3,"analysisToMapTilesMs":null,"resultJsonKB":320.1,"resultFetchMs":213.5,"terrainGridKB":190.2,"series":"337","cursorStep":{"interactions":20,"medianMs":32,"p95Ms":32,"maxMs":64},"playback":{"steps":33,"frames":302,"fps":60.3,"frameP95":16.9,"frameMax":17.1,"longTasks":0,"longestTask":0,"blockingMs":0,"expectedSteps":35,"scriptMsPerStep":3.9,"layoutMs":24.2,"domNodes":702},"playbackTablesOpen":{"steps":32,"frames":302,"fps":60.3,"frameP95":16.9,"frameMax":17.4,"longTasks":0,"longestTask":0,"blockingMs":0,"expectedSteps":35,"scriptMsPerStep":7.6,"layoutMs":23.9,"domNodes":5811},"rotate3D":{"medianMs":30.7,"maxMs":31.4},"modeToPublicMs":30.5,"modeToTechnicalMs":31.2,"resultToDataMs":30.2,"dataToResultMs":150.4,"compareToMatrixMs":666.8,"metricSwitchMs":27.8,"cellToResultMs":164,"heapAfterWorkflowMB":37.2,"domNodesAfterWorkflow":7514}
+memory {"cycles":5,"before":{"heapMB":29.7,"nodes":1082,"listeners":205},"after":{"heapMB":30,"nodes":1087,"listeners":210},"heapGrowthMB":0.3,"nodeGrowth":5,"listenerGrowth":5,"canvasesInDom":2,"newConsoleWarnings":[]}
+exit=0

@@ -1,0 +1,98 @@
+{
+  "note": "IN-MEMORY DRY RUN ONLY (validation.common.merge_external). No pytest, no merge, nothing written to backend/validation/report.json.",
+  "now": {
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-11T18:19:06Z"
+  },
+  "live_report_sha256": "5e6c76d75eff6c3454f68edc76ab5e08f48733e3ad2cfff72eac3e55db812e7b",
+  "each_file_against_live_report": {
+    "frontend_u04.json": {
+      "rejected_reasons": [],
+      "status_after": {
+        "U-04": "passed"
+      }
+    },
+    "frontend_u06.json": {
+      "rejected_reasons": [],
+      "status_after": {
+        "U-06": "passed"
+      }
+    }
+  },
+  "prospective_full_merge": {
+    "files": [
+      {
+        "file": "docs/validation_evidence/v09_v10_final_2026-11-10/v09_v10.json",
+        "sha256": "cc6d27a7b594050b72a481e4379a33c2c56d340134b3d821d3bb4cb34efce401",
+        "rejected_reasons": []
+      },
+      {
+        "file": "docs/validation_evidence/v11_final_2026-11-10/v11.json",
+        "sha256": "fa42c569dee745cd7f9acc0744bf8817956b7cc1bef96efd683de33da3cc2add",
+        "rejected_reasons": []
+      },
+      {
+        "file": "docs/validation_evidence/v12_final_2026-11-10/v12.json",
+        "sha256": "d01b97f5a38d4d935ae3a268844926b41192cecaee09e513812758607bbad668",
+        "rejected_reasons": []
+      },
+      {
+        "file": "docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11/v04_horizons/horizons.json",
+        "sha256": "401e446dad093fae2a7dd5c01768231ff5886101da21be5c1e5c789a1e0ad49b",
+        "rejected_reasons": []
+      },
+      {
+        "file": "docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11/v13_eclipse/v13.json",
+        "sha256": "277fef85646a9a1451829e5fde28e9a119ba10f78b9079ba38f5bcb6ad7fd64a",
+        "rejected_reasons": []
+      },
+      {
+        "file": "docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11/v14_month/v14.json",
+        "sha256": "5ca3a28d0f1a6c9f455c5c7397960a149e049a944b8bf9bd2378aa41b2b2164e",
+        "rejected_reasons": []
+      },
+      {
+        "file": "docs/validation_evidence/phase4_remaining_decisions_2026-11-11/frontend_u04.json",
+        "sha256": "bdd4069d2ba3f92182a06d58ce1a5a19778e32ae78fb42bf0469d84d3b88fc42",
+        "rejected_reasons": []
+      },
+      {
+        "file": "docs/validation_evidence/phase4_remaining_decisions_2026-11-11/frontend_u06.json",
+        "sha256": "802ccaab058f30ac8a56e16b12ec64e929cd3d74e6527bcff69434d30f907343",
+        "rejected_reasons": []
+      }
+    ],
+    "statuses": {
+      "V-04": "passed",
+      "V-05": "passed",
+      "V-09": "not run",
+      "V-10": "not run",
+      "V-11": "passed",
+      "V-12": "passed",
+      "V-13": "passed",
+      "V-14": "passed",
+      "U-04": "passed",
+      "U-06": "passed"
+    },
+    "labels_if_merged": {
+      "status_page": {
+        "sun_earth_azel": "Validated",
+        "horizon": "Validated",
+        "disk_visibility": "Pending validation",
+        "events": "Pending validation",
+        "power_indicator": "Pending validation"
+      },
+      "result_with_horizon_sigma": {
+        "sun_earth_azel": "Validated",
+        "horizon": "Pending validation",
+        "disk_visibility": "Pending validation",
+        "events": "Pending validation",
+        "power_indicator": "Pending validation"
+      }
+    },
+    "note": "the full horizons.json carries V-05 'passed' under its internal 1.0 s check, which the D1 acceptance record maps to the approved Phase 1.1 criteria"
+  }
+}

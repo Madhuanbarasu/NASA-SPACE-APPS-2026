@@ -1,0 +1,15 @@
+# runtime estimate failures of the adaptive detector over the V-14 month (production kernels, algorithm 1.5.0)
+site -89.5, 0.0: 11 failures; by function {'ecl_contact': 11}; epochs ['2026-11-27T07:47:47Z', '2026-11-27T09:05:19Z', '2026-11-27T09:43:07Z'] ... (8 distinct)
+  fields: ['dt_s', 'et', 'function', 'observed_deg', 'predicted_deg']
+  first: {"et": 849037735.731296, "function": "ecl_contact", "observed_deg": 0.000857, "predicted_deg": 0.000857, "dt_s": 5.380815}
+site -88.0, 120.0: 11 failures; by function {'ecl_contact': 11}; epochs ['2026-11-27T11:19:06Z', '2026-11-28T02:58:30Z', '2026-11-29T19:28:41Z'] (3 distinct)
+  fields: ['dt_s', 'et', 'function', 'observed_deg', 'predicted_deg']
+  first: {"et": 849050415.667307, "function": "ecl_contact", "observed_deg": 0.017831, "predicted_deg": 0.017829, "dt_s": 112.194465}
+site -86.5, 250.0: 11 failures; by function {'ecl_contact': 11}; epochs ['2026-11-27T08:14:13Z', '2026-11-27T08:14:14Z', '2026-11-27T08:14:15Z'] ... (5 distinct)
+  fields: ['dt_s', 'et', 'function', 'observed_deg', 'predicted_deg']
+  first: {"et": 849039322.248158, "function": "ecl_contact", "observed_deg": 0.000164, "predicted_deg": 0.000164, "dt_s": 1.028438}
+# observed/predicted change per failure (a failure means the observed change over the step reached the predicted bound; the step is then halved)
+site -89.5, 0.0: ratios min 1.0000098 max 1.0010720; step dt_s min 1.013 max 5.381; epochs ['2026-11-27T07:47:47Z', '2026-11-27T09:05:19Z', '2026-11-27T09:43:07Z', '2026-11-27T10:04:47Z', '2026-11-27T12:41:36Z', '2026-11-27T17:18:28Z', '2026-11-28T02:17:55Z', '2026-11-29T05:05:52Z']
+site -88.0, 120.0: ratios min 1.0000938 max 1.0067873; step dt_s min 1.070 max 112.194; epochs ['2026-11-27T11:19:06Z', '2026-11-28T02:58:30Z', '2026-11-29T19:28:41Z']
+site -86.5, 250.0: ratios min 1.0001877 max 1.0004441; step dt_s min 1.028 max 69.319; epochs ['2026-11-27T08:14:13Z', '2026-11-27T08:14:14Z', '2026-11-27T08:14:15Z', '2026-11-27T08:14:16Z', '2026-11-29T10:43:00Z']
+all 33: largest observed/predicted 1.0067873

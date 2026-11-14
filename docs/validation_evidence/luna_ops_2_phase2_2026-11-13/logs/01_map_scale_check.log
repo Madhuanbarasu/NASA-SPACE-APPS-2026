@@ -1,0 +1,8 @@
+lat -89.9 res 50: numeric 50.0000 m/px, analytic 50.0000 m/px, rel. diff 1.73e-7; bar {"metres":5000,"px":100.00009340952258}
+lat -89.463163 res 5: numeric 4.9999 m/px, analytic 4.9999 m/px, rel. diff 1.72e-9; bar {"metres":500,"px":100.00219492698209}
+lat -85 res 200: numeric 199.6189 m/px, analytic 199.6195 m/px, rel. diff 2.75e-6; bar {"metres":20000,"px":100.19090333764892}
+lat -75 res 1000: numeric 982.8991 m/px, analytic 982.9629 m/px, rel. diff 6.49e-5; bar {"metres":100000,"px":101.73984551724988}
+lat -62 res 2000: numeric 1882.5299 m/px, analytic 1882.9476 m/px, rel. diff 2.22e-4; bar {"metres":200000,"px":106.24001210852137}
+lat -90 res 2000: numeric 1999.4481 m/px, analytic 2000.0000 m/px, rel. diff 2.76e-4; bar {"metres":200000,"px":100.02760089939527}
+radius 1737400 worst relative difference 2.76e-4 OK
+exit 0

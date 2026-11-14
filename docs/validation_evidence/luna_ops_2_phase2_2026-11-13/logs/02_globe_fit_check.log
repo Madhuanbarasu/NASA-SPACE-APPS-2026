@@ -1,0 +1,9 @@
+764x769: distance 3.6631, disc 692.1 px = 90.000 % of height, 90.589 % of width (target 90.000 % of height)
+1092x769: distance 3.6631, disc 692.1 px = 90.000 % of height, 63.379 % of width (target 90.000 % of height)
+1784x949: distance 3.6631, disc 854.1 px = 90.000 % of height, 47.876 % of width (target 90.000 % of height)
+698x636: distance 3.6631, disc 572.4 px = 90.000 % of height, 82.006 % of width (target 90.000 % of height)
+358x523: distance 5.1346, disc 329.4 px = 62.975 % of height, 92.000 % of width (target 62.975 % of height)
+320x300: distance 3.6631, disc 270.0 px = 90.000 % of height, 84.375 % of width (target 90.000 % of height)
+1200x420: distance 3.6631, disc 378.0 px = 90.000 % of height, 31.500 % of width (target 90.000 % of height)
+worst |fraction - target| 1.11e-16 OK
+exit 0

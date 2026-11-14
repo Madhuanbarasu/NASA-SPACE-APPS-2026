@@ -1,0 +1,6 @@
+A. point -> pixel (row 1909, col 250); pixel centre -85.33051, 285.21043; offset from centre (-0.3, 0.0) m; NASA Earth 0.00 %, NASA Sun 26.30 %
+B. zero component through the point: 41 px, length 758 m, rms width 80 m, elongation 2.8, map direction 47.9 deg; touches the +-7.2 km window edge: False
+C. NASA Sun on the zero-Earth band 30.8 % vs 2-4 px beside it 40.1 % (NASA Earth beside it 35.1 %)
+D. LOLA 20m: point minus mean of the band's sides (120-300 m) across the band -2.5 m; steepest 20 m step within 200 m 10.9 deg; along-band detrended rms 6.4 m
+D. LOLA 80m: point minus mean of the band's sides (120-300 m) across the band +1.3 m; steepest 20 m step within 200 m 38.1 deg; along-band detrended rms 8.0 m
+E. band direction vs the local meridian (track direction): 57.3 deg

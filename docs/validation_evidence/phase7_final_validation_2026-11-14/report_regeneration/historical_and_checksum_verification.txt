@@ -1,0 +1,55 @@
+Historical report verification 2026-11-14T06:48:36Z
+8c03ebafc72c5c41a238565f51464413bd63f3132302491cc518587d93ebe10d *backend/validation/report.json
+5135efe88e5feb0fd36e0230ecba9f2d2b99322a70e1e69e822e13def69df53f *backend/validation/report.json.bak_5135efe8
+8c03ebafc72c5c41a238565f51464413bd63f3132302491cc518587d93ebe10d *docs/validation_evidence/scientific_validation_followup_2026-11-14/fingerprints/report.json.historical_84cbd4ea
+8c03ebafc72c5c41a238565f51464413bd63f3132302491cc518587d93ebe10d *docs/validation_evidence/phase7_final_validation_2026-11-14/report_regeneration/report.json.before_phase7
+installed report: code 84cbd4ea suite 1632af16 run 2026-11-12T17:23:45Z V-10 not run
+
+Checksum manifests (sha256sum -c, per folder)
+OK   50 files  docs/validation_evidence/comms_ui_fixes_2026-11-14
+OK   8 files  docs/validation_evidence/d1_v05_decision_2026-11-11
+OK   23 files  docs/validation_evidence/date_validation_fix_2026-11-14
+OK   9 files  docs/validation_evidence/earth_zero_investigation_2026-11-14
+OK   41 files  docs/validation_evidence/landing_spacing_fix_2026-11-14
+OK   349 files  docs/validation_evidence/luna_ops_2_phase1_2026-11-13
+OK   116 files  docs/validation_evidence/luna_ops_2_phase2_2026-11-13
+OK   178 files  docs/validation_evidence/luna_ops_2_phase3_2026-11-13
+OK   230 files  docs/validation_evidence/luna_ops_2_phase4_2026-11-13
+OK   161 files  docs/validation_evidence/luna_ops_2_phase5_2026-11-13
+OK   164 files  docs/validation_evidence/luna_ops_2_phase6_2026-11-13
+OK   7 files  docs/validation_evidence/phase4_closure_2026-11-11
+OK   12 files  docs/validation_evidence/phase4_final_merge_2026-11-12
+OK   7 files  docs/validation_evidence/phase4_merge_2026-11-11
+OK   36 files  docs/validation_evidence/phase4_remaining_decisions_2026-11-11
+OK   146 files  docs/validation_evidence/phase5_final_2026-11-12
+OK   64 files  docs/validation_evidence/phase5_prompt1_2026-11-12
+OK   71 files  docs/validation_evidence/phase5_prompt2_2026-11-12
+OK   77 files  docs/validation_evidence/phase5_prompt3_2026-11-12
+OK   90 files  docs/validation_evidence/phase5_prompt4_2026-11-12
+OK   11 files  docs/validation_evidence/phase5_report_merge_2026-11-12
+FAIL 275 files  docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12
+       sha256sum: './check_fidelity.py'$'\r': No such file or directory
+       ./check_fidelity.py: FAILED open or read
+       sha256sum: './compare_heights.py'$'\r': No such file or directory
+       ./compare_heights.py: FAILED open or read
+       sha256sum: './compare_tiles.py'$'\r': No such file or directory
+OK   1 files  docs/validation_evidence/pre_phase7_aud06_architecture_review_2026-11-14
+OK   115 files  docs/validation_evidence/pre_phase7_aud06_fix_2026-11-14
+OK   46 files  docs/validation_evidence/pre_phase7_aud08_fix_2026-11-14
+OK   50 files  docs/validation_evidence/pre_phase7_audit_2026-11-14
+OK   14 files  docs/validation_evidence/pre_phase7_audit_2026-11-14_addendum
+OK   286 files  docs/validation_evidence/pre_phase7_corrections_2026-11-14
+OK   18 files  docs/validation_evidence/pre_phase7_preparation_2026-11-14
+OK   77 files  docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11
+FAIL 51 files  docs/validation_evidence/scientific_validation_followup_2026-11-14
+       logs/server.log: FAILED
+       sha256sum: WARNING: 1 computed checksum did NOT match
+OK   24 files  docs/validation_evidence/scientific_validation_investigation_2026-11-14
+OK   120 files  docs/validation_evidence/south_polar_map_fixes_2026-11-12
+
+Follow-up checks of the two FAIL lines
+post_phase5_backend_and_ui_fixes_2026-11-12: manifest has CRLF line endings; checked with CR removed (manifest not modified):
+  -> 275 of 275 OK
+scientific_validation_followup_2026-11-14: all entries except logs/server.log:
+  -> 50 of 50 OK
+  logs/server.log: live log of the port-8000 server started from this folder; it was written to after the manifest was created (last entry: a ConnectionResetError traceback logged at 03:29:53Z, before the low-memory stop). Size now 720 bytes, modified 2026-11-14T03:29:53Z. Expected change of a live log, not altered evidence; the manifest is left unchanged.

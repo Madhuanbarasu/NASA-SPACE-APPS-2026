@@ -1,0 +1,9 @@
+power: 297 (result, panel model) pairs from 99 cached results
+  worst |series diff| 1.01e-05 (series stored rounded to 5 decimals) | worst |mean diff| 4.19e-08 | worst |equivalent full-Sun hours diff| 1.22e-05 h | worst |coverage diff| 5.08e-11
+  unknown (NaN) samples placed identically in every pair: True
+  results with unknown time: ['5998e02917bc98ba4ad6d994', 'a667129a40f4c80e9e3ff6b4']
+edge cases: 14/14 as defined
+  note: p_rel does not clamp f; f comes from the disk computation (0..1, or NaN), never from user input
+RF link budget, hand-worked case: {'fspl_db': 222.6806, 'eirp_dbw': 32.0103, 'pr_dbw': -134.6703, 'cn0_dbhz': 76.9392, 'ebn0_db': 16.9392, 'margin_db': 14.4392, 'cn_db': 13.9289} | max diff 0.0
+RF with the noise temperature missing: complete = False | stages not evaluated: ['cn0_dbhz', 'ebn0_db', 'margin_db']
+RF with data rate 0: complete = False | invalid: ['rb_bps']

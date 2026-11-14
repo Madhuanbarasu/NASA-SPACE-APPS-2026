@@ -1,0 +1,147 @@
+/* LUNA-OPS 2.0 shell: command bar, primary navigation, Mission Parameters sidebar and the workspace.
+   >= 1200 px: tabs in the bar, parameters docked on the left (collapsible).
+   < 1200 px: a compact navigation menu and the parameters as a drawer over the workspace. */
+
+.shell { display: grid; grid-template-rows: auto 1fr; grid-template-columns: minmax(0, 1fr); height: 100%; } /* U-04 reflow */
+
+/* ---------------------------------------------------------------- command bar */
+.topbar {
+  display: flex; align-items: center; gap: var(--sp-4); padding: 0 var(--sp-4) 0 var(--sp-3); height: var(--bar-h);
+  background: linear-gradient(180deg, #0a1019 0%, var(--space) 100%);
+  border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20;
+}
+/* a faint signal line along the bottom edge of the bar */
+.topbar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; pointer-events: none;
+  background: linear-gradient(90deg, transparent 0%, var(--accent-line) 22%, var(--accent-line) 78%, transparent 100%); opacity: 0.55; }
+
+.icon-button {
+  display: inline-grid; place-items: center; width: 36px; height: 36px; flex: none; padding: 0;
+  background: transparent; border: 1px solid var(--line); border-radius: var(--r-m); color: var(--muted); cursor: pointer;
+  transition: color var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease), background var(--dur-1) var(--ease);
+}
+.icon-button:hover { color: var(--text); border-color: var(--line-strong); background: var(--panel); }
+.icon-button[aria-expanded="true"] { color: var(--accent); border-color: var(--accent-line); background: var(--accent-soft); }
+.icon-button svg { width: 18px; height: 18px; }
+
+.brand { display: flex; align-items: center; gap: 10px; white-space: nowrap; min-width: 0; }
+.brand-logo { width: 30px; height: 30px; flex: none; }
+.brand-text { display: grid; line-height: 1.05; }
+.brand-mark { font-stretch: 125%; font-weight: 760; font-size: 17px; letter-spacing: 0.06em; }
+.brand-sub { font-stretch: 82%; color: var(--muted); font-size: var(--fs-2xs); letter-spacing: var(--tracking-label); text-transform: uppercase; }
+
+/* primary navigation (WAI-ARIA tabs: one tab stop, arrows move) */
+.tabs { display: flex; gap: 2px; height: 100%; margin-left: var(--sp-4); }
+.tab {
+  position: relative; white-space: nowrap; background: none; border: 0; padding: 0 14px; cursor: pointer; height: 100%;
+  color: var(--muted); font-weight: 560; font-size: var(--fs-m); font-stretch: 92%; letter-spacing: 0.01em;
+  transition: color var(--dur-1) var(--ease), background var(--dur-1) var(--ease);
+}
+.tab::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: 0; height: 2px; border-radius: 2px 2px 0 0;
+  background: transparent; transition: background var(--dur-1) var(--ease); }
+.tab:hover { color: var(--text); background: rgba(255, 255, 255, 0.025); }
+.tab[aria-selected="true"] { color: var(--text); background: linear-gradient(180deg, transparent 40%, var(--accent-soft) 100%); }
+.tab[aria-selected="true"]::after { background: var(--accent); }
+.tab:focus-visible { outline-offset: -3px; }
+
+.nav-toggle { display: none; align-items: center; gap: 8px; height: 36px; padding: 0 12px 0 9px; background: transparent;
+  border: 1px solid var(--line); border-radius: var(--r-m); color: var(--text); cursor: pointer; font-weight: 600; font-size: var(--fs-s); }
+.nav-toggle svg { width: 18px; height: 18px; color: var(--muted); }
+.nav-toggle[aria-expanded="true"] { border-color: var(--accent-line); background: var(--accent-soft); }
+
+.topbar-right { margin-left: auto; display: flex; gap: var(--sp-3); align-items: center; min-width: 0; }
+.utc-clock { display: inline-flex; align-items: baseline; gap: 6px; font-family: var(--font-mono); font-size: var(--fs-xs);
+  color: var(--muted); white-space: nowrap; padding: 4px 9px; border: 1px solid var(--line-soft); border-radius: var(--r-s); background: var(--night); }
+.utc-clock b { font-family: var(--font); font-weight: 650; font-size: var(--fs-2xs); letter-spacing: var(--tracking-label); color: var(--accent); }
+
+.data-pill { font-size: var(--fs-xs); font-stretch: 85%; color: var(--muted); display: flex; gap: 6px; align-items: center;
+  padding: 4px 10px; border: 1px solid var(--line-soft); border-radius: var(--r-pill); background: var(--night); white-space: nowrap; }
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: var(--faint); flex: none; }
+.dot.ok { background: var(--valid); box-shadow: 0 0 0 3px rgba(127, 200, 169, 0.14); }
+.dot.warn { background: var(--alert); box-shadow: 0 0 0 3px rgba(238, 154, 107, 0.14); }
+
+.mode-switch { display: inline-flex; border: 1px solid var(--line); border-radius: var(--r-pill); padding: 2px; background: var(--night); }
+.mode-switch button { border: 0; background: none; padding: 4px 12px; border-radius: var(--r-pill); cursor: pointer; color: var(--muted);
+  font-size: var(--fs-s); font-weight: 560; transition: color var(--dur-1) var(--ease), background var(--dur-1) var(--ease); }
+.mode-switch button:hover { color: var(--text); }
+.mode-switch button[aria-pressed="true"] { background: var(--panel-raised); color: var(--text); box-shadow: inset 0 0 0 1px var(--accent-line); }
+
+/* ---------------------------------------------------------------- workspace */
+.workspace { display: grid; grid-template-columns: var(--sidebar-w) minmax(0, 1fr); min-height: 0; }
+.workspace.params-collapsed { grid-template-columns: minmax(0, 1fr); }
+.main { overflow-y: auto; min-width: 0;
+  background:
+    radial-gradient(1100px 520px at 88% -8%, rgba(76, 201, 214, 0.055), transparent 62%),
+    radial-gradient(900px 600px at -10% 110%, rgba(95, 168, 232, 0.035), transparent 60%),
+    linear-gradient(rgba(140, 170, 200, 0.028) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(140, 170, 200, 0.028) 1px, transparent 1px) 0 0 / 48px 48px,
+    var(--night);
+  background-attachment: local; }
+
+/* ---------------------------------------------------------------- Mission Parameters sidebar */
+.sidebar { border-right: 1px solid var(--line); overflow-y: auto; background: var(--space); }
+/* The two scroll areas are the containing block of their absolutely positioned content (the visually hidden .sr-only
+   status texts and captions). Otherwise that content is placed against the page itself, makes the document taller
+   than the window, and scrollIntoView (dashboard deep links) scrolls the whole shell up under the sticky top bar,
+   leaving an empty band. No offsets are involved, so nothing moves visually. */
+.sidebar, .main { position: relative; }
+.sidebar-panel { padding: 0 18px 28px; }
+.sidebar-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 14px 0 12px; margin-bottom: 4px; background: var(--space); border-bottom: 1px solid var(--line-soft); }
+.sidebar-close { display: none; }
+/* collapsed on wide screens: the column goes away; the status line for screen readers stays */
+.workspace.params-collapsed .sidebar { position: absolute; width: 1px; height: 1px; overflow: hidden; border: 0; }
+.scrim { display: none; }
+
+/* ---------------------------------------------------------------- < 1440 px: compact navigation
+   LUNA-OPS 2.0 Phase 5: with six views the inline tabs no longer fit beside the brand and the status area below 1440 px
+   (they already overflowed the bar by 109 px at 1200 px and 51 px at 1280 px with five views), so the compact menu that
+   narrower screens use takes over from 1439 px down. The docked Mission Parameters panel is unchanged (>= 1200 px). */
+@media (max-width: 1439px) {
+  .topbar { gap: var(--sp-3); }
+  .nav-toggle { display: inline-flex; }
+  .tabs { display: none; position: absolute; top: calc(100% + 1px); left: 0; right: 0; height: auto; margin: 0; flex-direction: column;
+    gap: 0; padding: 6px; background: var(--space); border-bottom: 1px solid var(--line); box-shadow: var(--shadow-2); }
+  .tabs[data-open="true"] { display: flex; }
+  .tab { height: 44px; text-align: left; padding: 0 14px; border-radius: var(--r-s); }
+  .tab::after { left: 0; right: auto; top: 8px; bottom: 8px; width: 3px; height: auto; border-radius: 0 2px 2px 0; }
+}
+
+/* ---------------------------------------------------------------- < 1200 px: compact navigation and drawer */
+@media (max-width: 1199px) {
+  .topbar { gap: var(--sp-3); }
+  .nav-toggle { display: inline-flex; }
+  .tabs { display: none; position: absolute; top: calc(100% + 1px); left: 0; right: 0; height: auto; margin: 0; flex-direction: column;
+    gap: 0; padding: 6px; background: var(--space); border-bottom: 1px solid var(--line); box-shadow: var(--shadow-2); }
+  .tabs[data-open="true"] { display: flex; }
+  .tab { height: 44px; text-align: left; padding: 0 14px; border-radius: var(--r-s); }
+  .tab::after { left: 0; right: auto; top: 8px; bottom: 8px; width: 3px; height: auto; border-radius: 0 2px 2px 0; }
+  .utc-clock { display: none; }
+
+  .workspace, .workspace.params-collapsed { grid-template-columns: minmax(0, 1fr); }
+  .sidebar { position: fixed; z-index: 30; top: 0; bottom: 0; left: 0; width: min(380px, 92vw); border-right: 1px solid var(--line);
+    box-shadow: var(--shadow-2); transform: translateX(-100%); transition: transform var(--dur-2) var(--ease); }
+  .workspace.params-open .sidebar { transform: none; }
+  .sidebar-close { display: inline-grid; }
+  .scrim { display: block; position: fixed; inset: 0; z-index: 25; background: rgba(3, 6, 10, 0.62); }
+}
+
+/* ---------------------------------------------------------------- <= 900 px: one document scroll */
+@media (max-width: 900px) {
+  /* U-04 (zoom/small screens): one document scroll instead of two cramped scroll panes; the bar no longer sticks
+     over focused controls */
+  .shell { height: auto; min-height: 100%; }
+  .main { overflow: visible; background-attachment: scroll; }
+  .topbar { position: relative; padding: 0 var(--sp-3); }
+  .brand-sub { display: none; }
+  /* U-04 reflow (1.4.10): status texts stay readable by assistive technology but give their width to the controls */
+  .data-pill .pill-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .data-pill { padding: 6px 8px; }
+}
+@media (max-width: 600px) {
+  /* phone: the bar wraps; status and mode take a second row instead of widening the page (U-04 reflow) */
+  .topbar { flex-wrap: wrap; height: auto; min-height: var(--bar-h); padding-block: 10px; row-gap: 10px; }
+  .brand-text { display: none; }
+  .topbar-right { flex-basis: 100%; margin-left: 0; justify-content: space-between; gap: var(--sp-2); }
+  .mode-switch button { padding: 4px 10px; }
+  .nav-toggle { padding: 0 10px 0 8px; }
+}

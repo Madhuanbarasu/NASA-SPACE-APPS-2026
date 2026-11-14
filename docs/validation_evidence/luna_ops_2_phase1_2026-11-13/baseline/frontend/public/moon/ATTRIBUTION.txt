@@ -1,0 +1,15 @@
+LUNA-OPS 3D Moon globe imagery
+
+lroc_color_2k.jpg  (2048 x 1024, SHA-256 f7130a1822681fa7512d7dcfd40db8c10b9ba4f06777910348698260ed7a2170)
+ldem_3_8bit.jpg    (1024 x 512,  SHA-256 6d93f887e7d8bedfe35ab89ba785e5e3ca12381bd092a5e6abe2c707dda8bb98)
+
+Source: NASA's Scientific Visualization Studio, "CGI Moon Kit", https://svs.gsfc.nasa.gov/4720/
+Credit: NASA's Scientific Visualization Studio. Data: LRO LROC (Wide Angle Camera) and LOLA instrument teams.
+Terms: SVS content is in the public domain unless otherwise noted (https://svs.gsfc.nasa.gov/help/);
+       NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/).
+       NASA is acknowledged as the source; no endorsement is implied.
+Retrieved: 2026-11-11 (UTC).
+
+These images are optimized for aesthetics, not science (SVS). In LUNA-OPS they are imagery and visual relief
+shading only: no elevation, illumination or other scientific value is derived from them. Latitudes beyond 70 deg are
+filled by SVS with a lower-resolution LOLA albedo map.

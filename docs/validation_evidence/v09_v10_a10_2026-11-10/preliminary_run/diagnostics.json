@@ -1,0 +1,1909 @@
+{
+ "V-09": {
+  "inconclusive": 70,
+  "inconclusive_causes": {
+   "window_end_only": 21,
+   "data_edge_or_nodata": 49,
+   "no_terrain": 0
+  },
+  "inconclusive_by_stratum": {
+   "0": 1,
+   "1": 10,
+   "2": 29,
+   "3": 26,
+   "4": 4
+  },
+  "inconclusive_points": [
+   {
+    "lat": -85.96136650755213,
+    "lon": 238.5790803953069,
+    "stratum": 0,
+    "reference": 0.17316,
+    "incomplete_bins": 80,
+    "window_end_bins": 80,
+    "min_horizon_in_incomplete_deg": -2.7508203787089633
+   },
+   {
+    "lat": -85.46373621883555,
+    "lon": 356.1128163024907,
+    "stratum": 1,
+    "reference": 0.39808000000000004,
+    "incomplete_bins": 448,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.2020298060245582
+   },
+   {
+    "lat": -85.58543986004611,
+    "lon": 4.432172512119885,
+    "stratum": 1,
+    "reference": 0.34616,
+    "incomplete_bins": 620,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -3.159167226876334
+   },
+   {
+    "lat": -86.0563312195107,
+    "lon": 50.453817243559875,
+    "stratum": 1,
+    "reference": 0.39628,
+    "incomplete_bins": 226,
+    "window_end_bins": 179,
+    "min_horizon_in_incomplete_deg": -3.4492139426337087
+   },
+   {
+    "lat": -86.13304329081532,
+    "lon": 74.55981639277748,
+    "stratum": 1,
+    "reference": 0.31096,
+    "incomplete_bins": 191,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.8105436578795027
+   },
+   {
+    "lat": -85.66154227515774,
+    "lon": 76.32800695366934,
+    "stratum": 1,
+    "reference": 0.38072000000000006,
+    "incomplete_bins": 82,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.054115706825604
+   },
+   {
+    "lat": -87.10999248444328,
+    "lon": 266.723358999346,
+    "stratum": 1,
+    "reference": 0.38572,
+    "incomplete_bins": 113,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.752821012934257
+   },
+   {
+    "lat": -86.44372303314222,
+    "lon": 92.94913858069162,
+    "stratum": 1,
+    "reference": 0.36592,
+    "incomplete_bins": 491,
+    "window_end_bins": 333,
+    "min_horizon_in_incomplete_deg": -3.6176080490749456
+   },
+   {
+    "lat": -85.79803011176091,
+    "lon": 98.81279834459647,
+    "stratum": 1,
+    "reference": 0.36208,
+    "incomplete_bins": 525,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.012347304904628
+   },
+   {
+    "lat": -85.3912726717135,
+    "lon": 154.27609885346786,
+    "stratum": 1,
+    "reference": 0.38272,
+    "incomplete_bins": 170,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.121069031360409
+   },
+   {
+    "lat": -85.16094011553658,
+    "lon": 201.39053046156252,
+    "stratum": 1,
+    "reference": 0.36576000000000003,
+    "incomplete_bins": 528,
+    "window_end_bins": 120,
+    "min_horizon_in_incomplete_deg": -2.5894115167685583
+   },
+   {
+    "lat": -85.02144068520126,
+    "lon": 343.29966589175046,
+    "stratum": 2,
+    "reference": 0.41644000000000003,
+    "incomplete_bins": 610,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.1730047938058545
+   },
+   {
+    "lat": -85.3592792991563,
+    "lon": 340.3141492378965,
+    "stratum": 2,
+    "reference": 0.48248,
+    "incomplete_bins": 655,
+    "window_end_bins": 20,
+    "min_horizon_in_incomplete_deg": -3.5793570737038802
+   },
+   {
+    "lat": -85.2376884188002,
+    "lon": 336.442144039825,
+    "stratum": 2,
+    "reference": 0.47232,
+    "incomplete_bins": 467,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.7285521896754896
+   },
+   {
+    "lat": -85.62589616769198,
+    "lon": 351.6940431295203,
+    "stratum": 2,
+    "reference": 0.44936000000000004,
+    "incomplete_bins": 720,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -3.7234881059914775
+   },
+   {
+    "lat": -85.79861795828351,
+    "lon": 356.1536306950029,
+    "stratum": 2,
+    "reference": 0.41524000000000005,
+    "incomplete_bins": 775,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -4.266250131226794
+   },
+   {
+    "lat": -85.80686301810407,
+    "lon": 355.143220067029,
+    "stratum": 2,
+    "reference": 0.44836000000000004,
+    "incomplete_bins": 782,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -4.474568431179442
+   },
+   {
+    "lat": -85.81295086418899,
+    "lon": 352.41340467055494,
+    "stratum": 2,
+    "reference": 0.42832000000000003,
+    "incomplete_bins": 89,
+    "window_end_bins": 63,
+    "min_horizon_in_incomplete_deg": -3.4230124543240112
+   },
+   {
+    "lat": -85.86381843465799,
+    "lon": 2.370546385248405,
+    "stratum": 2,
+    "reference": 0.4762,
+    "incomplete_bins": 795,
+    "window_end_bins": 50,
+    "min_horizon_in_incomplete_deg": -4.759233810570428
+   },
+   {
+    "lat": -85.03938079377394,
+    "lon": 38.23355335391509,
+    "stratum": 2,
+    "reference": 0.41916000000000003,
+    "incomplete_bins": 1083,
+    "window_end_bins": 883,
+    "min_horizon_in_incomplete_deg": -5.494348688291549
+   },
+   {
+    "lat": -85.50905301032469,
+    "lon": 37.50321138007714,
+    "stratum": 2,
+    "reference": 0.40836000000000006,
+    "incomplete_bins": 32,
+    "window_end_bins": 32,
+    "min_horizon_in_incomplete_deg": -3.9955862907024797
+   },
+   {
+    "lat": -86.07470044976425,
+    "lon": 43.79545511468041,
+    "stratum": 2,
+    "reference": 0.42024000000000006,
+    "incomplete_bins": 676,
+    "window_end_bins": 439,
+    "min_horizon_in_incomplete_deg": -4.395260240468427
+   },
+   {
+    "lat": -86.12801620170859,
+    "lon": 43.94445297544499,
+    "stratum": 2,
+    "reference": 0.45376000000000005,
+    "incomplete_bins": 1037,
+    "window_end_bins": 760,
+    "min_horizon_in_incomplete_deg": -4.402613146518074
+   },
+   {
+    "lat": -86.43980109022314,
+    "lon": 54.56593779140537,
+    "stratum": 2,
+    "reference": 0.41996000000000006,
+    "incomplete_bins": 71,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.770367936981885
+   },
+   {
+    "lat": -85.9630276281613,
+    "lon": 73.15421956501149,
+    "stratum": 2,
+    "reference": 0.40532,
+    "incomplete_bins": 486,
+    "window_end_bins": 150,
+    "min_horizon_in_incomplete_deg": -2.7923564111594747
+   },
+   {
+    "lat": -85.85052597941116,
+    "lon": 82.17887088007278,
+    "stratum": 2,
+    "reference": 0.42288000000000003,
+    "incomplete_bins": 147,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -0.9367312590640892
+   },
+   {
+    "lat": -86.69081080826592,
+    "lon": 100.38296240815272,
+    "stratum": 2,
+    "reference": 0.42952,
+    "incomplete_bins": 386,
+    "window_end_bins": 187,
+    "min_horizon_in_incomplete_deg": -2.956179700469376
+   },
+   {
+    "lat": -86.62137401792448,
+    "lon": 101.70466118941783,
+    "stratum": 2,
+    "reference": 0.41888000000000003,
+    "incomplete_bins": 129,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.1447602473944594
+   },
+   {
+    "lat": -87.77138100701669,
+    "lon": 144.10164146672997,
+    "stratum": 2,
+    "reference": 0.48064,
+    "incomplete_bins": 194,
+    "window_end_bins": 189,
+    "min_horizon_in_incomplete_deg": -2.9616376938495588
+   },
+   {
+    "lat": -86.82267454218344,
+    "lon": 126.23849596199379,
+    "stratum": 2,
+    "reference": 0.42168000000000005,
+    "incomplete_bins": 815,
+    "window_end_bins": 459,
+    "min_horizon_in_incomplete_deg": -3.1969455116362213
+   },
+   {
+    "lat": -85.35283807007704,
+    "lon": 245.39259711254422,
+    "stratum": 2,
+    "reference": 0.49412000000000006,
+    "incomplete_bins": 695,
+    "window_end_bins": 159,
+    "min_horizon_in_incomplete_deg": -3.532970484786194
+   },
+   {
+    "lat": -87.65860777632057,
+    "lon": 203.47829696784126,
+    "stratum": 2,
+    "reference": 0.43408,
+    "incomplete_bins": 10,
+    "window_end_bins": 10,
+    "min_horizon_in_incomplete_deg": -2.447603458687386
+   },
+   {
+    "lat": -85.35960509008342,
+    "lon": 235.1009972198476,
+    "stratum": 2,
+    "reference": 0.41324000000000005,
+    "incomplete_bins": 1298,
+    "window_end_bins": 756,
+    "min_horizon_in_incomplete_deg": -4.3006223907015215
+   },
+   {
+    "lat": -85.32481544545021,
+    "lon": 234.955364788696,
+    "stratum": 2,
+    "reference": 0.40408000000000005,
+    "incomplete_bins": 1259,
+    "window_end_bins": 708,
+    "min_horizon_in_incomplete_deg": -4.224376977814884
+   },
+   {
+    "lat": -85.89507576265211,
+    "lon": 142.04511609965053,
+    "stratum": 2,
+    "reference": 0.42696000000000006,
+    "incomplete_bins": 279,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.7242296180367058
+   },
+   {
+    "lat": -86.0201926114856,
+    "lon": 155.46649486180627,
+    "stratum": 2,
+    "reference": 0.45112,
+    "incomplete_bins": 180,
+    "window_end_bins": 180,
+    "min_horizon_in_incomplete_deg": -2.5633639217760686
+   },
+   {
+    "lat": -85.04726141397015,
+    "lon": 140.45950219206514,
+    "stratum": 2,
+    "reference": 0.43352,
+    "incomplete_bins": 137,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -0.6487301904767441
+   },
+   {
+    "lat": -85.31425239980133,
+    "lon": 159.30103048671154,
+    "stratum": 2,
+    "reference": 0.44292000000000004,
+    "incomplete_bins": 504,
+    "window_end_bins": 236,
+    "min_horizon_in_incomplete_deg": -2.678268042619173
+   },
+   {
+    "lat": -85.4646079138327,
+    "lon": 175.91171320839965,
+    "stratum": 2,
+    "reference": 0.48324000000000006,
+    "incomplete_bins": 184,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.340607304736852
+   },
+   {
+    "lat": -85.32166054951716,
+    "lon": 191.941670980824,
+    "stratum": 2,
+    "reference": 0.40304,
+    "incomplete_bins": 101,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -0.33479247978401455
+   },
+   {
+    "lat": -85.495662834064,
+    "lon": 340.9206798255485,
+    "stratum": 3,
+    "reference": 0.6105600000000001,
+    "incomplete_bins": 567,
+    "window_end_bins": 563,
+    "min_horizon_in_incomplete_deg": -3.876596700953451
+   },
+   {
+    "lat": -85.95530478061505,
+    "lon": 356.6499918212617,
+    "stratum": 3,
+    "reference": 0.6555200000000001,
+    "incomplete_bins": 525,
+    "window_end_bins": 525,
+    "min_horizon_in_incomplete_deg": -4.363365901143934
+   },
+   {
+    "lat": -85.97518649491766,
+    "lon": 357.1973518198982,
+    "stratum": 3,
+    "reference": 0.63704,
+    "incomplete_bins": 793,
+    "window_end_bins": 793,
+    "min_horizon_in_incomplete_deg": -4.849957284994065
+   },
+   {
+    "lat": -86.03387132853676,
+    "lon": 2.386538785976201,
+    "stratum": 3,
+    "reference": 0.6001200000000001,
+    "incomplete_bins": 850,
+    "window_end_bins": 850,
+    "min_horizon_in_incomplete_deg": -5.095399409525019
+   },
+   {
+    "lat": -85.48638078721554,
+    "lon": 29.547154737555903,
+    "stratum": 3,
+    "reference": 0.67256,
+    "incomplete_bins": 865,
+    "window_end_bins": 846,
+    "min_horizon_in_incomplete_deg": -4.907225766152979
+   },
+   {
+    "lat": -85.01897506873445,
+    "lon": 38.16425306062329,
+    "stratum": 3,
+    "reference": 0.6138800000000001,
+    "incomplete_bins": 898,
+    "window_end_bins": 865,
+    "min_horizon_in_incomplete_deg": -5.523773136571197
+   },
+   {
+    "lat": -85.30147370869575,
+    "lon": 37.0797006905198,
+    "stratum": 3,
+    "reference": 0.7349600000000001,
+    "incomplete_bins": 673,
+    "window_end_bins": 649,
+    "min_horizon_in_incomplete_deg": -4.911617664127652
+   },
+   {
+    "lat": -85.30977433903878,
+    "lon": 37.06557754197402,
+    "stratum": 3,
+    "reference": 0.6262800000000001,
+    "incomplete_bins": 1246,
+    "window_end_bins": 1218,
+    "min_horizon_in_incomplete_deg": -5.505770639256353
+   },
+   {
+    "lat": -85.8128864602357,
+    "lon": 39.460785265829834,
+    "stratum": 3,
+    "reference": 0.60236,
+    "incomplete_bins": 529,
+    "window_end_bins": 529,
+    "min_horizon_in_incomplete_deg": -4.086424827859909
+   },
+   {
+    "lat": -86.01084745016651,
+    "lon": 41.50260609268677,
+    "stratum": 3,
+    "reference": 0.6246400000000001,
+    "incomplete_bins": 563,
+    "window_end_bins": 563,
+    "min_horizon_in_incomplete_deg": -4.455284869183224
+   },
+   {
+    "lat": -86.03640209695173,
+    "lon": 41.94577159132015,
+    "stratum": 3,
+    "reference": 0.66968,
+    "incomplete_bins": 692,
+    "window_end_bins": 672,
+    "min_horizon_in_incomplete_deg": -4.22318148508026
+   },
+   {
+    "lat": -86.06158909190215,
+    "lon": 42.35401511429674,
+    "stratum": 3,
+    "reference": 0.62536,
+    "incomplete_bins": 271,
+    "window_end_bins": 271,
+    "min_horizon_in_incomplete_deg": -4.157442343280059
+   },
+   {
+    "lat": -86.67786123273675,
+    "lon": 49.104522874040434,
+    "stratum": 3,
+    "reference": 0.6508400000000001,
+    "incomplete_bins": 160,
+    "window_end_bins": 152,
+    "min_horizon_in_incomplete_deg": -3.328932600425506
+   },
+   {
+    "lat": -88.6627872058328,
+    "lon": 291.5731406561984,
+    "stratum": 3,
+    "reference": 0.6911600000000001,
+    "incomplete_bins": 320,
+    "window_end_bins": 320,
+    "min_horizon_in_incomplete_deg": -3.564525323748683
+   },
+   {
+    "lat": -89.00827219623285,
+    "lon": 265.25059800233987,
+    "stratum": 3,
+    "reference": 0.7214,
+    "incomplete_bins": 220,
+    "window_end_bins": 220,
+    "min_horizon_in_incomplete_deg": -3.317624544563955
+   },
+   {
+    "lat": -87.99521151464236,
+    "lon": 262.88550371576605,
+    "stratum": 3,
+    "reference": 0.60368,
+    "incomplete_bins": 245,
+    "window_end_bins": 187,
+    "min_horizon_in_incomplete_deg": -2.7510162551154282
+   },
+   {
+    "lat": -89.30317141708437,
+    "lon": 134.19469067156234,
+    "stratum": 3,
+    "reference": 0.68384,
+    "incomplete_bins": 67,
+    "window_end_bins": 67,
+    "min_horizon_in_incomplete_deg": -3.12472822140316
+   },
+   {
+    "lat": -88.80337883395883,
+    "lon": 124.14989537020263,
+    "stratum": 3,
+    "reference": 0.6052000000000001,
+    "incomplete_bins": 7,
+    "window_end_bins": 7,
+    "min_horizon_in_incomplete_deg": -2.9290251685777116
+   },
+   {
+    "lat": -88.84352806831498,
+    "lon": 128.95834067625742,
+    "stratum": 3,
+    "reference": 0.6118800000000001,
+    "incomplete_bins": 2,
+    "window_end_bins": 2,
+    "min_horizon_in_incomplete_deg": -2.867166744864319
+   },
+   {
+    "lat": -85.85386158028663,
+    "lon": 243.64885207266255,
+    "stratum": 3,
+    "reference": 0.67432,
+    "incomplete_bins": 617,
+    "window_end_bins": 617,
+    "min_horizon_in_incomplete_deg": -4.096125524033933
+   },
+   {
+    "lat": -85.82910284265053,
+    "lon": 243.69618320390026,
+    "stratum": 3,
+    "reference": 0.6746000000000001,
+    "incomplete_bins": 370,
+    "window_end_bins": 370,
+    "min_horizon_in_incomplete_deg": -3.9231637815153886
+   },
+   {
+    "lat": -85.79909331859999,
+    "lon": 243.53748879679532,
+    "stratum": 3,
+    "reference": 0.65468,
+    "incomplete_bins": 632,
+    "window_end_bins": 632,
+    "min_horizon_in_incomplete_deg": -4.211228759150862
+   },
+   {
+    "lat": -85.41369253723299,
+    "lon": 245.09803225665513,
+    "stratum": 3,
+    "reference": 0.7526,
+    "incomplete_bins": 217,
+    "window_end_bins": 217,
+    "min_horizon_in_incomplete_deg": -3.7740801665132904
+   },
+   {
+    "lat": -85.65151914451053,
+    "lon": 243.31258438272368,
+    "stratum": 3,
+    "reference": 0.6004400000000001,
+    "incomplete_bins": 299,
+    "window_end_bins": 198,
+    "min_horizon_in_incomplete_deg": -3.6457665297716795
+   },
+   {
+    "lat": -87.9409537073854,
+    "lon": 194.95092182178865,
+    "stratum": 3,
+    "reference": 0.60248,
+    "incomplete_bins": 921,
+    "window_end_bins": 650,
+    "min_horizon_in_incomplete_deg": -3.522643363077353
+   },
+   {
+    "lat": -85.33977035210782,
+    "lon": 162.5031078848336,
+    "stratum": 3,
+    "reference": 0.6284000000000001,
+    "incomplete_bins": 251,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.0441652243450903
+   },
+   {
+    "lat": -85.95518881860293,
+    "lon": 356.6220229278184,
+    "stratum": 4,
+    "reference": 0.8126800000000001,
+    "incomplete_bins": 805,
+    "window_end_bins": 805,
+    "min_horizon_in_incomplete_deg": -4.702454200893998
+   },
+   {
+    "lat": -86.00114198849109,
+    "lon": 2.055017377349379,
+    "stratum": 4,
+    "reference": 0.8189200000000001,
+    "incomplete_bins": 709,
+    "window_end_bins": 709,
+    "min_horizon_in_incomplete_deg": -5.113099378332665
+   },
+   {
+    "lat": -85.30028245695007,
+    "lon": 37.09893488804027,
+    "stratum": 4,
+    "reference": 0.8314800000000001,
+    "incomplete_bins": 944,
+    "window_end_bins": 921,
+    "min_horizon_in_incomplete_deg": -5.442321521978619
+   },
+   {
+    "lat": -88.66462682251607,
+    "lon": 291.60435503042095,
+    "stratum": 4,
+    "reference": 0.8269200000000001,
+    "incomplete_bins": 545,
+    "window_end_bins": 499,
+    "min_horizon_in_incomplete_deg": -3.704590399999536
+   }
+  ],
+  "large_difference_points": [
+   {
+    "lat": -87.72873025637446,
+    "lon": 301.2462102827791,
+    "stratum": 0,
+    "reference": 0.17092000000000002,
+    "computed_0m": 0.08345395221039204,
+    "reference_3x3": [
+     0.0,
+     0.17204000000000003
+    ],
+    "computed_2m": 0.16255335852019037,
+    "computed_10m": 0.18064619007899516
+   },
+   {
+    "lat": -85.7403619713176,
+    "lon": 109.31829393071096,
+    "stratum": 1,
+    "reference": 0.31628,
+    "computed_0m": 0.12335631225160688,
+    "reference_3x3": [
+     0.0,
+     0.42436
+    ],
+    "computed_2m": 0.33013591089740446,
+    "computed_10m": 0.4223357538884255
+   },
+   {
+    "lat": -87.05974294580761,
+    "lon": 186.23802239820105,
+    "stratum": 1,
+    "reference": 0.25748000000000004,
+    "computed_0m": 0.3116628232177028,
+    "reference_3x3": [
+     0.25748000000000004,
+     0.34844
+    ],
+    "computed_2m": 0.34544428634512536,
+    "computed_10m": 0.34610053481183456
+   },
+   {
+    "lat": -86.44047220542882,
+    "lon": 158.60359495390097,
+    "stratum": 1,
+    "reference": 0.34464,
+    "computed_0m": 0.39900520092242775,
+    "reference_3x3": [
+     0.34464,
+     0.41740000000000005
+    ],
+    "computed_2m": 0.4089163927187086,
+    "computed_10m": 0.41614125901574994
+   },
+   {
+    "lat": -88.19426519295152,
+    "lon": 164.98163936884933,
+    "stratum": 2,
+    "reference": 0.43564,
+    "computed_0m": 0.35155905009567734,
+    "reference_3x3": [
+     0.30968,
+     0.48276
+    ],
+    "computed_2m": 0.4338538344536578,
+    "computed_10m": 0.5105674402629901
+   },
+   {
+    "lat": -85.95309917497106,
+    "lon": 356.59571926030435,
+    "stratum": 3,
+    "reference": 0.758,
+    "computed_0m": 0.5877165006623817,
+    "reference_3x3": [
+     0.44160000000000005,
+     0.8126800000000001
+    ],
+    "computed_2m": null,
+    "computed_10m": null
+   },
+   {
+    "lat": -88.4563015623898,
+    "lon": 292.17642113380225,
+    "stratum": 3,
+    "reference": 0.6652800000000001,
+    "computed_0m": 0.5765602767283254,
+    "reference_3x3": [
+     0.45696000000000003,
+     0.69864
+    ],
+    "computed_2m": null,
+    "computed_10m": null
+   },
+   {
+    "lat": -88.62863155218832,
+    "lon": 291.80908474143155,
+    "stratum": 3,
+    "reference": 0.62556,
+    "computed_0m": 0.5628465237230754,
+    "reference_3x3": [
+     0.30228000000000005,
+     0.63244
+    ],
+    "computed_2m": null,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.75194310358138,
+    "lon": 59.03624346792648,
+    "stratum": 3,
+    "reference": 0.64204,
+    "computed_0m": 0.5911449389136941,
+    "reference_3x3": [
+     0.027440000000000003,
+     0.64204
+    ],
+    "computed_2m": 0.6235955056179775,
+    "computed_10m": 0.6920109415632206
+   },
+   {
+    "lat": -89.84379139996722,
+    "lon": 51.170175095029606,
+    "stratum": 3,
+    "reference": 0.6198,
+    "computed_0m": 0.40158112948334235,
+    "reference_3x3": [
+     0.40608000000000005,
+     0.73196
+    ],
+    "computed_2m": 0.5440851773710809,
+    "computed_10m": 0.7365806388302831
+   },
+   {
+    "lat": -89.01462816144085,
+    "lon": 267.4104981527591,
+    "stratum": 3,
+    "reference": 0.66944,
+    "computed_0m": 0.5908321475884402,
+    "reference_3x3": [
+     0.0,
+     0.7040400000000001
+    ],
+    "computed_2m": null,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.90313593764658,
+    "lon": 214.17698877379289,
+    "stratum": 3,
+    "reference": 0.6223200000000001,
+    "computed_0m": 0.7243940434718611,
+    "reference_3x3": [
+     0.27440000000000003,
+     0.65136
+    ],
+    "computed_2m": 0.7398066826946667,
+    "computed_10m": 0.7694605269613856
+   },
+   {
+    "lat": -89.87172921715288,
+    "lon": 211.11533231474183,
+    "stratum": 3,
+    "reference": 0.6510800000000001,
+    "computed_0m": 0.5589519650655022,
+    "reference_3x3": [
+     0.41496000000000005,
+     0.7548800000000001
+    ],
+    "computed_2m": 0.7246209705117511,
+    "computed_10m": 0.7911351258525097
+   },
+   {
+    "lat": -89.83582388646523,
+    "lon": 207.64597536373867,
+    "stratum": 3,
+    "reference": 0.6818000000000001,
+    "computed_0m": 0.4155892743241254,
+    "reference_3x3": [
+     0.39572,
+     0.76424
+    ],
+    "computed_2m": 0.5783818262106865,
+    "computed_10m": 0.7812545998724302
+   },
+   {
+    "lat": -89.75363769060694,
+    "lon": 201.92958775017533,
+    "stratum": 3,
+    "reference": 0.6677200000000001,
+    "computed_0m": 0.5244222560227663,
+    "reference_3x3": [
+     0.43788000000000005,
+     0.6677200000000001
+    ],
+    "computed_2m": 0.5774189195819636,
+    "computed_10m": 0.7930609391099553
+   },
+   {
+    "lat": -89.70028231164743,
+    "lon": 198.6741782448756,
+    "stratum": 3,
+    "reference": 0.6674000000000001,
+    "computed_0m": 0.6115683725038026,
+    "reference_3x3": [
+     0.34984000000000004,
+     0.7108800000000001
+    ],
+    "computed_2m": 0.6825229380305187,
+    "computed_10m": 0.7858115401599529
+   },
+   {
+    "lat": -89.27642504250564,
+    "lon": 246.55453512396335,
+    "stratum": 3,
+    "reference": 0.6024,
+    "computed_0m": 0.5061760953829547,
+    "reference_3x3": [
+     0.11196,
+     0.7467600000000001
+    ],
+    "computed_2m": 0.7223639664393308,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.29900390547873,
+    "lon": 128.69769393041545,
+    "stratum": 3,
+    "reference": 0.69384,
+    "computed_0m": 0.5922611746234238,
+    "reference_3x3": [
+     0.26940000000000003,
+     0.69384
+    ],
+    "computed_2m": 0.6960588293018007,
+    "computed_10m": 0.73358765516903
+   },
+   {
+    "lat": -89.29834520367558,
+    "lon": 129.27803865242868,
+    "stratum": 3,
+    "reference": 0.71708,
+    "computed_0m": 0.5813257445660174,
+    "reference_3x3": [
+     0.0,
+     0.71708
+    ],
+    "computed_2m": 0.6941023502281537,
+    "computed_10m": 0.7354153378146313
+   },
+   {
+    "lat": -88.84130290329496,
+    "lon": 127.99511840288584,
+    "stratum": 3,
+    "reference": 0.6520800000000001,
+    "computed_0m": 0.5472498896030616,
+    "reference_3x3": [
+     0.41884000000000005,
+     0.6520800000000001
+    ],
+    "computed_2m": 0.6581436141504342,
+    "computed_10m": 0.6856692507727785
+   },
+   {
+    "lat": -87.23762967297388,
+    "lon": 127.31715920223931,
+    "stratum": 3,
+    "reference": 0.61292,
+    "computed_0m": 0.539522103920318,
+    "reference_3x3": [
+     0.45860000000000006,
+     0.61612
+    ],
+    "computed_2m": 0.6397502575928561,
+    "computed_10m": null
+   },
+   {
+    "lat": -87.94861034402372,
+    "lon": 147.6050946698585,
+    "stratum": 3,
+    "reference": 0.6290800000000001,
+    "computed_0m": 0.5776029144791718,
+    "reference_3x3": [
+     0.33384,
+     0.6290800000000001
+    ],
+    "computed_2m": 0.6465028703203964,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.78613414307921,
+    "lon": 204.31234142956515,
+    "stratum": 4,
+    "reference": 0.8021600000000001,
+    "computed_0m": 0.7360961189343016,
+    "reference_3x3": [
+     0.48756000000000005,
+     0.8545600000000001
+    ],
+    "computed_2m": 0.8451376281831117,
+    "computed_10m": 0.9050708993670575
+   },
+   {
+    "lat": -89.7843294170829,
+    "lon": 204.09592091666732,
+    "stratum": 4,
+    "reference": 0.8545600000000001,
+    "computed_0m": 0.6491585300034346,
+    "reference_3x3": [
+     0.43176000000000003,
+     0.8545600000000001
+    ],
+    "computed_2m": 0.8696825474706835,
+    "computed_10m": 0.9057210146705265
+   },
+   {
+    "lat": -89.78071096223955,
+    "lon": 203.67378158085742,
+    "stratum": 4,
+    "reference": 0.8519200000000001,
+    "computed_0m": 0.6625104263775085,
+    "reference_3x3": [
+     0.06256,
+     0.8519200000000001
+    ],
+    "computed_2m": 0.8422243756439821,
+    "computed_10m": 0.9059295422206958
+   },
+   {
+    "lat": -89.7788973807371,
+    "lon": 203.46789889234364,
+    "stratum": 4,
+    "reference": 0.8002400000000001,
+    "computed_0m": 0.6226816642951769,
+    "reference_3x3": [
+     0.06256,
+     0.8519200000000001
+    ],
+    "computed_2m": 0.8300929787547225,
+    "computed_10m": 0.9056596830381237
+   },
+   {
+    "lat": -89.76642887145574,
+    "lon": 203.19859051364818,
+    "stratum": 4,
+    "reference": 0.8163600000000001,
+    "computed_0m": 0.5628097247436338,
+    "reference_3x3": [
+     0.39664000000000005,
+     0.8163600000000001
+    ],
+    "computed_2m": 0.7714292723615132,
+    "computed_10m": 0.8723198076640007
+   },
+   {
+    "lat": -89.68961700046997,
+    "lon": 197.6263927096844,
+    "stratum": 4,
+    "reference": 0.8006000000000001,
+    "computed_0m": 0.7078529022128452,
+    "reference_3x3": [
+     0.44600000000000006,
+     0.8440000000000001
+    ],
+    "computed_2m": 0.8381580884156813,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.68773066257555,
+    "lon": 197.51645789844378,
+    "stratum": 4,
+    "reference": 0.8440000000000001,
+    "computed_0m": 0.7740665325548305,
+    "reference_3x3": [
+     0.44600000000000006,
+     0.8706
+    ],
+    "computed_2m": 0.883678425984986,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.6864294629847,
+    "lon": 197.06285717346137,
+    "stratum": 4,
+    "reference": 0.8706,
+    "computed_0m": 0.606993032726559,
+    "reference_3x3": [
+     0.38876000000000005,
+     0.8706
+    ],
+    "computed_2m": 0.8237696874540013,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.49118608510662,
+    "lon": 221.53177074108285,
+    "stratum": 4,
+    "reference": 0.8012800000000001,
+    "computed_0m": 0.4991413571463618,
+    "reference_3x3": [
+     0.62412,
+     0.8012800000000001
+    ],
+    "computed_2m": 0.856318384770129,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.47351115730709,
+    "lon": 222.71547554199213,
+    "stratum": 4,
+    "reference": 0.86304,
+    "computed_0m": 0.49351724645503164,
+    "reference_3x3": [
+     0.32244,
+     0.8844400000000001
+    ],
+    "computed_2m": 0.9073463029291987,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.47485136585945,
+    "lon": 222.55686188749718,
+    "stratum": 4,
+    "reference": 0.8844400000000001,
+    "computed_0m": 0.4551727098768461,
+    "reference_3x3": [
+     0.39768000000000003,
+     0.8844400000000001
+    ],
+    "computed_2m": 0.8904371718757667,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.46242899365296,
+    "lon": 223.06103965526657,
+    "stratum": 4,
+    "reference": 0.83128,
+    "computed_0m": 0.44480153083754476,
+    "reference_3x3": [
+     0.38316000000000006,
+     0.83128
+    ],
+    "computed_2m": 0.8527120847848486,
+    "computed_10m": null
+   },
+   {
+    "lat": -89.45114258547964,
+    "lon": 222.80862860002117,
+    "stratum": 4,
+    "reference": 0.8642000000000001,
+    "computed_0m": 0.4725970266424611,
+    "reference_3x3": [
+     0.0,
+     0.8642000000000001
+    ],
+    "computed_2m": 0.9030653549874883,
+    "computed_10m": null
+   },
+   {
+    "lat": -88.80890383374961,
+    "lon": 123.75606125343396,
+    "stratum": 4,
+    "reference": 0.8595600000000001,
+    "computed_0m": 0.6565919238506452,
+    "reference_3x3": [
+     0.17020000000000002,
+     0.8595600000000001
+    ],
+    "computed_2m": null,
+    "computed_10m": null
+   }
+  ]
+ },
+ "V-10": {
+  "inconclusive": 77,
+  "inconclusive_causes": {
+   "window_end_only": 11,
+   "data_edge_or_nodata": 66,
+   "no_terrain": 0
+  },
+  "inconclusive_by_stratum": {
+   "0": 8,
+   "1": 10,
+   "2": 5,
+   "3": 17,
+   "4": 37
+  },
+  "inconclusive_points": [
+   {
+    "lat": -85.53199990278992,
+    "lon": 33.2434149818208,
+    "stratum": 0,
+    "reference": 0.0,
+    "incomplete_bins": 884,
+    "window_end_bins": 860,
+    "min_horizon_in_incomplete_deg": -5.047781963455353
+   },
+   {
+    "lat": -86.34259252733617,
+    "lon": 2.3401492123729057,
+    "stratum": 0,
+    "reference": 0.0,
+    "incomplete_bins": 222,
+    "window_end_bins": 222,
+    "min_horizon_in_incomplete_deg": -3.5284226726992385
+   },
+   {
+    "lat": -88.89289563719187,
+    "lon": 252.79563615647976,
+    "stratum": 0,
+    "reference": 0.0,
+    "incomplete_bins": 150,
+    "window_end_bins": 150,
+    "min_horizon_in_incomplete_deg": -3.0333030253971667
+   },
+   {
+    "lat": -85.99077270899404,
+    "lon": 107.38016052763275,
+    "stratum": 0,
+    "reference": 0.0,
+    "incomplete_bins": 140,
+    "window_end_bins": 84,
+    "min_horizon_in_incomplete_deg": -2.2083856483482984
+   },
+   {
+    "lat": -86.07320197623964,
+    "lon": 108.88213521807268,
+    "stratum": 0,
+    "reference": 0.19036000000000003,
+    "incomplete_bins": 33,
+    "window_end_bins": 9,
+    "min_horizon_in_incomplete_deg": -2.039509821999343
+   },
+   {
+    "lat": -87.89104075527663,
+    "lon": 178.30662456733327,
+    "stratum": 0,
+    "reference": 0.0,
+    "incomplete_bins": 200,
+    "window_end_bins": 33,
+    "min_horizon_in_incomplete_deg": -2.6261117293767717
+   },
+   {
+    "lat": -85.52483136849985,
+    "lon": 191.74195174512073,
+    "stratum": 0,
+    "reference": 0.08416000000000001,
+    "incomplete_bins": 353,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -0.7670917747971652
+   },
+   {
+    "lat": -85.10924199389318,
+    "lon": 198.20052167635282,
+    "stratum": 0,
+    "reference": 0.0,
+    "incomplete_bins": 359,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.146031319222337
+   },
+   {
+    "lat": -85.27207945830615,
+    "lon": 19.86742381088762,
+    "stratum": 1,
+    "reference": 0.30472000000000005,
+    "incomplete_bins": 77,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.756255076788873
+   },
+   {
+    "lat": -86.00148803059268,
+    "lon": 359.3623043247646,
+    "stratum": 1,
+    "reference": 0.322,
+    "incomplete_bins": 823,
+    "window_end_bins": 823,
+    "min_horizon_in_incomplete_deg": -4.611144401049855
+   },
+   {
+    "lat": -86.71334304824707,
+    "lon": 101.26259177934097,
+    "stratum": 1,
+    "reference": 0.34800000000000003,
+    "incomplete_bins": 458,
+    "window_end_bins": 214,
+    "min_horizon_in_incomplete_deg": -2.917025148782161
+   },
+   {
+    "lat": -86.62684280471336,
+    "lon": 101.58668969356467,
+    "stratum": 1,
+    "reference": 0.342,
+    "incomplete_bins": 244,
+    "window_end_bins": 98,
+    "min_horizon_in_incomplete_deg": -2.5514935162115404
+   },
+   {
+    "lat": -86.57154119707971,
+    "lon": 120.4932001517596,
+    "stratum": 1,
+    "reference": 0.26520000000000005,
+    "incomplete_bins": 82,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.4202114275671665
+   },
+   {
+    "lat": -85.15554411294256,
+    "lon": 239.57773744312968,
+    "stratum": 1,
+    "reference": 0.35328000000000004,
+    "incomplete_bins": 475,
+    "window_end_bins": 23,
+    "min_horizon_in_incomplete_deg": -4.541955576995293
+   },
+   {
+    "lat": -85.0168782211472,
+    "lon": 238.93096346889274,
+    "stratum": 1,
+    "reference": 0.22860000000000003,
+    "incomplete_bins": 604,
+    "window_end_bins": 19,
+    "min_horizon_in_incomplete_deg": -4.184883313135402
+   },
+   {
+    "lat": -87.19107500577417,
+    "lon": 200.55368377295773,
+    "stratum": 1,
+    "reference": 0.38492000000000004,
+    "incomplete_bins": 29,
+    "window_end_bins": 29,
+    "min_horizon_in_incomplete_deg": -2.4186000378157817
+   },
+   {
+    "lat": -85.1059394012937,
+    "lon": 200.34605240645803,
+    "stratum": 1,
+    "reference": 0.30764,
+    "incomplete_bins": 576,
+    "window_end_bins": 153,
+    "min_horizon_in_incomplete_deg": -2.9766970422461796
+   },
+   {
+    "lat": -85.25003649525513,
+    "lon": 189.574086189067,
+    "stratum": 1,
+    "reference": 0.21964000000000003,
+    "incomplete_bins": 168,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -0.4739240813113154
+   },
+   {
+    "lat": -85.54017075971711,
+    "lon": 26.763895424172105,
+    "stratum": 2,
+    "reference": 0.51632,
+    "incomplete_bins": 692,
+    "window_end_bins": 574,
+    "min_horizon_in_incomplete_deg": -4.839950887195502
+   },
+   {
+    "lat": -86.77604307758126,
+    "lon": 336.05357376105735,
+    "stratum": 2,
+    "reference": 0.43036,
+    "incomplete_bins": 222,
+    "window_end_bins": 222,
+    "min_horizon_in_incomplete_deg": -3.4059909036186866
+   },
+   {
+    "lat": -88.19472475222176,
+    "lon": 298.1519027544814,
+    "stratum": 2,
+    "reference": 0.5280400000000001,
+    "incomplete_bins": 1,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.4016493923003095
+   },
+   {
+    "lat": -87.90975030863677,
+    "lon": 276.1126148491049,
+    "stratum": 2,
+    "reference": 0.58908,
+    "incomplete_bins": 30,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.3705252422151633
+   },
+   {
+    "lat": -87.84730000726746,
+    "lon": 200.75018388979655,
+    "stratum": 2,
+    "reference": 0.41636,
+    "incomplete_bins": 65,
+    "window_end_bins": 65,
+    "min_horizon_in_incomplete_deg": -2.906969108715084
+   },
+   {
+    "lat": -85.04133519841012,
+    "lon": 351.1105225869346,
+    "stratum": 3,
+    "reference": 0.7470000000000001,
+    "incomplete_bins": 257,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.2309157610471058
+   },
+   {
+    "lat": -85.10927713140853,
+    "lon": 341.65296177861507,
+    "stratum": 3,
+    "reference": 0.7335600000000001,
+    "incomplete_bins": 270,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.5568858398685321
+   },
+   {
+    "lat": -85.486302016979,
+    "lon": 10.310459849713398,
+    "stratum": 3,
+    "reference": 0.69832,
+    "incomplete_bins": 57,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -0.7382078476819884
+   },
+   {
+    "lat": -85.52413383009888,
+    "lon": 9.601747975287795,
+    "stratum": 3,
+    "reference": 0.71704,
+    "incomplete_bins": 75,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -0.9737775507242457
+   },
+   {
+    "lat": -85.32152611507475,
+    "lon": 338.72253354543545,
+    "stratum": 3,
+    "reference": 0.7530000000000001,
+    "incomplete_bins": 113,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.34740595574441
+   },
+   {
+    "lat": -85.3852259401465,
+    "lon": 24.494756103741427,
+    "stratum": 3,
+    "reference": 0.6751600000000001,
+    "incomplete_bins": 598,
+    "window_end_bins": 368,
+    "min_horizon_in_incomplete_deg": -4.499120431093388
+   },
+   {
+    "lat": -85.63499984409539,
+    "lon": 17.794615718414995,
+    "stratum": 3,
+    "reference": 0.6290800000000001,
+    "incomplete_bins": 53,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.6898714913966997
+   },
+   {
+    "lat": -85.74723912819725,
+    "lon": 15.35794578597888,
+    "stratum": 3,
+    "reference": 0.6864800000000001,
+    "incomplete_bins": 51,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.3515152968692419
+   },
+   {
+    "lat": -85.84630662557717,
+    "lon": 9.80094845455797,
+    "stratum": 3,
+    "reference": 0.7750400000000001,
+    "incomplete_bins": 95,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.546078773537881
+   },
+   {
+    "lat": -85.74658031118236,
+    "lon": 16.269262824051676,
+    "stratum": 3,
+    "reference": 0.6901200000000001,
+    "incomplete_bins": 68,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.726299526546571
+   },
+   {
+    "lat": -85.88229518827049,
+    "lon": 19.25303134938217,
+    "stratum": 3,
+    "reference": 0.7144400000000001,
+    "incomplete_bins": 130,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.5053752314610613
+   },
+   {
+    "lat": -85.9631544668261,
+    "lon": 16.34835112810903,
+    "stratum": 3,
+    "reference": 0.73184,
+    "incomplete_bins": 75,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.854750817281635
+   },
+   {
+    "lat": -86.052627854653,
+    "lon": 15.355836295670345,
+    "stratum": 3,
+    "reference": 0.7433200000000001,
+    "incomplete_bins": 70,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.7902008265655835
+   },
+   {
+    "lat": -85.82279395443781,
+    "lon": 24.459670707004825,
+    "stratum": 3,
+    "reference": 0.6554000000000001,
+    "incomplete_bins": 608,
+    "window_end_bins": 342,
+    "min_horizon_in_incomplete_deg": -4.079508756958879
+   },
+   {
+    "lat": -86.21745463716346,
+    "lon": 335.4519027480616,
+    "stratum": 3,
+    "reference": 0.67632,
+    "incomplete_bins": 375,
+    "window_end_bins": 375,
+    "min_horizon_in_incomplete_deg": -3.4293757650428005
+   },
+   {
+    "lat": -86.50068024157295,
+    "lon": 329.9638718503607,
+    "stratum": 3,
+    "reference": 0.61924,
+    "incomplete_bins": 26,
+    "window_end_bins": 26,
+    "min_horizon_in_incomplete_deg": -2.6345160857180123
+   },
+   {
+    "lat": -86.62824357539577,
+    "lon": 329.2898904977596,
+    "stratum": 3,
+    "reference": 0.6544000000000001,
+    "incomplete_bins": 84,
+    "window_end_bins": 84,
+    "min_horizon_in_incomplete_deg": -2.917332316170594
+   },
+   {
+    "lat": -85.0021195581451,
+    "lon": 350.0550532784127,
+    "stratum": 4,
+    "reference": 0.81364,
+    "incomplete_bins": 413,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.3521057967009218
+   },
+   {
+    "lat": -85.10181610122622,
+    "lon": 350.9997151802923,
+    "stratum": 4,
+    "reference": 0.84452,
+    "incomplete_bins": 669,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.7457360744838377
+   },
+   {
+    "lat": -85.03036449005363,
+    "lon": 346.57476301135256,
+    "stratum": 4,
+    "reference": 0.8908800000000001,
+    "incomplete_bins": 593,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.9958234974608093
+   },
+   {
+    "lat": -85.09688134331859,
+    "lon": 348.70819479881106,
+    "stratum": 4,
+    "reference": 0.90336,
+    "incomplete_bins": 694,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.1628023232455407
+   },
+   {
+    "lat": -85.16456073646084,
+    "lon": 348.3086527479767,
+    "stratum": 4,
+    "reference": 0.9208000000000001,
+    "incomplete_bins": 697,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.465547388620669
+   },
+   {
+    "lat": -85.05742348314824,
+    "lon": 341.7317767855376,
+    "stratum": 4,
+    "reference": 0.9218000000000001,
+    "incomplete_bins": 598,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.172998107816973
+   },
+   {
+    "lat": -85.09833527102404,
+    "lon": 342.23023128495254,
+    "stratum": 4,
+    "reference": 0.92156,
+    "incomplete_bins": 621,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.313229770530096
+   },
+   {
+    "lat": -85.2711219750535,
+    "lon": 346.0247743785618,
+    "stratum": 4,
+    "reference": 0.9704400000000001,
+    "incomplete_bins": 668,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.967606785671758
+   },
+   {
+    "lat": -85.3066795383752,
+    "lon": 347.33109868717037,
+    "stratum": 4,
+    "reference": 0.98484,
+    "incomplete_bins": 700,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -3.1590688215334537
+   },
+   {
+    "lat": -85.07114326831281,
+    "lon": 337.90619142074445,
+    "stratum": 4,
+    "reference": 0.9508800000000001,
+    "incomplete_bins": 515,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.481621141699981
+   },
+   {
+    "lat": -85.39447037421768,
+    "lon": 352.61101998227946,
+    "stratum": 4,
+    "reference": 0.84272,
+    "incomplete_bins": 198,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.6175574491410152
+   },
+   {
+    "lat": -85.14438406439596,
+    "lon": 338.68606411286663,
+    "stratum": 4,
+    "reference": 0.9583200000000001,
+    "incomplete_bins": 571,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.806382697530009
+   },
+   {
+    "lat": -85.48936901639524,
+    "lon": 350.3456394620146,
+    "stratum": 4,
+    "reference": 0.9668000000000001,
+    "incomplete_bins": 473,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.093248526153432
+   },
+   {
+    "lat": -85.50386123799234,
+    "lon": 351.003790023804,
+    "stratum": 4,
+    "reference": 0.9574400000000001,
+    "incomplete_bins": 447,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.022230611563782
+   },
+   {
+    "lat": -85.59260807588737,
+    "lon": 2.4560498874121293,
+    "stratum": 4,
+    "reference": 0.9764400000000001,
+    "incomplete_bins": 762,
+    "window_end_bins": 40,
+    "min_horizon_in_incomplete_deg": -3.2777803813262274
+   },
+   {
+    "lat": -85.57784767833358,
+    "lon": 353.69659435796825,
+    "stratum": 4,
+    "reference": 0.9572800000000001,
+    "incomplete_bins": 622,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -3.155551157402826
+   },
+   {
+    "lat": -85.2692596125081,
+    "lon": 338.0940728093934,
+    "stratum": 4,
+    "reference": 0.9618800000000001,
+    "incomplete_bins": 314,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.938573358999815
+   },
+   {
+    "lat": -85.4581499942806,
+    "lon": 344.1694045443738,
+    "stratum": 4,
+    "reference": 0.93608,
+    "incomplete_bins": 400,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.88785099772337
+   },
+   {
+    "lat": -85.56698405621202,
+    "lon": 350.3044533833036,
+    "stratum": 4,
+    "reference": 0.98816,
+    "incomplete_bins": 655,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -3.4963765170897547
+   },
+   {
+    "lat": -85.57220425626996,
+    "lon": 350.39673681152715,
+    "stratum": 4,
+    "reference": 0.9886800000000001,
+    "incomplete_bins": 665,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -3.5083529675161627
+   },
+   {
+    "lat": -85.26242102627464,
+    "lon": 336.8328130345983,
+    "stratum": 4,
+    "reference": 0.9633200000000001,
+    "incomplete_bins": 437,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.7835456244380796
+   },
+   {
+    "lat": -85.65780776472278,
+    "lon": 359.62160021678585,
+    "stratum": 4,
+    "reference": 0.8831200000000001,
+    "incomplete_bins": 457,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.6721351501134616
+   },
+   {
+    "lat": -85.677376851422,
+    "lon": 4.94759885898979,
+    "stratum": 4,
+    "reference": 1.0,
+    "incomplete_bins": 456,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.495996662086951
+   },
+   {
+    "lat": -85.27552933494225,
+    "lon": 335.53222738903116,
+    "stratum": 4,
+    "reference": 0.9281600000000001,
+    "incomplete_bins": 310,
+    "window_end_bins": 76,
+    "min_horizon_in_incomplete_deg": -2.8673951499600965
+   },
+   {
+    "lat": -85.70045223473318,
+    "lon": 2.728818193533287,
+    "stratum": 4,
+    "reference": 1.0,
+    "incomplete_bins": 802,
+    "window_end_bins": 50,
+    "min_horizon_in_incomplete_deg": -4.0744267164452905
+   },
+   {
+    "lat": -85.51806400456591,
+    "lon": 343.108240927788,
+    "stratum": 4,
+    "reference": 0.9634400000000001,
+    "incomplete_bins": 369,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.446850828323972
+   },
+   {
+    "lat": -85.50270215016113,
+    "lon": 341.9793647085165,
+    "stratum": 4,
+    "reference": 0.9976,
+    "incomplete_bins": 546,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -3.237823056653779
+   },
+   {
+    "lat": -85.55627722985541,
+    "lon": 343.06506245502464,
+    "stratum": 4,
+    "reference": 0.96552,
+    "incomplete_bins": 387,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.442879659422611
+   },
+   {
+    "lat": -85.83068577983028,
+    "lon": 354.5422741822493,
+    "stratum": 4,
+    "reference": 1.0,
+    "incomplete_bins": 780,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -4.607672214975094
+   },
+   {
+    "lat": -85.84274207374467,
+    "lon": 7.174040548600675,
+    "stratum": 4,
+    "reference": 0.934,
+    "incomplete_bins": 296,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -2.185893115039558
+   },
+   {
+    "lat": -85.87967346278026,
+    "lon": 358.445897907573,
+    "stratum": 4,
+    "reference": 1.0,
+    "incomplete_bins": 786,
+    "window_end_bins": 17,
+    "min_horizon_in_incomplete_deg": -4.669077720416951
+   },
+   {
+    "lat": -85.17107081534677,
+    "lon": 31.571379678805663,
+    "stratum": 4,
+    "reference": 0.9870000000000001,
+    "incomplete_bins": 143,
+    "window_end_bins": 143,
+    "min_horizon_in_incomplete_deg": -4.20232508865586
+   },
+   {
+    "lat": -85.89850013074657,
+    "lon": 0.870353619761084,
+    "stratum": 4,
+    "reference": 1.0,
+    "incomplete_bins": 788,
+    "window_end_bins": 39,
+    "min_horizon_in_incomplete_deg": -4.787081894157481
+   },
+   {
+    "lat": -85.01346715382319,
+    "lon": 34.8086758190169,
+    "stratum": 4,
+    "reference": 1.0,
+    "incomplete_bins": 556,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -3.703107618885079
+   },
+   {
+    "lat": -85.36867584745717,
+    "lon": 29.33976177702355,
+    "stratum": 4,
+    "reference": 0.9059200000000001,
+    "incomplete_bins": 157,
+    "window_end_bins": 37,
+    "min_horizon_in_incomplete_deg": -4.2824668703751785
+   },
+   {
+    "lat": -85.44468792890233,
+    "lon": 27.749851786787808,
+    "stratum": 4,
+    "reference": 0.83908,
+    "incomplete_bins": 16,
+    "window_end_bins": 16,
+    "min_horizon_in_incomplete_deg": -3.8988133136817327
+   },
+   {
+    "lat": -86.07019481218822,
+    "lon": 12.130003619414682,
+    "stratum": 4,
+    "reference": 0.8068400000000001,
+    "incomplete_bins": 99,
+    "window_end_bins": 0,
+    "min_horizon_in_incomplete_deg": -1.8017415077699823
+   }
+  ],
+  "large_difference_points": [
+   {
+    "lat": -86.17303569919281,
+    "lon": 178.94868343437494,
+    "stratum": 0,
+    "reference": 0.16328,
+    "computed_0m": 0.11254967862224621,
+    "reference_3x3": [
+     0.0021200000000000004,
+     0.22112
+    ],
+    "computed_2m": 0.20879740935184732,
+    "computed_10m": 0.22168931848290074
+   },
+   {
+    "lat": -87.09392163678312,
+    "lon": 31.726317325444167,
+    "stratum": 1,
+    "reference": 0.22780000000000003,
+    "computed_0m": 0.1669876355429076,
+    "reference_3x3": [
+     0.09344000000000001,
+     0.42124000000000006
+    ],
+    "computed_2m": 0.26300230606937836,
+    "computed_10m": 0.4424218635003189
+   },
+   {
+    "lat": -87.3425560430044,
+    "lon": 239.76044930209235,
+    "stratum": 1,
+    "reference": 0.24616000000000002,
+    "computed_0m": 0.18226534517442716,
+    "reference_3x3": [
+     0.0,
+     0.29184000000000004
+    ],
+    "computed_2m": 0.2776176340709484,
+    "computed_10m": 0.2917300426868161
+   },
+   {
+    "lat": -87.18590586012459,
+    "lon": 238.3938171122033,
+    "stratum": 1,
+    "reference": 0.22796000000000002,
+    "computed_0m": 0.12009960257102203,
+    "reference_3x3": [
+     0.0,
+     0.31420000000000003
+    ],
+    "computed_2m": 0.30208282223639665,
+    "computed_10m": 0.3143859476963839
+   },
+   {
+    "lat": -85.14604781821845,
+    "lon": 0.5252063276633702,
+    "stratum": 2,
+    "reference": 0.55384,
+    "computed_0m": 0.6098081546538443,
+    "reference_3x3": [
+     0.42600000000000005,
+     0.64092
+    ],
+    "computed_2m": 0.6407070310583386,
+    "computed_10m": 0.6500539718365144
+   },
+   {
+    "lat": -85.74268371583725,
+    "lon": 352.5662969386201,
+    "stratum": 4,
+    "reference": 0.92176,
+    "computed_0m": 0.7871915018890143,
+    "reference_3x3": [
+     0.63812,
+     1.0
+    ],
+    "computed_2m": null,
+    "computed_10m": null
+   }
+  ]
+ }
+}

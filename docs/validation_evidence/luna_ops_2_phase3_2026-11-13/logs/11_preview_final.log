@@ -1,0 +1,52 @@
+[4 s] analysis started
+[5 s] analysis workspace shown
+[38 s] result previews done
+[41 s] comparison started
+[42 s] comparison shown
+{
+ "label": "phase3",
+ "hscroll": {
+  "desktop": false,
+  "tablet": false,
+  "phone": false,
+  "compare-desktop": false,
+  "compare-tablet": false,
+  "compare-phone": false
+ },
+ "nextEvent": {
+  "before": "14 Nov 2026, 00:00 UTC",
+  "after": "20 Nov 2026, 10:30 UTC",
+  "highlighted": "Earthrise (any part)"
+ },
+ "terrain": {
+  "figures": [
+   "Terrain product20mPGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_20MPP_ADJ",
+   "Heights in the window-511 to 1958 mmean 1139 m",
+   "Near the site1943.6 m",
+   "Ground at the site1944.8 m5m terrain, used by the analysis",
+   "Display grid160 × 160, 101 m cells8 km radius, display-averaged",
+   "Cells with data100.0 %no gaps"
+  ],
+  "message": null
+ },
+ "figures": [
+  "100.0%",
+  "0.0%",
+  "0.0%",
+  "1.023"
+ ],
+ "badges": [
+  "Disk visibility | Pending validation | is-pass:V-02apassed is-pass:V-02bpassed is-pass:V-02cpassed is-pass:V-02dpassed is-pass:V-02epassed is-pass:V-06passed is-pass:V-07passed is-pass:V-08passed is-notrun:V-09not run is-notrun:V-10not run is-pass:V-11passed is-pass:V-12passed is-pass:V-13passed",
+  "Events | Pending validation | is-pass:V-02apassed is-pass:V-02bpassed is-pass:V-02cpassed is-pass:V-02dpassed is-pass:V-02epassed is-pass:V-05passed is-pass:V-06passed is-pass:V-07passed is-pass:V-08passed is-notrun:V-09not run is-notrun:V-10not run is-pass:V-11passed is-pass:V-12passed is-pass:V-13passed is-pass:V-14passed",
+  "Horizon | Pending validation | is-pass:V-02apassed is-pass:V-02bpassed is-pass:V-02cpassed is-pass:V-02dpassed is-pass:V-02epassed is-pass:V-06passed is-pass:V-07passed is-pass:V-11passed is-pass:V-12passed",
+  "Power indicator | Pending validation | is-pass:V-02apassed is-pass:V-02bpassed is-pass:V-02cpassed is-pass:V-02dpassed is-pass:V-02epassed is-pass:V-06passed is-pass:V-07passed is-pass:V-08passed is-pass:V-08bpassed is-notrun:V-09not run is-pass:V-11passed is-pass:V-13passed",
+  "Sun and Earth positions | Validated | is-pass:V-01passed is-pass:V-02apassed is-pass:V-02bpassed is-pass:V-02cpassed is-pass:V-02dpassed is-pass:V-02epassed is-pass:V-03passed is-pass:V-04passed"
+ ],
+ "compare": {
+  "cards": 2,
+  "cells": 2,
+  "scatterPoints": 2
+ },
+ "consoleErrors": []
+}
+exit 0

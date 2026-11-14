@@ -1,0 +1,29 @@
+PASS explorer: no site selected at start; local terrain view disabled  "disabled"
+PASS transfer: globe pick at the South Pole viewpoint fills the sidebar (-89.9, 0) through siteCoords  {"lat":"-89.9","lon":"0"}
+PASS transfer: the explorer shows the same site  "89.900° S, 0.000° E"
+PASS coverage: the polar point is covered by the registered levels from the API  "Registered LOLA terrain covers this point: 20m, 80m, 240m."
+PASS coverage: local terrain and analysis enabled for a covered point
+PASS edges: a click west of the prime meridian gives an east longitude in (180, 360) and a southern latitude, consistent in sidebar and explorer  {"fields":{"lat":"-9.577304","lon":"343.667176"},"explorer":"9.577° S, 343.667° E"}
+PASS coverage: a nearside point north of 60 S is refused with the backend's reason  "Not covered by the registered terrain: The registered LOLA products cover 60-90 S only (south-pole-first scope, Q6). Local terrain and analysis are not available here."
+PASS coverage: local terrain and analysis disabled for an unsupported point
+PASS edges: North Pole pick (89.9 N) transfers and is refused with the backend's reason  {"fields":{"lat":"89.9","lon":"0"},"coverage":"Not covered by the registered terrain: The registered LOLA products cover 60-90 S only (south-pole-first scope, Q6). Local terrain and analysis are not available here."}
+PASS edges: west-negative longitude -137.489553 shows as 222.510 E  "89.463° S, 222.510° E"
+PASS edges: longitude 360 shows as 0.000 E  "85.000° S, 0.000° E"
+PASS edges: longitude 359.9999996 shows as 0.000 E (never 360.000)  "85.000° S, 0.000° E"
+PASS edges: latitude -90 (the pole) is accepted  "90.000° S, 45.000° E"
+PASS coverage: the exact South Pole is covered  "Registered LOLA terrain covers this point: 20m, 80m, 240m."
+PASS edges: invalid latitude -91 shows no site
+PASS coverage: Site01 is covered including the 5 m site product  "Registered LOLA terrain covers this point: 5m, 20m, 80m, 240m."
+PASS transfer: typed Site01 -> 'Centre on selection' centres the globe on the same site  "Centre 89.463° S, 222.510° E"
+PASS terrain: local terrain opens for the selected site (8 km window: finest product covering the whole window) and explains the coarser window  {"heading":"Local terrain at 89.463° S, 222.510° E","stats":["20m product: PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_20MPP_ADJ","160 × 160 display grid, 101 m cells, 8 km radius (display-averaged from the source pixels)","Heights -511 to 1958 m, mean 1139 m, relative to the 1737.4 km reference sphere","Near the site (display-averaged): 1943.6 m","100.0 % of the window has data; cells without data are left empty, never filled or interpolated.","Colour from -511 m (dark) to 1958 m (light)."]}
+PASS terrain: no error or no-data message over the 3D view
+PASS terrain: a 4 km window shows the registered 5 m site product
+PASS coverage: a point at 70 S, 100 E is covered by the 240 m product only  "Registered LOLA terrain covers this point: 240m."
+PASS terrain: the local terrain switches to the 240 m product for that point  ["240m product: PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_60S_240MPP_ADJ","160 × 160 display grid, 101 m cells, 8 km radius (display-averaged from the source pixels)","Heights -1534 to 204 m, mean -857 m, relative to the 1737.4 km reference sphere","Near the site (display-averaged): -851.2 m","100.0 % of the window has data; cells without data are left empty, never filled or interpolated.","Colour from -1534 m (dark) to 204 m (light)."]
+PASS analysis: the explorer's 'Analyse this site' opens the result for the same coordinates  "-89.46316°, 222.51045° E; ground 1944.8 m above 1,737.4 km; 14 Nov 2026, 00:00 UTC to 21 Nov 2026, 00:00 UTC"
+PASS analysis: result view has the map, the local 3D terrain (Terrain3D) and the validation labels
+PASS analysis: 'Back to the Moon explorer' returns with the site kept in the sidebar and the explorer  "89.463° S, 222.510° E"
+PASS responsive: at 390 px the explorer stacks under the pane without sideways scrolling  {"scrollW":390,"clientW":390,"stacked":true}
+PASS no page exceptions or console errors (422 answers for refused coordinates are expected API replies)  []
+explorer-live-check: 27/27 checks passed
+exit 0

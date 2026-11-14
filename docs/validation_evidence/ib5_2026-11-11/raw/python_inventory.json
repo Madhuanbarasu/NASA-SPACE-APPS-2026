@@ -1,0 +1,1577 @@
+{
+ "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+ "site_packages": "E:\\LUNA-OPS\\backend\\.venv\\Lib\\site-packages",
+ "direct_requirements": {
+  "spiceypy": "==8.3.0",
+  "numpy": "==2.5.4",
+  "numba": "==0.68.0",
+  "rasterio": "==1.5.2",
+  "pyproj": "==3.8.0",
+  "fastapi": "==0.161.1",
+  "uvicorn": "==0.54.0",
+  "pydantic": "==2.14.1",
+  "pillow": "==13.0.0",
+  "pyshp": "==3.1.6",
+  "pytest": "==9.1.1",
+  "httpx": "==0.28.1"
+ },
+ "missing_direct": [],
+ "pin_mismatch": {},
+ "distributions": [
+  {
+   "name": "affine",
+   "key": "affine",
+   "version": "3.0.1",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "BSD-3-Clause",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "AUTHORS.txt",
+    "LICENSE.txt"
+   ],
+   "license_files_in_record": [
+    "affine-3.0.1.dist-info/licenses/AUTHORS.txt",
+    "affine-3.0.1.dist-info/licenses/LICENSE.txt"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2014, Sean C. Gillies"
+   ],
+   "author": "Sean Gillies <sean.gillies@gmail.com>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Source, https://github.com/rasterio/affine"
+   ],
+   "requires": [
+    "attrs"
+   ],
+   "summary": "Matrices describing affine transformation of the plane",
+   "required_by": [
+    "rasterio"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "annotated-doc",
+   "key": "annotated-doc",
+   "version": "0.0.5",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "annotated_doc-0.0.5.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2025 Sebasti\u00c3\u00a1n Ram\u00c3\u00adrez"
+   ],
+   "author": "=?utf-8?q?Sebasti=C3=A1n_Ram=C3=ADrez?= <tiangolo@gmail.com>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/fastapi/annotated-doc",
+    "Documentation, https://github.com/fastapi/annotated-doc",
+    "Repository, https://github.com/fastapi/annotated-doc",
+    "Issues, https://github.com/fastapi/annotated-doc/issues",
+    "Changelog, https://github.com/fastapi/annotated-doc/release-notes.md"
+   ],
+   "requires": [],
+   "summary": "Document parameters, class attributes, return types, and variables inline, with Annotated.",
+   "required_by": [
+    "fastapi"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "annotated-types",
+   "key": "annotated-types",
+   "version": "0.8.0",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [
+    "License :: OSI Approved :: MIT License"
+   ],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "annotated_types-0.8.0.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2022 the contributors"
+   ],
+   "author": "Adrian Garcia Badaracco <1755071+adriangb@users.noreply.github.com>, Samuel Colvin <s@muelcolvin.com>, Zac Hatfield-Dodds <zac@zhd.dev>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/annotated-types/annotated-types",
+    "Source, https://github.com/annotated-types/annotated-types",
+    "Changelog, https://github.com/annotated-types/annotated-types/releases"
+   ],
+   "requires": [],
+   "summary": "Reusable constraint types to use with typing.Annotated",
+   "required_by": [
+    "pydantic"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "anyio",
+   "key": "anyio",
+   "version": "4.16.0",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "anyio-4.16.0.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2018 Alex Gr\u00c3\u00b6nholm",
+    "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+   ],
+   "author": "Alex Gr\u00f6nholm <alex.gronholm@nextday.fi>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Documentation, https://anyio.readthedocs.io/en/latest/",
+    "Changelog, https://anyio.readthedocs.io/en/stable/versionhistory.html",
+    "Source code, https://github.com/agronholm/anyio",
+    "Issue tracker, https://github.com/agronholm/anyio/issues"
+   ],
+   "requires": [
+    "idna",
+    "typing-extensions"
+   ],
+   "summary": "High-level concurrency and networking framework on top of asyncio or Trio",
+   "required_by": [
+    "httpx",
+    "starlette"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "attrs",
+   "key": "attrs",
+   "version": "26.1.0",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "attrs-26.1.0.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2015 Hynek Schlawack and the attrs contributors"
+   ],
+   "author": "Hynek Schlawack <hs@ox.cx>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Documentation, https://www.attrs.org/",
+    "Changelog, https://www.attrs.org/en/stable/changelog.html",
+    "GitHub, https://github.com/python-attrs/attrs",
+    "Funding, https://github.com/sponsors/hynek",
+    "Tidelift, https://tidelift.com/subscription/pkg/pypi-attrs?utm_source=pypi-attrs&utm_medium=pypi"
+   ],
+   "requires": [],
+   "summary": "Classes Without Boilerplate",
+   "required_by": [
+    "affine",
+    "rasterio"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "certifi",
+   "key": "certifi",
+   "version": "2026.10.23",
+   "direct": false,
+   "pinned": null,
+   "license_field": "MPL-2.0",
+   "license_expression": null,
+   "license_classifiers": [
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+   ],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "certifi-2026.10.23.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [],
+   "author": "Kenneth Reitz",
+   "maintainer": null,
+   "home_page": "https://github.com/certifi/python-certifi",
+   "project_urls": [
+    "Source, https://github.com/certifi/python-certifi"
+   ],
+   "requires": [],
+   "summary": "Python package for providing Mozilla's CA Bundle.",
+   "required_by": [
+    "httpcore",
+    "httpx",
+    "pyproj",
+    "rasterio"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "click",
+   "key": "click",
+   "version": "8.5.1",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "BSD-3-Clause",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE.txt"
+   ],
+   "license_files_in_record": [
+    "click-8.5.1.dist-info/licenses/LICENSE.txt"
+   ],
+   "copyright_lines": [
+    "Copyright 2014 Pallets"
+   ],
+   "author": null,
+   "maintainer": "Pallets <contact@palletsprojects.com>",
+   "home_page": null,
+   "project_urls": [
+    "Changes, https://click.palletsprojects.com/page/changes/",
+    "Chat, https://discord.gg/pallets",
+    "Documentation, https://click.palletsprojects.com/",
+    "Donate, https://palletsprojects.com/donate",
+    "Source, https://github.com/pallets/click/"
+   ],
+   "requires": [],
+   "summary": "Composable command line interface toolkit",
+   "required_by": [
+    "rasterio",
+    "uvicorn"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "colorama",
+   "key": "colorama",
+   "version": "0.4.6",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": null,
+   "license_classifiers": [
+    "License :: OSI Approved :: BSD License"
+   ],
+   "license_file_metadata": [
+    "LICENSE.txt"
+   ],
+   "license_files_in_record": [
+    "colorama-0.4.6.dist-info/licenses/LICENSE.txt"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2010 Jonathan Hartley"
+   ],
+   "author": "Jonathan Hartley <tartley@tartley.com>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/tartley/colorama"
+   ],
+   "requires": [],
+   "summary": "Cross-platform colored terminal text.",
+   "required_by": [
+    "pytest"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "fastapi",
+   "key": "fastapi",
+   "version": "0.161.1",
+   "direct": true,
+   "pinned": "==0.161.1",
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "fastapi-0.161.1.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2018 Sebasti\u00c3\u00a1n Ram\u00c3\u00adrez"
+   ],
+   "author": "Sebasti\u00e1n Ram\u00edrez <tiangolo@gmail.com>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/fastapi/fastapi",
+    "Documentation, https://fastapi.tiangolo.com/",
+    "Repository, https://github.com/fastapi/fastapi",
+    "Issues, https://github.com/fastapi/fastapi/issues",
+    "Changelog, https://fastapi.tiangolo.com/release-notes/"
+   ],
+   "requires": [
+    "annotated-doc",
+    "opentelemetry-api",
+    "pydantic",
+    "starlette",
+    "typing-extensions",
+    "typing-inspection"
+   ],
+   "summary": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+   "required_by": [],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "h11",
+   "key": "h11",
+   "version": "0.16.0",
+   "direct": false,
+   "pinned": null,
+   "license_field": "MIT",
+   "license_expression": null,
+   "license_classifiers": [
+    "License :: OSI Approved :: MIT License"
+   ],
+   "license_file_metadata": [
+    "LICENSE.txt"
+   ],
+   "license_files_in_record": [
+    "h11-0.16.0.dist-info/licenses/LICENSE.txt"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2016 Nathaniel J. Smith <njs@pobox.com> and other contributors"
+   ],
+   "author": "Nathaniel J. Smith",
+   "maintainer": null,
+   "home_page": "https://github.com/python-hyper/h11",
+   "project_urls": [],
+   "requires": [],
+   "summary": "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1",
+   "required_by": [
+    "httpcore",
+    "uvicorn"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "httpcore",
+   "key": "httpcore",
+   "version": "1.0.9",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "BSD-3-Clause",
+   "license_classifiers": [
+    "License :: OSI Approved :: BSD License"
+   ],
+   "license_file_metadata": [
+    "LICENSE.md"
+   ],
+   "license_files_in_record": [
+    "httpcore-1.0.9.dist-info/licenses/LICENSE.md"
+   ],
+   "copyright_lines": [
+    "Copyright \u00c2\u00a9 2020, [Encode OSS Ltd](https://www.encode.io/)."
+   ],
+   "author": "Tom Christie <tom@tomchristie.com>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Documentation, https://www.encode.io/httpcore",
+    "Homepage, https://www.encode.io/httpcore/",
+    "Source, https://github.com/encode/httpcore"
+   ],
+   "requires": [
+    "certifi",
+    "h11"
+   ],
+   "summary": "A minimal low-level HTTP client.",
+   "required_by": [
+    "httpx"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "httpx",
+   "key": "httpx",
+   "version": "0.28.1",
+   "direct": true,
+   "pinned": "==0.28.1",
+   "license_field": "BSD-3-Clause",
+   "license_expression": null,
+   "license_classifiers": [
+    "License :: OSI Approved :: BSD License"
+   ],
+   "license_file_metadata": [],
+   "license_files_in_record": [
+    "httpx-0.28.1.dist-info/licenses/LICENSE.md"
+   ],
+   "copyright_lines": [
+    "Copyright \u00c2\u00a9 2019, [Encode OSS Ltd](https://www.encode.io/)."
+   ],
+   "author": "Tom Christie <tom@tomchristie.com>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Changelog, https://github.com/encode/httpx/blob/master/CHANGELOG.md",
+    "Documentation, https://www.python-httpx.org",
+    "Homepage, https://github.com/encode/httpx",
+    "Source, https://github.com/encode/httpx"
+   ],
+   "requires": [
+    "anyio",
+    "certifi",
+    "httpcore",
+    "idna"
+   ],
+   "summary": "The next generation HTTP client.",
+   "required_by": [],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "idna",
+   "key": "idna",
+   "version": "3.20",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "BSD-3-Clause",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE.md"
+   ],
+   "license_files_in_record": [
+    "idna-3.20.dist-info/licenses/LICENSE.md"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2013-2026, Kim Davies and contributors."
+   ],
+   "author": "Kim Davies <kim+pypi@gumleaf.org>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Changelog, https://github.com/kjd/idna/blob/master/HISTORY.md",
+    "Issue tracker, https://github.com/kjd/idna/issues",
+    "Source, https://github.com/kjd/idna"
+   ],
+   "requires": [],
+   "summary": "Internationalized Domain Names in Applications (IDNA)",
+   "required_by": [
+    "anyio",
+    "httpx"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "iniconfig",
+   "key": "iniconfig",
+   "version": "2.3.1",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "iniconfig-2.3.1.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2010 - 2023 Holger Krekel and others"
+   ],
+   "author": "Ronny Pfannschmidt <opensource@ronnypfannschmidt.de>, Holger Krekel <holger.krekel@gmail.com>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/pytest-dev/iniconfig"
+   ],
+   "requires": [],
+   "summary": "brain-dead simple config-ini parsing",
+   "required_by": [
+    "pytest"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "llvmlite",
+   "key": "llvmlite",
+   "version": "0.50.0",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "BSD-2-Clause AND Apache-2.0 WITH LLVM-exception",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE",
+    "LICENSE.thirdparty"
+   ],
+   "license_files_in_record": [
+    "llvmlite-0.50.0.dist-info/licenses/LICENSE",
+    "llvmlite-0.50.0.dist-info/licenses/LICENSE.thirdparty"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2014, Anaconda Inc.",
+    "copyright notice that is included in or attached to the work",
+    "copyright license to reproduce, prepare Derivative Works of,",
+    "(c) You must retain, in the Source form of any Derivative Works",
+    "Copyright [yyyy] [name of copyright owner]"
+   ],
+   "author": null,
+   "maintainer": null,
+   "home_page": "http://llvmlite.readthedocs.io",
+   "project_urls": [
+    "Source, https://github.com/numba/llvmlite"
+   ],
+   "requires": [],
+   "summary": "lightweight wrapper around basic LLVM functionality",
+   "required_by": [
+    "numba"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "numba",
+   "key": "numba",
+   "version": "0.68.0",
+   "direct": true,
+   "pinned": "==0.68.0",
+   "license_field": "BSD",
+   "license_expression": null,
+   "license_classifiers": [
+    "License :: OSI Approved :: BSD License"
+   ],
+   "license_file_metadata": [
+    "LICENSE",
+    "LICENSES.third-party"
+   ],
+   "license_files_in_record": [
+    "numba-0.68.0.dist-info/licenses/LICENSE",
+    "numba-0.68.0.dist-info/licenses/LICENSES.third-party"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2012, Anaconda, Inc.",
+    "Copyright (c) 2010 ActiveState Software Inc.",
+    "Copyright (C) 2004-2019, NetworkX Developers",
+    "copyright notice, this list of conditions and the following",
+    "Copyright (c) 2015 Mountainstorm",
+    "Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam,",
+    "Copyright (c) Corporation for National Research Initiatives.",
+    "Copyright (c) 1999 by Secret Labs AB",
+    "Copyright (c) 1999 by Fredrik Lundh",
+    "Copyright (c) 2015, Cloudpickle contributors.",
+    "Copyright (c) 2012, Regents of the University of California.",
+    "Copyright (c) 2009 PiCloud, Inc. http://www.picloud.com.",
+    "Copyright (c) 2005-2021, NumPy Developers.",
+    "Copyright Contributors to the pythoncapi_compat project.",
+    "Copyright (c) 2024, NVIDIA CORPORATION."
+   ],
+   "author": null,
+   "maintainer": null,
+   "home_page": "https://numba.pydata.org",
+   "project_urls": [],
+   "requires": [
+    "llvmlite",
+    "numpy"
+   ],
+   "summary": "compiling Python code using LLVM",
+   "required_by": [],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "numpy",
+   "key": "numpy",
+   "version": "2.5.4",
+   "direct": true,
+   "pinned": "==2.5.4",
+   "license_field": null,
+   "license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE.txt",
+    "numpy/_core/include/numpy/libdivide/LICENSE.txt",
+    "numpy/_core/src/common/pythoncapi-compat/COPYING",
+    "numpy/_core/src/highway/LICENSE",
+    "numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+    "numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+    "numpy/_core/src/umath/svml/LICENSE",
+    "numpy/fft/pocketfft/LICENSE.md",
+    "numpy/linalg/lapack_lite/LICENSE.txt",
+    "numpy/ma/LICENSE",
+    "numpy/random/LICENSE.md",
+    "numpy/random/src/distributions/LICENSE.md",
+    "numpy/random/src/mt19937/LICENSE.md",
+    "numpy/random/src/pcg64/LICENSE.md",
+    "numpy/random/src/philox/LICENSE.md",
+    "numpy/random/src/sfc64/LICENSE.md",
+    "numpy/random/src/splitmix64/LICENSE.md"
+   ],
+   "license_files_in_record": [
+    "numpy-2.5.4.dist-info/licenses/LICENSE.txt",
+    "numpy-2.5.4.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+    "numpy-2.5.4.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+    "numpy-2.5.4.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+    "numpy-2.5.4.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+    "numpy-2.5.4.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+    "numpy-2.5.4.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+    "numpy-2.5.4.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+    "numpy-2.5.4.dist-info/licenses/numpy/ma/LICENSE",
+    "numpy-2.5.4.dist-info/licenses/numpy/random/LICENSE.md",
+    "numpy-2.5.4.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+    "numpy-2.5.4.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+    "numpy-2.5.4.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+    "numpy-2.5.4.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+    "numpy-2.5.4.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+    "numpy-2.5.4.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+    "numpy/_core/include/numpy/random/LICENSE.txt",
+    "numpy/ma/LICENSE",
+    "numpy/random/LICENSE.md"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2005-2025, NumPy Developers.",
+    "copyright notice, this list of conditions and the following",
+    "Copyright (c) 2011-2014, The OpenBLAS Project",
+    "Copyright (c) 1992-2013 The University of Tennessee and The University",
+    "Copyright (c) 2000-2013 The University of California Berkeley. All",
+    "Copyright (c) 2006-2013 The University of Colorado Denver.  All rights",
+    "Copyright (C) 2002-2017 Free Software Foundation, Inc.",
+    "Copyright (C) 2009 Free Software Foundation, Inc. <https://fsf.org/>",
+    "Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+    "copyright on the Program, and are irrevocable provided the stated",
+    "copyright holder, and you cure the violation prior to 30 days after",
+    "Copyright (C) <year>  <name of author>",
+    "Copyright (C) 2010 - 2019 ridiculous_fish, <libdivide@ridiculousfish.com>",
+    "Copyright (C) 2016 - 2019 Kim Walisch, <kim.walisch@gmail.com>",
+    "Copyright Contributors to the pythoncapi_compat project.",
+    "copyright notice that is included in or attached to the work",
+    "copyright license to reproduce, prepare Derivative Works of,",
+    "(c) You must retain, in the Source form of any Derivative Works",
+    "Copyright [yyyy] [name of copyright owner]",
+    "Copyright (c) The Highway Project Authors. All rights reserved.",
+    "Copyright (c) 2022, Intel. All rights reserved.",
+    "Copyright (c) 2005-2021, NumPy Developers.",
+    "Copyright (C) 2010-2018 Max-Planck-Society",
+    "Copyright (c) 2005-2017, NumPy Developers.",
+    "Copyright (c) 2009-2019: Jeff Bezanson, Stefan Karpinski, Viral B. Shah,",
+    "Copyright (c) 2003-2005, Jean-Sebastien Roy (js@jeannot.org)",
+    "Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,",
+    "Copyright 2014 Melissa O'Neill <oneill@pcg-random.org>",
+    "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER",
+    "Copyright 2010-2012, D. E. Shaw Research.",
+    "Copyright (c) 2018 Melissa E. O'Neill"
+   ],
+   "author": "Travis E. Oliphant et al.",
+   "maintainer": "NumPy Developers <numpy-discussion@python.org>",
+   "home_page": null,
+   "project_urls": [
+    "homepage, https://numpy.org",
+    "documentation, https://numpy.org/doc/",
+    "source, https://github.com/numpy/numpy",
+    "download, https://pypi.org/project/numpy/#files",
+    "tracker, https://github.com/numpy/numpy/issues",
+    "release notes, https://numpy.org/doc/stable/release"
+   ],
+   "requires": [],
+   "summary": "Fundamental package for array computing in Python",
+   "required_by": [
+    "numba",
+    "rasterio",
+    "spiceypy"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "opentelemetry-api",
+   "key": "opentelemetry-api",
+   "version": "1.45.2",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "Apache-2.0",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "opentelemetry_api-1.45.2.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "copyright notice that is included in or attached to the work",
+    "copyright license to reproduce, prepare Derivative Works of,",
+    "(c) You must retain, in the Source form of any Derivative Works",
+    "Copyright [yyyy] [name of copyright owner]"
+   ],
+   "author": "OpenTelemetry Authors <cncf-opentelemetry-contributors@lists.cncf.io>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-api",
+    "Repository, https://github.com/open-telemetry/opentelemetry-python"
+   ],
+   "requires": [
+    "typing-extensions"
+   ],
+   "summary": "OpenTelemetry Python API",
+   "required_by": [
+    "fastapi"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "packaging",
+   "key": "packaging",
+   "version": "26.3",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "Apache-2.0 OR BSD-2-Clause",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE",
+    "LICENSE.APACHE",
+    "LICENSE.BSD"
+   ],
+   "license_files_in_record": [
+    "packaging-26.3.dist-info/licenses/LICENSE",
+    "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+    "packaging-26.3.dist-info/licenses/LICENSE.BSD"
+   ],
+   "copyright_lines": [
+    "copyright notice that is included in or attached to the work",
+    "copyright license to reproduce, prepare Derivative Works of,",
+    "(c) You must retain, in the Source form of any Derivative Works",
+    "Copyright (c) Donald Stufft and individual contributors."
+   ],
+   "author": "Donald Stufft <donald@stufft.io>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Documentation, https://packaging.pypa.io/",
+    "Source, https://github.com/pypa/packaging"
+   ],
+   "requires": [],
+   "summary": "Core utilities for Python packages",
+   "required_by": [
+    "pytest"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "pillow",
+   "key": "pillow",
+   "version": "13.0.0",
+   "direct": true,
+   "pinned": "==13.0.0",
+   "license_field": null,
+   "license_expression": "MIT-CMU",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "pillow-13.0.0.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright \u00c2\u00a9 1997-2011 by Secret Labs AB",
+    "Copyright \u00c2\u00a9 1995-2011 by Fredrik Lundh and contributors",
+    "Copyright \u00c2\u00a9 2010 by Jeffrey 'Alex' Clark and contributors",
+    "Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.",
+    "Copyright 1996-2002, 2006 by",
+    "Copyright (C) 1989, 1991 Free Software Foundation, Inc.",
+    "copyright notice and disclaimer of warranty; keep intact all the",
+    "Copyright (C) <year>  <name of author>",
+    "Copyright \u00c2\u00a9 2010-2022  Google, Inc.",
+    "Copyright \u00c2\u00a9 2015-2020  Ebrahim Byagowi",
+    "Copyright \u00c2\u00a9 2019,2020  Facebook, Inc.",
+    "Copyright \u00c2\u00a9 2012,2015  Mozilla Foundation",
+    "Copyright \u00c2\u00a9 2011  Codethink Limited",
+    "Copyright \u00c2\u00a9 2008,2010  Nokia Corporation and/or its subsidiary(-ies)",
+    "Copyright \u00c2\u00a9 2009  Keith Stribley",
+    "Copyright \u00c2\u00a9 2011  Martin Hosken and SIL International",
+    "Copyright \u00c2\u00a9 2007  Chris Wilson",
+    "Copyright \u00c2\u00a9 2005,2006,2020,2021,2022,2023  Behdad Esfahbod",
+    "Copyright \u00c2\u00a9 2004,2007,2008,2009,2010,2013,2021,2022,2023  Red Hat, Inc.",
+    "Copyright \u00c2\u00a9 1998-2005  David Turner and Werner Lemberg",
+    "Copyright \u00c2\u00a9 2016  Igalia S.L.",
+    "Copyright \u00c2\u00a9 2022  Matthias Clasen",
+    "Copyright \u00c2\u00a9 2018,2021  Khaled Hosny",
+    "Copyright \u00c2\u00a9 2018,2019,2020  Adobe, Inc",
+    "Copyright \u00c2\u00a9 2013-2015  Alexei Podtelezhnikov",
+    "Copyright (c) 2023 Marti Maria Saguer",
+    "Copyright 2019 Joe Drago. All rights reserved.",
+    "Copyright \u00c2\u00a9 2018-2019, VideoLAN and dav1d authors",
+    "Copyright 2020 Emmanuel Gil Peyrot. All rights reserved.",
+    "copyright notice that is included in or attached to the work",
+    "copyright license to reproduce, prepare Derivative Works of,",
+    "(c) You must retain, in the Source form of any Derivative Works",
+    "Copyright [yyyy] [name of copyright owner]",
+    "Copyright 2011 The LibYuv Project Authors. All rights reserved.",
+    "copyright or license text in that file.",
+    "Copyright (C) 2009-2026 D. R. Commander<br>",
+    "Copyright (C) 2018-2023 Randy <randy408@protonmail.com>",
+    "COPYRIGHT NOTICE, DISCLAIMER, and LICENSE",
+    "Copyright (c) 2000-2002, 2004, 2006-2018 Glenn Randers-Pehrson, are",
+    "Copyright (c) 1998-2000 Glenn Randers-Pehrson, are derived from",
+    "Copyright (c) 1996-1997 Andreas Dilger, are derived from libpng-0.88,",
+    "Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.",
+    "Copyright (c) 2010, Google Inc. All rights reserved.",
+    "Copyright \u00c2\u00a9 1988-1997 Sam Leffler\\",
+    "Copyright \u00c2\u00a9 1991-1997 Silicon Graphics, Inc.",
+    "Copyright (c) 1985, 1986 The Regents of the University of California.",
+    "Copyright (C) The XZ Utils authors and contributors",
+    "(C) 1995-2024 Jean-loup Gailly and Mark Adler"
+   ],
+   "author": "Jeffrey 'Alex' Clark <aclark@aclark.net>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Release notes, https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+    "Changelog, https://github.com/python-pillow/Pillow/releases",
+    "Documentation, https://pillow.readthedocs.io",
+    "Funding, https://tidelift.com/lifter/search/pypi/pillow",
+    "Homepage, https://python-pillow.org",
+    "Mastodon, https://fosstodon.org/@pillow",
+    "Security, https://pillow.readthedocs.io/en/stable/handbook/security.html",
+    "Source, https://github.com/python-pillow/Pillow"
+   ],
+   "requires": [],
+   "summary": "Python Imaging Library (fork)",
+   "required_by": [],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "pip",
+   "key": "pip",
+   "version": "25.2",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "AUTHORS.txt",
+    "LICENSE.txt",
+    "src/pip/_vendor/msgpack/COPYING",
+    "src/pip/_vendor/cachecontrol/LICENSE.txt",
+    "src/pip/_vendor/certifi/LICENSE",
+    "src/pip/_vendor/dependency_groups/LICENSE.txt",
+    "src/pip/_vendor/distlib/LICENSE.txt",
+    "src/pip/_vendor/distro/LICENSE",
+    "src/pip/_vendor/idna/LICENSE.md",
+    "src/pip/_vendor/packaging/LICENSE",
+    "src/pip/_vendor/packaging/LICENSE.APACHE",
+    "src/pip/_vendor/packaging/LICENSE.BSD",
+    "src/pip/_vendor/pkg_resources/LICENSE",
+    "src/pip/_vendor/platformdirs/LICENSE",
+    "src/pip/_vendor/pygments/LICENSE",
+    "src/pip/_vendor/pyproject_hooks/LICENSE",
+    "src/pip/_vendor/requests/LICENSE",
+    "src/pip/_vendor/resolvelib/LICENSE",
+    "src/pip/_vendor/rich/LICENSE",
+    "src/pip/_vendor/tomli/LICENSE",
+    "src/pip/_vendor/tomli/LICENSE-HEADER",
+    "src/pip/_vendor/tomli_w/LICENSE",
+    "src/pip/_vendor/truststore/LICENSE",
+    "src/pip/_vendor/urllib3/LICENSE.txt"
+   ],
+   "license_files_in_record": [
+    "pip-25.2.dist-info/licenses/AUTHORS.txt",
+    "pip-25.2.dist-info/licenses/LICENSE.txt",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/dependency_groups/LICENSE.txt",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/tomli/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/tomli/LICENSE-HEADER",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+    "pip-25.2.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2008-present The pip developers (see AUTHORS.txt file)",
+    "Copyright 2012-2021  Eric Larson",
+    "Copyright (c) 2024-present Stephen Rosen <sirosen0@gmail.com>",
+    "Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam,",
+    "copyright notice that is included in or attached to the work",
+    "copyright license to reproduce, prepare Derivative Works of,",
+    "(c) You must retain, in the Source form of any Derivative Works",
+    "Copyright {yyyy} {name of copyright owner}",
+    "Copyright (c) 2013-2024, Kim Davies and contributors.",
+    "Copyright (C) 2008-2011 INADA Naoki <songofacandy@gmail.com>",
+    "Copyright (c) Donald Stufft and individual contributors.",
+    "Copyright (c) 2010-202x The platformdirs developers",
+    "Copyright (c) 2006-2022 by the respective authors (see AUTHORS file).",
+    "Copyright (c) 2017 Thomas Kluyver",
+    "Copyright (c) 2018, Tzu-ping Chung <uranusjr@gmail.com>",
+    "copyright notice and this permission notice appear in all copies.",
+    "Copyright (c) 2020 Will McGugan",
+    "Copyright (c) 2021 Taneli Hukkinen",
+    "Copyright (c) 2022 Seth Michael Larson",
+    "Copyright (c) 2008-2020 Andrey Petrov and contributors (see CONTRIBUTORS.txt)"
+   ],
+   "author": "The pip developers <distutils-sig@python.org>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://pip.pypa.io/",
+    "Documentation, https://pip.pypa.io",
+    "Source, https://github.com/pypa/pip",
+    "Changelog, https://pip.pypa.io/en/stable/news/"
+   ],
+   "requires": [],
+   "summary": "The PyPA recommended tool for installing Python packages.",
+   "required_by": [],
+   "in_dependency_closure": false
+  },
+  {
+   "name": "pluggy",
+   "key": "pluggy",
+   "version": "1.7.0",
+   "direct": false,
+   "pinned": null,
+   "license_field": "MIT",
+   "license_expression": null,
+   "license_classifiers": [
+    "License :: OSI Approved :: MIT License"
+   ],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "pluggy-1.7.0.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2015 holger krekel (rather uses bitbucket/hpk42)"
+   ],
+   "author": "Holger Krekel",
+   "maintainer": "pytest core team <core@pytest.org>",
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/pytest-dev/pluggy",
+    "Documentation, https://pluggy.readthedocs.io/",
+    "Changelog, https://pluggy.readthedocs.io/en/latest/changelog.html",
+    "Repository, https://github.com/pytest-dev/pluggy",
+    "Issues, https://github.com/pytest-dev/pluggy/issues",
+    "Funding, https://tidelift.com/subscription/pkg/pypi-pluggy"
+   ],
+   "requires": [],
+   "summary": "plugin and hook calling mechanisms for python",
+   "required_by": [
+    "pytest"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "pydantic",
+   "key": "pydantic",
+   "version": "2.14.1",
+   "direct": true,
+   "pinned": "==2.14.1",
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "pydantic-2.14.1.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2017 to present Pydantic Services Inc. and individual contributors."
+   ],
+   "author": "Samuel Colvin <s@muelcolvin.com>, Eric Jolibois <em.jolibois@gmail.com>, Hasan Ramezani <hasan.r67@gmail.com>, Adrian Garcia Badaracco <1755071+adriangb@users.noreply.github.com>, Terrence Dorsey <terry@pydantic.dev>, David Montague <david@pydantic.dev>, Serge Matveenko <lig@countzero.co>, Marcelo Trylesinski <marcelotryle@gmail.com>, Sydney Runkle <sydneymarierunkle@gmail.com>, David Hewitt <mail@davidhewitt.dev>, Alex Hall <alex.mojaki@gmail.com>, Victorien Plot <contact@vctrn.dev>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/pydantic/pydantic",
+    "Documentation, https://pydantic.dev/docs/validation/latest/get-started/",
+    "Funding, https://github.com/sponsors/samuelcolvin",
+    "Source, https://github.com/pydantic/pydantic",
+    "Changelog, https://pydantic.dev/docs/validation/latest/get-started/changelog/"
+   ],
+   "requires": [
+    "annotated-types",
+    "pydantic-core",
+    "typing-extensions",
+    "typing-inspection"
+   ],
+   "summary": "Data validation using Python type hints",
+   "required_by": [
+    "fastapi"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "pydantic_core",
+   "key": "pydantic-core",
+   "version": "2.50.1",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "pydantic_core-2.50.1.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2022 Samuel Colvin"
+   ],
+   "author": "Samuel Colvin <s@muelcolvin.com>, Adrian Garcia Badaracco <1755071+adriangb@users.noreply.github.com>, David Montague <david@pydantic.dev>, David Hewitt <mail@davidhewitt.dev>, Sydney Runkle <sydneymarierunkle@gmail.com>, Victorien Plot <contact@vctrn.dev>",
+   "maintainer": null,
+   "home_page": "https://github.com/pydantic/pydantic",
+   "project_urls": [
+    "Funding, https://github.com/sponsors/samuelcolvin",
+    "Homepage, https://github.com/pydantic",
+    "Source, https://github.com/pydantic/pydantic/tree/main/pydantic-core"
+   ],
+   "requires": [
+    "typing-extensions"
+   ],
+   "summary": "Core functionality for Pydantic validation and serialization",
+   "required_by": [
+    "pydantic"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "Pygments",
+   "key": "pygments",
+   "version": "2.21.0",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "BSD-2-Clause",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "AUTHORS",
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "pygments-2.21.0.dist-info/licenses/AUTHORS",
+    "pygments-2.21.0.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2006-2022 by the respective authors (see AUTHORS file)."
+   ],
+   "author": "Georg Brandl <georg@python.org>",
+   "maintainer": "Matth\u00e4us G. Chajdas",
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://pygments.org",
+    "Documentation, https://pygments.org/docs",
+    "Source, https://github.com/pygments/pygments",
+    "Bug Tracker, https://github.com/pygments/pygments/issues",
+    "Changelog, https://github.com/pygments/pygments/blob/master/CHANGES"
+   ],
+   "requires": [],
+   "summary": "Pygments is a syntax highlighting package written in Python.",
+   "required_by": [
+    "pytest"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "pyparsing",
+   "key": "pyparsing",
+   "version": "3.3.3",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "pyparsing-3.3.3.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2003-2025  Paul McGuire"
+   ],
+   "author": "Paul McGuire <ptmcg.gm+pyparsing@gmail.com>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Documentation, https://pyparsing-docs.readthedocs.io/en/latest/",
+    "Homepage, https://github.com/pyparsing/pyparsing/",
+    "Source, https://github.com/pyparsing/pyparsing.git"
+   ],
+   "requires": [],
+   "summary": "pyparsing - Classes and methods to define and execute parsing grammars",
+   "required_by": [
+    "rasterio"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "pyproj",
+   "key": "pyproj",
+   "version": "3.8.0",
+   "direct": true,
+   "pinned": "==3.8.0",
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE",
+    "LICENSE_proj"
+   ],
+   "license_files_in_record": [
+    "pyproj-3.8.0.dist-info/licenses/LICENSE",
+    "pyproj-3.8.0.dist-info/licenses/LICENSE_proj",
+    "pyproj/proj_dir/share/proj/copyright"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2006-2018, Jeffrey Whitaker.",
+    "Copyright (c) 2019-2024, Open source contributors.",
+    "Copyright (c) 2000, Frank Warmerdam",
+    "Copyright information can be found in source files."
+   ],
+   "author": "Jeff Whitaker <jeffrey.s.whitaker@noaa.gov>",
+   "maintainer": "pyproj contributors",
+   "home_page": "https://github.com/pyproj4/pyproj",
+   "project_urls": [
+    "homepage, https://pyproj4.github.io/pyproj/",
+    "documentation, https://pyproj4.github.io/pyproj/",
+    "repository, https://github.com/pyproj4/pyproj",
+    "changelog, https://pyproj4.github.io/pyproj/stable/history.html"
+   ],
+   "requires": [
+    "certifi"
+   ],
+   "summary": "Python interface to PROJ (cartographic projections and coordinate transformations library)",
+   "required_by": [],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "pyshp",
+   "key": "pyshp",
+   "version": "3.1.6",
+   "direct": true,
+   "pinned": "==3.1.6",
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE.TXT"
+   ],
+   "license_files_in_record": [
+    "pyshp-3.1.6.dist-info/licenses/LICENSE.TXT"
+   ],
+   "copyright_lines": [
+    "Copyright \u00c2\u00a9 2013 Joel Lawhead"
+   ],
+   "author": "Joel Lawhead <jlawhead@geospatialpython.com>",
+   "maintainer": "James Parrott <james@jamesparrott.dev>, Karim Bahgat <karim.bahgat.norway@gmail.com>",
+   "home_page": null,
+   "project_urls": [
+    "Repository, https://github.com/GeospatialPython/pyshp"
+   ],
+   "requires": [],
+   "summary": "Pure Python read/write support for ESRI Shapefile format",
+   "required_by": [],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "pytest",
+   "key": "pytest",
+   "version": "9.1.1",
+   "direct": true,
+   "pinned": "==9.1.1",
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "pytest-9.1.1.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2004 Holger Krekel and others"
+   ],
+   "author": "Brianna Laugher, Bruno Oliveira, Floris Bruynooghe, Freya Bruhin, Holger Krekel, Others (See AUTHORS), Ronny Pfannschmidt",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Changelog, https://docs.pytest.org/en/stable/changelog.html",
+    "Contact, https://docs.pytest.org/en/stable/contact.html",
+    "Funding, https://docs.pytest.org/en/stable/sponsor.html",
+    "Homepage, https://docs.pytest.org/en/latest/",
+    "Source, https://github.com/pytest-dev/pytest",
+    "Tracker, https://github.com/pytest-dev/pytest/issues"
+   ],
+   "requires": [
+    "colorama",
+    "iniconfig",
+    "packaging",
+    "pluggy",
+    "pygments"
+   ],
+   "summary": "pytest: simple powerful testing with Python",
+   "required_by": [],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "rasterio",
+   "key": "rasterio",
+   "version": "1.5.2",
+   "direct": true,
+   "pinned": "==1.5.2",
+   "license_field": null,
+   "license_expression": "BSD-3-Clause",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE.txt",
+    "AUTHORS.txt"
+   ],
+   "license_files_in_record": [
+    "rasterio-1.5.2.dist-info/licenses/AUTHORS.txt",
+    "rasterio-1.5.2.dist-info/licenses/LICENSE.txt",
+    "rasterio/gdal_data/LICENSE.TXT",
+    "rasterio/gdal_data/copyright",
+    "rasterio/proj_data/copyright"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 2013-2021, Mapbox",
+    "Copyright (c) 2002, Industrial Light & Magic, a division of Lucas",
+    "copyright notice, this list of conditions and the following disclaimer",
+    "Copyright (C) 1996 Hughes and Applied Research Corporation",
+    "copyright notice appear in all copies and that both that copyright notice and",
+    "Copyright (c) 1997-2003, Utrecht University",
+    "copyright notice, this list of conditions and the following",
+    "Copyright (c) 1990-2005 Info-ZIP.  All rights reserved.",
+    "Copyright (c) 2009, David F. Rogers",
+    "Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.",
+    "Copyright 2014 PDFium Authors. All rights reserved.",
+    "Copyright (c) 2002-2012, California Institute of Technology.",
+    "Copyright 2014-2015 Esri",
+    "Copyright 2000-2022 Kitware, Inc. and Contributors",
+    "Copyright (c) 2018, Bjorn Harrtell",
+    "copyright notice and this permission notice appear in all copies.",
+    "Copyright (c) 2018, Vladimir Agafonkin",
+    "Copyright 2021 Google Inc. All rights reserved.",
+    "Copyright information can be found in source files."
+   ],
+   "author": "Sean Gillies <sean.gillies@gmail.com>",
+   "maintainer": "Rasterio contributors",
+   "home_page": null,
+   "project_urls": [
+    "Documentation, https://rasterio.readthedocs.io/",
+    "Repository, https://github.com/rasterio/rasterio"
+   ],
+   "requires": [
+    "affine",
+    "attrs",
+    "certifi",
+    "click",
+    "numpy",
+    "pyparsing"
+   ],
+   "summary": "Fast and direct raster I/O for use with NumPy",
+   "required_by": [],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "spiceypy",
+   "key": "spiceypy",
+   "version": "8.3.0",
+   "direct": true,
+   "pinned": "==8.3.0",
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "spiceypy-8.3.0.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) [2015-2024] [Andrew Annex]"
+   ],
+   "author": "\"Andrew M. annex\" <ama6fy@virginia.edu>",
+   "maintainer": "\"Andrew M. annex\" <ama6fy@virginia.edu>",
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/AndrewAnnex/SpiceyPy",
+    "Repository, https://github.com/AndrewAnnex/SpiceyPy",
+    "Source, https://github.com/AndrewAnnex/SpiceyPy",
+    "Conda-Forge, https://anaconda.org/conda-forge/spiceypy",
+    "Documentation, https://spiceypy.readthedocs.io",
+    "Bug Tracker, https://github.com/AndrewAnnex/SpiceyPy/issues",
+    "Changelog, https://github.com/AndrewAnnex/SpiceyPy/blob/main/CHANGELOG.md"
+   ],
+   "requires": [
+    "numpy"
+   ],
+   "summary": "A Python Wrapper for the NAIF CSPICE Toolkit",
+   "required_by": [],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "starlette",
+   "key": "starlette",
+   "version": "1.10.0",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "BSD-3-Clause",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE.md"
+   ],
+   "license_files_in_record": [
+    "starlette-1.10.0.dist-info/licenses/LICENSE.md"
+   ],
+   "copyright_lines": [
+    "Copyright \u00c2\u00a9 2018, [Encode OSS Ltd](https://www.encode.io/)."
+   ],
+   "author": "Tom Christie <tom@tomchristie.com>",
+   "maintainer": "Marcelo Trylesinski <marcelotryle@gmail.com>",
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/Kludex/starlette",
+    "Documentation, https://starlette.dev/",
+    "Changelog, https://starlette.dev/release-notes/",
+    "Funding, https://github.com/sponsors/Kludex",
+    "Source, https://github.com/Kludex/starlette"
+   ],
+   "requires": [
+    "anyio"
+   ],
+   "summary": "The little ASGI library that shines.",
+   "required_by": [
+    "fastapi"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "typing_extensions",
+   "key": "typing-extensions",
+   "version": "4.16.0",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "PSF-2.0",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "typing_extensions-4.16.0.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam,"
+   ],
+   "author": "\"Guido van Rossum, Jukka Lehtosalo, \u0141ukasz Langa, Michael Lee\" <levkivskyi@gmail.com>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Bug Tracker, https://github.com/python/typing_extensions/issues",
+    "Changes, https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+    "Documentation, https://typing-extensions.readthedocs.io/",
+    "Home, https://github.com/python/typing_extensions",
+    "Q & A, https://github.com/python/typing/discussions",
+    "Repository, https://github.com/python/typing_extensions"
+   ],
+   "requires": [],
+   "summary": "Backported and Experimental Type Hints for Python 3.9+",
+   "required_by": [
+    "anyio",
+    "fastapi",
+    "opentelemetry-api",
+    "pydantic",
+    "pydantic-core",
+    "typing-inspection"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "typing-inspection",
+   "key": "typing-inspection",
+   "version": "0.4.5",
+   "direct": false,
+   "pinned": null,
+   "license_field": null,
+   "license_expression": "MIT",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE"
+   ],
+   "license_files_in_record": [
+    "typing_inspection-0.4.5.dist-info/licenses/LICENSE"
+   ],
+   "copyright_lines": [
+    "Copyright (c) Pydantic Services Inc. 2025 to present"
+   ],
+   "author": "Victorien Plot <contact@vctrn.dev>",
+   "maintainer": null,
+   "home_page": null,
+   "project_urls": [
+    "Homepage, https://github.com/pydantic/typing-inspection",
+    "Documentation, https://pydantic.github.io/typing-inspection/dev/",
+    "Source, https://github.com/pydantic/typing-inspection",
+    "Changelog, https://github.com/pydantic/typing-inspection/blob/main/HISTORY.md"
+   ],
+   "requires": [
+    "typing-extensions"
+   ],
+   "summary": "Runtime typing introspection tools",
+   "required_by": [
+    "fastapi",
+    "pydantic"
+   ],
+   "in_dependency_closure": true
+  },
+  {
+   "name": "uvicorn",
+   "key": "uvicorn",
+   "version": "0.54.0",
+   "direct": true,
+   "pinned": "==0.54.0",
+   "license_field": null,
+   "license_expression": "BSD-3-Clause",
+   "license_classifiers": [],
+   "license_file_metadata": [
+    "LICENSE.md"
+   ],
+   "license_files_in_record": [
+    "uvicorn-0.54.0.dist-info/licenses/LICENSE.md"
+   ],
+   "copyright_lines": [
+    "Copyright \u00c2\u00a9 2017-present, [Encode OSS Ltd](https://www.encode.io/)."
+   ],
+   "author": "Tom Christie <tom@tomchristie.com>",
+   "maintainer": "Marcelo Trylesinski <marcelotryle@gmail.com>",
+   "home_page": null,
+   "project_urls": [
+    "Changelog, https://uvicorn.dev/release-notes",
+    "Funding, https://github.com/sponsors/Kludex",
+    "Homepage, https://uvicorn.dev/",
+    "Source, https://github.com/Kludex/uvicorn"
+   ],
+   "requires": [
+    "click",
+    "h11"
+   ],
+   "summary": "The lightning-fast ASGI server.",
+   "required_by": [],
+   "in_dependency_closure": true
+  }
+ ],
+ "vendored_native_libraries": {
+  "llvmlite.libs": [
+   "msvcp140-8f141b4454fa78db34bc1f28c571b4da.dll"
+  ],
+  "numpy.libs": [
+   "libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+   "msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll"
+  ],
+  "pyproj.libs": [
+   "jpeg62-971fedc88cb0e86c3ad978ae1b7646db.dll",
+   "libcurl-f49442d4be7d953952a0509cdd4501fa.dll",
+   "liblzma-3c4c8780fcad6ce56344d2b5594bda5b.dll",
+   "msvcp140-7c26614e1d733892c2deac7e245ce115.dll",
+   "proj_9-7e5618bddacc5af688a84f477cf114c3.dll",
+   "sqlite3-9415ebc42378ab15b741623972c45846.dll",
+   "tiff-69dcdf91c822b00d23e8dbf49655fe78.dll",
+   "zlib1-985e9fefa27bf900be8e4df7dcc97287.dll"
+  ],
+  "rasterio.libs": [
+   "Lerc-bd596e02be0e2a4d97970986d405b306.dll",
+   "freexl-1-f984fed45cb40bcf96e583a5d17e3e9f.dll",
+   "gdal-ca23e679e52f19649323f953f4a92966.dll",
+   "geos-353ca83806e765757ee1ac85230fad94.dll",
+   "geos_c-ee1211e77d58bd95402e455720af8ce9.dll",
+   "geotiff-5e33421f0ae45bc20fe26c869841819c.dll",
+   "gif-1107c2c29ae9bc2dab88f8650eedf346.dll",
+   "hdf5-90d65e8c6734fd05e7f71019aea56e63.dll",
+   "hdf5_hl-0f04f4391d2304f0c3baecb4b64cc3c7.dll",
+   "iconv-2-ebb8d125e8964d978f001ad727bb1f6a.dll",
+   "jpeg62-f01e7c07b88707d3293da417a2270e8d.dll",
+   "json-c-69add94c2356636200f46910429b496e.dll",
+   "libcrypto-3-x64-2afd3870ac1ca9227daaf71022d519dd.dll",
+   "libcurl-59fd99b636208c0efd91cad8b4cf028c.dll",
+   "libexpat-533441caabb6e8e810f3c428aac8662a.dll",
+   "liblzma-493fcad0ab8b3babd9c41dbd94a1afe5.dll",
+   "libpng16-644a70bf72a6c164e16c88d6a0c64f5b.dll",
+   "libpq-95c240938b5ffe9f0191160d951f9302.dll",
+   "libsharpyuv-39f8caaabd4dd845629ed7064c22149b.dll",
+   "libssl-3-x64-cdfaf2036db9847e1470a7adabf3576a.dll",
+   "libwebp-c62a0ecd823a4ac55d020b1e5b4e214d.dll",
+   "libxml2-ee3a45b6842891635a7194ed3bf4439b.dll",
+   "minizip-a17a1f1144c99133fb8ac04c5fc0d727.dll",
+   "msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+   "netcdf-80fff5a18c54bb9f3a649624658cc0ae.dll",
+   "openjp2-c1951c6e297b4dfbc1ecfed46df803af.dll",
+   "pcre2-8-4250f3875b7c8017370f480e5933b922.dll",
+   "proj_9-d142a65602e419d49589809f8c96ed95.dll",
+   "qhull_r-9dfe5950fe3ffbeff1f83f37ef8a3b6a.dll",
+   "spatialite-462100c3ae387a5046878044decbecb9.dll",
+   "sqlite3-a95e23ad82678982e28e9780f07ae1f7.dll",
+   "szip-237b7e7db63858546dc0b6d1d1113e6c.dll",
+   "tiff-ab336932b464eb213b8c0ba892721190.dll",
+   "tinyxml2-b1394948d9bf11d7822da2aabdf5ab40.dll",
+   "zlib1-63e59a7591925180e9af63ff1cf293fb.dll",
+   "zstd-2363c320dd62f9f202293b4b1406aac1.dll"
+  ],
+  "rasterio (in package)": [],
+  "pyproj (in package)": [],
+  "numpy (in package)": [],
+  "numba (in package)": [],
+  "llvmlite (in package)": [
+   "llvmlite/binding/llvmlite.dll"
+  ],
+  "PIL (in package)": [],
+  "spiceypy (in package)": [
+   "spiceypy/utils/cspice.dll"
+  ],
+  "pydantic_core (in package)": []
+ },
+ "bundled_data_dirs": {
+  "rasterio": [
+   "rasterio/gdal_data",
+   "rasterio/proj_data"
+  ],
+  "pyproj": [
+   "pyproj/proj_dir"
+  ]
+ }
+}

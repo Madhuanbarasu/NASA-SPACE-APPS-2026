@@ -1,0 +1,53 @@
+--- before/components/MapView.tsx
++++ after/components/MapView.tsx
+@@ -20,7 +20,7 @@
+ import { S } from "../i18n";
+ import { fmtLatLon } from "../lib/format";
+ import { greatCircleM, niceScale } from "../lib/mapScale";
+-import { siteCoords } from "../lib/moonGeo";
++import { parseSite, siteCoords } from "../lib/moonGeo";
+ import { Icon } from "../ui/Icon";
+ import { StageLegend, type LegendItem } from "../ui/StageLegend";
+ 
+@@ -308,21 +308,27 @@
+     }
+   }, [catalog, selectedId]);
+ 
++  // AUD-08 (pre-Phase 7 audit): the selected site is drawn and named only for coordinates that parseSite accepts (the
++  // backend's and the sidebar's rules: a number, latitude -90 to 90, longitude -360 to 360). Out-of-range values (for
++  // example latitude -95, which projects beyond the pole, or longitude 400) give no marker and no "Selected ..." readout;
++  // the sidebar keeps the typed text and marks it invalid. Number -> String round-trips exactly for finite numbers.
++  const site = lat != null && lon != null ? parseSite(String(lat), String(lon)) : null;
++  const siteLat = site?.lat ?? null, siteLon = site?.lon ?? null;
+   useEffect(() => {
+     siteSrc.current.clear();
+-    if (lat == null || lon == null || !isFinite(lat) || !isFinite(lon) || lat > -60) return;
+-    const xy = toXY(lon, lat);
++    if (siteLat == null || siteLon == null || siteLat > LIMIT_LAT) return;
++    const xy = toXY(siteLon, siteLat);
+     siteSrc.current.addFeature(new Feature(new Point(xy)));
+     const v = mapRef.current?.getView();
+     if (v) v.animate({ center: xy, resolution: Math.min(v.getResolution() ?? 90, 90), duration: 300 });
+-  }, [lat, lon]);
++  }, [siteLat, siteLon]);
+ 
+-  const siteOnMap = lat != null && lon != null && isFinite(lat) && isFinite(lon) && lat <= LIMIT_LAT;
++  const siteOnMap = siteLat != null && siteLon != null && siteLat <= LIMIT_LAT;
+   const resetView = () => mapRef.current?.getView().fit(extentRef.current, { duration: reducedMotion() ? 0 : 300 });
+   const centreOnSite = () => {
+     const v = mapRef.current?.getView();
+     if (!v || !siteOnMap) return;
+-    v.animate({ center: toXY(lon as number, lat as number), resolution: Math.min(v.getResolution() ?? 90, 90), duration: reducedMotion() ? 0 : 300 });
++    v.animate({ center: toXY(siteLon as number, siteLat as number), resolution: Math.min(v.getResolution() ?? 90, 90), duration: reducedMotion() ? 0 : 300 });
+   };
+   const legend: LegendItem[] = [
+     { swatch: "dot", color: "var(--terrain-edge)", text: S.map.legendHillshade },
+@@ -333,7 +339,7 @@
+     ...(candidates.length ? [{ swatch: "ring", color: "var(--candidate)", text: S.stage.candidates } as LegendItem] : []),
+   ];
+   const readout = pointer ? (pointer.inside ? S.globe.pointer(fmtLatLon(pointer.lat, pointer.lon)) : S.map.pointerOutside)
+-    : siteOnMap ? S.globe.selectedReadout(fmtLatLon(lat as number, lon as number)) : null;
++    : siteOnMap ? S.globe.selectedReadout(fmtLatLon(siteLat as number, siteLon as number)) : null;
+ 
+   return (
+     <>

@@ -1,0 +1,32 @@
+{"kind": "blob", "pixel": [1907, 256], "lat": -85.34090634412686, "lon": 285.29564508341673, "nasa_pct": 0.0, "engine_pct": 0.4815269123202983, "outcome": "scored"}
+{"kind": "blob", "pixel": [1912, 248], "lat": -85.32824841621486, "lon": 285.12748769935945, "nasa_pct": 0.0, "engine_pct": 0.3824395270104509, "outcome": "scored"}
+{"kind": "blob", "pixel": [1910, 251], "lat": -85.33293512118512, "lon": 285.19336840714016, "nasa_pct": 0.0, "engine_pct": 0.38626048770914084, "outcome": "scored"}
+{"kind": "blob", "pixel": [1911, 250], "lat": -85.3315458512089, "lon": 285.16358517567284, "nasa_pct": 0.0, "engine_pct": 0.37160222756488887, "outcome": "scored"}
+{"kind": "blob", "pixel": [1907, 253], "lat": -85.33518980277141, "lon": 285.27642220812294, "nasa_pct": 0.0, "engine_pct": 0.39450345910406753, "outcome": "scored"}
+{"kind": "blob", "pixel": [1906, 256], "lat": -85.34038484314166, "lon": 285.3191005631326, "nasa_pct": 0.0, "engine_pct": 0.42640817427996663, "outcome": "scored"}
+{"kind": "blob", "pixel": [1908, 256], "lat": -85.34142706518132, "lon": 285.27218435042175, "nasa_pct": 0.0, "engine_pct": 0.5004599872430204, "outcome": "scored"}
+{"kind": "blob", "pixel": [1904, 255], "lat": -85.33743468747036, "lon": 285.359556248137, "nasa_pct": 0.0, "engine_pct": 0.41632525391295816, "outcome": "scored"}
+{"kind": "beside", "pixel": [1912, 245], "lat": -85.32252736909143, "lon": 285.1085227315505, "nasa_pct": 36.54, "engine_pct": 0.3445304450223247, "outcome": "scored"}
+{"kind": "beside", "pixel": [1901, 254], "lat": -85.33395725302552, "lon": 285.4233721254991, "nasa_pct": 47.42000000000001, "engine_pct": 0.45117388744418824, "outcome": "scored"}
+{"kind": "beside", "pixel": [1906, 249], "lat": -85.32704696448296, "lon": 285.2742584104454, "nasa_pct": 48.660000000000004, "engine_pct": 0.4075425641528875, "outcome": "scored"}
+{"kind": "beside", "pixel": [1904, 250], "lat": -85.32790977106379, "lon": 285.3274376498196, "nasa_pct": 33.652, "engine_pct": 0.29094499779206123, "outcome": "scored"}
+{"kind": "beside", "pixel": [1916, 249], "lat": -85.33221197944215, "lon": 285.04009021903363, "nasa_pct": 13.248000000000001, "engine_pct": 0.43599430842451303, "outcome": "scored"}
+{"kind": "beside", "pixel": [1915, 246], "lat": -85.32597620326558, "lon": 285.04462973713913, "nasa_pct": 21.688000000000002, "engine_pct": 0.3941906677788136, "outcome": "scored"}
+{"kind": "beside", "pixel": [1913, 244], "lat": -85.32113452381158, "lon": 285.0788310883954, "nasa_pct": 36.228, "engine_pct": 0.26681100044158773, "outcome": "scored"}
+{"kind": "beside", "pixel": [1917, 249], "lat": -85.33272419321834, "lon": 285.0166449489347, "nasa_pct": 17.356, "engine_pct": 0.4401464599381777, "outcome": "scored"}
+{
+ "blob": {
+  "n": 8,
+  "mean_diff_pp": 0.41994075364309896,
+  "rmse_pp": 0.4222939386878544,
+  "engine_mean": 0.41994075364309896,
+  "nasa_mean": 0.0
+ },
+ "beside": {
+  "n": 8,
+  "mean_diff_pp": -31.47008320862568,
+  "rmse_pp": 33.82744688696617,
+  "engine_mean": 0.3789167913743192,
+  "nasa_mean": 31.849000000000004
+ }
+}

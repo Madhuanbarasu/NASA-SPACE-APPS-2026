@@ -1,0 +1,30 @@
+{
+ "request_status": 200,
+ "api_direct_stats": {
+  "open_h": 0,
+  "open_share": 0,
+  "windows": 0,
+  "uncertain_windows": 0,
+  "longest_window_h": 0,
+  "gaps_between_windows": 0,
+  "mean_gap_h": null,
+  "longest_gap_h": null,
+  "unknown_h": 0,
+  "starts_open": false,
+  "ends_open": false
+ },
+ "api_terrain_blocked": {
+  "open_h": 49.34903,
+  "open_share": 0.29374,
+  "windows": 1,
+  "uncertain_windows": 0,
+  "longest_window_h": 49.34903,
+  "gaps_between_windows": 0,
+  "mean_gap_h": null,
+  "longest_gap_h": null,
+  "unknown_h": 0,
+  "starts_open": false,
+  "ends_open": true
+ },
+ "ui_hint": "13 Nov 2026, 00:00 UTC | 0 Earth-visibility windows, 0 min in total; longest gap n/a; Earth above 0° but behind terrain for 2 d 1 h. | Earth above the terrain horizon is geometric line of sight. It does not by itself guarantee a usable radio link (antenna, power, frequency, multipath and ground station availability also matter)."
+}

@@ -1,0 +1,133 @@
+{
+  "note": "IN-MEMORY DRY RUN ONLY (validation.common.merge_external) of all post-Phase 5 candidate result files against the official report. backend/validation/report.json was NOT modified.",
+  "now": {
+    "code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-12T15:52:27Z"
+  },
+  "live_report_sha256": "5135efe88e5feb0fd36e0230ecba9f2d2b99322a70e1e69e822e13def69df53f",
+  "combined_merge_all_accepted": true,
+  "combined_rejected_reasons": {},
+  "individual_file_evaluations": {
+    "horizons.json": {
+      "script": "horizons_compare",
+      "owned_tests": [
+        "V-04",
+        "V-05"
+      ],
+      "rejected_reasons": [],
+      "merge_allowed": true,
+      "status_after_merge": {
+        "V-04": "passed",
+        "V-05": "passed"
+      },
+      "status_in_live_report": {
+        "V-04": "passed",
+        "V-05": "passed"
+      }
+    },
+    "v09_v10.json": {
+      "script": "v09_v10_avgvisib",
+      "owned_tests": [
+        "V-09",
+        "V-10"
+      ],
+      "rejected_reasons": [],
+      "merge_allowed": true,
+      "status_after_merge": {
+        "V-09": "not run",
+        "V-10": "not run"
+      },
+      "status_in_live_report": {
+        "V-09": "not run",
+        "V-10": "not run"
+      }
+    },
+    "v11.json": {
+      "script": "v11_psr",
+      "owned_tests": [
+        "V-11"
+      ],
+      "rejected_reasons": [],
+      "merge_allowed": true,
+      "status_after_merge": {
+        "V-11": "passed"
+      },
+      "status_in_live_report": {
+        "V-11": "passed"
+      }
+    },
+    "v12.json": {
+      "script": "v12_lroc",
+      "owned_tests": [
+        "V-12"
+      ],
+      "rejected_reasons": [],
+      "merge_allowed": true,
+      "status_after_merge": {
+        "V-12": "passed"
+      },
+      "status_in_live_report": {
+        "V-12": "passed"
+      }
+    },
+    "v13.json": {
+      "script": "v13_eclipse",
+      "owned_tests": [
+        "V-13"
+      ],
+      "rejected_reasons": [],
+      "merge_allowed": true,
+      "status_after_merge": {
+        "V-13": "passed"
+      },
+      "status_in_live_report": {
+        "V-13": "passed"
+      }
+    },
+    "v14.json": {
+      "script": "v14_month",
+      "owned_tests": [
+        "V-14"
+      ],
+      "rejected_reasons": [],
+      "merge_allowed": true,
+      "status_after_merge": {
+        "V-14": "passed"
+      },
+      "status_in_live_report": {
+        "V-14": "passed"
+      }
+    },
+    "frontend_u04.json": {
+      "script": "frontend_u04",
+      "owned_tests": [
+        "U-04"
+      ],
+      "rejected_reasons": [],
+      "merge_allowed": true,
+      "status_after_merge": {
+        "U-04": "passed"
+      },
+      "status_in_live_report": {
+        "U-04": "passed"
+      }
+    },
+    "frontend_u06.json": {
+      "script": "frontend_u06",
+      "owned_tests": [
+        "U-06"
+      ],
+      "rejected_reasons": [],
+      "merge_allowed": true,
+      "status_after_merge": {
+        "U-06": "passed"
+      },
+      "status_in_live_report": {
+        "U-06": "passed"
+      }
+    }
+  }
+}

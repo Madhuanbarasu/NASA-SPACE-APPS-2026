@@ -1,0 +1,28 @@
+{
+  "paused_at_utc": "2026-11-09T21:50:50Z",
+  "status": "PAUSED",
+  "file1_dem": {
+    "filename": "LDEM_80S_20MPP_ADJ.TIF",
+    "status": "COMPLETED",
+    "expected_bytes": 2696082051,
+    "actual_bytes": 2696082051,
+    "sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+    "is_complete": true
+  },
+  "file2_err": {
+    "filename": "LDEM_80S_20MPP_ADJ_ERR.TIF.part",
+    "status": "PAUSED",
+    "expected_bytes": 3954709201,
+    "actual_bytes": 909115392,
+    "pct_complete": 22.99,
+    "last_full_chunk_index": 6,
+    "last_full_chunk_bytes": 805306368,
+    "bytes_in_current_chunk": 103809024,
+    "resume_byte_offset": 909115392
+  },
+  "combined": {
+    "total_expected_bytes": 6650791252,
+    "total_downloaded_bytes": 3605197443,
+    "combined_pct": 54.21
+  }
+}

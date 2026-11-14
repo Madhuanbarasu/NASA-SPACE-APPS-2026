@@ -1,0 +1,9 @@
+colour map (mean 0-255 in a 7x7 window): feature vs mirror
+  Mare Moscoviense (farside mare)  (+27.3, +147.9)  138.4  vs mirror (+27.3, -147.9)  230.5  -> darker: OK
+  Tsiolkovskiy crater floor        (-20.4, +129.1)  169.3  vs mirror (-20.4, -129.1)  198.0  -> darker: OK
+  Mare Crisium                     (+17.0, +59.1)  134.4  vs mirror (-17.0, +59.1)  175.8  -> darker: OK
+  Mare Imbrium                     (+32.8, -15.6)  137.4  vs mirror (-32.8, -15.6)  188.2  -> darker: OK
+  Mare Orientale (inner)           (-19.9, -92.8)  150.3  vs mirror (-19.9, +92.8)  179.1  -> darker: OK
+relief map (8-bit, brighter = higher is expected): South Pole-Aitken basin floor vs farside highlands
+  SPA (-53, -169)   40.0  vs farside highlands (+5, -160)  221.5  -> lower: OK
+ORIENTATION OK

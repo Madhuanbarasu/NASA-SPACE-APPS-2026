@@ -1,0 +1,7 @@
+# 2026-11-11T08:27:58Z
+$ npm run typecheck
+
+> luna-ops-frontend@0.1.0 typecheck
+> tsc --noEmit -p .
+
+exit=0

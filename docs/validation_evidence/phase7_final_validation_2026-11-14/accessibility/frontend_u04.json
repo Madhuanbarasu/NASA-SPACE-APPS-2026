@@ -1,0 +1,290 @@
+{
+  "tests": {
+    "U-04": {
+      "status": "passed",
+      "detail": "Scoped U-04 (criteria and scope of D4, approved 2026-11-11) re-evaluated in Phase 7 (2026-11-14, npm run audit:a11y extended with the Landing and Communication views): 0 automated problems in 12 views; every Tab walk cycled (no trap); 13/13 keyboard and announcement functional checks passed. Four findings of the first Phase 7 audit were fixed first (text-spacing overflow of the figure cards and their label badges, an invisible chart label counted as text, a clipped focus ring in the comparison matrix, a long label chip at 320 px). Tab-stop counts are re-registered for the LUNA-OPS 2.0 views. Scope: Chrome headless only; no real screen-reader (assistive-technology) user session; zoom emulated through the viewport; speech input not tested. Not a claim of unrestricted WCAG 2.2 AA conformance"
+    }
+  },
+  "decision": "D4 (criteria and scope), Phase 7 re-evaluation",
+  "criterion": "WCAG 2.2 Level A and AA (requirement C02), scoped: Chrome/Chromium only, no real screen-reader user session",
+  "result": {
+    "views": {
+      "site-welcome": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 39,
+        "tabWalkCycled": true
+      },
+      "site-result-technical": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 71,
+        "tabWalkCycled": true
+      },
+      "site-result-public": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": null,
+        "tabWalkCycled": null
+      },
+      "compare-matrix": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 81,
+        "tabWalkCycled": true
+      },
+      "data": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 35,
+        "tabWalkCycled": true
+      },
+      "guide": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 34,
+        "tabWalkCycled": true
+      },
+      "site-explorer-globe": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 58,
+        "tabWalkCycled": true
+      },
+      "site-explorer-terrain": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 51,
+        "tabWalkCycled": true
+      },
+      "mission": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 66,
+        "tabWalkCycled": true
+      },
+      "mission-empty": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 36,
+        "tabWalkCycled": true
+      },
+      "landing": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 103,
+        "tabWalkCycled": true
+      },
+      "communication": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 58,
+        "tabWalkCycled": true
+      }
+    },
+    "functional": {
+      "skip link moves focus to main": true,
+      "invalid coordinates announced, Analyse disabled": true,
+      "map keyboard pan and zoom": true,
+      "3D terrain keyboard pan, rotate, zoom": true,
+      "globe keyboard rotate and zoom": true,
+      "terrain preview keyboard pan, rotate, zoom": true,
+      "panorama slider moves by arrow key": true,
+      "return to the result": true,
+      "dashboard deep link moves focus": true,
+      "status announcements after analysis and comparison": true,
+      "matrix cell opens its result by keyboard": true,
+      "reduced motion removes transitions": true,
+      "tab list arrow keys": true
+    }
+  },
+  "evidence": {
+    "docs/validation_evidence/phase7_final_validation_2026-11-14/accessibility/u04_audit/audit-phase7.json": "6387d74b430302436d7964fb6f54a0858320c1c9528599b3cb88bcc72612eac4",
+    "docs/validation_evidence/phase7_final_validation_2026-11-14/accessibility/u04_audit/audit-phase7-before-fixes.json": "eaedcbdecd19ca8e278630a4640918bd180f419028313a0e1a57487233bc71e7"
+  },
+  "meta": {
+    "script": "frontend_u04",
+    "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8",
+    "suite_fingerprint": "70606628abed3fdee2704e0b8e2891f648da27266b04791d7690531a517cd546",
+    "kernel_profile": "production",
+    "kernels": [
+      "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+      "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+      "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+      "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+      "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+      "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+      "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    ],
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-14T06:39:03Z"
+  }
+}

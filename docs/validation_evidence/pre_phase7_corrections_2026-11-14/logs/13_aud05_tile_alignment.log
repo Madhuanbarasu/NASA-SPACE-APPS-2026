@@ -1,0 +1,7 @@
+measured column steps (x, brightness change): [(1170, 23.9), (1293, 20.9), (1379, -6.4), (1448, 5.6), (1648, -16.9), (1737, -15.6)]
+measured row steps (y, brightness change):    [(509, 41.6), (542, -7.4), (579, 22.6), (604, -6.8), (688, -8.6), (1067, 31.9)]
+(the steps at about x 1170/1737 and y 509/1067 are the averaging window's own edges)
+zoom 10 (7.104 m/px, tile 1818.75 m = 355.9 screen px): column edges (index, x) [(505, 1114.8), (506, 1470.6), (507, 1826.5)]
+zoom 10: row edges (index, y) [(517, 224.8), (518, 580.7), (519, 936.6), (520, 1292.5)]
+zoom 11 (3.552 m/px, tile 909.38 m = 177.9 screen px): column edges (index, x) [(1010, 1114.8), (1011, 1292.7), (1012, 1470.6), (1013, 1648.6), (1014, 1826.5)]
+zoom 11: row edges (index, y) [(1035, 402.8), (1036, 580.7), (1037, 758.6), (1038, 936.6), (1039, 1114.5)]

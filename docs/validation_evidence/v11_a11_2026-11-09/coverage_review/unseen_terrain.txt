@@ -1,0 +1,26 @@
+# unseen_terrain.py, production kernels, 2026-11-09; relief bound from the PDS LOLA LDEM_4 label (MAXIMUM = 21008 DN x SCALING_FACTOR 0.5 m, OFFSET 1737400 m)
+Sun track: 163047 hours from 2026-01-01, rho_max 0.2717 deg; map scale factor used 1.01531
+e_lim(az): highest Sun-disk top that unseen terrain (beyond the 80 m DEM edge or the 250 km window) no higher than the bound above 1737.4 km could still hide. A lit verdict with the disk top above e_lim cannot be a coverage artefact; below it, it may be.
+robust = share of the Sun's azimuth path where even the lowest Sun is above e_lim; exposed = share where even the highest Sun is at or below e_lim
+bound 10.504 km (LDEM_4 label maximum):
+   -90 to  -88:  34 pts | robust median  45.9% min  39.8% | exposed median   0.0% max   0.0% | at the Sun's highest: e_lim median  -1.15 max  -0.83 deg vs top median  3.49 deg; points with top <= e_lim there: 0
+   -88 to  -85:  47 pts | robust median  46.8% min  42.5% | exposed median   0.0% max  33.8% | at the Sun's highest: e_lim median  -0.74 max   3.43 deg vs top median  4.38 deg; points with top <= e_lim there: 0
+   -85 to  -82:  68 pts | robust median  34.8% min  11.0% | exposed median  34.4% max  58.3% | at the Sun's highest: e_lim median   3.06 max  10.70 deg vs top median  8.01 deg; points with top <= e_lim there: 1
+   -82 to  -80:  43 pts | robust median  17.9% min   1.1% | exposed median  63.3% max  88.6% | at the Sun's highest: e_lim median   8.58 max  39.25 deg vs top median 10.79 deg; points with top <= e_lim there: 20
+   -80 to  -76:   8 pts | robust median   8.2% min   1.9% | exposed median  81.5% max  91.3% | at the Sun's highest: e_lim median  12.97 max  57.04 deg vs top median 13.03 deg; points with top <= e_lim there: 3
+bound 12.000 km (looser):
+   -90 to  -88:  34 pts | robust median  39.3% min   0.0% | exposed median   0.0% max   0.0% | at the Sun's highest: e_lim median  -0.81 max  -0.49 deg vs top median  3.49 deg; points with top <= e_lim there: 0
+   -88 to  -85:  47 pts | robust median  42.0% min  29.7% | exposed median   0.0% max  36.2% | at the Sun's highest: e_lim median  -0.39 max   3.98 deg vs top median  4.38 deg; points with top <= e_lim there: 0
+   -85 to  -82:  68 pts | robust median  27.8% min   8.3% | exposed median  36.3% max  66.2% | at the Sun's highest: e_lim median   3.65 max  11.98 deg vs top median  8.01 deg; points with top <= e_lim there: 6
+   -82 to  -80:  43 pts | robust median  14.4% min   0.4% | exposed median  68.2% max  90.0% | at the Sun's highest: e_lim median   9.71 max  41.66 deg vs top median 10.79 deg; points with top <= e_lim there: 21
+   -80 to  -76:   8 pts | robust median   5.0% min   0.9% | exposed median  85.7% max  92.5% | at the Sun's highest: e_lim median  14.80 max  59.50 deg vs top median 13.03 deg; points with top <= e_lim there: 6
+the 8 points beyond 80S (LDEM_4 bound):
+  lat  -77.796 lon   44.197 h0    379 m: nearest data edge  37.1 km; Sun top max 14.06 deg, e_lim there  10.19 deg; robust   5.6%, exposed  84.3%
+  lat  -78.342 lon  319.647 h0    -14 m: nearest data edge  33.2 km; Sun top max 13.51 deg, e_lim there  12.84 deg; robust   9.2%, exposed  80.3%
+  lat  -78.353 lon  319.706 h0   -236 m: nearest data edge  33.2 km; Sun top max 13.50 deg, e_lim there  13.10 deg; robust   8.7%, exposed  81.0%
+  lat  -78.514 lon  320.015 h0  -1275 m: nearest data edge  35.7 km; Sun top max 13.33 deg, e_lim there  13.42 deg; robust   7.7%, exposed  82.1%
+  lat  -79.104 lon  243.058 h0  -4186 m: nearest data edge   8.4 km; Sun top max 12.72 deg, e_lim there  57.04 deg; robust   1.9%, exposed  91.3%
+  lat  -79.343 lon   23.927 h0   1336 m: nearest data edge   7.6 km; Sun top max 12.52 deg, e_lim there  47.41 deg; robust   5.7%, exposed  85.9%
+  lat  -79.655 lon  322.731 h0  -2077 m: nearest data edge  52.9 km; Sun top max 12.20 deg, e_lim there   9.59 deg; robust  14.3%, exposed  72.3%
+  lat  -79.907 lon   30.436 h0    416 m: nearest data edge  38.8 km; Sun top max 11.95 deg, e_lim there  11.83 deg; robust  14.8%, exposed  70.5%
+near-pole points (< -88): e_lim max over the Sun's path -0.83 deg (the 250 km window, not the DEM edge, sets it)

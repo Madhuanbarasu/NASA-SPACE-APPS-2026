@@ -1,0 +1,163 @@
+{
+ "js": [
+  {
+   "file": "index-SfzAm8-Q.js",
+   "bytes": 1240081,
+   "legal_comments": 5,
+   "comments": [
+    "/** * @license React * react.production.min.js * * Copyright (c) Facebook, Inc. and its affiliates. * * This source code is licensed under the MIT license found in the * LICENSE file in the root directory of this source tree. */",
+    "/** * @license React * react-jsx-runtime.production.min.js * * Copyright (c) Facebook, Inc. and its affiliates. * * This source code is licensed under the MIT license found in the * LICENSE file in the root directory of this source tree. */",
+    "/** * @license React * scheduler.production.min.js * * Copyright (c) Facebook, Inc. and its affiliates. * * This source code is licensed under the MIT license found in the * LICENSE file in the root directory of this source tree. */",
+    "/** * @license React * react-dom.production.min.js * * Copyright (c) Facebook, Inc. and its affiliates. * * This source code is licensed under the MIT license found in the * LICENSE file in the root directory of this source tree. */",
+    "/** * @license * Copyright 2010-2024 Three.js Authors * SPDX-License-Identifier: MIT */"
+   ]
+  }
+ ],
+ "fonts": [
+  {
+   "file": "archivo-latin-ext-wdth-normal-7khWdh9v.woff2",
+   "bytes": 86240,
+   "tables": [
+    "GDEF",
+    "GPOS",
+    "GSUB",
+    "HVAR",
+    "OS/2",
+    "STAT",
+    "avar",
+    "cmap",
+    "fvar",
+    "gasp",
+    "glyf",
+    "loca",
+    "gvar",
+    "head",
+    "hhea",
+    "hmtx",
+    "maxp",
+    "name",
+    "post",
+    "prep"
+   ],
+   "extended_metadata": null,
+   "name_records": [
+    {
+     "nameId": 0,
+     "text": "Copyright 2020 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo)"
+    },
+    {
+     "nameId": 1,
+     "text": "Archivo SemiBold"
+    },
+    {
+     "nameId": 5,
+     "text": "Version 2.001"
+    },
+    {
+     "nameId": 14,
+     "text": "http://scripts.sil.org/OFL"
+    }
+   ],
+   "copyright": "Copyright 2020 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo)",
+   "license_description": null,
+   "license_url": "http://scripts.sil.org/OFL"
+  },
+  {
+   "file": "archivo-latin-wdth-normal-DY7AcnAa.woff2",
+   "bytes": 90104,
+   "tables": [
+    "GDEF",
+    "GPOS",
+    "GSUB",
+    "HVAR",
+    "OS/2",
+    "STAT",
+    "avar",
+    "cmap",
+    "fvar",
+    "gasp",
+    "glyf",
+    "loca",
+    "gvar",
+    "head",
+    "hhea",
+    "hmtx",
+    "maxp",
+    "name",
+    "post",
+    "prep"
+   ],
+   "extended_metadata": null,
+   "name_records": [
+    {
+     "nameId": 0,
+     "text": "Copyright 2020 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo)"
+    },
+    {
+     "nameId": 1,
+     "text": "Archivo SemiBold"
+    },
+    {
+     "nameId": 5,
+     "text": "Version 2.001"
+    },
+    {
+     "nameId": 14,
+     "text": "http://scripts.sil.org/OFL"
+    }
+   ],
+   "copyright": "Copyright 2020 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo)",
+   "license_description": null,
+   "license_url": "http://scripts.sil.org/OFL"
+  },
+  {
+   "file": "archivo-vietnamese-wdth-normal-rJmnGBSt.woff2",
+   "bytes": 34464,
+   "tables": [
+    "GDEF",
+    "GPOS",
+    "GSUB",
+    "HVAR",
+    "OS/2",
+    "STAT",
+    "avar",
+    "cmap",
+    "fvar",
+    "gasp",
+    "glyf",
+    "loca",
+    "gvar",
+    "head",
+    "hhea",
+    "hmtx",
+    "maxp",
+    "name",
+    "post",
+    "prep"
+   ],
+   "extended_metadata": null,
+   "name_records": [
+    {
+     "nameId": 0,
+     "text": "Copyright 2020 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo)"
+    },
+    {
+     "nameId": 1,
+     "text": "Archivo SemiBold"
+    },
+    {
+     "nameId": 5,
+     "text": "Version 2.001"
+    },
+    {
+     "nameId": 14,
+     "text": "http://scripts.sil.org/OFL"
+    }
+   ],
+   "copyright": "Copyright 2020 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo)",
+   "license_description": null,
+   "license_url": "http://scripts.sil.org/OFL"
+  }
+ ],
+ "other_files": []
+}

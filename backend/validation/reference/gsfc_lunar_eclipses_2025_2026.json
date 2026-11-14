@@ -1,0 +1,41 @@
+{
+  "description": "Contact times of four lunar eclipses from the NASA GSFC lunar eclipse catalogue (F. Espenak), for V-13. Contacts are transcribed from the per-eclipse figures (LEplot PDFs, which carry the contacts to the second but contain no extractable text) and are checked against the figures' own durations and against GSFC's yearly text pages (minute precision). Never edit these values to make a test pass; re-transcribe from the cited figure if in doubt.",
+  "source": {
+    "catalogue": "NASA GSFC Eclipse Web Site, Lunar Eclipses: 2021 - 2030 (https://eclipse.gsfc.nasa.gov/LEdecade/LEdecade2021.html)",
+    "figures": "https://eclipse.gsfc.nasa.gov/LEplot/LEplot2001/<name>.pdf (dated 2009 Apr 29)",
+    "text_pages": "https://eclipse.gsfc.nasa.gov/OH/OH2025.html, https://eclipse.gsfc.nasa.gov/OH/OH2026.html",
+    "retrieved_utc": "2026-11-09",
+    "method_stated_in_figures": "Rule = CdT (Danjon) shadow enlargement; Eph. = VSOP87/ELP2000-85; UT from TD with the predicted Delta T shown (75 s, rounded)"
+  },
+  "time_scale_note": "Contacts are given in UT computed by GSFC with its predicted Delta T. Each eclipse's exact Delta T is taken from its own greatest-eclipse line (TD and UT, both to 0.1 s) and every contact is converted back to TD = UT + Delta T, which is what the comparison uses. Using today's leap-second UTC instead would misplace the contacts by about 6 s.",
+  "eclipses": [
+    {"id": "2025-03-14", "type": "total", "figure": "LE2025Mar14T.pdf",
+     "figure_sha256": "4df1efa14457a1e925c2e63c0d8a7a428d30627532abc11e5c15e3e219d2d166",
+     "greatest_td": "2025-03-14 06:59:56.2", "greatest_ut": "2025-03-14 06:58:41.7",
+     "contacts_ut": {"P1": "2025-03-14 03:57:24", "U1": "2025-03-14 05:09:33", "U2": "2025-03-14 06:25:59",
+                     "U3": "2025-03-14 07:31:23", "U4": "2025-03-14 08:47:48", "P4": "2025-03-14 10:00:01"},
+     "durations_stated": {"penumbral": "06h02m37s", "umbral": "03h38m15s", "total": "01h05m24s"},
+     "text_page_minutes_ut": {"P1": "03:57", "U1": "05:10", "U2": "06:26", "U3": "07:31", "U4": "08:48", "P4": "10:00"}},
+    {"id": "2025-09-07", "type": "total", "figure": "LE2025Sep07T.pdf",
+     "figure_sha256": "28cc8d8deeedc2a9f1dcab50b1c327bb884b38339e782ee82f7c8a38dcdda5ec",
+     "greatest_td": "2025-09-07 18:12:57.9", "greatest_ut": "2025-09-07 18:11:43.1",
+     "contacts_ut": {"P1": "2025-09-07 15:28:21", "U1": "2025-09-07 16:27:02", "U2": "2025-09-07 17:30:41",
+                     "U3": "2025-09-07 18:52:47", "U4": "2025-09-07 19:56:26", "P4": "2025-09-07 20:55:00"},
+     "durations_stated": {"penumbral": "05h26m40s", "umbral": "03h29m24s", "total": "01h22m06s"},
+     "text_page_minutes_ut": {"P1": "15:28", "U1": "16:27", "U2": "17:31", "U3": "18:53", "U4": "19:56", "P4": "20:55"}},
+    {"id": "2026-03-03", "type": "total", "figure": "LE2026Mar03T.pdf",
+     "figure_sha256": "eb20b939f521146ba46d4236e1428dab91bee9999eaf596bde37c9f4a2f71c5f",
+     "greatest_td": "2026-03-03 11:34:52.1", "greatest_ut": "2026-03-03 11:33:37.0",
+     "contacts_ut": {"P1": "2026-03-03 08:44:22", "U1": "2026-03-03 09:50:00", "U2": "2026-03-03 11:04:26",
+                     "U3": "2026-03-03 12:02:45", "U4": "2026-03-03 13:17:10", "P4": "2026-03-03 14:22:59"},
+     "durations_stated": {"penumbral": "05h38m37s", "umbral": "03h27m10s", "total": "00h58m19s"},
+     "text_page_minutes_ut": {"P1": "08:44", "U1": "09:50", "U2": "11:04", "U3": "12:03", "U4": "13:17", "P4": "14:23"}},
+    {"id": "2026-08-28", "type": "partial", "figure": "LE2026Aug28P.pdf",
+     "figure_sha256": "de311fc757cc2d05348cf75241f10eda5173eddd9231a24c18542bc19a300256",
+     "greatest_td": "2026-08-28 04:14:04.4", "greatest_ut": "2026-08-28 04:12:49.0",
+     "contacts_ut": {"P1": "2026-08-28 01:23:55", "U1": "2026-08-28 02:33:48",
+                     "U4": "2026-08-28 05:51:55", "P4": "2026-08-28 07:01:41"},
+     "durations_stated": {"penumbral": "05h37m46s", "umbral": "03h18m07s"},
+     "text_page_minutes_ut": {"P1": "01:24", "U1": "02:34", "U4": "05:52", "P4": "07:02"}}
+  ]
+}

@@ -1,0 +1,1182 @@
+{
+ "evict": {
+  "assessmentId": "ac4933775c25ea281be5",
+  "evictingRuns": [
+   200,
+   200,
+   200
+  ],
+  "layerStatusAfterEviction": 200,
+  "layerSwitch": {
+   "layerRequests": [
+    "404 ac4933775c25ea281be5/layer/elevation.png",
+    "200 ac4933775c25ea281be5/layer/slope.png",
+    "200 ac4933775c25ea281be5/layer/elevation.png?rev=1"
+   ],
+   "reRunCodes": [
+    200,
+    200
+   ],
+   "state": {
+    "host": [
+     568,
+     652
+    ],
+    "raster": "elevation",
+    "mapStatus": [],
+    "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 9.53 to 10.72 ° (median 9.99) Baseline: 59.9 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.18 to 0.55 m (median 0.38) Baseline: 99.8 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 15.50 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   }
+  },
+  "footprintChange": {
+   "requests": [
+    "200 assess",
+    "404 ac4933775c25ea281be5/footprint",
+    "200 assess"
+   ],
+   "state": {
+    "host": [
+     568,
+     652
+    ],
+    "raster": "elevation",
+    "mapStatus": [],
+    "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 9.53 to 11.09 ° (median 10.05) Baseline: 59.9 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.14 to 0.55 m (median 0.38) Baseline: 99.8 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 19.28 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   }
+  },
+  "tabReturn": {
+   "layerRequests": [
+    "200 ac4933775c25ea281be5/layer/slope.png"
+   ],
+   "state": {
+    "host": [
+     568,
+     652
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 9.53 to 11.09 ° (median 10.05) Baseline: 59.9 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.14 to 0.55 m (median 0.38) Baseline: 99.8 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 19.28 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   }
+  },
+  "verdict": "Pass"
+ },
+ "sites": [
+  {
+   "site": "site01",
+   "width": 1920,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     848,
+     590
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 1.02 to 11.25 ° (median 5.74) Baseline: 15.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.04 to 0.32 m (median 0.12) Baseline: 25.0 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 11.02 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 15 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 5 m DEM pixels, and even the finest regis"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "1572.52m1951.75LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m0.42Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height from at least one LOLA returnHeight interpolated between LOLA tracksNo terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m0.89Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png",
+    "200 slope.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 1440,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     568,
+     702
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 1.02 to 11.25 ° (median 5.74) Baseline: 15.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.04 to 0.32 m (median 0.12) Baseline: 25.0 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 11.02 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 15 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 5 m DEM pixels, and even the finest regis"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "1572.52m1951.75LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m0.42Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height from at least one LOLA returnHeight interpolated between LOLA tracksNo terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m0.89Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png",
+    "200 slope.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 1024,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     940,
+     443
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 1.02 to 11.25 ° (median 5.74) Baseline: 15.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.04 to 0.32 m (median 0.12) Baseline: 25.0 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 11.02 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 15 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 5 m DEM pixels, and even the finest regis"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "1572.52m1951.75LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m0.42Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height from at least one LOLA returnHeight interpolated between LOLA tracksNo terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m0.89Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Fail"
+  },
+  {
+   "site": "site01",
+   "width": 390,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     322,
+     357
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 1.02 to 11.25 ° (median 5.74) Baseline: 15.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.04 to 0.32 m (median 0.12) Baseline: 25.0 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 11.02 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 15 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 5 m DEM pixels, and even the finest regis"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "1572.52m1951.75LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m0.42Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height from at least one LOLA returnHeight interpolated between LOLA tracksNo terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m0.89Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png",
+    "200 slope.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 320,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     252,
+     298
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 1.02 to 11.25 ° (median 5.74) Baseline: 15.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.04 to 0.32 m (median 0.12) Baseline: 25.0 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 11.02 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 15 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 5 m DEM pixels, and even the finest regis"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "1572.52m1951.75LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m0.42Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height from at least one LOLA returnHeight interpolated between LOLA tracksNo terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m0.89Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png",
+    "200 slope.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "s85",
+   "width": 1920,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     848,
+     557
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 9.53 to 11.09 ° (median 10.05) Baseline: 59.9 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.14 to 0.55 m (median 0.38) Baseline: 99.8 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 19.28 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m1.36Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m1.48Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png",
+    "200 slope.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "s85",
+   "width": 1440,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     568,
+     652
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 9.53 to 11.09 ° (median 10.05) Baseline: 59.9 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.14 to 0.55 m (median 0.38) Baseline: 99.8 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 19.28 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m1.36Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m1.48Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Fail"
+  },
+  {
+   "site": "s85",
+   "width": 1024,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     940,
+     443
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 9.53 to 11.09 ° (median 10.05) Baseline: 59.9 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.14 to 0.55 m (median 0.38) Baseline: 99.8 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 19.28 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m1.36Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m1.48Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Fail"
+  },
+  {
+   "site": "s85",
+   "width": 390,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     322,
+     357
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 9.53 to 11.09 ° (median 10.05) Baseline: 59.9 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.14 to 0.55 m (median 0.38) Baseline: 99.8 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 19.28 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m1.36Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m1.48Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png",
+    "200 slope.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "s85",
+   "width": 320,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     252,
+     298
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 9.53 to 11.09 ° (median 10.05) Baseline: 59.9 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.14 to 0.55 m (median 0.38) Baseline: 99.8 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 19.28 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m1.36Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m1.48Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Fail"
+  },
+  {
+   "site": "s88",
+   "width": 1920,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     848,
+     557
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 24.21 to 26.73 ° (median 25.44) Baseline: 60.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.26 to 0.64 m (median 0.38) Baseline: 100.0 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 48.15 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "-4213.22m-3026.07LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m1.05Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m0.77Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Fail"
+  },
+  {
+   "site": "s88",
+   "width": 1440,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     568,
+     652
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 24.21 to 26.73 ° (median 25.44) Baseline: 60.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.26 to 0.64 m (median 0.38) Baseline: 100.0 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 48.15 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "-4213.22m-3026.07LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m1.05Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m0.77Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png",
+    "200 slope.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "s88",
+   "width": 1024,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     940,
+     443
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 24.21 to 26.73 ° (median 25.44) Baseline: 60.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.26 to 0.64 m (median 0.38) Baseline: 100.0 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 48.15 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "-4213.22m-3026.07LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m1.05Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m0.77Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png",
+    "200 slope.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "s88",
+   "width": 390,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     322,
+     357
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 24.21 to 26.73 ° (median 25.44) Baseline: 60.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.26 to 0.64 m (median 0.38) Baseline: 100.0 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 48.15 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "-4213.22m-3026.07LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m1.05Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m0.77Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [
+    "200 elevation.png",
+    "200 roughness.png",
+    "200 coverage.png",
+    "200 uncertainty.png",
+    "200 slope.png"
+   ],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "s88",
+   "width": 320,
+   "assessCode": [
+    200
+   ],
+   "state": {
+    "host": [
+     252,
+     298
+    ],
+    "raster": "slope",
+    "mapStatus": [],
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+    "error": null,
+    "findings": [
+     "Slope No threshold configured (values shown) 24.21 to 26.73 ° (median 25.44) Baseline: 60.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+     "Roughness No threshold configured (values shown) 0.26 to 0.64 m (median 0.38) Baseline: 100.0 m Basis: calculated: RMS residual about a least-squares plane",
+     "Elevation range No threshold configured (values shown) Relief: 48.15 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+     "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+     "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+    ],
+    "fpHints": [],
+    "product": "auto"
+   },
+   "layersSeen": [
+    {
+     "v": "elevation",
+     "legend": "-4213.22m-3026.07LOLA heights above the 1,737.4 km sphere",
+     "mapStatus": []
+    },
+    {
+     "v": "roughness",
+     "legend": "0.00m1.05Calculated: RMS residual about a fitted plane",
+     "mapStatus": []
+    },
+    {
+     "v": "coverage",
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "mapStatus": []
+    },
+    {
+     "v": "uncertainty",
+     "legend": "0.00m0.77Estimated by the product: RMS height error",
+     "mapStatus": []
+    },
+    {
+     "v": "slope",
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "mapStatus": []
+    }
+   ],
+   "layerCodes": [],
+   "tiles": {
+    "n": 0,
+    "codes": []
+   },
+   "layout": {
+    "hscroll": false,
+    "outside": 0
+   },
+   "verdict": "Fail"
+  }
+ ],
+ "coarse": {
+  "state": {
+   "host": [
+    568,
+    358
+   ],
+   "raster": "slope",
+   "mapStatus": [],
+   "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+   "error": null,
+   "findings": [
+    "Slope Requires higher-resolution data No DEM pixel centre lies inside the footprint.",
+    "Roughness Requires higher-resolution data No DEM pixel centre lies inside the footprint.",
+    "Elevation range Requires higher-resolution data No DEM pixel centre lies inside the footprint.",
+    "Depression candidates Requires higher-resolution data No DEM pixel centre lies inside the footprint.",
+    "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 240 m DEM pixels, and even the finest reg"
+   ],
+   "fpHints": [
+    "This screening uses 240m:LDEM_60S_240MPP_ADJ.TIF (240 m pixels), which is too coarse for this footprint. Finer registered products cover this site: 20m:LDEM_80S_20MPP_ADJ.TIF, 80m:LDEM_80S_80MPP_ADJ.tiff. Choose \"Finest product covering the window\" (or one of these) and run the screening again."
+   ],
+   "product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+  },
+  "verdict": "Pass"
+ },
+ "carry": {
+  "productShownAfterSiteChange": "auto",
+  "assessCodes": [
+   200
+  ],
+  "state": {
+   "host": [
+    568,
+    652
+   ],
+   "raster": "slope",
+   "mapStatus": [],
+   "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+   "error": null,
+   "findings": [
+    "Slope No threshold configured (values shown) 24.21 to 26.73 ° (median 25.44) Baseline: 60.0 m Basis: calculated (Horn 1981, 3 x 3) from the DEM",
+    "Roughness No threshold configured (values shown) 0.26 to 0.64 m (median 0.38) Baseline: 100.0 m Basis: calculated: RMS residual about a least-squares plane",
+    "Elevation range No threshold configured (values shown) Relief: 48.15 m Basis: calculated: maximum minus minimum DEM height inside the footprint",
+    "Depression candidates No candidate detected at this resolution No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below thei",
+    "Obstacles (boulders) Not available - manual review required No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest regi"
+   ],
+   "fpHints": [],
+   "product": "auto"
+  },
+  "verdict": "Pass"
+ },
+ "console": [
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "type": "error",
+   "text": "EncodingError: The source image cannot be decoded."
+  },
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  }
+ ],
+ "summary": {
+  "evict": "Pass",
+  "sites": "9/15",
+  "coarse": "Pass",
+  "carry": "Pass",
+  "consoleErrors": 3
+ }
+}

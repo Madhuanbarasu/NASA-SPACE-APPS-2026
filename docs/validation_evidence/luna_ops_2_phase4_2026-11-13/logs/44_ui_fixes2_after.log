@@ -1,0 +1,473 @@
+{
+ "label": "after",
+ "mission": {
+  "empty-desktop": {
+   "cards": {
+    "mission-selected": {
+     "h": 100,
+     "w": 604,
+     "left": 364,
+     "blankBelow": 16
+    },
+    "mission-status": {
+     "h": 380,
+     "w": 604,
+     "left": 364,
+     "blankBelow": 16
+    },
+    "locator": {
+     "h": 495,
+     "w": 432,
+     "left": 984,
+     "blankBelow": 16
+    },
+    "mission-current": {
+     "h": 82,
+     "w": 1052,
+     "left": 364,
+     "blankBelow": 16
+    },
+    "mission-candidates": {
+     "h": 143,
+     "w": 1052,
+     "left": 364,
+     "blankBelow": 16
+    },
+    "mission-history": {
+     "h": 102,
+     "w": 1052,
+     "left": 364,
+     "blankBelow": 16
+    },
+    "mission-comparison": {
+     "h": 124,
+     "w": 1052,
+     "left": 364,
+     "blankBelow": 0
+    }
+   },
+   "hscroll": false
+  },
+  "empty-tablet": {
+   "cards": {
+    "mission-selected": {
+     "h": 100,
+     "w": 560,
+     "left": 24,
+     "blankBelow": 16
+    },
+    "mission-status": {
+     "h": 405,
+     "w": 560,
+     "left": 24,
+     "blankBelow": 16
+    },
+    "locator": {
+     "h": 520,
+     "w": 400,
+     "left": 600,
+     "blankBelow": 16
+    },
+    "mission-current": {
+     "h": 82,
+     "w": 976,
+     "left": 24,
+     "blankBelow": 16
+    },
+    "mission-candidates": {
+     "h": 143,
+     "w": 976,
+     "left": 24,
+     "blankBelow": 16
+    },
+    "mission-history": {
+     "h": 102,
+     "w": 976,
+     "left": 24,
+     "blankBelow": 16
+    },
+    "mission-comparison": {
+     "h": 124,
+     "w": 976,
+     "left": 24,
+     "blankBelow": 0
+    }
+   },
+   "hscroll": false
+  },
+  "empty-phone": {
+   "cards": {
+    "mission-selected": {
+     "h": 100,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "mission-status": {
+     "h": 566,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "locator": {
+     "h": 534,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "mission-current": {
+     "h": 100,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "mission-candidates": {
+     "h": 178,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "mission-history": {
+     "h": 137,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "mission-comparison": {
+     "h": 124,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 0
+    }
+   },
+   "hscroll": false
+  },
+  "populated-desktop": {
+   "cards": {
+    "mission-selected": {
+     "h": 254,
+     "w": 604,
+     "left": 364,
+     "blankBelow": 16
+    },
+    "mission-status": {
+     "h": 380,
+     "w": 604,
+     "left": 364,
+     "blankBelow": 16
+    },
+    "locator": {
+     "h": 650,
+     "w": 432,
+     "left": 984,
+     "blankBelow": 16
+    },
+    "mission-current": {
+     "h": 404,
+     "w": 1052,
+     "left": 364,
+     "blankBelow": 16
+    },
+    "mission-candidates": {
+     "h": 468,
+     "w": 1052,
+     "left": 364,
+     "blankBelow": 16
+    },
+    "mission-history": {
+     "h": 165,
+     "w": 1052,
+     "left": 364,
+     "blankBelow": 16
+    },
+    "mission-comparison": {
+     "h": 124,
+     "w": 1052,
+     "left": 364,
+     "blankBelow": 0
+    }
+   },
+   "hscroll": false
+  },
+  "populated-tablet": {
+   "cards": {
+    "mission-selected": {
+     "h": 272,
+     "w": 560,
+     "left": 24,
+     "blankBelow": 16
+    },
+    "mission-status": {
+     "h": 405,
+     "w": 560,
+     "left": 24,
+     "blankBelow": 16
+    },
+    "locator": {
+     "h": 692,
+     "w": 400,
+     "left": 600,
+     "blankBelow": 16
+    },
+    "mission-current": {
+     "h": 489,
+     "w": 976,
+     "left": 24,
+     "blankBelow": 16
+    },
+    "mission-candidates": {
+     "h": 468,
+     "w": 976,
+     "left": 24,
+     "blankBelow": 16
+    },
+    "mission-history": {
+     "h": 189,
+     "w": 976,
+     "left": 24,
+     "blankBelow": 16
+    },
+    "mission-comparison": {
+     "h": 124,
+     "w": 976,
+     "left": 24,
+     "blankBelow": 0
+    }
+   },
+   "hscroll": false
+  },
+  "populated-phone": {
+   "cards": {
+    "mission-selected": {
+     "h": 336,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "mission-status": {
+     "h": 566,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "locator": {
+     "h": 497,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "mission-current": {
+     "h": 859,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "mission-candidates": {
+     "h": 701,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "mission-history": {
+     "h": 337,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 16
+    },
+    "mission-comparison": {
+     "h": 124,
+     "w": 358,
+     "left": 16,
+     "blankBelow": 0
+    }
+   },
+   "hscroll": false
+  }
+ },
+ "prose": {
+  "data-1440-docked": {
+   "mainLeft": 340,
+   "mainW": 1100,
+   "proseLeft": 340,
+   "proseW": 1100,
+   "gapLeft": 0,
+   "gapRight": 0,
+   "h2Left": 364,
+   "h2W": 1052,
+   "tableRight": 1415,
+   "overflowX": false
+  },
+  "data-1440-collapsed": {
+   "mainLeft": 0,
+   "mainW": 1440,
+   "proseLeft": 150,
+   "proseW": 1140,
+   "gapLeft": 150,
+   "gapRight": 150,
+   "h2Left": 174,
+   "h2W": 1092,
+   "tableRight": 1265,
+   "overflowX": false
+  },
+  "data-1024": {
+   "mainLeft": 0,
+   "mainW": 1024,
+   "proseLeft": 0,
+   "proseW": 1024,
+   "gapLeft": 0,
+   "gapRight": 0,
+   "h2Left": 24,
+   "h2W": 976,
+   "tableRight": 999,
+   "overflowX": false
+  },
+  "data-1024-drawer-open": {
+   "mainLeft": 0,
+   "mainW": 1024,
+   "proseLeft": 0,
+   "proseW": 1024,
+   "gapLeft": 0,
+   "gapRight": 0,
+   "h2Left": 24,
+   "h2W": 976,
+   "tableRight": 999,
+   "overflowX": false
+  },
+  "data-390": {
+   "mainLeft": 0,
+   "mainW": 390,
+   "proseLeft": 0,
+   "proseW": 390,
+   "gapLeft": 0,
+   "gapRight": 0,
+   "h2Left": 16,
+   "h2W": 358,
+   "tableRight": 373,
+   "overflowX": false
+  },
+  "guide-1440-docked": {
+   "mainLeft": 340,
+   "mainW": 1100,
+   "proseLeft": 340,
+   "proseW": 1100,
+   "gapLeft": 0,
+   "gapRight": 0,
+   "h2Left": 364,
+   "h2W": 1052,
+   "tableRight": null,
+   "overflowX": false
+  },
+  "guide-1440-collapsed": {
+   "mainLeft": 0,
+   "mainW": 1440,
+   "proseLeft": 150,
+   "proseW": 1140,
+   "gapLeft": 150,
+   "gapRight": 150,
+   "h2Left": 174,
+   "h2W": 1092,
+   "tableRight": null,
+   "overflowX": false
+  },
+  "guide-1024": {
+   "mainLeft": 0,
+   "mainW": 1024,
+   "proseLeft": 0,
+   "proseW": 1024,
+   "gapLeft": 0,
+   "gapRight": 0,
+   "h2Left": 24,
+   "h2W": 976,
+   "tableRight": null,
+   "overflowX": false
+  },
+  "guide-1024-drawer-open": {
+   "mainLeft": 0,
+   "mainW": 1024,
+   "proseLeft": 0,
+   "proseW": 1024,
+   "gapLeft": 0,
+   "gapRight": 0,
+   "h2Left": 24,
+   "h2W": 976,
+   "tableRight": null,
+   "overflowX": false
+  },
+  "guide-390": {
+   "mainLeft": 0,
+   "mainW": 390,
+   "proseLeft": 0,
+   "proseW": 390,
+   "gapLeft": 0,
+   "gapRight": 0,
+   "h2Left": 16,
+   "h2W": 358,
+   "tableRight": null,
+   "overflowX": false
+  }
+ },
+ "map": {
+  "explorer-390": {
+   "stageW": 356,
+   "legend": {
+    "w": 318,
+    "h": 32
+   },
+   "overlapReadout": 0,
+   "overlapScale": 0,
+   "scaleVisible": true,
+   "readoutInside": true,
+   "hscroll": false
+  },
+  "explorer-360": {
+   "stageW": 326,
+   "legend": {
+    "w": 300,
+    "h": 32
+   },
+   "overlapReadout": 0,
+   "overlapScale": 0,
+   "scaleVisible": true,
+   "readoutInside": true,
+   "hscroll": false
+  },
+  "explorer-320": {
+   "stageW": 286,
+   "legend": {
+    "w": 260,
+    "h": 32
+   },
+   "overlapReadout": 0,
+   "overlapScale": 0,
+   "scaleVisible": true,
+   "readoutInside": true,
+   "hscroll": false
+  },
+  "result-390": {
+   "stageW": 330,
+   "legend": {
+    "w": 84,
+    "h": 32
+   },
+   "overlapReadout": 0,
+   "overlapScale": 0,
+   "scaleVisible": true,
+   "readoutInside": true,
+   "hscroll": false
+  },
+  "result-320": {
+   "stageW": 260,
+   "legend": {
+    "w": 84,
+    "h": 32
+   },
+   "overlapReadout": 0,
+   "overlapScale": 0,
+   "scaleVisible": true,
+   "readoutInside": true,
+   "hscroll": false
+  }
+ },
+ "consoleErrors": []
+}
+exit 0

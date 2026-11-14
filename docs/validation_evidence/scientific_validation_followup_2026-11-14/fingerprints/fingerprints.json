@@ -1,0 +1,20 @@
+{
+ "previous": {
+  "code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109",
+  "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+  "validation_report_sha256": "8c03ebafc72c5c41a238565f51464413bd63f3132302491cc518587d93ebe10d"
+ },
+ "new": {
+  "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8",
+  "suite_fingerprint": "519a8e4ca3053cbc4c151fccf68397f17c416f3ce677ef4ec66052a7eb116cb6"
+ },
+ "validation_report_now": {
+  "code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109",
+  "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+  "sha256": "8c03ebafc72c5c41a238565f51464413bd63f3132302491cc518587d93ebe10d"
+ },
+ "label_blockers_now": [
+  "the validation report was produced by different code",
+  "the validation report was produced by a different version of the tests or validation scripts"
+ ]
+}

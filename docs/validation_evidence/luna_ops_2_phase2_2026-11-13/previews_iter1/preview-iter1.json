@@ -1,0 +1,65 @@
+{
+ "label": "iter1",
+ "sizes": {
+  "desktop": {
+   "hscroll": [
+    false,
+    false
+   ],
+   "globe": {
+    "stageW": 752,
+    "stageH": 768,
+    "stageTop": 119,
+    "discV": 688,
+    "discH": 688
+   },
+   "map": {
+    "w": 752,
+    "h": 768,
+    "top": 119
+   },
+   "globeSiteCentre": "Centre 89.463° S, 222.510° E",
+   "terrain": {
+    "w": 752,
+    "h": 768
+   }
+  },
+  "tablet": {
+   "hscroll": [
+    false,
+    false
+   ],
+   "globe": {
+    "stageW": 696,
+    "stageH": 636,
+    "stageTop": 119,
+    "discV": 568,
+    "discH": 568
+   },
+   "map": {
+    "w": 696,
+    "h": 636,
+    "top": 119
+   }
+  },
+  "phone": {
+   "hscroll": [
+    false,
+    false
+   ],
+   "globe": {
+    "stageW": 356,
+    "stageH": 523,
+    "stageTop": 214,
+    "discV": 319,
+    "discH": 318
+   },
+   "map": {
+    "w": 356,
+    "h": 523,
+    "top": 73
+   }
+  }
+ },
+ "consoleErrors": []
+}

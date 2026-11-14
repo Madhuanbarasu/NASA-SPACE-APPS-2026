@@ -1,0 +1,189 @@
+/* LUNA-OPS 2.0 Phase 2: Immersive 3D Moon and South Polar Explorer.
+   The Site tab (before an analysis) is a stage: the south polar map, the 3D Moon or the local terrain fills the workspace
+   height under the command bar, with floating instruments (navigation, coordinate readout, scale, status, legend) in
+   Phase 1 colours. The compact title and the selected-site panel sit beside the stage (under it on small screens); the
+   readiness board and the first steps follow below. Everything here is presentation: projections, coordinates, tiles,
+   terrain windows and every value shown come from the existing components and the API. */
+
+/* ---------------------------------------------------------------- stage layout */
+.explore {
+  /* the stage fills the workspace under the bar: minus the padding (12 + 12) and the view header (46 + 2 px border) */
+  --stage-h: max(420px, calc(100vh - var(--bar-h) - 72px));
+  padding: 12px 16px;
+}
+@supports (height: 100dvh) {
+  .explore { --stage-h: max(420px, calc(100dvh - var(--bar-h) - 72px)); }
+}
+.explore-grid { display: grid; grid-template-columns: minmax(0, 1fr) var(--console-w); grid-template-rows: auto 1fr;
+  grid-template-areas: "stage intro" "stage site"; gap: 12px 14px; align-items: start; }
+.explore-grid > .welcome { grid-area: intro; }
+.explore-grid > .explore-pane { grid-area: stage; }
+.explore-grid > .explorer { grid-area: site; }
+
+/* the compact title: the page's h1, beside the stage so it never covers the Moon */
+.welcome.welcome-intro { padding: 4px 2px 2px; }
+.welcome-intro h1 { font-size: 22px; font-stretch: 112%; font-weight: 740; line-height: 1.16; margin: 6px 0 0; letter-spacing: 0.004em;
+  text-wrap: balance; }
+
+.explore-pane { overflow: hidden; }
+.explore-pane > .pane-head { min-height: 46px; padding-block: 6px; }
+.stage-swap { display: flex; flex-direction: column; min-width: 0; animation: stage-in var(--dur-2) var(--ease); }
+@keyframes stage-in { from { opacity: 0; } to { opacity: 1; } }
+/* every stage view (map, local terrain, loading and no-data panes) takes the stage height; the globe sizes its own stage */
+.explore-pane .pane-body { flex: none; height: var(--stage-h); min-height: 0; }
+
+/* loading: a quiet ring above the message (no motion with reduced motion: base.css stops animations) */
+.pane-empty.is-loading { align-content: center; gap: 12px; }
+.pane-empty.is-loading::before { content: ""; justify-self: center; width: 24px; height: 24px; border-radius: 50%;
+  border: 2px solid var(--line-strong); border-top-color: var(--accent); animation: stage-spin 0.9s linear infinite; }
+@keyframes stage-spin { to { transform: rotate(360deg); } }
+
+/* ---------------------------------------------------------------- shared instruments */
+.view-controls button svg { width: 16px; height: 16px; }
+.view-controls button:disabled { opacity: 0.45; cursor: not-allowed; }
+.view-controls button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+.stage-readout { position: absolute; left: 12px; bottom: 12px; z-index: 2; display: flex; flex-direction: column; gap: 3px;
+  padding: 6px 10px; background: var(--hud); border: 1px solid var(--hud-line); border-radius: var(--r-m); box-shadow: var(--shadow-1);
+  font-family: var(--font-mono); font-size: var(--fs-xs); font-variant-numeric: tabular-nums; color: var(--text); pointer-events: none;
+  white-space: nowrap; }
+.stage-readout:empty { display: none; }
+.readout-selected { color: var(--sun); }
+
+.stage-legend { position: absolute; right: 12px; bottom: 12px; z-index: 2; max-width: min(320px, calc(100% - 24px));
+  background: var(--hud); border: 1px solid var(--hud-line); border-radius: var(--r-m); box-shadow: var(--shadow-1);
+  font-size: var(--fs-xs); color: var(--muted); }
+.stage-legend > summary { display: flex; align-items: center; gap: 8px; min-height: 28px; padding: 4px 10px; cursor: pointer; list-style: none;
+  color: var(--text); font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; font-size: var(--fs-2xs); }
+.stage-legend > summary::-webkit-details-marker { display: none; }
+.stage-legend > summary::before { content: ""; width: 5px; height: 5px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg); transition: transform var(--dur-1) var(--ease); }
+.stage-legend[open] > summary::before { transform: rotate(45deg); }
+.stage-legend > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--r-m); }
+.stage-legend ul { list-style: none; margin: 0; padding: 0 10px 9px; display: grid; gap: 6px; }
+.stage-legend li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 8px; align-items: start; line-height: 1.35; }
+.swatch { --swatch: var(--text); display: block; width: 14px; height: 14px; margin-top: 1px; box-sizing: border-box; }
+.swatch-dot { width: 10px; height: 10px; margin: 3px 2px 0; border-radius: 50%; background: var(--swatch); }
+.swatch-ring { border-radius: 50%; border: 2px solid var(--swatch); box-shadow: 0 0 0 1px #17212c, inset 0 0 0 1px #17212c; }
+.swatch-pin { border-radius: 50%; border: 2px solid var(--swatch); background: radial-gradient(circle, var(--swatch) 0 2px, transparent 2.5px); }
+.swatch-line { height: 0; margin-top: 7px; border-top: 2px solid var(--swatch); }
+.swatch-hatch { border: 1px solid var(--line-strong); border-radius: 2px;
+  background: repeating-linear-gradient(135deg, rgba(167, 180, 195, 0.55) 0 1.5px, transparent 1.5px 5px), var(--night); }
+
+.status-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border: 1px solid var(--hud-line); border-radius: var(--r-pill);
+  background: var(--hud); color: var(--text); font-size: var(--fs-xs); white-space: nowrap; box-shadow: var(--shadow-1); }
+.status-chip.is-busy::before { content: ""; width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--line-strong);
+  border-top-color: var(--accent); animation: stage-spin 0.9s linear infinite; }
+.status-chip.is-warn { border-color: var(--alert); color: var(--alert); }
+.status-chip.is-bad { border-color: var(--alert); color: var(--text); }
+
+/* ---------------------------------------------------------------- South Polar Map */
+/* areas with no terrain image (outside the registered terrain, tiles still loading or not rendered in time) are hatched,
+   so they read as "no image here", never as dark terrain; the legend says so in words */
+.map-stage .map-host { background: repeating-linear-gradient(135deg, rgba(140, 160, 182, 0.13) 0 1.5px, transparent 1.5px 9px), #0a1018; }
+.map-stage .map-host .ol-zoom { top: 12px; left: 12px; }
+.map-stage .map-host .ol-zoom button { width: 30px; height: 30px; background: var(--hud-strong); }
+.map-tools { top: 82px; left: 12px; flex-direction: column; }
+.map-tools button { width: 30px; height: 30px; background: var(--hud-strong); }
+.map-status { position: absolute; top: 12px; right: 12px; z-index: 2; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px;
+  max-width: calc(100% - 80px); pointer-events: none; }
+.scale-bar { display: flex; align-items: center; gap: 8px; }
+.scale-line { flex: none; height: 6px; border: 1.5px solid var(--text); border-top: 0; }
+
+/* ---------------------------------------------------------------- 3D Moon globe */
+.globe { position: relative; display: flex; flex-direction: column; }
+.globe-stage { position: relative; height: clamp(340px, 62vh, 640px); overflow: hidden;
+  background: radial-gradient(ellipse at 50% 45%, #111b28 0%, #090f17 55%, #04070b 100%); }
+.explore-pane .globe-stage { height: var(--stage-h); }
+.globe-host { position: absolute; inset: 0; cursor: grab; touch-action: none; }
+.globe-host:active { cursor: grabbing; }
+.globe-host:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.globe-crosshair { position: absolute; left: 50%; top: 50%; width: 22px; height: 22px; margin: -11px 0 0 -11px; pointer-events: none;
+  opacity: 0.55; background:
+    linear-gradient(var(--focus), var(--focus)) center / 2px 22px no-repeat,
+    linear-gradient(var(--focus), var(--focus)) center / 22px 2px no-repeat; mix-blend-mode: screen; }
+.globe-host:focus-visible ~ .globe-crosshair { opacity: 1; }
+.globe-message { z-index: 3; background: rgba(5, 8, 13, 0.72); color: var(--text); }
+
+/* the viewpoints (top left) and the navigation cluster (top right) float in the stage corners, clear of the whole-disc
+   framing (90 % of the stage height); the toolbar itself takes no room */
+.globe-toolbar { position: absolute; top: 0; left: 0; right: 0; height: 0; z-index: 3; }
+.globe-viewpoints { position: absolute; top: 12px; left: 12px; flex-direction: column; flex-wrap: nowrap; background: var(--hud);
+  box-shadow: var(--shadow-1); }
+.globe-viewpoints button { text-align: left; }
+.globe-viewpoints button + button { border-left: 0; border-top: 1px solid var(--line); }
+.globe-nav { position: absolute; top: 12px; right: 12px; left: auto; display: grid; grid-template-columns: repeat(3, 30px); gap: 4px;
+  padding: 6px; background: var(--hud); border: 1px solid var(--hud-line); border-radius: var(--r-m); box-shadow: var(--shadow-1); }
+.globe-nav button { width: 30px; height: 30px; }
+.globe-corner { position: absolute; right: 12px; bottom: 12px; z-index: 2; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.globe-corner .stage-legend { position: static; }
+.globe-display { background: var(--hud); box-shadow: var(--shadow-1); }
+
+.globe-selection { padding: 10px 14px 4px; border-top: 1px solid var(--line-soft); }
+.globe-selection h4 { margin: 0 0 4px; font-size: var(--fs-s); font-weight: 600; color: var(--muted); }
+.globe-selected { margin: 0; font-size: var(--fs-m); font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.globe-note p { margin: 0 0 4px; }
+.globe-note p:last-child { margin-bottom: 0; }
+.globe-inline-note { padding: 6px 14px 0; }
+
+/* ---------------------------------------------------------------- local terrain */
+.terrain-preview { display: flex; flex-direction: column; }
+.terrain-preview-stage { height: clamp(320px, 55vh, 560px); flex: none;
+  background: radial-gradient(ellipse at 50% 40%, #121c29 0%, #0a1018 60%, #06090e 100%); }
+.terrain-nav { top: 12px; left: 12px; padding: 6px; background: var(--hud); border: 1px solid var(--hud-line); border-radius: var(--r-m);
+  box-shadow: var(--shadow-1); }
+.terrain-nav button { width: 30px; height: 30px; }
+.terrain-options { position: absolute; top: 12px; right: 12px; z-index: 2; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 12px;
+  padding: 6px 10px; background: var(--hud); border: 1px solid var(--hud-line); border-radius: var(--r-m); box-shadow: var(--shadow-1); }
+.terrain-exag { font-size: var(--fs-xs); color: var(--muted); display: inline-flex; gap: 6px; align-items: center; white-space: nowrap; }
+.height-key { display: grid; gap: 4px; padding: 0 10px 10px; }
+.height-key-title { color: var(--muted); }
+/* the same height-to-grey ramp as the mesh colours (TerrainPreview: 0.32/0.34/0.38 at the lowest to 0.92/0.92/0.90 at the
+   highest valid height); the lights shade it on screen */
+.height-ramp { height: 8px; border-radius: 2px; border: 1px solid var(--line-strong);
+  background: linear-gradient(90deg, rgb(82, 87, 97), rgb(235, 235, 230)); }
+.height-key-ends { display: flex; justify-content: space-between; gap: 12px; font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+  color: var(--text); }
+.terrain-stats { padding: 12px 14px; border-top: 1px solid var(--line-soft); }
+.terrain-stats h4 { margin: 0 0 6px; font-size: var(--fs-s); font-weight: 600; color: var(--muted); }
+.terrain-stats ul { margin: 0 0 6px; padding-left: 18px; font-size: var(--fs-s); display: grid; gap: 3px; font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------- under the stage: introduction, readiness, steps */
+.welcome-details { padding: 22px var(--gutter) 8px; max-width: 1180px; }
+.welcome-details > h2 { margin: 0; }
+.welcome-lead { color: var(--muted); max-width: 720px; font-size: 15px; margin: 8px 0 0; }
+
+/* ---------------------------------------------------------------- responsive */
+@media (max-width: 1199px) {
+  :root { --console-w: 280px; }
+}
+@media (max-width: 900px) {
+  /* one document scroll (shell.css): the stage is most of the screen, the title above it and the site panel under it */
+  .explore { --stage-h: clamp(360px, 70vh, 680px); padding: 12px var(--gutter); }
+  .explore-grid { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-template-areas: "intro" "stage" "site"; }
+}
+@media (max-width: 600px) {
+  .explore { --stage-h: clamp(300px, 62vh, 540px); }
+  .welcome-intro h1 { font-size: 20px; }
+  /* phones: the globe's viewpoints and navigation form a bar above the stage instead of covering the disc */
+  .globe-toolbar { position: static; height: auto; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px; padding: 8px;
+    background: var(--panel); border-bottom: 1px solid var(--line-soft); }
+  .globe-viewpoints { position: static; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); flex: 1 1 170px; }
+  .globe-viewpoints button + button { border-top: 0; border-left: 0; }
+  .globe-viewpoints button { border-bottom: 1px solid var(--line); }
+  .globe-viewpoints button:nth-child(odd) { border-right: 1px solid var(--line); }
+  /* on a portrait phone the whole disc is limited by the width (92 %); a stage much taller than that is empty space */
+  .explore-pane .globe-stage { height: min(var(--stage-h), calc(100vw + 56px)); }
+  .globe-nav { position: static; grid-template-columns: repeat(3, 34px); }
+  .globe-nav button { width: 34px; height: 34px; }
+  .stage-readout { font-size: var(--fs-2xs); left: 8px; bottom: 8px; }
+  .globe-corner { right: 8px; bottom: 8px; }
+  .terrain-options { left: 56px; justify-content: flex-start; }
+  .terrain-nav { flex-direction: column; left: 8px; }
+  .map-status { max-width: calc(100% - 60px); }
+}
+/* dynamic viewport units where supported (after the vh fallbacks above, so they win) */
+@supports (height: 100dvh) {
+  @media (max-width: 900px) { .explore { --stage-h: clamp(360px, 70dvh, 680px); } }
+  @media (max-width: 600px) { .explore { --stage-h: clamp(300px, 62dvh, 540px); } }
+}

@@ -1,0 +1,13 @@
+# Phase 4 changed frontend files (baseline/frontend_files_sha256.txt vs logs/frontend_files_after_sha256.txt)
+
+modified (6):
+  src/components/MissionView.tsx
+  src/i18n/en.ts
+  src/styles/app.css
+  src/styles/views.css
+  src/ui/ChartLegend.tsx
+  src/ui/Icon.tsx
+added (2):
+  src/components/MissionLocator.tsx
+  src/styles/mission.css
+removed (0):

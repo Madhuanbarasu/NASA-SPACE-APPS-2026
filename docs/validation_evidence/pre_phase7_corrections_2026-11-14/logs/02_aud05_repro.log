@@ -1,0 +1,37 @@
+[
+ [
+  "aud05-repro-after-resize-150ms",
+  157,
+  0,
+  0,
+  ""
+ ],
+ [
+  "aud05-repro-after-resize-400ms",
+  931,
+  0,
+  0,
+  ""
+ ],
+ [
+  "aud05-repro-after-resize-700ms",
+  1420,
+  0,
+  0,
+  ""
+ ],
+ [
+  "aud05-repro-after-resize-1200ms",
+  1965,
+  0,
+  0,
+  ""
+ ],
+ [
+  "aud05-repro-after-resize-4000ms",
+  4003,
+  0,
+  0,
+  ""
+ ]
+]

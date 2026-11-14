@@ -1,0 +1,113 @@
+{
+  "retrieved_utc": "2026-11-10",
+  "products": {
+    "V-09": {
+      "product_id": "AVGVISIB_85S_060M_201608",
+      "target": "sun",
+      "img": {
+        "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/extras/illumination/img/avgvisib_85s_060m_201608.img",
+        "bytes": 51166728,
+        "sha256": "82dadf321dee28f1947c1fed81858d4cf50fe8eb2aa405aae114e8ab21c1efe1"
+      },
+      "label": {
+        "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/extras/illumination/img/avgvisib_85s_060m_201608.lbl",
+        "file": "avgvisib_85s_060m_201608.lbl",
+        "bytes": 4094,
+        "sha256": "33decce957d5d4d9608557d8d969d1e1b94056a159b2563624ade4b528a0c917"
+      },
+      "geotiff_crosscheck": {
+        "url": "https://pgda.gsfc.nasa.gov/data/MoonIllumination/AVGVISIB_85S_060M_201608.TIF",
+        "bytes": 33994464,
+        "sha256": "ccf67d4f39e0a970c111196da7d6551ffcf50d075470b93067fb3904c0b05806",
+        "last_modified": "2025-03-20",
+        "result": "identical DN at every pixel; geotransform equals the label-derived one"
+      }
+    },
+    "V-10": {
+      "product_id": "AVGVISIB_85S_060M_201608_EARTH",
+      "target": "earth",
+      "img": {
+        "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/extras/illumination/img/avgvisib_85s_060m_201608_earth.img",
+        "bytes": 51166728,
+        "sha256": "0958313069d6039b2474c875ff662f28dbcba2bd853d9ea458aa807b7948c11f"
+      },
+      "label": {
+        "url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/extras/illumination/img/avgvisib_85s_060m_201608_earth.lbl",
+        "file": "avgvisib_85s_060m_201608_earth.lbl",
+        "bytes": 4111,
+        "sha256": "45a61697d779fdb9170bca2553f9e0188aeda1159811d3531c348df8f57f68bd"
+      },
+      "geotiff_crosscheck": {
+        "url": "https://pgda.gsfc.nasa.gov/data/MoonIllumination/AVGVISIB_85S_060M_201608_EARTH.TIF",
+        "bytes": 24862958,
+        "sha256": "d71dc5adfff653e0e924e0a4cbf03795b996caa30b4ace3d5843a70a5ab2f3d2",
+        "last_modified": "2025-03-20",
+        "result": "identical DN at every pixel; geotransform equals the label-derived one"
+      }
+    }
+  },
+  "documented_facts": [
+    {
+      "fact": "value = fraction of timesteps in which any part of the disc is visible (\"the percentage of timesteps where each pixel was sunlit (by any fraction of the solar disc)\")",
+      "source": "PDS3 label DESCRIPTION (both products; EARTH reads 'Earth disc')"
+    },
+    {
+      "fact": "AVERAGE_VISIBILITY = DN * 0.00004 + 0.0; DN 25000 = 1; LSB_INTEGER 16-bit, 5058 x 5058",
+      "source": "PDS3 label IMAGE object"
+    },
+    {
+      "fact": "Earth counted visible if any part of its disc is not obscured",
+      "source": "https://pgda.gsfc.nasa.gov/products/69 (Earth visibility)"
+    },
+    {
+      "fact": "averaged over hourly timesteps spanning 18.6 years (lunar nutation cycle)",
+      "source": "https://pgda.gsfc.nasa.gov/products/69 (figure captions; Mazarico et al. 2011 summary)"
+    },
+    {
+      "fact": "computed on LOLA elevation map LDEM_85S_060M; LOLA data 2009-07-13 to 2013-07-18; product created 2016-09-15",
+      "source": "PDS3 label"
+    },
+    {
+      "fact": "polar stereographic, 60 m/pix true at the pole, 1737.4 km sphere, MEAN EARTH/POLAR AXIS OF DE421",
+      "source": "PDS3 label IMAGE_MAP_PROJECTION"
+    },
+    {
+      "fact": "complete coverage from 85 degrees to the pole, partial down to ~82.9 degrees",
+      "source": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/extras/illumination/readme_illumination_2016.txt"
+    },
+    {
+      "fact": "COG overview layers are averages of full-resolution values; not used here (the IMG is read at full resolution)",
+      "source": "https://pgda.gsfc.nasa.gov/products/69 (Data Access note)"
+    },
+    {
+      "fact": "EXTRAS products are not supported by the PDS or the LOLA Science Team",
+      "source": "readme_illumination_2016.txt"
+    }
+  ],
+  "label_defects": [
+    "IMAGE DESCRIPTION calls each sample 'a binary value', contradicting the product DESCRIPTION and the data (continuous 0..22111 / 0..25000)",
+    "EARTH label: MINIMUM_LATITUDE = 90 <deg> for a south-pole product; its DESCRIPTION says 'sunlit (by any fraction of the Earth disc)'"
+  ],
+  "assumptions": [
+    {
+      "parameter": "observer height",
+      "value_m": 0.0,
+      "basis": "not stated in the labels or on PGDA 69; PGDA 69 says assessing 'height above the surface (for potential rovers or habitats)' needs further analysis, which implies surface-level maps. Mazarico et al. (2011) not consulted (publisher and ADS not reachable here)."
+    },
+    {
+      "parameter": "epoch of the 18.6-year span",
+      "value": "2026-01-01T00:00:00Z (as V-11)",
+      "basis": "not stated; the average over a full nutation cycle is expected to depend little on the start (measured in the evidence)"
+    },
+    {
+      "parameter": "Earth occulting the Sun",
+      "value": "included (engine 'any' rule)",
+      "basis": "not stated for the solar map; the hours it changes are recorded per point"
+    }
+  ],
+  "criteria": {
+    "rmse_pp": 5.0,
+    "abs_bias_pp": 2.0,
+    "status": "provisional, not approved"
+  }
+}

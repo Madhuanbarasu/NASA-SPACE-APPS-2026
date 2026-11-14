@@ -1,0 +1,7 @@
+# level_probe.py re-run, z7 tile 63/64; output images go to E:\Temp (not into this folder)
+5m: coverage 0.58  line score cols/rows (z7, bilinear read) n/a
+20m: coverage 1.00  line score cols/rows (z7, bilinear read) (3.23, 2.5)
+   native 20m centre 512 px: line score (0.66, 0.59)
+80m: coverage 1.00  line score cols/rows (z7, bilinear read) (0.95, 0.87)
+   native 80m centre 512 px: line score (0.62, 0.68)
+240m: coverage 1.00  line score cols/rows (z7, bilinear read) (3.64, 2.27)

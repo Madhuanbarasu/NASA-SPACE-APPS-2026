@@ -1,0 +1,333 @@
+{
+ "label": "after",
+ "profile": {
+  "name": "native",
+  "cpu": 1,
+  "net": null
+ },
+ "base": "http://127.0.0.1:8765",
+ "browser": "Chrome/157.0.8103.39",
+ "started": "2026-11-11T10:03:56.985Z",
+ "plan": {
+  "coldLoads": 3,
+  "warmLoads": 2,
+  "workflow": true,
+  "leakCycles": 5,
+  "blockedUrls": [
+   "*/api/tiles/0/0/0.png"
+  ]
+ },
+ "complete": true,
+ "steps": [
+  "cold 1",
+  "cold 2",
+  "cold 3",
+  "warm 1",
+  "warm 2",
+  "workflow",
+  "leak check"
+ ],
+ "webgl": "ANGLE (Intel, Intel(R) Graphics (0x0000A7AC) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+ "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+ "hardwareConcurrency": 12,
+ "coldLoad": {
+  "runs": [
+   {
+    "cold": true,
+    "appReadyMs": 499.9,
+    "mapTilesDoneMs": null,
+    "ttfb": 46.3,
+    "domContentLoaded": 102,
+    "load": 102.7,
+    "fcp": 248,
+    "lcp": 248,
+    "cls": 0,
+    "longTasks": 2,
+    "longestTask": 103,
+    "tbt": 0,
+    "jsDecoded": 1244319,
+    "transfer": {
+     "totalKB": 1537.1,
+     "jsKB": 1216.1,
+     "cssKB": 20.7,
+     "fontKB": 88.3,
+     "apiKB": 13.8,
+     "tiles": 4,
+     "tilesKB": 197.2,
+     "requests": 14
+    },
+    "heapMB": 23.1,
+    "domNodes": 350,
+    "scriptMs": 174.1,
+    "layoutMs": 109.4,
+    "styleMs": 20.7,
+    "taskMs": 400.1
+   },
+   {
+    "cold": true,
+    "appReadyMs": 455.7,
+    "mapTilesDoneMs": null,
+    "ttfb": 6.5,
+    "domContentLoaded": 47.3,
+    "load": 47.5,
+    "fcp": 196,
+    "lcp": 196,
+    "cls": 0,
+    "longTasks": 2,
+    "longestTask": 105,
+    "tbt": 0,
+    "jsDecoded": 1244319,
+    "transfer": {
+     "totalKB": 1537.1,
+     "jsKB": 1216.1,
+     "cssKB": 20.7,
+     "fontKB": 88.3,
+     "apiKB": 13.8,
+     "tiles": 4,
+     "tilesKB": 197.2,
+     "requests": 14
+    },
+    "heapMB": 23.1,
+    "domNodes": 350,
+    "scriptMs": 197.1,
+    "layoutMs": 110.9,
+    "styleMs": 25.7,
+    "taskMs": 445
+   },
+   {
+    "cold": true,
+    "appReadyMs": 517.8,
+    "mapTilesDoneMs": null,
+    "ttfb": 7.3,
+    "domContentLoaded": 52.7,
+    "load": 52.9,
+    "fcp": 228,
+    "lcp": 228,
+    "cls": 0,
+    "longTasks": 2,
+    "longestTask": 141,
+    "tbt": 0,
+    "jsDecoded": 1244319,
+    "transfer": {
+     "totalKB": 1537.1,
+     "jsKB": 1216.1,
+     "cssKB": 20.7,
+     "fontKB": 88.3,
+     "apiKB": 13.8,
+     "tiles": 4,
+     "tilesKB": 197.2,
+     "requests": 14
+    },
+    "heapMB": 23.1,
+    "domNodes": 350,
+    "scriptMs": 242.5,
+    "layoutMs": 143.3,
+    "styleMs": 27,
+    "taskMs": 533.6
+   }
+  ],
+  "median": {
+   "n": 3,
+   "appReadyMs": 499.9,
+   "mapTilesDoneMs": null,
+   "ttfb": 7.3,
+   "domContentLoaded": 52.7,
+   "load": 52.9,
+   "fcp": 228,
+   "lcp": 228,
+   "cls": 0,
+   "tbt": 0,
+   "longTasks": 2,
+   "longestTask": 105,
+   "heapMB": 23.1,
+   "domNodes": 350,
+   "scriptMs": 197.1,
+   "transfer": {
+    "totalKB": 1537.1,
+    "jsKB": 1216.1,
+    "cssKB": 20.7,
+    "fontKB": 88.3,
+    "apiKB": 13.8,
+    "tiles": 4,
+    "tilesKB": 197.2,
+    "requests": 14
+   }
+  }
+ },
+ "warmLoad": {
+  "runs": [
+   {
+    "cold": false,
+    "appReadyMs": 541.5,
+    "mapTilesDoneMs": null,
+    "ttfb": 10.7,
+    "domContentLoaded": 66.5,
+    "load": 66.7,
+    "fcp": 268,
+    "lcp": 268,
+    "cls": 0,
+    "longTasks": 2,
+    "longestTask": 149,
+    "tbt": 0,
+    "jsDecoded": 1244319,
+    "transfer": {
+     "totalKB": 15.7,
+     "jsKB": 0.6,
+     "cssKB": 0.2,
+     "fontKB": 0.2,
+     "apiKB": 13.8,
+     "tiles": 4,
+     "tilesKB": 0,
+     "requests": 14
+    },
+    "heapMB": 23,
+    "domNodes": 350,
+    "scriptMs": 254.2,
+    "layoutMs": 149.2,
+    "styleMs": 29.2,
+    "taskMs": 576.9
+   },
+   {
+    "cold": false,
+    "appReadyMs": 1120.3,
+    "mapTilesDoneMs": null,
+    "ttfb": 12.1,
+    "domContentLoaded": 73.9,
+    "load": 74.3,
+    "fcp": 272,
+    "lcp": 272,
+    "cls": 0,
+    "longTasks": 2,
+    "longestTask": 149,
+    "tbt": 0,
+    "jsDecoded": 1244319,
+    "transfer": {
+     "totalKB": 15.7,
+     "jsKB": 0.6,
+     "cssKB": 0.2,
+     "fontKB": 0.2,
+     "apiKB": 13.8,
+     "tiles": 4,
+     "tilesKB": 0,
+     "requests": 14
+    },
+    "heapMB": 23.1,
+    "domNodes": 350,
+    "scriptMs": 272.9,
+    "layoutMs": 170,
+    "styleMs": 24.3,
+    "taskMs": 614.1
+   }
+  ],
+  "median": {
+   "n": 2,
+   "appReadyMs": 830.9,
+   "mapTilesDoneMs": null,
+   "ttfb": 11.4,
+   "domContentLoaded": 70.2,
+   "load": 70.5,
+   "fcp": 270,
+   "lcp": 270,
+   "cls": 0,
+   "tbt": 0,
+   "longTasks": 2,
+   "longestTask": 149,
+   "heapMB": 23.1,
+   "domNodes": 350,
+   "scriptMs": 263.5,
+   "transfer": {
+    "totalKB": 15.7,
+    "jsKB": 0.6,
+    "cssKB": 0.2,
+    "fontKB": 0.2,
+    "apiKB": 13.8,
+    "tiles": 4,
+    "tilesKB": 0,
+    "requests": 14
+   }
+  }
+ },
+ "consoleWarnings": [],
+ "saved": "2026-11-11T10:07:54.497Z",
+ "interactions": {
+  "tabs": {
+   "Compare": 21.5,
+   "Data and validation": 69.8,
+   "Guide": 17.7,
+   "Site": 34.9
+  },
+  "analysisToResultMs": 1385.5,
+  "analysisTo3DDataMs": 1813.3,
+  "analysisToMapTilesMs": null,
+  "resultJsonKB": 320.1,
+  "resultFetchMs": 213.5,
+  "terrainGridKB": 190.2,
+  "series": "337",
+  "cursorStep": {
+   "interactions": 20,
+   "medianMs": 32,
+   "p95Ms": 32,
+   "maxMs": 64
+  },
+  "playback": {
+   "steps": 33,
+   "frames": 302,
+   "fps": 60.3,
+   "frameP95": 16.9,
+   "frameMax": 17.1,
+   "longTasks": 0,
+   "longestTask": 0,
+   "blockingMs": 0,
+   "expectedSteps": 35,
+   "scriptMsPerStep": 3.9,
+   "layoutMs": 24.2,
+   "domNodes": 702
+  },
+  "playbackTablesOpen": {
+   "steps": 32,
+   "frames": 302,
+   "fps": 60.3,
+   "frameP95": 16.9,
+   "frameMax": 17.4,
+   "longTasks": 0,
+   "longestTask": 0,
+   "blockingMs": 0,
+   "expectedSteps": 35,
+   "scriptMsPerStep": 7.6,
+   "layoutMs": 23.9,
+   "domNodes": 5811
+  },
+  "rotate3D": {
+   "medianMs": 30.7,
+   "maxMs": 31.4
+  },
+  "modeToPublicMs": 30.5,
+  "modeToTechnicalMs": 31.2,
+  "resultToDataMs": 30.2,
+  "dataToResultMs": 150.4,
+  "compareToMatrixMs": 666.8,
+  "metricSwitchMs": 27.8,
+  "cellToResultMs": 164,
+  "heapAfterWorkflowMB": 37.2,
+  "domNodesAfterWorkflow": 7514
+ },
+ "memory": {
+  "cycles": 5,
+  "before": {
+   "heapMB": 29.7,
+   "nodes": 1082,
+   "listeners": 205
+  },
+  "after": {
+   "heapMB": 30,
+   "nodes": 1087,
+   "listeners": 210
+  },
+  "heapGrowthMB": 0.3,
+  "nodeGrowth": 5,
+  "listenerGrowth": 5,
+  "canvasesInDom": 2,
+  "newConsoleWarnings": []
+ },
+ "finished": "2026-11-11T10:07:54.496Z"
+}

@@ -1,0 +1,39 @@
+{
+  "scenarios": 54,
+  "identical": 49,
+  "different": 5,
+  "renderErrors": 0,
+  "totalMarkupChars": 375860,
+  "diffs": [
+    {
+      "scenario": "SiteView/technical",
+      "at": 22734,
+      "baseline": "le</div><div class=\"big\" style=\"color:var(--sun)\">56.3%</div><dl><dt>Sunlit time</dt><dd>13 h 30 min</dd><dt>Longest darkness</dt><dd>9 h 0 min</dd><dt>Sunlit windows</dt><dd>1, 1 brief</dd></dl></div",
+      "c10": "le</div><div class=\"big\" style=\"color:var(--sun)\">56.3%</div><dl><dt>Sunlit time </dt><dd>13 h 30 min</dd><dt>Longest darkness</dt><dd>9 h 0 min</dd><dt>Sunlit windows</dt><dd>1, 1 brief</dd></dl></di"
+    },
+    {
+      "scenario": "SiteView/technical-cursor",
+      "at": 32777,
+      "baseline": "le</div><div class=\"big\" style=\"color:var(--sun)\">56.3%</div><dl><dt>Sunlit time</dt><dd>13 h 30 min</dd><dt>Longest darkness</dt><dd>9 h 0 min</dd><dt>Sunlit windows</dt><dd>1, 1 brief</dd><dt>Unknow",
+      "c10": "le</div><div class=\"big\" style=\"color:var(--sun)\">56.3%</div><dl><dt>Sunlit time </dt><dd>13 h 30 min</dd><dt>Longest darkness</dt><dd>9 h 0 min</dd><dt>Sunlit windows</dt><dd>1, 1 brief</dd><dt>Unkno"
+    },
+    {
+      "scenario": "SiteView/public",
+      "at": 23480,
+      "baseline": "le</div><div class=\"big\" style=\"color:var(--sun)\">56.3%</div><dl><dt>Sunlit time</dt><dd>13 h 30 min</dd><dt>Longest darkness</dt><dd>9 h 0 min</dd><dt>Sunlit windows</dt><dd>1, 1 brief</dd></dl></div",
+      "c10": "le</div><div class=\"big\" style=\"color:var(--sun)\">56.3%</div><dl><dt>Sunlit time </dt><dd>13 h 30 min</dd><dt>Longest darkness</dt><dd>9 h 0 min</dd><dt>Sunlit windows</dt><dd>1, 1 brief</dd></dl></di"
+    },
+    {
+      "scenario": "SiteView/public-synthetic-custom",
+      "at": 23716,
+      "baseline": "le</div><div class=\"big\" style=\"color:var(--sun)\">56.3%</div><dl><dt>Sunlit time</dt><dd>13 h 30 min</dd><dt>Longest darkness</dt><dd>9 h 0 min</dd><dt>Sunlit windows</dt><dd>1, 1 brief</dd><dt>Unknow",
+      "c10": "le</div><div class=\"big\" style=\"color:var(--sun)\">56.3%</div><dl><dt>Sunlit time </dt><dd>13 h 30 min</dd><dt>Longest darkness</dt><dd>9 h 0 min</dd><dt>Sunlit windows</dt><dd>1, 1 brief</dd><dt>Unkno"
+    },
+    {
+      "scenario": "SiteView/cursor-end",
+      "at": 22754,
+      "baseline": "le</div><div class=\"big\" style=\"color:var(--sun)\">56.3%</div><dl><dt>Sunlit time</dt><dd>13 h 30 min</dd><dt>Longest darkness</dt><dd>9 h 0 min</dd><dt>Sunlit windows</dt><dd>1, 1 brief</dd></dl></div",
+      "c10": "le</div><div class=\"big\" style=\"color:var(--sun)\">56.3%</div><dl><dt>Sunlit time </dt><dd>13 h 30 min</dd><dt>Longest darkness</dt><dd>9 h 0 min</dd><dt>Sunlit windows</dt><dd>1, 1 brief</dd></dl></di"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+
+> luna-ops-frontend@0.1.0 audit:a11y
+> node scripts/a11y-live-audit.mjs --base http://127.0.0.1:8765 --out ../docs/validation_evidence/phase5_prompt3_2026-11-12/a11y_regression --label phase5p3
+
+┌─────────┬─────────────────────────┬───────────┬─────────────────┬──────────────┬────────────┬──────────┬──────────────────┬──────────────┬──────────┬───────────────┬─────────────────┬────────────────┬───────────┬────────┬─────────────────┐
+│ (index) │ view                    │ axUnnamed │ focusableNoRole │ contrastFail │ targetFail │ tabStops │ noFocusIndicator │ focusClipped │ obscured │ reflowHScroll │ reflowOffenders │ spacingClipped │ unlabeled │ dupIds │ roleApplication │
+├─────────┼─────────────────────────┼───────────┼─────────────────┼──────────────┼────────────┼──────────┼──────────────────┼──────────────┼──────────┼───────────────┼─────────────────┼────────────────┼───────────┼────────┼─────────────────┤
+│ 0       │ 'site-welcome'          │ 0         │ 0               │ 0            │ 0          │ 36       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 1       │ 'site-result-technical' │ 0         │ 0               │ 0            │ 0          │ 55       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 2       │ 'site-result-public'    │ 0         │ 0               │ 0            │ 0          │ '-'      │ '-'              │ '-'          │ '-'      │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 3       │ 'compare-matrix'        │ 0         │ 0               │ 0            │ 0          │ 76       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 4       │ 'data'                  │ 0         │ 0               │ 0            │ 0          │ 34       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 5       │ 'guide'                 │ 0         │ 0               │ 0            │ 0          │ 33       │ 0                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+└─────────┴─────────────────────────┴───────────┴─────────────────┴──────────────┴────────────┴──────────┴──────────────────┴──────────────┴──────────┴───────────────┴─────────────────┴────────────────┴───────────┴────────┴─────────────────┘
+{
+ "skipLink": {
+  "firstTabStop": "a.skip-link \"Skip to main content\"",
+  "afterEnter": "main"
+ },
+ "tabsArrowKeys": {
+  "afterRight": {
+   "selected": "Compare",
+   "focused": "Compare",
+   "tabStops": 1
+  },
+  "afterLeft": "Site"
+ },
+ "invalidCoordinates": {
+  "hint": "Latitude and longitude must be numbers in degrees, for example -89.5 and 222.5.",
+  "latInvalid": "true",
+  "describedBy": "coord-hint",
+  "runDisabled": true
+ },
+ "slider": {
+  "valuenow": "0",
+  "valuetext": "14 Nov 2026, 00:00 UTC"
+ },
+ "readoutLive": "polite",
+ "panoramaHoverEscape": {
+  "shown": true,
+  "afterEscape": false
+ },
+ "readoutLiveWhilePlaying": "off",
+ "mapKeyboard": {
+  "pan": {
+   "focused": true,
+   "changed": true
+  },
+  "zoom": {
+   "focused": true,
+   "changed": true
+  }
+ },
+ "terrain3dKeyboard": {
+  "pan": {
+   "focused": true,
+   "changed": true
+  },
+  "rotate": {
+   "focused": true,
+   "changed": true
+  },
+  "zoom": {
+   "focused": true,
+   "changed": true
+  }
+ },
+ "panoramaKeyboard": {
+  "onFocus": {
+   "role": "slider",
+   "now": "264",
+   "text": "Az 264.0°  horizon -1.55°  ±0.09° (1σ)  near field",
+   "visibleReadout": true
+  },
+  "afterArrowRight": {
+   "role": "slider",
+   "now": "265",
+   "text": "Az 265.0°  horizon -1.51°  ±0.09° (1σ)  near field",
+   "visibleReadout": true
+  },
+  "afterPageUp": {
+   "role": "slider",
+   "now": "275",
+   "text": "Az 275.0°  horizon -1.07°  ±0.09° (1σ)  near field",
+   "visibleReadout": true
+  },
+  "afterBlur": {
+   "role": "slider",
+   "now": "0",
+   "text": null,
+   "visibleReadout": false
+  }
+ },
+ "pointerAlternatives": {
+  "mapZoomIn": {
+   "button": {
+    "name": "Zoom map in",
+    "size": [
+     28,
+     28
+    ]
+   },
+   "changed": true
+  },
+  "mapZoomOut": {
+   "button": {
+    "name": "Zoom map out",
+    "size": [
+     28,
+     28
+    ]
+   },
+   "changed": true
+  },
+  "view3dRotateLeft": {
+   "button": {
+    "name": "Rotate view left",
+    "size": [
+     28,
+     28
+    ]
+   },
+   "changed": true
+  },
+  "view3dRotateRight": {
+   "button": {
+    "name": "Rotate view right",
+    "size": [
+     28,
+     28
+    ]
+   },
+   "changed": true
+  },
+  "view3dZoomIn": {
+   "button": {
+    "name": "Zoom view in",
+    "size": [
+     28,
+     28
+    ]
+   },
+   "changed": true
+  },
+  "view3dZoomOut": {
+   "button": {
+    "name": "Zoom view out",
+    "size": [
+     28,
+     28
+    ]
+   },
+   "changed": true
+  }
+ },
+ "statusAfterAnalysis": "Results ready for Custom site.",
+ "statusAfterComparison": "Comparison ready: 2 sites × 2 windows.",
+ "matrixCellSpace": "Site",
+ "matrixCellEnter": "Site",
+ "reducedMotionTransition": "0s",
+ "mobileSite": "screenshots/phase5p3-mobile-390-site.png"
+}

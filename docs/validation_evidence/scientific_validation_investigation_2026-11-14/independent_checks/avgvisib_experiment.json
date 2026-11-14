@@ -1,0 +1,1013 @@
+{
+ "source": "v09_v10.json",
+ "engine": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109",
+ "assumptions": {
+  "observer_height_m": 0.0,
+  "start_utc": "2026-01-01T00:00:00Z",
+  "years": 18.6,
+  "earth_occults_sun": "included (engine 'any' rule)",
+  "notes": "observer height and start epoch are not documented for AVGVISIB (see provenance.json)"
+ },
+ "points": [
+  {
+   "test": "V-09",
+   "role": "worst",
+   "lat": -89.87172921715288,
+   "lon": 211.11533231474183,
+   "stratum": 3,
+   "reference": 0.6510800000000001,
+   "reference_3x3": [
+    0.41496000000000005,
+    0.7548800000000001
+   ],
+   "stored_computed": 0.12017933369314558,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.12017933369314558,
+    "ground_h_m": 1558.989501953134,
+    "exact_hours": 31,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 11.5
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.7010634905058633,
+    "ground_h_m": 1558.989501953134,
+    "exact_hours": 181,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 9.9
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.5791239389627595,
+    "ground_h_m": 1559.143161349834,
+    "exact_hours": 167,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.9
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "worst",
+   "lat": -85.30147370869575,
+   "lon": 37.0797006905198,
+   "stratum": 3,
+   "reference": 0.7349600000000001,
+   "reference_3x3": [
+    0.35784000000000005,
+    0.8314800000000001
+   ],
+   "stored_computed": 0.20872381139296403,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.20872381139296403,
+    "ground_h_m": 6756.875976562489,
+    "exact_hours": 45,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 4.0
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.6683737304352093,
+    "ground_h_m": 6756.875976562489,
+    "exact_hours": 204,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.9
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.4594597909817968,
+    "ground_h_m": 6757.1812608506825,
+    "exact_hours": 217,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.2
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "worst",
+   "lat": -89.7843294170829,
+   "lon": 204.09592091666732,
+   "stratum": 4,
+   "reference": 0.8545600000000001,
+   "reference_3x3": [
+    0.43176000000000003,
+    0.8545600000000001
+   ],
+   "stored_computed": 0.3702222658358275,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.3702222658358275,
+    "ground_h_m": 1736.1766357421789,
+    "exact_hours": 119,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 6.9
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.855643736813699,
+    "ground_h_m": 1736.1766357421789,
+    "exact_hours": 184,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.4
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.5731011726608115,
+    "ground_h_m": 1734.7080213758672,
+    "exact_hours": 171,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.8
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "worst",
+   "lat": -89.47485136585945,
+   "lon": 222.55686188749715,
+   "stratum": 4,
+   "reference": 0.8844400000000001,
+   "reference_3x3": [
+    0.39768000000000003,
+    0.8844400000000001
+   ],
+   "stored_computed": 0.45460845885874096,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.45460845885874096,
+    "ground_h_m": 1947.355987548839,
+    "exact_hours": 179,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.5
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.8899035866738629,
+    "ground_h_m": 1947.355987548839,
+    "exact_hours": 183,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.6
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.6204491928757175,
+    "ground_h_m": 1946.4643283420228,
+    "exact_hours": 211,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.7
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "worst",
+   "lat": -89.7788973807371,
+   "lon": 203.46789889234364,
+   "stratum": 4,
+   "reference": 0.8002400000000001,
+   "reference_3x3": [
+    0.06256,
+    0.8519200000000001
+   ],
+   "stored_computed": 0.3767111525440361,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.3767111525440361,
+    "ground_h_m": 1736.1557617187505,
+    "exact_hours": 71,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.8
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.8148643344291252,
+    "ground_h_m": 1736.1557617187505,
+    "exact_hours": 191,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 10.0
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.5802033756930475,
+    "ground_h_m": 1735.206380208333,
+    "exact_hours": 63,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.6
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "worst",
+   "lat": -89.29900390547873,
+   "lon": 128.69769393041545,
+   "stratum": 3,
+   "reference": 0.69384,
+   "reference_3x3": [
+    0.26940000000000003,
+    0.69384
+   ],
+   "stored_computed": 0.27481477847014374,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.27481477847014374,
+    "ground_h_m": 1280.5898437500014,
+    "exact_hours": 78,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 6.3
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.6548623718168883,
+    "ground_h_m": 1280.5898437500014,
+    "exact_hours": 172,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.7
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.5488445120455326,
+    "ground_h_m": 1280.2000461154514,
+    "exact_hours": 208,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 6.0
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "worst",
+   "lat": -89.45114258547964,
+   "lon": 222.80862860002117,
+   "stratum": 4,
+   "reference": 0.8642000000000001,
+   "reference_3x3": [
+    0.0,
+    0.8642000000000001
+   ],
+   "stored_computed": 0.4725970266424611,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.4725970266424611,
+    "ground_h_m": 1957.3211975097656,
+    "exact_hours": 156,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.6
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.9029426917226829,
+    "ground_h_m": 1957.3211975097656,
+    "exact_hours": 180,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.4
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.6256623816299495,
+    "ground_h_m": 1956.2046440972222,
+    "exact_hours": 174,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.9
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "worst",
+   "lat": -89.46242899365296,
+   "lon": 223.06103965526657,
+   "stratum": 4,
+   "reference": 0.83128,
+   "reference_3x3": [
+    0.38316000000000006,
+    0.83128
+   ],
+   "stored_computed": 0.44480153083754476,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.44480153083754476,
+    "ground_h_m": 1950.5949401855491,
+    "exact_hours": 128,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.4
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.8526936852951278,
+    "ground_h_m": 1950.5949401855491,
+    "exact_hours": 191,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.4
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.5884647465776949,
+    "ground_h_m": 1949.291531032985,
+    "exact_hours": 188,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 6.3
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "worst",
+   "lat": -88.4563015623898,
+   "lon": 292.17642113380225,
+   "stratum": 3,
+   "reference": 0.6652800000000001,
+   "reference_3x3": [
+    0.45696000000000003,
+    0.69864
+   ],
+   "stored_computed": 0.2797090427358815,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.2797090427358815,
+    "ground_h_m": 1576.9869384765655,
+    "exact_hours": 176,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.0
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.7827142927236151,
+    "ground_h_m": 1576.9869384765655,
+    "exact_hours": 176,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.6
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.5436435896177813,
+    "ground_h_m": 1576.9313557942696,
+    "exact_hours": 215,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.9
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "worst",
+   "lat": -88.6627872058328,
+   "lon": 291.5731406561984,
+   "stratum": 3,
+   "reference": 0.6911600000000001,
+   "reference_3x3": [
+    0.43356000000000006,
+    0.8269200000000001
+   ],
+   "stored_computed": 0.31274839311123104,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.31274839311123104,
+    "ground_h_m": 1807.533569335901,
+    "exact_hours": 21,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.1
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.5106042392424317,
+    "ground_h_m": 1807.533569335901,
+    "exact_hours": 155,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.5
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.4102595554683283,
+    "ground_h_m": 1805.960815429665,
+    "exact_hours": 131,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 5.6
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "control",
+   "lat": -88.66462682251607,
+   "lon": 291.60435503042095,
+   "stratum": 4,
+   "reference": 0.8269200000000001,
+   "reference_3x3": [
+    0.38324,
+    0.8269200000000001
+   ],
+   "stored_computed": 0.8115953584220598,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.8115953584220598,
+    "ground_h_m": 1815.1489257812505,
+    "exact_hours": 173,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.2
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.8387775379029488,
+    "ground_h_m": 1815.1489257812505,
+    "exact_hours": 164,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 9.3
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.578259162945881,
+    "ground_h_m": 1812.1614718966991,
+    "exact_hours": 162,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.6
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "control",
+   "lat": -88.62863155218832,
+   "lon": 291.80908474143155,
+   "stratum": 3,
+   "reference": 0.62556,
+   "reference_3x3": [
+    0.30228000000000005,
+    0.63244
+   ],
+   "stored_computed": 0.6056744026299004,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.6056744026299004,
+    "ground_h_m": 1739.5856933593734,
+    "exact_hours": 178,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.3
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.6937834257396595,
+    "ground_h_m": 1739.5856933593734,
+    "exact_hours": 162,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.8
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.5460907217506501,
+    "ground_h_m": 1738.5577799479174,
+    "exact_hours": 178,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.2
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "control",
+   "lat": -85.79861795828351,
+   "lon": 356.1536306950029,
+   "stratum": 2,
+   "reference": 0.41524000000000005,
+   "reference_3x3": [
+    0.40440000000000004,
+    0.42152000000000006
+   ],
+   "stored_computed": 0.41587139983317795,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.41587139983317795,
+    "ground_h_m": 3268.8154296874727,
+    "exact_hours": 137,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.8
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.41684043962514106,
+    "ground_h_m": 3268.8154296874727,
+    "exact_hours": 135,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.2
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.4165399146263677,
+    "ground_h_m": 3269.2752821180275,
+    "exact_hours": 138,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.0
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "control",
+   "lat": -85.58543986004611,
+   "lon": 4.432172512119885,
+   "stratum": 1,
+   "reference": 0.34616,
+   "reference_3x3": [
+    0.31104000000000004,
+    0.35908
+   ],
+   "stored_computed": 0.34605146950591237,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.34605146950591237,
+    "ground_h_m": 2350.159912109368,
+    "exact_hours": 145,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 6.9
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.3506881409155586,
+    "ground_h_m": 2350.159912109368,
+    "exact_hours": 148,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 6.5
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.34572027869093763,
+    "ground_h_m": 2350.162543402769,
+    "exact_hours": 145,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 6.1
+   }
+  },
+  {
+   "test": "V-09",
+   "role": "control",
+   "lat": -86.28578686620773,
+   "lon": 32.737976249523925,
+   "stratum": 0,
+   "reference": 0.0,
+   "reference_3x3": [
+    0.0,
+    0.0
+   ],
+   "stored_computed": 0.0,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.0,
+    "ground_h_m": -783.0720214843393,
+    "exact_hours": 0,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 4.6
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.0,
+    "ground_h_m": -783.0720214843393,
+    "exact_hours": 0,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 4.8
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.0,
+    "ground_h_m": -783.5490993923229,
+    "exact_hours": 0,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 3.8
+   }
+  },
+  {
+   "test": "V-10",
+   "role": "worst",
+   "lat": -85.03497637805862,
+   "lon": 144.31907642593578,
+   "stratum": 1,
+   "reference": 0.26176000000000005,
+   "reference_3x3": [
+    0.20404000000000003,
+    0.27456
+   ],
+   "stored_computed": 0.039092782493498845,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.039092782493498845,
+    "ground_h_m": -2657.901123046874,
+    "exact_hours": 81,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 9.6
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.26559050095677345,
+    "ground_h_m": -2657.901123046874,
+    "exact_hours": 54,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 9.0
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.24987733673519455,
+    "ground_h_m": -2657.6780870225766,
+    "exact_hours": 65,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.5
+   }
+  },
+  {
+   "test": "V-10",
+   "role": "worst",
+   "lat": -85.74268371583725,
+   "lon": 352.5662969386201,
+   "stratum": 4,
+   "reference": 0.92176,
+   "reference_3x3": [
+    0.63812,
+    1.0
+   ],
+   "stored_computed": 0.7174574358471125,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.7174574358471125,
+    "ground_h_m": 3369.026123046877,
+    "exact_hours": 54,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.5
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 1.0,
+    "ground_h_m": 3369.026123046877,
+    "exact_hours": 0,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.8
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.7782493498846965,
+    "ground_h_m": 3368.5950520833358,
+    "exact_hours": 56,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.0
+   }
+  },
+  {
+   "test": "V-10",
+   "role": "worst",
+   "lat": -87.3425560430044,
+   "lon": 239.76044930209235,
+   "stratum": 1,
+   "reference": 0.24616000000000002,
+   "reference_3x3": [
+    0.0,
+    0.29184000000000004
+   ],
+   "stored_computed": 0.10662504293214269,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.10662504293214269,
+    "ground_h_m": -2095.640380859366,
+    "exact_hours": 114,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.0
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.260365045876061,
+    "ground_h_m": -2095.640380859366,
+    "exact_hours": 74,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.0
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.17867744467886756,
+    "ground_h_m": -2095.9793565538102,
+    "exact_hours": 89,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.3
+   }
+  },
+  {
+   "test": "V-10",
+   "role": "worst",
+   "lat": -85.10927713140853,
+   "lon": 341.65296177861507,
+   "stratum": 3,
+   "reference": 0.7335600000000001,
+   "reference_3x3": [
+    0.59828,
+    0.9334800000000001
+   ],
+   "stored_computed": 0.606858103135273,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.606858103135273,
+    "ground_h_m": 583.0392456054641,
+    "exact_hours": 42,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 9.7
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.7861365978116873,
+    "ground_h_m": 583.0392456054641,
+    "exact_hours": 54,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 9.7
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.6998981894902114,
+    "ground_h_m": 583.5518798828055,
+    "exact_hours": 47,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.1
+   }
+  },
+  {
+   "test": "V-10",
+   "role": "worst",
+   "lat": -86.17303569919281,
+   "lon": 178.94868343437494,
+   "stratum": 0,
+   "reference": 0.16328,
+   "reference_3x3": [
+    0.0021200000000000004,
+    0.22112
+   ],
+   "stored_computed": 0.039816495755851035,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.039816495755851035,
+    "ground_h_m": -2886.025146484377,
+    "exact_hours": 188,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 9.7
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.19355036553652913,
+    "ground_h_m": -2886.025146484377,
+    "exact_hours": 83,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 10.9
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.06606030126097837,
+    "ground_h_m": -2886.1317003038216,
+    "exact_hours": 237,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.5
+   }
+  },
+  {
+   "test": "V-10",
+   "role": "worst",
+   "lat": -87.18590586012459,
+   "lon": 238.3938171122033,
+   "stratum": 1,
+   "reference": 0.22796000000000002,
+   "reference_3x3": [
+    0.0,
+    0.31420000000000003
+   ],
+   "stored_computed": 0.11459815514449732,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.11459815514449732,
+    "ground_h_m": -2157.7563476562855,
+    "exact_hours": 136,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.4
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.27980104018448554,
+    "ground_h_m": -2157.7563476562855,
+    "exact_hours": 53,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.5
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.13588636475148422,
+    "ground_h_m": -2158.354844835103,
+    "exact_hours": 110,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 6.7
+   }
+  },
+  {
+   "test": "V-10",
+   "role": "control",
+   "lat": -85.677376851422,
+   "lon": 4.94759885898979,
+   "stratum": 4,
+   "reference": 1.0,
+   "reference_3x3": [
+    0.97096,
+    1.0
+   ],
+   "stored_computed": 1.0,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 1.0,
+    "ground_h_m": 2703.128417968773,
+    "exact_hours": 0,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.6
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 1.0,
+    "ground_h_m": 2703.128417968773,
+    "exact_hours": 0,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.3
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 1.0,
+    "ground_h_m": 2704.010633680576,
+    "exact_hours": 0,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.3
+   }
+  },
+  {
+   "test": "V-10",
+   "role": "control",
+   "lat": -86.21745463716346,
+   "lon": 335.4519027480616,
+   "stratum": 3,
+   "reference": 0.67632,
+   "reference_3x3": [
+    0.6747200000000001,
+    0.6783600000000001
+   ],
+   "stored_computed": 0.6760953829547127,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.6760953829547127,
+    "ground_h_m": 1677.2957763671843,
+    "exact_hours": 53,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.8
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.6763407094843237,
+    "ground_h_m": 1677.2957763671843,
+    "exact_hours": 45,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.5
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.6761873804033168,
+    "ground_h_m": 1677.5632595486097,
+    "exact_hours": 47,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 7.3
+   }
+  },
+  {
+   "test": "V-10",
+   "role": "control",
+   "lat": -89.1796910980164,
+   "lon": 108.78457547954939,
+   "stratum": 2,
+   "reference": 0.5649200000000001,
+   "reference_3x3": [
+    0.43796,
+    0.56916
+   ],
+   "stored_computed": 0.5647784701437614,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.5647784701437614,
+    "ground_h_m": 211.32360839843548,
+    "exact_hours": 43,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.3
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.5656432461606398,
+    "ground_h_m": 211.32360839843548,
+    "exact_hours": 45,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 9.7
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.5650912614690152,
+    "ground_h_m": 211.70522901746733,
+    "exact_hours": 37,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 9.9
+   }
+  },
+  {
+   "test": "V-10",
+   "role": "control",
+   "lat": -86.44613835474044,
+   "lon": 228.15856591414877,
+   "stratum": 1,
+   "reference": 0.39920000000000005,
+   "reference_3x3": [
+    0.39888,
+    0.39944
+   ],
+   "stored_computed": 0.3991953289828762,
+   "A_engine_0m": {
+    "outcome": "scored",
+    "computed": 0.3991953289828762,
+    "ground_h_m": -1712.5319824218727,
+    "exact_hours": 41,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.7
+   },
+   "B_engine_2m": {
+    "outcome": "scored",
+    "computed": 0.39929345959472057,
+    "ground_h_m": -1712.5319824218727,
+    "exact_hours": 43,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 8.5
+   },
+   "C_60m_near_field_0m": {
+    "outcome": "scored",
+    "computed": 0.39917692949315536,
+    "ground_h_m": -1712.9847140841987,
+    "exact_hours": 42,
+    "exact_unknown": 0,
+    "reason": null,
+    "s": 6.9
+   }
+  }
+ ]
+}

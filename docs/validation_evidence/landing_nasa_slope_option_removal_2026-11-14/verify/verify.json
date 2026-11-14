@@ -1,0 +1,1054 @@
+{
+ "results": [
+  {
+   "site": "site01",
+   "width": 1920,
+   "options": {
+    "values": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "enabled": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "checked": "slope",
+    "labels": [
+     "None",
+     "Elevation",
+     "Slope",
+     "Roughness",
+     "Data coverage",
+     "Height uncertainty",
+     "Slope above threshold"
+    ],
+    "nasaText": false,
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences"
+   },
+   "switched": [
+    {
+     "option": "elevation",
+     "checked": true,
+     "legend": "1572.52m1951.75LOLA heights above the 1,737.4 km sphere",
+     "newLayerRequests": [
+      "elevation.png"
+     ]
+    },
+    {
+     "option": "slope",
+     "checked": true,
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "newLayerRequests": []
+    },
+    {
+     "option": "roughness",
+     "checked": true,
+     "legend": "0.00m0.42Calculated: RMS residual about a fitted plane",
+     "newLayerRequests": [
+      "roughness.png"
+     ]
+    },
+    {
+     "option": "coverage",
+     "checked": true,
+     "legend": "Height from at least one LOLA returnHeight interpolated between LOLA tracksNo te",
+     "newLayerRequests": [
+      "coverage.png"
+     ]
+    },
+    {
+     "option": "uncertainty",
+     "checked": true,
+     "legend": "0.00m0.89Estimated by the product: RMS height error",
+     "newLayerRequests": [
+      "uncertainty.png"
+     ]
+    },
+    {
+     "option": "slope_exceed",
+     "checked": true,
+     "legend": "Enter a slope threshold to show this layer.",
+     "newLayerRequests": []
+    }
+   ],
+   "layout": {
+    "hscroll": false,
+    "outside": 0,
+    "clipped": 0
+   },
+   "stats": {
+    "nasaSlopeStatsRow": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 1440,
+   "options": {
+    "values": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "enabled": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "checked": "slope",
+    "labels": [
+     "None",
+     "Elevation",
+     "Slope",
+     "Roughness",
+     "Data coverage",
+     "Height uncertainty",
+     "Slope above threshold"
+    ],
+    "nasaText": false,
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences"
+   },
+   "switched": [
+    {
+     "option": "elevation",
+     "checked": true,
+     "legend": "1572.52m1951.75LOLA heights above the 1,737.4 km sphere",
+     "newLayerRequests": []
+    },
+    {
+     "option": "slope",
+     "checked": true,
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "newLayerRequests": []
+    },
+    {
+     "option": "roughness",
+     "checked": true,
+     "legend": "0.00m0.42Calculated: RMS residual about a fitted plane",
+     "newLayerRequests": []
+    },
+    {
+     "option": "coverage",
+     "checked": true,
+     "legend": "Height from at least one LOLA returnHeight interpolated between LOLA tracksNo te",
+     "newLayerRequests": []
+    },
+    {
+     "option": "uncertainty",
+     "checked": true,
+     "legend": "0.00m0.89Estimated by the product: RMS height error",
+     "newLayerRequests": []
+    },
+    {
+     "option": "slope_exceed",
+     "checked": true,
+     "legend": "Enter a slope threshold to show this layer.",
+     "newLayerRequests": []
+    }
+   ],
+   "layout": {
+    "hscroll": false,
+    "outside": 0,
+    "clipped": 0
+   },
+   "stats": {
+    "nasaSlopeStatsRow": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 1024,
+   "options": {
+    "values": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "enabled": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "checked": "slope",
+    "labels": [
+     "None",
+     "Elevation",
+     "Slope",
+     "Roughness",
+     "Data coverage",
+     "Height uncertainty",
+     "Slope above threshold"
+    ],
+    "nasaText": false,
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences"
+   },
+   "switched": [
+    {
+     "option": "elevation",
+     "checked": true,
+     "legend": "1572.52m1951.75LOLA heights above the 1,737.4 km sphere",
+     "newLayerRequests": []
+    },
+    {
+     "option": "slope",
+     "checked": true,
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "newLayerRequests": []
+    },
+    {
+     "option": "roughness",
+     "checked": true,
+     "legend": "0.00m0.42Calculated: RMS residual about a fitted plane",
+     "newLayerRequests": []
+    },
+    {
+     "option": "coverage",
+     "checked": true,
+     "legend": "Height from at least one LOLA returnHeight interpolated between LOLA tracksNo te",
+     "newLayerRequests": []
+    },
+    {
+     "option": "uncertainty",
+     "checked": true,
+     "legend": "0.00m0.89Estimated by the product: RMS height error",
+     "newLayerRequests": []
+    },
+    {
+     "option": "slope_exceed",
+     "checked": true,
+     "legend": "Enter a slope threshold to show this layer.",
+     "newLayerRequests": []
+    }
+   ],
+   "layout": {
+    "hscroll": false,
+    "outside": 0,
+    "clipped": 0
+   },
+   "stats": {
+    "nasaSlopeStatsRow": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 390,
+   "options": {
+    "values": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "enabled": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "checked": "slope",
+    "labels": [
+     "None",
+     "Elevation",
+     "Slope",
+     "Roughness",
+     "Data coverage",
+     "Height uncertainty",
+     "Slope above threshold"
+    ],
+    "nasaText": false,
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences"
+   },
+   "switched": [
+    {
+     "option": "elevation",
+     "checked": true,
+     "legend": "1572.52m1951.75LOLA heights above the 1,737.4 km sphere",
+     "newLayerRequests": [
+      "elevation.png"
+     ]
+    },
+    {
+     "option": "slope",
+     "checked": true,
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "newLayerRequests": [
+      "slope.png"
+     ]
+    },
+    {
+     "option": "roughness",
+     "checked": true,
+     "legend": "0.00m0.42Calculated: RMS residual about a fitted plane",
+     "newLayerRequests": [
+      "roughness.png"
+     ]
+    },
+    {
+     "option": "coverage",
+     "checked": true,
+     "legend": "Height from at least one LOLA returnHeight interpolated between LOLA tracksNo te",
+     "newLayerRequests": [
+      "coverage.png"
+     ]
+    },
+    {
+     "option": "uncertainty",
+     "checked": true,
+     "legend": "0.00m0.89Estimated by the product: RMS height error",
+     "newLayerRequests": [
+      "uncertainty.png"
+     ]
+    },
+    {
+     "option": "slope_exceed",
+     "checked": true,
+     "legend": "Enter a slope threshold to show this layer.",
+     "newLayerRequests": []
+    }
+   ],
+   "layout": {
+    "hscroll": false,
+    "outside": 0,
+    "clipped": 0
+   },
+   "stats": {
+    "nasaSlopeStatsRow": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 320,
+   "options": {
+    "values": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "enabled": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "checked": "slope",
+    "labels": [
+     "None",
+     "Elevation",
+     "Slope",
+     "Roughness",
+     "Data coverage",
+     "Height uncertainty",
+     "Slope above threshold"
+    ],
+    "nasaText": false,
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences"
+   },
+   "switched": [
+    {
+     "option": "elevation",
+     "checked": true,
+     "legend": "1572.52m1951.75LOLA heights above the 1,737.4 km sphere",
+     "newLayerRequests": [
+      "elevation.png"
+     ]
+    },
+    {
+     "option": "slope",
+     "checked": true,
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "newLayerRequests": []
+    },
+    {
+     "option": "roughness",
+     "checked": true,
+     "legend": "0.00m0.42Calculated: RMS residual about a fitted plane",
+     "newLayerRequests": [
+      "roughness.png"
+     ]
+    },
+    {
+     "option": "coverage",
+     "checked": true,
+     "legend": "Height from at least one LOLA returnHeight interpolated between LOLA tracksNo te",
+     "newLayerRequests": [
+      "coverage.png"
+     ]
+    },
+    {
+     "option": "uncertainty",
+     "checked": true,
+     "legend": "0.00m0.89Estimated by the product: RMS height error",
+     "newLayerRequests": [
+      "uncertainty.png"
+     ]
+    },
+    {
+     "option": "slope_exceed",
+     "checked": true,
+     "legend": "Enter a slope threshold to show this layer.",
+     "newLayerRequests": []
+    }
+   ],
+   "layout": {
+    "hscroll": false,
+    "outside": 0,
+    "clipped": 0
+   },
+   "stats": {
+    "nasaSlopeStatsRow": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "no-nasa-product",
+   "width": 1920,
+   "options": {
+    "values": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "enabled": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "checked": "slope",
+    "labels": [
+     "None",
+     "Elevation",
+     "Slope",
+     "Roughness",
+     "Data coverage",
+     "Height uncertainty",
+     "Slope above threshold"
+    ],
+    "nasaText": false,
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences"
+   },
+   "switched": [
+    {
+     "option": "elevation",
+     "checked": true,
+     "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+     "newLayerRequests": [
+      "elevation.png"
+     ]
+    },
+    {
+     "option": "slope",
+     "checked": true,
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "newLayerRequests": []
+    },
+    {
+     "option": "roughness",
+     "checked": true,
+     "legend": "0.00m1.36Calculated: RMS residual about a fitted plane",
+     "newLayerRequests": [
+      "roughness.png"
+     ]
+    },
+    {
+     "option": "coverage",
+     "checked": true,
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "newLayerRequests": [
+      "coverage.png"
+     ]
+    },
+    {
+     "option": "uncertainty",
+     "checked": true,
+     "legend": "0.00m1.48Estimated by the product: RMS height error",
+     "newLayerRequests": [
+      "uncertainty.png"
+     ]
+    },
+    {
+     "option": "slope_exceed",
+     "checked": true,
+     "legend": "Enter a slope threshold to show this layer.",
+     "newLayerRequests": []
+    }
+   ],
+   "layout": {
+    "hscroll": false,
+    "outside": 0,
+    "clipped": 0
+   },
+   "stats": {
+    "nasaSlopeStatsRow": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "no-nasa-product",
+   "width": 1440,
+   "options": {
+    "values": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "enabled": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "checked": "slope",
+    "labels": [
+     "None",
+     "Elevation",
+     "Slope",
+     "Roughness",
+     "Data coverage",
+     "Height uncertainty",
+     "Slope above threshold"
+    ],
+    "nasaText": false,
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences"
+   },
+   "switched": [
+    {
+     "option": "elevation",
+     "checked": true,
+     "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+     "newLayerRequests": [
+      "elevation.png"
+     ]
+    },
+    {
+     "option": "slope",
+     "checked": true,
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "newLayerRequests": [
+      "slope.png"
+     ]
+    },
+    {
+     "option": "roughness",
+     "checked": true,
+     "legend": "0.00m1.36Calculated: RMS residual about a fitted plane",
+     "newLayerRequests": [
+      "roughness.png"
+     ]
+    },
+    {
+     "option": "coverage",
+     "checked": true,
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "newLayerRequests": [
+      "coverage.png"
+     ]
+    },
+    {
+     "option": "uncertainty",
+     "checked": true,
+     "legend": "0.00m1.48Estimated by the product: RMS height error",
+     "newLayerRequests": [
+      "uncertainty.png"
+     ]
+    },
+    {
+     "option": "slope_exceed",
+     "checked": true,
+     "legend": "Enter a slope threshold to show this layer.",
+     "newLayerRequests": []
+    }
+   ],
+   "layout": {
+    "hscroll": false,
+    "outside": 0,
+    "clipped": 0
+   },
+   "stats": {
+    "nasaSlopeStatsRow": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "no-nasa-product",
+   "width": 1024,
+   "options": {
+    "values": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "enabled": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "checked": "slope",
+    "labels": [
+     "None",
+     "Elevation",
+     "Slope",
+     "Roughness",
+     "Data coverage",
+     "Height uncertainty",
+     "Slope above threshold"
+    ],
+    "nasaText": false,
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences"
+   },
+   "switched": [
+    {
+     "option": "elevation",
+     "checked": true,
+     "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+     "newLayerRequests": [
+      "elevation.png"
+     ]
+    },
+    {
+     "option": "slope",
+     "checked": true,
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "newLayerRequests": []
+    },
+    {
+     "option": "roughness",
+     "checked": true,
+     "legend": "0.00m1.36Calculated: RMS residual about a fitted plane",
+     "newLayerRequests": [
+      "roughness.png"
+     ]
+    },
+    {
+     "option": "coverage",
+     "checked": true,
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "newLayerRequests": [
+      "coverage.png"
+     ]
+    },
+    {
+     "option": "uncertainty",
+     "checked": true,
+     "legend": "0.00m1.48Estimated by the product: RMS height error",
+     "newLayerRequests": [
+      "uncertainty.png"
+     ]
+    },
+    {
+     "option": "slope_exceed",
+     "checked": true,
+     "legend": "Enter a slope threshold to show this layer.",
+     "newLayerRequests": []
+    }
+   ],
+   "layout": {
+    "hscroll": false,
+    "outside": 0,
+    "clipped": 0
+   },
+   "stats": {
+    "nasaSlopeStatsRow": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "no-nasa-product",
+   "width": 390,
+   "options": {
+    "values": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "enabled": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "checked": "slope",
+    "labels": [
+     "None",
+     "Elevation",
+     "Slope",
+     "Roughness",
+     "Data coverage",
+     "Height uncertainty",
+     "Slope above threshold"
+    ],
+    "nasaText": false,
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences"
+   },
+   "switched": [
+    {
+     "option": "elevation",
+     "checked": true,
+     "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+     "newLayerRequests": [
+      "elevation.png"
+     ]
+    },
+    {
+     "option": "slope",
+     "checked": true,
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "newLayerRequests": [
+      "slope.png"
+     ]
+    },
+    {
+     "option": "roughness",
+     "checked": true,
+     "legend": "0.00m1.36Calculated: RMS residual about a fitted plane",
+     "newLayerRequests": [
+      "roughness.png"
+     ]
+    },
+    {
+     "option": "coverage",
+     "checked": true,
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "newLayerRequests": [
+      "coverage.png"
+     ]
+    },
+    {
+     "option": "uncertainty",
+     "checked": true,
+     "legend": "0.00m1.48Estimated by the product: RMS height error",
+     "newLayerRequests": [
+      "uncertainty.png"
+     ]
+    },
+    {
+     "option": "slope_exceed",
+     "checked": true,
+     "legend": "Enter a slope threshold to show this layer.",
+     "newLayerRequests": []
+    }
+   ],
+   "layout": {
+    "hscroll": false,
+    "outside": 0,
+    "clipped": 0
+   },
+   "stats": {
+    "nasaSlopeStatsRow": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "site": "no-nasa-product",
+   "width": 320,
+   "options": {
+    "values": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "enabled": [
+     "none",
+     "elevation",
+     "slope",
+     "roughness",
+     "coverage",
+     "uncertainty",
+     "slope_exceed"
+    ],
+    "checked": "slope",
+    "labels": [
+     "None",
+     "Elevation",
+     "Slope",
+     "Roughness",
+     "Data coverage",
+     "Height uncertainty",
+     "Slope above threshold"
+    ],
+    "nasaText": false,
+    "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences"
+   },
+   "switched": [
+    {
+     "option": "elevation",
+     "checked": true,
+     "legend": "-916.67m-314.77LOLA heights above the 1,737.4 km sphere",
+     "newLayerRequests": []
+    },
+    {
+     "option": "slope",
+     "checked": true,
+     "legend": "0.00°40 or moreCalculated: Horn (1981) 3 x 3 differences",
+     "newLayerRequests": []
+    },
+    {
+     "option": "roughness",
+     "checked": true,
+     "legend": "0.00m1.36Calculated: RMS residual about a fitted plane",
+     "newLayerRequests": []
+    },
+    {
+     "option": "coverage",
+     "checked": true,
+     "legend": "Height present (measured or interpolated: not distinguishable)No terrain data",
+     "newLayerRequests": []
+    },
+    {
+     "option": "uncertainty",
+     "checked": true,
+     "legend": "0.00m1.48Estimated by the product: RMS height error",
+     "newLayerRequests": []
+    },
+    {
+     "option": "slope_exceed",
+     "checked": true,
+     "legend": "Enter a slope threshold to show this layer.",
+     "newLayerRequests": []
+    }
+   ],
+   "layout": {
+    "hscroll": false,
+    "outside": 0,
+    "clipped": 0
+   },
+   "stats": {
+    "nasaSlopeStatsRow": true
+   },
+   "verdict": "Pass"
+  }
+ ],
+ "layerResponses": [
+  {
+   "url": "slope.png",
+   "status": 200
+  },
+  {
+   "url": "elevation.png",
+   "status": 200
+  },
+  {
+   "url": "roughness.png",
+   "status": 200
+  },
+  {
+   "url": "coverage.png",
+   "status": 200
+  },
+  {
+   "url": "uncertainty.png",
+   "status": 200
+  },
+  {
+   "url": "elevation.png",
+   "status": 200
+  },
+  {
+   "url": "slope.png",
+   "status": 200
+  },
+  {
+   "url": "roughness.png",
+   "status": 200
+  },
+  {
+   "url": "coverage.png",
+   "status": 200
+  },
+  {
+   "url": "uncertainty.png",
+   "status": 200
+  },
+  {
+   "url": "slope.png",
+   "status": 200
+  },
+  {
+   "url": "elevation.png",
+   "status": 200
+  },
+  {
+   "url": "roughness.png",
+   "status": 200
+  },
+  {
+   "url": "coverage.png",
+   "status": 200
+  },
+  {
+   "url": "uncertainty.png",
+   "status": 200
+  },
+  {
+   "url": "slope.png",
+   "status": 200
+  },
+  {
+   "url": "slope.png",
+   "status": 200
+  },
+  {
+   "url": "elevation.png",
+   "status": 200
+  },
+  {
+   "url": "roughness.png",
+   "status": 200
+  },
+  {
+   "url": "coverage.png",
+   "status": 200
+  },
+  {
+   "url": "uncertainty.png",
+   "status": 200
+  },
+  {
+   "url": "elevation.png",
+   "status": 200
+  },
+  {
+   "url": "slope.png",
+   "status": 200
+  },
+  {
+   "url": "roughness.png",
+   "status": 200
+  },
+  {
+   "url": "coverage.png",
+   "status": 200
+  },
+  {
+   "url": "uncertainty.png",
+   "status": 200
+  },
+  {
+   "url": "slope.png",
+   "status": 200
+  },
+  {
+   "url": "elevation.png",
+   "status": 200
+  },
+  {
+   "url": "roughness.png",
+   "status": 200
+  },
+  {
+   "url": "coverage.png",
+   "status": 200
+  },
+  {
+   "url": "uncertainty.png",
+   "status": 200
+  },
+  {
+   "url": "elevation.png",
+   "status": 200
+  },
+  {
+   "url": "slope.png",
+   "status": 200
+  },
+  {
+   "url": "roughness.png",
+   "status": 200
+  },
+  {
+   "url": "coverage.png",
+   "status": 200
+  },
+  {
+   "url": "uncertainty.png",
+   "status": 200
+  }
+ ],
+ "console": [],
+ "layerResponseCodes": [
+  200
+ ],
+ "summary": {
+  "pass": 10,
+  "total": 10,
+  "consoleErrors": 0,
+  "layerResponseCodes": [
+   200
+  ]
+ }
+}

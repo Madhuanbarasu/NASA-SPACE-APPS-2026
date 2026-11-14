@@ -1,0 +1,133 @@
+{
+  "note": "no-write dry run; report.json only read",
+  "now": {
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-11T18:34:35Z"
+  },
+  "report_sha256_before": "5e6c76d75eff6c3454f68edc76ab5e08f48733e3ad2cfff72eac3e55db812e7b",
+  "files": [
+    {
+      "file": "v09_v10_final_2026-11-10/v09_v10.json",
+      "sha256": "cc6d27a7b594050b72a481e4379a33c2c56d340134b3d821d3bb4cb34efce401",
+      "script": "v09_v10_avgvisib",
+      "tests": {
+        "V-09": "not run",
+        "V-10": "not run"
+      },
+      "owned": [
+        "V-09",
+        "V-10"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "v11_final_2026-11-10/v11.json",
+      "sha256": "fa42c569dee745cd7f9acc0744bf8817956b7cc1bef96efd683de33da3cc2add",
+      "script": "v11_psr",
+      "tests": {
+        "V-11": "passed"
+      },
+      "owned": [
+        "V-11"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "v12_final_2026-11-10/v12.json",
+      "sha256": "d01b97f5a38d4d935ae3a268844926b41192cecaee09e513812758607bbad668",
+      "script": "v12_lroc",
+      "tests": {
+        "V-12": "passed"
+      },
+      "owned": [
+        "V-12"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "refresh_v04_v05_v13_v14_2026-11-11/v04_horizons/horizons.json",
+      "sha256": "401e446dad093fae2a7dd5c01768231ff5886101da21be5c1e5c789a1e0ad49b",
+      "script": "horizons_compare",
+      "tests": {
+        "V-04": "passed",
+        "V-05": "passed"
+      },
+      "owned": [
+        "V-04",
+        "V-05"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "refresh_v04_v05_v13_v14_2026-11-11/v13_eclipse/v13.json",
+      "sha256": "277fef85646a9a1451829e5fde28e9a119ba10f78b9079ba38f5bcb6ad7fd64a",
+      "script": "v13_eclipse",
+      "tests": {
+        "V-13": "passed"
+      },
+      "owned": [
+        "V-13"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "refresh_v04_v05_v13_v14_2026-11-11/v14_month/v14.json",
+      "sha256": "5ca3a28d0f1a6c9f455c5c7397960a149e049a944b8bf9bd2378aa41b2b2164e",
+      "script": "v14_month",
+      "tests": {
+        "V-14": "passed"
+      },
+      "owned": [
+        "V-14"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "phase4_remaining_decisions_2026-11-11/frontend_u04.json",
+      "sha256": "bdd4069d2ba3f92182a06d58ce1a5a19778e32ae78fb42bf0469d84d3b88fc42",
+      "script": "frontend_u04",
+      "tests": {
+        "U-04": "passed"
+      },
+      "owned": [
+        "U-04"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "phase4_remaining_decisions_2026-11-11/frontend_u06.json",
+      "sha256": "802ccaab058f30ac8a56e16b12ec64e929cd3d74e6527bcff69434d30f907343",
+      "script": "frontend_u06",
+      "tests": {
+        "U-06": "passed"
+      },
+      "owned": [
+        "U-06"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    }
+  ],
+  "projected_statuses": {
+    "V-04": "passed",
+    "V-05": "passed",
+    "V-09": "not run",
+    "V-10": "not run",
+    "V-11": "passed",
+    "V-12": "passed",
+    "V-13": "passed",
+    "V-14": "passed",
+    "U-04": "passed",
+    "U-06": "passed"
+  }
+}

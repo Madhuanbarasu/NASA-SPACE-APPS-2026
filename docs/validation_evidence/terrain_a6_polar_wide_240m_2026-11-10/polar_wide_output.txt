@@ -1,0 +1,47 @@
+================================================================================
+Phase 4 A6: Polar-Wide Cross-Product Terrain Validation
+Timestamp (UTC): 2026-11-10T16:31:46.723844Z
+Algorithm Version: 1.5.0
+Coverage Domain: Shared 80°S–90°S South Polar Disk (IAU:30135, radius <= 304 km)
+Lattice Design: 380 x 380 candidate locations (1,600 m spacing, 608 km x 608 km box)
+Elevation Evaluation Method:
+  - 80 m : Exact pixel centres from LDEM_80S_80MPP_ADJ.tiff
+  - 20 m : Production bilinear interpolation from LDEM_80S_20MPP_ADJ.TIF (chunked)
+  - 240 m: Production bilinear interpolation from LDEM_60S_240MPP_ADJ.TIF
+================================================================================
+
+Registered Product Sources:
+  - 20m : pgda90_20m/LDEM_80S_20MPP_ADJ.TIF (2,696,082,051 bytes, sha256=09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649)
+  - 80m : pgda90_80m/LDEM_80S_80MPP_ADJ.tiff (189,158,392 bytes, sha256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a)
+  - 240m: pgda90_240m/LDEM_60S_240MPP_ADJ.TIF (218,961,039 bytes, sha256=3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34)
+
+Generating candidate lattice coordinates (380 rows x 380 cols = 144,400 points)...
+Reading 80 m elevations at exact pixel centres...
+  80 m points valid: 144,400 / 144,400 (excluded 0 corner points beyond 80°S)
+Evaluating 240 m elevations via bilinear interpolation (LevelWindow)...
+  240 m points valid: 144,400 / 144,400
+Evaluating 20 m elevations via memory-bounded chunked bilinear interpolation...
+  20 m points valid: 144,400 / 144,400 (excluded 0 corner/nodata points)
+
+Computing Polar-Wide Elevation Statistics across Shared Domain...
+Common valid subset (20m, 80m, and 240m simultaneously valid): 144,400 points
+
+========================================================================================================================
+POLAR-WIDE (80°S–90°S) CROSS-PRODUCT ELEVATION DIFFERENCE STATISTICS (1,600 m LATTICE)
+========================================================================================================================
+Evaluation                         | Valid (n) | Excluded |  Mean (m) |  Std (m) |  RMS (m) |   Median | [p5, p95] (m)    
+--------------------------------------------------------------------------------------------------------------------------
+80m vs 240m (Polar-Wide Bilinear)  |   144,400 |        0 |   +0.0036 |   2.9870 |   2.9870 |  +0.1209 | [ -4.58,  +4.25] 
+20m vs 240m (Polar-Wide Bilinear)  |   144,400 |        0 |   +0.0091 |   3.1911 |   3.1911 |  +0.1505 | [ -4.87,  +4.48] 
+20m vs 80m (Polar-Wide Reference)  |   144,400 |        0 |   +0.0055 |   0.6238 |   0.6238 |  +0.0262 | [ -0.59,  +0.55] 
+Common Subset: 80m vs 240m         |   144,400 |        0 |   +0.0036 |   2.9870 |   2.9870 |  +0.1209 | [ -4.58,  +4.25] 
+Common Subset: 20m vs 240m         |   144,400 |        0 |   +0.0091 |   3.1911 |   3.1911 |  +0.1505 | [ -4.87,  +4.48] 
+Common Subset: 20m vs 80m          |   144,400 |        0 |   +0.0055 |   0.6238 |   0.6238 |  +0.0262 | [ -0.59,  +0.55] 
+========================================================================================================================
+
+Extreme Difference Ranges:
+  80m vs 240m (Polar-Wide Bilinear): min =   -61.08 m, max =   +59.24 m
+  20m vs 240m (Polar-Wide Bilinear): min =   -64.46 m, max =   +60.74 m
+  20m vs 80m (Polar-Wide Reference): min =   -33.14 m, max =   +61.85 m
+
+Polar-wide validation completed in 34.82 seconds.

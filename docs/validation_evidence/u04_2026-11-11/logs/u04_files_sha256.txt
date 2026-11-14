@@ -1,0 +1,5 @@
+982deab078227a31cae495070e52a8c3128ccdb964c45e78c50b49746318c3f1 *frontend/scripts/check-a11y.mjs
+349b25735bc8eae1801acdffebe7a89318728c85ef6b77a5102eae080c0792fe *frontend/scripts/a11y-live-audit.mjs
+5cc328b6e98409645a22afefd393766c51bccef4eb36335cbb48c7e53de1189e *frontend/scripts/check-strings.mjs
+d993948e6cd9757b4c3ac6bc97bac83489d3e11dcc86cd1caedc3ed37d864951 *frontend/package.json
+4e2fca4b0428fe00cde5b3f5b2a004298974841049231a375975cdf9e49e66fb *frontend/src/styles/app.css

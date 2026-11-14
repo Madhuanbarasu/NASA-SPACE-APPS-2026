@@ -1,0 +1,404 @@
+{
+ "base": "http://127.0.0.1:8000",
+ "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+ "started": "2026-11-13T00:06:13.478Z",
+ "sites": [
+  {
+   "typed": [
+    "-89.463163",
+    "222.510447"
+   ],
+   "exp": {
+    "lat": -89.463163,
+    "lon": 222.510447
+   },
+   "note": "Site01 (polar, covered)",
+   "sidebar": {
+    "lat": "-89.463163",
+    "lon": "222.510447",
+    "explorer": "89.463° S, 222.510° E"
+   },
+   "centre": {
+    "lat": -89.463,
+    "lon": 222.51
+   },
+   "markerPixels": 357,
+   "ok": true
+  },
+  {
+   "typed": [
+    "-85",
+    "0"
+   ],
+   "exp": {
+    "lat": -85,
+    "lon": 0
+   },
+   "note": "longitude 0",
+   "sidebar": {
+    "lat": "-85",
+    "lon": "0",
+    "explorer": "85.000° S, 0.000° E"
+   },
+   "centre": {
+    "lat": -85,
+    "lon": 0
+   },
+   "markerPixels": 381,
+   "ok": true
+  },
+  {
+   "typed": [
+    "-85",
+    "359.999"
+   ],
+   "exp": {
+    "lat": -85,
+    "lon": 359.999
+   },
+   "note": "longitude just below 360",
+   "sidebar": {
+    "lat": "-85",
+    "lon": "359.999",
+    "explorer": "85.000° S, 359.999° E"
+   },
+   "centre": {
+    "lat": -85,
+    "lon": 359.999
+   },
+   "markerPixels": 381,
+   "ok": true
+  },
+  {
+   "typed": [
+    "-80",
+    "-20"
+   ],
+   "exp": {
+    "lat": -80,
+    "lon": 340
+   },
+   "note": "west-negative longitude typed: east 340",
+   "sidebar": {
+    "lat": "-80",
+    "lon": "-20",
+    "explorer": "80.000° S, 340.000° E"
+   },
+   "centre": {
+    "lat": -80,
+    "lon": 340
+   },
+   "markerPixels": 373,
+   "ok": true
+  },
+  {
+   "typed": [
+    "-75.5",
+    "180"
+   ],
+   "exp": {
+    "lat": -75.5,
+    "lon": 180
+   },
+   "note": "longitude 180",
+   "sidebar": {
+    "lat": "-75.5",
+    "lon": "180",
+    "explorer": "75.500° S, 180.000° E"
+   },
+   "centre": {
+    "lat": -75.5,
+    "lon": 180
+   },
+   "markerPixels": 370,
+   "ok": true
+  },
+  {
+   "typed": [
+    "-60.5",
+    "90"
+   ],
+   "exp": {
+    "lat": -60.5,
+    "lon": 90
+   },
+   "note": "near the 60 S coverage edge",
+   "sidebar": {
+    "lat": "-60.5",
+    "lon": "90",
+    "explorer": "60.500° S, 90.000° E"
+   },
+   "centre": {
+    "lat": -60.5,
+    "lon": 90
+   },
+   "markerPixels": 390,
+   "ok": true
+  },
+  {
+   "typed": [
+    "-89.95",
+    "45"
+   ],
+   "exp": {
+    "lat": -89.95,
+    "lon": 45
+   },
+   "note": "within 0.1 degree of the pole (camera held at 89.9)",
+   "sidebar": {
+    "lat": "-89.95",
+    "lon": "45",
+    "explorer": "89.950° S, 45.000° E"
+   },
+   "centre": {
+    "lat": -89.9,
+    "lon": 45
+   },
+   "markerPixels": 355,
+   "ok": true
+  },
+  {
+   "typed": [
+    "-90",
+    "0"
+   ],
+   "exp": {
+    "lat": -90,
+    "lon": 0
+   },
+   "note": "the South Pole",
+   "sidebar": {
+    "lat": "-90",
+    "lon": "0",
+    "explorer": "90.000° S, 0.000° E"
+   },
+   "centre": {
+    "lat": -89.9,
+    "lon": 0
+   },
+   "markerPixels": 353,
+   "ok": true
+  },
+  {
+   "typed": [
+    "-30",
+    "10"
+   ],
+   "exp": {
+    "lat": -30,
+    "lon": 10
+   },
+   "note": "unsupported (outside terrain coverage)",
+   "sidebar": {
+    "lat": "-30",
+    "lon": "10",
+    "explorer": "30.000° S, 10.000° E"
+   },
+   "centre": {
+    "lat": -30,
+    "lon": 10
+   },
+   "markerPixels": 356,
+   "ok": true
+  },
+  {
+   "typed": [
+    "10",
+    "300"
+   ],
+   "exp": {
+    "lat": 10,
+    "lon": 300
+   },
+   "note": "northern hemisphere",
+   "sidebar": {
+    "lat": "10",
+    "lon": "300",
+    "explorer": "10.000° N, 300.000° E"
+   },
+   "centre": {
+    "lat": 10,
+    "lon": 300
+   },
+   "markerPixels": 342,
+   "ok": true
+  }
+ ],
+ "checks": [
+  {
+   "name": "Show on the globe centres the 3D Moon on the selected site (centre readout within 0.001 degrees; at the pole within the 89.9 degree camera limit) with the marker at the centre, for 10 sites incl. 0/360, west-negative input, 180, the pole, unsupported and northern points",
+   "ok": true,
+   "detail": [
+    {
+     "note": "Site01 (polar, covered)",
+     "centre": {
+      "lat": -89.463,
+      "lon": 222.51
+     },
+     "marker": 357,
+     "ok": true
+    },
+    {
+     "note": "longitude 0",
+     "centre": {
+      "lat": -85,
+      "lon": 0
+     },
+     "marker": 381,
+     "ok": true
+    },
+    {
+     "note": "longitude just below 360",
+     "centre": {
+      "lat": -85,
+      "lon": 359.999
+     },
+     "marker": 381,
+     "ok": true
+    },
+    {
+     "note": "west-negative longitude typed: east 340",
+     "centre": {
+      "lat": -80,
+      "lon": 340
+     },
+     "marker": 373,
+     "ok": true
+    },
+    {
+     "note": "longitude 180",
+     "centre": {
+      "lat": -75.5,
+      "lon": 180
+     },
+     "marker": 370,
+     "ok": true
+    },
+    {
+     "note": "near the 60 S coverage edge",
+     "centre": {
+      "lat": -60.5,
+      "lon": 90
+     },
+     "marker": 390,
+     "ok": true
+    },
+    {
+     "note": "within 0.1 degree of the pole (camera held at 89.9)",
+     "centre": {
+      "lat": -89.9,
+      "lon": 45
+     },
+     "marker": 355,
+     "ok": true
+    },
+    {
+     "note": "the South Pole",
+     "centre": {
+      "lat": -89.9,
+      "lon": 0
+     },
+     "marker": 353,
+     "ok": true
+    },
+    {
+     "note": "unsupported (outside terrain coverage)",
+     "centre": {
+      "lat": -30,
+      "lon": 10
+     },
+     "marker": 356,
+     "ok": true
+    },
+    {
+     "note": "northern hemisphere",
+     "centre": {
+      "lat": 10,
+      "lon": 300
+     },
+     "marker": 342,
+     "ok": true
+    }
+   ]
+  },
+  {
+   "name": "conversions: the explorer shows the east longitude 0-360 for a west-negative input (-20 -> 340.000 E)",
+   "ok": true,
+   "detail": {
+    "lat": "-80",
+    "lon": "-20",
+    "explorer": "80.000° S, 340.000° E"
+   }
+  },
+  {
+   "name": "no stale coordinates: typing a new site while the globe is open moves the view to it",
+   "ok": true,
+   "detail": {
+    "lat": -80,
+    "lon": 120
+   }
+  },
+  {
+   "name": "typing: half-typed values are not flown to; the view settles on the final value",
+   "ok": true,
+   "detail": {
+    "lat": -80.5,
+    "lon": 120
+   }
+  },
+  {
+   "name": "a click on the globe selects that point (sidebar updated) without moving the camera",
+   "ok": true,
+   "detail": {
+    "before": {
+     "lat": -80.5,
+     "lon": 120
+    },
+    "after": {
+     "lat": -80.5,
+     "lon": 120
+    },
+    "picked": {
+     "lat": "-81.457328",
+     "lon": "153.34405"
+    }
+   }
+  },
+  {
+   "name": "map pick then Show on the globe: the globe is centred on the newly picked site (no stale coordinates)",
+   "ok": true,
+   "detail": {
+    "mapPick": {
+     "lat": -81.456095,
+     "lon": 152.45555
+    },
+    "c4": {
+     "lat": -81.456,
+     "lon": 152.456
+    }
+   }
+  },
+  {
+   "name": "Mission dashboard 3D Moon opens the globe centred on the selected site",
+   "ok": true,
+   "detail": {
+    "lat": -87.5,
+    "lon": 300
+   }
+  },
+  {
+   "name": "no site selected: the globe opens at the default nearside viewpoint (0, 0) as before",
+   "ok": true,
+   "detail": {
+    "lat": 0,
+    "lon": 0
+   }
+  },
+  {
+   "name": "no page exceptions or console errors",
+   "ok": true,
+   "detail": []
+  }
+ ],
+ "finished": "2026-11-13T00:07:30.356Z"
+}

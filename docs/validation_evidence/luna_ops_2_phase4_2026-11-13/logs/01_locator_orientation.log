@@ -1,0 +1,10 @@
+lat -89.463163 lon 222.510447: map bearing -137.489553 deg, locator bearing -137.489553 deg, diff 2.27e-13; locator radius 0.01789 of the 60 S ring
+lat -89.2 lon 200: map bearing -160.000000 deg, locator bearing -160.000000 deg, diff 0.00e+0; locator radius 0.02667 of the 60 S ring
+lat -85 lon 0: map bearing 0.000000 deg, locator bearing 0.000000 deg, diff 0.00e+0; locator radius 0.16667 of the 60 S ring
+lat -85 lon 90: map bearing 90.000000 deg, locator bearing 90.000000 deg, diff 0.00e+0; locator radius 0.16667 of the 60 S ring
+lat -80 lon 180: map bearing 180.000000 deg, locator bearing 180.000000 deg, diff 0.00e+0; locator radius 0.33333 of the 60 S ring
+lat -75 lon 270: map bearing -90.000000 deg, locator bearing -90.000000 deg, diff 0.00e+0; locator radius 0.50000 of the 60 S ring
+lat -62 lon 45: map bearing 45.000000 deg, locator bearing 45.000000 deg, diff 0.00e+0; locator radius 0.93333 of the 60 S ring
+lat -70 lon 315.5: map bearing -44.500000 deg, locator bearing -44.500000 deg, diff 0.00e+0; locator radius 0.66667 of the 60 S ring
+worst bearing difference (deg) 2.27e-13 OK
+exit 0

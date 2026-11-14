@@ -1,0 +1,79 @@
+{
+  "selfTest": [
+    {
+      "name": "detects non-interactive-handler",
+      "passed": true,
+      "detail": "non-interactive-handler,focusable-without-role,positive-tabindex,role-application,img-without-name,svg-without-role,img-without-alt,unlabelled-control,range-without-valuetext,button-without-name"
+    },
+    {
+      "name": "detects positive-tabindex",
+      "passed": true,
+      "detail": "non-interactive-handler,focusable-without-role,positive-tabindex,role-application,img-without-name,svg-without-role,img-without-alt,unlabelled-control,range-without-valuetext,button-without-name"
+    },
+    {
+      "name": "detects focusable-without-role",
+      "passed": true,
+      "detail": "non-interactive-handler,focusable-without-role,positive-tabindex,role-application,img-without-name,svg-without-role,img-without-alt,unlabelled-control,range-without-valuetext,button-without-name"
+    },
+    {
+      "name": "detects role-application",
+      "passed": true,
+      "detail": "non-interactive-handler,focusable-without-role,positive-tabindex,role-application,img-without-name,svg-without-role,img-without-alt,unlabelled-control,range-without-valuetext,button-without-name"
+    },
+    {
+      "name": "detects img-without-name",
+      "passed": true,
+      "detail": "non-interactive-handler,focusable-without-role,positive-tabindex,role-application,img-without-name,svg-without-role,img-without-alt,unlabelled-control,range-without-valuetext,button-without-name"
+    },
+    {
+      "name": "detects svg-without-role",
+      "passed": true,
+      "detail": "non-interactive-handler,focusable-without-role,positive-tabindex,role-application,img-without-name,svg-without-role,img-without-alt,unlabelled-control,range-without-valuetext,button-without-name"
+    },
+    {
+      "name": "detects img-without-alt",
+      "passed": true,
+      "detail": "non-interactive-handler,focusable-without-role,positive-tabindex,role-application,img-without-name,svg-without-role,img-without-alt,unlabelled-control,range-without-valuetext,button-without-name"
+    },
+    {
+      "name": "detects unlabelled-control",
+      "passed": true,
+      "detail": "non-interactive-handler,focusable-without-role,positive-tabindex,role-application,img-without-name,svg-without-role,img-without-alt,unlabelled-control,range-without-valuetext,button-without-name"
+    },
+    {
+      "name": "detects range-without-valuetext",
+      "passed": true,
+      "detail": "non-interactive-handler,focusable-without-role,positive-tabindex,role-application,img-without-name,svg-without-role,img-without-alt,unlabelled-control,range-without-valuetext,button-without-name"
+    },
+    {
+      "name": "detects button-without-name",
+      "passed": true,
+      "detail": "non-interactive-handler,focusable-without-role,positive-tabindex,role-application,img-without-name,svg-without-role,img-without-alt,unlabelled-control,range-without-valuetext,button-without-name"
+    },
+    {
+      "name": "accepts compliant markup",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "allow-listed pointer convenience is accepted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "detects small text below 4.5:1 (old --faint on panel)",
+      "passed": true,
+      "detail": "--faint text on --panel: #7d8d9d on #1e2a37 = 4.28:1 < 4.5:1 | --faint text on --panel-raised: #7d8d9d on #243345 = 3.77:1 < 4.5:1 | text-input/select border against the page (1.4.11): #33475a on #17212c = 1.70:1 < 3:1 | text-input/select border against its own fill (1.4.11): #33475a on #1e2a37 = 1.52:1 < 3:1 | text inputs/selects must use border colour var(--control-edge) (1.4.11)"
+    },
+    {
+      "name": "detects control boundary below 3:1 (old --line)",
+      "passed": true,
+      "detail": "--faint text on --panel: #7d8d9d on #1e2a37 = 4.28:1 < 4.5:1 | --faint text on --panel-raised: #7d8d9d on #243345 = 3.77:1 < 4.5:1 | text-input/select border against the page (1.4.11): #33475a on #17212c = 1.70:1 < 3:1 | text-input/select border against its own fill (1.4.11): #33475a on #1e2a37 = 1.52:1 < 3:1 | text inputs/selects must use border colour var(--control-edge) (1.4.11)"
+    },
+    {
+      "name": "ratio() matches WCAG reference (#777777 on white = 4.48)",
+      "passed": true,
+      "detail": 4.478089453577214
+    }
+  ]
+}

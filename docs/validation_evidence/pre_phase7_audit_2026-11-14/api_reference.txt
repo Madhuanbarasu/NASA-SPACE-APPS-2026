@@ -1,0 +1,6 @@
+ENGINE ref 84.31S 359.05E 30 d: earth_centre 545.02 h (75.70%), sun_any 356.15 h, overlap 356.15 h, labels {'disk_visibility': 'Pending validation', 'events': 'Pending validation', 'horizon': 'Pending validation', 'power_indicator': 'Pending validation', 'sun_earth_azel': 'Validated'}
+LANDING ref: product 5m:Site01_final_adj_5mpp_surf.tif pixels [601, 601] slope median 10.85 mean 11.28 max 38.36 | roughness median 0.129 | candidates 42 {'defined': 28, 'weak': 14, 'within_uncertainty': 0, 'shape_only': 0} | measured 0.0918 | footprint {'slope': 'hazard', 'roughness': 'clear', 'relief': 'clear', 'depressions': 'none_detected', 'obstacles': 'manual'} | status Preliminary screening - not part of the validated engine
+COMMS ref: direct 545.02 h, 2 windows; RF 545.02 h; margin {'min': 13.96, 'max': 15.03}; engine labels {'sun_earth_azel': 'Validated', 'horizon': 'Pending validation', 'disk_visibility': 'Pending validation', 'events': 'Pending validation'}; status Preliminary simulation, not part of the validated engine
+LINK hand case FSPL: [210.9919] complete False
+LINK rb=0: {'rb_bps': 'Data rate must be greater than 0 bit/s'} margin [None]
+COVERAGE 40S: {'lat': -40.0, 'lon': 0.0, 'covered': False, 'levels': [], 'products': [], 'reason': 'The registered LOLA products cover 60-90 S only (south-pole-first scope, Q6).'}

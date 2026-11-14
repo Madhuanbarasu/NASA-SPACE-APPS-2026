@@ -1,0 +1,310 @@
+{
+ "why": "The original criterion required >= 5 layer-image network responses per width. Chrome serves a layer image it already holds from its memory cache without network events, so after the first width the count depends on caching, not on the map. Re-evaluated without that count; every other criterion unchanged; the original verdicts are kept above.",
+ "rows": [
+  {
+   "site": "site01",
+   "width": 1920,
+   "original_verdict": "Pass",
+   "layer_requests_seen": 5,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 1440,
+   "original_verdict": "Pass",
+   "layer_requests_seen": 5,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 1024,
+   "original_verdict": "Fail",
+   "layer_requests_seen": 4,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 390,
+   "original_verdict": "Pass",
+   "layer_requests_seen": 5,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "site01",
+   "width": 320,
+   "original_verdict": "Pass",
+   "layer_requests_seen": 5,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "s85",
+   "width": 1920,
+   "original_verdict": "Pass",
+   "layer_requests_seen": 5,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "s85",
+   "width": 1440,
+   "original_verdict": "Fail",
+   "layer_requests_seen": 2,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "s85",
+   "width": 1024,
+   "original_verdict": "Fail",
+   "layer_requests_seen": 4,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "s85",
+   "width": 390,
+   "original_verdict": "Pass",
+   "layer_requests_seen": 5,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "s85",
+   "width": 320,
+   "original_verdict": "Fail",
+   "layer_requests_seen": 0,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "s88",
+   "width": 1920,
+   "original_verdict": "Fail",
+   "layer_requests_seen": 4,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "s88",
+   "width": 1440,
+   "original_verdict": "Pass",
+   "layer_requests_seen": 5,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "s88",
+   "width": 1024,
+   "original_verdict": "Pass",
+   "layer_requests_seen": 5,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "s88",
+   "width": 390,
+   "original_verdict": "Pass",
+   "layer_requests_seen": 5,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  },
+  {
+   "site": "s88",
+   "width": 320,
+   "original_verdict": "Fail",
+   "layer_requests_seen": 0,
+   "checks": {
+    "map_host_over_200px": true,
+    "every_layer_request_200": true,
+    "legend_for_each_of_5_layers": true,
+    "no_map_status_message": true,
+    "four_findings_without_no_pixel_reason": true,
+    "obstacles_manual_review": true,
+    "no_error": true,
+    "no_hscroll_or_overflow": true
+   },
+   "re_evaluated_verdict": "Pass"
+  }
+ ],
+ "pass": 15,
+ "total": 15,
+ "backdrop_tiles_from_diagnosis_run": {
+  "s85-auto": {
+   "n": 9,
+   "codes": [
+    200
+   ],
+   "maxMs": 516,
+   "pendingAfter6s": 0
+  },
+  "s85-240m": {
+   "n": 6,
+   "codes": [
+    200
+   ],
+   "maxMs": 406,
+   "pendingAfter6s": 0
+  },
+  "s85-80m": {
+   "n": 0,
+   "codes": [],
+   "maxMs": 0,
+   "pendingAfter6s": 0
+  },
+  "s88-auto": {
+   "n": 9,
+   "codes": [
+    200
+   ],
+   "maxMs": 496,
+   "pendingAfter6s": 0
+  },
+  "site01-auto": {
+   "n": 6,
+   "codes": [
+    200
+   ],
+   "maxMs": 339,
+   "pendingAfter6s": 0
+  },
+  "s85-auto-12km": {
+   "n": 9,
+   "codes": [
+    200
+   ],
+   "maxMs": 492,
+   "pendingAfter6s": 0
+  }
+ }
+}

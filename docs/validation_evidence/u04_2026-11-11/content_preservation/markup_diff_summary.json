@@ -1,0 +1,279 @@
+{
+  "scenarios": 54,
+  "identical": 9,
+  "different": 45,
+  "renderErrors": 0,
+  "totalMarkupChars": 378714,
+  "diffs": [
+    {
+      "scenario": "TopBar/connecting",
+      "at": 207,
+      "baseline": "vigator</span></div><nav class=\"tabs\" role=\"tablist\" aria-label=\"Views\"><button role=\"tab\" class=\"tab\" aria-selected=\"true\">Site</button><button role=\"tab\" class=\"tab\" aria-selected=\"false\">Compare</b",
+      "c10": "vigator</span></div><nav class=\"tabs\" role=\"tablist\" aria-label=\"Views\"><button id=\"tab-site\" role=\"tab\" class=\"tab\" aria-selected=\"true\" aria-controls=\"view-panel\" tabindex=\"0\">Site</button><button i"
+    },
+    {
+      "scenario": "TopBar/production",
+      "at": 207,
+      "baseline": "vigator</span></div><nav class=\"tabs\" role=\"tablist\" aria-label=\"Views\"><button role=\"tab\" class=\"tab\" aria-selected=\"true\">Site</button><button role=\"tab\" class=\"tab\" aria-selected=\"false\">Compare</b",
+      "c10": "vigator</span></div><nav class=\"tabs\" role=\"tablist\" aria-label=\"Views\"><button id=\"tab-site\" role=\"tab\" class=\"tab\" aria-selected=\"true\" aria-controls=\"view-panel\" tabindex=\"0\">Site</button><button i"
+    },
+    {
+      "scenario": "TopBar/test-kernels-synthetic",
+      "at": 207,
+      "baseline": "vigator</span></div><nav class=\"tabs\" role=\"tablist\" aria-label=\"Views\"><button role=\"tab\" class=\"tab\" aria-selected=\"true\">Site</button><button role=\"tab\" class=\"tab\" aria-selected=\"false\">Compare</b",
+      "c10": "vigator</span></div><nav class=\"tabs\" role=\"tablist\" aria-label=\"Views\"><button id=\"tab-site\" role=\"tab\" class=\"tab\" aria-selected=\"true\" aria-controls=\"view-panel\" tabindex=\"0\">Site</button><button i"
+    },
+    {
+      "scenario": "TopBar/no-kernels-no-terrain",
+      "at": 207,
+      "baseline": "vigator</span></div><nav class=\"tabs\" role=\"tablist\" aria-label=\"Views\"><button role=\"tab\" class=\"tab\" aria-selected=\"true\">Site</button><button role=\"tab\" class=\"tab\" aria-selected=\"false\">Compare</b",
+      "c10": "vigator</span></div><nav class=\"tabs\" role=\"tablist\" aria-label=\"Views\"><button id=\"tab-site\" role=\"tab\" class=\"tab\" aria-selected=\"true\" aria-controls=\"view-panel\" tabindex=\"0\">Site</button><button i"
+    },
+    {
+      "scenario": "TopBar/one-product",
+      "at": 207,
+      "baseline": "vigator</span></div><nav class=\"tabs\" role=\"tablist\" aria-label=\"Views\"><button role=\"tab\" class=\"tab\" aria-selected=\"false\">Site</button><button role=\"tab\" class=\"tab\" aria-selected=\"false\">Compare</",
+      "c10": "vigator</span></div><nav class=\"tabs\" role=\"tablist\" aria-label=\"Views\"><button id=\"tab-site\" role=\"tab\" class=\"tab\" aria-selected=\"false\" aria-controls=\"view-panel\" tabindex=\"-1\">Site</button><button"
+    },
+    {
+      "scenario": "Sidebar/empty",
+      "at": 297,
+      "baseline": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"lon\" type=\"text\" inputMode=\"dec",
+      "c10": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" aria-describedby=\"coord-hint\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"l"
+    },
+    {
+      "scenario": "Sidebar/catalog-reason",
+      "at": 309,
+      "baseline": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"lon\" type=\"text\" inputMode=\"dec",
+      "c10": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" aria-describedby=\"coord-hint\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"l"
+    },
+    {
+      "scenario": "Sidebar/catalog",
+      "at": 626,
+      "baseline": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" value=\"-89.463163\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"lon\" type=\"text\" inpu",
+      "c10": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" aria-describedby=\"coord-hint\" value=\"-89.463163\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><i"
+    },
+    {
+      "scenario": "Sidebar/coords-typed",
+      "at": 297,
+      "baseline": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" value=\"-89.5\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"lon\" type=\"text\" inputMode",
+      "c10": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" aria-describedby=\"coord-hint\" value=\"-89.5\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input "
+    },
+    {
+      "scenario": "Sidebar/kernels-error",
+      "at": 297,
+      "baseline": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"lon\" type=\"text\" inputMode=\"dec",
+      "c10": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" aria-describedby=\"coord-hint\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"l"
+    },
+    {
+      "scenario": "Sidebar/status-error",
+      "at": 297,
+      "baseline": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"lon\" type=\"text\" inputMode=\"dec",
+      "c10": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" aria-describedby=\"coord-hint\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"l"
+    },
+    {
+      "scenario": "Sidebar/job",
+      "at": 297,
+      "baseline": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"lon\" type=\"text\" inputMode=\"dec",
+      "c10": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" aria-describedby=\"coord-hint\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"l"
+    },
+    {
+      "scenario": "Sidebar/error",
+      "at": 297,
+      "baseline": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"lon\" type=\"text\" inputMode=\"dec",
+      "c10": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" aria-describedby=\"coord-hint\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"l"
+    },
+    {
+      "scenario": "Sidebar/astronaut-fixed-panel",
+      "at": 297,
+      "baseline": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"lon\" type=\"text\" inputMode=\"dec",
+      "c10": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" aria-describedby=\"coord-hint\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"l"
+    },
+    {
+      "scenario": "Sidebar/equipment",
+      "at": 297,
+      "baseline": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"lon\" type=\"text\" inputMode=\"dec",
+      "c10": "/label><input id=\"lat\" type=\"text\" inputMode=\"decimal\" placeholder=\"e.g. -89.5\" aria-describedby=\"coord-hint\" value=\"\"/></div><div class=\"field\"><label for=\"lon\">East longitude (°)</label><input id=\"l"
+    },
+    {
+      "scenario": "SiteView/welcome-connecting",
+      "at": 1437,
+      "baseline": "</div><div class=\"pane-body\"><div class=\"map-host\" aria-label=\"South polar map. Click to choose a site.\" role=\"application\"></div></div><div class=\"pane-note\">Loading terrain tiles. Click the map to s",
+      "c10": "</div><div class=\"pane-body\"><div class=\"map-host\" aria-label=\"South polar map. Arrow keys pan, plus and minus zoom. Click the map or type coordinates to choose a site.\" role=\"region\" tabindex=\"0\"></d"
+    },
+    {
+      "scenario": "SiteView/welcome-ready",
+      "at": 1496,
+      "baseline": "</div><div class=\"pane-body\"><div class=\"map-host\" aria-label=\"South polar map. Click to choose a site.\" role=\"application\"></div></div><div class=\"pane-note\">Loading terrain tiles. Click the map to s",
+      "c10": "</div><div class=\"pane-body\"><div class=\"map-host\" aria-label=\"South polar map. Arrow keys pan, plus and minus zoom. Click the map or type coordinates to choose a site.\" role=\"region\" tabindex=\"0\"></d"
+    },
+    {
+      "scenario": "SiteView/welcome-demo",
+      "at": 1508,
+      "baseline": "</div><div class=\"pane-body\"><div class=\"map-host\" aria-label=\"South polar map. Click to choose a site.\" role=\"application\"></div></div><div class=\"pane-note\">Loading terrain tiles. Click the map to s",
+      "c10": "</div><div class=\"pane-body\"><div class=\"map-host\" aria-label=\"South polar map. Arrow keys pan, plus and minus zoom. Click the map or type coordinates to choose a site.\" role=\"region\" tabindex=\"0\"></d"
+    },
+    {
+      "scenario": "SiteView/welcome-no-kernels",
+      "at": 1486,
+      "baseline": "</div><div class=\"pane-body\"><div class=\"map-host\" aria-label=\"South polar map. Click to choose a site.\" role=\"application\"></div></div><div class=\"pane-note\">Loading terrain tiles. Click the map to s",
+      "c10": "</div><div class=\"pane-body\"><div class=\"map-host\" aria-label=\"South polar map. Arrow keys pan, plus and minus zoom. Click the map or type coordinates to choose a site.\" role=\"region\" tabindex=\"0\"></d"
+    },
+    {
+      "scenario": "SiteView/technical",
+      "at": 1825,
+      "baseline": "field)</span></div></div><div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon 1.80 deg",
+      "c10": "field)</span></div></div><div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"slider\" tabindex=\"0\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest "
+    },
+    {
+      "scenario": "SiteView/technical-cursor",
+      "at": 1971,
+      "baseline": " bound</span></div></div><div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon 1.80 deg",
+      "c10": " bound</span></div></div><div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"slider\" tabindex=\"0\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest "
+    },
+    {
+      "scenario": "SiteView/public",
+      "at": 2500,
+      "baseline": "field)</span></div></div><div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon 1.80 deg",
+      "c10": "field)</span></div></div><div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"slider\" tabindex=\"0\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest "
+    },
+    {
+      "scenario": "SiteView/public-synthetic-custom",
+      "at": 2632,
+      "baseline": " bound</span></div></div><div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon 1.80 deg",
+      "c10": " bound</span></div></div><div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"slider\" tabindex=\"0\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest "
+    },
+    {
+      "scenario": "SiteView/cursor-end",
+      "at": 1825,
+      "baseline": "field)</span></div></div><div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon 1.80 deg",
+      "c10": "field)</span></div></div><div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"slider\" tabindex=\"0\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest "
+    },
+    {
+      "scenario": "HorizonPanorama/cursor-0",
+      "at": 55,
+      "baseline": "<div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon 1.80 deg",
+      "c10": "<div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"slider\" tabindex=\"0\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest "
+    },
+    {
+      "scenario": "HorizonPanorama/cursor-5",
+      "at": 55,
+      "baseline": "<div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon 1.80 deg",
+      "c10": "<div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"slider\" tabindex=\"0\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest "
+    },
+    {
+      "scenario": "HorizonPanorama/cursor-20",
+      "at": 55,
+      "baseline": "<div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon 1.80 deg",
+      "c10": "<div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"slider\" tabindex=\"0\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest "
+    },
+    {
+      "scenario": "HorizonPanorama/cursor-31",
+      "at": 55,
+      "baseline": "<div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon 1.80 deg",
+      "c10": "<div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"slider\" tabindex=\"0\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest "
+    },
+    {
+      "scenario": "HorizonPanorama/cursor-48",
+      "at": 55,
+      "baseline": "<div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon 1.80 deg",
+      "c10": "<div class=\"panorama\"><svg viewBox=\"0 0 900 300\" role=\"slider\" tabindex=\"0\" aria-label=\"Terrain horizon around the site with the Sun and Earth tracks over the window. Highest "
+    },
+    {
+      "scenario": "CompareView/empty",
+      "at": 1004,
+      "baseline": "\"run-button\" style=\"width:auto;margin-top:0\" disabled=\"\">Compare 0 × 0</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><div class=\"footer-space\"></div></div>",
+      "c10": "\"run-button\" style=\"width:auto;margin-top:0\" disabled=\"\">Compare 0 × 0</button></div><div class=\"footer-space\"></div></div>"
+    },
+    {
+      "scenario": "CompareView/catalog",
+      "at": 1510,
+      "baseline": "\"run-button\" style=\"width:auto;margin-top:0\" disabled=\"\">Compare 2 × 0</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><div class=\"footer-space\"></div></div>",
+      "c10": "\"run-button\" style=\"width:auto;margin-top:0\" disabled=\"\">Compare 2 × 0</button></div><div class=\"footer-space\"></div></div>"
+    },
+    {
+      "scenario": "CompareView/windows",
+      "at": 2158,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 3</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><div class=\"footer-space\"></div></div>",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 3</button></div><div class=\"footer-space\"></div></div>"
+    },
+    {
+      "scenario": "CompareView/target",
+      "at": 2418,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 4 × 3</button><span class=\"hint\">Meets the team target of at least 4 sites × 3 windows (C01).</span></div><div class=\"footer-space\"></d",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 4 × 3</button></div><div class=\"footer-space\"></div></div>"
+    },
+    {
+      "scenario": "CompareView/busy-error",
+      "at": 2443,
+      "baseline": "style=\"width:auto;margin-top:0\" disabled=\"\">Comparing</button><span class=\"hint\">Meets the team target of at least 4 sites × 3 windows (C01).</span><span class=\"hint\" aria-live=\"polite\">Cell 2 of 12</",
+      "c10": "style=\"width:auto;margin-top:0\" disabled=\"\">Comparing</button><span class=\"hint\" aria-live=\"polite\">Cell 2 of 12</span><span class=\"hint bad\" role=\"alert\">The comparison stopped.</span></div><div clas"
+    },
+    {
+      "scenario": "CompareView/matrix-sunlit",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-dark",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-dte",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-dtegap",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-overlap",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-power",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-efsh",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "CompareView/matrix-bogus",
+      "at": 1829,
+      "baseline": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button><span class=\"hint\">Team target: at least 4 sites × 3 windows (C01).</span></div><section class=\"section\" aria-label=\"Comp",
+      "c10": "utton class=\"run-button\" style=\"width:auto;margin-top:0\">Compare 2 × 2</button></div><section class=\"section\" aria-label=\"Comparison matrix\"><div style=\"display:flex;justify-content:space-between;alig"
+    },
+    {
+      "scenario": "DataView/full",
+      "at": 2670,
+      "baseline": "/tbody></table><h2>Sources and attribution</h2><table class=\"data\"><tbody><tr><td>LOLA large-area DEMs (PGDA 90)</td><td>Barker et al. 2023, PSJ 4, 183, doi:10.3847/PSJ/acf3e1; data doi:10.60903/gsfcp",
+      "c10": "/tbody></table><h2>Sources and attribution</h2><table class=\"data\"><tbody><tr><th scope=\"row\">LOLA large-area DEMs (PGDA 90)</th><td>Barker et al. 2023, PSJ 4, 183, doi:10.3847/PSJ/acf3e1; data doi:10"
+    },
+    {
+      "scenario": "DataView/no-kernels-terrain-report",
+      "at": 816,
+      "baseline": "w in force</h2><h2>Sources and attribution</h2><table class=\"data\"><tbody><tr><td>LOLA large-area DEMs (PGDA 90)</td><td>Barker et al. 2023, PSJ 4, 183, doi:10.3847/PSJ/acf3e1; data doi:10.60903/gsfcp",
+      "c10": "w in force</h2><h2>Sources and attribution</h2><table class=\"data\"><tbody><tr><th scope=\"row\">LOLA large-area DEMs (PGDA 90)</th><td>Barker et al. 2023, PSJ 4, 183, doi:10.3847/PSJ/acf3e1; data doi:10"
+    },
+    {
+      "scenario": "DataView/kernels-no-coverage",
+      "at": 2328,
+      "baseline": "/tbody></table><h2>Sources and attribution</h2><table class=\"data\"><tbody><tr><td>LOLA large-area DEMs (PGDA 90)</td><td>Barker et al. 2023, PSJ 4, 183, doi:10.3847/PSJ/acf3e1; data doi:10.60903/gsfcp",
+      "c10": "/tbody></table><h2>Sources and attribution</h2><table class=\"data\"><tbody><tr><th scope=\"row\">LOLA large-area DEMs (PGDA 90)</th><td>Barker et al. 2023, PSJ 4, 183, doi:10.3847/PSJ/acf3e1; data doi:10"
+    }
+  ]
+}

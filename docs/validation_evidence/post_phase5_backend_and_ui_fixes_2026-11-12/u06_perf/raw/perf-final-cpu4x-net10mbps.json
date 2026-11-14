@@ -1,0 +1,312 @@
+{
+ "label": "final",
+ "profile": {
+  "name": "cpu4x-net10mbps",
+  "cpu": 4,
+  "net": {
+   "kbps": 10000,
+   "latencyMs": 40
+  }
+ },
+ "base": "http://127.0.0.1:8765",
+ "browser": "Chrome/157.0.8103.51",
+ "started": "2026-11-12T15:44:53.387Z",
+ "plan": {
+  "coldLoads": 3,
+  "warmLoads": 2,
+  "workflow": false,
+  "leakCycles": 0,
+  "phase5": true,
+  "blockedUrls": []
+ },
+ "complete": true,
+ "steps": [
+  "cold 1",
+  "cold 2",
+  "cold 3",
+  "warm 1",
+  "warm 2",
+  "phase5"
+ ],
+ "webgl": "ANGLE (Intel, Intel(R) Graphics (0x0000A7AC) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+ "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+ "hardwareConcurrency": 12,
+ "coldLoad": {
+  "runs": [
+   {
+    "cold": true,
+    "appReadyMs": 2293.4,
+    "mapTilesDoneMs": 4519.9,
+    "ttfb": 84.7,
+    "domContentLoaded": 575.4,
+    "load": 576.6,
+    "fcp": 1532,
+    "lcp": 1532,
+    "cls": 0,
+    "longTasks": 4,
+    "longestTask": 279,
+    "tbt": 243,
+    "jsDecoded": 789628,
+    "transfer": {
+     "totalKB": 1536.5,
+     "jsKB": 771.7,
+     "cssKB": 29.2,
+     "fontKB": 88.3,
+     "apiKB": 98.9,
+     "tiles": 8,
+     "tilesKB": 547.4,
+     "requests": 26
+    },
+    "heapMB": 25.6,
+    "domNodes": 376,
+    "scriptMs": 923.1,
+    "layoutMs": 815.9,
+    "styleMs": 163.4,
+    "taskMs": 2506
+   },
+   {
+    "cold": true,
+    "appReadyMs": 1772.2,
+    "mapTilesDoneMs": 4003.6,
+    "ttfb": 42.3,
+    "domContentLoaded": 463.5,
+    "load": 464.2,
+    "fcp": 1132,
+    "lcp": 1132,
+    "cls": 0,
+    "longTasks": 5,
+    "longestTask": 544,
+    "tbt": 289,
+    "jsDecoded": 789628,
+    "transfer": {
+     "totalKB": 1536.5,
+     "jsKB": 771.7,
+     "cssKB": 29.2,
+     "fontKB": 88.3,
+     "apiKB": 98.9,
+     "tiles": 8,
+     "tilesKB": 547.4,
+     "requests": 26
+    },
+    "heapMB": 24.7,
+    "domNodes": 376,
+    "scriptMs": 846.3,
+    "layoutMs": 574.9,
+    "styleMs": 115.3,
+    "taskMs": 2072.8
+   },
+   {
+    "cold": true,
+    "appReadyMs": 1746.8,
+    "mapTilesDoneMs": 4034,
+    "ttfb": 44.1,
+    "domContentLoaded": 458.5,
+    "load": 459,
+    "fcp": 1028,
+    "lcp": 1028,
+    "cls": 0,
+    "longTasks": 4,
+    "longestTask": 473,
+    "tbt": 280,
+    "jsDecoded": 789628,
+    "transfer": {
+     "totalKB": 1536.5,
+     "jsKB": 771.7,
+     "cssKB": 29.2,
+     "fontKB": 88.3,
+     "apiKB": 98.9,
+     "tiles": 8,
+     "tilesKB": 547.4,
+     "requests": 26
+    },
+    "heapMB": 25.7,
+    "domNodes": 376,
+    "scriptMs": 806.4,
+    "layoutMs": 599.2,
+    "styleMs": 84.9,
+    "taskMs": 2046.2
+   }
+  ],
+  "median": {
+   "n": 3,
+   "appReadyMs": 1772.2,
+   "mapTilesDoneMs": 4034,
+   "ttfb": 44.1,
+   "domContentLoaded": 463.5,
+   "load": 464.2,
+   "fcp": 1132,
+   "lcp": 1132,
+   "cls": 0,
+   "tbt": 280,
+   "longTasks": 4,
+   "longestTask": 473,
+   "heapMB": 25.6,
+   "domNodes": 376,
+   "scriptMs": 846.3,
+   "transfer": {
+    "totalKB": 1536.5,
+    "jsKB": 771.7,
+    "cssKB": 29.2,
+    "fontKB": 88.3,
+    "apiKB": 98.9,
+    "tiles": 8,
+    "tilesKB": 547.4,
+    "requests": 26
+   }
+  }
+ },
+ "warmLoad": {
+  "runs": [
+   {
+    "cold": false,
+    "appReadyMs": 1284.6,
+    "mapTilesDoneMs": 1340.1,
+    "ttfb": 1.7,
+    "domContentLoaded": 65.8,
+    "load": 66.2,
+    "fcp": 440,
+    "lcp": 440,
+    "cls": 0,
+    "longTasks": 7,
+    "longestTask": 300,
+    "tbt": 348,
+    "jsDecoded": 789628,
+    "transfer": {
+     "totalKB": 98.9,
+     "jsKB": 0,
+     "cssKB": 0,
+     "fontKB": 0,
+     "apiKB": 98.9,
+     "tiles": 8,
+     "tilesKB": 0,
+     "requests": 26
+    },
+    "heapMB": 23.2,
+    "domNodes": 372,
+    "scriptMs": 740.8,
+    "layoutMs": 376.1,
+    "styleMs": 61.5,
+    "taskMs": 1565.5
+   },
+   {
+    "cold": false,
+    "appReadyMs": 1666.5,
+    "mapTilesDoneMs": 1680.2,
+    "ttfb": 2.1,
+    "domContentLoaded": 87.1,
+    "load": 87.5,
+    "fcp": 800,
+    "lcp": 800,
+    "cls": 0,
+    "longTasks": 4,
+    "longestTask": 368,
+    "tbt": 376,
+    "jsDecoded": 789628,
+    "transfer": {
+     "totalKB": 98.9,
+     "jsKB": 0,
+     "cssKB": 0,
+     "fontKB": 0,
+     "apiKB": 98.9,
+     "tiles": 8,
+     "tilesKB": 0,
+     "requests": 26
+    },
+    "heapMB": 23.3,
+    "domNodes": 372,
+    "scriptMs": 803.6,
+    "layoutMs": 611.4,
+    "styleMs": 119.8,
+    "taskMs": 1824.2
+   }
+  ],
+  "median": {
+   "n": 2,
+   "appReadyMs": 1475.6,
+   "mapTilesDoneMs": 1510.2,
+   "ttfb": 1.9,
+   "domContentLoaded": 76.4,
+   "load": 76.9,
+   "fcp": 620,
+   "lcp": 620,
+   "cls": 0,
+   "tbt": 362,
+   "longTasks": 5.5,
+   "longestTask": 334,
+   "heapMB": 23.3,
+   "domNodes": 372,
+   "scriptMs": 772.2,
+   "transfer": {
+    "totalKB": 98.9,
+    "jsKB": 0,
+    "cssKB": 0,
+    "fontKB": 0,
+    "apiKB": 98.9,
+    "tiles": 8,
+    "tilesKB": 0,
+    "requests": 26
+   }
+  }
+ },
+ "consoleWarnings": [],
+ "saved": "2026-11-12T15:45:59.269Z",
+ "phase5": {
+  "tabToMissionMs": 137.9,
+  "tabMissionToSiteMs": 71.8,
+  "globeToCanvasMs": 1069.7,
+  "globeToImageryMs": 1310.1,
+  "globeImageryKB": 556.7,
+  "globeKeySteps": {
+   "interactions": 10,
+   "medianMs": 16,
+   "p95Ms": 48,
+   "maxMs": 48
+  },
+  "terrainToCanvasMs": 195.8,
+  "terrainToDataMs": 397.7,
+  "terrainKeySteps": {
+   "interactions": 10,
+   "medianMs": 16,
+   "p95Ms": 32,
+   "maxMs": 32
+  },
+  "globeRemount": {
+   "cycles": 5,
+   "before": {
+    "heapMB": 25.3,
+    "nodes": 431,
+    "listeners": 196
+   },
+   "after": {
+    "heapMB": 26,
+    "nodes": 456,
+    "listeners": 201
+   },
+   "heapGrowthMB": 0.7,
+   "nodeGrowth": 25,
+   "listenerGrowth": 5,
+   "canvasesInDom": 1,
+   "newConsoleWarnings": []
+  },
+  "terrainRemount": {
+   "cycles": 5,
+   "before": {
+    "heapMB": 26.4,
+    "nodes": 514,
+    "listeners": 191
+   },
+   "after": {
+    "heapMB": 26.6,
+    "nodes": 519,
+    "listeners": 196
+   },
+   "heapGrowthMB": 0.2,
+   "nodeGrowth": 5,
+   "listenerGrowth": 5,
+   "canvasesInDom": 1,
+   "newConsoleWarnings": []
+  },
+  "heapAfterPhase5MB": 26.6
+ },
+ "finished": "2026-11-12T15:45:59.269Z"
+}

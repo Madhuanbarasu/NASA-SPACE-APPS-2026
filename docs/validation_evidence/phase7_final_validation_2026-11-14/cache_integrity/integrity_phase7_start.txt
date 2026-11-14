@@ -1,0 +1,12 @@
+code_fingerprint 9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8
+suite_fingerprint 519a8e4ca3053cbc4c151fccf68397f17c416f3ce677ef4ec66052a7eb116cb6
+sha256 backend/validation/report.json 8c03ebafc72c5c41a238565f51464413bd63f3132302491cc518587d93ebe10d
+sha256 backend/lunaops/api/tiles.py 05b1df86fdc63fc5ca784eca3021e2429465771843cded4c37d2ac87b8d62746
+sha256 backend/lunaops/api/main.py 1e2e92cae8be04804e981676bd5833791204bd99249fffb668ed4a478fe08980
+sha256 data/dem/registry.json e664976c483ceb888aa08ef8afd7169daa7dee94691df12a01b3453fe1318725
+backend/lunaops tree digest (all files, no __pycache__) 1a2108550946daa9c57585ffe2b3eebbde0ac4c5b686e11992cf17a090306ee0
+cached horizons 38 digest 4e8ae9f1d31f89dc1667b35bd5178a8c3fdfd7913fa894907ba329a4753bde8d
+cache table horizons: 34 rows; digest of key column 30f7e2d399cdf28357574010eaa7ee813e436681deca0a05402e0c297004d29c
+cache table results: 88 rows; digest of id column 84666c1bda4f039fc89f916dd193efb3c4a0f948fd6e7c9606bea9dbba4dd776
+results created before 2026-11-13 20:00 UTC (the audit's count): 74; files missing: 0; digest a7095be402384b3924e64ab098d95b5cd7e4e46f2b38a763a634f71f3f274826
+indexed horizons with their file present: 34 of 34

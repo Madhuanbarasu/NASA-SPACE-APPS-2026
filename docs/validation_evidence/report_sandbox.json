@@ -1,0 +1,227 @@
+{
+  "run_utc": "2026-11-07T13:24:51Z",
+  "code_version": "0.1.0",
+  "code_fingerprint": "0ac6ff084e9e5b7cc9b35b1874095539b48ad6074aa75cdf1d47d774e57f5620",
+  "suite_fingerprint": "c3cda1e695a210f23de06fb5e900a21e8658a62ff0c7262b7b4627930096d116",
+  "kernel_profile": "sandbox-test",
+  "kernels": [
+    {
+      "name": "lunaops_test_lsk.tls",
+      "sha256": "055634df53f403f31350324b4f194700031765eab14c56996af8caf557ab8101"
+    },
+    {
+      "name": "lunaops_test_radii.tpc",
+      "sha256": "2291c225f9e70ce6ea420034c3187d6e7b86f61246d3a6ee483c2332317e1eb8"
+    },
+    {
+      "name": "de440s.bsp",
+      "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    },
+    {
+      "name": "moon_pa_de421_1900-2050.bpc",
+      "sha256": "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf"
+    },
+    {
+      "name": "moon_080317.tf",
+      "sha256": "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993"
+    },
+    {
+      "name": "moon_assoc_me.tf",
+      "sha256": "52c622043ce0447d575e59ee01642f1894921e68c10f934ceff065f362da6c1c"
+    }
+  ],
+  "pytest_exit_code": 0,
+  "tests": {
+    "V-01": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02a": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02b": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02c": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02d": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02e": {
+      "status": "skipped",
+      "detail": "needs production DE440 kernels plus the DE421 lunar PCK/FK"
+    },
+    "V-03": {
+      "status": "passed",
+      "detail": "7 case(s)"
+    },
+    "V-04": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-05": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-06": {
+      "status": "passed",
+      "detail": "2 case(s)"
+    },
+    "V-07": {
+      "status": "passed",
+      "detail": "2 case(s)"
+    },
+    "V-08": {
+      "status": "passed",
+      "detail": "7 case(s)"
+    },
+    "V-08b": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-09": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-10": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-11": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-12": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-13": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-14": {
+      "status": "passed",
+      "detail": "full V-14: 29.5306 days x 3 site(s), 1 s brute force; 955 required window edges, 0 missed, 0 beyond 1.0 s, 0 spurious; worst offset 0.5 s",
+      "source": "external",
+      "script": "v14_month",
+      "external_status": "passed",
+      "automated_status": "passed",
+      "run_utc": "2026-11-07T13:19:17Z"
+    },
+    "U-01": {
+      "status": "passed",
+      "detail": "2 case(s)"
+    },
+    "U-02": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "U-03": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "U-04": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-05": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "U-06": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-07": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_terrain_missing_or_changed_file_is_refused_not_skipped": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_terrain_digest_follows_synthetic_permission": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dem_rejects_implausible_values_and_accepts_error_maps": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_sigma_uses_the_error_map_of_the_product_that_was_sampled": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_error_map_must_share_the_dem_grid": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_pgda_roi_tgz_registers_with_unique_ids": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_merge_guard_ownership_status_and_no_upgrade": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_suite_fingerprint_tracks_tests": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dem_registry_migration_and_multi_product": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dem_multi_product_sampling": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_label_integrity": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_external_merge_guard": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_kernel_sets_live_in_separate_folders": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_demo_lock_in_production_folder_is_refused_then_migrated": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_install_pipeline_checks_stages_loads_and_commits": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_failed_install_leaves_existing_set_untouched": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_set_that_does_not_load_is_not_installed": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_verify_kernels_passes_then_catches_tampering": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_production_manifest_is_pinned_and_checkable": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_checksum_listing_parsed_in_any_common_layout": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    }
+  },
+  "rejected_merges": {},
+  "note": "U-04 (accessibility) and U-06 (performance) are run with frontend/scripts and recorded here via --merge."
+}

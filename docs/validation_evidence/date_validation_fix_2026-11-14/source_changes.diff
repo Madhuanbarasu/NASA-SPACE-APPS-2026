@@ -1,0 +1,149 @@
+--- before/frontend/src/components/Sidebar.tsx
++++ after/frontend/src/components/Sidebar.tsx
+@@ -1,7 +1,8 @@
+ import type { ObserverProfile, PanelModel, Rule } from "../api/types";
+ import { S } from "../i18n";
+ import { PANEL_NAMES, RULE_NAMES, fmtLatLon, fromInputValue, toInputValue } from "../lib/format";
+-import { parseSite } from "../lib/moonGeo";
++import { lon360, parseSite } from "../lib/moonGeo";
++import { windowValid } from "../lib/timeWindow";
+ import { useStore } from "../state/store";
+ import { Icon } from "../ui/Icon";
+ 
+@@ -48,7 +49,10 @@
+ 
+   const busy = !!state.job;
+   const kernelsReady = !!state.status?.kernels.loaded;
+-  const canRun = coordsGiven && cov?.covered && kernelsReady && !busy;
++  // E2E-07: the end must be strictly after the start (UTC); otherwise the end field is marked and Analyse disabled
++  const windowBad = !windowValid(s.start, s.end);
++  const azUsed = lon360(s.panelAz);
++  const canRun = coordsGiven && cov?.covered && kernelsReady && !busy && !windowBad;
+ 
+   const addToCompare = () => {
+     if (!coordsGiven) return;
+@@ -120,8 +124,10 @@
+         </div>
+         <div className="field">
+           <label htmlFor="end">{T.end}</label>
+-          <input id="end" type="datetime-local" value={toInputValue(s.end)} onChange={(e) => set({ end: fromInputValue(e.target.value) })} />
++          <input id="end" type="datetime-local" value={toInputValue(s.end)} onChange={(e) => set({ end: fromInputValue(e.target.value) })}
++                 aria-invalid={windowBad || undefined} aria-describedby={windowBad ? "window-hint" : undefined} />
+         </div>
++        {windowBad && <p id="window-hint" className="hint bad" aria-live="polite">{T.invalidWindow}</p>}
+         <div className="field">
+           <label htmlFor="step">{T.displayStep}</label>
+           <select id="step" value={s.stepMin} onChange={(e) => set({ stepMin: Number(e.target.value) })}>
+@@ -176,6 +182,7 @@
+             <label htmlFor="paz">{T.panelAzimuth}</label>
+             <input id="paz" type="number" min={0} max={360} step={1} value={s.panelAz}
+                    onChange={(e) => set({ panelAz: Number(e.target.value) })} />
++            {Number.isFinite(azUsed) && azUsed !== s.panelAz && <p className="hint">{T.panelAzimuthNormalized(azUsed)}</p>}
+           </div>
+         )}
+         <p className="hint">{T.panelHint}</p>
+--- before/frontend/src/components/SiteExplorer.tsx
++++ after/frontend/src/components/SiteExplorer.tsx
+@@ -1,6 +1,7 @@
+ import { S } from "../i18n";
+ import { fmtLatLon } from "../lib/format";
+ import { parseSite } from "../lib/moonGeo";
++import { windowValid } from "../lib/timeWindow";
+ import { useStore } from "../state/store";
+ 
+ // Phase 5: the selected site (one source: the store's site coordinates, set by the globe, the map, the catalogue or
+@@ -53,7 +54,7 @@
+             {covered && coverage?.finest && finestName && <p className="hint">{E.finest(coverage.finest, finestName)}</p>}
+             <div className="explorer-actions">
+               <button type="button" className="quiet-button" disabled={!covered} onClick={onInspect}>{E.inspect}</button>
+-              <button type="button" className="run-button explorer-run" disabled={!covered || !kernelsReady || busy}
++              <button type="button" className="run-button explorer-run" disabled={!covered || !kernelsReady || busy || !windowValid(s.start, s.end)}
+                       onClick={() => runAnalysis()}>{busy ? S.sidebar.analysing : E.analyse}</button>
+             </div>
+             <div className="explorer-actions">
+--- before/frontend/src/components/MissionView.tsx
++++ after/frontend/src/components/MissionView.tsx
+@@ -3,6 +3,7 @@
+ import type { Coverage } from "../api/types";
+ import { S } from "../i18n";
+ import { RULE_NAMES, fmtDuration, fmtLatLon, fmtPct, fmtUTC } from "../lib/format";
++import { windowValid } from "../lib/timeWindow";
+ import { historyItem, landingKey, useStore, type CommsSummary, type CompareSite, type HistoryItem, type LandingSummary, type SiteViewMode } from "../state/store";
+ import { LabelChips, RESULT_SECTIONS } from "./ResultLabels";
+ import { useSiteCoverage } from "./SiteExplorer";
+@@ -323,7 +324,7 @@
+                   <LevelChips coverage={coverage} />
+                   <div className="explorer-actions">
+                     <button type="button" className="quiet-button" disabled={!covered} onClick={() => toExplorer(VIEW.terrain)}>{E.inspect}</button>
+-                    <button type="button" className="quiet-button" disabled={!covered || !kernelsReady || busy}
++                    <button type="button" className="quiet-button" disabled={!covered || !kernelsReady || busy || !windowValid(s.start, s.end)}
+                             onClick={() => runAnalysis()}>{busy ? S.sidebar.analysing : E.analyse}</button>
+                     <button type="button" className="quiet-button" disabled={selectedIsCandidate} onClick={addSelected}>{M.addSelected}</button>
+                     <button type="button" className="quiet-button" disabled={!covered} onClick={() => toLanding(landingKey(site.lat, site.lon))}>{M.openLandingSelected}</button>
+--- before/frontend/src/state/store.tsx
++++ after/frontend/src/state/store.tsx
+@@ -3,7 +3,8 @@
+ import type { CatalogSite, CommsInputs, CommsResult, Comparison, Coverage, Job, LandingAssessment, ObserverProfile, PanelModel, Result, Rule, Status } from "../api/types";
+ import { S } from "../i18n";
+ import { isoNoMs } from "../lib/format";
+-import { parseSite } from "../lib/moonGeo";
++import { lon360, parseSite } from "../lib/moonGeo";
++import { windowValid } from "../lib/timeWindow";
+ 
+ export interface Settings {
+   lat: string; lon: string; siteName: string | null; siteId: string | null;
+@@ -232,7 +233,9 @@
+   return {
+     lat: Number(s.lat), lon: Number(s.lon), start_utc: s.start, end_utc: s.end, step_s: s.stepMin * 60,
+     observer_profile: s.observerProfile, observer_h_m: s.observerH, sunlit_rule: s.sunlitRule, dte_rule: s.dteRule,
+-    margin_deg: s.margin, panel_model: s.panel, panel_az_deg: s.panelAz, site_name: s.siteName, site_id: s.siteId,
++    // azimuths are taken modulo 360 deg (lib/moonGeo lon360: 400 -> 40), so the request, the stored result and the
++    // display carry the same value; the indicator itself is periodic in azimuth, so the result is unchanged
++    margin_deg: s.margin, panel_model: s.panel, panel_az_deg: lon360(s.panelAz), site_name: s.siteName, site_id: s.siteId,
+   };
+ }
+ 
+@@ -295,6 +298,12 @@
+   const runAnalysis = useCallback(async () => {
+     const s = stateRef.current.settings;
+     dispatch({ type: "error", error: null });
++    // E2E-07: an analysis window whose end is not after its start is refused here, before any request (every Analyse
++    // button also disables itself; this guard covers any other caller)
++    if (!windowValid(s.start, s.end)) {
++      dispatch({ type: "error", error: S.sidebar.invalidWindow });
++      return;
++    }
+     try {
+       const r = await api.analysis(requestBody(s));
+       let rid = r.result_id;
+@@ -321,7 +330,7 @@
+         windows: st.compareWindows.map((x) => ({ start_utc: x.start, end_utc: x.end, label: x.label })),
+         step_s: Math.max(s.stepMin * 60, 1800), observer_profile: s.observerProfile, observer_h_m: s.observerH,
+         sunlit_rule: s.sunlitRule, dte_rule: s.dteRule, margin_deg: s.margin, panel_model: s.panel,
+-        panel_az_deg: s.panelAz,
++        panel_az_deg: lon360(s.panelAz),
+       };
+       const { job_id } = await api.compare(body);
+       const j = await waitForJob(job_id, (job) => dispatch({ type: "compareJob", job }));
+--- before/frontend/src/i18n/en.ts
++++ after/frontend/src/i18n/en.ts
+@@ -193,6 +193,8 @@
+     referencePanel: "Reference panel",
+     panelAzimuth: "Panel facing azimuth (°)",
+     panelHint: "A relative estimate of available sunlight, not electrical output.",
++    panelAzimuthNormalized: (deg: number) => `Azimuths are taken modulo 360°: this value is used as ${deg}°.`,
++    invalidWindow: "The end must be after the start (UTC). Analyse is disabled until it is.",
+     analysing: "Analysing",
+     resultReady: (site: string) => `Results ready for ${site}.`,
+     analyse: "Analyse site",
+--- before/frontend/package.json
++++ after/frontend/package.json
+@@ -9,7 +9,7 @@
+     "preview": "vite preview",
+     "typecheck": "tsc --noEmit -p .",
+     "check:strings": "node scripts/check-strings.mjs",
+-    "test": "node scripts/check-strings.mjs --self-test && node scripts/check-strings.mjs && node scripts/check-a11y.mjs --self-test && node scripts/check-a11y.mjs && node scripts/check-moon-geo.mjs",
++    "test": "node scripts/check-strings.mjs --self-test && node scripts/check-strings.mjs && node scripts/check-a11y.mjs --self-test && node scripts/check-a11y.mjs && node scripts/check-moon-geo.mjs && node scripts/check-window.mjs",
+     "check:a11y": "node scripts/check-a11y.mjs",
+     "audit:a11y": "node scripts/a11y-live-audit.mjs",
+     "check:bundle": "node scripts/check-bundle.mjs",

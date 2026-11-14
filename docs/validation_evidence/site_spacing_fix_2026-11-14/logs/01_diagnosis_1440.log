@@ -1,0 +1,19 @@
+timeline section ws-section h=376 top=2000 minH=0px mb=0px pb=16px | content bottom 2359
+timeline grid timeline-grid h=275 top=2084 minH=0px mb=0px pb=0px
+  col timeline-wrap h=275 top=2084 minH=auto mb=0px pb=0px
+     chart-box h=160 top=2084 minH=0px mb=0px pb=0px
+     legend timeline-legend h=51 top=2252 minH=0px mb=0px pb=0px
+     hint h=17 top=2305 minH=0px mb=0px pb=0px
+     intervals h=21 top=2332 minH=0px mb=0px pb=0px
+  col hint event-empty h=17 top=2084 minH=auto mb=0px pb=0px
+sun section section ws-section vis-section is-sun h=523 top=2392 minH=0px mb=0px pb=16px | content bottom 2898
+sun grid body-grid h=422 top=2476 minH=0px mb=0px pb=0px
+  col body-stats is-sun h=422 top=2476 minH=auto mb=0px pb=12px
+     body-stats-rule h=17 top=2490 minH=0px mb=0px pb=0px
+     body-stats-big h=48 top=2511 minH=0px mb=12px pb=0px
+     metrics h=314 top=2571 minH=0px mb=0px pb=0px
+  col vis-chart vis-sun h=351 top=2476 minH=auto mb=0px pb=0px
+     chart-box h=240 top=2476 minH=0px mb=0px pb=0px
+     vis-readout h=17 top=2722 minH=14.4px mb=0px pb=0px
+     chart-legend h=41 top=2749 minH=0px mb=0px pb=0px
+     hint h=35 top=2792 minH=0px mb=0px pb=0px

@@ -1,0 +1,61 @@
+profile production frame MOON_ME_DE440_ME421
+V-02e test-epoch d_max 0.5060 m; monthly max 0.5126; daily max 0.5331 (n=4019); 1901-2049 yearly max 0.8901
+{
+ "epochs": 200,
+ "span": [
+  "2000-01-01T12:00:00",
+  "2049-12-01T00:00:00"
+ ],
+ "site": [
+  -89.0,
+  45.0
+ ],
+ "eps_arcsec_min": 0.0,
+ "eps_arcsec_max": 1000.8981630501531,
+ "P1_max_deg": 3.1060485246201355e-06,
+ "sloped_0.8 (test)": {
+  "P2_max_deg": 1.816982418390012e-05,
+  "P2_bound_max_deg": 2.913180358672607e-05,
+  "P2_max_ratio_to_bound": 0.6766286338757141,
+  "P2_epochs_over_1e-5_deg": 27,
+  "P3_max": 2.2062995193861124e-06,
+  "c_equal_all": true,
+  "all_P2_within_bound": false,
+  "all_P3_within_bound": true
+ },
+ "flat": {
+  "P2_max_deg": 3.106048523271454e-06,
+  "P2_bound_max_deg": 1.6109841245154616e-05,
+  "P2_max_ratio_to_bound": 0.20738870317094757,
+  "P2_epochs_over_1e-5_deg": 0,
+  "P3_max": 2.202016596841716e-07,
+  "c_equal_all": true,
+  "all_P2_within_bound": false,
+  "all_P3_within_bound": true
+ },
+ "worst_P2_epoch": {
+  "utc": "2046-11-27T14:42:49",
+  "eps_arcsec": 940.5424973876245,
+  "eta_deg": 1.527759042290335e-05,
+  "el_deg": -4.952840588973042,
+  "P1_deg": 6.031477105115037e-07,
+  "sloped_0.8 (test)": {
+   "P2_deg": 1.816982418390012e-05,
+   "P2_bound_deg": 2.756585108377263e-05,
+   "slope_span": 0.8000000000001872,
+   "c_min": 0.9946136958710167,
+   "c_equal": true,
+   "P3": 0.0,
+   "P3_bound": 6.157231518974834e-05
+  },
+  "flat": {
+   "P2_deg": 6.031477113310757e-07,
+   "P2_bound_deg": 1.527759042290335e-05,
+   "slope_span": 0.0,
+   "c_min": 0.9946136958710167,
+   "c_equal": true,
+   "P3": 0.0,
+   "P3_bound": 6.157231518974834e-05
+  }
+ }
+}

@@ -1,0 +1,159 @@
+/* LUNA-OPS 2.0 views: the existing views restyled on the Phase 1 design system. Layouts are kept (their redesign is
+   Phases 2 to 4); telemetry numbers use the system monospace. */
+
+/* ================================================================ Site: welcome and explorer */
+/* (Phase 2: the explorer title, stage and instruments are in explorer.css) */
+/* data readiness as a status board */
+.welcome-status { list-style: none; padding: 0; margin: 22px 0 6px; display: grid; gap: 8px; font-size: var(--fs-s); color: var(--muted);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.welcome-status li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 12px; border: 1px solid var(--line-soft);
+  border-radius: var(--r-s); background: rgba(17, 26, 37, 0.75); overflow-wrap: break-word; min-width: 0; }
+.welcome-status .dot { margin-top: 5px; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; counter-reset: step; }
+.steps > div { position: relative; padding: 14px 16px 14px 46px; border: 1px solid var(--line); border-radius: var(--r-m);
+  background: var(--panel); counter-increment: step; }
+.steps > div::before { content: counter(step, decimal-leading-zero); position: absolute; left: 14px; top: 14px; font-family: var(--font-mono);
+  font-size: var(--fs-xs); color: var(--accent); }
+.steps h3 { font-size: var(--fs-m); margin: 0 0 4px; }
+.steps p { font-size: var(--fs-s); margin: 0; color: var(--muted); }
+.view-switch { flex-wrap: wrap; }
+.view-switch button { font-size: var(--fs-xs); padding: 4px 11px; }
+.view-switch button:disabled { opacity: 0.5; cursor: not-allowed; }
+.explorer-body { padding: 12px 14px 14px; display: grid; gap: 9px; }
+.explorer-body p { margin: 0; }
+.explorer-coords { font-size: 17px; font-family: var(--font-mono); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.explorer-name { color: var(--muted); font-size: var(--fs-s); }
+.explorer-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.explorer-actions .run-button.explorer-run { width: auto; flex: 1 1 auto; margin: 0; }
+
+
+/* ================================================================ Site: analysis result */
+.result-labels { padding: 0 var(--gutter) 12px; }
+.data-key { margin-top: 10px; font-size: var(--fs-s); color: var(--muted); }
+.data-key summary { cursor: pointer; color: var(--text); font-weight: 560; }
+.data-key dl { display: grid; gap: 6px; margin: 8px 0 0; padding: 10px 12px; border: 1px solid var(--line-soft); border-radius: var(--r-s);
+  background: var(--panel); }
+.data-key dl > div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.data-key dd { margin: 0; }
+
+.context-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding: 6px var(--gutter) 16px; }
+.context-card { border: 1px solid var(--line); border-radius: var(--r-m); background: var(--panel); padding: 12px 14px; font-size: var(--fs-s);
+  box-shadow: var(--shadow-1); }
+.context-card h3 { margin: 0 0 8px; font-size: var(--fs-2xs); font-weight: 650; letter-spacing: var(--tracking-label); text-transform: uppercase;
+  font-stretch: 90%; color: var(--muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.context-card p { margin: 0 0 4px; }
+.context-card ul { margin: 0; padding-left: 16px; display: grid; gap: 3px; }
+.context-main { font-size: var(--fs-m); font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--text); }
+
+/* (Phase 3: the horizon panorama, time bar, countdowns, visibility charts and figures are in analysis.css) */
+
+/* telemetry readout at the time cursor */
+.readout { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; margin: 12px var(--gutter) 0;
+  border: 1px solid var(--line); border-radius: var(--r-m); background: var(--panel); overflow: hidden; }
+.readout > div { padding: 10px 14px; }
+.readout > div + div { border-left: 1px solid var(--line-soft); }
+.readout .k { font-size: var(--fs-2xs); color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-stretch: 90%; font-weight: 600; }
+.readout .v { font-size: 21px; font-family: var(--font-mono); font-weight: 600; line-height: 1.25; letter-spacing: -0.02em; }
+.readout .v.sun { color: var(--sun); }
+.readout .v.earth { color: var(--earth); }
+.readout .sub { font-size: var(--fs-xs); color: var(--faint); font-family: var(--font-mono); letter-spacing: -0.01em; }
+
+
+.timeline-wrap { margin: 12px var(--gutter) 0; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--r-m); background: var(--panel); }
+.timeline-wrap svg { display: block; width: 100%; height: auto; }
+.timeline-legend { list-style: none; padding: 0; margin: 8px 0 0; }
+.timeline-legend li { display: inline-flex; align-items: center; }
+.timeline-legend .sw { width: 16px; height: 10px; }
+.sw-sun { background: #f2b544; } .sw-earth { background: #5fa8e8; } .sw-both { background: #e9dfb8; }
+.sw-off { background: #1e2a37; outline: 1px solid #33475a; }
+.sw-unknown { background: repeating-linear-gradient(45deg, #ee9a6b 0 2px, transparent 2px 5px); }
+.sw-uncertain { background: transparent; outline: 1px dashed #ee9a6b; }
+.legend i.tl-brief { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 7px solid #ee9a6b; border-radius: 0; background: none; }
+.sw-eclipse { width: 2px !important; background: none; border-left: 2px dotted #cfe6fb; border-radius: 0; }
+.sw-cursor { width: 2px !important; background: #ffd98a; }
+.intervals { margin-top: 10px; }
+.intervals-head { font-size: var(--fs-m); margin: 0 0 6px; }
+
+
+.grid-2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; padding: 16px var(--gutter) 0; }
+
+
+.public-summary { margin: 18px var(--gutter) 0; max-width: 860px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--r-m);
+  background: var(--panel); }
+.public-summary p { font-size: var(--fs-l); line-height: 1.55; margin: 0 0 10px; }
+.public-summary p:last-child { margin-bottom: 0; }
+.public-summary strong.sun { color: var(--sun); font-weight: 650; }
+.public-summary strong.earth { color: var(--earth); font-weight: 650; }
+
+/* ================================================================ Compare */
+/* (Phase 3: the comparison builder, cards and charts are in analysis.css) */
+.list-edit { list-style: none; margin: 0 0 10px; padding: 0; border: 1px solid var(--line-soft); border-radius: var(--r-s); background: var(--night); }
+.list-edit li { display: flex; gap: 8px; align-items: center; padding: 8px 10px; }
+.list-edit li + li { border-top: 1px solid var(--line-soft); }
+.list-edit li span { flex: 1; font-size: var(--fs-s); }
+.matrix { border-collapse: collapse; width: 100%; font-size: var(--fs-m); background: var(--panel); }
+.matrix th, .matrix td { border: 1px solid var(--line-soft); padding: 9px 12px; }
+.matrix thead th { color: var(--muted); font-weight: 600; text-align: left; font-size: var(--fs-xs); background: var(--space); }
+.matrix td { text-align: right; font-family: var(--font-mono); font-size: 16px; cursor: pointer; letter-spacing: -0.02em; }
+.matrix td:hover { outline: 1px solid var(--accent-line); outline-offset: -1px; }
+.matrix td .cell-sub { display: block; font-family: var(--font); font-size: var(--fs-2xs); color: var(--text); font-stretch: 85%; letter-spacing: 0; } /* U-04: readable on the strongest shading */
+.matrix .cell-open { all: unset; display: block; width: 100%; text-align: right; cursor: pointer; box-sizing: border-box; }
+.matrix .cell-open:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; } /* restores what all: unset removed */
+.matrix th[scope="row"] { text-align: left; font-weight: 560; font-size: var(--fs-m); }
+.cell-bar { display: block; height: 4px; margin: 4px 0 2px; background: var(--line-soft); border-radius: 2px; overflow: hidden; }
+.cell-bar > span { display: block; height: 100%; background: var(--sun); }
+.compare-legend { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 10px; font-size: var(--fs-xs); color: var(--muted); }
+.shade-scale i { display: inline-block; width: 120px; height: 10px; border-radius: 2px;
+  background: linear-gradient(90deg, rgba(242, 181, 68, 0.06), rgba(242, 181, 68, 0.36)); border: 1px solid var(--line); }
+
+/* ================================================================ Data and validation, Guide: document pages */
+.prose { max-width: 900px; padding: 0 var(--gutter) 48px; }
+.prose.prose-wide { max-width: 1140px; margin-inline: auto; }
+/* UI review: Data and validation and the Guide share this container. It fills the workspace up to 1140 px (gutters
+   included); when the workspace is wider (the Mission Parameters panel collapsed, or a wide screen) it is centred in
+   it, instead of staying pinned to the left with the extra width unused on the right. */
+.prose > .site-header { padding-left: 0; padding-right: 0; }
+.prose h1 { font-size: var(--fs-2xl); font-stretch: 116%; margin: 0; }
+.prose h2 { display: flex; align-items: center; gap: 10px; font-size: var(--fs-l); margin: 32px 0 10px; font-weight: 680; font-stretch: 105%;
+  padding-top: 18px; border-top: 1px solid var(--line-soft); }
+.prose h2::before { content: ""; width: 3px; height: 1em; border-radius: 2px; background: var(--accent); flex: none; }
+.prose p, .prose li { color: var(--muted); }
+.prose dl { margin: 0; display: grid; gap: 2px; }
+.prose dt { font-weight: 650; margin-top: 12px; color: var(--text); }
+.prose dd { margin: 2px 0 0; color: var(--muted); }
+.prose table.data td, .prose table.data th { overflow-wrap: anywhere; }
+/* short reference tables (kernels, terrain, labels) show in full; the long validation-test table keeps its own height
+   (set where it is rendered) */
+.prose .table-scroll { max-height: none; }
+/* Phase 4 correction: the validation report table. The rule above lets every cell break anywhere (so tables fit at
+   320 px), which let the browser squeeze the short Status column to one character per line. The four columns now get
+   fixed proportions, statuses are single-line badges, and below the table's minimum width it scrolls sideways inside
+   its box instead of squeezing the columns. */
+.prose table.validation-tests { min-width: 760px; table-layout: fixed; }   /* widths below are taken as given */
+.prose table.validation-tests th, .prose table.validation-tests td { overflow-wrap: normal; }
+.validation-tests .col-test { width: 7.5rem; white-space: nowrap; }
+.validation-tests .col-checks { width: 30%; }
+.validation-tests .col-detail { width: auto; }   /* the rest of the width */
+.validation-tests .col-status { width: 7.5rem; white-space: nowrap; }
+.prose table.validation-tests td.col-detail { overflow-wrap: anywhere; }
+.prose table.validation-labels { min-width: 520px; }   /* the labels table below it: same rule, scrolls on phones */
+.prose table.validation-labels th, .prose table.validation-labels td { overflow-wrap: normal; }
+.validation-labels .col-status { width: 12rem; white-space: nowrap; }
+
+/* (Phase 4: the mission dashboard is in mission.css) */
+
+/* ================================================================ responsive */
+@media (max-width: 1100px) {
+  .context-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .grid-2, .steps { grid-template-columns: 1fr; }
+  .segmented-wrap { grid-auto-flow: row; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+}
+@media (max-width: 600px) {
+  .figures { grid-template-columns: minmax(0, 1fr); }
+  .cursor-time { min-width: 0; }
+  .context-grid { grid-template-columns: minmax(0, 1fr); }
+  .data-key dl > div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .scrubber { flex-wrap: wrap; }
+}

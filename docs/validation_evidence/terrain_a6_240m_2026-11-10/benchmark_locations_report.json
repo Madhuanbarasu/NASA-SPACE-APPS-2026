@@ -1,0 +1,582 @@
+{
+  "timestamp_utc": "2026-11-10T16:23:38.806339Z",
+  "algorithm_version": "1.5.0",
+  "registered_products": {
+    "5m": {
+      "path": "pgda78_site01/Site01_final_adj_5mpp_surf.tif",
+      "bytes": 40980810,
+      "sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e"
+    },
+    "20m": {
+      "path": "pgda90_20m/LDEM_80S_20MPP_ADJ.TIF",
+      "bytes": 2696082051,
+      "sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649"
+    },
+    "80m": {
+      "path": "pgda90_80m/LDEM_80S_80MPP_ADJ.tiff",
+      "bytes": 189158392,
+      "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a"
+    },
+    "240m": {
+      "path": "pgda90_240m/LDEM_60S_240MPP_ADJ.TIF",
+      "bytes": 218961039,
+      "sha256": "3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34"
+    }
+  },
+  "benchmark_locations": {
+    "Site01 (Connecting Ridge)": {
+      "name": "Site01 (Connecting Ridge)",
+      "lat": -89.463163,
+      "lon": 222.510447,
+      "available_levels": [
+        "5m",
+        "20m",
+        "80m",
+        "240m"
+      ],
+      "pairs": {
+        "5m_vs_20m": {
+          "status": "measured",
+          "n": 40000,
+          "stride_px": 16,
+          "mean_m": -0.06290762797221323,
+          "std_m": 0.5229657972572076,
+          "rms_m": 0.5267357921747459,
+          "allowance_m": 0.5267357921747459,
+          "fine_product": "5m:Site01_final_adj_5mpp_surf.tif",
+          "coarse_product": "20m:LDEM_80S_20MPP_ADJ.TIF"
+        },
+        "5m_vs_80m": {
+          "status": "measured",
+          "n": 40000,
+          "stride_px": 16,
+          "mean_m": -0.05316834239293821,
+          "std_m": 1.2227079258288915,
+          "rms_m": 1.2238633684025364,
+          "allowance_m": 1.2238633684025364,
+          "fine_product": "5m:Site01_final_adj_5mpp_surf.tif",
+          "coarse_product": "80m:LDEM_80S_80MPP_ADJ.tiff"
+        },
+        "5m_vs_240m": {
+          "status": "measured",
+          "n": 4489,
+          "stride_px": 48,
+          "mean_m": 0.15036861107337104,
+          "std_m": 4.310961443870158,
+          "rms_m": 4.313583114967325,
+          "allowance_m": 4.313583114967325,
+          "fine_product": "5m:Site01_final_adj_5mpp_surf.tif",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        },
+        "20m_vs_80m": {
+          "status": "measured",
+          "n": 27889,
+          "stride_px": 24,
+          "mean_m": -0.025069474897261745,
+          "std_m": 1.1051655307894974,
+          "rms_m": 1.1054498310718837,
+          "allowance_m": 1.1054498310718837,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "80m:LDEM_80S_80MPP_ADJ.tiff"
+        },
+        "20m_vs_240m": {
+          "status": "measured",
+          "n": 27889,
+          "stride_px": 24,
+          "mean_m": -0.03073492080303684,
+          "std_m": 2.735230520824131,
+          "rms_m": 2.735403194668862,
+          "allowance_m": 2.735403194668862,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        },
+        "80m_vs_240m": {
+          "status": "measured",
+          "n": 36100,
+          "stride_px": 33,
+          "mean_m": -3.7343071730944526e-05,
+          "std_m": 2.6199330690006355,
+          "rms_m": 2.6199330692667693,
+          "allowance_m": 2.6199330692667693,
+          "fine_product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        }
+      }
+    },
+    "South Pole": {
+      "name": "South Pole",
+      "lat": -90.0,
+      "lon": 0.0,
+      "available_levels": [
+        "5m",
+        "20m",
+        "80m",
+        "240m"
+      ],
+      "pairs": {
+        "5m_vs_20m": {
+          "status": "measured",
+          "n": 12625,
+          "stride_px": 8,
+          "mean_m": -0.006058051307602684,
+          "std_m": 0.4480562987709877,
+          "rms_m": 0.4480972515581882,
+          "allowance_m": 0.4480972515581882,
+          "fine_product": "5m:Site01_final_adj_5mpp_surf.tif",
+          "coarse_product": "20m:LDEM_80S_20MPP_ADJ.TIF"
+        },
+        "5m_vs_80m": {
+          "status": "measured",
+          "n": 3213,
+          "stride_px": 16,
+          "mean_m": -0.3967301631099963,
+          "std_m": 1.156618849497914,
+          "rms_m": 1.2227681649990576,
+          "allowance_m": 1.2227681649990576,
+          "fine_product": "5m:Site01_final_adj_5mpp_surf.tif",
+          "coarse_product": "80m:LDEM_80S_80MPP_ADJ.tiff"
+        },
+        "5m_vs_240m": {
+          "status": "measured",
+          "n": 357,
+          "stride_px": 48,
+          "mean_m": -0.6303447774266584,
+          "std_m": 2.5239579305919313,
+          "rms_m": 2.6014799968146916,
+          "allowance_m": 2.6014799968146916,
+          "fine_product": "5m:Site01_final_adj_5mpp_surf.tif",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        },
+        "20m_vs_80m": {
+          "status": "measured",
+          "n": 27889,
+          "stride_px": 24,
+          "mean_m": -0.04596532305506171,
+          "std_m": 1.2349990227311567,
+          "rms_m": 1.2358541164192758,
+          "allowance_m": 1.2358541164192758,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "80m:LDEM_80S_80MPP_ADJ.tiff"
+        },
+        "20m_vs_240m": {
+          "status": "measured",
+          "n": 27889,
+          "stride_px": 24,
+          "mean_m": -0.03266119782148486,
+          "std_m": 2.7313063923765366,
+          "rms_m": 2.7315016681086,
+          "allowance_m": 2.7315016681086,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        },
+        "80m_vs_240m": {
+          "status": "measured",
+          "n": 36100,
+          "stride_px": 33,
+          "mean_m": -0.009017796989664477,
+          "std_m": 1.3967664801600324,
+          "rms_m": 1.3967955901853328,
+          "allowance_m": 1.3967955901853328,
+          "fine_product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        }
+      }
+    },
+    "Malapert Mountain": {
+      "name": "Malapert Mountain",
+      "lat": -85.99,
+      "lon": 2.93,
+      "available_levels": [
+        "20m",
+        "80m",
+        "240m"
+      ],
+      "pairs": {
+        "5m_vs_20m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_80m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_240m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "20m_vs_80m": {
+          "status": "measured",
+          "n": 27889,
+          "stride_px": 24,
+          "mean_m": -0.026948682019504396,
+          "std_m": 0.821777308451282,
+          "rms_m": 0.8222190560598933,
+          "allowance_m": 0.8222190560598933,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "80m:LDEM_80S_80MPP_ADJ.tiff"
+        },
+        "20m_vs_240m": {
+          "status": "measured",
+          "n": 27889,
+          "stride_px": 24,
+          "mean_m": -0.070222628390421,
+          "std_m": 3.7366739454745983,
+          "rms_m": 3.7373337277164262,
+          "allowance_m": 3.7373337277164262,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        },
+        "80m_vs_240m": {
+          "status": "measured",
+          "n": 37829,
+          "stride_px": 30,
+          "mean_m": 0.011065921745805155,
+          "std_m": 2.689382223130312,
+          "rms_m": 2.689404989344934,
+          "allowance_m": 2.689404989344934,
+          "fine_product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        }
+      }
+    },
+    "Nobile Rim": {
+      "name": "Nobile Rim",
+      "lat": -85.2,
+      "lon": 53.5,
+      "available_levels": [
+        "20m",
+        "80m",
+        "240m"
+      ],
+      "pairs": {
+        "5m_vs_20m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_80m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_240m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "20m_vs_80m": {
+          "status": "measured",
+          "n": 27889,
+          "stride_px": 24,
+          "mean_m": -0.007367862764334797,
+          "std_m": 0.8765616435692173,
+          "rms_m": 0.8765926079875883,
+          "allowance_m": 0.8765926079875883,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "80m:LDEM_80S_80MPP_ADJ.tiff"
+        },
+        "20m_vs_240m": {
+          "status": "measured",
+          "n": 27889,
+          "stride_px": 24,
+          "mean_m": 0.011586498138504223,
+          "std_m": 3.057958965989003,
+          "rms_m": 3.0579809163256146,
+          "allowance_m": 3.0579809163256146,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        },
+        "80m_vs_240m": {
+          "status": "measured",
+          "n": 35685,
+          "stride_px": 30,
+          "mean_m": 0.017969648724529837,
+          "std_m": 2.6491342030151817,
+          "rms_m": 2.649195148315836,
+          "allowance_m": 2.649195148315836,
+          "fine_product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        }
+      }
+    },
+    "Boundary 80.5S (0 deg)": {
+      "name": "Boundary 80.5S (0 deg)",
+      "lat": -80.5,
+      "lon": 0.0,
+      "available_levels": [
+        "20m",
+        "80m",
+        "240m"
+      ],
+      "pairs": {
+        "5m_vs_20m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_80m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_240m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "20m_vs_80m": {
+          "status": "measured",
+          "n": 27738,
+          "stride_px": 20,
+          "mean_m": 0.009176360885422124,
+          "std_m": 1.1946602213559636,
+          "rms_m": 1.1946954633250182,
+          "allowance_m": 1.1946954633250182,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "80m:LDEM_80S_80MPP_ADJ.tiff"
+        },
+        "20m_vs_240m": {
+          "status": "measured",
+          "n": 19372,
+          "stride_px": 24,
+          "mean_m": -0.012222491681505392,
+          "std_m": 2.978423145946741,
+          "rms_m": 2.978448224430666,
+          "allowance_m": 2.978448224430666,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        },
+        "80m_vs_240m": {
+          "status": "measured",
+          "n": 36279,
+          "stride_px": 24,
+          "mean_m": 0.008209427406993881,
+          "std_m": 1.4294667310591218,
+          "rms_m": 1.429490304235465,
+          "allowance_m": 1.429490304235465,
+          "fine_product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        }
+      }
+    },
+    "Boundary 80.5S (90 deg)": {
+      "name": "Boundary 80.5S (90 deg)",
+      "lat": -80.5,
+      "lon": 90.0,
+      "available_levels": [
+        "20m",
+        "80m",
+        "240m"
+      ],
+      "pairs": {
+        "5m_vs_20m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_80m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_240m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "20m_vs_80m": {
+          "status": "measured",
+          "n": 27939,
+          "stride_px": 20,
+          "mean_m": 0.01618982833122959,
+          "std_m": 1.1393884200358173,
+          "rms_m": 1.1395034367008776,
+          "allowance_m": 1.1395034367008776,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "80m:LDEM_80S_80MPP_ADJ.tiff"
+        },
+        "20m_vs_240m": {
+          "status": "measured",
+          "n": 19372,
+          "stride_px": 24,
+          "mean_m": 0.005945664904656615,
+          "std_m": 2.4686451281489585,
+          "rms_m": 2.4686522881249897,
+          "allowance_m": 2.4686522881249897,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        },
+        "80m_vs_240m": {
+          "status": "measured",
+          "n": 36279,
+          "stride_px": 24,
+          "mean_m": -0.0003745993856520242,
+          "std_m": 1.453561390971991,
+          "rms_m": 1.453561439241262,
+          "allowance_m": 1.453561439241262,
+          "fine_product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        }
+      }
+    },
+    "Boundary 80.5S (180 deg)": {
+      "name": "Boundary 80.5S (180 deg)",
+      "lat": -80.5,
+      "lon": 180.0,
+      "available_levels": [
+        "20m",
+        "80m",
+        "240m"
+      ],
+      "pairs": {
+        "5m_vs_20m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_80m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_240m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "20m_vs_80m": {
+          "status": "measured",
+          "n": 27939,
+          "stride_px": 20,
+          "mean_m": 0.009260055138936017,
+          "std_m": 1.0619813714429753,
+          "rms_m": 1.0620217426743574,
+          "allowance_m": 1.0620217426743574,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "80m:LDEM_80S_80MPP_ADJ.tiff"
+        },
+        "20m_vs_240m": {
+          "status": "measured",
+          "n": 19372,
+          "stride_px": 24,
+          "mean_m": 0.018843657956151904,
+          "std_m": 2.4767227833865286,
+          "rms_m": 2.476794466481037,
+          "allowance_m": 2.476794466481037,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        },
+        "80m_vs_240m": {
+          "status": "measured",
+          "n": 36279,
+          "stride_px": 24,
+          "mean_m": -0.0035717973747485796,
+          "std_m": 1.3489092333399861,
+          "rms_m": 1.3489139622401258,
+          "allowance_m": 1.3489139622401258,
+          "fine_product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        }
+      }
+    },
+    "Boundary 80.5S (270 deg)": {
+      "name": "Boundary 80.5S (270 deg)",
+      "lat": -80.5,
+      "lon": 270.0,
+      "available_levels": [
+        "20m",
+        "80m",
+        "240m"
+      ],
+      "pairs": {
+        "5m_vs_20m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_80m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "5m_vs_240m": {
+          "status": "unavailable",
+          "reason": "UNAVAILABLE (level(s) 5m outside geographic coverage)",
+          "missing_levels": [
+            "5m"
+          ]
+        },
+        "20m_vs_80m": {
+          "status": "measured",
+          "n": 27738,
+          "stride_px": 20,
+          "mean_m": 0.006133330399873593,
+          "std_m": 1.0352409301710286,
+          "rms_m": 1.0352590986043884,
+          "allowance_m": 1.0352590986043884,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "80m:LDEM_80S_80MPP_ADJ.tiff"
+        },
+        "20m_vs_240m": {
+          "status": "measured",
+          "n": 19372,
+          "stride_px": 24,
+          "mean_m": -0.03134791963096634,
+          "std_m": 2.796083303344269,
+          "rms_m": 2.7962590243584,
+          "allowance_m": 2.7962590243584,
+          "fine_product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        },
+        "80m_vs_240m": {
+          "status": "measured",
+          "n": 36279,
+          "stride_px": 24,
+          "mean_m": -0.001982862989430608,
+          "std_m": 1.3028064242624968,
+          "rms_m": 1.3028079332139744,
+          "allowance_m": 1.3028079332139744,
+          "fine_product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+          "coarse_product": "240m:LDEM_60S_240MPP_ADJ.TIF"
+        }
+      }
+    }
+  }
+}

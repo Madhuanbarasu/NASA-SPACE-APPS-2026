@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "script": "snapshot",
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "kernels": [
+      "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+      "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+      "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+      "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+      "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+      "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+      "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    ],
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-11T16:23:57Z"
+  },
+  "algorithm_version": "1.5.0",
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "spiceypy": "8.3.0",
+  "cspice": "CSPICE_N0067",
+  "numpy": "2.5.4",
+  "sha256": {
+    "backend/validation/horizons_compare.py": "bd5b087a68ea92ed8800b7ea73d31fd71981a3b93f978949face4731029b67c9",
+    "backend/validation/v13_eclipse.py": "1c3f73d657cf50621743cf9fb722032dff8acd45ab571df1875cacdb6bea96fb",
+    "backend/validation/v14_month.py": "d0f3e9a48532bf9d8f47cea4a117bcf920d6fc929a6859402678737117c77a70",
+    "backend/validation/common.py": "845ac9ff9ecaf5ef7d6dbc626cf966766b773b49de8f0b94398c98aec9e7a42c",
+    "backend/validation/run_validation.py": "197a6ab4d9494063f9b854b2e93c37e0833d91cbb9e6d35a282f29bcffebfcb2",
+    "backend/validation/terrain_gate.py": "63f86c6e5fda89577401909cf7d80d09b54b95980d10887cbe27f825a5c3799f",
+    "backend/validation/reference/gsfc_lunar_eclipses_2025_2026.json": "721e7115d01bb776fa7235787a8231e8bd7bd8aca6856e9821e9bbc97a44674b",
+    "backend/validation/reference/terrain_acceptance.json": "c04650699f1cdade46b29614fc4f9b2dd20d27eb3b99fd32b9a8e72a892356ae",
+    "backend/validation/report.json": "00d2cda1bf3fe38fe98cc8a76e92acabdf9cb771ab900119750203586b15c239",
+    "backend/lunaops/engine/events.py": "03c530df7cef8675ab6c45f3e4cccb3cfe37321b245042c9f3e5321239f0f6d0",
+    "backend/lunaops/engine/ephem.py": "46e27e9fc80006077adf274922a0be1d250f8d8ccd9f881b7741c91ef74b390d",
+    "backend/lunaops/testing.py": "b15982cb50f5164c69568a80f04f7b59b6289564c8c503275c668f92f1c5ee1e",
+    "backend/lunaops/settings.py": "173e1d0bb655be52bce3e3d9f44b2a3b5729f95fd3f9df3689a5ae1462e66d9b",
+    "data/kernels/lock.json": "a287c4378fdcb97010a89ae038f420dc01f997e5817725bb2f2285dc247d48cb"
+  },
+  "live_report": {
+    "run_utc": "2026-11-10T21:19:33Z",
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "matches_current_code": true,
+    "matches_current_suite": true,
+    "tests": {
+      "V-04": {
+        "status": "not run",
+        "detail": null
+      },
+      "V-05": {
+        "status": "not run",
+        "detail": null
+      },
+      "V-13": {
+        "status": "not run",
+        "detail": null
+      },
+      "V-14": {
+        "status": "passed",
+        "detail": "8 case(s)"
+      }
+    }
+  },
+  "previous_evidence": {
+    "V-04/V-05 (A8/A9)": {
+      "file": "docs/validation_evidence/horizons_v04_v05_2026-11-09/horizons.json",
+      "run_utc": "2026-11-09T18:55:40Z",
+      "code_fingerprint": "230071e055662b22fd0c5ff03e86b461f6358652179fd079a37f611b1d8942c0",
+      "suite_fingerprint": "dd2304cdcaca121ed2c0028e5f5ae5c0ebe0c81fb32b94c2e0d5de0126da25c7",
+      "terrain_acceptance_digest": null,
+      "stale_code": true,
+      "stale_suite": true,
+      "tests": {
+        "V-04": "passed",
+        "V-05": "passed"
+      }
+    },
+    "V-13 (A13)": {
+      "file": "docs/validation_evidence/v13_gsfc_2026-11-09/v13.json",
+      "run_utc": "2026-11-09T19:55:24Z",
+      "code_fingerprint": "230071e055662b22fd0c5ff03e86b461f6358652179fd079a37f611b1d8942c0",
+      "suite_fingerprint": "82c8de34811e82b7d5a5ada1a6de9c2a5d5c81b82588bc9bf698d8f9923cd4b5",
+      "terrain_acceptance_digest": null,
+      "stale_code": true,
+      "stale_suite": true,
+      "tests": {
+        "V-13": "passed"
+      }
+    },
+    "V-14 (A14)": {
+      "file": "docs/validation_evidence/v14_month_a14_2026-11-10/v14.json",
+      "run_utc": "2026-11-10T06:07:43Z",
+      "code_fingerprint": "230071e055662b22fd0c5ff03e86b461f6358652179fd079a37f611b1d8942c0",
+      "suite_fingerprint": "060a19166d2a4f11324d98f3f938a505c7bda8869f8b36adf1c8044b612480fc",
+      "terrain_acceptance_digest": null,
+      "stale_code": true,
+      "stale_suite": true,
+      "tests": {
+        "V-14": "passed"
+      }
+    },
+    "V-04/V-05 re-run in A14": {
+      "file": "docs/validation_evidence/v14_month_a14_2026-11-10/report/horizons.json",
+      "run_utc": "2026-11-10T06:02:45Z",
+      "code_fingerprint": "230071e055662b22fd0c5ff03e86b461f6358652179fd079a37f611b1d8942c0",
+      "suite_fingerprint": "060a19166d2a4f11324d98f3f938a505c7bda8869f8b36adf1c8044b612480fc",
+      "terrain_acceptance_digest": null,
+      "stale_code": true,
+      "stale_suite": true,
+      "tests": {
+        "V-04": "passed",
+        "V-05": "passed"
+      }
+    },
+    "V-13 re-run in A14": {
+      "file": "docs/validation_evidence/v14_month_a14_2026-11-10/report/v13.json",
+      "run_utc": "2026-11-10T06:01:20Z",
+      "code_fingerprint": "230071e055662b22fd0c5ff03e86b461f6358652179fd079a37f611b1d8942c0",
+      "suite_fingerprint": "060a19166d2a4f11324d98f3f938a505c7bda8869f8b36adf1c8044b612480fc",
+      "terrain_acceptance_digest": null,
+      "stale_code": true,
+      "stale_suite": true,
+      "tests": {
+        "V-13": "passed"
+      }
+    }
+  }
+}

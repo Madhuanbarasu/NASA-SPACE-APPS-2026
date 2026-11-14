@@ -1,0 +1,30 @@
+criteria: {'rmse_pp': 5.0, 'abs_bias_pp': 2.0, 'approved': False, 'note': 'provisional thresholds (README/blueprint); require explicit approval before any pass'}
+assumptions: {'observer_height_m': 0.0, 'start_utc': '2026-01-01T00:00:00Z', 'years': 18.6, 'earth_occults_sun': "included (engine 'any' rule)", 'notes': 'observer height and start epoch are not documented for AVGVISIB (see provenance.json)'}
+
+== V-09 (sun) recorded metrics: {"points": 200, "scored": 200, "inconclusive": 0, "rmse_pp": 14.093161031840822, "bias_pp": -7.191304449241943, "max_abs_pp": 53.09006663068545, "per_stratum": [{"stratum": 0, "scored": 46, "rmse_pp": 1.0528043438392953, "bias_pp": -0.29193656069271723}, {"stratum": 1, "scored": 45, "rmse_pp": 5.42183407079035, "bias_pp": -1.6534990475878975}, {"stratum": 2, "scored": 45, "rmse_pp": 3.429867620532
+recomputed: n=200 RMSE=14.09 pp bias=-7.19 pp max|d|=53.09 pp
+   |d| <=  2 pp: 114/200
+   |d| <=  5 pp: 136/200
+   |d| <= 10 pp: 150/200
+   |d| <= 20 pp: 173/200
+   stratum      n   RMSE    bias   max|d|
+   [0.0,0.2]   46   1.05   -0.29    4.09
+   [0.2,0.4]   45   5.42   -1.65   30.89
+   [0.4,0.6]   45   3.43   -1.26   18.65
+   [0.6,0.8]   45  20.87  -16.59   53.09
+   [0.8,1.0]   19  30.97  -28.78   48.43
+   reference < 0.6: n=136 RMSE=3.74 bias=-1.06
+
+== V-10 (earth) recorded metrics: {"points": 200, "scored": 200, "inconclusive": 0, "rmse_pp": 3.1302709759027247, "bias_pp": -0.7442499808645341, "max_abs_pp": 22.26672175065012, "per_stratum": [{"stratum": 0, "scored": 40, "rmse_pp": 2.8114224903323457, "bias_pp": -0.7362593641136356}, {"stratum": 1, "scored": 40, "rmse_pp": 4.892686714037633, "bias_pp": -1.8905439527010486}, {"stratum": 2, "scored": 40, "rmse_pp": 0.63713946112
+recomputed: n=200 RMSE=3.13 pp bias=-0.74 pp max|d|=22.27 pp
+   |d| <=  2 pp: 181/200
+   |d| <=  5 pp: 189/200
+   |d| <= 10 pp: 193/200
+   |d| <= 20 pp: 198/200
+   stratum      n   RMSE    bias   max|d|
+   [0.0,0.2]   40   2.81   -0.74   12.35
+   [0.2,0.4]   40   4.89   -1.89   22.27
+   [0.4,0.6]   40   0.64   -0.04    3.36
+   [0.6,0.8]   40   2.17   -0.46   12.67
+   [0.8,1.0]   40   3.47   -0.59   20.43
+   reference < 0.6: n=120 RMSE=3.28 bias=-0.89

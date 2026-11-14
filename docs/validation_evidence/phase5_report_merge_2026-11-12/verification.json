@@ -1,0 +1,243 @@
+{
+  "all_ok": true,
+  "checks": [
+    {
+      "check": "backup report_before.json is the original 2279606c\u2026",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "report.json rewritten by this run",
+      "ok": true,
+      "detail": "5135efe88e5feb0fd36e0230ecba9f2d2b99322a70e1e69e822e13def69df53f"
+    },
+    {
+      "check": "run_validation exit 0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "pytest: 0 failed / 0 errors in output",
+      "ok": true,
+      "detail": "438 passed, 2 skipped, 1 warning in 857.31s"
+    },
+    {
+      "check": "pytest: same counts as the previous merge (438 passed, 2 skipped)",
+      "ok": true,
+      "detail": "438 passed, 2 skipped, 1 warning in 857.31s"
+    },
+    {
+      "check": "pytest exit code 0 in report",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "no 'NOT merged' lines",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "zero rejected merges",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "algorithm 1.5.0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "code_fingerprint = current build = previous report",
+      "ok": true,
+      "detail": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8"
+    },
+    {
+      "check": "suite_fingerprint = current build = previous report",
+      "ok": true,
+      "detail": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc"
+    },
+    {
+      "check": "kernel profile production; SHA-256 = loaded",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "terrain acceptance digest unchanged",
+      "ok": true,
+      "detail": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce"
+    },
+    {
+      "check": "report-level fields unchanged except run_utc (and tests)",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "label rules digest current",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no report-level label blockers",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "same set of test entries",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "every test status unchanged",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "external entries other than U-04/U-06 byte-identical to the previous report",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "automated entries identical to the previous report",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "V-04 = passed (external, horizons_compare)",
+      "ok": true,
+      "detail": "status=passed script=horizons_compare"
+    },
+    {
+      "check": "V-05 = passed (external, horizons_compare)",
+      "ok": true,
+      "detail": "status=passed script=horizons_compare"
+    },
+    {
+      "check": "V-09 = not run (external, v09_v10_avgvisib)",
+      "ok": true,
+      "detail": "status=not run script=v09_v10_avgvisib"
+    },
+    {
+      "check": "V-10 = not run (external, v09_v10_avgvisib)",
+      "ok": true,
+      "detail": "status=not run script=v09_v10_avgvisib"
+    },
+    {
+      "check": "V-11 = passed (external, v11_psr)",
+      "ok": true,
+      "detail": "status=passed script=v11_psr"
+    },
+    {
+      "check": "V-12 = passed (external, v12_lroc)",
+      "ok": true,
+      "detail": "status=passed script=v12_lroc"
+    },
+    {
+      "check": "V-13 = passed (external, v13_eclipse)",
+      "ok": true,
+      "detail": "status=passed script=v13_eclipse"
+    },
+    {
+      "check": "V-14 = passed (external, v14_month)",
+      "ok": true,
+      "detail": "status=passed script=v14_month"
+    },
+    {
+      "check": "U-04 = passed (external, frontend_u04)",
+      "ok": true,
+      "detail": "status=passed script=frontend_u04"
+    },
+    {
+      "check": "U-06 = passed (external, frontend_u06)",
+      "ok": true,
+      "detail": "status=passed script=frontend_u06"
+    },
+    {
+      "check": "U-04 now carries the Phase 5 result (detail and run_utc of frontend_u04_phase5.json)",
+      "ok": true,
+      "detail": "2026-11-12T06:06:55Z"
+    },
+    {
+      "check": "U-04 previous entry described the Phase 4 build",
+      "ok": true,
+      "detail": "2026-11-11T18:19:06Z"
+    },
+    {
+      "check": "U-06 now carries the Phase 5 result (detail and run_utc of frontend_u06_phase5.json)",
+      "ok": true,
+      "detail": "2026-11-12T06:06:55Z"
+    },
+    {
+      "check": "U-06 previous entry described the Phase 4 build",
+      "ok": true,
+      "detail": "2026-11-11T18:19:06Z"
+    },
+    {
+      "check": "status counts unchanged (420 passed, 2 not run, 2 skipped)",
+      "ok": true,
+      "detail": "{'passed': 420, 'not run': 2, 'skipped': 2}"
+    },
+    {
+      "check": "labels (status page) identical to the previous report",
+      "ok": true,
+      "detail": "{'sun_earth_azel': 'Validated', 'horizon': 'Validated', 'disk_visibility': 'Pending validation', 'events': 'Pending validation', 'power_indicator': 'Pending validation'}"
+    },
+    {
+      "check": "labels (result with horizon sigma) identical, L_corr limitation kept",
+      "ok": true,
+      "detail": "{'sun_earth_azel': 'Validated', 'horizon': 'Pending validation', 'disk_visibility': 'Pending validation', 'events': 'Pending validation', 'power_indicator': 'Pending validation'}"
+    }
+  ],
+  "status_counts": {
+    "passed": 420,
+    "not run": 2,
+    "skipped": 2
+  },
+  "pytest_summary": "438 passed, 2 skipped, 1 warning in 857.31s",
+  "report": {
+    "sha256": "5135efe88e5feb0fd36e0230ecba9f2d2b99322a70e1e69e822e13def69df53f",
+    "run_utc": "2026-11-12T06:27:21Z",
+    "previous_sha256": "2279606ceab9354b8616ba9216e12e89e399f34cfc3cbfcbd7502d12d077d376"
+  },
+  "statuses": {
+    "V-04": "passed",
+    "V-05": "passed",
+    "V-09": "not run",
+    "V-10": "not run",
+    "V-11": "passed",
+    "V-12": "passed",
+    "V-13": "passed",
+    "V-14": "passed",
+    "U-04": "passed",
+    "U-06": "passed"
+  },
+  "u04_u06": {
+    "U-04": {
+      "status": "passed",
+      "script": "frontend_u04",
+      "run_utc": "2026-11-12T06:06:55Z",
+      "detail": "Scoped U-04 (criteria and scope of D4, approved 2026-11-11) re-evaluated on the final Phase 5 frontend (2026-11-12, npm run audit:a11y): 0 automated problems in 10 views (the 6 release views plus the 3D globe, local terrain, mission dashboard and empty dashboard); release functional tests unchanged apart from documented Phase 5 additions (tab stops, panorama readout text); Phase 5 keyboard and focus tests passed (docs/validation_evidence/phase5_final_2026-11-12). Scope: Chrome 157 headless only; no real screen-reader (assistive-technology) user session; zoom emulated through the viewport; speech input not tested. Not a claim of unrestricted WCAG 2.2 AA conformance"
+    },
+    "U-06": {
+      "status": "passed",
+      "script": "frontend_u06",
+      "run_utc": "2026-11-12T06:06:55Z",
+      "detail": "Scoped U-06 (criteria of D3, approved 2026-11-11) re-measured on the final Phase 5 build (2026-11-12): worst LCP 540/1728/1332 ms (<= 2500; native/4x CPU/4x CPU + 10 Mbit/s), CLS max 0 (<= 0.1), interaction p95 at most 56/88 ms (<= 200; Event Timing, 20 keyboard time-cursor steps), no progressive memory leak over 5 remount cycles (result view; also globe and local terrain); two run sets (the first 4x CPU set ran under evident CPU contention and is kept); slower than the 2026-11-11 U-06 build (reported, cause not isolated); same laptop, Chrome 157 headless, profiles and tile exclusion as D3; TBT information only; lab measurement, not a field Core Web Vitals claim"
+    }
+  },
+  "labels": {
+    "status_page": {
+      "sun_earth_azel": "Validated",
+      "horizon": "Validated",
+      "disk_visibility": "Pending validation",
+      "events": "Pending validation",
+      "power_indicator": "Pending validation"
+    },
+    "result_with_horizon_sigma": {
+      "sun_earth_azel": "Validated",
+      "horizon": "Pending validation",
+      "disk_visibility": "Pending validation",
+      "events": "Pending validation",
+      "power_indicator": "Pending validation"
+    }
+  }
+}

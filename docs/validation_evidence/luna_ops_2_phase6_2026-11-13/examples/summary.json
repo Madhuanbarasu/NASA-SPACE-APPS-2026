@@ -1,0 +1,1063 @@
+{
+ "memory_start_mb": [
+  67.4,
+  67.9
+ ],
+ "inputs": {
+  "direct_link": {
+   "pt_w": 20.0,
+   "gt_dbi": 20.0,
+   "ltx_db": 1.0,
+   "gr_dbi": 60.0,
+   "lrx_db": 1.0,
+   "lother_db": 3.0,
+   "ts_k": 50.0,
+   "freq_hz": 8450000000.0,
+   "rb_bps": 1000000.0,
+   "ebn0_req_db": 2.5,
+   "bandwidth_hz": 2000000.0,
+   "basis": "illustrative",
+   "reference": "Illustrative demonstration values (Phase 6 evidence), not a hardware specification"
+  },
+  "relay_up_link": {
+   "pt_w": 5.0,
+   "gt_dbi": 3.0,
+   "ltx_db": 1.0,
+   "gr_dbi": 20.0,
+   "lrx_db": 1.0,
+   "lother_db": 2.0,
+   "ts_k": 400.0,
+   "freq_hz": 2250000000.0,
+   "rb_bps": 1000000.0,
+   "ebn0_req_db": 2.5,
+   "basis": "illustrative",
+   "reference": "Illustrative demonstration values (Phase 6 evidence), not a hardware specification"
+  },
+  "relay_down_link": {
+   "pt_w": 50.0,
+   "gt_dbi": 30.0,
+   "ltx_db": 1.0,
+   "gr_dbi": 60.0,
+   "lrx_db": 1.0,
+   "lother_db": 3.0,
+   "ts_k": 50.0,
+   "freq_hz": 8450000000.0,
+   "rb_bps": 1000000.0,
+   "ebn0_req_db": 2.5,
+   "basis": "illustrative",
+   "reference": "Illustrative demonstration values (Phase 6 evidence), not a hardware specification"
+  },
+  "dtn": {
+   "volume_mbit": 20000.0,
+   "rate_kbps": 1000.0,
+   "path": "any_rf"
+  },
+  "relays": {
+   "H1": {
+    "name": "H1 hypothetical elliptical orbit, apoapsis over the lunar south",
+    "a_km": 6000.0,
+    "e": 0.6,
+    "i_deg": 60.0,
+    "raan_deg": 0.0,
+    "argp_deg": 90.0,
+    "m0_deg": 0.0,
+    "frame": "LME_EPOCH",
+    "step_s": 60.0
+   },
+   "H2": {
+    "name": "H2 hypothetical 100 km circular lunar-polar orbit",
+    "a_km": 1837.4,
+    "e": 0.0,
+    "i_deg": 90.0,
+    "raan_deg": 0.0,
+    "argp_deg": 0.0,
+    "m0_deg": 0.0,
+    "frame": "LME_EPOCH",
+    "step_s": 30.0
+   },
+   "H3": {
+    "name": "H3 = H2 elements in J2000 (polar to Earth's equator, not the Moon's)",
+    "a_km": 1837.4,
+    "e": 0.0,
+    "i_deg": 90.0,
+    "raan_deg": 0.0,
+    "argp_deg": 0.0,
+    "m0_deg": 0.0,
+    "frame": "J2000",
+    "step_s": 30.0
+   }
+  }
+ },
+ "cases": [
+  {
+   "case": "site01_7d_direct_and_H1",
+   "result_id": "ed1d46ecace2cbae1c710283",
+   "site": [
+    -89.463163,
+    222.510447
+   ],
+   "window": [
+    "2026-12-13T12:44:00Z",
+    "2026-12-20T12:44:00Z"
+   ],
+   "relay": "H1 hypothetical elliptical orbit, apoapsis over the lunar south",
+   "relay_samples": 10082,
+   "simulate_s": 0.37,
+   "relink_s": 0.069,
+   "memory_mb": [
+    90.1,
+    90.1
+   ],
+   "engine_labels": {
+    "sun_earth_azel": "Validated",
+    "horizon": "Pending validation",
+    "disk_visibility": "Pending validation",
+    "events": "Pending validation"
+   },
+   "direct_geometric": {
+    "open_h": 50.41496,
+    "open_share": 0.30009,
+    "windows": 1,
+    "uncertain_windows": 0,
+    "longest_window_h": 50.41496,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "direct_rf": {
+    "open_h": 50.41496,
+    "open_share": 0.30009,
+    "windows": 1,
+    "uncertain_windows": 0,
+    "longest_window_h": 50.41496,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "direct_margin_db": {
+    "min": 14.000596545456602,
+    "max": 14.7823915812167
+   },
+   "terrain_blocked_h": 81.6263,
+   "relay_orbit": {
+    "period_h": 11.5846,
+    "periapsis_alt_km": 662.6,
+    "apoapsis_alt_km": 7862.6,
+    "mean_motion_deg_per_h": 31.0757
+   },
+   "relay_leg1": {
+    "open_h": 128.18368,
+    "open_share": 0.763,
+    "windows": 23,
+    "uncertain_windows": 8,
+    "longest_window_h": 8.89102,
+    "gaps_between_windows": 14,
+    "mean_gap_h": 2.74762,
+    "longest_gap_h": 2.80477,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "relay_leg2": {
+    "open_h": 163.35706,
+    "open_share": 0.97236,
+    "windows": 7,
+    "uncertain_windows": 0,
+    "longest_window_h": 108.99245,
+    "gaps_between_windows": 6,
+    "mean_gap_h": 0.77382,
+    "longest_gap_h": 0.91936,
+    "unknown_h": 0.0,
+    "starts_open": true,
+    "ends_open": true
+   },
+   "relay_geometric": {
+    "open_h": 128.18368,
+    "open_share": 0.763,
+    "windows": 23,
+    "uncertain_windows": 8,
+    "longest_window_h": 8.89102,
+    "gaps_between_windows": 14,
+    "mean_gap_h": 2.74762,
+    "longest_gap_h": 2.80477,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "relay_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "any_geometric": {
+    "open_h": 138.98418,
+    "open_share": 0.82729,
+    "windows": 21,
+    "uncertain_windows": 8,
+    "longest_window_h": 23.13974,
+    "gaps_between_windows": 10,
+    "mean_gap_h": 2.76661,
+    "longest_gap_h": 2.80477,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "any_rf": {
+    "open_h": 50.41496,
+    "open_share": 0.30009,
+    "windows": 5,
+    "uncertain_windows": 2,
+    "longest_window_h": 22.69829,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "relay_adds_geometric_h": 88.56922,
+   "relay_adds_rf_h": 0.0,
+   "leg1_margin_db": {
+    "min": -11.62866676070226,
+    "max": -5.463036240332826
+   },
+   "leg2_margin_db": {
+    "min": 27.88213499181734,
+    "max": 28.74664034648913
+   },
+   "dtn": {
+    "evaluated": true,
+    "complete": true,
+    "completion_utc": "2026-12-18T15:52:26Z",
+    "elapsed_h": 123.14059916668468,
+    "contacts_used": 1,
+    "remaining_mbit": 0.0,
+    "reason": null
+   },
+   "rb2M_direct_rf_h": 50.41496
+  },
+  {
+   "case": "lat89_lon200_7d_no_dte_H1",
+   "result_id": "684a93e585762c77b11ef389",
+   "site": [
+    -89.2,
+    200.0
+   ],
+   "window": [
+    "2026-11-14T00:00:00Z",
+    "2026-11-21T00:00:00Z"
+   ],
+   "relay": "H1 hypothetical elliptical orbit, apoapsis over the lunar south",
+   "relay_samples": 10081,
+   "simulate_s": 0.28,
+   "relink_s": 0.067,
+   "memory_mb": [
+    93.6,
+    94.6
+   ],
+   "engine_labels": {
+    "sun_earth_azel": "Validated",
+    "horizon": "Pending validation",
+    "disk_visibility": "Pending validation",
+    "events": "Pending validation"
+   },
+   "direct_geometric": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "direct_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "direct_margin_db": {
+    "min": 13.970488337892164,
+    "max": 14.59439169779742
+   },
+   "terrain_blocked_h": 67.18877,
+   "relay_orbit": {
+    "period_h": 11.5846,
+    "periapsis_alt_km": 662.6,
+    "apoapsis_alt_km": 7862.6,
+    "mean_motion_deg_per_h": 31.0757
+   },
+   "relay_leg1": {
+    "open_h": 125.79745,
+    "open_share": 0.74879,
+    "windows": 18,
+    "uncertain_windows": 3,
+    "longest_window_h": 8.85061,
+    "gaps_between_windows": 14,
+    "mean_gap_h": 2.91996,
+    "longest_gap_h": 3.04084,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "relay_leg2": {
+    "open_h": 163.41774,
+    "open_share": 0.97272,
+    "windows": 7,
+    "uncertain_windows": 0,
+    "longest_window_h": 108.9987,
+    "gaps_between_windows": 6,
+    "mean_gap_h": 0.76371,
+    "longest_gap_h": 0.95669,
+    "unknown_h": 0.0,
+    "starts_open": true,
+    "ends_open": true
+   },
+   "relay_geometric": {
+    "open_h": 125.38585,
+    "open_share": 0.74634,
+    "windows": 17,
+    "uncertain_windows": 2,
+    "longest_window_h": 8.85061,
+    "gaps_between_windows": 14,
+    "mean_gap_h": 2.94815,
+    "longest_gap_h": 3.15015,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "relay_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "any_geometric": {
+    "open_h": 125.38585,
+    "open_share": 0.74634,
+    "windows": 17,
+    "uncertain_windows": 2,
+    "longest_window_h": 8.85061,
+    "gaps_between_windows": 14,
+    "mean_gap_h": 2.94815,
+    "longest_gap_h": 3.15015,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "any_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_adds_geometric_h": 125.38585,
+   "relay_adds_rf_h": 0.0,
+   "leg1_margin_db": {
+    "min": -11.631298554993634,
+    "max": -5.4498434580832225
+   },
+   "leg2_margin_db": {
+    "min": 27.846473226944994,
+    "max": 28.56116310801491
+   },
+   "dtn": {
+    "evaluated": true,
+    "complete": false,
+    "completion_utc": null,
+    "elapsed_h": null,
+    "contacts_used": 0,
+    "remaining_mbit": 20000.0,
+    "reason": null
+   },
+   "rb2M_direct_rf_h": 0.0
+  },
+  {
+   "case": "lat89_lon200_7d_no_dte_H2",
+   "result_id": "684a93e585762c77b11ef389",
+   "site": [
+    -89.2,
+    200.0
+   ],
+   "window": [
+    "2026-11-14T00:00:00Z",
+    "2026-11-21T00:00:00Z"
+   ],
+   "relay": "H2 hypothetical 100 km circular lunar-polar orbit",
+   "relay_samples": 20161,
+   "simulate_s": 0.5,
+   "relink_s": 0.129,
+   "memory_mb": [
+    102.6,
+    102.6
+   ],
+   "engine_labels": {
+    "sun_earth_azel": "Validated",
+    "horizon": "Pending validation",
+    "disk_visibility": "Pending validation",
+    "events": "Pending validation"
+   },
+   "direct_geometric": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "direct_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "direct_margin_db": {
+    "min": 13.970488337892164,
+    "max": 14.59439169779742
+   },
+   "terrain_blocked_h": 67.18877,
+   "relay_orbit": {
+    "period_h": 1.9632,
+    "periapsis_alt_km": 100.0,
+    "apoapsis_alt_km": 100.0,
+    "mean_motion_deg_per_h": 183.3756
+   },
+   "relay_leg1": {
+    "open_h": 14.14065,
+    "open_share": 0.08417,
+    "windows": 94,
+    "uncertain_windows": 9,
+    "longest_window_h": 0.1736,
+    "gaps_between_windows": 84,
+    "mean_gap_h": 1.79709,
+    "longest_gap_h": 1.80293,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_leg2": {
+    "open_h": 118.76119,
+    "open_share": 0.70691,
+    "windows": 74,
+    "uncertain_windows": 0,
+    "longest_window_h": 25.64663,
+    "gaps_between_windows": 73,
+    "mean_gap_h": 0.6745,
+    "longest_gap_h": 0.77697,
+    "unknown_h": 0.0,
+    "starts_open": true,
+    "ends_open": true
+   },
+   "relay_geometric": {
+    "open_h": 13.38347,
+    "open_share": 0.07966,
+    "windows": 91,
+    "uncertain_windows": 6,
+    "longest_window_h": 0.17071,
+    "gaps_between_windows": 84,
+    "mean_gap_h": 1.80568,
+    "longest_gap_h": 1.82865,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_rf": {
+    "open_h": 13.38347,
+    "open_share": 0.07966,
+    "windows": 91,
+    "uncertain_windows": 6,
+    "longest_window_h": 0.17071,
+    "gaps_between_windows": 84,
+    "mean_gap_h": 1.80568,
+    "longest_gap_h": 1.82865,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "any_geometric": {
+    "open_h": 13.38347,
+    "open_share": 0.07966,
+    "windows": 91,
+    "uncertain_windows": 6,
+    "longest_window_h": 0.17071,
+    "gaps_between_windows": 84,
+    "mean_gap_h": 1.80568,
+    "longest_gap_h": 1.82865,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "any_rf": {
+    "open_h": 13.38347,
+    "open_share": 0.07966,
+    "windows": 91,
+    "uncertain_windows": 6,
+    "longest_window_h": 0.17071,
+    "gaps_between_windows": 84,
+    "mean_gap_h": 1.80568,
+    "longest_gap_h": 1.82865,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_adds_geometric_h": 13.38347,
+   "relay_adds_rf_h": 13.38347,
+   "leg1_margin_db": {
+    "min": -4.489561996477448,
+    "max": 26.578907726876366
+   },
+   "leg2_margin_db": {
+    "min": 27.91431900702807,
+    "max": 28.56945919630877
+   },
+   "dtn": {
+    "evaluated": true,
+    "complete": true,
+    "completion_utc": "2026-11-17T02:08:17Z",
+    "elapsed_h": 74.13808972077237,
+    "contacts_used": 40,
+    "remaining_mbit": 0.0,
+    "reason": null
+   },
+   "rb2M_direct_rf_h": 0.0
+  },
+  {
+   "case": "lat89_lon200_7d_no_dte_H3_frame_demo",
+   "result_id": "684a93e585762c77b11ef389",
+   "site": [
+    -89.2,
+    200.0
+   ],
+   "window": [
+    "2026-11-14T00:00:00Z",
+    "2026-11-21T00:00:00Z"
+   ],
+   "relay": "H3 = H2 elements in J2000 (polar to Earth's equator, not the Moon's)",
+   "relay_samples": 20161,
+   "simulate_s": 0.48,
+   "relink_s": 0.115,
+   "memory_mb": [
+    104.9,
+    106.1
+   ],
+   "engine_labels": {
+    "sun_earth_azel": "Validated",
+    "horizon": "Pending validation",
+    "disk_visibility": "Pending validation",
+    "events": "Pending validation"
+   },
+   "direct_geometric": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "direct_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "direct_margin_db": {
+    "min": 13.970488337892164,
+    "max": 14.59439169779742
+   },
+   "terrain_blocked_h": 67.18877,
+   "relay_orbit": {
+    "period_h": 1.9632,
+    "periapsis_alt_km": 100.0,
+    "apoapsis_alt_km": 100.0,
+    "mean_motion_deg_per_h": 183.3756
+   },
+   "relay_leg1": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_leg2": {
+    "open_h": 107.33785,
+    "open_share": 0.63892,
+    "windows": 86,
+    "uncertain_windows": 0,
+    "longest_window_h": 1.42165,
+    "gaps_between_windows": 85,
+    "mean_gap_h": 0.71367,
+    "longest_gap_h": 0.77841,
+    "unknown_h": 0.0,
+    "starts_open": true,
+    "ends_open": true
+   },
+   "relay_geometric": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "any_geometric": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "any_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_adds_geometric_h": 0.0,
+   "relay_adds_rf_h": 0.0,
+   "leg1_margin_db": {
+    "min": -4.336061446134465,
+    "max": 10.005902532937654
+   },
+   "leg2_margin_db": {
+    "min": 27.934040804619315,
+    "max": 28.61254075248064
+   },
+   "dtn": {
+    "evaluated": true,
+    "complete": false,
+    "completion_utc": null,
+    "elapsed_h": null,
+    "contacts_used": 0,
+    "remaining_mbit": 20000.0,
+    "reason": null
+   },
+   "rb2M_direct_rf_h": 0.0
+  },
+  {
+   "case": "lat84_lon359_30d_H1",
+   "result_id": "c9b10862d307661e0c2b7ef0",
+   "site": [
+    -84.313534,
+    359.048681
+   ],
+   "window": [
+    "2026-11-13T00:00:00Z",
+    "2026-12-13T00:00:00Z"
+   ],
+   "relay": "H1 hypothetical elliptical orbit, apoapsis over the lunar south",
+   "relay_samples": 43201,
+   "simulate_s": 2.25,
+   "relink_s": 0.628,
+   "memory_mb": [
+    117.9,
+    119.9
+   ],
+   "engine_labels": {
+    "sun_earth_azel": "Validated",
+    "horizon": "Pending validation",
+    "disk_visibility": "Pending validation",
+    "events": "Pending validation"
+   },
+   "direct_geometric": {
+    "open_h": 545.02032,
+    "open_share": 0.75697,
+    "windows": 2,
+    "uncertain_windows": 0,
+    "longest_window_h": 492.64337,
+    "gaps_between_windows": 1,
+    "mean_gap_h": 157.57386,
+    "longest_gap_h": 157.57386,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "direct_rf": {
+    "open_h": 545.02032,
+    "open_share": 0.75697,
+    "windows": 2,
+    "uncertain_windows": 0,
+    "longest_window_h": 492.64337,
+    "gaps_between_windows": 1,
+    "mean_gap_h": 157.57386,
+    "longest_gap_h": 157.57386,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "direct_margin_db": {
+    "min": 13.956577215580353,
+    "max": 15.032614737039466
+   },
+   "terrain_blocked_h": 38.72559,
+   "relay_orbit": {
+    "period_h": 11.5846,
+    "periapsis_alt_km": 662.6,
+    "apoapsis_alt_km": 7862.6,
+    "mean_motion_deg_per_h": 31.0757
+   },
+   "relay_leg1": {
+    "open_h": 520.58901,
+    "open_share": 0.72304,
+    "windows": 86,
+    "uncertain_windows": 24,
+    "longest_window_h": 8.97321,
+    "gaps_between_windows": 61,
+    "mean_gap_h": 3.18475,
+    "longest_gap_h": 3.53058,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_leg2": {
+    "open_h": 701.22723,
+    "open_share": 0.97393,
+    "windows": 27,
+    "uncertain_windows": 0,
+    "longest_window_h": 240.89668,
+    "gaps_between_windows": 26,
+    "mean_gap_h": 0.72203,
+    "longest_gap_h": 0.97021,
+    "unknown_h": 0.0,
+    "starts_open": true,
+    "ends_open": true
+   },
+   "relay_geometric": {
+    "open_h": 520.58901,
+    "open_share": 0.72304,
+    "windows": 86,
+    "uncertain_windows": 24,
+    "longest_window_h": 8.97321,
+    "gaps_between_windows": 61,
+    "mean_gap_h": 3.18475,
+    "longest_gap_h": 3.53058,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "any_geometric": {
+    "open_h": 674.00514,
+    "open_share": 0.93612,
+    "windows": 64,
+    "uncertain_windows": 24,
+    "longest_window_h": 158.58333,
+    "gaps_between_windows": 15,
+    "mean_gap_h": 2.92135,
+    "longest_gap_h": 3.39632,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "any_rf": {
+    "open_h": 545.02032,
+    "open_share": 0.75697,
+    "windows": 50,
+    "uncertain_windows": 24,
+    "longest_window_h": 158.58333,
+    "gaps_between_windows": 1,
+    "mean_gap_h": 157.57386,
+    "longest_gap_h": 157.57386,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": true
+   },
+   "relay_adds_geometric_h": 128.98482,
+   "relay_adds_rf_h": 0.0,
+   "leg1_margin_db": {
+    "min": -11.752942352062291,
+    "max": -5.249739484117185
+   },
+   "leg2_margin_db": {
+    "min": 27.81972956327334,
+    "max": 29.11984025646825
+   },
+   "dtn": {
+    "evaluated": true,
+    "complete": true,
+    "completion_utc": "2026-11-13T22:57:41Z",
+    "elapsed_h": 22.961381944451066,
+    "contacts_used": 1,
+    "remaining_mbit": 0.0,
+    "reason": null
+   },
+   "rb2M_direct_rf_h": 545.02032
+  },
+  {
+   "case": "lat78_lon22_30d_terrain_blocked_H1",
+   "result_id": "c2119090cd2ba9da7600ea6d",
+   "site": [
+    -78.398411,
+    21.869043
+   ],
+   "window": [
+    "2026-11-13T00:00:00Z",
+    "2026-12-13T00:00:00Z"
+   ],
+   "relay": "H1 hypothetical elliptical orbit, apoapsis over the lunar south",
+   "relay_samples": 43201,
+   "simulate_s": 3.79,
+   "relink_s": 0.354,
+   "memory_mb": [
+    123.7,
+    129.4
+   ],
+   "engine_labels": {
+    "sun_earth_azel": "Validated",
+    "horizon": "Pending validation",
+    "disk_visibility": "Pending validation",
+    "events": "Pending validation"
+   },
+   "direct_geometric": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "direct_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "direct_margin_db": {
+    "min": 13.95983747404432,
+    "max": 15.036215508078442
+   },
+   "terrain_blocked_h": 720.0,
+   "relay_orbit": {
+    "period_h": 11.5846,
+    "periapsis_alt_km": 662.6,
+    "apoapsis_alt_km": 7862.6,
+    "mean_motion_deg_per_h": 31.0757
+   },
+   "relay_leg1": {
+    "open_h": 489.76758,
+    "open_share": 0.68023,
+    "windows": 64,
+    "uncertain_windows": 2,
+    "longest_window_h": 8.29103,
+    "gaps_between_windows": 61,
+    "mean_gap_h": 3.67553,
+    "longest_gap_h": 4.16886,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_leg2": {
+    "open_h": 701.22723,
+    "open_share": 0.97393,
+    "windows": 27,
+    "uncertain_windows": 0,
+    "longest_window_h": 240.89668,
+    "gaps_between_windows": 26,
+    "mean_gap_h": 0.72203,
+    "longest_gap_h": 0.97021,
+    "unknown_h": 0.0,
+    "starts_open": true,
+    "ends_open": true
+   },
+   "relay_geometric": {
+    "open_h": 489.76758,
+    "open_share": 0.68023,
+    "windows": 64,
+    "uncertain_windows": 2,
+    "longest_window_h": 8.29103,
+    "gaps_between_windows": 61,
+    "mean_gap_h": 3.67553,
+    "longest_gap_h": 4.16886,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "any_geometric": {
+    "open_h": 489.76758,
+    "open_share": 0.68023,
+    "windows": 64,
+    "uncertain_windows": 2,
+    "longest_window_h": 8.29103,
+    "gaps_between_windows": 61,
+    "mean_gap_h": 3.67553,
+    "longest_gap_h": 4.16886,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "any_rf": {
+    "open_h": 0.0,
+    "open_share": 0.0,
+    "windows": 0,
+    "uncertain_windows": 0,
+    "longest_window_h": 0.0,
+    "gaps_between_windows": 0,
+    "mean_gap_h": null,
+    "longest_gap_h": null,
+    "unknown_h": 0.0,
+    "starts_open": false,
+    "ends_open": false
+   },
+   "relay_adds_geometric_h": 489.76758,
+   "relay_adds_rf_h": 0.0,
+   "leg1_margin_db": {
+    "min": -11.887419992099296,
+    "max": -4.9535247936490805
+   },
+   "leg2_margin_db": {
+    "min": 27.81972956327334,
+    "max": 29.11984025646825
+   },
+   "dtn": {
+    "evaluated": true,
+    "complete": false,
+    "completion_utc": null,
+    "elapsed_h": null,
+    "contacts_used": 0,
+    "remaining_mbit": 20000.0,
+    "reason": null
+   },
+   "rb2M_direct_rf_h": 0.0
+  }
+ ],
+ "memory_end_mb": [
+  123.7,
+  129.4
+ ]
+}

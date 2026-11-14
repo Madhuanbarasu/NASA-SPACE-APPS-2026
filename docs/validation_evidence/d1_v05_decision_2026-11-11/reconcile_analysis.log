@@ -1,0 +1,38 @@
+table rows carrying a Horizons RTS marker (r/s/t) in the 3rd column, all 47 responses: 2
+RTS-related header lines / query parameters across all 47 responses:
+    'r'  Rise          (target body on or above cut-off RTS elevation)
+    's'  Set           (target body on or below cut-off RTS elevation)
+    't'  Transit       (target body at or past local maximum RTS elevation)
+    INTEFERING BODY PRESENCE WITH TARGET RISE/TRANSIT/SET MARKER (OBSERVING SITE)
+    RTS MARKERS (TVH)
+    Rise and set are with respect to the reference ellipsoid true visual horizon
+    presence OR target rise/transit/set symbol.
+
+site                 body  event  LUNA-t_sec   LUNA-t_min   t_min-t_sec  (t_sec re-derived - recorded)  min step / sec step
+south-polar A        earth rise      -0.1000s     -0.1000s     -0.0001s   +0.0e+00s   60 s / 1 s
+south-polar A        earth set       -0.0534s     -0.0536s     +0.0001s   +0.0e+00s   60 s / 1 s
+south-polar B        sun   set       +0.5000s     +0.4996s     +0.0004s   +0.0e+00s   60 s / 1 s
+south-polar B        sun   rise      +0.4483s     +0.4487s     -0.0004s   +0.0e+00s   60 s / 1 s
+south-polar B        earth rise      +0.1065s     +0.1059s     +0.0005s   +0.0e+00s   60 s / 1 s
+south-polar B        earth set       +0.3295s     +0.3301s     -0.0006s   +0.0e+00s   60 s / 1 s
+north-polar          sun   rise      +0.4466s     +0.4459s     +0.0007s   +0.0e+00s   60 s / 1 s
+north-polar          sun   set       +0.4514s     +0.4518s     -0.0004s   +0.0e+00s   60 s / 1 s
+north-polar          earth set       -0.1093s     -0.1096s     +0.0003s   +0.0e+00s   60 s / 1 s
+north-polar          earth rise      +0.3047s     +0.3048s     -0.0001s   +0.0e+00s   60 s / 1 s
+nearside equatorial  sun   rise      +0.4987s     +0.4987s     +0.0000s   +0.0e+00s   60 s / 1 s
+nearside equatorial  sun   set       +0.4925s     +0.4925s     -0.0000s   +0.0e+00s   60 s / 1 s
+limb                 sun   set       +0.3484s     +0.3484s     -0.0000s   +0.0e+00s   60 s / 1 s
+limb                 sun   rise      +0.4950s     +0.4950s     +0.0000s   +0.0e+00s   60 s / 1 s
+limb                 earth rise      +0.1424s     +0.1423s     +0.0000s   +0.0e+00s   60 s / 1 s
+limb                 earth set       +0.2281s     +0.2284s     -0.0003s   +0.0e+00s   60 s / 1 s
+farside              sun   set       +0.2195s     +0.2195s     +0.0000s   +0.0e+00s   60 s / 1 s
+farside              sun   rise      +0.4832s     +0.4832s     -0.0000s   +0.0e+00s   60 s / 1 s
+
+n = 18 matched events (missed 0, spurious 0)
+max |t_LUNA - t_sec| (Horizons 1-s crossing)          = 0.49995 s
+max |t_LUNA - t_min| (interpolated 1-minute table)    = 0.49956 s
+max |t_min - t_sec|  (1-minute interpolation error)   = 0.00068 s
+max |re-derived t_sec - recorded et_horizons|         = 0.0e+00 s
+within   1.0 s: vs 1-s crossing 18/18, vs 1-minute interpolation 18/18
+within  10.0 s: vs 1-s crossing 18/18, vs 1-minute interpolation 18/18
+within 120.0 s: vs 1-s crossing 18/18, vs 1-minute interpolation 18/18

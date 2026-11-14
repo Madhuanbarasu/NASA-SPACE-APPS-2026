@@ -1,0 +1,321 @@
+{
+  "timestamp_utc": "2026-11-10T16:40:51.665514Z",
+  "algorithm_version": "1.5.0",
+  "status": "MEASUREMENT-ONLY (PENDING SCIENTIFIC ACCEPTANCE)",
+  "sampling_design": {
+    "lattice_total_candidates": 144400,
+    "grid_rows": 380,
+    "grid_cols": 380,
+    "spacing_m": 1600.0,
+    "bounding_box_m": [
+      -304000.0,
+      -304000.0,
+      304000.0,
+      304000.0
+    ],
+    "radial_mask_equation": "r_squared = x*x + y*y <= 304000*304000",
+    "primary_circular_domain_candidates": 113373,
+    "secondary_square_domain_candidates": 144400,
+    "radial_exclusions": 31027
+  },
+  "products": {
+    "20m": {
+      "path": "pgda90_20m/LDEM_80S_20MPP_ADJ.TIF",
+      "sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+      "bytes": 2696082051
+    },
+    "80m": {
+      "path": "pgda90_80m/LDEM_80S_80MPP_ADJ.tiff",
+      "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+      "bytes": 189158392
+    },
+    "240m": {
+      "path": "pgda90_240m/LDEM_60S_240MPP_ADJ.TIF",
+      "sha256": "3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34",
+      "bytes": 218961039
+    }
+  },
+  "primary_circular_polar_disk": {
+    "description": "True circular lunar South Polar disk defined by r <= 304,000 m (latitudes 80S to 90S)",
+    "candidate_count": 113373,
+    "radial_exclusions": 31027,
+    "pairwise_evaluations": {
+      "80m_vs_240m": {
+        "comparison": "80m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 113373,
+        "radial_exclusions": 31027,
+        "valid_sample_count": 113373,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.00917440400823941,
+        "population_std_m": 2.934051433453334,
+        "rms_discrepancy_m": 2.934065777012927,
+        "median_m": 0.13134765624727152,
+        "p5_m": -4.48339301212668,
+        "p95_m": 4.165592447912056,
+        "min_diff_m": -61.07845052084167,
+        "max_diff_m": 24.941555447062
+      },
+      "20m_vs_240m": {
+        "comparison": "20m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 113373,
+        "radial_exclusions": 31027,
+        "valid_sample_count": 113373,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.011203885123003673,
+        "population_std_m": 3.1322973413403283,
+        "rms_discrepancy_m": 3.132317378812297,
+        "median_m": 0.15911865234375,
+        "p5_m": -4.783227539063046,
+        "p95_m": 4.3897054036447996,
+        "min_diff_m": -64.45927937826355,
+        "max_diff_m": 41.079549153653716
+      },
+      "20m_vs_80m": {
+        "comparison": "20m vs 80m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 113373,
+        "radial_exclusions": 31027,
+        "valid_sample_count": 113373,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.0020294811147642624,
+        "population_std_m": 0.5785228764565,
+        "rms_discrepancy_m": 0.5785264361955278,
+        "median_m": 0.02490234375,
+        "p5_m": -0.5909423828125,
+        "p95_m": 0.5426513671874993,
+        "min_diff_m": -33.14447021484375,
+        "max_diff_m": 40.4249267578125
+      }
+    },
+    "common_subset_evaluations": {
+      "common_valid_count": 113373,
+      "80m_vs_240m": {
+        "comparison": "Common Subset: 80m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 113373,
+        "radial_exclusions": 31027,
+        "valid_sample_count": 113373,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.00917440400823941,
+        "population_std_m": 2.934051433453334,
+        "rms_discrepancy_m": 2.934065777012927,
+        "median_m": 0.13134765624727152,
+        "p5_m": -4.48339301212668,
+        "p95_m": 4.165592447912056,
+        "min_diff_m": -61.07845052084167,
+        "max_diff_m": 24.941555447062
+      },
+      "20m_vs_240m": {
+        "comparison": "Common Subset: 20m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 113373,
+        "radial_exclusions": 31027,
+        "valid_sample_count": 113373,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.011203885123003673,
+        "population_std_m": 3.1322973413403283,
+        "rms_discrepancy_m": 3.132317378812297,
+        "median_m": 0.15911865234375,
+        "p5_m": -4.783227539063046,
+        "p95_m": 4.3897054036447996,
+        "min_diff_m": -64.45927937826355,
+        "max_diff_m": 41.079549153653716
+      },
+      "20m_vs_80m": {
+        "comparison": "Common Subset: 20m vs 80m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 113373,
+        "radial_exclusions": 31027,
+        "valid_sample_count": 113373,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.0020294811147642624,
+        "population_std_m": 0.5785228764565,
+        "rms_discrepancy_m": 0.5785264361955278,
+        "median_m": 0.02490234375,
+        "p5_m": -0.5909423828125,
+        "p95_m": 0.5426513671874993,
+        "min_diff_m": -33.14447021484375,
+        "max_diff_m": 40.4249267578125
+      }
+    }
+  },
+  "secondary_full_square_bounding_box": {
+    "description": "Full 608 km x 608 km bounding box including corners spanning between 80S and ~75.8S",
+    "candidate_count": 144400,
+    "radial_exclusions": 0,
+    "pairwise_evaluations": {
+      "80m_vs_240m": {
+        "comparison": "80m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 144400,
+        "radial_exclusions": 0,
+        "valid_sample_count": 144400,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.00358765480732059,
+        "population_std_m": 2.987014655907022,
+        "rms_discrepancy_m": 2.9870168104432158,
+        "median_m": 0.12093098958393966,
+        "p5_m": -4.5754279242547105,
+        "p95_m": 4.248377821179655,
+        "min_diff_m": -61.07845052084167,
+        "max_diff_m": 59.23597547747022
+      },
+      "20m_vs_240m": {
+        "comparison": "20m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 144400,
+        "radial_exclusions": 0,
+        "valid_sample_count": 144400,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.00907180547904159,
+        "population_std_m": 3.1910664659699712,
+        "rms_discrepancy_m": 3.191079360951829,
+        "median_m": 0.15046013726640695,
+        "p5_m": -4.874250115279323,
+        "p95_m": 4.478030395521386,
+        "min_diff_m": -64.45927937826355,
+        "max_diff_m": 60.73601616754604
+      },
+      "20m_vs_80m": {
+        "comparison": "20m vs 80m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 144400,
+        "radial_exclusions": 0,
+        "valid_sample_count": 144400,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.0054841506717209975,
+        "population_std_m": 0.6238099004385596,
+        "rms_discrepancy_m": 0.6238340066025223,
+        "median_m": 0.0262451171875,
+        "p5_m": -0.5854111671447754,
+        "p95_m": 0.5457763671875,
+        "min_diff_m": -33.14447021484375,
+        "max_diff_m": 61.8511962890625
+      }
+    },
+    "common_subset_evaluations": {
+      "common_valid_count": 144400,
+      "80m_vs_240m": {
+        "comparison": "Common Subset: 80m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 144400,
+        "radial_exclusions": 0,
+        "valid_sample_count": 144400,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.00358765480732059,
+        "population_std_m": 2.987014655907022,
+        "rms_discrepancy_m": 2.9870168104432158,
+        "median_m": 0.12093098958393966,
+        "p5_m": -4.5754279242547105,
+        "p95_m": 4.248377821179655,
+        "min_diff_m": -61.07845052084167,
+        "max_diff_m": 59.23597547747022
+      },
+      "20m_vs_240m": {
+        "comparison": "Common Subset: 20m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 144400,
+        "radial_exclusions": 0,
+        "valid_sample_count": 144400,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.00907180547904159,
+        "population_std_m": 3.1910664659699712,
+        "rms_discrepancy_m": 3.191079360951829,
+        "median_m": 0.15046013726640695,
+        "p5_m": -4.874250115279323,
+        "p95_m": 4.478030395521386,
+        "min_diff_m": -64.45927937826355,
+        "max_diff_m": 60.73601616754604
+      },
+      "20m_vs_80m": {
+        "comparison": "Common Subset: 20m vs 80m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 144400,
+        "radial_exclusions": 0,
+        "valid_sample_count": 144400,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.0054841506717209975,
+        "population_std_m": 0.6238099004385596,
+        "rms_discrepancy_m": 0.6238340066025223,
+        "median_m": 0.0262451171875,
+        "p5_m": -0.5854111671447754,
+        "p95_m": 0.5457763671875,
+        "min_diff_m": -33.14447021484375,
+        "max_diff_m": 61.8511962890625
+      }
+    }
+  },
+  "diagnostic_nearest_neighbour_comparison": {
+    "note": "Evaluates slope-coupling variance in nearest-neighbour sampling vs bilinear interpolation on non-coincident grids",
+    "circular_domain": {
+      "nearest_neighbour_80m_vs_240m": {
+        "comparison": "Diagnostic NN: 80m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 113373,
+        "radial_exclusions": 31027,
+        "valid_sample_count": 113373,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": -0.03421714358636613,
+        "population_std_m": 13.245561543730917,
+        "rms_discrepancy_m": 13.245605740081446,
+        "median_m": 0.077880859375,
+        "p5_m": -22.39609375,
+        "p95_m": 22.162866210937462,
+        "min_diff_m": -75.0244140625,
+        "max_diff_m": 72.1094970703125
+      },
+      "bilinear_80m_vs_240m": {
+        "comparison": "80m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 113373,
+        "radial_exclusions": 31027,
+        "valid_sample_count": 113373,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.00917440400823941,
+        "population_std_m": 2.934051433453334,
+        "rms_discrepancy_m": 2.934065777012927,
+        "median_m": 0.13134765624727152,
+        "p5_m": -4.48339301212668,
+        "p95_m": 4.165592447912056,
+        "min_diff_m": -61.07845052084167,
+        "max_diff_m": 24.941555447062
+      }
+    },
+    "square_domain": {
+      "nearest_neighbour_80m_vs_240m": {
+        "comparison": "Diagnostic NN: 80m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 144400,
+        "radial_exclusions": 0,
+        "valid_sample_count": 144400,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.02183756480131484,
+        "population_std_m": 13.056583250116384,
+        "rms_discrepancy_m": 13.0566015121262,
+        "median_m": 0.081298828125,
+        "p5_m": -21.964312744140624,
+        "p95_m": 21.881811523437477,
+        "min_diff_m": -75.0244140625,
+        "max_diff_m": 113.13671875
+      },
+      "bilinear_80m_vs_240m": {
+        "comparison": "80m vs 240m",
+        "total_candidate_lattice_points": 144400,
+        "domain_candidate_points": 144400,
+        "radial_exclusions": 0,
+        "valid_sample_count": 144400,
+        "unexpected_nodata_exclusions": 0,
+        "mean_bias_m": 0.00358765480732059,
+        "population_std_m": 2.987014655907022,
+        "rms_discrepancy_m": 2.9870168104432158,
+        "median_m": 0.12093098958393966,
+        "p5_m": -4.5754279242547105,
+        "p95_m": 4.248377821179655,
+        "min_diff_m": -61.07845052084167,
+        "max_diff_m": 59.23597547747022
+      }
+    }
+  }
+}

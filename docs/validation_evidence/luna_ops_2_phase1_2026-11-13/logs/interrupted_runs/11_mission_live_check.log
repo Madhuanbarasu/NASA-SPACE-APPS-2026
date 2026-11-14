@@ -1,0 +1,10 @@
+file:///E:/LUNA-OPS/frontend/scripts/mission-live-check.mjs:63
+  throw new Error("timeout waiting for " + what);
+        ^
+
+Error: timeout waiting for status
+    at waitFor (file:///E:/LUNA-OPS/frontend/scripts/mission-live-check.mjs:63:9)
+    at async file:///E:/LUNA-OPS/frontend/scripts/mission-live-check.mjs:107:1
+
+Node.js v24.19.0
+exit 1

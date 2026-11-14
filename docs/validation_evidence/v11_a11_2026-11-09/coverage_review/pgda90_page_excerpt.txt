@@ -1,0 +1,23 @@
+# Excerpt of https://pgda.gsfc.nasa.gov/products/90 fetched 2026-11-09 (text lines, verbatim)
+A New View of the Lunar South Pole from LOLA
+Michael Kenneth Barker
+All TIF files are cloud-optimized GeoTiffs (
+COG
+s) with south polar stereographic X/Y coordinates in meters and in the MOON_ME reference frame of the JPL DE421 ephemeris.
+Filename format: PREFIX_LAT_PIX_STEMS.TIF
+where PREFIX gives the data type (LDEM, LDEC, LDSM, LDRM, or LPSR), LAT gives the latitude limit (80S, 83S, 75S or
+60S), PIX gives the pixel scale in meters per pixel (e.g., 10MPP, 20MPP, 30MPP, 40MPP, 60MPP, etc.), and STEMS
+is an additional identifier (e.g., ADJ, ADJ_ERR, ADJ_HILL, ADJ_EFFRES, ADJ_ROUGH_100M, etc.).
+For example, these are the filenames for the 20 meters/pixel DEM products which cover 80 - 90 deg South:
+Permanently Shadowed Region (PSR) products
+All PSRs (N=506349):
+LPSR_80S_20MPP_ADJ.TIF
+- 148M - PSR map
+Only PSRs with area > 1 km
+2
+(N=1531):
+Please cite this paper when using these products:
+Barker et al., 2023 Planet. Sci. J., 4, 183.
+https://doi.org/10.3847/PSJ/acf3e1
+Data DOI:
+10.60903/gsfcpgda-lola-spole

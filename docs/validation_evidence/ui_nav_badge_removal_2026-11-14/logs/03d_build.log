@@ -1,0 +1,37 @@
+
+> luna-ops-frontend@0.1.0 build
+> tsc --noEmit -p . && node scripts/check-strings.mjs && node scripts/check-a11y.mjs && vite build
+
+check-strings: 1365 keys, 1365 referenced, 53 files scanned, 7 allow-listed literals, 0 problem(s)
+check-a11y: 40 components, 52 colour pairs, 0 problem(s)
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 427 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                                            [39m[1m[2m  0.77 kB[22m[1m[22m[2m │ gzip:   0.48 kB[22m
+[2mdist/[22m[32massets/archivo-vietnamese-wdth-normal-rJmnGBSt.woff2  [39m[1m[2m 34.46 kB[22m[1m[22m
+[2mdist/[22m[32massets/archivo-latin-ext-wdth-normal-7khWdh9v.woff2   [39m[1m[2m 86.24 kB[22m[1m[22m
+[2mdist/[22m[32massets/archivo-latin-wdth-normal-DY7AcnAa.woff2       [39m[1m[2m 90.10 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-CxfNYtBm.css                             [39m[1m[2m 77.99 kB[22m[1m[22m[2m │ gzip:  15.47 kB[22m
+[2mdist/[22m[36massets/ResultLabels-hF8_Ze31.js                       [39m[1m[2m  0.26 kB[22m[1m[22m[2m │ gzip:   0.17 kB[22m
+[2mdist/[22m[36massets/ChartTooltip-jlbnn6IM.js                       [39m[1m[2m  0.28 kB[22m[1m[22m[2m │ gzip:   0.22 kB[22m
+[2mdist/[22m[36massets/ChartLegend-CcrzR8oB.js                        [39m[1m[2m  0.34 kB[22m[1m[22m[2m │ gzip:   0.25 kB[22m
+[2mdist/[22m[36massets/StageLegend-DC3e1y_V.js                        [39m[1m[2m  0.58 kB[22m[1m[22m[2m │ gzip:   0.37 kB[22m
+[2mdist/[22m[36massets/terrainStats-BZmUF93F.js                       [39m[1m[2m  0.90 kB[22m[1m[22m[2m │ gzip:   0.51 kB[22m
+[2mdist/[22m[36massets/CompareCharts-BGTHHZ0l.js                      [39m[1m[2m  5.05 kB[22m[1m[22m[2m │ gzip:   2.09 kB[22m
+[2mdist/[22m[36massets/TerrainPreview-DbDBeH3s.js                     [39m[1m[2m  6.48 kB[22m[1m[22m[2m │ gzip:   2.60 kB[22m
+[2mdist/[22m[36massets/Terrain3D-CBloPnX_.js                          [39m[1m[2m  7.09 kB[22m[1m[22m[2m │ gzip:   2.95 kB[22m
+[2mdist/[22m[36massets/useWidth-MDlfuyMg.js                           [39m[1m[2m  9.05 kB[22m[1m[22m[2m │ gzip:   3.84 kB[22m
+[2mdist/[22m[36massets/MapView-BwMy5ffJ.js                            [39m[1m[2m 13.44 kB[22m[1m[22m[2m │ gzip:   5.30 kB[22m
+[2mdist/[22m[36massets/MoonGlobe-BeMw2N4U.js                          [39m[1m[2m 15.54 kB[22m[1m[22m[2m │ gzip:   6.26 kB[22m
+[2mdist/[22m[36massets/timeAxis-Ivp70Ral.js                           [39m[1m[2m 17.05 kB[22m[1m[22m[2m │ gzip:   4.05 kB[22m
+[2mdist/[22m[36massets/LandingMap-BdOMQiAi.js                         [39m[1m[2m 20.44 kB[22m[1m[22m[2m │ gzip:   7.39 kB[22m
+[2mdist/[22m[36massets/MissionView-C-cgqgmP.js                        [39m[1m[2m 22.39 kB[22m[1m[22m[2m │ gzip:   6.73 kB[22m
+[2mdist/[22m[36massets/LandingView-BKYO2xzH.js                        [39m[1m[2m 25.03 kB[22m[1m[22m[2m │ gzip:   6.37 kB[22m
+[2mdist/[22m[36massets/CommsView-Ce-da0r-.js                          [39m[1m[2m 29.88 kB[22m[1m[22m[2m │ gzip:   8.31 kB[22m
+[2mdist/[22m[36massets/ResultWorkspace-Bk1rEFXt.js                    [39m[1m[2m 46.28 kB[22m[1m[22m[2m │ gzip:  13.45 kB[22m
+[2mdist/[22m[36massets/index-BqZbhWQk.js                              [39m[1m[2m322.18 kB[22m[1m[22m[2m │ gzip: 104.32 kB[22m
+[2mdist/[22m[36massets/index-Bo8M58ku.js                              [39m[1m[2m452.88 kB[22m[1m[22m[2m │ gzip: 138.31 kB[22m
+[2mdist/[22m[36massets/OrbitControls-DT1z0Qlr.js                      [39m[1m[2m505.59 kB[22m[1m[22m[2m │ gzip: 126.86 kB[22m
+[32m✓ built in 4.73s[39m

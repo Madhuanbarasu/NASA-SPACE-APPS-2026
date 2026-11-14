@@ -1,0 +1,52 @@
+PASS README line 99 is the protected sentence
+PASS README validated-requirements block = provenance
+PASS TRACEABILITY V-09 gate column = provenance
+PASS TRACEABILITY V-10 gate column = provenance
+PASS TRACEABILITY V-11 gate column = provenance
+PASS TRACEABILITY V-12 gate column = provenance
+PASS TRACEABILITY V-13 gate column = provenance
+PASS report.json SHA-256 = 2279606c…d077d376  [2279606ceab9354b8616ba9216e12e89e399f34cfc3cbfcbd7502d12d077d376]
+PASS report.json == phase4_final_merge/report_after.json
+PASS report entries 420 passed / 2 not run / 2 skipped  [{'passed': 420, 'not run': 2, 'skipped': 2}]
+PASS report statuses as documented
+PASS merge log: 438 passed, 2 skipped, exit 0, nothing rejected
+PASS code fingerprint 5bf9753f…
+PASS suite fingerprint 1632af16…
+PASS terrain acceptance digest e48eb8ed…
+PASS report fingerprints = current
+PASS algorithm 1.5.0
+PASS terrain_acceptance.json unchanged  [c04650699f1cdade46b29614fc4f9b2dd20d27eb3b99fd32b9a8e72a892356ae]
+PASS README.md: no stale pre-merge statements
+PASS docs/TRACEABILITY.md: no stale pre-merge statements
+PASS docs/AUDIT_2026-11.md: no stale pre-merge statements
+PASS docs/validation_evidence/README.md: no stale pre-merge statements
+PASS README.md: mentions final report 2279606c
+PASS README.md: records verdict COMPLETE WITH APPROVED DEFERRALS
+PASS README.md: does not claim all labels Validated
+PASS docs/TRACEABILITY.md: mentions final report 2279606c
+PASS docs/TRACEABILITY.md: records verdict COMPLETE WITH APPROVED DEFERRALS
+PASS docs/TRACEABILITY.md: does not claim all labels Validated
+PASS docs/AUDIT_2026-11.md: mentions final report 2279606c
+PASS docs/AUDIT_2026-11.md: records verdict COMPLETE WITH APPROVED DEFERRALS
+PASS docs/AUDIT_2026-11.md: does not claim all labels Validated
+PASS docs/validation_evidence/README.md: mentions final report 2279606c
+PASS docs/validation_evidence/README.md: records verdict COMPLETE WITH APPROVED DEFERRALS
+PASS docs/validation_evidence/README.md: does not claim all labels Validated
+PASS docs/validation_evidence/phase4_closure_2026-11-11/README.md: mentions final report 2279606c
+PASS docs/validation_evidence/phase4_closure_2026-11-11/README.md: records verdict COMPLETE WITH APPROVED DEFERRALS
+PASS docs/validation_evidence/phase4_closure_2026-11-11/README.md: does not claim all labels Validated
+PASS docs/validation_evidence/phase4_final_merge_2026-11-12/README.md: mentions final report 2279606c
+PASS docs/validation_evidence/phase4_final_merge_2026-11-12/README.md: records verdict COMPLETE WITH APPROVED DEFERRALS
+PASS docs/validation_evidence/phase4_final_merge_2026-11-12/README.md: does not claim all labels Validated
+PASS README.md: states disk/events/power stay Pending
+PASS docs/TRACEABILITY.md: states disk/events/power stay Pending
+PASS docs/AUDIT_2026-11.md: states disk/events/power stay Pending
+PASS docs/validation_evidence/phase4_final_merge_2026-11-12/README.md: states disk/events/power stay Pending
+PASS every referenced evidence path exists
+PASS refresh_v04_v05_v13_v14_2026-11-11/SHA256SUMS verifies
+PASS phase4_closure_2026-11-11/SHA256SUMS verifies
+PASS phase4_merge_2026-11-11/SHA256SUMS verifies
+PASS d1_v05_decision_2026-11-11/SHA256SUMS verifies
+PASS phase4_remaining_decisions_2026-11-11/SHA256SUMS verifies
+PASS phase4_final_merge_2026-11-12/SHA256SUMS verifies
+ALL OK (51 checks)

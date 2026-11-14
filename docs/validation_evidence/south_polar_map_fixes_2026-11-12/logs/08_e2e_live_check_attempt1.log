@@ -1,0 +1,18 @@
+PASS loading state: on a slow connection the Mission tab shows its loading text, then the dashboard
+PASS globe selection: the pick reaches the sidebar, the explorer and the dashboard as the same site  {"f1":{"lat":"-89.9","lon":"0"},"exp1":"89.900° S, 0.000° E","mis1":"89.900° S, 0.000° E","globeSel":"Centre 0.000° N, 0.000° E"}
+FAIL terrain: the local terrain preview opens for the picked site with the registered product  {"tStats":"Registered terrain in this windowLoading registered terrain.Lighting is illustrative, not the computed Sun direction. Run the analysis for the horizon, Sun and Earth visibility and validation labels.W","product":"PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_20MPP_ADJ"}
+PASS analysis: the result is for exactly the picked coordinates  {"coverage":{"covered":true,"finest":"20m","levels":["20m","80m","240m"],"products":["20m:LDEM_80S_20MPP_ADJ.TIF","80m:LDEM_80S_80MPP_ADJ.tiff","240m:LDEM_60S_240MPP_ADJ.TIF"],"reason":null},"ground_h_m":628.023,"id":null,"lat":-89.9,"lon":0,"name":null,"terrain_level_at_site":"20m"}
+PASS result preservation: leaving the result keeps it (explorer offers to return; dashboard shows it as kept)  {"returnBtn":"Return to the result for 89.900° S, 0.000° E","curBefore":"57"}
+PASS result preservation: Analysis returns to the same result at the same time step without fetching it again  {"back":{"id":"5679c84cd9d60db35d28629d","cursor":"57"},"resReqs0":2,"resReqs1":2}
+PASS result preservation: the explorer's Return button restores it too
+PASS comparison: candidates compared (2 × 2), a cell opens its result, the dashboard reports the comparison and lists the results  {"cells":4,"cellId":"964c0e8e5a41d548cb6a79dd","histIds":2}
+PASS persistence: after a reload the session list is restored unchanged (same build and validation report)  {"n":2}
+PASS persistence: the saved list is tied to the backend code fingerprint and the validation report time  {"code":"5bf9753fa5c5","report":"2026-11-12T06:27:21Z"}
+PASS persistence: a restored entry opens its result from the server
+PASS persistence: a list saved by another build is discarded, never shown (no stale figures or labels)  {"rows":0,"stored":null}
+FAIL error state: a missing result is reported in place (Run the analysis again), the dashboard stays usable  {"alert":"","tab":"Mission"}
+PASS error state: with the status API unreachable the dashboard and sidebar say so; no readiness is invented  {"status":"System statusThe API is not reachable: Failed to fetchA quantity stays Pending until every test it needs has passed; see Data and validation."}
+PASS layout: no sideways scrolling on any tab at 1440, 390 and 320 px  {"1440:Mission":true,"1440:Site":true,"1440:Compare":true,"1440:Data and validation":true,"1440:Guide":true,"390:Mission":true,"390:Site":true,"390:Compare":true,"390:Data and validation":true,"390:Guide":true,"320:Mission":true,"320:Site":true,"320:Compare":true,"320:Data and validation":true,"320:Guide":true}
+PASS no page exceptions or console errors (apart from the deliberate 404 and blocked request)  []
+e2e-live-check: 14/16 checks passed
+exit 1

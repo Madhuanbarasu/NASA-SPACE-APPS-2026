@@ -1,0 +1,31 @@
+data/kernels/*
+data/kernels_demo/*
+data/kernels_download/*
+data/dem/*
+data/dem_demo/*
+data/cache/*
+data/catalog/*
+!data/**/.gitkeep
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+.pytest_cache/
+backend/validation/report.json
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Preserve terrain registry metadata
+!data/dem/registry.json
+# Generated TypeScript build information
+*.tsbuildinfo
+# IB-5 / D5: reference rasters with unresolved redistribution terms (PGDA LPSR, PDS AVGVISIB, LROC); never commit
+data/reference_validation/

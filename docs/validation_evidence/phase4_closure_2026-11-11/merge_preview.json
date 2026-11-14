@@ -1,0 +1,96 @@
+{
+  "note": "IN-MEMORY PREVIEW ONLY. Not a validation report: no pytest was run, nothing was written to backend/validation/report.json. It shows what run_validation --merge would record for the eligible files, given the automated statuses in the live report (same code and suite fingerprints).",
+  "now": {
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-11T16:43:00Z"
+  },
+  "live_report": {
+    "sha256": "00d2cda1bf3fe38fe98cc8a76e92acabdf9cb771ab900119750203586b15c239",
+    "run_utc": "2026-11-10T21:19:33Z",
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "pytest_exit_code": 0
+  },
+  "eligible_files": [
+    {
+      "file": "docs/validation_evidence/v09_v10_final_2026-11-10/v09_v10.json",
+      "sha256": "cc6d27a7b594050b72a481e4379a33c2c56d340134b3d821d3bb4cb34efce401",
+      "why_eligible": "already merged; must be re-merged by any new run_validation (status stays 'not run')",
+      "rejected_reasons": [],
+      "merged": true
+    },
+    {
+      "file": "docs/validation_evidence/v11_final_2026-11-10/v11.json",
+      "sha256": "fa42c569dee745cd7f9acc0744bf8817956b7cc1bef96efd683de33da3cc2add",
+      "why_eligible": "already merged; must be re-merged by any new run_validation",
+      "rejected_reasons": [],
+      "merged": true
+    },
+    {
+      "file": "docs/validation_evidence/v12_final_2026-11-10/v12.json",
+      "sha256": "d01b97f5a38d4d935ae3a268844926b41192cecaee09e513812758607bbad668",
+      "why_eligible": "already merged; must be re-merged by any new run_validation",
+      "rejected_reasons": [],
+      "merged": true
+    },
+    {
+      "file": "docs/validation_evidence/phase4_closure_2026-11-11/merge_inputs/horizons_v04_only.json",
+      "sha256": "509d15adf3a291ee105dead75a46c57348ace462c91c4e7f6309a94f55a5d206",
+      "why_eligible": "V-04 PASS (refresh 2026-11-11); V-05 removed",
+      "rejected_reasons": [],
+      "merged": true
+    },
+    {
+      "file": "docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11/v13_eclipse/v13.json",
+      "sha256": "277fef85646a9a1451829e5fde28e9a119ba10f78b9079ba38f5bcb6ad7fd64a",
+      "why_eligible": "V-13 PASS (refresh 2026-11-11)",
+      "rejected_reasons": [],
+      "merged": true
+    },
+    {
+      "file": "docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11/v14_month/v14.json",
+      "sha256": "5ca3a28d0f1a6c9f455c5c7397960a149e049a944b8bf9bd2378aa41b2b2164e",
+      "why_eligible": "V-14 full-form PASS (refresh 2026-11-11)",
+      "rejected_reasons": [],
+      "merged": true
+    }
+  ],
+  "not_eligible": {
+    "docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11/v04_horizons/horizons.json": "carries V-05 'passed' under the unapproved 1.0 s threshold",
+    "U-04": "no frontend_u04 result file exists; writing one (scoped PASS -> 'passed') is an acceptance decision not taken",
+    "U-06": "no approved criterion; audit status BLOCKED (provisional measurements)"
+  },
+  "status_changes": {
+    "V-04": {
+      "live_report": "not run",
+      "after_eligible_merge": "passed"
+    },
+    "V-05": {
+      "live_report": "not run",
+      "after_eligible_merge": "not run"
+    },
+    "V-13": {
+      "live_report": "not run",
+      "after_eligible_merge": "passed"
+    },
+    "V-14": {
+      "live_report": "passed",
+      "after_eligible_merge": "passed"
+    },
+    "U-04": {
+      "live_report": "not run",
+      "after_eligible_merge": "not run"
+    },
+    "U-06": {
+      "live_report": "not run",
+      "after_eligible_merge": "not run"
+    }
+  },
+  "derived_v04_only": {
+    "file": "docs/validation_evidence/phase4_closure_2026-11-11/merge_inputs/horizons_v04_only.json",
+    "sha256": "509d15adf3a291ee105dead75a46c57348ace462c91c4e7f6309a94f55a5d206"
+  }
+}

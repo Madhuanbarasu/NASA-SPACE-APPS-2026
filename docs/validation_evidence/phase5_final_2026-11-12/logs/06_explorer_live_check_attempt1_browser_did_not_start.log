@@ -1,0 +1,11 @@
+file:///E:/LUNA-OPS/frontend/scripts/explorer-live-check.mjs:44
+await new Promise((r, j) => { ws.onopen = r; ws.onerror = j; });
+                                        ^
+
+TypeError: Cannot set properties of null (setting 'onopen')
+    at nextId (file:///E:/LUNA-OPS/frontend/scripts/explorer-live-check.mjs:44:41)
+    at new Promise (<anonymous>)
+    at file:///E:/LUNA-OPS/frontend/scripts/explorer-live-check.mjs:44:7
+
+Node.js v24.19.0
+exit 1

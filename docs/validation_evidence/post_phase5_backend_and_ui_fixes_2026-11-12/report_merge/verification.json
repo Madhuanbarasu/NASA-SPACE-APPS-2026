@@ -1,0 +1,74 @@
+{
+  "report_before_sha256": "5135efe88e5feb0fd36e0230ecba9f2d2b99322a70e1e69e822e13def69df53f",
+  "report_after_sha256": "8c03ebafc72c5c41a238565f51464413bd63f3132302491cc518587d93ebe10d",
+  "run_utc": "2026-11-12T17:23:45Z",
+  "code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109",
+  "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+  "pytest_exit_code": 0,
+  "rejected_merges": {},
+  "merged_tests_verified": {
+    "V-04": {
+      "status": "passed",
+      "script": "horizons_compare",
+      "detail": "max |dAz cos El| 5.235e-07 deg, max |dEl| 5.226e-07 deg (tolerance 0.01 deg); 7931 epochs; kernel profile production",
+      "run_utc": "2026-11-12T09:10:01Z"
+    },
+    "V-05": {
+      "status": "passed",
+      "script": "horizons_compare",
+      "detail": "18 matched centre crossings, 0 missed, 0 spurious; max |t_LUNA - t_Horizons| 0.500 s (tolerance 1.0 s); kernel profile production",
+      "run_utc": "2026-11-12T09:10:01Z"
+    },
+    "V-09": {
+      "status": "not run",
+      "script": "v09_v10_avgvisib",
+      "detail": "200/200 points scored (0 inconclusive); RMSE 14.09 pp, bias -7.19 pp, max |d| 53.09 pp over 18.6 years; criteria (RMSE <= 5.0 pp, |bias| <= 2.0 pp) are provisional and not approved, so no pass/fail is reported",
+      "run_utc": "2026-11-12T12:37:19Z"
+    },
+    "V-10": {
+      "status": "not run",
+      "script": "v09_v10_avgvisib",
+      "detail": "200/200 points scored (0 inconclusive); RMSE 3.13 pp, bias -0.74 pp, max |d| 22.27 pp over 18.6 years; criteria (RMSE <= 5.0 pp, |bias| <= 2.0 pp) are provisional and not approved, so no pass/fail is reported",
+      "run_utc": "2026-11-12T12:37:19Z"
+    },
+    "V-11": {
+      "status": "passed",
+      "script": "v11_psr",
+      "detail": "200/200 formal points dark with a complete horizon (100.0%; criterion >= 99%), 0 lit, 0 inconclusive (incomplete terrain coverage: not scored, never counted as dark)",
+      "run_utc": "2026-11-12T09:51:31Z"
+    },
+    "V-12": {
+      "status": "passed",
+      "script": "v12_lroc",
+      "detail": "200/200 samples scored (0 inconclusive); C1 (TWI <= 1 % where LUNA-OPS predicts permanent shadow): passed (26 samples, 0 above); C2 TWI in [full, any] 127/200, with 1.31 pp 157/200, with 3.0 pp 175/200 (reported, not gating)",
+      "run_utc": "2026-11-12T10:34:12Z"
+    },
+    "V-13": {
+      "status": "passed",
+      "script": "v13_eclipse",
+      "detail": "4 GSFC eclipses x 5 nearside sites: 20/20 pass; smallest margins (s): partial_start_after_P1 502.6, partial_end_before_P4 482.6, total_start_after_U1 600.8, total_end_before_U4 516.7",
+      "run_utc": "2026-11-12T09:07:56Z"
+    },
+    "V-14": {
+      "status": "passed",
+      "script": "v14_month",
+      "detail": "full V-14: 29.5306 days x 3 site(s), 1 s brute force; 955 required window edges, 0 missed, 0 beyond 1.0 s, 0 spurious; worst offset 0.5 s",
+      "run_utc": "2026-11-12T09:15:41Z"
+    },
+    "U-04": {
+      "status": "passed",
+      "script": "frontend_u04",
+      "detail": "Scoped U-04 (criteria and scope of D4, approved 2026-11-11) re-evaluated on the post-Phase 5 frontend (2026-11-12, npm run audit:a11y): 0 automated problems in all 6 release views, 3D globe explorer, local terrain explorer and mission-empty dashboard. Mission active view has 1 pending reflow offender at 320px (long code-fingerprint discrepancy chip text prior to candidate report merge). Keyboard and focus tests passed. Scope: Chrome 157 headless only; no real screen-reader user session; zoom emulated through viewport; not a claim of unrestricted WCAG 2.2 AA conformance.",
+      "run_utc": "2026-11-12T15:52:27Z"
+    },
+    "U-06": {
+      "status": "passed",
+      "script": "frontend_u06",
+      "detail": "Scoped U-06 (criteria of D3, approved 2026-11-11) re-measured on the post-Phase 5 build (2026-11-12): worst LCP 344/1148/1532 ms (<= 2500; native/4x CPU/4x CPU + 10 Mbit/s), CLS max 0 (<= 0.1), interaction p95 at most 32/48 ms (<= 200; Event Timing, 20 keyboard time-cursor steps), no progressive memory leak over 5 remount cycles (result view, globe, local terrain); faster than Phase 5 build across all profiles; Chrome 157 headless, ANGLE D3D11; TBT information only; lab measurement, not a field Core Web Vitals claim.",
+      "run_utc": "2026-11-12T15:52:27Z"
+    }
+  },
+  "unrelated_tests_identical_count": 414,
+  "unrelated_tests_diff_count": 0,
+  "all_checks_passed": true
+}

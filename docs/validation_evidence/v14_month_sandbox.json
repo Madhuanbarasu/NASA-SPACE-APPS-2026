@@ -1,0 +1,308 @@
+{
+  "tests": {
+    "V-14": {
+      "status": "passed",
+      "detail": "full V-14: 29.5306 days x 3 site(s), 1 s brute force; 955 required window edges, 0 missed, 0 beyond 1.0 s, 0 spurious; worst offset 0.5 s"
+    }
+  },
+  "parameters": {
+    "start": "2026-11-14T00:00:00Z",
+    "days": 29.530589,
+    "sites": [
+      [
+        -89.5,
+        0.0
+      ],
+      [
+        -88.0,
+        120.0
+      ],
+      [
+        -86.5,
+        250.0
+      ]
+    ],
+    "match_s": 3.0,
+    "tolerance_s": 1.0,
+    "min_window_s": 2.0
+  },
+  "totals": {
+    "required_edges": 955,
+    "missed": 0,
+    "over_tolerance": 0,
+    "spurious": 0,
+    "worst_offset_s": 0.5
+  },
+  "sites": [
+    {
+      "site": [
+        -89.5,
+        0.0
+      ],
+      "days": 29.530589,
+      "functions": {
+        "sun_c": {
+          "reference_crossings": 286,
+          "required_edges": 286,
+          "detector_events": 286,
+          "missed": 0,
+          "worst_offset_s": 0.5,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_top": {
+          "reference_crossings": 240,
+          "required_edges": 240,
+          "detector_events": 240,
+          "missed": 0,
+          "worst_offset_s": 0.4998,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_bot": {
+          "reference_crossings": 128,
+          "required_edges": 128,
+          "detector_events": 128,
+          "missed": 0,
+          "worst_offset_s": 0.4999,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_c": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.195,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_top": {
+          "reference_crossings": 3,
+          "required_edges": 3,
+          "detector_events": 3,
+          "missed": 0,
+          "worst_offset_s": 0.4332,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_bot": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.4716,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        }
+      },
+      "adaptive_samples": 32663,
+      "estimate_failures": 11,
+      "adaptive_s": 23.7,
+      "brute_force_s": 203.3
+    },
+    {
+      "site": [
+        -88.0,
+        120.0
+      ],
+      "days": 29.530589,
+      "functions": {
+        "sun_c": {
+          "reference_crossings": 72,
+          "required_edges": 72,
+          "detector_events": 72,
+          "missed": 0,
+          "worst_offset_s": 0.5,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_top": {
+          "reference_crossings": 50,
+          "required_edges": 50,
+          "detector_events": 50,
+          "missed": 0,
+          "worst_offset_s": 0.4997,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_bot": {
+          "reference_crossings": 54,
+          "required_edges": 54,
+          "detector_events": 54,
+          "missed": 0,
+          "worst_offset_s": 0.4999,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_c": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.4183,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_top": {
+          "reference_crossings": 3,
+          "required_edges": 3,
+          "detector_events": 3,
+          "missed": 0,
+          "worst_offset_s": 0.4926,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_bot": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.128,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        }
+      },
+      "adaptive_samples": 15319,
+      "estimate_failures": 11,
+      "adaptive_s": 8.2,
+      "brute_force_s": 201.2
+    },
+    {
+      "site": [
+        -86.5,
+        250.0
+      ],
+      "days": 29.530589,
+      "functions": {
+        "sun_c": {
+          "reference_crossings": 34,
+          "required_edges": 34,
+          "detector_events": 34,
+          "missed": 0,
+          "worst_offset_s": 0.5,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_top": {
+          "reference_crossings": 38,
+          "required_edges": 38,
+          "detector_events": 38,
+          "missed": 0,
+          "worst_offset_s": 0.4998,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_bot": {
+          "reference_crossings": 32,
+          "required_edges": 32,
+          "detector_events": 32,
+          "missed": 0,
+          "worst_offset_s": 0.4984,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_c": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.35,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_top": {
+          "reference_crossings": 3,
+          "required_edges": 3,
+          "detector_events": 3,
+          "missed": 0,
+          "worst_offset_s": 0.2077,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_bot": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.4695,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        }
+      },
+      "adaptive_samples": 11749,
+      "estimate_failures": 11,
+      "adaptive_s": 6.2,
+      "brute_force_s": 197.0
+    }
+  ],
+  "meta": {
+    "script": "v14_month",
+    "code_fingerprint": "0ac6ff084e9e5b7cc9b35b1874095539b48ad6074aa75cdf1d47d774e57f5620",
+    "suite_fingerprint": "c3cda1e695a210f23de06fb5e900a21e8658a62ff0c7262b7b4627930096d116",
+    "kernel_profile": "sandbox-test",
+    "kernels": [
+      "055634df53f403f31350324b4f194700031765eab14c56996af8caf557ab8101",
+      "2291c225f9e70ce6ea420034c3187d6e7b86f61246d3a6ee483c2332317e1eb8",
+      "52c622043ce0447d575e59ee01642f1894921e68c10f934ceff065f362da6c1c",
+      "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+      "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+      "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    ],
+    "run_utc": "2026-11-07T13:19:17Z"
+  }
+}

@@ -1,0 +1,33 @@
+PASS lazy: no globe chunk, three.js chunk or imagery before opening the globe  ["/assets/index-ZnayDHTI.js","/assets/index-DCMBg5-B.css","/assets/MapView-BxI7rf2K.js","/assets/archivo-latin-wdth-normal-DY7AcnAa.woff2"]
+PASS map is the default view
+PASS layout: the globe stage fits in the viewport
+PASS rendering: globe chunk, shared three.js chunk and both images requested on demand  ["/assets/MoonGlobe-DaHOSmrS.js","/assets/OrbitControls-DEDRJkCF.js","/moon/lroc_color_2k.jpg","/moon/ldem_3_8bit.jpg"]
+PASS rendering: lunar disc drawn (lit pixels in the stage)  0.5925102842945585
+PASS coordinates: initial centre is the nearside (0, 0)  "Centre 0.000° N, 0.000° E"
+PASS coordinates: 'select centre' gives the centre readout  "0.000° N, 0.000° E"
+PASS coordinates: click at the canvas centre selects ~(0, 0)  {"lat":0,"lon":0}
+PASS coordinates: right of centre is east, above centre is north  {"right":{"lat":0,"lon":19.464},"up":{"lat":19.464,"lon":0}}
+PASS coordinates: picked longitude matches the exact ray-sphere geometry within 0.2 deg  {"got":19.464,"expected":19.464338901580884}
+PASS orientation: Mare Moscoviense renders darker than its east-west mirror; Mare Imbrium darker than its north-south mirror  {"moscoviense":{"centre":{"lat":28,"lon":148},"mean":127.92171597222189},"mirrorLon":{"centre":{"lat":28,"lon":212},"mean":190.82194722222164},"imbrium":{"centre":{"lat":32,"lon":344},"mean":117.24235729166692},"mirrorLat":{"centre":{"lat":-32,"lon":344},"mean":161.87542048611064}}
+PASS keyboard: Home returns to the nearside  "Centre 0.000° N, 0.000° E"
+PASS keyboard: ArrowRight turns 10 deg east, ArrowUp 10 deg north  {"k1":{"lat":0,"lon":10},"k2":{"lat":10,"lon":10}}
+PASS zoom: + key enlarges the lunar disc  {"before":0.6108158194851743,"after":0.9194082966764419}
+PASS keyboard: Enter selects the centre location  {"selected":"10.000° N, 10.000° E","centre":"Centre 10.000° N, 10.000° E"}
+PASS zoom: mouse wheel enlarges the lunar disc  {"before":0.6069515721733464,"after":0.8669940330726621}
+PASS rotation: dragging left turns the view east (centre longitude increases)  {"before":{"lat":0,"lon":0},"after":{"lat":0,"lon":44.569}}
+PASS rotation: a drag does not select (selection unchanged)  {"before":"10.000° N, 10.000° E","after":"10.000° N, 10.000° E"}
+PASS viewpoints: South Pole centres at 89.900 S  "Centre 89.900° S, 0.000° E"
+PASS viewpoints: North Pole centres at 89.900 N  "Centre 89.900° N, 0.000° E"
+PASS viewpoints: Farside centres at (0, 180 E)  "Centre 0.000° N, 180.000° E"
+PASS toggles: grid button toggles aria-pressed and the image  "false"
+PASS accessibility: every globe button named and >= 24 px; canvas host focusable and named  {"buttons":14,"unnamed":0,"small":[],"hostTabIndex":0,"hostRole":"region","hostName":true}
+PASS accessibility: the selection is announced in a polite live region  "Selected 10.000° N, 10.000° E."
+PASS responsive: no sideways scroll at 390 px; toolbar inside the pane and above (not over) the globe; canvas fills the stage  {"scrollW":390,"clientW":390,"stageW":356,"stageH":300,"toolbarInside":true,"toolbarAboveStage":true,"canvasW":356}
+PASS cleanup: no globe canvas left after switching back; no WebGL context warnings over 5 cycles  {"canvasesLeft":0,"ctxWarnings":[]}
+PASS cleanup: no heap growth trend over 5 globe mount/unmount cycles (< 2 MB)  {"heapsMB":[25.33,25.51,25.94,25.76,25.91,26.47],"growthMB":1.14}
+PASS no page exceptions or console errors  []
+PASS fallback: blocked imagery shows a note and an untextured sphere (still rotatable)  0.5825263725969371
+PASS fallback: a failed globe chunk shows the load-failed message instead of crashing the page  "The 3D globe could not be loaded. The south polar map and typed coordinates still work."
+PASS fallback: switching back to the map after a failed globe works
+globe-live-check: 31/31 checks passed
+exit 0

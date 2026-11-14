@@ -1,0 +1,19 @@
+# Phase 2 changed frontend files (baseline/frontend_files_sha256.txt vs logs/frontend_files_after_sha256.txt)
+
+modified (11):
+  scripts/globe-live-check.mjs
+  src/components/MapView.tsx
+  src/components/MoonGlobe.tsx
+  src/components/SiteView.tsx
+  src/components/TerrainPreview.tsx
+  src/components/Welcome.tsx
+  src/i18n/en.ts
+  src/styles/app.css
+  src/styles/tokens.css
+  src/styles/views.css
+  src/ui/Icon.tsx
+added (3):
+  src/lib/mapScale.ts
+  src/styles/explorer.css
+  src/ui/StageLegend.tsx
+removed (0):

@@ -1,0 +1,113 @@
+{
+ "label": "after",
+ "aud01": [
+  [
+   "valid Site01",
+   null,
+   null,
+   1,
+   false
+  ],
+  [
+   "latitude -95",
+   "true",
+   null,
+   0,
+   true
+  ],
+  [
+   "latitude 95",
+   "true",
+   null,
+   0,
+   true
+  ],
+  [
+   "latitude -90.0001",
+   "true",
+   null,
+   0,
+   true
+  ],
+  [
+   "latitude -90 (edge)",
+   null,
+   null,
+   1,
+   false
+  ],
+  [
+   "longitude 400",
+   null,
+   "true",
+   0,
+   true
+  ],
+  [
+   "longitude -361",
+   null,
+   "true",
+   0,
+   true
+  ],
+  [
+   "longitude 360 (edge)",
+   null,
+   null,
+   1,
+   true
+  ],
+  [
+   "longitude -10 (west, accepted)",
+   null,
+   null,
+   1,
+   true
+  ],
+  [
+   "latitude not a number",
+   "true",
+   null,
+   0,
+   true
+  ],
+  [
+   "latitude empty",
+   null,
+   null,
+   0,
+   true
+  ],
+  [
+   "valid again (Site01)",
+   null,
+   null,
+   1,
+   false
+  ]
+ ],
+ "analysis": {
+  "ok": true,
+  "ms": 1651
+ },
+ "landing1920": [
+  {
+   "cls": "landing-col",
+   "top": 255,
+   "bottom": 2113,
+   "lastCardBottom": 2113,
+   "spaceBelowLastCard": 0
+  },
+  {
+   "cls": "landing-col landing-col-map",
+   "top": 255,
+   "bottom": 2113,
+   "lastCardBottom": 2113,
+   "spaceBelowLastCard": 0
+  }
+ ],
+ "runMs": 432,
+ "tiles": 97,
+ "failed": [],
+ "console": 0
+}

@@ -1,0 +1,32 @@
+PASS backup report_before.json is the original
+PASS report.json rewritten by this run  [2279606ceab9354b8616ba9216e12e89e399f34cfc3cbfcbd7502d12d077d376]
+PASS run_validation exit 0
+PASS pytest: 0 failed / 0 errors in output  [438 passed, 2 skipped, 1 warning in 1345.91s]
+PASS pytest exit code 0 in report  [0]
+PASS no 'NOT merged' lines
+PASS zero rejected merges  [{}]
+PASS algorithm 1.5.0
+PASS code_fingerprint = current build  [5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8]
+PASS suite_fingerprint = current build  [1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc]
+PASS kernel profile production; SHA-256 = loaded
+PASS terrain acceptance digest unchanged  [e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce]
+PASS terrain products unchanged vs before
+PASS label rules digest current
+PASS no report-level label blockers  [[]]
+PASS V-04 = passed (external, horizons_compare)  [status=passed script=horizons_compare external=passed automated=not run]
+PASS V-05 = passed (external, horizons_compare)  [status=passed script=horizons_compare external=passed automated=not run]
+PASS V-09 = not run (external, v09_v10_avgvisib)  [status=not run script=v09_v10_avgvisib external=not run automated=not run]
+PASS V-10 = not run (external, v09_v10_avgvisib)  [status=not run script=v09_v10_avgvisib external=not run automated=not run]
+PASS V-11 = passed (external, v11_psr)  [status=passed script=v11_psr external=passed automated=not run]
+PASS V-12 = passed (external, v12_lroc)  [status=passed script=v12_lroc external=passed automated=not run]
+PASS V-13 = passed (external, v13_eclipse)  [status=passed script=v13_eclipse external=passed automated=not run]
+PASS V-14 = passed (external, v14_month)  [status=passed script=v14_month external=passed automated=passed]
+PASS U-04 = passed (external, frontend_u04)  [status=passed script=frontend_u04 external=passed automated=not run]
+PASS U-06 = passed (external, frontend_u06)  [status=passed script=frontend_u06 external=passed automated=not run]
+PASS no failed entry anywhere
+PASS newly passed = exactly V-05, U-04, U-06 (no unsupported PASS)  [['U-04', 'U-06', 'V-05']]
+PASS automated (non-external) statuses unchanged vs before  [{}]
+PASS labels (status page) follow engine rule as expected  [{'sun_earth_azel': 'Validated', 'horizon': 'Validated', 'disk_visibility': 'Pending validation', 'events': 'Pending validation', 'power_indicator': 'Pending validation'}]
+PASS labels (result with horizon sigma) keep L_corr limitation  [{'sun_earth_azel': 'Validated', 'horizon': 'Pending validation', 'disk_visibility': 'Pending validation', 'events': 'Pending validation', 'power_indicator': 'Pending validation'}]
+status counts: {'passed': 420, 'not run': 2, 'skipped': 2}
+ALL CHECKS OK

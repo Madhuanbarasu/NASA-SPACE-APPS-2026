@@ -1,0 +1,5787 @@
+{
+ "label": "after",
+ "base": "http://127.0.0.1:8765",
+ "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+ "browserVersion": "Chrome/157.0.8103.39",
+ "views": [
+  {
+   "view": "site-welcome",
+   "at": "2026-11-11T08:28:37.040Z",
+   "structure": {
+    "lang": "en",
+    "title": "LUNA-OPS: Lunar Landing Site Navigator",
+    "landmarks": [
+     "header:",
+     "tablist:Views",
+     "aside:Analysis settings",
+     "main:",
+     "section:welcome-title",
+     "section:Map"
+    ],
+    "headings": [
+     "H2 Site",
+     "H2 Dates (UTC)",
+     "H2 Observer",
+     "H2 Visibility rules",
+     "H2 Power indicator panel",
+     "H1 Where does the Sun reach, and where can you see Earth?",
+     "H3 Pick a site",
+     "H3 Set the dates",
+     "H3 Read the results",
+     "H3 South polar map"
+    ],
+    "duplicateIds": [],
+    "positiveTabindex": [],
+    "ariaHiddenFocusable": [],
+    "unlabeledFormControls": [],
+    "tables": [],
+    "roleApplication": [],
+    "liveRegions": [
+     "p#coord-hint.hint \"Pick a curated site, click the map, or ty live=polite"
+    ]
+   },
+   "ax": {
+    "nodes": 289,
+    "unnamed": [],
+    "focusableWithoutWidgetRole": [],
+    "sliders": [],
+    "roles": {
+     "RootWebArea": 1,
+     "generic": 24,
+     "link": 1,
+     "banner": 1,
+     "complementary": 1,
+     "main": 1,
+     "StaticText": 78,
+     "tablist": 1,
+     "group": 4,
+     "tabpanel": 1,
+     "InlineTextBox": 91,
+     "tab": 4,
+     "button": 15,
+     "heading": 10,
+     "paragraph": 10,
+     "LabelText": 9,
+     "textbox": 3,
+     "DateTime": 2,
+     "combobox": 2,
+     "spinbutton": 12,
+     "region": 2,
+     "MenuListPopup": 2,
+     "list": 1,
+     "option": 7,
+     "listitem": 4,
+     "image": 1,
+     "Canvas": 1
+    }
+   },
+   "contrast": {
+    "pairs": [
+     {
+      "fg": "#916d28",
+      "bg": "#f2b544",
+      "ratio": 2.6,
+      "need": 4.5,
+      "large": false,
+      "disabled": true,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Analyse site @ button.run-button \"Analyse site\""
+      ]
+     },
+     {
+      "fg": "#8b9bab",
+      "bg": "#1e2a37",
+      "ratio": 5.12,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 12,
+      "samples": [
+       "Cartographic hillshade from LOLA heights (fixed light direct @ div.pane-note \"Cartographic hillshade from LOLA heights (fixed li\""
+      ]
+     },
+     {
+      "fg": "#8b9bab",
+      "bg": "#17212c",
+      "ratio": 5.72,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 5,
+      "minSizePx": 12.5,
+      "samples": [
+       "Pick a curated site, click the map, or type planetocentric c @ p#coord-hint.hint \"Pick a curated site, click the map, or type planet\"",
+       "Event times are found adaptively to 1 s; the step only sets  @ p.hint \"Event times are found adaptively to 1 s; the step \"",
+       "Surface reference is 0 m. @ p.hint \"Surface reference is 0 m.\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#1e2a37",
+      "ratio": 6.66,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 7,
+      "minSizePx": 12.5,
+      "samples": [
+       "No curated sites are registered yet. Register the USGS Artem @ p.empty-note \"No curated sites are registered yet. Register the \"",
+       "Astronaut @ button \"Astronaut\"",
+       "Equipment @ button \"Equipment\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#17212c",
+      "ratio": 7.44,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 26,
+      "minSizePx": 12.5,
+      "samples": [
+       "Lunar Landing Site Navigator @ span.brand-sub \"Lunar Landing Site Navigator\"",
+       "Compare @ button#tab-compare.tab[role=tab] \"Compare\"",
+       "Data and validation @ button#tab-data.tab[role=tab] \"Data and validation\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#243345",
+      "ratio": 10.81,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 4,
+      "minSizePx": 12.5,
+      "samples": [
+       "Technical @ button \"Technical\"",
+       "Surface @ button \"Surface\"",
+       "Any part @ button \"Any part\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#1e2a37",
+      "ratio": 12.25,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 14,
+      "samples": [
+       "South polar map @ h3 \"South polar map\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#ffd98a",
+      "ratio": 13.52,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Skip to main content @ a.skip-link \"Skip to main content\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 2,
+      "minSizePx": 19,
+      "samples": [
+       "LUNA-OPS @ span.brand-mark \"LUNA-OPS\"",
+       "Where does the Sun reach, and where can you see Earth? @ h1#welcome-title \"Where does the Sun reach, and where can you see Ea\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 9,
+      "minSizePx": 14,
+      "samples": [
+       "Site @ button#tab-site.tab[role=tab] \"Site\"",
+       "Site @ h2 \"Site\"",
+       "Dates (UTC) @ h2 \"Dates (UTC)\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 4.5,
+      "large": false,
+      "disabled": true,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 13,
+      "samples": [
+       "Add to comparison @ button.quiet-button \"Add to comparison\""
+      ]
+     }
+    ],
+    "failures": []
+   },
+   "targets": {
+    "interactive": 24,
+    "undersized": [],
+    "failures": []
+   },
+   "screenshot": "screenshots/after-site-welcome.png",
+   "keyboard": {
+    "stops": 31,
+    "cycled": true,
+    "list": [
+     {
+      "el": "a.skip-link \"Skip to main content\"",
+      "tag": "A",
+      "rect": [
+       12,
+       8,
+       173,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button#tab-site.tab[role=tab] \"Site\"",
+      "tag": "BUTTON",
+      "rect": [
+       322,
+       0,
+       55,
+       57
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Technical\"",
+      "tag": "BUTTON",
+      "rect": [
+       1278,
+       15,
+       79,
+       27
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Public\"",
+      "tag": "BUTTON",
+      "rect": [
+       1357,
+       15,
+       60,
+       27
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#lat \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       213,
+       148,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#lon \"\"",
+      "tag": "INPUT",
+      "rect": [
+       174,
+       213,
+       148,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#sname \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       283,
+       303,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       483,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       483,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       483,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       483,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       483,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       483,
+       303,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       555,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       555,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       555,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       555,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       555,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       555,
+       303,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select#step \"5 minutes15 minutes30 minutes60 minutes\"",
+      "tag": "SELECT",
+      "rect": [
+       18,
+       627,
+       303,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Surface\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       775,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Astronaut\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       775,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Equipment\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       775,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Any part\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Centre\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Whole disk\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Any part\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Centre\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Whole disk\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#margin \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       634,
+       303,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select#panel \"Vertical, tracking the SunHorizontalVertical, fixe\"",
+      "tag": "SELECT",
+      "rect": [
+       18,
+       765,
+       303,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     }
+    ],
+    "noIndicator": [
+     "input#start \"\"",
+     "input#end \"\""
+    ],
+    "clipped": [],
+    "obscured": [],
+    "notInView": []
+   },
+   "textSpacing": {
+    "clipped": [],
+    "screenshot": "screenshots/after-site-welcome-textspacing.png"
+   },
+   "reflow320": {
+    "viewport": 320,
+    "docScrollW": 406,
+    "horizontalScroll": true,
+    "scrollers": [
+     {
+      "el": "main#main.main \"Where does the Sun reach",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "aside.sidebar \"Analysis settings\"",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "div.shell \"Skip to main contentLUNA-OPSL",
+      "scrollW": 406,
+      "clientW": 320,
+      "overflow": true
+     }
+    ],
+    "offenders": [
+     "header.topbar \"LUNA-OPSLunar Landing Site NavigatorSiteCompareDat\"",
+     "nav.tabs[role=tablist] \"Views\"",
+     "button#tab-guide.tab[role=tab] \"Guide\"",
+     "div.topbar-right \"NAIF kernelsLOLA terrain, 4 productsTechnicalPubli\"",
+     "div.mode-switch[role=group] \"Viewing mode\"",
+     "button \"Technical\"",
+     "button \"Public\"",
+     "div.workspace \"SiteNo curated sites are registered yet. Register \"",
+     "aside.sidebar \"Analysis settings\"",
+     "section.side-section \"SiteNo curated sites are registered yet. Registe",
+     "h2 \"Site\"",
+     "p.empty-note \"No curated sites are registered yet. Register the \"",
+     "div.field-row \"Latitude (°)East longitude (°)\"",
+     "div.field \"East longitude (°)\"",
+     "label \"East longitude (°)\"",
+     "input#lon \"\"",
+     "div.field \"Name (optional)\"",
+     "label \"Name (optional)\"",
+     "input#sname \"\"",
+     "p#coord-hint.hint \"Pick a curated site, click the map, or type planet\"",
+     "section.side-section \"Dates (UTC)StartEndDisplay step5 minutes15 minut",
+     "h2 \"Dates (UTC)\"",
+     "div.field \"Start\"",
+     "label \"Start\"",
+     "input#start \"\""
+    ],
+    "offenderCount": 88,
+    "screenshot": "screenshots/after-site-welcome-320.png"
+   }
+  },
+  {
+   "view": "site-result-technical",
+   "at": "2026-11-11T08:28:48.912Z",
+   "structure": {
+    "lang": "en",
+    "title": "LUNA-OPS: Lunar Landing Site Navigator",
+    "landmarks": [
+     "header:",
+     "tablist:Views",
+     "aside:Analysis settings",
+     "main:",
+     "section:Horizon panorama",
+     "section:Map",
+     "section:3D terrain"
+    ],
+    "headings": [
+     "H2 Site",
+     "H2 Dates (UTC)",
+     "H2 Observer",
+     "H2 Visibility rules",
+     "H2 Power indicator panel",
+     "H1 Custom site",
+     "H2 What the horizon looks like from here",
+     "H3 South polar map",
+     "H3 Terrain in 3D at the cursor time",
+     "H3 Sunlight",
+     "H3 Direct-to-Earth",
+     "H3 Operational overlap",
+     "H3 Power indicator",
+     "H2 Events (1) Hide",
+     "H2 Chart data Hide table"
+    ],
+    "duplicateIds": [],
+    "positiveTabindex": [],
+    "ariaHiddenFocusable": [],
+    "unlabeledFormControls": [],
+    "tables": [
+     {
+      "table": "table.data \"TimeBodyEvent20 Nov 2026, 10:34:51 UTCEarthEarth",
+      "th": 3,
+      "caption": false,
+      "rows": 2
+     },
+     {
+      "table": "table.data \"Sun and Earth positions and visibility over the ",
+      "th": 7,
+      "caption": true,
+      "rows": 339
+     }
+    ],
+    "roleApplication": [],
+    "liveRegions": [
+     "p#coord-hint.hint.good \"Terrain coverage: 5m, 20m, 80m, 240m live=polite",
+     "div.readout \"Sun elevation1.50°azimuth 264.1°Sun disk visibl live=polite"
+    ]
+   },
+   "ax": {
+    "nodes": 8094,
+    "unnamed": [],
+    "focusableWithoutWidgetRole": [],
+    "sliders": [
+     {
+      "name": "Time cursor",
+      "value": 0,
+      "valuetext": "0"
+     }
+    ],
+    "roles": {
+     "RootWebArea": 1,
+     "generic": 98,
+     "link": 5,
+     "banner": 1,
+     "complementary": 1,
+     "main": 1,
+     "StaticText": 2562,
+     "tablist": 1,
+     "group": 4,
+     "tabpanel": 1,
+     "InlineTextBox": 2572,
+     "tab": 4,
+     "button": 18,
+     "heading": 15,
+     "paragraph": 7,
+     "LabelText": 10,
+     "textbox": 3,
+     "DateTime": 2,
+     "combobox": 3,
+     "spinbutton": 12,
+     "region": 3,
+     "slider": 1,
+     "image": 4,
+     "DescriptionList": 4,
+     "table": 2,
+     "MenuListPopup": 3,
+     "term": 11,
+     "definition": 11,
+     "rowgroup": 2,
+     "row": 341,
+     "option": 10,
+     "cell": 2369,
+     "caption": 1,
+     "columnheader": 10,
+     "Canvas": 1
+    }
+   },
+   "contrast": {
+    "pairs": [
+     {
+      "fg": "#7d8d9d",
+      "bg": "#17212c",
+      "ratio": 4.78,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": true,
+      "complex": null,
+      "count": 8,
+      "minSizePx": 11,
+      "samples": [
+       "30° @ text \"30°\"",
+       "60° @ text \"60°\"",
+       "120° @ text \"120°\""
+      ]
+     },
+     {
+      "fg": "#8b9bab",
+      "bg": "#1e2a37",
+      "ratio": 5.12,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 3,
+      "minSizePx": 12,
+      "samples": [
+       "Cartographic hillshade from LOLA heights (fixed light direct @ div.pane-note \"Cartographic hillshade from LOLA heights (fixed li\"",
+       "20m LOLA heights, 8 km radius, display-averaged. Gold marks  @ span \"20m LOLA heights, 8 km radius, display-averaged. G\"",
+       "Vertical × @ label \"Vertical × 124\""
+      ]
+     },
+     {
+      "fg": "#8b9bab",
+      "bg": "#17212c",
+      "ratio": 5.72,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 14,
+      "minSizePx": 12,
+      "samples": [
+       "Event times are found adaptively to 1 s; the step only sets  @ p.hint \"Event times are found adaptively to 1 s; the step \"",
+       "Surface reference is 0 m. @ p.hint \"Surface reference is 0 m.\"",
+       "Centre visible. Geometric line of sight only, not a radio li @ p.hint \"Centre visible. Geometric line of sight only, not \""
+      ]
+     },
+     {
+      "fg": "#5fa8e8",
+      "bg": "#17212c",
+      "ratio": 6.4,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 4,
+      "minSizePx": 13,
+      "samples": [
+       "-5.04° @ div.v.earth \"-5.04°\"",
+       "0% @ div.v.earth \"0%\"",
+       "Hide @ button.toggle-table \"Hide\""
+      ]
+     },
+     {
+      "fg": "#5fa8e8",
+      "bg": "#17212c",
+      "ratio": 6.4,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 34,
+      "samples": [
+       "0.0% @ div.big \"0.0%\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#1e2a37",
+      "ratio": 6.66,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 7,
+      "minSizePx": 12.5,
+      "samples": [
+       "No curated sites are registered yet. Register the USGS Artem @ p.empty-note \"No curated sites are registered yet. Register the \"",
+       "Astronaut @ button \"Astronaut\"",
+       "Equipment @ button \"Equipment\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#17212c",
+      "ratio": 7.44,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 61,
+      "minSizePx": 12,
+      "samples": [
+       "Lunar Landing Site Navigator @ span.brand-sub \"Lunar Landing Site Navigator\"",
+       "Compare @ button#tab-compare.tab[role=tab] \"Compare\"",
+       "Data and validation @ button#tab-data.tab[role=tab] \"Data and validation\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#17212c",
+      "ratio": 7.44,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": true,
+      "complex": null,
+      "count": 13,
+      "minSizePx": 11,
+      "samples": [
+       "-4° @ text \"-4°\"",
+       "-2° @ text \"-2°\"",
+       "0° @ text \"0°\""
+      ]
+     },
+     {
+      "fg": "#7fc8a9",
+      "bg": "#17212c",
+      "ratio": 8.32,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 12.5,
+      "samples": [
+       "Terrain coverage: 5m, 20m, 80m, 240m LOLA levels. @ p#coord-hint.hint.good \"Terrain coverage: 5m, 20m, 80m, 240m LOLA leve"
+      ]
+     },
+     {
+      "fg": "#f2b544",
+      "bg": "#17212c",
+      "ratio": 8.89,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 2,
+      "minSizePx": 22,
+      "samples": [
+       "1.50° @ div.v.sun \"1.50°\"",
+       "100% @ div.v.sun \"100%\""
+      ]
+     },
+     {
+      "fg": "#f2b544",
+      "bg": "#17212c",
+      "ratio": 8.89,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 34,
+      "samples": [
+       "100.0% @ div.big \"100.0%\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#f2b544",
+      "ratio": 9.98,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Analyse site @ button.run-button \"Analyse site\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#243345",
+      "ratio": 10.81,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 4,
+      "minSizePx": 12.5,
+      "samples": [
+       "Technical @ button \"Technical\"",
+       "Surface @ button \"Surface\"",
+       "Any part @ button \"Any part\""
+      ]
+     },
+     {
+      "fg": "#e9dfb8",
+      "bg": "#17212c",
+      "ratio": 12.18,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 34,
+      "samples": [
+       "0.0% @ div.big \"0.0%\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#1e2a37",
+      "ratio": 12.25,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 3,
+      "minSizePx": 14,
+      "samples": [
+       "▶ @ button.play \"Play animation\"",
+       "South polar map @ h3 \"South polar map\"",
+       "Terrain in 3D at the cursor time @ h3 \"Terrain in 3D at the cursor time\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#ffd98a",
+      "ratio": 13.52,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Skip to main content @ a.skip-link \"Skip to main content\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 3,
+      "minSizePx": 19,
+      "samples": [
+       "LUNA-OPS @ span.brand-mark \"LUNA-OPS\"",
+       "Custom site @ h1.site-title \"Custom site\"",
+       "1.023 @ div.big \"1.023\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 2404,
+      "minSizePx": 13,
+      "samples": [
+       "Site @ button#tab-site.tab[role=tab] \"Site\"",
+       "Site @ h2 \"Site\"",
+       "Add to comparison @ button.quiet-button \"Add to comparison\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": true,
+      "complex": null,
+      "count": 7,
+      "minSizePx": 12,
+      "samples": [
+       "N @ text \"N\"",
+       "E @ text \"E\"",
+       "S @ text \"S\""
+      ]
+     }
+    ],
+    "failures": []
+   },
+   "targets": {
+    "interactive": 35,
+    "undersized": [
+     {
+      "el": "input \"Time cursor\"",
+      "size": [
+       800,
+       16
+      ],
+      "spacingOk": true,
+      "inlineException": false,
+      "conflicts": [],
+      "pass": true
+     },
+     {
+      "el": "button.toggle-table \"Hide\"",
+      "size": [
+       28.3,
+       18.8
+      ],
+      "spacingOk": true,
+      "inlineException": false,
+      "conflicts": [],
+      "pass": true
+     },
+     {
+      "el": "button.toggle-table \"Hide table\"",
+      "size": [
+       61.1,
+       18.8
+      ],
+      "spacingOk": true,
+      "inlineException": false,
+      "conflicts": [],
+      "pass": true
+     }
+    ],
+    "failures": []
+   },
+   "screenshot": "screenshots/after-site-result-technical.png",
+   "keyboard": {
+    "stops": 43,
+    "cycled": true,
+    "list": [
+     {
+      "el": "button \"Technical\"",
+      "tag": "BUTTON",
+      "rect": [
+       1278,
+       15,
+       79,
+       27
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Public\"",
+      "tag": "BUTTON",
+      "rect": [
+       1357,
+       15,
+       60,
+       27
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#lat \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       213,
+       148,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#lon \"\"",
+      "tag": "INPUT",
+      "rect": [
+       174,
+       213,
+       148,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#sname \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       283,
+       303,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.quiet-button \"Add to comparison\"",
+      "tag": "BUTTON",
+      "rect": [
+       18,
+       349,
+       131,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select#step \"5 minutes15 minutes30 minutes60 minutes\"",
+      "tag": "SELECT",
+      "rect": [
+       18,
+       609,
+       303,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Surface\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Astronaut\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Equipment\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Any part\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Centre\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Whole disk\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Any part\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Centre\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Whole disk\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#margin \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       634,
+       303,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select#panel \"Vertical, tracking the SunHorizontalVertical, fixe\"",
+      "tag": "SELECT",
+      "rect": [
+       18,
+       765,
+       303,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.run-button \"Analyse site\"",
+      "tag": "BUTTON",
+      "rect": [
+       18,
+       854,
+       303,
+       46
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 3,
+      "clippedBy": [
+       "aside.sidebar \"Analysis settings\" [bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "a.quiet-button \"Series CSV\"",
+      "tag": "A",
+      "rect": [
+       364,
+       151,
+       88,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "a.quiet-button \"Events CSV\"",
+      "tag": "A",
+      "rect": [
+       460,
+       151,
+       92,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "a.quiet-button \"Intervals CSV\"",
+      "tag": "A",
+      "rect": [
+       560,
+       151,
+       101,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "a.quiet-button \"Full result JSON\"",
+      "tag": "A",
+      "rect": [
+       668,
+       151,
+       116,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.play \"Play animation\"",
+      "tag": "BUTTON",
+      "rect": [
+       364,
+       704,
+       34,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Time cursor\"",
+      "tag": "INPUT",
+      "rect": [
+       412,
+       713,
+       800,
+       16
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select \"Vertical exaggeration\"",
+      "tag": "SELECT",
+      "rect": [
+       1338,
+       463,
+       65,
+       32
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.toggle-table \"Hide\"",
+      "tag": "BUTTON",
+      "rect": [
+       443,
+       470,
+       28,
+       19
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.toggle-table \"Hide table\"",
+      "tag": "BUTTON",
+      "rect": [
+       445,
+       595,
+       61,
+       19
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "div.table-scroll \"Sun and Earth positions and visibility over the wi\"",
+      "tag": "DIV",
+      "rect": [
+       364,
+       561,
+       1052,
+       340
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 3,
+      "clippedBy": [
+       "main#main.main \"Custom site-89.46316°, 222.51045°  [bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "a.skip-link \"Skip to main content\"",
+      "tag": "A",
+      "rect": [
+       12,
+       8,
+       173,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button#tab-site.tab[role=tab] \"Site\"",
+      "tag": "BUTTON",
+      "rect": [
+       322,
+       0,
+       55,
+       57
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     }
+    ],
+    "noIndicator": [
+     "input#start \"\"",
+     "input#end \"\""
+    ],
+    "clipped": [
+     {
+      "el": "button.run-button \"Analyse site\"",
+      "ringSidesVisible": 3,
+      "clippedBy": [
+       "aside.sidebar \"Analysis settings\" [bottom]"
+      ]
+     },
+     {
+      "el": "div.table-scroll \"Sun and Earth positions and visibility over the wi\"",
+      "ringSidesVisible": 3,
+      "clippedBy": [
+       "main#main.main \"Custom site-89.46316°, 222.51045°  [bottom]"
+      ]
+     }
+    ],
+    "obscured": [],
+    "notInView": []
+   },
+   "textSpacing": {
+    "clipped": [],
+    "screenshot": "screenshots/after-site-result-technical-textspacing.png"
+   },
+   "reflow320": {
+    "viewport": 320,
+    "docScrollW": 406,
+    "horizontalScroll": true,
+    "scrollers": [
+     {
+      "el": "main#main.main \"Custom site-89.46316°, 2",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "aside.sidebar \"Analysis settings\"",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "div.shell \"Skip to main contentLUNA-OPSL",
+      "scrollW": 406,
+      "clientW": 320,
+      "overflow": true
+     }
+    ],
+    "offenders": [
+     "header.topbar \"LUNA-OPSLunar Landing Site NavigatorSiteCompareDat\"",
+     "nav.tabs[role=tablist] \"Views\"",
+     "button#tab-guide.tab[role=tab] \"Guide\"",
+     "div.topbar-right \"NAIF kernelsLOLA terrain, 4 productsTechnicalPubli\"",
+     "div.mode-switch[role=group] \"Viewing mode\"",
+     "button \"Technical\"",
+     "button \"Public\"",
+     "div.workspace \"SiteNo curated sites are registered yet. Register \"",
+     "aside.sidebar \"Analysis settings\"",
+     "section.side-section \"SiteNo curated sites are registered yet. Registe",
+     "h2 \"Site\"",
+     "p.empty-note \"No curated sites are registered yet. Register the \"",
+     "div.field-row \"Latitude (°)East longitude (°)\"",
+     "div.field \"East longitude (°)\"",
+     "label \"East longitude (°)\"",
+     "input#lon \"\"",
+     "div.field \"Name (optional)\"",
+     "label \"Name (optional)\"",
+     "input#sname \"\"",
+     "p#coord-hint.hint.good \"Terrain coverage: 5m, 20m, 80m, 240m LOLA leve",
+     "section.side-section \"Dates (UTC)StartEndDisplay step5 minutes15 minut",
+     "h2 \"Dates (UTC)\"",
+     "div.field \"Start\"",
+     "label \"Start\"",
+     "input#start \"\""
+    ],
+    "offenderCount": 145,
+    "screenshot": "screenshots/after-site-result-technical-320.png"
+   }
+  },
+  {
+   "view": "site-result-public",
+   "at": "2026-11-11T08:28:56.025Z",
+   "structure": {
+    "lang": "en",
+    "title": "LUNA-OPS: Lunar Landing Site Navigator",
+    "landmarks": [
+     "header:",
+     "tablist:Views",
+     "aside:Analysis settings",
+     "main:",
+     "section:Horizon panorama",
+     "section:Map",
+     "section:3D terrain"
+    ],
+    "headings": [
+     "H2 Site",
+     "H2 Dates (UTC)",
+     "H2 Observer",
+     "H2 Visibility rules",
+     "H2 Power indicator panel",
+     "H1 Custom site",
+     "H2 What the horizon looks like from here",
+     "H3 South polar map",
+     "H3 Terrain in 3D at the cursor time",
+     "H3 Sunlight",
+     "H3 Direct-to-Earth",
+     "H3 Operational overlap",
+     "H3 Power indicator"
+    ],
+    "duplicateIds": [],
+    "positiveTabindex": [],
+    "ariaHiddenFocusable": [],
+    "unlabeledFormControls": [],
+    "tables": [],
+    "roleApplication": [],
+    "liveRegions": [
+     "p#coord-hint.hint.good \"Terrain coverage: 5m, 20m, 80m, 240m live=polite",
+     "div.readout \"Sun elevation1.50°azimuth 263.6°Sun disk visibl live=polite"
+    ]
+   },
+   "ax": {
+    "nodes": 628,
+    "unnamed": [],
+    "focusableWithoutWidgetRole": [],
+    "sliders": [
+     {
+      "name": "Time cursor",
+      "value": 2,
+      "valuetext": "2"
+     }
+    ],
+    "roles": {
+     "RootWebArea": 1,
+     "generic": 97,
+     "link": 5,
+     "banner": 1,
+     "complementary": 1,
+     "main": 1,
+     "StaticText": 189,
+     "tablist": 1,
+     "group": 4,
+     "tabpanel": 1,
+     "InlineTextBox": 203,
+     "tab": 4,
+     "button": 16,
+     "heading": 13,
+     "paragraph": 10,
+     "LabelText": 10,
+     "textbox": 3,
+     "DateTime": 2,
+     "combobox": 3,
+     "spinbutton": 12,
+     "region": 3,
+     "slider": 1,
+     "image": 4,
+     "DescriptionList": 4,
+     "MenuListPopup": 3,
+     "strong": 3,
+     "term": 11,
+     "definition": 11,
+     "option": 10,
+     "Canvas": 1
+    }
+   },
+   "contrast": {
+    "pairs": [
+     {
+      "fg": "#7d8d9d",
+      "bg": "#17212c",
+      "ratio": 4.78,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": true,
+      "complex": null,
+      "count": 8,
+      "minSizePx": 11,
+      "samples": [
+       "30° @ text \"30°\"",
+       "60° @ text \"60°\"",
+       "120° @ text \"120°\""
+      ]
+     },
+     {
+      "fg": "#8b9bab",
+      "bg": "#1e2a37",
+      "ratio": 5.12,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 3,
+      "minSizePx": 12,
+      "samples": [
+       "Cartographic hillshade from LOLA heights (fixed light direct @ div.pane-note \"Cartographic hillshade from LOLA heights (fixed li\"",
+       "20m LOLA heights, 8 km radius, display-averaged. Gold marks  @ span \"20m LOLA heights, 8 km radius, display-averaged. G\"",
+       "Vertical × @ label \"Vertical × 124\""
+      ]
+     },
+     {
+      "fg": "#8b9bab",
+      "bg": "#17212c",
+      "ratio": 5.72,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 14,
+      "minSizePx": 12,
+      "samples": [
+       "Event times are found adaptively to 1 s; the step only sets  @ p.hint \"Event times are found adaptively to 1 s; the step \"",
+       "Surface reference is 0 m. @ p.hint \"Surface reference is 0 m.\"",
+       "Centre visible. Geometric line of sight only, not a radio li @ p.hint \"Centre visible. Geometric line of sight only, not \""
+      ]
+     },
+     {
+      "fg": "#5fa8e8",
+      "bg": "#17212c",
+      "ratio": 6.4,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 3,
+      "minSizePx": 17,
+      "samples": [
+       "0% @ strong.earth \"0%\"",
+       "-4.99° @ div.v.earth \"-4.99°\"",
+       "0% @ div.v.earth \"0%\""
+      ]
+     },
+     {
+      "fg": "#5fa8e8",
+      "bg": "#17212c",
+      "ratio": 6.4,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 34,
+      "samples": [
+       "0.0% @ div.big \"0.0%\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#1e2a37",
+      "ratio": 6.66,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 7,
+      "minSizePx": 12.5,
+      "samples": [
+       "No curated sites are registered yet. Register the USGS Artem @ p.empty-note \"No curated sites are registered yet. Register the \"",
+       "Astronaut @ button \"Astronaut\"",
+       "Equipment @ button \"Equipment\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#17212c",
+      "ratio": 7.44,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 51,
+      "minSizePx": 12,
+      "samples": [
+       "Lunar Landing Site Navigator @ span.brand-sub \"Lunar Landing Site Navigator\"",
+       "Compare @ button#tab-compare.tab[role=tab] \"Compare\"",
+       "Data and validation @ button#tab-data.tab[role=tab] \"Data and validation\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#17212c",
+      "ratio": 7.44,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": true,
+      "complex": null,
+      "count": 13,
+      "minSizePx": 11,
+      "samples": [
+       "-4° @ text \"-4°\"",
+       "-2° @ text \"-2°\"",
+       "0° @ text \"0°\""
+      ]
+     },
+     {
+      "fg": "#7fc8a9",
+      "bg": "#17212c",
+      "ratio": 8.32,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 12.5,
+      "samples": [
+       "Terrain coverage: 5m, 20m, 80m, 240m LOLA levels. @ p#coord-hint.hint.good \"Terrain coverage: 5m, 20m, 80m, 240m LOLA leve"
+      ]
+     },
+     {
+      "fg": "#f2b544",
+      "bg": "#17212c",
+      "ratio": 8.89,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 4,
+      "minSizePx": 17,
+      "samples": [
+       "100% @ strong.sun \"100%\"",
+       "<1 min @ strong.sun \"<1 min\"",
+       "1.50° @ div.v.sun \"1.50°\""
+      ]
+     },
+     {
+      "fg": "#f2b544",
+      "bg": "#17212c",
+      "ratio": 8.89,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 34,
+      "samples": [
+       "100.0% @ div.big \"100.0%\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#f2b544",
+      "ratio": 9.98,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Analyse site @ button.run-button \"Analyse site\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#243345",
+      "ratio": 10.81,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 4,
+      "minSizePx": 12.5,
+      "samples": [
+       "Public @ button \"Public\"",
+       "Surface @ button \"Surface\"",
+       "Any part @ button \"Any part\""
+      ]
+     },
+     {
+      "fg": "#e9dfb8",
+      "bg": "#17212c",
+      "ratio": 12.18,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 34,
+      "samples": [
+       "0.0% @ div.big \"0.0%\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#1e2a37",
+      "ratio": 12.25,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 3,
+      "minSizePx": 14,
+      "samples": [
+       "▶ @ button.play \"Play animation\"",
+       "South polar map @ h3 \"South polar map\"",
+       "Terrain in 3D at the cursor time @ h3 \"Terrain in 3D at the cursor time\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#ffd98a",
+      "ratio": 13.52,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Skip to main content @ a.skip-link \"Skip to main content\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 3,
+      "minSizePx": 19,
+      "samples": [
+       "LUNA-OPS @ span.brand-mark \"LUNA-OPS\"",
+       "Custom site @ h1.site-title \"Custom site\"",
+       "1.023 @ div.big \"1.023\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 41,
+      "minSizePx": 13,
+      "samples": [
+       "Site @ button#tab-site.tab[role=tab] \"Site\"",
+       "Site @ h2 \"Site\"",
+       "Add to comparison @ button.quiet-button \"Add to comparison\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": true,
+      "complex": null,
+      "count": 7,
+      "minSizePx": 12,
+      "samples": [
+       "N @ text \"N\"",
+       "E @ text \"E\"",
+       "S @ text \"S\""
+      ]
+     }
+    ],
+    "failures": []
+   },
+   "targets": {
+    "interactive": 33,
+    "undersized": [
+     {
+      "el": "input \"Time cursor\"",
+      "size": [
+       800,
+       16
+      ],
+      "spacingOk": true,
+      "inlineException": false,
+      "conflicts": [],
+      "pass": true
+     }
+    ],
+    "failures": []
+   },
+   "screenshot": "screenshots/after-site-result-public.png",
+   "textSpacing": {
+    "clipped": [],
+    "screenshot": "screenshots/after-site-result-public-textspacing.png"
+   },
+   "reflow320": {
+    "viewport": 320,
+    "docScrollW": 406,
+    "horizontalScroll": true,
+    "scrollers": [
+     {
+      "el": "main#main.main \"Custom site-89.46316°, 2",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "aside.sidebar \"Analysis settings\"",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "div.shell \"Skip to main contentLUNA-OPSL",
+      "scrollW": 406,
+      "clientW": 320,
+      "overflow": true
+     }
+    ],
+    "offenders": [
+     "header.topbar \"LUNA-OPSLunar Landing Site NavigatorSiteCompareDat\"",
+     "nav.tabs[role=tablist] \"Views\"",
+     "button#tab-guide.tab[role=tab] \"Guide\"",
+     "div.topbar-right \"NAIF kernelsLOLA terrain, 4 productsTechnicalPubli\"",
+     "div.mode-switch[role=group] \"Viewing mode\"",
+     "button \"Technical\"",
+     "button \"Public\"",
+     "div.workspace \"SiteNo curated sites are registered yet. Register \"",
+     "aside.sidebar \"Analysis settings\"",
+     "section.side-section \"SiteNo curated sites are registered yet. Registe",
+     "h2 \"Site\"",
+     "p.empty-note \"No curated sites are registered yet. Register the \"",
+     "div.field-row \"Latitude (°)East longitude (°)\"",
+     "div.field \"East longitude (°)\"",
+     "label \"East longitude (°)\"",
+     "input#lon \"\"",
+     "div.field \"Name (optional)\"",
+     "label \"Name (optional)\"",
+     "input#sname \"\"",
+     "p#coord-hint.hint.good \"Terrain coverage: 5m, 20m, 80m, 240m LOLA leve",
+     "section.side-section \"Dates (UTC)StartEndDisplay step5 minutes15 minut",
+     "h2 \"Dates (UTC)\"",
+     "div.field \"Start\"",
+     "label \"Start\"",
+     "input#start \"\""
+    ],
+    "offenderCount": 146,
+    "screenshot": "screenshots/after-site-result-public-320.png"
+   }
+  },
+  {
+   "view": "compare-matrix",
+   "at": "2026-11-11T08:29:02.502Z",
+   "structure": {
+    "lang": "en",
+    "title": "LUNA-OPS: Lunar Landing Site Navigator",
+    "landmarks": [
+     "header:",
+     "tablist:Views",
+     "aside:Analysis settings",
+     "main:",
+     "section:Comparison matrix"
+    ],
+    "headings": [
+     "H2 Site",
+     "H2 Dates (UTC)",
+     "H2 Observer",
+     "H2 Visibility rules",
+     "H2 Power indicator panel",
+     "H1 Compare sites and dates",
+     "H2 Sites (2)",
+     "H2 Date windows (2)"
+    ],
+    "duplicateIds": [],
+    "positiveTabindex": [],
+    "ariaHiddenFocusable": [],
+    "unlabeledFormControls": [],
+    "tables": [
+     {
+      "table": "table.matrix \"Sunlit time for each site and windowSite14 Nov",
+      "th": 5,
+      "caption": true,
+      "rows": 3
+     }
+    ],
+    "roleApplication": [],
+    "liveRegions": [
+     "p#coord-hint.hint.good \"Terrain coverage: 20m, 80m, 240m LOL live=polite"
+    ]
+   },
+   "ax": {
+    "nodes": 479,
+    "unnamed": [],
+    "focusableWithoutWidgetRole": [],
+    "sliders": [],
+    "roles": {
+     "RootWebArea": 1,
+     "generic": 28,
+     "link": 2,
+     "banner": 1,
+     "complementary": 1,
+     "main": 1,
+     "StaticText": 144,
+     "tablist": 1,
+     "group": 5,
+     "tabpanel": 1,
+     "InlineTextBox": 153,
+     "tab": 4,
+     "button": 37,
+     "heading": 8,
+     "paragraph": 7,
+     "LabelText": 9,
+     "textbox": 3,
+     "DateTime": 6,
+     "combobox": 2,
+     "spinbutton": 32,
+     "region": 1,
+     "MenuListPopup": 2,
+     "list": 2,
+     "table": 1,
+     "option": 7,
+     "listitem": 4,
+     "caption": 1,
+     "rowgroup": 1,
+     "row": 3,
+     "rowheader": 2,
+     "cell": 4,
+     "columnheader": 3,
+     "LineBreak": 2
+    }
+   },
+   "contrast": {
+    "pairs": [
+     {
+      "fg": "#8b9bab",
+      "bg": "#17212c",
+      "ratio": 5.72,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 7,
+      "minSizePx": 12.5,
+      "samples": [
+       "Event times are found adaptively to 1 s; the step only sets  @ p.hint \"Event times are found adaptively to 1 s; the step \"",
+       "Surface reference is 0 m. @ p.hint \"Surface reference is 0 m.\"",
+       "Centre visible. Geometric line of sight only, not a radio li @ p.hint \"Centre visible. Geometric line of sight only, not \""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#665635",
+      "ratio": 5.98,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 4,
+      "minSizePx": 11.5,
+      "samples": [
+       "100.0% @ button.cell-open \"100.0%open full result\"",
+       "open full result @ span.cell-sub \"open full result\"",
+       "100.0% @ button.cell-open \"100.0%open full result\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#1e2a37",
+      "ratio": 6.66,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 13,
+      "minSizePx": 12.5,
+      "samples": [
+       "No curated sites are registered yet. Register the USGS Artem @ p.empty-note \"No curated sites are registered yet. Register the \"",
+       "Astronaut @ button \"Astronaut\"",
+       "Equipment @ button \"Equipment\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#17212c",
+      "ratio": 7.44,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 24,
+      "minSizePx": 12.5,
+      "samples": [
+       "Lunar Landing Site Navigator @ span.brand-sub \"Lunar Landing Site Navigator\"",
+       "Site @ button#tab-site.tab[role=tab] \"Site\"",
+       "Data and validation @ button#tab-data.tab[role=tab] \"Data and validation\""
+      ]
+     },
+     {
+      "fg": "#7fc8a9",
+      "bg": "#17212c",
+      "ratio": 8.32,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 12.5,
+      "samples": [
+       "Terrain coverage: 20m, 80m, 240m LOLA levels. @ p#coord-hint.hint.good \"Terrain coverage: 20m, 80m, 240m LOLA levels.\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#f2b544",
+      "ratio": 9.98,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 2,
+      "minSizePx": 15,
+      "samples": [
+       "Analyse site @ button.run-button \"Analyse site\"",
+       "Compare 2 × 2 @ button.run-button \"Compare 2 × 2\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#243345",
+      "ratio": 10.81,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 5,
+      "minSizePx": 12.5,
+      "samples": [
+       "Technical @ button \"Technical\"",
+       "Surface @ button \"Surface\"",
+       "Any part @ button \"Any part\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#262b2e",
+      "ratio": 12.06,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 2,
+      "minSizePx": 11.5,
+      "samples": [
+       "3.0% @ button.cell-open \"3.0%open full result\"",
+       "open full result @ span.cell-sub \"open full result\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#242a2d",
+      "ratio": 12.24,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 2,
+      "minSizePx": 11.5,
+      "samples": [
+       "1.3% @ button.cell-open \"1.3%open full result\"",
+       "open full result @ span.cell-sub \"open full result\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#ffd98a",
+      "ratio": 13.52,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Skip to main content @ a.skip-link \"Skip to main content\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 2,
+      "minSizePx": 19,
+      "samples": [
+       "LUNA-OPS @ span.brand-mark \"LUNA-OPS\"",
+       "Compare sites and dates @ h1.site-title \"Compare sites and dates\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 20,
+      "minSizePx": 13,
+      "samples": [
+       "Compare @ button#tab-compare.tab[role=tab] \"Compare\"",
+       "Site @ h2 \"Site\"",
+       "Add to comparison @ button.quiet-button \"Add to comparison\""
+      ]
+     }
+    ],
+    "failures": []
+   },
+   "targets": {
+    "interactive": 49,
+    "undersized": [],
+    "failures": []
+   },
+   "screenshot": "screenshots/after-compare-matrix.png",
+   "keyboard": {
+    "stops": 76,
+    "cycled": true,
+    "list": [
+     {
+      "el": "button \"Public\"",
+      "tag": "BUTTON",
+      "rect": [
+       1357,
+       15,
+       60,
+       27
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#lat \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       213,
+       148,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#lon \"\"",
+      "tag": "INPUT",
+      "rect": [
+       174,
+       213,
+       148,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#sname \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       283,
+       303,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.quiet-button \"Add to comparison\"",
+      "tag": "BUTTON",
+      "rect": [
+       18,
+       349,
+       131,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select#step \"5 minutes15 minutes30 minutes60 minutes\"",
+      "tag": "SELECT",
+      "rect": [
+       18,
+       609,
+       303,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Surface\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Astronaut\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Equipment\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Any part\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Centre\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Whole disk\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Any part\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Centre\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Whole disk\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#margin \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       634,
+       303,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select#panel \"Vertical, tracking the SunHorizontalVertical, fixe\"",
+      "tag": "SELECT",
+      "rect": [
+       18,
+       765,
+       303,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.run-button \"Analyse site\"",
+      "tag": "BUTTON",
+      "rect": [
+       18,
+       854,
+       303,
+       46
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 3,
+      "clippedBy": [
+       "aside.sidebar \"Analysis settings\" [bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.quiet-button \"Remove -89.463°, 222.510°\"",
+      "tag": "BUTTON",
+      "rect": [
+       796,
+       197,
+       71,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.quiet-button \"Remove -89.900°, 0.000°\"",
+      "tag": "BUTTON",
+      "rect": [
+       796,
+       244,
+       71,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       197,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       197,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       197,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       197,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       197,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       197,
+       203,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       197,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       197,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       197,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       197,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       197,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 1 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       197,
+       203,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.quiet-button \"Remove window 1\"",
+      "tag": "BUTTON",
+      "rect": [
+       1334,
+       200,
+       71,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       251,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       251,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       251,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       251,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       251,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 start\"",
+      "tag": "INPUT",
+      "rect": [
+       913,
+       251,
+       203,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       251,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       251,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       251,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       251,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       251,
+       203,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input \"Window 2 end\"",
+      "tag": "INPUT",
+      "rect": [
+       1124,
+       251,
+       203,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.quiet-button \"Remove window 2\"",
+      "tag": "BUTTON",
+      "rect": [
+       1334,
+       255,
+       71,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.quiet-button \"Add the panel's dates\"",
+      "tag": "BUTTON",
+      "rect": [
+       902,
+       309,
+       145,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.quiet-button \"Add one synodic month later\"",
+      "tag": "BUTTON",
+      "rect": [
+       1055,
+       309,
+       186,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.run-button \"Compare 2 × 2\"",
+      "tag": "BUTTON",
+      "rect": [
+       364,
+       358,
+       144,
+       46
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Sunlit time\"",
+      "tag": "BUTTON",
+      "rect": [
+       365,
+       431,
+       117,
+       48
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented.segmented-wrap[role=group] \"Metric\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Longest darkness\"",
+      "tag": "BUTTON",
+      "rect": [
+       482,
+       431,
+       117,
+       48
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented.segmented-wrap[role=group] \"Metric\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Earth in view\"",
+      "tag": "BUTTON",
+      "rect": [
+       599,
+       431,
+       117,
+       48
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented.segmented-wrap[role=group] \"Metric\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Longest Earth gap\"",
+      "tag": "BUTTON",
+      "rect": [
+       716,
+       431,
+       117,
+       48
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented.segmented-wrap[role=group] \"Metric\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Sunlit and Earth in view\"",
+      "tag": "BUTTON",
+      "rect": [
+       832,
+       431,
+       117,
+       48
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented.segmented-wrap[role=group] \"Metric\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Power indicator (mean)\"",
+      "tag": "BUTTON",
+      "rect": [
+       949,
+       431,
+       117,
+       48
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented.segmented-wrap[role=group] \"Metric\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Equivalent full-Sun\"",
+      "tag": "BUTTON",
+      "rect": [
+       1066,
+       431,
+       117,
+       48
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented.segmented-wrap[role=group] \"Metric\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "a.quiet-button \"Comparison CSV\"",
+      "tag": "A",
+      "rect": [
+       1294,
+       438,
+       122,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.cell-open \"100.0%open full result\"",
+      "tag": "BUTTON",
+      "rect": [
+       679,
+       556,
+       353,
+       41
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.cell-open \"100.0%open full result\"",
+      "tag": "BUTTON",
+      "rect": [
+       1053,
+       556,
+       352,
+       41
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.cell-open \"3.0%open full result\"",
+      "tag": "BUTTON",
+      "rect": [
+       679,
+       617,
+       353,
+       41
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.cell-open \"1.3%open full result\"",
+      "tag": "BUTTON",
+      "rect": [
+       1053,
+       617,
+       352,
+       41
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "a.skip-link \"Skip to main content\"",
+      "tag": "A",
+      "rect": [
+       12,
+       8,
+       173,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button#tab-compare.tab[role=tab] \"Compare\"",
+      "tag": "BUTTON",
+      "rect": [
+       379,
+       0,
+       91,
+       57
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Technical\"",
+      "tag": "BUTTON",
+      "rect": [
+       1278,
+       15,
+       79,
+       27
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     }
+    ],
+    "noIndicator": [
+     "input#start \"\"",
+     "input#end \"\"",
+     "input \"Window 1 start\"",
+     "input \"Window 1 end\"",
+     "input \"Window 2 start\"",
+     "input \"Window 2 end\""
+    ],
+    "clipped": [
+     {
+      "el": "button.run-button \"Analyse site\"",
+      "ringSidesVisible": 3,
+      "clippedBy": [
+       "aside.sidebar \"Analysis settings\" [bottom]"
+      ]
+     }
+    ],
+    "obscured": [],
+    "notInView": []
+   },
+   "textSpacing": {
+    "clipped": [],
+    "screenshot": "screenshots/after-compare-matrix-textspacing.png"
+   },
+   "reflow320": {
+    "viewport": 320,
+    "docScrollW": 406,
+    "horizontalScroll": true,
+    "scrollers": [
+     {
+      "el": "main#main.main \"Compare sites and datesE",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "aside.sidebar \"Analysis settings\"",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "div.shell \"Skip to main contentLUNA-OPSL",
+      "scrollW": 406,
+      "clientW": 320,
+      "overflow": true
+     }
+    ],
+    "offenders": [
+     "header.topbar \"LUNA-OPSLunar Landing Site NavigatorSiteCompareDat\"",
+     "nav.tabs[role=tablist] \"Views\"",
+     "button#tab-guide.tab[role=tab] \"Guide\"",
+     "div.topbar-right \"NAIF kernelsLOLA terrain, 4 productsTechnicalPubli\"",
+     "div.mode-switch[role=group] \"Viewing mode\"",
+     "button \"Technical\"",
+     "button \"Public\"",
+     "div.workspace \"SiteNo curated sites are registered yet. Register \"",
+     "aside.sidebar \"Analysis settings\"",
+     "section.side-section \"SiteNo curated sites are registered yet. Registe",
+     "h2 \"Site\"",
+     "p.empty-note \"No curated sites are registered yet. Register the \"",
+     "div.field-row \"Latitude (°)East longitude (°)\"",
+     "div.field \"East longitude (°)\"",
+     "label \"East longitude (°)\"",
+     "input#lon \"\"",
+     "div.field \"Name (optional)\"",
+     "label \"Name (optional)\"",
+     "input#sname \"\"",
+     "p#coord-hint.hint.good \"Terrain coverage: 20m, 80m, 240m LOLA levels.\"",
+     "section.side-section \"Dates (UTC)StartEndDisplay step5 minutes15 minut",
+     "h2 \"Dates (UTC)\"",
+     "div.field \"Start\"",
+     "label \"Start\"",
+     "input#start \"\""
+    ],
+    "offenderCount": 97,
+    "screenshot": "screenshots/after-compare-matrix-320.png"
+   }
+  },
+  {
+   "view": "data",
+   "at": "2026-11-11T08:29:14.286Z",
+   "structure": {
+    "lang": "en",
+    "title": "LUNA-OPS: Lunar Landing Site Navigator",
+    "landmarks": [
+     "header:",
+     "tablist:Views",
+     "aside:Analysis settings",
+     "main:"
+    ],
+    "headings": [
+     "H2 Site",
+     "H2 Dates (UTC)",
+     "H2 Observer",
+     "H2 Visibility rules",
+     "H2 Power indicator panel",
+     "H1 Data and validation",
+     "H2 SPICE kernels",
+     "H2 Terrain",
+     "H2 Validation report",
+     "H2 Result labels now in force",
+     "H2 Sources and attribution"
+    ],
+    "duplicateIds": [],
+    "positiveTabindex": [],
+    "ariaHiddenFocusable": [],
+    "unlabeledFormControls": [],
+    "tables": [
+     {
+      "table": "table.data \"RoleFileSHA-256SourceRetrievedlsknaif0012.tls678",
+      "th": 5,
+      "caption": false,
+      "rows": 8
+     },
+     {
+      "table": "table.data \"Registered productSourcePixelSizeSHA-256Register",
+      "th": 6,
+      "caption": false,
+      "rows": 5
+     },
+     {
+      "table": "table.data \"TestWhat it checksStatusDetailV-01UTC to TDB rou",
+      "th": 4,
+      "caption": false,
+      "rows": 59
+     },
+     {
+      "table": "table.data \"QuantityKindStatussun earth azelGeometricPending",
+      "th": 3,
+      "caption": false,
+      "rows": 6
+     },
+     {
+      "table": "table.data \"LOLA large-area DEMs (PGDA 90)Barker et al. 2023",
+      "th": 6,
+      "caption": false,
+      "rows": 6
+     }
+    ],
+    "roleApplication": [],
+    "liveRegions": [
+     "p#coord-hint.hint.good \"Terrain coverage: 20m, 80m, 240m LOL live=polite"
+    ]
+   },
+   "ax": {
+    "nodes": 1483,
+    "unnamed": [],
+    "focusableWithoutWidgetRole": [],
+    "sliders": [],
+    "roles": {
+     "RootWebArea": 1,
+     "generic": 18,
+     "link": 1,
+     "banner": 1,
+     "complementary": 1,
+     "main": 1,
+     "StaticText": 409,
+     "tablist": 1,
+     "group": 4,
+     "tabpanel": 1,
+     "InlineTextBox": 535,
+     "tab": 4,
+     "button": 15,
+     "heading": 11,
+     "paragraph": 11,
+     "LabelText": 9,
+     "textbox": 3,
+     "DateTime": 2,
+     "combobox": 2,
+     "spinbutton": 12,
+     "table": 5,
+     "MenuListPopup": 2,
+     "strong": 3,
+     "rowgroup": 4,
+     "row": 84,
+     "option": 7,
+     "cell": 312,
+     "rowheader": 6,
+     "columnheader": 18
+    }
+   },
+   "contrast": {
+    "pairs": [
+     {
+      "fg": "#8b9bab",
+      "bg": "#17212c",
+      "ratio": 5.72,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 4,
+      "minSizePx": 12.5,
+      "samples": [
+       "Event times are found adaptively to 1 s; the step only sets  @ p.hint \"Event times are found adaptively to 1 s; the step \"",
+       "Surface reference is 0 m. @ p.hint \"Surface reference is 0 m.\"",
+       "Centre visible. Geometric line of sight only, not a radio li @ p.hint \"Centre visible. Geometric line of sight only, not \""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#1e2a37",
+      "ratio": 6.66,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 7,
+      "minSizePx": 12.5,
+      "samples": [
+       "No curated sites are registered yet. Register the USGS Artem @ p.empty-note \"No curated sites are registered yet. Register the \"",
+       "Astronaut @ button \"Astronaut\"",
+       "Equipment @ button \"Equipment\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#17212c",
+      "ratio": 7.44,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 72,
+      "minSizePx": 12,
+      "samples": [
+       "Lunar Landing Site Navigator @ span.brand-sub \"Lunar Landing Site Navigator\"",
+       "Site @ button#tab-site.tab[role=tab] \"Site\"",
+       "Compare @ button#tab-compare.tab[role=tab] \"Compare\""
+      ]
+     },
+     {
+      "fg": "#7fc8a9",
+      "bg": "#17212c",
+      "ratio": 8.32,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 50,
+      "minSizePx": 12.5,
+      "samples": [
+       "Terrain coverage: 20m, 80m, 240m LOLA levels. @ p#coord-hint.hint.good \"Terrain coverage: 20m, 80m, 240m LOLA levels.\"",
+       "passed @ td \"passed\"",
+       "passed @ td \"passed\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#f2b544",
+      "ratio": 9.98,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Analyse site @ button.run-button \"Analyse site\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#243345",
+      "ratio": 10.81,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 4,
+      "minSizePx": 12.5,
+      "samples": [
+       "Technical @ button \"Technical\"",
+       "Surface @ button \"Surface\"",
+       "Any part @ button \"Any part\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#ffd98a",
+      "ratio": 13.52,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Skip to main content @ a.skip-link \"Skip to main content\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 2,
+      "minSizePx": 19,
+      "samples": [
+       "LUNA-OPS @ span.brand-mark \"LUNA-OPS\"",
+       "Data and validation @ h1 \"Data and validation\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 246,
+      "minSizePx": 12,
+      "samples": [
+       "Data and validation @ button#tab-data.tab[role=tab] \"Data and validation\"",
+       "Site @ h2 \"Site\"",
+       "Add to comparison @ button.quiet-button \"Add to comparison\""
+      ]
+     }
+    ],
+    "failures": []
+   },
+   "targets": {
+    "interactive": 26,
+    "undersized": [],
+    "failures": []
+   },
+   "screenshot": "screenshots/after-data.png",
+   "keyboard": {
+    "stops": 34,
+    "cycled": true,
+    "list": [
+     {
+      "el": "div.table-scroll \"TestWhat it checksStatusDetailV-01UTC to TDB round\"",
+      "tag": "DIV",
+      "rect": [
+       364,
+       219,
+       1052,
+       520
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "a.skip-link \"Skip to main content\"",
+      "tag": "A",
+      "rect": [
+       12,
+       8,
+       173,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button#tab-data.tab[role=tab] \"Data and validation\"",
+      "tag": "BUTTON",
+      "rect": [
+       472,
+       0,
+       157,
+       57
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Technical\"",
+      "tag": "BUTTON",
+      "rect": [
+       1278,
+       15,
+       79,
+       27
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Public\"",
+      "tag": "BUTTON",
+      "rect": [
+       1357,
+       15,
+       60,
+       27
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#lat \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       213,
+       148,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#lon \"\"",
+      "tag": "INPUT",
+      "rect": [
+       174,
+       213,
+       148,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#sname \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       283,
+       303,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.quiet-button \"Add to comparison\"",
+      "tag": "BUTTON",
+      "rect": [
+       18,
+       349,
+       131,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select#step \"5 minutes15 minutes30 minutes60 minutes\"",
+      "tag": "SELECT",
+      "rect": [
+       18,
+       609,
+       303,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Surface\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Astronaut\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Equipment\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Any part\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Centre\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Whole disk\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Any part\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Centre\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Whole disk\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#margin \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       634,
+       303,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select#panel \"Vertical, tracking the SunHorizontalVertical, fixe\"",
+      "tag": "SELECT",
+      "rect": [
+       18,
+       765,
+       303,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.run-button \"Analyse site\"",
+      "tag": "BUTTON",
+      "rect": [
+       18,
+       854,
+       303,
+       46
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 3,
+      "clippedBy": [
+       "aside.sidebar \"Analysis settings\" [bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     }
+    ],
+    "noIndicator": [
+     "input#start \"\"",
+     "input#end \"\""
+    ],
+    "clipped": [
+     {
+      "el": "button.run-button \"Analyse site\"",
+      "ringSidesVisible": 3,
+      "clippedBy": [
+       "aside.sidebar \"Analysis settings\" [bottom]"
+      ]
+     }
+    ],
+    "obscured": [],
+    "notInView": []
+   },
+   "textSpacing": {
+    "clipped": [],
+    "screenshot": "screenshots/after-data-textspacing.png"
+   },
+   "reflow320": {
+    "viewport": 320,
+    "docScrollW": 406,
+    "horizontalScroll": true,
+    "scrollers": [
+     {
+      "el": "main#main.main \"Data and validationEvery",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "aside.sidebar \"Analysis settings\"",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "div.shell \"Skip to main contentLUNA-OPSL",
+      "scrollW": 406,
+      "clientW": 320,
+      "overflow": true
+     }
+    ],
+    "offenders": [
+     "header.topbar \"LUNA-OPSLunar Landing Site NavigatorSiteCompareDat\"",
+     "nav.tabs[role=tablist] \"Views\"",
+     "button#tab-guide.tab[role=tab] \"Guide\"",
+     "div.topbar-right \"NAIF kernelsLOLA terrain, 4 productsTechnicalPubli\"",
+     "div.mode-switch[role=group] \"Viewing mode\"",
+     "button \"Technical\"",
+     "button \"Public\"",
+     "div.workspace \"SiteNo curated sites are registered yet. Register \"",
+     "aside.sidebar \"Analysis settings\"",
+     "section.side-section \"SiteNo curated sites are registered yet. Registe",
+     "h2 \"Site\"",
+     "p.empty-note \"No curated sites are registered yet. Register the \"",
+     "div.field-row \"Latitude (°)East longitude (°)\"",
+     "div.field \"East longitude (°)\"",
+     "label \"East longitude (°)\"",
+     "input#lon \"\"",
+     "div.field \"Name (optional)\"",
+     "label \"Name (optional)\"",
+     "input#sname \"\"",
+     "p#coord-hint.hint.good \"Terrain coverage: 20m, 80m, 240m LOLA levels.\"",
+     "section.side-section \"Dates (UTC)StartEndDisplay step5 minutes15 minut",
+     "h2 \"Dates (UTC)\"",
+     "div.field \"Start\"",
+     "label \"Start\"",
+     "input#start \"\""
+    ],
+    "offenderCount": 76,
+    "screenshot": "screenshots/after-data-320.png"
+   }
+  },
+  {
+   "view": "guide",
+   "at": "2026-11-11T08:29:19.566Z",
+   "structure": {
+    "lang": "en",
+    "title": "LUNA-OPS: Lunar Landing Site Navigator",
+    "landmarks": [
+     "header:",
+     "tablist:Views",
+     "aside:Analysis settings",
+     "main:"
+    ],
+    "headings": [
+     "H2 Site",
+     "H2 Dates (UTC)",
+     "H2 Observer",
+     "H2 Visibility rules",
+     "H2 Power indicator panel",
+     "H1 How to read LUNA-OPS",
+     "H2 The horizon panorama",
+     "H2 The timeline",
+     "H2 Visibility rules",
+     "H2 Seeing Earth is not the same as a radio link",
+     "H2 The power indicator",
+     "H2 Glossary"
+    ],
+    "duplicateIds": [],
+    "positiveTabindex": [],
+    "ariaHiddenFocusable": [],
+    "unlabeledFormControls": [],
+    "tables": [],
+    "roleApplication": [],
+    "liveRegions": [
+     "p#coord-hint.hint.good \"Terrain coverage: 20m, 80m, 240m LOL live=polite"
+    ]
+   },
+   "ax": {
+    "nodes": 354,
+    "unnamed": [],
+    "focusableWithoutWidgetRole": [],
+    "sliders": [],
+    "roles": {
+     "RootWebArea": 1,
+     "generic": 17,
+     "link": 1,
+     "banner": 1,
+     "complementary": 1,
+     "main": 1,
+     "StaticText": 101,
+     "tablist": 1,
+     "group": 4,
+     "tabpanel": 1,
+     "InlineTextBox": 120,
+     "tab": 4,
+     "button": 15,
+     "heading": 12,
+     "paragraph": 12,
+     "LabelText": 9,
+     "textbox": 3,
+     "DateTime": 2,
+     "combobox": 2,
+     "spinbutton": 12,
+     "article": 1,
+     "MenuListPopup": 2,
+     "DescriptionList": 2,
+     "option": 7,
+     "term": 11,
+     "definition": 11
+    }
+   },
+   "contrast": {
+    "pairs": [
+     {
+      "fg": "#8b9bab",
+      "bg": "#17212c",
+      "ratio": 5.72,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 4,
+      "minSizePx": 12.5,
+      "samples": [
+       "Event times are found adaptively to 1 s; the step only sets  @ p.hint \"Event times are found adaptively to 1 s; the step \"",
+       "Surface reference is 0 m. @ p.hint \"Surface reference is 0 m.\"",
+       "Centre visible. Geometric line of sight only, not a radio li @ p.hint \"Centre visible. Geometric line of sight only, not \""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#1e2a37",
+      "ratio": 6.66,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 7,
+      "minSizePx": 12.5,
+      "samples": [
+       "No curated sites are registered yet. Register the USGS Artem @ p.empty-note \"No curated sites are registered yet. Register the \"",
+       "Astronaut @ button \"Astronaut\"",
+       "Equipment @ button \"Equipment\""
+      ]
+     },
+     {
+      "fg": "#a3b1bf",
+      "bg": "#17212c",
+      "ratio": 7.44,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 35,
+      "minSizePx": 12.5,
+      "samples": [
+       "Lunar Landing Site Navigator @ span.brand-sub \"Lunar Landing Site Navigator\"",
+       "Site @ button#tab-site.tab[role=tab] \"Site\"",
+       "Compare @ button#tab-compare.tab[role=tab] \"Compare\""
+      ]
+     },
+     {
+      "fg": "#7fc8a9",
+      "bg": "#17212c",
+      "ratio": 8.32,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 12.5,
+      "samples": [
+       "Terrain coverage: 20m, 80m, 240m LOLA levels. @ p#coord-hint.hint.good \"Terrain coverage: 20m, 80m, 240m LOLA levels.\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#f2b544",
+      "ratio": 9.98,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Analyse site @ button.run-button \"Analyse site\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#243345",
+      "ratio": 10.81,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 4,
+      "minSizePx": 12.5,
+      "samples": [
+       "Technical @ button \"Technical\"",
+       "Surface @ button \"Surface\"",
+       "Any part @ button \"Any part\""
+      ]
+     },
+     {
+      "fg": "#1b1406",
+      "bg": "#ffd98a",
+      "ratio": 13.52,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 1,
+      "minSizePx": 15,
+      "samples": [
+       "Skip to main content @ a.skip-link \"Skip to main content\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 3,
+      "large": true,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 2,
+      "minSizePx": 19,
+      "samples": [
+       "LUNA-OPS @ span.brand-mark \"LUNA-OPS\"",
+       "How to read LUNA-OPS @ h1 \"How to read LUNA-OPS\""
+      ]
+     },
+     {
+      "fg": "#e7ecf1",
+      "bg": "#17212c",
+      "ratio": 13.69,
+      "need": 4.5,
+      "large": false,
+      "disabled": false,
+      "svg": false,
+      "complex": null,
+      "count": 24,
+      "minSizePx": 13,
+      "samples": [
+       "Guide @ button#tab-guide.tab[role=tab] \"Guide\"",
+       "Site @ h2 \"Site\"",
+       "Add to comparison @ button.quiet-button \"Add to comparison\""
+      ]
+     }
+    ],
+    "failures": []
+   },
+   "targets": {
+    "interactive": 26,
+    "undersized": [],
+    "failures": []
+   },
+   "screenshot": "screenshots/after-guide.png",
+   "keyboard": {
+    "stops": 33,
+    "cycled": true,
+    "list": [
+     {
+      "el": "a.skip-link \"Skip to main content\"",
+      "tag": "A",
+      "rect": [
+       12,
+       8,
+       173,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button#tab-guide.tab[role=tab] \"Guide\"",
+      "tag": "BUTTON",
+      "rect": [
+       631,
+       0,
+       69,
+       57
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Technical\"",
+      "tag": "BUTTON",
+      "rect": [
+       1278,
+       15,
+       79,
+       27
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Public\"",
+      "tag": "BUTTON",
+      "rect": [
+       1357,
+       15,
+       60,
+       27
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#lat \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       213,
+       148,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#lon \"\"",
+      "tag": "INPUT",
+      "rect": [
+       174,
+       213,
+       148,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#sname \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       283,
+       303,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.quiet-button \"Add to comparison\"",
+      "tag": "BUTTON",
+      "rect": [
+       18,
+       349,
+       131,
+       33
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#start \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       465,
+       303,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#end \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       537,
+       303,
+       40
+      ],
+      "indicator": "NONE",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select#step \"5 minutes15 minutes30 minutes60 minutes\"",
+      "tag": "SELECT",
+      "rect": [
+       18,
+       609,
+       303,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Surface\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Astronaut\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Equipment\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       757,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Observer profile\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Any part\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Centre\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Whole disk\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       464,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Sunlit rule\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Any part\"",
+      "tag": "BUTTON",
+      "rect": [
+       19,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [left,top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Centre\"",
+      "tag": "BUTTON",
+      "rect": [
+       119,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [top,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button \"Whole disk\"",
+      "tag": "BUTTON",
+      "rect": [
+       220,
+       528,
+       100,
+       30
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [
+       "div.segmented[role=group] \"Direct-to-Earth rule\" [top,right,bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "input#margin \"\"",
+      "tag": "INPUT",
+      "rect": [
+       18,
+       634,
+       303,
+       38
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "select#panel \"Vertical, tracking the SunHorizontalVertical, fixe\"",
+      "tag": "SELECT",
+      "rect": [
+       18,
+       765,
+       303,
+       34
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 4,
+      "clippedBy": [],
+      "inView": true,
+      "obscured": null
+     },
+     {
+      "el": "button.run-button \"Analyse site\"",
+      "tag": "BUTTON",
+      "rect": [
+       18,
+       854,
+       303,
+       46
+      ],
+      "indicator": "outline 2px rgb(255, 217, 138) offset 2",
+      "ringSidesVisible": 3,
+      "clippedBy": [
+       "aside.sidebar \"Analysis settings\" [bottom]"
+      ],
+      "inView": true,
+      "obscured": null
+     }
+    ],
+    "noIndicator": [
+     "input#start \"\"",
+     "input#end \"\""
+    ],
+    "clipped": [
+     {
+      "el": "button.run-button \"Analyse site\"",
+      "ringSidesVisible": 3,
+      "clippedBy": [
+       "aside.sidebar \"Analysis settings\" [bottom]"
+      ]
+     }
+    ],
+    "obscured": [],
+    "notInView": []
+   },
+   "textSpacing": {
+    "clipped": [],
+    "screenshot": "screenshots/after-guide-textspacing.png"
+   },
+   "reflow320": {
+    "viewport": 320,
+    "docScrollW": 406,
+    "horizontalScroll": true,
+    "scrollers": [
+     {
+      "el": "main#main.main \"How to read LUNA-OPSNear",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "aside.sidebar \"Analysis settings\"",
+      "scrollW": 406,
+      "clientW": 406,
+      "overflow": false
+     },
+     {
+      "el": "div.shell \"Skip to main contentLUNA-OPSL",
+      "scrollW": 406,
+      "clientW": 320,
+      "overflow": true
+     }
+    ],
+    "offenders": [
+     "header.topbar \"LUNA-OPSLunar Landing Site NavigatorSiteCompareDat\"",
+     "nav.tabs[role=tablist] \"Views\"",
+     "button#tab-guide.tab[role=tab] \"Guide\"",
+     "div.topbar-right \"NAIF kernelsLOLA terrain, 4 productsTechnicalPubli\"",
+     "div.mode-switch[role=group] \"Viewing mode\"",
+     "button \"Technical\"",
+     "button \"Public\"",
+     "div.workspace \"SiteNo curated sites are registered yet. Register \"",
+     "aside.sidebar \"Analysis settings\"",
+     "section.side-section \"SiteNo curated sites are registered yet. Registe",
+     "h2 \"Site\"",
+     "p.empty-note \"No curated sites are registered yet. Register the \"",
+     "div.field-row \"Latitude (°)East longitude (°)\"",
+     "div.field \"East longitude (°)\"",
+     "label \"East longitude (°)\"",
+     "input#lon \"\"",
+     "div.field \"Name (optional)\"",
+     "label \"Name (optional)\"",
+     "input#sname \"\"",
+     "p#coord-hint.hint.good \"Terrain coverage: 20m, 80m, 240m LOLA levels.\"",
+     "section.side-section \"Dates (UTC)StartEndDisplay step5 minutes15 minut",
+     "h2 \"Dates (UTC)\"",
+     "div.field \"Start\"",
+     "label \"Start\"",
+     "input#start \"\""
+    ],
+    "offenderCount": 102,
+    "screenshot": "screenshots/after-guide-320.png"
+   }
+  }
+ ],
+ "functional": {
+  "skipLink": {
+   "firstTabStop": "button#tab-site.tab[role=tab] \"Site\"",
+   "afterEnter": "tab-site"
+  },
+  "tabsArrowKeys": {
+   "afterRight": {
+    "selected": "Compare",
+    "focused": "Compare",
+    "tabStops": 1
+   },
+   "afterLeft": "Site"
+  },
+  "invalidCoordinates": {
+   "hint": "Latitude and longitude must be numbers in degrees, for example -89.5 and 222.5.",
+   "latInvalid": "true",
+   "describedBy": "coord-hint",
+   "runDisabled": true
+  },
+  "slider": {
+   "valuenow": "0",
+   "valuetext": "14 Nov 2026, 00:00 UTC"
+  },
+  "readoutLive": "polite",
+  "panoramaHoverEscape": {
+   "shown": true,
+   "afterEscape": false
+  },
+  "readoutLiveWhilePlaying": "off",
+  "matrixCellSpace": "Site",
+  "matrixCellEnter": "Site",
+  "reducedMotionTransition": "0s",
+  "mobileSite": "screenshots/after-mobile-390-site.png"
+ }
+}

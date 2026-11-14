@@ -1,0 +1,991 @@
+{
+ "combos": [
+  {
+   "width": 1920,
+   "tab": "mission",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 7,
+    "emptyBoxes": 0,
+    "mainText": 3005
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1920-mission.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1920,
+   "tab": "site",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 8,
+    "emptyBoxes": 0,
+    "mainText": 10794
+   },
+   "badges": {
+    "statusBadges": 57,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 1,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1920-site.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1920,
+   "tab": "landing",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 2,
+    "emptyBoxes": 0,
+    "mainText": 1347
+   },
+   "badges": {
+    "statusBadges": 1,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1920-landing.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1920,
+   "tab": "comms",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 8,
+    "emptyBoxes": 0,
+    "mainText": 11394
+   },
+   "badges": {
+    "statusBadges": 5,
+    "pendingBadges": 4,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 1,
+    "candLabels": 0,
+    "pendingValidationText": 8,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1920-comms.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1920,
+   "tab": "compare",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 361
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1920-compare.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1920,
+   "tab": "guide",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 3018
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1920-guide.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1440,
+   "tab": "mission",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 7,
+    "emptyBoxes": 0,
+    "mainText": 3005
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1440-mission.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1440,
+   "tab": "site",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 8,
+    "emptyBoxes": 0,
+    "mainText": 10638
+   },
+   "badges": {
+    "statusBadges": 57,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 1,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1440-site.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1440,
+   "tab": "landing",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 2,
+    "emptyBoxes": 0,
+    "mainText": 1347
+   },
+   "badges": {
+    "statusBadges": 1,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1440-landing.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1440,
+   "tab": "comms",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 8,
+    "emptyBoxes": 0,
+    "mainText": 11303
+   },
+   "badges": {
+    "statusBadges": 5,
+    "pendingBadges": 4,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 1,
+    "candLabels": 0,
+    "pendingValidationText": 8,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1440-comms.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1440,
+   "tab": "compare",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 361
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1440-compare.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1440,
+   "tab": "guide",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 3018
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1440-guide.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1024,
+   "tab": "mission",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 7,
+    "emptyBoxes": 0,
+    "mainText": 3005
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1024-mission.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1024,
+   "tab": "site",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 8,
+    "emptyBoxes": 0,
+    "mainText": 10690
+   },
+   "badges": {
+    "statusBadges": 57,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 1,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1024-site.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1024,
+   "tab": "landing",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 2,
+    "emptyBoxes": 0,
+    "mainText": 1347
+   },
+   "badges": {
+    "statusBadges": 1,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1024-landing.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1024,
+   "tab": "comms",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 8,
+    "emptyBoxes": 0,
+    "mainText": 11303
+   },
+   "badges": {
+    "statusBadges": 5,
+    "pendingBadges": 4,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 1,
+    "candLabels": 0,
+    "pendingValidationText": 8,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1024-comms.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1024,
+   "tab": "compare",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 361
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1024-compare.png",
+   "result": "Pass"
+  },
+  {
+   "width": 1024,
+   "tab": "guide",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 3018
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-1024-guide.png",
+   "result": "Pass"
+  },
+  {
+   "width": 390,
+   "tab": "mission",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 7,
+    "emptyBoxes": 0,
+    "mainText": 3005
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-390-mission.png",
+   "result": "Pass"
+  },
+  {
+   "width": 390,
+   "tab": "site",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 8,
+    "emptyBoxes": 0,
+    "mainText": 10341
+   },
+   "badges": {
+    "statusBadges": 57,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 1,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-390-site.png",
+   "result": "Pass"
+  },
+  {
+   "width": 390,
+   "tab": "landing",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 2,
+    "emptyBoxes": 0,
+    "mainText": 1347
+   },
+   "badges": {
+    "statusBadges": 1,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-390-landing.png",
+   "result": "Pass"
+  },
+  {
+   "width": 390,
+   "tab": "comms",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 8,
+    "emptyBoxes": 0,
+    "mainText": 11147
+   },
+   "badges": {
+    "statusBadges": 5,
+    "pendingBadges": 4,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 1,
+    "candLabels": 0,
+    "pendingValidationText": 8,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-390-comms.png",
+   "result": "Pass"
+  },
+  {
+   "width": 390,
+   "tab": "compare",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 361
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-390-compare.png",
+   "result": "Pass"
+  },
+  {
+   "width": 390,
+   "tab": "guide",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 3018
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-390-guide.png",
+   "result": "Pass"
+  },
+  {
+   "width": 320,
+   "tab": "mission",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 7,
+    "emptyBoxes": 0,
+    "mainText": 3005
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-320-mission.png",
+   "result": "Pass"
+  },
+  {
+   "width": 320,
+   "tab": "site",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 8,
+    "emptyBoxes": 0,
+    "mainText": 10341
+   },
+   "badges": {
+    "statusBadges": 57,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 1,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-320-site.png",
+   "result": "Pass"
+  },
+  {
+   "width": 320,
+   "tab": "landing",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 2,
+    "emptyBoxes": 0,
+    "mainText": 1347
+   },
+   "badges": {
+    "statusBadges": 1,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-320-landing.png",
+   "result": "Pass"
+  },
+  {
+   "width": 320,
+   "tab": "comms",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 8,
+    "emptyBoxes": 0,
+    "mainText": 11147
+   },
+   "badges": {
+    "statusBadges": 5,
+    "pendingBadges": 4,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 1,
+    "candLabels": 0,
+    "pendingValidationText": 8,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-320-comms.png",
+   "result": "Pass"
+  },
+  {
+   "width": 320,
+   "tab": "compare",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 361
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-320-compare.png",
+   "result": "Pass"
+  },
+  {
+   "width": 320,
+   "tab": "guide",
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 3018
+   },
+   "badges": {
+    "statusBadges": 0,
+    "pendingBadges": 0,
+    "labelChips": 0,
+    "figureLabels": 0,
+    "missionBadges": 0,
+    "candLabels": 0,
+    "pendingValidationText": 0,
+    "pendingCountText": 0
+   },
+   "screenshot": "screenshots/ui-320-guide.png",
+   "result": "Pass"
+  }
+ ],
+ "nav": [
+  {
+   "width": 1920,
+   "tabs": [
+    "Mission",
+    "Site",
+    "Landing",
+    "Communication",
+    "Compare",
+    "Guide"
+   ],
+   "visible": 6,
+   "hasDataTab": false,
+   "navText": "MissionSiteLandingCommunicationCompareGuide",
+   "toggleShown": false,
+   "menu": null,
+   "result": "Pass"
+  },
+  {
+   "width": 1440,
+   "tabs": [
+    "Mission",
+    "Site",
+    "Landing",
+    "Communication",
+    "Compare",
+    "Guide"
+   ],
+   "visible": 0,
+   "hasDataTab": false,
+   "navText": "MissionSiteLandingCommunicationCompareGuide",
+   "toggleShown": true,
+   "menu": {
+    "tabs": [
+     "Mission",
+     "Site",
+     "Landing",
+     "Communication",
+     "Compare",
+     "Guide"
+    ],
+    "visible": 6,
+    "hasDataTab": false,
+    "navText": "MissionSiteLandingCommunicationCompareGuide",
+    "toggleShown": true
+   },
+   "result": "Pass"
+  },
+  {
+   "width": 1024,
+   "tabs": [
+    "Mission",
+    "Site",
+    "Landing",
+    "Communication",
+    "Compare",
+    "Guide"
+   ],
+   "visible": 0,
+   "hasDataTab": false,
+   "navText": "MissionSiteLandingCommunicationCompareGuide",
+   "toggleShown": true,
+   "menu": {
+    "tabs": [
+     "Mission",
+     "Site",
+     "Landing",
+     "Communication",
+     "Compare",
+     "Guide"
+    ],
+    "visible": 6,
+    "hasDataTab": false,
+    "navText": "MissionSiteLandingCommunicationCompareGuide",
+    "toggleShown": true
+   },
+   "result": "Pass"
+  },
+  {
+   "width": 390,
+   "tabs": [
+    "Mission",
+    "Site",
+    "Landing",
+    "Communication",
+    "Compare",
+    "Guide"
+   ],
+   "visible": 0,
+   "hasDataTab": false,
+   "navText": "MissionSiteLandingCommunicationCompareGuide",
+   "toggleShown": true,
+   "menu": {
+    "tabs": [
+     "Mission",
+     "Site",
+     "Landing",
+     "Communication",
+     "Compare",
+     "Guide"
+    ],
+    "visible": 6,
+    "hasDataTab": false,
+    "navText": "MissionSiteLandingCommunicationCompareGuide",
+    "toggleShown": true
+   },
+   "result": "Pass"
+  },
+  {
+   "width": 320,
+   "tabs": [
+    "Mission",
+    "Site",
+    "Landing",
+    "Communication",
+    "Compare",
+    "Guide"
+   ],
+   "visible": 0,
+   "hasDataTab": false,
+   "navText": "MissionSiteLandingCommunicationCompareGuide",
+   "toggleShown": true,
+   "menu": {
+    "tabs": [
+     "Mission",
+     "Site",
+     "Landing",
+     "Communication",
+     "Compare",
+     "Guide"
+    ],
+    "visible": 6,
+    "hasDataTab": false,
+    "navText": "MissionSiteLandingCommunicationCompareGuide",
+    "toggleShown": true
+   },
+   "result": "Pass"
+  }
+ ],
+ "data": [
+  {
+   "width": 1920,
+   "title": "Data and validation",
+   "panelLabel": "Data and validation",
+   "labelledby": null,
+   "reportRows": 450,
+   "focusableTabs": 1,
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 35123
+   },
+   "result": "Pass"
+  },
+  {
+   "width": 1440,
+   "title": "Data and validation",
+   "panelLabel": "Data and validation",
+   "labelledby": null,
+   "reportRows": 450,
+   "focusableTabs": 1,
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 35123
+   },
+   "result": "Pass"
+  },
+  {
+   "width": 1024,
+   "title": "Data and validation",
+   "panelLabel": "Data and validation",
+   "labelledby": null,
+   "reportRows": 450,
+   "focusableTabs": 1,
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 35123
+   },
+   "result": "Pass"
+  },
+  {
+   "width": 390,
+   "title": "Data and validation",
+   "panelLabel": "Data and validation",
+   "labelledby": null,
+   "reportRows": 450,
+   "focusableTabs": 1,
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 35123
+   },
+   "result": "Pass"
+  },
+  {
+   "width": 320,
+   "title": "Data and validation",
+   "panelLabel": "Data and validation",
+   "labelledby": null,
+   "reportRows": 450,
+   "focusableTabs": 1,
+   "layout": {
+    "hscroll": false,
+    "outside": [],
+    "clipped": [],
+    "overlaps": 0,
+    "cards": 0,
+    "emptyBoxes": 0,
+    "mainText": 35123
+   },
+   "result": "Pass"
+  }
+ ],
+ "console": [],
+ "summary": {
+  "pass": 40,
+  "total": 40,
+  "consoleErrors": 0
+ }
+}

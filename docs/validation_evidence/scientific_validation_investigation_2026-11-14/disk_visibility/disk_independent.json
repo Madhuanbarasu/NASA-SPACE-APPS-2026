@@ -1,0 +1,964 @@
+{
+ "cases": [
+  {
+   "case": "earth: fully visible (horizon 3 deg below the centre)",
+   "target": "earth",
+   "expect": "f=1",
+   "engine": {
+    "f": 1.0,
+    "c": 3.0,
+    "g_top": 3.9483376236518386,
+    "g_bot": 2.0517522990596575,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 1.0,
+    "g_top": 3.947422951587603,
+    "g_bot": 2.0525753921091736,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0012241722372069023,
+    "hits": 1890299,
+    "c": 3.0
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": true,
+    "full": true
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 0.0009146720642356776,
+    "g_bot_deg": 0.0008230930495161104,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": true,
+    "full": true
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: fully blocked (horizon 3 deg above the centre)",
+   "target": "earth",
+   "expect": "f=0",
+   "engine": {
+    "f": 0.0,
+    "c": -3.0,
+    "g_top": -2.051662376348161,
+    "g_bot": -3.948247700940342,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 0.0,
+    "g_top": -2.052577048412397,
+    "g_bot": -3.9474246078908264,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0012241722372069023,
+    "hits": 1890299,
+    "c": -3.0
+   },
+   "rules_engine": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 0.0009146720642361217,
+    "g_bot_deg": 0.0008230930495156663,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: half (flat horizon through the centre)",
+   "target": "earth",
+   "expect": "f~0.5",
+   "engine": {
+    "f": 0.4997821121946615,
+    "c": 0.0,
+    "g_top": 0.9483376236518385,
+    "g_bot": -0.9482477009403426,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 0.49972001563950774,
+    "g_top": 0.9480348702520516,
+    "g_bot": -0.9480352842915263,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0006120861186034511,
+    "hits": 7561374,
+    "f_coarse_grid": 0.4996235693581587,
+    "coarse_step_deg": 0.0012241722372069023,
+    "c": 0.0
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 6.209655515376777e-05,
+    "g_top_deg": 0.00030275339978691473,
+    "g_bot_deg": 0.00021241664881632705,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: partial, upper part visible (horizon half a radius above the centre)",
+   "target": "earth",
+   "expect": "0<f<0.5",
+   "engine": {
+    "f": 0.1948654366816232,
+    "c": -0.47499999999999964,
+    "g_top": 0.47333762365183946,
+    "g_bot": -1.4232477009403417,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 0.19481158357471018,
+    "g_top": 0.47303487025205193,
+    "g_bot": -1.423035284291526,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0006120861186034511,
+    "hits": 7561374,
+    "f_coarse_grid": 0.19470162721875428,
+    "coarse_step_deg": 0.0012241722372069023,
+    "c": -0.47499999999999964
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 5.385310691302658e-05,
+    "g_top_deg": 0.00030275339978752536,
+    "g_bot_deg": 0.00021241664881577194,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: crater wall (steep horizon, 0.8 deg per deg of azimuth, through the centre)",
+   "target": "earth",
+   "expect": "0<f<1",
+   "engine": {
+    "f": 0.49975506408485176,
+    "c": 7.105427357601002e-15,
+    "g_top": 1.220810752090221,
+    "g_bot": -1.2198515601519335,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 0.49975653160979616,
+    "g_top": 1.2207725457568985,
+    "g_bot": -1.219814734179547,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0006120861186034511,
+    "hits": 7561374,
+    "f_coarse_grid": 0.4997585091401614,
+    "coarse_step_deg": 0.0012241722372069023,
+    "c": 7.105427357601002e-15
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 1.4675249443985017e-06,
+    "g_top_deg": 3.82063333224103e-05,
+    "g_bot_deg": 3.6825972386633765e-05,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: jagged horizon (random nodes, sigma 0.6 deg, around the centre)",
+   "target": "earth",
+   "expect": "0<f<1",
+   "engine": {
+    "f": 0.6512012472345968,
+    "c": -0.47545852922958076,
+    "g_top": 2.6094967118709875,
+    "g_bot": -1.6996797003960051,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 0.65120028245267,
+    "g_top": 2.6047780688839968,
+    "g_bot": -1.6976870329919,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0006120861186034511,
+    "hits": 7561374,
+    "f_coarse_grid": 0.6512045023688757,
+    "coarse_step_deg": 0.0012241722372069023,
+    "c": -0.47545852922958076
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 9.64781926793279e-07,
+    "g_top_deg": 0.004718642986990762,
+    "g_bot_deg": 0.0019926674041050862,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: below the local horizontal but above a lower terrain horizon (peak site)",
+   "target": "earth",
+   "expect": "f=1 (no clipping at 0 deg)",
+   "engine": {
+    "f": 1.0,
+    "c": 2.2,
+    "g_top": 3.147974710957132,
+    "g_bot": 1.2520956481911376,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 1.0,
+    "g_top": 3.147422951587604,
+    "g_bot": 1.2525770484123957,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0012241722372069023,
+    "hits": 1889615,
+    "c": 2.2
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": true,
+    "full": true
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 0.0005517593695278933,
+    "g_bot_deg": 0.0004814002212580881,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": true,
+    "full": true
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: below the local horizontal and below the terrain horizon",
+   "target": "earth",
+   "expect": "f=0",
+   "engine": {
+    "f": 0.0,
+    "c": -2.0,
+    "g_top": -1.052123893125188,
+    "g_bot": -2.9478134703565284,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 0.0,
+    "g_top": -1.0525767785149673,
+    "g_bot": -2.9474229515876056,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0012241722372069023,
+    "hits": 1889449,
+    "c": -2.0
+   },
+   "rules_engine": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 0.0004528853897793894,
+    "g_bot_deg": 0.00039051876892282067,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: grazing, sliver visible (horizon 0.002 deg below the top edge)",
+   "target": "earth",
+   "expect": "any=True, f tiny, g_top ~ +0.002",
+   "engine": {
+    "f": 5.913954572370973e-05,
+    "c": -0.9463125405851915,
+    "g_top": 0.0020250830666466136,
+    "g_bot": -1.8945602415255345,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 3.649469971516645e-05,
+    "g_top": 0.0019999999999988916,
+    "g_bot": -1.893737148476018,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0012241722372069023,
+    "hits": 1890299,
+    "zoom_step_deg": 3.1690694763932606e-05,
+    "any_zoom": true,
+    "c": -0.9463125405851915
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 2.264484600854328e-05,
+    "g_top_deg": 2.5083066647722026e-05,
+    "g_bot_deg": 0.0008230930495165545,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: grazing, just hidden (horizon 0.002 deg above the top edge)",
+   "target": "earth",
+   "expect": "any=False, g_top ~ -0.002",
+   "engine": {
+    "f": 0.0,
+    "c": -0.9503125405851929,
+    "g_top": -0.0019749169333540917,
+    "g_bot": -1.8985602415255352,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 0.0,
+    "g_top": -0.0020000000000024443,
+    "g_bot": -1.8977371484760193,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0012241722372069023,
+    "hits": 1890299,
+    "zoom_step_deg": 3.1690694763932606e-05,
+    "any_zoom": false,
+    "c": -0.9503125405851929
+   },
+   "rules_engine": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 2.50830666483526e-05,
+    "g_bot_deg": 0.0008230930495158884,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "sun: fully visible (horizon 3 deg below the centre)",
+   "target": "sun",
+   "expect": "f=1",
+   "engine": {
+    "f": 1.0,
+    "c": 3.0,
+    "g_top": 3.2664493147161253,
+    "g_bot": 2.7335506852838756,
+    "unknown": false,
+    "method": "sphere-exact"
+   },
+   "independent": {
+    "f": 1.0,
+    "g_top": 3.2662096306539716,
+    "g_bot": 2.7337902265267395,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0003430561163276441,
+    "hits": 1895205,
+    "c": 3.0
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": true,
+    "full": true
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 0.00023968406215368887,
+    "g_bot_deg": 0.00023954124286396095,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": true,
+    "full": true
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "sun: fully blocked (horizon 3 deg above the centre)",
+   "target": "sun",
+   "expect": "f=0",
+   "engine": {
+    "f": 0.0,
+    "c": -3.0,
+    "g_top": -2.7335506852838747,
+    "g_bot": -3.2664493147161244,
+    "unknown": false,
+    "method": "sphere-exact"
+   },
+   "independent": {
+    "f": 0.0,
+    "g_top": -2.7337903693460284,
+    "g_bot": -3.2662097734732605,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0003430561163276441,
+    "hits": 1895205,
+    "c": -3.0
+   },
+   "rules_engine": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 0.00023968406215368887,
+    "g_bot_deg": 0.00023954124286396095,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "sun: half (flat horizon through the centre)",
+   "target": "sun",
+   "expect": "f~0.5",
+   "engine": {
+    "f": 0.4999306536329245,
+    "c": 0.0,
+    "g_top": 0.2664493147161249,
+    "g_bot": -0.2664493147161249,
+    "unknown": false,
+    "method": "sphere-exact"
+   },
+   "independent": {
+    "f": 0.4997950725609489,
+    "g_top": 0.26638115500691484,
+    "g_bot": -0.2663811977192454,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.00017152805816382204,
+    "hits": 7580773,
+    "f_coarse_grid": 0.49959027957260943,
+    "coarse_step_deg": 0.0003430561163276441,
+    "c": 0.0
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 0.00013558107197558789,
+    "g_top_deg": 6.815970921003611e-05,
+    "g_bot_deg": 6.811699687947481e-05,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "sun: partial, upper part visible (horizon half a radius above the centre)",
+   "target": "sun",
+   "expect": "0<f<0.5",
+   "engine": {
+    "f": 0.19592060027408076,
+    "c": -0.13299999999999912,
+    "g_top": 0.13344931471612645,
+    "g_bot": -0.39944931471612327,
+    "unknown": false,
+    "method": "sphere-exact"
+   },
+   "independent": {
+    "f": 0.19592322925488545,
+    "g_top": 0.13338115500691572,
+    "g_bot": -0.3993811977192445,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.00017152805816382204,
+    "hits": 7580773,
+    "f_coarse_grid": 0.1961058995994174,
+    "coarse_step_deg": 0.0003430561163276441,
+    "c": -0.13299999999999912
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 2.6289808046919827e-06,
+    "g_top_deg": 6.815970921073e-05,
+    "g_bot_deg": 6.811699687875317e-05,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "sun: crater wall (steep horizon, 0.8 deg per deg of azimuth, through the centre)",
+   "target": "sun",
+   "expect": "0<f<1",
+   "engine": {
+    "f": 0.4999247545156676,
+    "c": 7.105427357601002e-15,
+    "g_top": 0.34256885025019385,
+    "g_bot": -0.3425000788048079,
+    "unknown": false,
+    "method": "sphere-exact"
+   },
+   "independent": {
+    "f": 0.49992513981002634,
+    "g_top": 0.3425559420859132,
+    "g_bot": -0.34248743990457875,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.00017152805816382204,
+    "hits": 7580773,
+    "f_coarse_grid": 0.4999248105070278,
+    "coarse_step_deg": 0.0003430561163276441,
+    "c": 7.105427357601002e-15
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 3.852943587512314e-07,
+    "g_top_deg": 1.2908164280622803e-05,
+    "g_bot_deg": 1.263890022912273e-05,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "sun: jagged horizon (random nodes, sigma 0.6 deg, around the centre)",
+   "target": "sun",
+   "expect": "0<f<1",
+   "engine": {
+    "f": 0.6964167818526339,
+    "c": 0.22231259808892823,
+    "g_top": 0.8617936013344293,
+    "g_bot": -0.6432459662701503,
+    "unknown": false,
+    "method": "sphere-exact"
+   },
+   "independent": {
+    "f": 0.6964155476296694,
+    "g_top": 0.8616110551795915,
+    "g_bot": -0.6431444203187855,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.00017152805816382204,
+    "hits": 7580773,
+    "f_coarse_grid": 0.6964178255203809,
+    "coarse_step_deg": 0.0003430561163276441,
+    "c": 0.22231259808892823
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 1.2342229644968228e-06,
+    "g_top_deg": 0.0001825461548378149,
+    "g_bot_deg": 0.00010154595136480093,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "sun: below the local horizontal but above a lower terrain horizon (peak site)",
+   "target": "sun",
+   "expect": "f=1 (no clipping at 0 deg)",
+   "engine": {
+    "f": 1.0,
+    "c": 2.2,
+    "g_top": 2.4664493147140734,
+    "g_bot": 1.9335506852859266,
+    "unknown": false,
+    "method": "sphere-exact"
+   },
+   "independent": {
+    "f": 1.0,
+    "g_top": 2.466209631274182,
+    "g_bot": 1.933790369346028,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0003430561163276441,
+    "hits": 1895205,
+    "c": 2.2
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": true,
+    "full": true
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 0.00023968343989144714,
+    "g_bot_deg": 0.00023968406010155263,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": true,
+    "full": true
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "sun: below the local horizontal and below the terrain horizon",
+   "target": "sun",
+   "expect": "f=0",
+   "engine": {
+    "f": 0.0,
+    "c": -2.0,
+    "g_top": -1.7335506852859268,
+    "g_bot": -2.2664493147140736,
+    "unknown": false,
+    "method": "sphere-exact"
+   },
+   "independent": {
+    "f": 0.0,
+    "g_top": -1.733790319130204,
+    "g_bot": -2.2662096306539734,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0003430561163276441,
+    "hits": 1895205,
+    "c": -2.0
+   },
+   "rules_engine": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 0.00023963384427716505,
+    "g_bot_deg": 0.00023968406010022036,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "sun: grazing, sliver visible (horizon 0.002 deg below the top edge)",
+   "target": "sun",
+   "expect": "any=True, f tiny, g_top ~ +0.002",
+   "engine": {
+    "f": 0.00038975680825061943,
+    "c": -0.2644493147147955,
+    "g_top": 0.0020000000013290294,
+    "g_bot": -0.5308986294309207,
+    "unknown": false,
+    "method": "sphere-exact"
+   },
+   "independent": {
+    "f": 0.0004252769983379314,
+    "g_top": 0.001999990400076257,
+    "g_bot": -0.530659088188056,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0003430561163276441,
+    "hits": 1895205,
+    "zoom_step_deg": 8.881643849436938e-06,
+    "any_zoom": true,
+    "c": -0.2644493147147955
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 3.552019008731198e-05,
+    "g_top_deg": 9.60125277242943e-09,
+    "g_bot_deg": 0.0002395412428647381,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "sun: grazing, just hidden (horizon 0.002 deg above the top edge)",
+   "target": "sun",
+   "expect": "any=False, g_top ~ -0.002",
+   "engine": {
+    "f": 0.0,
+    "c": -0.2684493147147968,
+    "g_top": -0.001999999998671676,
+    "g_bot": -0.5348986294309214,
+    "unknown": false,
+    "method": "sphere-exact"
+   },
+   "independent": {
+    "f": 0.0,
+    "g_top": -0.002000009599925079,
+    "g_bot": -0.5346590881880573,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0003430561163276441,
+    "hits": 1895205,
+    "zoom_step_deg": 8.881643849436938e-06,
+    "any_zoom": false,
+    "c": -0.2684493147147968
+   },
+   "rules_engine": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 9.601253403001414e-09,
+    "g_bot_deg": 0.00023954124286407197,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: missing terrain over the disk, horizon (lower bound) through the centre",
+   "target": "earth",
+   "expect": "unknown (the visible part rests on incomplete bins)",
+   "engine": {
+    "f": NaN,
+    "c": 0.0,
+    "g_top": 0.9483376236518385,
+    "g_bot": -0.9482477009403426,
+    "unknown": true,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 0.4996235693581587,
+    "g_top": 0.9474229515876029,
+    "g_bot": -0.9474246078908264,
+    "touches_incomplete": true,
+    "grid_step_deg": 0.0012241722372069023,
+    "hits": 1890299,
+    "c": 0.0
+   },
+   "rules_engine": {
+    "any": null,
+    "centre": null,
+    "full": null
+   }
+  },
+  {
+   "case": "earth: missing terrain over the disk, lower bound already above the disk",
+   "target": "earth",
+   "expect": "hidden stands (a lower bound already blocks)",
+   "engine": {
+    "f": 0.0,
+    "c": -3.0,
+    "g_top": -2.051662376348161,
+    "g_bot": -3.948247700940342,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 0.0,
+    "g_top": -2.052577048412397,
+    "g_bot": -3.9474246078908264,
+    "touches_incomplete": true,
+    "grid_step_deg": 0.0012241722372069023,
+    "hits": 1890299,
+    "c": -3.0
+   },
+   "rules_engine": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 0.0,
+    "g_top_deg": 0.0009146720642361217,
+    "g_bot_deg": 0.0008230930495156663,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": false,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: perigee distance 356,500 km, partial",
+   "target": "earth",
+   "expect": "0<f<1",
+   "engine": {
+    "f": 0.31572776046490625,
+    "c": -0.3000000000000007,
+    "g_top": 0.7225668190982656,
+    "g_bot": -1.3224622707557891,
+    "unknown": false,
+    "method": "elliptical"
+   },
+   "independent": {
+    "f": 0.3157464143568061,
+    "g_top": 0.7222375497560023,
+    "g_bot": -1.3222380260226032,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0006600038918048458,
+    "hits": 7561353,
+    "f_coarse_grid": 0.3157062086374952,
+    "coarse_step_deg": 0.0013200077836096917,
+    "c": -0.3000000000000007
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 1.865389189986688e-05,
+    "g_top_deg": 0.0003292693422632942,
+    "g_bot_deg": 0.00022424473318594096,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": false,
+    "full": false
+   },
+   "rules_agree": true
+  },
+  {
+   "case": "earth: apogee 406,700 km, pole along the line of sight, partial",
+   "target": "earth",
+   "expect": "0<f<1",
+   "engine": {
+    "f": 0.773564583060518,
+    "c": 0.40000000000000036,
+    "g_top": 1.2985861540829025,
+    "g_bot": -0.4985861540829014,
+    "unknown": false,
+    "method": "cap"
+   },
+   "independent": {
+    "f": 0.7735937867339885,
+    "g_top": 1.298361154133847,
+    "g_bot": -0.4983615746634289,
+    "touches_incomplete": false,
+    "grid_step_deg": 0.0005785156341106623,
+    "hits": 7580733,
+    "f_coarse_grid": 0.773561646117473,
+    "coarse_step_deg": 0.0011570312682213247,
+    "c": 0.40000000000000036
+   },
+   "rules_engine": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "abs_diff": {
+    "f": 2.9203673470479252e-05,
+    "g_top_deg": 0.00022499994905555987,
+    "g_bot_deg": 0.0002245794194725148,
+    "c_deg": 0.0
+   },
+   "rules_independent": {
+    "any": true,
+    "centre": true,
+    "full": false
+   },
+   "rules_agree": true
+  }
+ ],
+ "worst": {
+  "df": 0.00013558107197558789,
+  "dg": 0.004718642986990762
+ },
+ "top_edges_deg": {
+  "earth": 8.948312540585192,
+  "sun": 8.266449314714796
+ }
+}

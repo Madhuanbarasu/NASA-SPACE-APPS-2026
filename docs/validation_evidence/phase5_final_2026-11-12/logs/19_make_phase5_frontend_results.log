@@ -1,0 +1,31 @@
+frontend_u04_phase5.json: U-04 passed
+frontend_u06_phase5.json: U-06 passed
+{
+ "each": {
+  "frontend_u04_phase5.json": {
+   "rejected_reasons": [],
+   "status_after": {
+    "U-04": "passed"
+   },
+   "status_in_live_report": {
+    "U-04": "passed"
+   }
+  },
+  "frontend_u06_phase5.json": {
+   "rejected_reasons": [],
+   "status_after": {
+    "U-06": "passed"
+   },
+   "status_in_live_report": {
+    "U-06": "passed"
+   }
+  }
+ },
+ "release_differs_only_by_added_text_files": true,
+ "added": [
+  "OFL.txt",
+  "THIRD_PARTY_NOTICES.txt"
+ ],
+ "report_sha256_unchanged": "2279606ceab9354b8616ba9216e12e89e399f34cfc3cbfcbd7502d12d077d376"
+}
+exit 0

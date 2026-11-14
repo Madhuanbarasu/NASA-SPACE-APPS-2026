@@ -1,0 +1,44 @@
+--- before/start.py
++++ after/start.py
+@@ -143,6 +143,10 @@
+     # it only adds /api/comms/* routes and reads completed engine analysis results.
+     from lunaops_comms.api import install as install_comms
+     install_comms(app)
++    # Pre-Phase 7 audit AUD-06: corrected hillshade map images (backend/lunaops_tiles, outside both fingerprints). It
++    # only adds /api/display/tiles/* routes; the engine's /api/tiles/meta and /api/tiles/* routes are unchanged.
++    from lunaops_tiles.api import install as install_tiles
++    install_tiles(app)
+ 
+     print("\n" + "=" * 60)
+     print(f"  LUNA-OPS is starting at  {url}")
+--- before/frontend/src/components/MapView.tsx
++++ after/frontend/src/components/MapView.tsx
+@@ -214,7 +214,7 @@
+             slow.add(key); composedTiles.add(key); remember();
+             compose(z, x, y).then(finish);
+           }, PATIENCE_MS) : 0;
+-          fetch(`/api/tiles/${key}.png`, { signal: ctrl.signal })
++          fetch(`/api/display/tiles/${key}.png`, { signal: ctrl.signal })
+             .then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.blob(); })
+             .then((b) => finish(b))
+             .catch(() => {
+@@ -245,7 +245,7 @@
+       };
+ 
+       const src = new TileImage({ projection: proj, tileGrid: grid,
+-        tileUrlFunction: (c) => `/api/tiles/${c[0]}/${c[1]}/${c[2]}.png`,
++        tileUrlFunction: (c) => `/api/display/tiles/${c[0]}/${c[1]}/${c[2]}.png`,
+         tileLoadFunction: (tile) => {
+           const [z, x, y] = tile.getTileCoord();
+           getTile(z, x, y).then((blob) => {
+--- before/frontend/src/components/LandingMap.tsx
++++ after/frontend/src/components/LandingMap.tsx
+@@ -154,7 +154,7 @@
+       if (disposed || !meta.available) { setTileNote(S.landing.map.noBackdrop); return; }
+       const grid = new TileGrid({ origin: meta.origin, resolutions: meta.resolutions, tileSize: meta.tile_size, extent: meta.extent });
+       const src = new TileImage({ projection: proj, tileGrid: grid, transition: 0,
+-        tileUrlFunction: (c) => (c ? `/api/tiles/${c[0]}/${c[1]}/${c[2]}.png` : undefined) });
++        tileUrlFunction: (c) => (c ? `/api/display/tiles/${c[0]}/${c[1]}/${c[2]}.png` : undefined) });
+       // only fine tiles are requested: coarse tiles that contain the 5 m product render slowly on the server (MapView notes)
+       map.getLayers().insertAt(0, new TileLayer({ source: src, maxResolution: 300, opacity: 0.9 }));
+     }).catch(() => setTileNote(S.landing.map.noBackdrop));

@@ -1,0 +1,139 @@
+================================================================================
+Phase 4 A6: Benchmark-Location Terrain Discrepancy Evaluation (Command A)
+Timestamp (UTC): 2026-11-10T16:23:38.806339Z
+Algorithm Version: 1.5.0
+Engine Function: lunaops.engine.horizon.cross_product_discrepancy
+================================================================================
+
+Registered Non-Synthetic Terrain Products:
+  - 5m   : pgda78_site01/Site01_final_adj_5mpp_surf.tif (40,980,810 bytes, sha256=3ba7b97cb00a2bcf...)
+  - 20m  : pgda90_20m/LDEM_80S_20MPP_ADJ.TIF (2,696,082,051 bytes, sha256=09b7ca80f9e6a146...)
+  - 80m  : pgda90_80m/LDEM_80S_80MPP_ADJ.tiff (189,158,392 bytes, sha256=82030dcbdd7c4bb0...)
+  - 240m : pgda90_240m/LDEM_60S_240MPP_ADJ.TIF (218,961,039 bytes, sha256=3f9663257b63022f...)
+
+--------------------------------------------------------------------------------
+Location: Site01 (Connecting Ridge)
+Coordinates: lat=-89.463163 deg, lon=+222.510447 deg
+Available pyramid levels loaded: ['5m', '20m', '80m', '240m']
+
+  5m   vs 20m  : status=MEASURED | n= 40000 pairs (stride=16px) | mean= -0.0629 m | std= 0.5230 m | RMS allowance= 0.5267 m
+  5m   vs 80m  : status=MEASURED | n= 40000 pairs (stride=16px) | mean= -0.0532 m | std= 1.2227 m | RMS allowance= 1.2239 m
+  5m   vs 240m : status=MEASURED | n=  4489 pairs (stride=48px) | mean= +0.1504 m | std= 4.3110 m | RMS allowance= 4.3136 m
+  20m  vs 80m  : status=MEASURED | n= 27889 pairs (stride=24px) | mean= -0.0251 m | std= 1.1052 m | RMS allowance= 1.1054 m
+  20m  vs 240m : status=MEASURED | n= 27889 pairs (stride=24px) | mean= -0.0307 m | std= 2.7352 m | RMS allowance= 2.7354 m
+  80m  vs 240m : status=MEASURED | n= 36100 pairs (stride=33px) | mean= -0.0000 m | std= 2.6199 m | RMS allowance= 2.6199 m
+
+--------------------------------------------------------------------------------
+Location: South Pole
+Coordinates: lat=-90.000000 deg, lon=+0.000000 deg
+Available pyramid levels loaded: ['5m', '20m', '80m', '240m']
+
+  5m   vs 20m  : status=MEASURED | n= 12625 pairs (stride=8px) | mean= -0.0061 m | std= 0.4481 m | RMS allowance= 0.4481 m
+  5m   vs 80m  : status=MEASURED | n=  3213 pairs (stride=16px) | mean= -0.3967 m | std= 1.1566 m | RMS allowance= 1.2228 m
+  5m   vs 240m : status=MEASURED | n=   357 pairs (stride=48px) | mean= -0.6303 m | std= 2.5240 m | RMS allowance= 2.6015 m
+  20m  vs 80m  : status=MEASURED | n= 27889 pairs (stride=24px) | mean= -0.0460 m | std= 1.2350 m | RMS allowance= 1.2359 m
+  20m  vs 240m : status=MEASURED | n= 27889 pairs (stride=24px) | mean= -0.0327 m | std= 2.7313 m | RMS allowance= 2.7315 m
+  80m  vs 240m : status=MEASURED | n= 36100 pairs (stride=33px) | mean= -0.0090 m | std= 1.3968 m | RMS allowance= 1.3968 m
+
+--------------------------------------------------------------------------------
+Location: Malapert Mountain
+Coordinates: lat=-85.990000 deg, lon=+2.930000 deg
+Available pyramid levels loaded: ['20m', '80m', '240m']
+
+  5m   vs 20m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 80m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 240m : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  20m  vs 80m  : status=MEASURED | n= 27889 pairs (stride=24px) | mean= -0.0269 m | std= 0.8218 m | RMS allowance= 0.8222 m
+  20m  vs 240m : status=MEASURED | n= 27889 pairs (stride=24px) | mean= -0.0702 m | std= 3.7367 m | RMS allowance= 3.7373 m
+  80m  vs 240m : status=MEASURED | n= 37829 pairs (stride=30px) | mean= +0.0111 m | std= 2.6894 m | RMS allowance= 2.6894 m
+
+--------------------------------------------------------------------------------
+Location: Nobile Rim
+Coordinates: lat=-85.200000 deg, lon=+53.500000 deg
+Available pyramid levels loaded: ['20m', '80m', '240m']
+
+  5m   vs 20m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 80m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 240m : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  20m  vs 80m  : status=MEASURED | n= 27889 pairs (stride=24px) | mean= -0.0074 m | std= 0.8766 m | RMS allowance= 0.8766 m
+  20m  vs 240m : status=MEASURED | n= 27889 pairs (stride=24px) | mean= +0.0116 m | std= 3.0580 m | RMS allowance= 3.0580 m
+  80m  vs 240m : status=MEASURED | n= 35685 pairs (stride=30px) | mean= +0.0180 m | std= 2.6491 m | RMS allowance= 2.6492 m
+
+--------------------------------------------------------------------------------
+Location: Boundary 80.5S (0 deg)
+Coordinates: lat=-80.500000 deg, lon=+0.000000 deg
+Available pyramid levels loaded: ['20m', '80m', '240m']
+
+  5m   vs 20m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 80m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 240m : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  20m  vs 80m  : status=MEASURED | n= 27738 pairs (stride=20px) | mean= +0.0092 m | std= 1.1947 m | RMS allowance= 1.1947 m
+  20m  vs 240m : status=MEASURED | n= 19372 pairs (stride=24px) | mean= -0.0122 m | std= 2.9784 m | RMS allowance= 2.9784 m
+  80m  vs 240m : status=MEASURED | n= 36279 pairs (stride=24px) | mean= +0.0082 m | std= 1.4295 m | RMS allowance= 1.4295 m
+
+--------------------------------------------------------------------------------
+Location: Boundary 80.5S (90 deg)
+Coordinates: lat=-80.500000 deg, lon=+90.000000 deg
+Available pyramid levels loaded: ['20m', '80m', '240m']
+
+  5m   vs 20m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 80m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 240m : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  20m  vs 80m  : status=MEASURED | n= 27939 pairs (stride=20px) | mean= +0.0162 m | std= 1.1394 m | RMS allowance= 1.1395 m
+  20m  vs 240m : status=MEASURED | n= 19372 pairs (stride=24px) | mean= +0.0059 m | std= 2.4686 m | RMS allowance= 2.4687 m
+  80m  vs 240m : status=MEASURED | n= 36279 pairs (stride=24px) | mean= -0.0004 m | std= 1.4536 m | RMS allowance= 1.4536 m
+
+--------------------------------------------------------------------------------
+Location: Boundary 80.5S (180 deg)
+Coordinates: lat=-80.500000 deg, lon=+180.000000 deg
+Available pyramid levels loaded: ['20m', '80m', '240m']
+
+  5m   vs 20m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 80m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 240m : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  20m  vs 80m  : status=MEASURED | n= 27939 pairs (stride=20px) | mean= +0.0093 m | std= 1.0620 m | RMS allowance= 1.0620 m
+  20m  vs 240m : status=MEASURED | n= 19372 pairs (stride=24px) | mean= +0.0188 m | std= 2.4767 m | RMS allowance= 2.4768 m
+  80m  vs 240m : status=MEASURED | n= 36279 pairs (stride=24px) | mean= -0.0036 m | std= 1.3489 m | RMS allowance= 1.3489 m
+
+--------------------------------------------------------------------------------
+Location: Boundary 80.5S (270 deg)
+Coordinates: lat=-80.500000 deg, lon=+270.000000 deg
+Available pyramid levels loaded: ['20m', '80m', '240m']
+
+  5m   vs 20m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 80m  : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  5m   vs 240m : UNAVAILABLE (level(s) 5m outside geographic coverage)
+  20m  vs 80m  : status=MEASURED | n= 27738 pairs (stride=20px) | mean= +0.0061 m | std= 1.0352 m | RMS allowance= 1.0353 m
+  20m  vs 240m : status=MEASURED | n= 19372 pairs (stride=24px) | mean= -0.0313 m | std= 2.7961 m | RMS allowance= 2.7963 m
+  80m  vs 240m : status=MEASURED | n= 36279 pairs (stride=24px) | mean= -0.0020 m | std= 1.3028 m | RMS allowance= 1.3028 m
+
+================================================================================
+Summary of 240 m Cross-Product Discrepancy Allowances across Benchmark Locations:
+================================================================================
+Location                       | Pair         |      n |  Mean (m) |  Std (m) |  RMS (m) | Status    
+-----------------------------------------------------------------------------------------------
+Site01 (Connecting Ridge)      | 5m vs 240m   |   4489 |   +0.1504 |   4.3110 |   4.3136 | MEASURED
+Site01 (Connecting Ridge)      | 20m vs 240m  |  27889 |   -0.0307 |   2.7352 |   2.7354 | MEASURED
+Site01 (Connecting Ridge)      | 80m vs 240m  |  36100 |   -0.0000 |   2.6199 |   2.6199 | MEASURED
+South Pole                     | 5m vs 240m   |    357 |   -0.6303 |   2.5240 |   2.6015 | MEASURED
+South Pole                     | 20m vs 240m  |  27889 |   -0.0327 |   2.7313 |   2.7315 | MEASURED
+South Pole                     | 80m vs 240m  |  36100 |   -0.0090 |   1.3968 |   1.3968 | MEASURED
+Malapert Mountain              | 5m vs 240m   |      - |         - |        - |        - | UNAVAIL
+Malapert Mountain              | 20m vs 240m  |  27889 |   -0.0702 |   3.7367 |   3.7373 | MEASURED
+Malapert Mountain              | 80m vs 240m  |  37829 |   +0.0111 |   2.6894 |   2.6894 | MEASURED
+Nobile Rim                     | 5m vs 240m   |      - |         - |        - |        - | UNAVAIL
+Nobile Rim                     | 20m vs 240m  |  27889 |   +0.0116 |   3.0580 |   3.0580 | MEASURED
+Nobile Rim                     | 80m vs 240m  |  35685 |   +0.0180 |   2.6491 |   2.6492 | MEASURED
+Boundary 80.5S (0 deg)         | 5m vs 240m   |      - |         - |        - |        - | UNAVAIL
+Boundary 80.5S (0 deg)         | 20m vs 240m  |  19372 |   -0.0122 |   2.9784 |   2.9784 | MEASURED
+Boundary 80.5S (0 deg)         | 80m vs 240m  |  36279 |   +0.0082 |   1.4295 |   1.4295 | MEASURED
+Boundary 80.5S (90 deg)        | 5m vs 240m   |      - |         - |        - |        - | UNAVAIL
+Boundary 80.5S (90 deg)        | 20m vs 240m  |  19372 |   +0.0059 |   2.4686 |   2.4687 | MEASURED
+Boundary 80.5S (90 deg)        | 80m vs 240m  |  36279 |   -0.0004 |   1.4536 |   1.4536 | MEASURED
+Boundary 80.5S (180 deg)       | 5m vs 240m   |      - |         - |        - |        - | UNAVAIL
+Boundary 80.5S (180 deg)       | 20m vs 240m  |  19372 |   +0.0188 |   2.4767 |   2.4768 | MEASURED
+Boundary 80.5S (180 deg)       | 80m vs 240m  |  36279 |   -0.0036 |   1.3489 |   1.3489 | MEASURED
+Boundary 80.5S (270 deg)       | 5m vs 240m   |      - |         - |        - |        - | UNAVAIL
+Boundary 80.5S (270 deg)       | 20m vs 240m  |  19372 |   -0.0313 |   2.7961 |   2.7963 | MEASURED
+Boundary 80.5S (270 deg)       | 80m vs 240m  |  36279 |   -0.0020 |   1.3028 |   1.3028 | MEASURED
+================================================================================

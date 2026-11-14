@@ -1,0 +1,6 @@
+5717f37059660ca5c899bad6c48ee22c3ac55cb3c484055241689d0f905a1a86 *dist/assets/archivo-latin-ext-wdth-normal-7khWdh9v.woff2
+e3a28eade21a900c7155a247757f4b2834c07bb7ef07ad7efa55cebaac1e8f5e *dist/assets/archivo-latin-wdth-normal-DY7AcnAa.woff2
+332e6f66de84927cdffc60894e4e186ced783f5cb4b3e88200f45b7c1d306810 *dist/assets/archivo-vietnamese-wdth-normal-rJmnGBSt.woff2
+9232b2c7d46e7d744ddcdc84c297e16e86d3c4837116d836bb281f9ace885837 *dist/assets/index-CcKT-KMO.css
+1d2558d4bfeab57811eb5886a16313db413b633248339ddeafaa28522cdf49da *dist/assets/index-CqY6vjX6.js
+a956177afff9350148e11918d0a86f3e0ff4ac916abfb2811deb298343a0fe13 *dist/index.html

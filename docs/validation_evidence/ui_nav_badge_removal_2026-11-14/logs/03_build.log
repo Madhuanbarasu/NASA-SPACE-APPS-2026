@@ -1,0 +1,9 @@
+
+> luna-ops-frontend@0.1.0 build
+> tsc --noEmit -p . && node scripts/check-strings.mjs && node scripts/check-a11y.mjs && vite build
+
+unused-key  dictionary key 'mission.labelsNow' is never referenced
+unused-key  dictionary key 'mission.labelsNote' is never referenced
+unused-key  dictionary key 'mission.colLabels' is never referenced
+unused-key  dictionary key 'mission.labelsByQuantity' is never referenced
+check-strings: 1372 keys, 1368 referenced, 53 files scanned, 7 allow-listed literals, 4 problem(s)

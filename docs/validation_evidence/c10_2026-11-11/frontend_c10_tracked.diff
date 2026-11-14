@@ -1,0 +1,1390 @@
+diff --git a/frontend/package.json b/frontend/package.json
+index 126c728..d8a69e5 100644
+--- a/frontend/package.json
++++ b/frontend/package.json
+@@ -5,8 +5,11 @@
+   "type": "module",
+   "scripts": {
+     "dev": "vite",
+-    "build": "tsc --noEmit -p . && vite build",
+-    "preview": "vite preview"
++    "build": "tsc --noEmit -p . && node scripts/check-strings.mjs && vite build",
++    "preview": "vite preview",
++    "typecheck": "tsc --noEmit -p .",
++    "check:strings": "node scripts/check-strings.mjs",
++    "test": "node scripts/check-strings.mjs --self-test && node scripts/check-strings.mjs"
+   },
+   "dependencies": {
+     "@fontsource-variable/archivo": "5.3.0",
+diff --git a/frontend/src/api/client.ts b/frontend/src/api/client.ts
+index 33b9a29..75c6d5e 100644
+--- a/frontend/src/api/client.ts
++++ b/frontend/src/api/client.ts
+@@ -1,3 +1,4 @@
++import { S } from "../i18n";
+ import type { CatalogSite, Comparison, Job, Result, Status, TerrainGrid } from "./types";
+ 
+ async function req<T>(url: string, init?: RequestInit): Promise<T> {
+@@ -29,7 +30,7 @@ export const api = {
+ 
+ export async function waitForJob(id: string, onProgress: (j: Job) => void, signal?: AbortSignal): Promise<Job> {
+   for (;;) {
+-    if (signal?.aborted) throw new Error("Cancelled");
++    if (signal?.aborted) throw new Error(S.errors.cancelled);
+     const j = await api.job(id);
+     onProgress(j);
+     if (j.status === "done" || j.status === "error") return j;
+diff --git a/frontend/src/components/CompareView.tsx b/frontend/src/components/CompareView.tsx
+index 9d7ea2e..aacd226 100644
+--- a/frontend/src/components/CompareView.tsx
++++ b/frontend/src/components/CompareView.tsx
+@@ -1,19 +1,22 @@
+ import { useMemo } from "react";
+ import type { CompareCell } from "../api/types";
++import { S } from "../i18n";
+ import { RULE_NAMES, fmtDuration, fmtNum, fmtPct, fmtUTC, fromInputValue, isoNoMs, toInputValue } from "../lib/format";
+ import { useStore } from "../state/store";
+ 
+ const SYNODIC_DAYS = 29.530589; // mean synodic month, used only to suggest the next window's dates
++const T = S.compare;
++const M = T.metrics;
+ 
+ const METRICS: { id: string; label: string; get: (c: CompareCell, sr: string, dr: string, pm: string) => number | null;
+                  fmt: (v: number | null) => string; higherIsBetter: boolean }[] = [
+-  { id: "sunlit", label: "Sunlit time", get: (c, sr) => c.summary?.[`sun_${sr}`]?.percent ?? null, fmt: (v) => fmtPct(v), higherIsBetter: true },
+-  { id: "dark", label: "Longest darkness", get: (c, sr) => c.summary?.[`sun_${sr}`]?.longest_gap_h ?? null, fmt: fmtDuration, higherIsBetter: false },
+-  { id: "dte", label: "Earth in view", get: (c, _s, dr) => c.summary?.[`earth_${dr}`]?.percent ?? null, fmt: (v) => fmtPct(v), higherIsBetter: true },
+-  { id: "dtegap", label: "Longest Earth gap", get: (c, _s, dr) => c.summary?.[`earth_${dr}`]?.longest_gap_h ?? null, fmt: fmtDuration, higherIsBetter: false },
+-  { id: "overlap", label: "Sunlit and Earth in view", get: (c) => c.summary?.overlap?.percent ?? null, fmt: (v) => fmtPct(v), higherIsBetter: true },
+-  { id: "power", label: "Power indicator (mean)", get: (c, _s, _d, pm) => c.summary?.power?.[pm]?.mean ?? null, fmt: (v) => fmtNum(v, 3), higherIsBetter: true },
+-  { id: "efsh", label: "Equivalent full-Sun", get: (c, _s, _d, pm) => c.summary?.power?.[pm]?.equivalent_full_sun_h ?? null, fmt: fmtDuration, higherIsBetter: true },
++  { id: "sunlit", label: M.sunlit, get: (c, sr) => c.summary?.[`sun_${sr}`]?.percent ?? null, fmt: (v) => fmtPct(v), higherIsBetter: true },
++  { id: "dark", label: M.dark, get: (c, sr) => c.summary?.[`sun_${sr}`]?.longest_gap_h ?? null, fmt: fmtDuration, higherIsBetter: false },
++  { id: "dte", label: M.dte, get: (c, _s, dr) => c.summary?.[`earth_${dr}`]?.percent ?? null, fmt: (v) => fmtPct(v), higherIsBetter: true },
++  { id: "dtegap", label: M.dtegap, get: (c, _s, dr) => c.summary?.[`earth_${dr}`]?.longest_gap_h ?? null, fmt: fmtDuration, higherIsBetter: false },
++  { id: "overlap", label: M.overlap, get: (c) => c.summary?.overlap?.percent ?? null, fmt: (v) => fmtPct(v), higherIsBetter: true },
++  { id: "power", label: M.power, get: (c, _s, _d, pm) => c.summary?.power?.[pm]?.mean ?? null, fmt: (v) => fmtNum(v, 3), higherIsBetter: true },
++  { id: "efsh", label: M.efsh, get: (c, _s, _d, pm) => c.summary?.power?.[pm]?.equivalent_full_sun_h ?? null, fmt: fmtDuration, higherIsBetter: true },
+ ];
+ 
+ export function CompareView() {
+@@ -23,13 +26,13 @@ export function CompareView() {
+   const wins = state.compareWindows;
+   const setWins = (w: typeof wins) => dispatch({ type: "compareWindows", windows: w });
+ 
+-  const addCurrentWindow = () => setWins([...wins, { start: s.start, end: s.end, label: `Window ${wins.length + 1}` }]);
++  const addCurrentWindow = () => setWins([...wins, { start: s.start, end: s.end, label: T.windowLabel(wins.length + 1) }]);
+   const addNextMonth = () => {
+     const base = wins.length ? wins[wins.length - 1] : { start: s.start, end: s.end };
+     const shift = SYNODIC_DAYS * 86400_000;
+     const st = new Date(new Date(base.start).getTime() + shift);
+     const en = new Date(new Date(base.end).getTime() + shift);
+-    setWins([...wins, { start: isoNoMs(st), end: isoNoMs(en), label: `Window ${wins.length + 1}` }]);
++    setWins([...wins, { start: isoNoMs(st), end: isoNoMs(en), label: T.windowLabel(wins.length + 1) }]);
+   };
+   const metric = METRICS.find((m) => m.id === state.compareMetric) ?? METRICS[0];
+   const cmp = state.comparison;
+@@ -56,83 +59,82 @@ export function CompareView() {
+     <div>
+       <div className="site-header">
+         <div>
+-          <h1 className="site-title">Compare sites and dates</h1>
+-          <div className="site-coords">Every cell is the full single-site result for that site and window. Rules: sunlit means
+-            {" "}{RULE_NAMES[s.sunlitRule].toLowerCase()}, Earth in view means {RULE_NAMES[s.dteRule].toLowerCase()}.</div>
++          <h1 className="site-title">{T.title}</h1>
++          <div className="site-coords">{T.intro(RULE_NAMES[s.sunlitRule].toLowerCase(), RULE_NAMES[s.dteRule].toLowerCase())}</div>
+         </div>
+       </div>
+       <div className="compare-builder">
+         <section>
+-          <h2 style={{ fontSize: 15, margin: "0 0 8px" }}>Sites ({sites.length})</h2>
+-          {sites.length === 0 && <p className="empty-note">Add sites with "Add to comparison" in the left panel, or from the curated list below.</p>}
++          <h2 style={{ fontSize: 15, margin: "0 0 8px" }}>{T.sitesHeading(sites.length)}</h2>
++          {sites.length === 0 && <p className="empty-note">{T.noSites(S.sidebar.addToCompare)}</p>}
+           <ul className="list-edit">
+             {sites.map((x, k) => (
+-              <li key={k}><span>{x.name} <span className="hint">{x.lat.toFixed(4)}°, {x.lon.toFixed(4)}°</span></span>
++              <li key={k}><span>{x.name} <span className="hint">{S.format.coordPair(x.lat.toFixed(4), x.lon.toFixed(4))}</span></span>
+                 <button className="quiet-button" onClick={() => dispatch({ type: "compareSites", sites: sites.filter((_, j) => j !== k) })}
+-                        aria-label={`Remove ${x.name}`}>Remove</button></li>
++                        aria-label={T.removeSite(x.name)}>{S.common.remove}</button></li>
+             ))}
+           </ul>
+           {state.catalog.length > 0 && (
+             <details>
+-              <summary className="hint" style={{ cursor: "pointer" }}>Add curated sites</summary>
++              <summary className="hint" style={{ cursor: "pointer" }}>{T.addCurated}</summary>
+               <ul className="list-edit" style={{ marginTop: 8 }}>
+                 {state.catalog.map((c) => (
+                   <li key={c.id}><span>{c.name}</span>
+                     <button className="quiet-button" disabled={sites.some((x) => x.id === c.id)}
+-                            onClick={() => dispatch({ type: "compareSites", sites: [...sites, { lat: c.lat, lon: c.lon, name: c.name, id: c.id }] })}>Add</button></li>
++                            onClick={() => dispatch({ type: "compareSites", sites: [...sites, { lat: c.lat, lon: c.lon, name: c.name, id: c.id }] })}>{S.common.add}</button></li>
+                 ))}
+               </ul>
+             </details>
+           )}
+         </section>
+         <section>
+-          <h2 style={{ fontSize: 15, margin: "0 0 8px" }}>Date windows ({wins.length})</h2>
++          <h2 style={{ fontSize: 15, margin: "0 0 8px" }}>{T.windowsHeading(wins.length)}</h2>
+           <ul className="list-edit">
+             {wins.map((w, k) => (
+               <li key={k} style={{ flexWrap: "wrap" }}>
+-                <input type="datetime-local" aria-label={`Window ${k + 1} start`} value={toInputValue(w.start)} style={{ width: "auto", flex: 1 }}
++                <input type="datetime-local" aria-label={T.windowStart(k + 1)} value={toInputValue(w.start)} style={{ width: "auto", flex: 1 }}
+                        onChange={(e) => setWins(wins.map((x, j) => (j === k ? { ...x, start: fromInputValue(e.target.value) } : x)))} />
+-                <input type="datetime-local" aria-label={`Window ${k + 1} end`} value={toInputValue(w.end)} style={{ width: "auto", flex: 1 }}
++                <input type="datetime-local" aria-label={T.windowEnd(k + 1)} value={toInputValue(w.end)} style={{ width: "auto", flex: 1 }}
+                        onChange={(e) => setWins(wins.map((x, j) => (j === k ? { ...x, end: fromInputValue(e.target.value) } : x)))} />
+-                <button className="quiet-button" onClick={() => setWins(wins.filter((_, j) => j !== k))} aria-label={`Remove window ${k + 1}`}>Remove</button>
++                <button className="quiet-button" onClick={() => setWins(wins.filter((_, j) => j !== k))} aria-label={T.removeWindow(k + 1)}>{S.common.remove}</button>
+               </li>
+             ))}
+           </ul>
+           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+-            <button className="quiet-button" onClick={addCurrentWindow}>Add the panel's dates</button>
+-            <button className="quiet-button" onClick={addNextMonth}>Add one synodic month later</button>
++            <button className="quiet-button" onClick={addCurrentWindow}>{T.addPanelDates}</button>
++            <button className="quiet-button" onClick={addNextMonth}>{T.addNextMonth}</button>
+           </div>
+         </section>
+       </div>
+       <div style={{ padding: "16px 24px 0", display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
+         <button className="run-button" style={{ width: "auto", marginTop: 0 }} disabled={!sites.length || !wins.length || busy}
+-                onClick={() => runComparison()}>{busy ? "Comparing" : `Compare ${sites.length} × ${wins.length}`}</button>
+-        <span className="hint">{target ? "Meets the team target of at least 4 sites × 3 windows (C01)." : "Team target: at least 4 sites × 3 windows (C01)."}</span>
++                onClick={() => runComparison()}>{busy ? T.comparing : T.run(sites.length, wins.length)}</button>
++        <span className="hint">{target ? T.targetMet : T.target}</span>
+         {state.compareJob && <span className="hint" aria-live="polite">{state.compareJob.message}</span>}
+         {state.compareError && <span className="hint bad" role="alert">{state.compareError}</span>}
+       </div>
+ 
+       {cmp && (
+-        <section className="section" aria-label="Comparison matrix">
++        <section className="section" aria-label={T.matrixRegion}>
+           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 10 }}>
+-            <div className="segmented" role="group" aria-label="Metric" style={{ maxWidth: 820 }}>
++            <div className="segmented" role="group" aria-label={T.metricLabel} style={{ maxWidth: 820 }}>
+               {METRICS.map((m) => (
+                 <button key={m.id} aria-pressed={metric.id === m.id} onClick={() => dispatch({ type: "compareMetric", metric: m.id })}>{m.label}</button>
+               ))}
+             </div>
+-            <a className="quiet-button" href={`/api/compare/${cmp.id}/compare.csv`} download>Comparison CSV</a>
++            <a className="quiet-button" href={`/api/compare/${cmp.id}/compare.csv`} download>{T.csv}</a>
+           </div>
+           <div style={{ overflowX: "auto" }}>
+             <table className="matrix">
+-              <caption className="sr-only">{metric.label} for each site and window</caption>
++              <caption className="sr-only">{T.caption(metric.label)}</caption>
+               <thead>
+-                <tr><th scope="col">Site</th>
+-                  {cmp.windows.map((w: any, k: number) => <th key={k} scope="col">{fmtUTC(w.start_utc)}<br />to {fmtUTC(w.end_utc)}</th>)}</tr>
++                <tr><th scope="col">{T.siteColumn}</th>
++                  {cmp.windows.map((w: any, k: number) => <th key={k} scope="col">{fmtUTC(w.start_utc)}<br />{T.windowTo(fmtUTC(w.end_utc))}</th>)}</tr>
+               </thead>
+               <tbody>
+                 {cmp.sites.map((site: any, si: number) => (
+                   <tr key={si}>
+-                    <th scope="row">{site.name ?? `${site.lat.toFixed(3)}, ${site.lon.toFixed(3)}`}</th>
++                    <th scope="row">{site.name ?? T.siteCoords(site.lat.toFixed(3), site.lon.toFixed(3))}</th>
+                     {cmp.windows.map((_w: any, wi: number) => {
+                       const cell = cmp.cells[si * cmp.windows.length + wi];
+                       const v = cell ? metric.get(cell, sr, dr, pm) : null;
+@@ -140,9 +142,9 @@ export function CompareView() {
+                         <td key={wi} style={{ background: shade(v) }} tabIndex={0}
+                             onClick={() => cell?.result_id && openResult(cell.result_id)}
+                             onKeyDown={(e) => { if (e.key === "Enter" && cell?.result_id) openResult(cell.result_id); }}
+-                            aria-label={`${site.name ?? "site"}, window ${wi + 1}: ${cell?.error ? cell.error : metric.fmt(v)}. Press Enter to open.`}>
++                            aria-label={T.cellLabel(site.name, wi + 1, cell?.error ? cell.error : metric.fmt(v))}>
+                           {cell?.error ? <span className="cell-sub" style={{ color: "var(--alert)" }}>{cell.error}</span> : metric.fmt(v)}
+-                          {cell && !cell.error && <span className="cell-sub">open full result</span>}
++                          {cell && !cell.error && <span className="cell-sub">{T.openResult}</span>}
+                         </td>
+                       );
+                     })}
+@@ -151,7 +153,7 @@ export function CompareView() {
+               </tbody>
+             </table>
+           </div>
+-          <p className="hint">Shading runs from worst (light) to best (strong) for the chosen metric within this table.</p>
++          <p className="hint">{T.shadingHint}</p>
+         </section>
+       )}
+       <div className="footer-space" />
+diff --git a/frontend/src/components/DataView.tsx b/frontend/src/components/DataView.tsx
+index d6991b0..2e6e897 100644
+--- a/frontend/src/components/DataView.tsx
++++ b/frontend/src/components/DataView.tsx
+@@ -1,90 +1,76 @@
++import { S, rich } from "../i18n";
+ import { useStore } from "../state/store";
+ 
+-const TEST_NAMES: Record<string, string> = {
+-  "V-01": "UTC to TDB round trip", "V-02a": "Lunar frame definitions", "V-02b": "Rotation matrices",
+-  "V-02c": "Transformation direction", "V-02d": "Site coordinate round trip", "V-02e": "DE421/DE440 residual",
+-  "V-03": "Az/el vs SPICE AZLCPO", "V-04": "Sun and Earth vs JPL Horizons", "V-05": "Rise and set vs Horizons",
+-  "V-06": "Analytic horizons", "V-07": "Horizon convergence", "V-08": "Disk integrator", "V-08b": "Power indicator",
+-  "V-09": "LOLA average illumination", "V-10": "LOLA average Earth visibility", "V-11": "Permanent shadow",
+-  "V-12": "LROC observed illumination", "V-13": "Eclipses", "V-14": "Event detection",
+-  "U-01": "Coordinate input", "U-02": "Date input", "U-03": "Comparison consistency", "U-04": "Accessibility",
+-  "U-05": "Provenance and reproducibility", "U-06": "Performance", "U-07": "Visualization consistency",
+-};
+-
+-const ATTRIBUTION: [string, string][] = [
+-  ["LOLA large-area DEMs (PGDA 90)", "Barker et al. 2023, PSJ 4, 183, doi:10.3847/PSJ/acf3e1; data doi:10.60903/gsfcpgda-lola-spole"],
+-  ["LOLA 5 m mosaic and site DEMs (PGDA 81, 78)", "Barker et al. 2021, PSS 203, 105119, doi:10.1016/j.pss.2020.105119"],
+-  ["LOLA illumination maps (PGDA 69)", "Mazarico et al. 2011, Icarus 211, 1066-1081, doi:10.1016/j.icarus.2010.10.030"],
+-  ["SPICE toolkit and kernels", "NASA's SPICE system, NAIF (JPL); DE440: Park et al. 2021, AJ 161, 105"],
+-  ["Artemis III region extents", "McClernan 2024, USGS data release (extents sourced from LROC QuickMap; not an official NASA boundary)"],
+-  ["LROC imagery (if registered)", "NASA/GSFC/Arizona State University; PDS products only"],
+-];
++const D = S.data;
++const TEST_NAMES: Record<string, string> = D.testNames;
+ 
+ export function DataView() {
+   const { state } = useStore();
+   const st = state.status;
+-  if (!st) return <div className="prose"><p>{state.statusError ? `The API is not reachable: ${state.statusError}` : "Loading status."}</p></div>;
++  if (!st) return <div className="prose"><p>{state.statusError ? S.common.apiUnreachable(state.statusError) : D.loading}</p></div>;
+   const tests = st.validation?.tests ?? {};
++  const K = D.kernelColumns, TC = D.terrainColumns, VC = D.testColumns, LC = D.labelColumns;
+   return (
+     <div className="prose" style={{ maxWidth: 1100 }}>
+-      <h1>Data and validation</h1>
+-      <p>Every number in LUNA-OPS can be traced to the files and code below. Results are labelled Validated only when the
+-        archived validation report shows their tests passing for this code version with the production NAIF kernels.</p>
++      <h1>{D.title}</h1>
++      <p>{D.intro}</p>
+ 
+-      <h2>SPICE kernels</h2>
++      <h2>{D.kernelsHeading}</h2>
+       {st.kernels.loaded ? (
+         <>
+-          <p>Profile <strong>{st.kernels.profile}</strong>, body-fixed frame <strong>{st.kernels.frame}</strong>, coverage
+-            {" "}{st.kernels.coverage_utc?.[0]} to {st.kernels.coverage_utc?.[1]} UTC.</p>
++          <p>{rich(D.kernelsSummary, { profile: <strong>{st.kernels.profile}</strong>, frame: <strong>{st.kernels.frame}</strong>,
++            start: st.kernels.coverage_utc?.[0], end: st.kernels.coverage_utc?.[1] })}</p>
+           <div className="table-scroll"><table className="data">
+-            <thead><tr><th>Role</th><th>File</th><th>SHA-256</th><th>Source</th><th>Retrieved</th></tr></thead>
++            <thead><tr><th>{K.role}</th><th>{K.file}</th><th>{K.sha256}</th><th>{K.source}</th><th>{K.retrieved}</th></tr></thead>
+             <tbody>{(st.kernels.files ?? []).map((f: any) => (
+-              <tr key={f.name}><td>{f.role}</td><td>{f.name}</td><td className="mono">{f.sha256?.slice(0, 16)}…</td>
++              <tr key={f.name}><td>{f.role}</td><td>{f.name}</td><td className="mono">{f.sha256?.slice(0, 16)}{S.common.ellipsis}</td>
+                 <td style={{ maxWidth: 360, overflowWrap: "anywhere" }}>{f.source}</td><td>{f.retrieved_utc}</td></tr>))}</tbody>
+           </table></div>
+           {(st.kernels.warnings ?? []).map((w, k) => <div className="note alert" key={k} style={{ marginTop: 8 }}>{w}</div>)}
+         </>
+       ) : <div className="note alert">{st.kernels.error}</div>}
+ 
+-      <h2>Terrain</h2>
++      <h2>{D.terrainHeading}</h2>
+       {Object.keys(st.terrain.levels).length ? (
+         <div className="table-scroll"><table className="data">
+-          <thead><tr><th>Registered product</th><th>Source</th><th className="num">Pixel</th><th className="num">Size</th><th>SHA-256</th><th>Registered</th></tr></thead>
++          <thead><tr><th>{TC.product}</th><th>{TC.source}</th><th className="num">{TC.pixel}</th><th className="num">{TC.size}</th><th>{TC.sha256}</th><th>{TC.registered}</th></tr></thead>
+           <tbody>{Object.entries(st.terrain.levels).map(([k, v]: [string, any]) => (
+-            <tr key={k}><td>{k}</td><td>{v.product}{v.synthetic ? " (synthetic, not lunar data)" : ""}</td>
+-              <td className="num">{v.pixel_m} m</td><td className="num">{v.bytes ? `${(v.bytes / 1e9).toFixed(2)} GB` : ""}</td>
+-              <td className="mono">{v.sha256?.slice(0, 16)}…</td><td>{v.registered_utc ?? ""}</td></tr>))}</tbody>
++            <tr key={k}><td>{k}</td><td>{v.product}{v.synthetic ? D.syntheticProduct : ""}</td>
++              <td className="num">{D.pixelSize(v.pixel_m)}</td><td className="num">{v.bytes ? D.gigabytes((v.bytes / 1e9).toFixed(2)) : ""}</td>
++              <td className="mono">{v.sha256?.slice(0, 16)}{S.common.ellipsis}</td><td>{v.registered_utc ?? ""}</td></tr>))}</tbody>
+         </table></div>
+-      ) : <p>No terrain is registered. Terrain-adjusted results are withheld until the PGDA LOLA DEMs are registered (README, step 3).</p>}
+-      <p>Error maps registered for: {st.terrain.error_maps.length ? st.terrain.error_maps.join(", ") : "none (horizon uncertainty unavailable)"}.</p>
++      ) : <p>{D.noTerrain}</p>}
++      <p>{D.errorMaps(st.terrain.error_maps.length ? st.terrain.error_maps.join(", ") : D.noErrorMaps)}</p>
+ 
+-      <h2>Validation report</h2>
++      <h2>{D.reportHeading}</h2>
+       {st.validation ? (
+         <>
+-          <p>Run {st.validation.run_utc} with code {st.validation.code_version} and <strong>{st.validation.kernel_profile}</strong> kernels.</p>
++          <p>{rich(D.reportSummary, { run: st.validation.run_utc, code: st.validation.code_version,
++            profile: <strong>{st.validation.kernel_profile}</strong> })}</p>
+           <div className="table-scroll" style={{ maxHeight: 520 }}><table className="data">
+-            <thead><tr><th>Test</th><th>What it checks</th><th>Status</th><th>Detail</th></tr></thead>
++            <thead><tr><th>{VC.test}</th><th>{VC.checks}</th><th>{VC.status}</th><th>{VC.detail}</th></tr></thead>
+             <tbody>{Object.entries(tests).map(([id, t]: [string, any]) => (
+               <tr key={id}><td>{id}</td><td>{TEST_NAMES[id] ?? ""}</td>
+                 <td style={{ color: t.status === "passed" ? "var(--valid)" : t.status === "failed" ? "var(--alert)" : "var(--muted)" }}>{t.status}</td>
+                 <td>{t.detail ?? ""}</td></tr>))}</tbody>
+           </table></div>
+         </>
+-      ) : <p>No validation report yet. Run <span className="mono">python -m validation.run_validation</span> in backend.</p>}
++      ) : <p>{rich(D.noReport, { command: <span className="mono">{D.runValidationCommand}</span> })}</p>}
+ 
+-      <h2>Result labels now in force</h2>
++      <h2>{D.labelsHeading}</h2>
+       {(st.validation_blockers ?? []).length > 0 && (
+-        <div className="note alert" style={{ marginBottom: 10 }}>No result can be labelled Validated yet: {(st.validation_blockers ?? []).join("; ")}.</div>
++        <div className="note alert" style={{ marginBottom: 10 }}>{D.blockers((st.validation_blockers ?? []).join("; "))}</div>
+       )}
+       {st.labels && (
+-        <table className="data"><thead><tr><th>Quantity</th><th>Kind</th><th>Status</th></tr></thead>
++        <table className="data"><thead><tr><th>{LC.quantity}</th><th>{LC.kind}</th><th>{LC.status}</th></tr></thead>
+           <tbody>{Object.entries(st.labels).map(([k, v]) => <tr key={k}><td>{k.replace(/_/g, " ")}</td><td>{v.kind}</td><td>{v.validation}</td></tr>)}</tbody>
+         </table>
+       )}
+ 
+-      <h2>Sources and attribution</h2>
+-      <table className="data"><tbody>{ATTRIBUTION.map(([a, b]) => <tr key={a}><td>{a}</td><td>{b}</td></tr>)}</tbody></table>
+-      <p className="hint">Engine {st.version}, code {st.code_version}, algorithm {st.algorithm_version}, fingerprint <span className="mono">{st.code_fingerprint?.slice(0, 16)}</span>.</p>
++      <h2>{D.attributionHeading}</h2>
++      <table className="data"><tbody>{D.attribution.map(([a, b]) => <tr key={a}><td>{a}</td><td>{b}</td></tr>)}</tbody></table>
++      <p className="hint">{rich(D.footer, { version: st.version, code: st.code_version, algorithm: st.algorithm_version,
++        fingerprint: <span className="mono">{st.code_fingerprint?.slice(0, 16)}</span> })}</p>
+     </div>
+   );
+ }
+diff --git a/frontend/src/components/GuideView.tsx b/frontend/src/components/GuideView.tsx
+index 06ed4d1..d103112 100644
+--- a/frontend/src/components/GuideView.tsx
++++ b/frontend/src/components/GuideView.tsx
+@@ -1,52 +1,38 @@
++import { S } from "../i18n";
++
++const G = S.guide;
++
+ export function GuideView() {
+   return (
+     <article className="prose">
+-      <h1>How to read LUNA-OPS</h1>
+-      <p>Near the Moon's south pole the Sun never climbs high. It circles the sky once a month only a degree or two above
+-        or below the horizon, so a crater rim a few kilometres away decides whether a spot is sunlit. Earth hangs low in the
+-        sky too, rocking a few degrees back and forth each month. LUNA-OPS shows both against the real skyline.</p>
+-
+-      <h2>The horizon panorama</h2>
+-      <p>The grey shape is the skyline you would see standing at the site, traced from NASA's LOLA laser altimeter data,
+-        all the way around the compass. The gold line is the Sun's path over your dates and the blue line is Earth's.
+-        Where a line rises above the grey, that body is in view. The gold and blue disks show where the Sun and Earth are at
+-        the time cursor, drawn at their true size. Elevation is stretched so low hills are readable.</p>
+-      <p>Hatched areas mean the terrain data ran out in that direction, so the true skyline may be higher. Anything that
+-        depends on those directions is reported as unknown rather than guessed.</p>
+-
+-      <h2>The timeline</h2>
+-      <p>Each bar shows when the site is sunlit, when Earth is in view, and when both are true at once. Small orange
+-        triangles mark brief windows under ten minutes. Click anywhere on the timeline to move the time cursor; the panorama,
+-        3D view and readouts follow it.</p>
+-
+-      <h2>Visibility rules</h2>
++      <h1>{G.title}</h1>
++      <p>{G.intro}</p>
++
++      <h2>{G.panoramaHeading}</h2>
++      {G.panorama.map((p) => <p key={p}>{p}</p>)}
++
++      <h2>{G.timelineHeading}</h2>
++      <p>{G.timeline}</p>
++
++      <h2>{G.rulesHeading}</h2>
+       <dl>
+-        <dt>Any part visible</dt><dd>Some of the disk is above the skyline. This is the default meaning of "sunlit".</dd>
+-        <dt>Centre visible</dt><dd>The middle of the disk is above the skyline. This is the default for Earth contact.</dd>
+-        <dt>Whole disk plus margin</dt><dd>All of the disk clears the skyline by at least the margin you set. The most cautious rule.</dd>
++        {G.rules.map((d) => <Entry key={d.term} term={d.term} text={d.text} />)}
+       </dl>
+ 
+-      <h2>Seeing Earth is not the same as a radio link</h2>
+-      <p>LUNA-OPS reports geometric line of sight: whether Earth is above the skyline. A working radio link also depends
+-        on the antenna, transmitter power, frequency, signal reflections near a low horizon and whether a ground station is
+-        listening. Treat "Earth in view" as the first test, not the answer.</p>
++      <h2>{G.radioHeading}</h2>
++      <p>{G.radio}</p>
+ 
+-      <h2>The power indicator</h2>
+-      <p>A relative estimate of how much sunlight reaches a reference panel, from the visible share of the Sun, its height
+-        and its distance. A value of 1 means a full Sun at one astronomical unit shining straight onto the panel. It is not
+-        a prediction of electrical output.</p>
++      <h2>{G.powerHeading}</h2>
++      <p>{G.power}</p>
+ 
+-      <h2>Glossary</h2>
++      <h2>{G.glossaryHeading}</h2>
+       <dl>
+-        <dt>Azimuth</dt><dd>Compass direction, measured clockwise from north in degrees.</dd>
+-        <dt>Elevation</dt><dd>Angle above the flat horizontal plane at the site, in degrees.</dd>
+-        <dt>Clearance</dt><dd>How far a point on the Sun or Earth sits above the skyline, in degrees. Negative means hidden.</dd>
+-        <dt>Direct-to-Earth (DTE)</dt><dd>Communication straight to Earth without a relay satellite.</dd>
+-        <dt>Libration</dt><dd>The Moon's slight monthly wobble as seen from Earth, which makes Earth drift in the lunar sky.</dd>
+-        <dt>LOLA</dt><dd>Lunar Orbiter Laser Altimeter on NASA's Lunar Reconnaissance Orbiter; the source of the terrain heights.</dd>
+-        <dt>SPICE</dt><dd>NASA's system for spacecraft and planetary geometry, used here for Sun and Earth positions.</dd>
+-        <dt>Validated or pending</dt><dd>Validated means the value's tests have passed against reference data; pending means they have not been run yet.</dd>
++        {G.glossary.map((d) => <Entry key={d.term} term={d.term} text={d.text} />)}
+       </dl>
+     </article>
+   );
+ }
++
++function Entry({ term, text }: { term: string; text: string }) {
++  return <><dt>{term}</dt><dd>{text}</dd></>;
++}
+diff --git a/frontend/src/components/HorizonPanorama.tsx b/frontend/src/components/HorizonPanorama.tsx
+index 2909e2a..b09b94c 100644
+--- a/frontend/src/components/HorizonPanorama.tsx
++++ b/frontend/src/components/HorizonPanorama.tsx
+@@ -1,6 +1,7 @@
+ import * as d3 from "d3";
+ import { useMemo, useState } from "react";
+ import type { Result } from "../api/types";
++import { S } from "../i18n";
+ import { useWidth } from "../lib/useWidth";
+ 
+ interface Props { result: Result; cursor: number; height?: number }
+@@ -70,13 +71,13 @@ export function HorizonPanorama({ result, cursor, height = 300 }: Props) {
+   };
+   const sun = disk("sun"), earth = disk("earth");
+   const compass = [0, 90, 180, 270];
+-  const names: Record<number, string> = { 0: "N", 90: "E", 180: "S", 270: "W" };
++  const names: Record<number, string> = S.panorama.compass;
+   const hoverBin = hover == null ? null : Math.round(hover / h.bin_deg) % h.nbins;
+ 
+   return (
+     <div className="panorama" ref={ref}>
+       <svg viewBox={`0 0 ${W} ${H}`} role="img"
+-           aria-label={`Terrain horizon around the site with the Sun and Earth tracks over the window. Highest horizon ${h.max_deg.toFixed(2)} degrees.`}
++           aria-label={S.panorama.label(h.max_deg.toFixed(2))}
+            onMouseMove={(e) => {
+              const r = (e.currentTarget as SVGSVGElement).getBoundingClientRect();
+              const az = x.invert(((e.clientX - r.left) / r.width) * W);
+@@ -96,7 +97,7 @@ export function HorizonPanorama({ result, cursor, height = 300 }: Props) {
+         {y.ticks(5).map((t) => (
+           <g key={t}>
+             <line x1={m.l} x2={W - m.r} y1={y(t)} y2={y(t)} stroke={t === 0 ? "#5a6e82" : "#2a3a4b"} strokeDasharray={t === 0 ? "" : "2 4"} />
+-            <text x={m.l - 6} y={y(t) + 4} textAnchor="end" fontSize="11" fill="#a3b1bf">{t}°</text>
++            <text x={m.l - 6} y={y(t) + 4} textAnchor="end" fontSize="11" fill="#a3b1bf">{S.format.degrees(t)}</text>
+           </g>
+         ))}
+         {geom.sunPaths.map((p, i) => <path key={`s${i}`} d={p} fill="none" stroke="#f2b544" strokeOpacity={0.55} strokeWidth={1.5} />)}
+@@ -113,13 +114,13 @@ export function HorizonPanorama({ result, cursor, height = 300 }: Props) {
+           <text key={a} x={x(a)} y={H - 10} textAnchor="middle" fontSize="12" fontWeight={600} fill="#e7ecf1">{names[a]}</text>
+         ))}
+         {d3.range(30, 360, 30).filter((a) => !compass.includes(a)).map((a) => (
+-          <text key={a} x={x(a)} y={H - 10} textAnchor="middle" fontSize="11" fill="#7d8d9d">{a}°</text>
++          <text key={a} x={x(a)} y={H - 10} textAnchor="middle" fontSize="11" fill="#7d8d9d">{S.format.degrees(a)}</text>
+         ))}
+         {hover != null && hoverBin != null && (
+           <g pointerEvents="none">
+             <line x1={x(hover)} x2={x(hover)} y1={m.t} y2={H - m.b} stroke="#e7ecf1" strokeOpacity={0.35} />
+             <text x={Math.min(x(hover) + 6, W - 150)} y={m.t + 14} fontSize="12" fill="#e7ecf1">
+-              {`Az ${hover.toFixed(1)}°  horizon ${h.h_deg[hoverBin].toFixed(2)}°${h.incomplete[hoverBin] ? " (lower bound)" : ""}`}
++              {S.panorama.hover(hover.toFixed(1), h.h_deg[hoverBin].toFixed(2), h.incomplete[hoverBin])}
+             </text>
+           </g>
+         )}
+diff --git a/frontend/src/components/MapView.tsx b/frontend/src/components/MapView.tsx
+index 25fe149..f95d998 100644
+--- a/frontend/src/components/MapView.tsx
++++ b/frontend/src/components/MapView.tsx
+@@ -14,6 +14,7 @@ import { register } from "ol/proj/proj4";
+ import proj4 from "proj4";
+ import { api } from "../api/client";
+ import type { CatalogSite } from "../api/types";
++import { S } from "../i18n";
+ 
+ const SPS = "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +k=1 +x_0=0 +y_0=0 +R=1737400 +units=m +no_defs";
+ proj4.defs("LUNAOPS:SPS", SPS);
+@@ -33,12 +34,12 @@ function graticule(): Feature[] {
+     const ring: number[][] = [];
+     for (let lon = 0; lon <= 360; lon += 2) ring.push(toXY(lon, lat));
+     const f = new Feature(new LineString(ring));
+-    f.set("label", `${lat}°`);
++    f.set("label", S.map.latitudeLine(lat));
+     out.push(f);
+   }
+   for (let lon = 0; lon < 360; lon += 30) {
+     const f = new Feature(new LineString([toXY(lon, -89.999), toXY(lon, -60)]));
+-    f.set("label", `${lon}°E`);
++    f.set("label", S.map.longitudeLine(lon));
+     out.push(f);
+   }
+   return out;
+@@ -49,7 +50,7 @@ export function MapView({ lat, lon, catalog, selectedId, onPick }: Props) {
+   const mapRef = useRef<OlMap | null>(null);
+   const siteSrc = useRef(new VectorSource());
+   const catSrc = useRef(new VectorSource());
+-  const [note, setNote] = useState<string>("Loading terrain tiles.");
++  const [note, setNote] = useState<string>(S.map.loadingTiles);
+   const pickRef = useRef(onPick);
+   pickRef.current = onPick;
+ 
+@@ -83,7 +84,7 @@ export function MapView({ lat, lon, catalog, selectedId, onPick }: Props) {
+       if (la <= -60) pickRef.current(Number(la.toFixed(6)), Number((((lo % 360) + 360) % 360).toFixed(6)));
+     });
+     api.tilesMeta().then((meta) => {
+-      if (!meta.available) { setNote("No terrain registered: map shows the graticule only."); view.fit([-9e5, -9e5, 9e5, 9e5]); return; }
++      if (!meta.available) { setNote(S.map.noTerrain); view.fit([-9e5, -9e5, 9e5, 9e5]); return; }
+       proj.setExtent(meta.extent);
+       const grid = new TileGrid({ origin: meta.origin, resolutions: meta.resolutions, tileSize: meta.tile_size, extent: meta.extent });
+       const src = new TileImage({ projection: proj, tileGrid: grid,
+@@ -92,8 +93,8 @@ export function MapView({ lat, lon, catalog, selectedId, onPick }: Props) {
+       view.fit(meta.extent);
+       const c = siteSrc.current.getFeatures()[0]?.getGeometry() as Point | undefined;
+       if (c) { view.setCenter(c.getCoordinates()); view.setResolution(90); }
+-      setNote(meta.levels.some((l: any) => l.synthetic) ? "Synthetic test terrain shown: not lunar data." : meta.note);
+-    }).catch(() => setNote("Terrain tiles unavailable."));
++      setNote(meta.levels.some((l: any) => l.synthetic) ? S.map.syntheticTerrain : meta.note);
++    }).catch(() => setNote(S.map.tilesUnavailable));
+     return () => { map.setTarget(undefined); mapRef.current = null; };
+   }, []);
+ 
+@@ -121,9 +122,9 @@ export function MapView({ lat, lon, catalog, selectedId, onPick }: Props) {
+   return (
+     <>
+       <div className="pane-body">
+-        <div className="map-host" ref={host} aria-label="South polar map. Click to choose a site." role="application" />
++        <div className="map-host" ref={host} aria-label={S.map.label} role="application" />
+       </div>
+-      <div className="pane-note">{note} Click the map to set coordinates.</div>
++      <div className="pane-note">{S.map.note(note)}</div>
+     </>
+   );
+ }
+diff --git a/frontend/src/components/Sidebar.tsx b/frontend/src/components/Sidebar.tsx
+index 336c06e..6bd50f9 100644
+--- a/frontend/src/components/Sidebar.tsx
++++ b/frontend/src/components/Sidebar.tsx
+@@ -1,6 +1,7 @@
+ import { useEffect, useState } from "react";
+ import { api } from "../api/client";
+ import type { ObserverProfile, PanelModel, Rule } from "../api/types";
++import { S } from "../i18n";
+ import { PANEL_NAMES, RULE_NAMES, fromInputValue, toInputValue } from "../lib/format";
+ import { useStore } from "../state/store";
+ 
+@@ -15,7 +16,10 @@ function Segmented<T extends string>({ value, options, onChange, label }:
+   );
+ }
+ 
+-const RULES: { v: Rule; t: string }[] = [{ v: "any", t: "Any part" }, { v: "centre", t: "Centre" }, { v: "full", t: "Whole disk" }];
++const T = S.sidebar;
++const RULES: { v: Rule; t: string }[] = (["any", "centre", "full"] as const).map((v) => ({ v, t: S.ruleOptions[v] }));
++const PROFILES: { v: ObserverProfile; t: string }[] =
++  (["surface", "astronaut", "equipment"] as const).map((v) => ({ v, t: S.observerProfiles[v] }));
+ 
+ export function Sidebar() {
+   const { state, dispatch, runAnalysis } = useStore();
+@@ -48,125 +52,125 @@ export function Sidebar() {
+   };
+ 
+   return (
+-    <aside className="sidebar" aria-label="Analysis settings">
++    <aside className="sidebar" aria-label={T.label}>
+       <section className="side-section">
+-        <h2>Site</h2>
++        <h2>{T.siteHeading}</h2>
+         {state.catalog.length > 0 ? (
+-          <ul className="site-list" aria-label="Curated sites">
++          <ul className="site-list" aria-label={T.curatedSitesLabel}>
+             {state.catalog.map((c) => (
+               <li key={c.id}>
+                 <button aria-pressed={s.siteId === c.id}
+                         onClick={() => set({ lat: c.lat.toFixed(6), lon: c.lon.toFixed(6), siteName: c.name, siteId: c.id })}>
+                   <span className="site-name">{c.name}</span>
+-                  <span className="site-meta">{c.point_label}; {c.extent_label ?? c.source?.product}</span>
++                  <span className="site-meta">{T.siteMeta(c.point_label, c.extent_label ?? c.source?.product)}</span>
+                 </button>
+               </li>
+             ))}
+           </ul>
+         ) : (
+-          <p className="empty-note">{state.catalogReason ?? "Loading the catalogue."}</p>
++          <p className="empty-note">{state.catalogReason ?? T.loadingCatalogue}</p>
+         )}
+         <div className="field-row">
+           <div className="field">
+-            <label htmlFor="lat">Latitude (°)</label>
+-            <input id="lat" type="text" inputMode="decimal" placeholder="e.g. -89.5" value={s.lat}
++            <label htmlFor="lat">{T.latitude}</label>
++            <input id="lat" type="text" inputMode="decimal" placeholder={T.latitudePlaceholder} value={s.lat}
+                    onChange={(e) => set({ lat: e.target.value, siteId: null })} />
+           </div>
+           <div className="field">
+-            <label htmlFor="lon">East longitude (°)</label>
+-            <input id="lon" type="text" inputMode="decimal" placeholder="0 to 360" value={s.lon}
++            <label htmlFor="lon">{T.longitude}</label>
++            <input id="lon" type="text" inputMode="decimal" placeholder={T.longitudePlaceholder} value={s.lon}
+                    onChange={(e) => set({ lon: e.target.value, siteId: null })} />
+           </div>
+         </div>
+         <div className="field">
+-          <label htmlFor="sname">Name (optional)</label>
++          <label htmlFor="sname">{T.siteName}</label>
+           <input id="sname" type="text" value={s.siteName ?? ""} onChange={(e) => set({ siteName: e.target.value || null })} />
+         </div>
+         <p className={`hint ${cov ? (cov.covered ? "good" : "bad") : covErr ? "bad" : ""}`} aria-live="polite">
+-          {!coordsGiven ? "Pick a curated site, click the map, or type planetocentric coordinates."
++          {!coordsGiven ? T.pickHint
+             : covErr ? covErr
+-            : !cov ? "Checking terrain coverage."
+-            : cov.covered ? `Terrain coverage: ${cov.levels.join(", ")} LOLA levels.`
+-            : `No terrain-adjusted results here: ${cov.reason}`}
++            : !cov ? T.checkingCoverage
++            : cov.covered ? T.coverage(cov.levels.join(", "))
++            : T.noCoverage(cov.reason)}
+         </p>
+-        <button className="quiet-button" type="button" onClick={addToCompare} disabled={!coordsGiven}>Add to comparison</button>
++        <button className="quiet-button" type="button" onClick={addToCompare} disabled={!coordsGiven}>{T.addToCompare}</button>
+       </section>
+ 
+       <section className="side-section">
+-        <h2>Dates (UTC)</h2>
++        <h2>{T.datesHeading}</h2>
+         <div className="field">
+-          <label htmlFor="start">Start</label>
++          <label htmlFor="start">{T.start}</label>
+           <input id="start" type="datetime-local" value={toInputValue(s.start)} onChange={(e) => set({ start: fromInputValue(e.target.value) })} />
+         </div>
+         <div className="field">
+-          <label htmlFor="end">End</label>
++          <label htmlFor="end">{T.end}</label>
+           <input id="end" type="datetime-local" value={toInputValue(s.end)} onChange={(e) => set({ end: fromInputValue(e.target.value) })} />
+         </div>
+         <div className="field">
+-          <label htmlFor="step">Display step</label>
++          <label htmlFor="step">{T.displayStep}</label>
+           <select id="step" value={s.stepMin} onChange={(e) => set({ stepMin: Number(e.target.value) })}>
+-            {[5, 15, 30, 60].map((m) => <option key={m} value={m}>{m} minutes</option>)}
++            {[5, 15, 30, 60].map((m) => <option key={m} value={m}>{T.stepOption(m)}</option>)}
+           </select>
+-          <p className="hint">Event times are found adaptively to 1 s; the step only sets chart resolution.</p>
++          <p className="hint">{T.stepHint}</p>
+         </div>
+       </section>
+ 
+       <section className="side-section">
+-        <h2>Observer</h2>
+-        <Segmented<ObserverProfile> label="Observer profile" value={s.observerProfile}
+-          options={[{ v: "surface", t: "Surface" }, { v: "astronaut", t: "Astronaut" }, { v: "equipment", t: "Equipment" }]}
++        <h2>{T.observerHeading}</h2>
++        <Segmented<ObserverProfile> label={T.observerProfile} value={s.observerProfile}
++          options={PROFILES}
+           onChange={(v) => set({ observerProfile: v, observerH: v === "surface" ? 0 : s.observerH })} />
+         <div className="field" style={{ marginTop: 10 }}>
+-          <label htmlFor="obsh">Height above ground (m)</label>
++          <label htmlFor="obsh">{T.observerHeight}</label>
+           <input id="obsh" type="number" min={0} max={100} step={0.1} value={s.observerH}
+                  disabled={s.observerProfile === "surface"}
+                  onChange={(e) => set({ observerH: Math.max(0, Math.min(100, Number(e.target.value))) })} />
+-          {s.observerProfile === "surface" && <p className="hint">Surface reference is 0 m.</p>}
++          {s.observerProfile === "surface" && <p className="hint">{T.surfaceHint}</p>}
+         </div>
+       </section>
+ 
+       <section className="side-section">
+-        <h2>Visibility rules</h2>
++        <h2>{T.rulesHeading}</h2>
+         <div className="field">
+-          <span className="label">Sunlit means</span>
+-          <Segmented<Rule> label="Sunlit rule" value={s.sunlitRule} options={RULES} onChange={(v) => set({ sunlitRule: v })} />
++          <span className="label">{T.sunlitMeans}</span>
++          <Segmented<Rule> label={T.sunlitRule} value={s.sunlitRule} options={RULES} onChange={(v) => set({ sunlitRule: v })} />
+         </div>
+         <div className="field">
+-          <span className="label">Direct-to-Earth means</span>
+-          <Segmented<Rule> label="Direct-to-Earth rule" value={s.dteRule} options={RULES} onChange={(v) => set({ dteRule: v })} />
+-          <p className="hint">{RULE_NAMES[s.dteRule]}. Geometric line of sight only, not a radio link guarantee.</p>
++          <span className="label">{T.dteMeans}</span>
++          <Segmented<Rule> label={T.dteRule} value={s.dteRule} options={RULES} onChange={(v) => set({ dteRule: v })} />
++          <p className="hint">{T.dteHint(RULE_NAMES[s.dteRule])}</p>
+         </div>
+         <div className="field">
+-          <label htmlFor="margin">Whole-disk margin (°)</label>
++          <label htmlFor="margin">{T.margin}</label>
+           <input id="margin" type="number" min={0} max={10} step={0.1} value={s.margin}
+                  onChange={(e) => set({ margin: Math.max(0, Math.min(10, Number(e.target.value))) })} />
+         </div>
+       </section>
+ 
+       <section className="side-section">
+-        <h2>Power indicator panel</h2>
++        <h2>{T.panelHeading}</h2>
+         <div className="field">
+-          <label htmlFor="panel">Reference panel</label>
++          <label htmlFor="panel">{T.referencePanel}</label>
+           <select id="panel" value={s.panel} onChange={(e) => set({ panel: e.target.value as PanelModel })}>
+             {Object.entries(PANEL_NAMES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
+           </select>
+         </div>
+         {s.panel === "fixed_vertical" && (
+           <div className="field">
+-            <label htmlFor="paz">Panel facing azimuth (°)</label>
++            <label htmlFor="paz">{T.panelAzimuth}</label>
+             <input id="paz" type="number" min={0} max={360} step={1} value={s.panelAz}
+                    onChange={(e) => set({ panelAz: Number(e.target.value) })} />
+           </div>
+         )}
+-        <p className="hint">A relative estimate of available sunlight, not electrical output.</p>
++        <p className="hint">{T.panelHint}</p>
+       </section>
+ 
+       <section className="side-section" style={{ borderBottom: 0 }}>
+         <button className="run-button" type="button" disabled={!canRun} onClick={() => runAnalysis()}>
+-          {busy ? "Analysing" : "Analyse site"}
++          {busy ? T.analysing : T.analyse}
+         </button>
+         {!kernelsReady && state.status && <p className="hint bad">{state.status.kernels.error}</p>}
+-        {state.statusError && <p className="hint bad">The API is not reachable: {state.statusError}</p>}
++        {state.statusError && <p className="hint bad">{S.common.apiUnreachable(state.statusError)}</p>}
+         {state.job && (
+           <>
+             <div className="progress" aria-hidden><div style={{ width: `${Math.round(state.job.progress * 100)}%` }} /></div>
+diff --git a/frontend/src/components/SiteView.tsx b/frontend/src/components/SiteView.tsx
+index 4067fc7..7ec4a5e 100644
+--- a/frontend/src/components/SiteView.tsx
++++ b/frontend/src/components/SiteView.tsx
+@@ -1,5 +1,6 @@
+ import { useEffect, useMemo, useState } from "react";
+ import type { Result } from "../api/types";
++import { S, rich } from "../i18n";
+ import { cursorEt, nextChange } from "../lib/countdown";
+ import { PANEL_NAMES, RULE_NAMES, fmtCountdown, fmtDeg, fmtDuration, fmtFraction, fmtNum, fmtPct, fmtUTC } from "../lib/format";
+ import { useStore } from "../state/store";
+@@ -9,15 +10,19 @@ import { Terrain3D } from "./Terrain3D";
+ import { Timeline } from "./Timeline";
+ import { Welcome } from "./Welcome";
+ 
++const T = S.site;
++const QUANTITY_NAMES: Record<string, string> = S.quantities;
++// prefixes of the API's validation status words (protocol values, not display text)
++const VALIDATED_PREFIX = "Validated";
++const SYNTHETIC_PREFIX = "Synthetic";
++
+ function LabelChips({ result }: { result: Result }) {
+-  const names: Record<string, string> = { sun_earth_azel: "Sun and Earth positions", horizon: "Horizon",
+-    disk_visibility: "Disk visibility", events: "Events", power_indicator: "Power indicator" };
+   return (
+-    <div className="label-row" aria-label="Result labels">
++    <div className="label-row" aria-label={T.labelsLabel}>
+       {Object.entries(result.labels).map(([k, v]) => {
+-        const cls = v.validation.startsWith("Validated") ? "validated" : v.validation.startsWith("Synthetic") ? "synthetic" : "pending";
+-        return <span key={k} className={`chip ${cls}`} title={[...(v.reasons ?? []).map((r) => `Not validated: ${r}`), ...Object.entries(v.tests).map(([t, s]) => `${t}: ${s}`)].join("\n")}>
+-          {names[k] ?? k}: {v.kind}, {v.validation.toLowerCase()}</span>;
++        const cls = v.validation.startsWith(VALIDATED_PREFIX) ? "validated" : v.validation.startsWith(SYNTHETIC_PREFIX) ? "synthetic" : "pending";
++        return <span key={k} className={`chip ${cls}`} title={[...(v.reasons ?? []).map((r) => T.labelNotValidated(r)), ...Object.entries(v.tests).map(([t, s]) => T.labelTest(t, s))].join("\n")}>
++          {T.labelChip(QUANTITY_NAMES[k] ?? k, v.kind, v.validation.toLowerCase())}</span>;
+       })}
+     </div>
+   );
+@@ -26,18 +31,19 @@ function LabelChips({ result }: { result: Result }) {
+ function Readout({ r, i }: { r: Result; i: number }) {
+   const s = r.series;
+   const pm = r.provenance.parameters.panel.model;
++  const R = S.readout;
+   return (
+     <div className="readout" aria-live="polite" aria-atomic="true">
+-      <div><div className="k">Sun elevation</div><div className="v sun">{fmtDeg(s.sun.el[i])}</div>
+-        <div className="sub">azimuth {fmtDeg(s.sun.az[i], 1)}</div></div>
+-      <div><div className="k">Sun disk visible</div><div className="v sun">{fmtFraction(s.sun.f[i])}</div>
+-        <div className="sub">clearance {fmtDeg(s.sun.c[i])}</div></div>
+-      <div><div className="k">Earth elevation</div><div className="v earth">{fmtDeg(s.earth.el[i])}</div>
+-        <div className="sub">azimuth {fmtDeg(s.earth.az[i], 1)}</div></div>
+-      <div><div className="k">Earth disk visible</div><div className="v earth">{fmtFraction(s.earth.f[i])}</div>
+-        <div className="sub">one-way light time {fmtNum(s.earth.light_time_s?.[i] ?? null, 3)} s</div></div>
+-      <div><div className="k">Power indicator</div><div className="v">{fmtNum(s.power[pm as keyof typeof s.power].series[i], 3)}</div>
+-        <div className="sub">relative, {PANEL_NAMES[pm].toLowerCase()}</div></div>
++      <div><div className="k">{R.sunElevation}</div><div className="v sun">{fmtDeg(s.sun.el[i])}</div>
++        <div className="sub">{R.azimuth(fmtDeg(s.sun.az[i], 1))}</div></div>
++      <div><div className="k">{R.sunVisible}</div><div className="v sun">{fmtFraction(s.sun.f[i])}</div>
++        <div className="sub">{R.clearance(fmtDeg(s.sun.c[i]))}</div></div>
++      <div><div className="k">{R.earthElevation}</div><div className="v earth">{fmtDeg(s.earth.el[i])}</div>
++        <div className="sub">{R.azimuth(fmtDeg(s.earth.az[i], 1))}</div></div>
++      <div><div className="k">{R.earthVisible}</div><div className="v earth">{fmtFraction(s.earth.f[i])}</div>
++        <div className="sub">{R.lightTime(fmtNum(s.earth.light_time_s?.[i] ?? null, 3))}</div></div>
++      <div><div className="k">{R.power}</div><div className="v">{fmtNum(s.power[pm as keyof typeof s.power].series[i], 3)}</div>
++        <div className="sub">{R.relative(PANEL_NAMES[pm].toLowerCase())}</div></div>
+     </div>
+   );
+ }
+@@ -45,18 +51,19 @@ function Readout({ r, i }: { r: Result; i: number }) {
+ function Countdowns({ r, i }: { r: Result; i: number }) {
+   const et = cursorEt(r, i);
+   const p = r.provenance.parameters.rules;
++  const C = S.countdowns;
+   const items = [
+-    nextChange(r.intervals[`sun_${p.sunlit}`], et, "Next sunrise", "Next sunset"),
+-    nextChange(r.intervals["sun_full"], et, "Whole Sun clears terrain", "Terrain starts to cover the Sun"),
+-    nextChange(r.intervals[`earth_${p.dte}`], et, "Next Earthrise", "Next Earthset"),
+-    nextChange(r.intervals["overlap"], et, "Next operational window opens", "Operational window closes"),
++    nextChange(r.intervals[`sun_${p.sunlit}`], et, C.nextSunrise, C.nextSunset),
++    nextChange(r.intervals["sun_full"], et, C.wholeSunClears, C.terrainCoversSun),
++    nextChange(r.intervals[`earth_${p.dte}`], et, C.nextEarthrise, C.nextEarthset),
++    nextChange(r.intervals["overlap"], et, C.windowOpens, C.windowCloses),
+   ];
+   return (
+-    <div className="countdowns" aria-label="Countdowns from the time cursor">
++    <div className="countdowns" aria-label={C.label}>
+       {items.map((c) => (
+         <div className="countdown" key={c.label}>
+           <div className="k">{c.label}</div>
+-          <div className="v">{c.seconds == null ? "not in window" : `in ${fmtCountdown(c.seconds)}`}</div>
++          <div className="v">{c.seconds == null ? C.notInWindow : C.inTime(fmtCountdown(c.seconds))}</div>
+         </div>
+       ))}
+     </div>
+@@ -69,36 +76,37 @@ function Figures({ r }: { r: Result }) {
+   const earth = r.summary[`earth_${p.rules.dte}`];
+   const ov = r.summary.overlap;
+   const pw = r.summary.power[p.panel.model];
++  const F = S.figures;
+   return (
+     <div className="figures">
+       <div className="figure">
+-        <h3>Sunlight</h3><div className="rule">{RULE_NAMES[p.rules.sunlit]}</div>
++        <h3>{F.sunlight}</h3><div className="rule">{RULE_NAMES[p.rules.sunlit]}</div>
+         <div className="big" style={{ color: "var(--sun)" }}>{fmtPct(sun.percent)}</div>
+-        <dl><dt>Sunlit time</dt><dd>{fmtDuration(sun.hours)}</dd>
+-          <dt>Longest darkness</dt><dd>{fmtDuration(sun.longest_gap_h)}</dd>
+-          <dt>Sunlit windows</dt><dd>{sun.windows}{sun.brief_windows ? `, ${sun.brief_windows} brief` : ""}</dd>
+-          {sun.unknown_hours > 0 && <><dt>Unknown</dt><dd>{fmtDuration(sun.unknown_hours)}</dd></>}</dl>
++        <dl><dt>{F.sunlitTime}</dt><dd>{fmtDuration(sun.hours)}</dd>
++          <dt>{F.longestDarkness}</dt><dd>{fmtDuration(sun.longest_gap_h)}</dd>
++          <dt>{F.sunlitWindows}</dt><dd>{sun.windows}{sun.brief_windows ? F.briefWindows(sun.brief_windows) : ""}</dd>
++          {sun.unknown_hours > 0 && <><dt>{F.unknown}</dt><dd>{fmtDuration(sun.unknown_hours)}</dd></>}</dl>
+       </div>
+       <div className="figure">
+-        <h3>Direct-to-Earth</h3><div className="rule">{RULE_NAMES[p.rules.dte]}, geometric</div>
++        <h3>{F.dte}</h3><div className="rule">{F.dteRule(RULE_NAMES[p.rules.dte])}</div>
+         <div className="big" style={{ color: "var(--earth)" }}>{fmtPct(earth.percent)}</div>
+-        <dl><dt>Earth in view</dt><dd>{fmtDuration(earth.hours)}</dd>
+-          <dt>Longest window</dt><dd>{fmtDuration(earth.longest_window_h)}</dd>
+-          <dt>Longest gap</dt><dd>{fmtDuration(earth.longest_gap_h)}</dd>
+-          {earth.unknown_hours > 0 && <><dt>Unknown</dt><dd>{fmtDuration(earth.unknown_hours)}</dd></>}</dl>
++        <dl><dt>{F.earthInView}</dt><dd>{fmtDuration(earth.hours)}</dd>
++          <dt>{F.longestWindow}</dt><dd>{fmtDuration(earth.longest_window_h)}</dd>
++          <dt>{F.longestGap}</dt><dd>{fmtDuration(earth.longest_gap_h)}</dd>
++          {earth.unknown_hours > 0 && <><dt>{F.unknown}</dt><dd>{fmtDuration(earth.unknown_hours)}</dd></>}</dl>
+       </div>
+       <div className="figure">
+-        <h3>Operational overlap</h3><div className="rule">Sunlit and Earth in view</div>
++        <h3>{F.overlap}</h3><div className="rule">{F.overlapRule}</div>
+         <div className="big" style={{ color: "var(--both)" }}>{fmtPct(ov.percent)}</div>
+-        <dl><dt>Total</dt><dd>{fmtDuration(ov.hours)}</dd>
+-          <dt>Longest window</dt><dd>{fmtDuration(ov.longest_window_h)}</dd>
+-          <dt>Longest gap</dt><dd>{fmtDuration(ov.longest_gap_h)}</dd></dl>
++        <dl><dt>{F.total}</dt><dd>{fmtDuration(ov.hours)}</dd>
++          <dt>{F.longestWindow}</dt><dd>{fmtDuration(ov.longest_window_h)}</dd>
++          <dt>{F.longestGap}</dt><dd>{fmtDuration(ov.longest_gap_h)}</dd></dl>
+       </div>
+       <div className="figure">
+-        <h3>Power indicator</h3><div className="rule">Estimated, {PANEL_NAMES[p.panel.model].toLowerCase()}</div>
++        <h3>{F.power}</h3><div className="rule">{F.powerRule(PANEL_NAMES[p.panel.model].toLowerCase())}</div>
+         <div className="big">{fmtNum(pw.mean, 3)}</div>
+-        <dl><dt>Equivalent full-Sun</dt><dd>{fmtDuration(pw.equivalent_full_sun_h)}</dd>
+-          <dt>Mean visible Sun</dt><dd>{r.summary.mean_sun_fraction == null ? "n/a" : fmtPct(r.summary.mean_sun_fraction * 100)}</dd></dl>
++        <dl><dt>{F.equivalentFullSun}</dt><dd>{fmtDuration(pw.equivalent_full_sun_h)}</dd>
++          <dt>{F.meanVisibleSun}</dt><dd>{r.summary.mean_sun_fraction == null ? S.common.na : fmtPct(r.summary.mean_sun_fraction * 100)}</dd></dl>
+       </div>
+     </div>
+   );
+@@ -110,28 +118,27 @@ function PublicSummary({ r }: { r: Result }) {
+   const earth = r.summary[`earth_${p.rules.dte}`];
+   const ov = r.summary.overlap;
+   const days = (r.window.end_et - r.window.start_et) / 86400;
++  const P = S.publicSummary;
+   return (
+     <div className="public-summary">
+-      <p>Over these {days.toFixed(0)} days, the Sun is at least partly above the hills and crater rims around this spot
+-        for <strong className="sun">{fmtPct(sun.percent, 0)}</strong> of the time. The longest stretch of darkness lasts
+-        {" "}<strong className="sun">{fmtDuration(sun.longest_gap_h)}</strong>, which is how long a solar-powered lander would need to wait.</p>
+-      <p>Earth is in view, so a radio could point straight at it, for <strong className="earth">{fmtPct(earth.percent, 0)}</strong> of the
+-        time. Being in view does not guarantee a working link; antennas, power and ground stations matter too.</p>
+-      <p>Both happen together for {fmtPct(ov.percent, 0)} of the time. Those are the best hours for a mission that needs sunlight and a
+-        direct line home at once.</p>
++      <p>{rich(P.sunlight, { days: days.toFixed(0), percent: <strong className="sun">{fmtPct(sun.percent, 0)}</strong>,
++        gap: <strong className="sun">{fmtDuration(sun.longest_gap_h)}</strong> })}</p>
++      <p>{rich(P.earth, { percent: <strong className="earth">{fmtPct(earth.percent, 0)}</strong> })}</p>
++      <p>{P.both(fmtPct(ov.percent, 0))}</p>
+     </div>
+   );
+ }
+ 
+ function EventsTable({ r }: { r: Result }) {
+   const [open, setOpen] = useState(false);
++  const E = S.eventsTable;
+   return (
+     <div className="section">
+-      <h2>Events ({r.events.length}) <button className="toggle-table" onClick={() => setOpen(!open)} aria-expanded={open}>{open ? "Hide" : "Show"}</button></h2>
++      <h2>{E.heading(r.events.length)}{" "}<button className="toggle-table" onClick={() => setOpen(!open)} aria-expanded={open}>{open ? E.hide : E.show}</button></h2>
+       {open && (
+         <div className="table-scroll">
+-          <table className="data"><thead><tr><th>Time</th><th>Body</th><th>Event</th></tr></thead>
+-            <tbody>{r.events.map((e, k) => <tr key={k}><td>{fmtUTC(e.utc, true)}</td><td>{e.target === "sun" ? "Sun" : "Earth"}</td><td>{e.name}</td></tr>)}</tbody>
++          <table className="data"><thead><tr><th>{E.time}</th><th>{E.body}</th><th>{E.event}</th></tr></thead>
++            <tbody>{r.events.map((e, k) => <tr key={k}><td>{fmtUTC(e.utc, true)}</td><td>{e.target === "sun" ? S.common.bodies.sun : S.common.bodies.earth}</td><td>{e.name}</td></tr>)}</tbody>
+           </table>
+         </div>
+       )}
+@@ -144,15 +151,16 @@ function SeriesTable({ r }: { r: Result }) {
+   const s = r.series;
+   const step = Math.max(1, Math.ceil(s.utc.length / 400));
+   const idx = useMemo(() => s.utc.map((_, i) => i).filter((i) => i % step === 0), [s.utc, step]);
++  const Q = S.seriesTable;
+   return (
+     <div className="section">
+-      <h2>Chart data <button className="toggle-table" onClick={() => setOpen(!open)} aria-expanded={open}>{open ? "Hide table" : "Show table"}</button></h2>
++      <h2>{Q.heading}{" "}<button className="toggle-table" onClick={() => setOpen(!open)} aria-expanded={open}>{open ? Q.hide : Q.show}</button></h2>
+       {open && (
+         <div className="table-scroll">
+           <table className="data">
+-            <caption className="sr-only">Sun and Earth positions and visibility over the window</caption>
+-            <thead><tr><th>Time</th><th className="num">Sun az</th><th className="num">Sun el</th><th className="num">Sun visible</th>
+-              <th className="num">Earth az</th><th className="num">Earth el</th><th className="num">Earth visible</th></tr></thead>
++            <caption className="sr-only">{Q.caption}</caption>
++            <thead><tr><th>{Q.time}</th><th className="num">{Q.sunAz}</th><th className="num">{Q.sunEl}</th><th className="num">{Q.sunVisible}</th>
++              <th className="num">{Q.earthAz}</th><th className="num">{Q.earthEl}</th><th className="num">{Q.earthVisible}</th></tr></thead>
+             <tbody>{idx.map((i) => (
+               <tr key={i}><td>{fmtUTC(s.utc[i])}</td><td className="num">{fmtDeg(s.sun.az[i])}</td><td className="num">{fmtDeg(s.sun.el[i])}</td>
+                 <td className="num">{fmtFraction(s.sun.f[i])}</td>
+@@ -161,7 +169,7 @@ function SeriesTable({ r }: { r: Result }) {
+           </table>
+         </div>
+       )}
+-      {open && step > 1 && <p className="hint">Every {step}th sample shown; the CSV export has all of them.</p>}
++      {open && step > 1 && <p className="hint">{Q.decimated(step)}</p>}
+     </div>
+   );
+ }
+@@ -189,8 +197,8 @@ export function SiteView() {
+       <>
+         <Welcome />
+         <div className="grid-2" style={{ gridTemplateColumns: "1fr" }}>
+-          <section className="pane" aria-label="Map">
+-            <div className="pane-head"><h3>South polar map</h3></div>
++          <section className="pane" aria-label={S.common.mapRegion}>
++            <div className="pane-head"><h3>{S.common.southPolarMap}</h3></div>
+             <MapView lat={latN} lon={lonN} catalog={state.catalog} selectedId={s.siteId} onPick={pick} />
+           </section>
+         </div>
+@@ -205,40 +213,40 @@ export function SiteView() {
+     <div>
+       <div className="site-header">
+         <div>
+-          <h1 className="site-title">{r.site.name ?? "Custom site"}</h1>
+-          <div className="site-coords">{r.site.lat.toFixed(5)}°, {r.site.lon.toFixed(5)}° E; ground {r.site.ground_h_m.toFixed(1)} m
+-            above 1,737.4 km; {fmtUTC(r.window.start_utc)} to {fmtUTC(r.window.end_utc)}</div>
++          <h1 className="site-title">{r.site.name ?? T.customSite}</h1>
++          <div className="site-coords">{T.coords(r.site.lat.toFixed(5), r.site.lon.toFixed(5), r.site.ground_h_m.toFixed(1),
++            fmtUTC(r.window.start_utc), fmtUTC(r.window.end_utc))}</div>
+         </div>
+         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+-          <a className="quiet-button" href={`/api/results/${r.id}/series.csv`} download>Series CSV</a>
+-          <a className="quiet-button" href={`/api/results/${r.id}/events.csv`} download>Events CSV</a>
+-          <a className="quiet-button" href={`/api/results/${r.id}/intervals.csv`} download>Intervals CSV</a>
+-          <a className="quiet-button" href={`/api/results/${r.id}/result.json`} download>Full result JSON</a>
++          <a className="quiet-button" href={`/api/results/${r.id}/series.csv`} download>{T.downloads.series}</a>
++          <a className="quiet-button" href={`/api/results/${r.id}/events.csv`} download>{T.downloads.events}</a>
++          <a className="quiet-button" href={`/api/results/${r.id}/intervals.csv`} download>{T.downloads.intervals}</a>
++          <a className="quiet-button" href={`/api/results/${r.id}/result.json`} download>{T.downloads.result}</a>
+         </div>
+       </div>
+       <div style={{ padding: "0 24px 10px" }}><LabelChips result={r} /></div>
+ 
+       {state.mode === "public" && <PublicSummary r={r} />}
+ 
+-      <section className="panorama-wrap" aria-label="Horizon panorama">
++      <section className="panorama-wrap" aria-label={T.panoramaRegion}>
+         <div className="panorama-head">
+-          <h2>What the horizon looks like from here</h2>
++          <h2>{T.panoramaHeading}</h2>
+           <div className="legend">
+-            <span><i style={{ background: "var(--sun)" }} />Sun path</span>
+-            <span><i style={{ background: "var(--earth)" }} />Earth path</span>
+-            <span><i style={{ background: "var(--terrain)", height: 8 }} />Terrain ({r.horizon.site_level} near field)</span>
+-            {r.horizon.incomplete_share > 0 && <span><i style={{ background: "repeating-linear-gradient(45deg,#ee9a6b 0 2px,transparent 2px 5px)", height: 8 }} />Coverage ran out: lower bound</span>}
++            <span><i style={{ background: "var(--sun)" }} />{T.legend.sunPath}</span>
++            <span><i style={{ background: "var(--earth)" }} />{T.legend.earthPath}</span>
++            <span><i style={{ background: "var(--terrain)", height: 8 }} />{T.legend.terrain(r.horizon.site_level)}</span>
++            {r.horizon.incomplete_share > 0 && <span><i style={{ background: "repeating-linear-gradient(45deg,#ee9a6b 0 2px,transparent 2px 5px)", height: 8 }} />{T.legend.coverageRanOut}</span>}
+           </div>
+         </div>
+         <HorizonPanorama result={r} cursor={i} />
+-        <p className="hint" style={{ margin: "2px 0 0" }}>Elevation is stretched relative to azimuth so low terrain is readable. Disks are drawn at true angular size.</p>
++        <p className="hint" style={{ margin: "2px 0 0" }}>{T.panoramaHint}</p>
+       </section>
+ 
+       <Readout r={r} i={i} />
+       <div className="scrubber">
+         <button className="play" onClick={() => dispatch({ type: "playing", playing: !state.playing })}
+-                aria-label={state.playing ? "Pause animation" : "Play animation"}>{state.playing ? "❚❚" : "▶"}</button>
+-        <input type="range" min={0} max={r.series.et.length - 1} value={i} aria-label="Time cursor"
++                aria-label={state.playing ? T.pause : T.play}>{state.playing ? T.pauseIcon : T.playIcon}</button>
++        <input type="range" min={0} max={r.series.et.length - 1} value={i} aria-label={T.timeCursor}
+                onChange={(e) => dispatch({ type: "cursor", cursor: Number(e.target.value) })} />
+         <span className="cursor-time">{fmtUTC(r.series.utc[i])}</span>
+       </div>
+@@ -246,12 +254,12 @@ export function SiteView() {
+       <Timeline result={r} cursor={i} onCursor={(c) => dispatch({ type: "cursor", cursor: c })} />
+ 
+       <div className="grid-2">
+-        <section className="pane" aria-label="Map">
+-          <div className="pane-head"><h3>South polar map</h3></div>
++        <section className="pane" aria-label={S.common.mapRegion}>
++          <div className="pane-head"><h3>{S.common.southPolarMap}</h3></div>
+           <MapView lat={r.site.lat} lon={r.site.lon} catalog={state.catalog} selectedId={r.site.id} onPick={pick} />
+         </section>
+-        <section className="pane" aria-label="3D terrain">
+-          <div className="pane-head"><h3>Terrain in 3D at the cursor time</h3></div>
++        <section className="pane" aria-label={T.terrainRegion}>
++          <div className="pane-head"><h3>{T.terrainHeading}</h3></div>
+           <Terrain3D result={r} cursor={i} />
+         </section>
+       </div>
+@@ -260,7 +268,7 @@ export function SiteView() {
+       {state.mode === "public" && <div style={{ marginTop: 22 }}><Figures r={r} /></div>}
+ 
+       <div className="notes">
+-        {synthetic && <div className="note alert">This result uses synthetic test terrain. It is not a lunar result.</div>}
++        {synthetic && <div className="note alert">{T.syntheticAlert}</div>}
+         <div className="note radio">{r.geometric_not_radio}</div>
+         {r.warnings.map((w, k) => <div className="note alert" key={k}>{w}</div>)}
+       </div>
+diff --git a/frontend/src/components/Terrain3D.tsx b/frontend/src/components/Terrain3D.tsx
+index 46a1a66..421288f 100644
+--- a/frontend/src/components/Terrain3D.tsx
++++ b/frontend/src/components/Terrain3D.tsx
+@@ -3,6 +3,7 @@ import * as THREE from "three";
+ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+ import { api } from "../api/client";
+ import type { Result, TerrainGrid } from "../api/types";
++import { S } from "../i18n";
+ 
+ interface Props { result: Result; cursor: number }
+ 
+@@ -32,7 +33,7 @@ export function Terrain3D({ result, cursor }: Props) {
+     try {
+       renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+     } catch {
+-      setErr("WebGL is not available in this browser, so the 3D view is off.");
++      setErr(S.terrain3d.noWebGL);
+       return;
+     }
+     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+@@ -117,13 +118,14 @@ export function Terrain3D({ result, cursor }: Props) {
+   return (
+     <>
+       <div className="pane-body">
+-        <div className="three-host" ref={host} aria-label="3D terrain around the site lit by the computed Sun direction" role="img" />
+-        {(err || !grid) && <div className="pane-empty">{err ?? "Loading terrain."}</div>}
++        <div className="three-host" ref={host} aria-label={S.terrain3d.label} role="img" />
++        {(err || !grid) && <div className="pane-empty">{err ?? S.terrain3d.loading}</div>}
+       </div>
+       <div className="pane-note" style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+-        <span>{grid ? `${/SYNTHETIC/i.test(grid.product ?? "") ? `Synthetic test heights (${grid.level}), not lunar data` : `${grid.level} LOLA heights`}, ${radiusKm} km radius, display-averaged. Gold marks the Sun, blue marks Earth; faint fill light is for legibility only.` : "\u00a0"}</span>
+-        <label>Vertical ×{" "}
+-          <select value={exag} onChange={(e) => setExag(Number(e.target.value))} aria-label="Vertical exaggeration">
++        <span>{grid ? S.terrain3d.note(/SYNTHETIC/i.test(grid.product ?? "") ? S.terrain3d.syntheticHeights(grid.level)
++          : S.terrain3d.lolaHeights(grid.level), radiusKm) : "\u00a0"}</span>
++        <label>{S.terrain3d.exaggeration}{" "}
++          <select value={exag} onChange={(e) => setExag(Number(e.target.value))} aria-label={S.terrain3d.exaggerationLabel}>
+             {[1, 2, 4].map((v) => <option key={v} value={v}>{v}</option>)}
+           </select>
+         </label>
+diff --git a/frontend/src/components/Timeline.tsx b/frontend/src/components/Timeline.tsx
+index 1b4f80d..7747605 100644
+--- a/frontend/src/components/Timeline.tsx
++++ b/frontend/src/components/Timeline.tsx
+@@ -1,6 +1,7 @@
+ import * as d3 from "d3";
+ import { useMemo } from "react";
+ import type { Interval, Result } from "../api/types";
++import { S, timeLocale } from "../i18n";
+ import { RULE_NAMES } from "../lib/format";
+ import { useWidth } from "../lib/useWidth";
+ 
+@@ -10,9 +11,9 @@ export function Timeline({ result, cursor, onCursor }: Props) {
+   const [ref, width] = useWidth<HTMLDivElement>();
+   const p = result.provenance.parameters.rules;
+   const rows: { key: string; label: string; color: string }[] = [
+-    { key: `sun_${p.sunlit}`, label: `Sunlit (${RULE_NAMES[p.sunlit].toLowerCase()})`, color: "#f2b544" },
+-    { key: `earth_${p.dte}`, label: `Earth in view (${RULE_NAMES[p.dte].toLowerCase()})`, color: "#5fa8e8" },
+-    { key: "overlap", label: "Sunlit and Earth in view", color: "#e9dfb8" },
++    { key: `sun_${p.sunlit}`, label: S.timeline.sunlit(RULE_NAMES[p.sunlit].toLowerCase()), color: "#f2b544" },
++    { key: `earth_${p.dte}`, label: S.timeline.earthInView(RULE_NAMES[p.dte].toLowerCase()), color: "#5fa8e8" },
++    { key: "overlap", label: S.timeline.overlap, color: "#e9dfb8" },
+   ];
+   const W = Math.max(320, width);
+   const m = { l: 190, r: 12, t: 8, b: 26 };
+@@ -23,6 +24,7 @@ export function Timeline({ result, cursor, onCursor }: Props) {
+   const x = useMemo(() => d3.scaleUtc().domain([t0, t1]).range([m.l, W - m.r]), [t0, t1, W]);
+   const etToMs = (et: number) => t0 + (et - result.window.start_et) * 1000;
+   const curEt = result.series.et[cursor];
++  const tickFormat = timeLocale.utcFormat(S.timeline.tickFormat);
+   const eclipses = result.events.filter((e) => e.function === "ecl_contact");
+ 
+   const bar = (iv: Interval, color: string, yy: number, k: number) => {
+@@ -42,7 +44,7 @@ export function Timeline({ result, cursor, onCursor }: Props) {
+   return (
+     <div className="timeline-wrap" ref={ref}>
+       <svg viewBox={`0 0 ${W} ${H}`} role="img"
+-           aria-label="Timeline of sunlit, Earth-visible and overlapping intervals; click to move the time cursor"
++           aria-label={S.timeline.label}
+            onClick={(e) => {
+              const r = (e.currentTarget as SVGSVGElement).getBoundingClientRect();
+              const ms = x.invert(((e.clientX - r.left) / r.width) * W).getTime();
+@@ -71,7 +73,7 @@ export function Timeline({ result, cursor, onCursor }: Props) {
+         {x.ticks(Math.max(3, Math.floor(W / 140))).map((t) => (
+           <g key={t.getTime()}>
+             <line x1={x(t)} x2={x(t)} y1={H - m.b} y2={H - m.b + 4} stroke="#7d8d9d" />
+-            <text x={x(t)} y={H - 8} textAnchor="middle" fontSize="11" fill="#a3b1bf">{d3.utcFormat("%d %b %H:%M")(t)}</text>
++            <text x={x(t)} y={H - 8} textAnchor="middle" fontSize="11" fill="#a3b1bf">{tickFormat(t)}</text>
+           </g>
+         ))}
+         <line x1={x(etToMs(curEt))} x2={x(etToMs(curEt))} y1={m.t - 4} y2={H - m.b} stroke="#ffd98a" strokeWidth={1.5} />
+diff --git a/frontend/src/components/TopBar.tsx b/frontend/src/components/TopBar.tsx
+index dd93d6a..c29374f 100644
+--- a/frontend/src/components/TopBar.tsx
++++ b/frontend/src/components/TopBar.tsx
+@@ -1,11 +1,8 @@
++import { S } from "../i18n";
+ import { useStore, type Tab } from "../state/store";
+ 
+-const TABS: { id: Tab; label: string }[] = [
+-  { id: "site", label: "Site" },
+-  { id: "compare", label: "Compare" },
+-  { id: "data", label: "Data and validation" },
+-  { id: "guide", label: "Guide" },
+-];
++const T = S.topBar;
++const TABS: Tab[] = ["site", "compare", "data", "guide"];
+ 
+ export function TopBar() {
+   const { state, dispatch } = useStore();
+@@ -16,25 +13,25 @@ export function TopBar() {
+   return (
+     <header className="topbar">
+       <div className="brand">
+-        <span className="brand-mark">LUNA-OPS</span>
+-        <span className="brand-sub">Lunar Landing Site Navigator</span>
++        <span className="brand-mark">{S.app.brand}</span>
++        <span className="brand-sub">{S.app.tagline}</span>
+       </div>
+-      <nav className="tabs" role="tablist" aria-label="Views">
+-        {TABS.map((t) => (
+-          <button key={t.id} role="tab" className="tab" aria-selected={state.tab === t.id}
+-                  onClick={() => dispatch({ type: "tab", tab: t.id })}>{t.label}</button>
++      <nav className="tabs" role="tablist" aria-label={T.tabsLabel}>
++        {TABS.map((id) => (
++          <button key={id} role="tab" className="tab" aria-selected={state.tab === id}
++                  onClick={() => dispatch({ type: "tab", tab: id })}>{T.tabs[id]}</button>
+         ))}
+       </nav>
+       <div className="topbar-right">
+-        <span className="data-pill" title="Kernel and terrain status">
++        <span className="data-pill" title={T.statusTitle}>
+           <span className={`dot ${kernelOk ? "ok" : "warn"}`} aria-hidden />
+-          {!ks ? "Connecting" : ks.loaded ? (ks.profile === "production" ? "NAIF kernels" : "Test kernels") : "No kernels"}
++          {!ks ? T.connecting : ks.loaded ? (ks.profile === "production" ? T.naifKernels : T.testKernels) : T.noKernels}
+           <span className={`dot ${nLevels && !terrain?.synthetic_in_use ? "ok" : "warn"}`} aria-hidden />
+-          {nLevels ? (terrain?.synthetic_in_use ? "Synthetic terrain" : `LOLA terrain, ${nLevels} product${nLevels === 1 ? "" : "s"}`) : "No terrain"}
++          {nLevels ? (terrain?.synthetic_in_use ? T.syntheticTerrain : T.lolaTerrain(nLevels)) : T.noTerrain}
+         </span>
+-        <div className="mode-switch" role="group" aria-label="Viewing mode">
+-          <button aria-pressed={state.mode === "technical"} onClick={() => dispatch({ type: "mode", mode: "technical" })}>Technical</button>
+-          <button aria-pressed={state.mode === "public"} onClick={() => dispatch({ type: "mode", mode: "public" })}>Public</button>
++        <div className="mode-switch" role="group" aria-label={T.modeLabel}>
++          <button aria-pressed={state.mode === "technical"} onClick={() => dispatch({ type: "mode", mode: "technical" })}>{T.modes.technical}</button>
++          <button aria-pressed={state.mode === "public"} onClick={() => dispatch({ type: "mode", mode: "public" })}>{T.modes.public}</button>
+         </div>
+       </div>
+     </header>
+diff --git a/frontend/src/components/Welcome.tsx b/frontend/src/components/Welcome.tsx
+index 5898897..43ac620 100644
+--- a/frontend/src/components/Welcome.tsx
++++ b/frontend/src/components/Welcome.tsx
+@@ -1,36 +1,35 @@
++import { S } from "../i18n";
+ import { useStore } from "../state/store";
+ 
++const W = S.welcome;
++
+ export function Welcome() {
+   const { state } = useStore();
+   const st = state.status;
+   const levels = st ? Object.keys(st.terrain.levels) : [];
+   const rows: { ok: boolean | null; text: string }[] = [
+     { ok: st ? !!st.kernels.loaded && st.kernels.profile === "production" : null,
+-      text: !st ? "Connecting to the LUNA-OPS engine" : st.kernels.loaded
+-        ? (st.kernels.profile === "production" ? `NAIF kernels loaded, frame ${st.kernels.frame}` : `Test kernels loaded (${st.kernels.frame}); download the NAIF set for real results`)
+-        : `No SPICE kernels: ${st.kernels.error ?? ""}` },
++      text: !st ? W.connecting : st.kernels.loaded
++        ? (st.kernels.profile === "production" ? W.naifKernels(st.kernels.frame) : W.testKernels(st.kernels.frame))
++        : W.noKernels(st.kernels.error ?? "") },
+     { ok: st ? levels.length > 0 && !st.terrain.synthetic_in_use : null,
+-      text: !st ? "Checking terrain" : levels.length
+-        ? (st.terrain.synthetic_in_use ? `Synthetic test terrain (${levels.join(", ")}): not lunar data` : `LOLA terrain products: ${levels.join(", ")}`)
+-        : "No LOLA terrain registered yet" },
+-    { ok: state.catalog.length > 0, text: state.catalog.length ? `${state.catalog.length} curated sites from registered sources` : "No curated sites registered; custom coordinates work" },
+-    { ok: st?.validation ? true : null, text: st?.validation ? `Validation report from ${st.validation.run_utc} (${st.validation.kernel_profile} kernels)` : "No validation report yet" },
++      text: !st ? W.checkingTerrain : levels.length
++        ? (st.terrain.synthetic_in_use ? W.syntheticTerrain(levels.join(", ")) : W.lolaTerrain(levels.join(", ")))
++        : W.noTerrain },
++    { ok: state.catalog.length > 0, text: state.catalog.length ? W.curatedSites(state.catalog.length) : W.noCuratedSites },
++    { ok: st?.validation ? true : null, text: st?.validation ? W.validationReport(st.validation.run_utc, st.validation.kernel_profile) : W.noValidationReport },
+   ];
+   return (
+     <section className="welcome" aria-labelledby="welcome-title">
+-      <h1 id="welcome-title">Where does the Sun reach, and where can you see Earth?</h1>
+-      <p>Choose a south polar site and a date range. LUNA-OPS traces the real terrain horizon from LOLA elevation data,
+-        places the Sun and Earth with NASA's SPICE ephemerides, and shows when the site is sunlit, when Earth is in view,
+-        and when both happen at once.</p>
+-      <ul className="welcome-status" aria-label="Data readiness">
++      <h1 id="welcome-title">{W.title}</h1>
++      <p>{W.intro}</p>
++      <ul className="welcome-status" aria-label={W.readinessLabel}>
+         {rows.map((r, k) => (
+           <li key={k}><span className={`dot ${r.ok === null ? "" : r.ok ? "ok" : "warn"}`} aria-hidden /> {r.text}</li>
+         ))}
+       </ul>
+       <div className="steps">
+-        <div><h3>Pick a site</h3><p>Use a curated site, click the map below, or type coordinates in the panel on the left.</p></div>
+-        <div><h3>Set the dates</h3><p>Any UTC window inside the kernel coverage. Event times are found to the second.</p></div>
+-        <div><h3>Read the results</h3><p>The horizon panorama, timeline, map and 3D view all show the same computed result.</p></div>
++        {W.steps.map((step) => <div key={step.title}><h3>{step.title}</h3><p>{step.text}</p></div>)}
+       </div>
+     </section>
+   );
+diff --git a/frontend/src/lib/format.ts b/frontend/src/lib/format.ts
+index 9a3d34a..429a457 100644
+--- a/frontend/src/lib/format.ts
++++ b/frontend/src/lib/format.ts
+@@ -1,49 +1,47 @@
+-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
++import { S } from "../i18n";
++
++// Text comes from src/i18n/en.ts (C10); this file only arranges numbers and dates into it.
++const F = S.format;
++const MONTHS = F.timeLocale.shortMonths;
+ 
+ export function fmtUTC(iso: string, withSeconds = false): string {
+   const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/.exec(iso);
+   if (!m) return iso;
+   const [, y, mo, d, h, mi, s] = m;
+-  return `${Number(d)} ${MONTHS[Number(mo) - 1]} ${y}, ${h}:${mi}${withSeconds ? ":" + s : ""} UTC`;
++  return F.utc(Number(d), MONTHS[Number(mo) - 1], y, withSeconds ? F.timeHMS(h, mi, s) : F.timeHM(h, mi));
+ }
+ 
+ export function fmtShortDate(iso: string): string {
+   const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(iso);
+-  return m ? `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[4]}:${m[5]}` : iso;
++  return m ? F.shortDate(Number(m[3]), MONTHS[Number(m[2]) - 1], F.timeHM(m[4], m[5])) : iso;
+ }
+ 
+ export function fmtDuration(hours: number | null | undefined): string {
+-  if (hours == null || !isFinite(hours)) return "n/a";
++  if (hours == null || !isFinite(hours)) return S.common.na;
+   const totalMin = Math.round(hours * 60);
+-  if (totalMin < 1) return "<1 min";
++  if (totalMin < 1) return F.lessThanOneMinute;
+   const d = Math.floor(totalMin / 1440);
+   const h = Math.floor((totalMin % 1440) / 60);
+   const m = totalMin % 60;
+-  if (d > 0) return `${d} d ${h} h`;
+-  if (h > 0) return `${h} h ${m} min`;
+-  return `${m} min`;
++  if (d > 0) return F.durationDays(d, h);
++  if (h > 0) return F.durationHours(h, m);
++  return F.durationMinutes(m);
+ }
+ 
+ export function fmtCountdown(seconds: number): string {
+-  if (seconds < 0) return "passed";
++  if (seconds < 0) return F.countdownPassed;
+   return fmtDuration(seconds / 3600);
+ }
+ 
+-export const fmtDeg = (v: number | null | undefined, d = 2) => (v == null || !isFinite(v) ? "n/a" : `${v.toFixed(d)}°`);
+-export const fmtPct = (v: number | null | undefined, d = 1) => (v == null || !isFinite(v) ? "n/a" : `${v.toFixed(d)}%`);
+-export const fmtNum = (v: number | null | undefined, d = 3) => (v == null || !isFinite(v) ? "n/a" : v.toFixed(d));
++export const fmtDeg = (v: number | null | undefined, d = 2) => (v == null || !isFinite(v) ? S.common.na : F.degrees(v.toFixed(d)));
++export const fmtPct = (v: number | null | undefined, d = 1) => (v == null || !isFinite(v) ? S.common.na : F.percent(v.toFixed(d)));
++export const fmtNum = (v: number | null | undefined, d = 3) => (v == null || !isFinite(v) ? S.common.na : v.toFixed(d));
+ 
+-export const RULE_NAMES: Record<string, string> = {
+-  any: "Any part visible",
+-  centre: "Centre visible",
+-  full: "Whole disk plus margin",
+-};
++/** Display names of the visibility rules, keyed by the API's rule value. */
++export const RULE_NAMES: Record<string, string> = S.rules;
+ 
+-export const PANEL_NAMES: Record<string, string> = {
+-  vertical_tracking: "Vertical, tracking the Sun",
+-  horizontal: "Horizontal",
+-  fixed_vertical: "Vertical, fixed azimuth",
+-};
++/** Display names of the reference panels, keyed by the API's panel model. */
++export const PANEL_NAMES: Record<string, string> = S.panels;
+ 
+ export function isoNoMs(d: Date): string {
+   return d.toISOString().replace(/\.\d{3}Z$/, "Z");
+@@ -59,9 +57,9 @@ export function fromInputValue(v: string): string {
+ 
+ /** Visible fraction as a percentage that never rounds a partial disk up to 100% or down to 0%. */
+ export function fmtFraction(v: number | null | undefined): string {
+-  if (v == null || !isFinite(v)) return "unknown";
+-  if (v >= 1) return "100%";
+-  if (v <= 0) return "0%";
++  if (v == null || !isFinite(v)) return S.common.unknown;
++  if (v >= 1) return F.percent("100");
++  if (v <= 0) return F.percent("0");
+   const p = v * 100;
+-  return `${Math.min(99.9, Math.max(0.1, p)).toFixed(p < 10 || p > 90 ? 1 : 0)}%`;
++  return F.percent(Math.min(99.9, Math.max(0.1, p)).toFixed(p < 10 || p > 90 ? 1 : 0));
+ }
+diff --git a/frontend/src/main.tsx b/frontend/src/main.tsx
+index d3280fa..e2af9c9 100644
+--- a/frontend/src/main.tsx
++++ b/frontend/src/main.tsx
+@@ -3,8 +3,11 @@ import { createRoot } from "react-dom/client";
+ import "./styles/app.css";
+ import "ol/ol.css";
+ import App from "./App";
++import { S } from "./i18n";
+ import { StoreProvider } from "./state/store";
+ 
++document.title = S.app.documentTitle; // same text as the static <title> in index.html (checked by check:strings)
++
+ createRoot(document.getElementById("root")!).render(
+   <StrictMode>
+     <StoreProvider>
+diff --git a/frontend/src/state/store.tsx b/frontend/src/state/store.tsx
+index 05b3931..5e528b4 100644
+--- a/frontend/src/state/store.tsx
++++ b/frontend/src/state/store.tsx
+@@ -1,6 +1,7 @@
+ import { createContext, useCallback, useContext, useEffect, useMemo, useReducer, useRef, type ReactNode } from "react";
+ import { api, waitForJob } from "../api/client";
+ import type { CatalogSite, Comparison, Job, ObserverProfile, PanelModel, Result, Rule, Status } from "../api/types";
++import { S } from "../i18n";
+ import { isoNoMs } from "../lib/format";
+ 
+ export interface Settings {
+@@ -109,7 +110,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
+     api.status().then((st) => dispatch({ type: "status", status: st, error: null }))
+       .catch((e) => dispatch({ type: "status", status: null, error: String(e.message || e) }));
+     api.catalog().then((c) => dispatch({ type: "catalog", sites: c.sites, reason: c.empty_reason }))
+-      .catch(() => dispatch({ type: "catalog", sites: [], reason: "The catalogue could not be loaded." }));
++      .catch(() => dispatch({ type: "catalog", sites: [], reason: S.errors.catalogue }));
+   }, []);
+ 
+   const openResult = useCallback(async (id: string) => {
+@@ -126,7 +127,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
+       let rid = r.result_id;
+       if (!rid && r.job_id) {
+         const j = await waitForJob(r.job_id, (job) => dispatch({ type: "job", job }));
+-        if (j.status === "error") throw new Error(j.error || "The analysis stopped.");
++        if (j.status === "error") throw new Error(j.error || S.errors.analysisStopped);
+         rid = j.result_id;
+       }
+       if (rid) await openResult(rid);
+@@ -151,7 +152,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
+       };
+       const { job_id } = await api.compare(body);
+       const j = await waitForJob(job_id, (job) => dispatch({ type: "compareJob", job }));
+-      if (j.status === "error" || !j.result_id) throw new Error(j.error || "The comparison stopped.");
++      if (j.status === "error" || !j.result_id) throw new Error(j.error || S.errors.comparisonStopped);
+       dispatch({ type: "comparison", comparison: await api.comparison(j.result_id) });
+     } catch (e: any) {
+       dispatch({ type: "compareError", error: String(e.message || e) });

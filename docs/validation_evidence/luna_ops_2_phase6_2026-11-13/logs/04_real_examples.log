@@ -1,0 +1,7 @@
+{"case": "site01_7d_direct_and_H1", "simulate_s": 0.37, "relink_s": 0.069, "memory_mb": [90.1, 90.1], "relay_samples": 10082}
+{"case": "lat89_lon200_7d_no_dte_H1", "simulate_s": 0.28, "relink_s": 0.067, "memory_mb": [93.6, 94.6], "relay_samples": 10081}
+{"case": "lat89_lon200_7d_no_dte_H2", "simulate_s": 0.5, "relink_s": 0.129, "memory_mb": [102.6, 102.6], "relay_samples": 20161}
+{"case": "lat89_lon200_7d_no_dte_H3_frame_demo", "simulate_s": 0.48, "relink_s": 0.115, "memory_mb": [104.9, 106.1], "relay_samples": 20161}
+{"case": "lat84_lon359_30d_H1", "simulate_s": 2.25, "relink_s": 0.628, "memory_mb": [117.9, 119.9], "relay_samples": 43201}
+{"case": "lat78_lon22_30d_terrain_blocked_H1", "simulate_s": 3.79, "relink_s": 0.354, "memory_mb": [123.7, 129.4], "relay_samples": 43201}
+{"memory_start_mb": [67.4, 67.9], "memory_end_mb": [123.7, 129.4]}

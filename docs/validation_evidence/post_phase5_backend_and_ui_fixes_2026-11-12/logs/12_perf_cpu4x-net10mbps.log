@@ -1,0 +1,8 @@
+15:44:59 cpu4x-net10mbps cold 1
+15:45:05 cpu4x-net10mbps cold 2
+15:45:10 cpu4x-net10mbps cold 3
+15:45:13 cpu4x-net10mbps warm 1
+15:45:16 cpu4x-net10mbps warm 2
+15:45:59 cpu4x-net10mbps phase5 done
+cpu4x-net10mbps: cold appReady 1772.2 ms, FCP 1132, LCP 1132, TBT 280, JS 771.7 KB; warm appReady 1475.6; complete=true
+phase5 {"tabToMissionMs":137.9,"tabMissionToSiteMs":71.8,"globeToCanvasMs":1069.7,"globeToImageryMs":1310.1,"globeImageryKB":556.7,"globeKeySteps":{"interactions":10,"medianMs":16,"p95Ms":48,"maxMs":48},"terrainToCanvasMs":195.8,"terrainToDataMs":397.7,"terrainKeySteps":{"interactions":10,"medianMs":16,"p95Ms":32,"maxMs":32},"globeRemount":{"cycles":5,"before":{"heapMB":25.3,"nodes":431,"listeners":196},"after":{"heapMB":26,"nodes":456,"listeners":201},"heapGrowthMB":0.7,"nodeGrowth":25,"listenerGrowth":5,"canvasesInDom":1,"newConsoleWarnings":[]},"terrainRemount":{"cycles":5,"before":{"heapMB":26.4,"nodes":514,"listeners":191},"after":{"heapMB":26.6,"nodes":519,"listeners":196},"heapGrowthMB":0.2,"nodeGrowth":5,"listenerGrowth":5,"canvasesInDom":1,"newConsoleWarnings":[]},"heapAfterPhase5MB":26.6}

@@ -1,0 +1,904 @@
+{
+ "site": "Site01 position, synthetic horizons",
+ "dt_s": 0.5,
+ "cases": [
+  {
+   "case": "short window: notch clears the top-edge path by 0.0002 mdeg",
+   "rule": "sun_any",
+   "interval_s": 7200.0,
+   "reference_windows": 1,
+   "matched": [
+    {
+     "ref_start_s": 3391.773441672325,
+     "ref_end_s": 3400.5607649087906,
+     "ref_duration_s": 8.787323236465454,
+     "start_err_s": 0.2967948913574219,
+     "end_err_s": -0.4905283451080322,
+     "duration_err_s": -0.7873232364654541,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 2571,
+    "s": 7.4,
+    "summary": {
+     "hours": 0.0022222222222222222,
+     "percent": 0.1111111111111111,
+     "windows": 1,
+     "longest_window_h": 0.0022222222222222222,
+     "longest_gap_h": 1.055536045398977,
+     "unknown_hours": 0.0,
+     "brief_windows": 1,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 2
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": false,
+     "duration_s": 3392.0702365636826,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 8.0,
+     "brief": true,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 3799.9297634363174,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "short window: notch clears the top-edge path by 0.0010 mdeg",
+   "rule": "sun_any",
+   "interval_s": 7200.0,
+   "reference_windows": 1,
+   "matched": [
+    {
+     "ref_start_s": 3389.7545866966248,
+     "ref_end_s": 3402.5779366493225,
+     "ref_duration_s": 12.823349952697754,
+     "start_err_s": -0.09542965888977051,
+     "end_err_s": 0.08122038841247559,
+     "duration_err_s": 0.1766500473022461,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 2572,
+    "s": 8.7,
+    "summary": {
+     "hours": 0.003611111111111111,
+     "percent": 0.18055555555555555,
+     "windows": 1,
+     "longest_window_h": 0.003611111111111111,
+     "longest_gap_h": 1.0548169008228514,
+     "unknown_hours": 0.0,
+     "brief_windows": 1,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 2
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": false,
+     "duration_s": 3389.659157037735,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 13.0,
+     "brief": true,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 3797.340842962265,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "short window: notch clears the top-edge path by 0.0050 mdeg",
+   "rule": "sun_any",
+   "interval_s": 7200.0,
+   "reference_windows": 1,
+   "matched": [
+    {
+     "ref_start_s": 3383.5703464746475,
+     "ref_end_s": 3408.759831905365,
+     "ref_duration_s": 25.18948543071747,
+     "start_err_s": 0.05100512504577637,
+     "end_err_s": -0.1384803056716919,
+     "duration_err_s": -0.18948543071746826,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 2576,
+    "s": 7.8,
+    "summary": {
+     "hours": 0.006944444444444444,
+     "percent": 0.3472222222222222,
+     "windows": 1,
+     "longest_window_h": 0.006944444444444444,
+     "longest_gap_h": 1.0531607356667518,
+     "unknown_hours": 0.0,
+     "brief_windows": 1,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 2
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": false,
+     "duration_s": 3383.6213515996933,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 25.0,
+     "brief": true,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 3791.3786484003067,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "short window: notch clears the top-edge path by 0.0300 mdeg",
+   "rule": "sun_any",
+   "interval_s": 7200.0,
+   "reference_windows": 1,
+   "matched": [
+    {
+     "ref_start_s": 3350.1891219615936,
+     "ref_end_s": 3442.1400496959686,
+     "ref_duration_s": 91.950927734375,
+     "start_err_s": 0.3829054832458496,
+     "end_err_s": 0.4319777488708496,
+     "duration_err_s": 0.049072265625,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 2600,
+    "s": 8.0,
+    "summary": {
+     "hours": 0.025555555555555557,
+     "percent": 1.2777777777777777,
+     "windows": 1,
+     "longest_window_h": 0.025555555555555557,
+     "longest_gap_h": 1.0437299923764334,
+     "unknown_hours": 0.0,
+     "brief_windows": 1,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 2
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": false,
+     "duration_s": 3350.5720274448395,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 92.0,
+     "brief": true,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 3757.4279725551605,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "short window: notch clears the top-edge path by 0.2000 mdeg",
+   "rule": "sun_any",
+   "interval_s": 7200.0,
+   "reference_windows": 1,
+   "matched": [
+    {
+     "ref_start_s": 3185.861465573311,
+     "ref_end_s": 3606.4644854068756,
+     "ref_duration_s": 420.60301983356476,
+     "start_err_s": 0.2669229507446289,
+     "end_err_s": -0.26980459690093994,
+     "duration_err_s": -0.5367275476455688,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 2696,
+    "s": 9.1,
+    "summary": {
+     "hours": 0.11668508119053311,
+     "percent": 5.834254059526655,
+     "windows": 1,
+     "longest_window_h": 0.11668508119053311,
+     "longest_gap_h": 0.9982792553305626,
+     "unknown_hours": 0.0,
+     "brief_windows": 1,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 2
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": false,
+     "duration_s": 3186.1283885240555,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 420.0662922859192,
+     "brief": true,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 3593.8053191900253,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "several windows: five notches",
+   "rule": "sun_any",
+   "interval_s": 14400.0,
+   "reference_windows": 4,
+   "matched": [
+    {
+     "ref_start_s": 2431.5997664928436,
+     "ref_end_s": 2977.0591493844986,
+     "ref_duration_s": 545.459382891655,
+     "start_err_s": 0.4387948513031006,
+     "end_err_s": -0.45860373973846436,
+     "duration_err_s": -0.8973985910415649,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    },
+    {
+     "ref_start_s": 4180.580094575882,
+     "ref_end_s": 5524.6538116931915,
+     "ref_duration_s": 1344.0737171173096,
+     "start_err_s": 0.3729959726333618,
+     "end_err_s": -0.11397123336791992,
+     "duration_err_s": -0.48696720600128174,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    },
+    {
+     "ref_start_s": 8723.533971428871,
+     "ref_end_s": 10958.290585160255,
+     "ref_duration_s": 2234.7566137313843,
+     "start_err_s": 0.33661937713623047,
+     "end_err_s": -0.23294448852539062,
+     "duration_err_s": -0.5695638656616211,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    },
+    {
+     "ref_start_s": 11904.222379684448,
+     "ref_end_s": 12046.88473212719,
+     "ref_duration_s": 142.6623524427414,
+     "start_err_s": 0.2958613634109497,
+     "end_err_s": 0.176355242729187,
+     "duration_err_s": -0.1195061206817627,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 1866,
+    "s": 6.3,
+    "summary": {
+     "hours": 1.1846885084443621,
+     "percent": 29.617212711109055,
+     "windows": 4,
+     "longest_window_h": 0.6206075138515896,
+     "longest_gap_h": 0.8887029862072733,
+     "unknown_hours": 0.0,
+     "brief_windows": 2,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 8
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": false,
+     "duration_s": 2432.0385613441467,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 544.5619843006134,
+     "brief": true,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 1204.3525449037552,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 1343.5867499113083,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 3199.330750346184,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 2234.1870498657227,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 946.4606003761292,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 142.54284632205963,
+     "brief": true,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 2352.938912630081,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "window open at the analysis start (ends inside)",
+   "rule": "sun_any",
+   "interval_s": 3600.0,
+   "reference_windows": 1,
+   "matched": [
+    {
+     "ref_start_s": 0.0,
+     "ref_end_s": 3599.5,
+     "ref_duration_s": 3599.5,
+     "start_err_s": 0.0,
+     "end_err_s": 0.5,
+     "duration_err_s": 0.5,
+     "starts_at_analysis_start": 1.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 42,
+    "s": 0.1,
+    "summary": {
+     "hours": 1.0,
+     "percent": 100.0,
+     "windows": 1,
+     "longest_window_h": 1.0,
+     "longest_gap_h": 0.0,
+     "unknown_hours": 0.0,
+     "brief_windows": 0,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 0
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": true,
+     "duration_s": 3600.0,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "window open at the analysis end (starts inside)",
+   "rule": "sun_any",
+   "interval_s": 3600.0,
+   "reference_windows": 1,
+   "matched": [
+    {
+     "ref_start_s": 0.0,
+     "ref_end_s": 3398.2041931152344,
+     "ref_duration_s": 3398.2041931152344,
+     "start_err_s": 0.0,
+     "end_err_s": 0.4966592788696289,
+     "duration_err_s": 0.4966592788696289,
+     "starts_at_analysis_start": 1.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 96,
+    "s": 0.3,
+    "summary": {
+     "hours": 0.9440835701094733,
+     "percent": 94.40835701094733,
+     "windows": 1,
+     "longest_window_h": 0.9440835701094733,
+     "longest_gap_h": 0.05591642989052666,
+     "unknown_hours": 0.0,
+     "brief_windows": 0,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 1
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": true,
+     "duration_s": 3398.700852394104,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 201.299147605896,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "no visibility (horizon 2 deg above the Sun)",
+   "rule": "sun_any",
+   "interval_s": 10800.0,
+   "reference_windows": 0,
+   "matched": [],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 19,
+    "s": 0.1,
+    "summary": {
+     "hours": 0.0,
+     "percent": 0.0,
+     "windows": 0,
+     "longest_window_h": 0.0,
+     "longest_gap_h": 3.0,
+     "unknown_hours": 0.0,
+     "brief_windows": 0,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 0
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": false,
+     "duration_s": 10800.0,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "always visible (horizon 2 deg below the Sun)",
+   "rule": "sun_any",
+   "interval_s": 10800.0,
+   "reference_windows": 1,
+   "matched": [
+    {
+     "ref_start_s": 0.0,
+     "ref_end_s": 10799.5,
+     "ref_duration_s": 10799.5,
+     "start_err_s": 0.0,
+     "end_err_s": 0.5,
+     "duration_err_s": 0.5,
+     "starts_at_analysis_start": 1.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 19,
+    "s": 0.1,
+    "summary": {
+     "hours": 3.0,
+     "percent": 100.0,
+     "windows": 1,
+     "longest_window_h": 3.0,
+     "longest_gap_h": 0.0,
+     "unknown_hours": 0.0,
+     "brief_windows": 0,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 0
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": true,
+     "duration_s": 10800.0,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "missing terrain over part of the path (low horizon, incomplete bins)",
+   "rule": "sun_any",
+   "interval_s": 14400.0,
+   "reference_windows": 1,
+   "matched": [],
+   "missed": [
+    [
+     0.0,
+     14399.5,
+     14399.5
+    ]
+   ],
+   "spurious": [
+    [
+     6781.40625,
+     14400.0,
+     7618.59375
+    ]
+   ],
+   "unknown_intervals": [
+    [
+     0.0,
+     6781.40625
+    ]
+   ],
+   "expected_unknown_s": 6782.0,
+   "detector_unknown_s": 6781.5,
+   "expected_unknown_but_reported_visible_s": 0.5,
+   "detector": {
+    "samples": 41,
+    "s": 0.9,
+    "summary": {
+     "hours": 2.1162760416666666,
+     "percent": 52.906901041666664,
+     "windows": 1,
+     "longest_window_h": 2.1162760416666666,
+     "longest_gap_h": 0.0,
+     "unknown_hours": 1.8837239583333334,
+     "brief_windows": 0,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 0
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": null,
+     "duration_s": 6781.40625,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 7618.59375,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  },
+  {
+   "case": "uncertain terrain: window inside the horizon uncertainty (sigma 0.01 deg)",
+   "rule": "sun_any",
+   "interval_s": 7200.0,
+   "reference_windows": 1,
+   "matched": [
+    {
+     "ref_start_s": 3077.471354842186,
+     "ref_end_s": 3692.4037317037582,
+     "ref_duration_s": 614.9323768615723,
+     "start_err_s": 0.004246950149536133,
+     "end_err_s": 0.1233663558959961,
+     "duration_err_s": 0.11911940574645996,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 720,
+    "s": 2.3,
+    "summary": {
+     "hours": 0.17084763785203297,
+     "percent": 8.542381892601648,
+     "windows": 1,
+     "longest_window_h": 0.17084763785203297,
+     "longest_gap_h": 0.9742980283167627,
+     "unknown_hours": 0.0,
+     "brief_windows": 0,
+     "uncertain_windows": 1,
+     "uncertain_gaps": 2,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 2
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": false,
+     "duration_s": 3077.4756017923355,
+     "brief": false,
+     "uncertain": true,
+     "uncertain_reasons": [
+      "below_k_sigma"
+     ]
+    },
+    {
+     "state": true,
+     "duration_s": 615.0514962673187,
+     "brief": false,
+     "uncertain": true,
+     "uncertain_reasons": [
+      "below_k_sigma"
+     ]
+    },
+    {
+     "state": false,
+     "duration_s": 3507.4729019403458,
+     "brief": false,
+     "uncertain": true,
+     "uncertain_reasons": [
+      "below_k_sigma"
+     ]
+    }
+   ]
+  },
+  {
+   "case": "Sun centre rule: horizon through the centre path with notches",
+   "rule": "sun_centre",
+   "interval_s": 14400.0,
+   "reference_windows": 4,
+   "matched": [
+    {
+     "ref_start_s": 2455.3923972845078,
+     "ref_end_s": 2957.794865012169,
+     "ref_duration_s": 502.40246772766113,
+     "start_err_s": 0.4419269561767578,
+     "end_err_s": -0.09474921226501465,
+     "duration_err_s": -0.5366761684417725,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    },
+    {
+     "ref_start_s": 4278.457410335541,
+     "ref_end_s": 5430.661678671837,
+     "ref_duration_s": 1152.204268336296,
+     "start_err_s": 0.31014323234558105,
+     "end_err_s": 0.411098837852478,
+     "duration_err_s": 0.10095560550689697,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    },
+    {
+     "ref_start_s": 9177.622337937355,
+     "ref_end_s": 10507.620445013046,
+     "ref_duration_s": 1329.9981070756912,
+     "start_err_s": 0.1732480525970459,
+     "end_err_s": 0.4997572898864746,
+     "duration_err_s": 0.3265092372894287,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    },
+    {
+     "ref_start_s": 11944.189262270927,
+     "ref_end_s": 12010.8942694664,
+     "ref_duration_s": 66.70500719547272,
+     "start_err_s": -0.44770216941833496,
+     "end_err_s": 0.47601914405822754,
+     "duration_err_s": 0.9237213134765625,
+     "starts_at_analysis_start": 0.0,
+     "ends_at_analysis_end": 0.0
+    }
+   ],
+   "missed": [],
+   "spurious": [],
+   "unknown_intervals": [],
+   "detector": {
+    "samples": 502,
+    "s": 1.6,
+    "summary": {
+     "hours": 0.8478123223119312,
+     "percent": 21.19530805779828,
+     "windows": 4,
+     "longest_window_h": 0.3695346156424946,
+     "longest_gap_h": 1.040756335688962,
+     "unknown_hours": 0.0,
+     "brief_windows": 2,
+     "uncertain_windows": 0,
+     "uncertain_gaps": 0,
+     "near_field_windows": 0,
+     "subbin_peak_windows": 0,
+     "transitions": 8
+    }
+   },
+   "detector_intervals": [
+    {
+     "state": false,
+     "duration_s": 2455.8343242406845,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 501.86579155921936,
+     "brief": true,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 1321.0674377679825,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 1152.305223941803,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 3746.7228084802628,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 1330.3246163129807,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 1435.6213577985764,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": true,
+     "duration_s": 67.62872850894928,
+     "brief": true,
+     "uncertain": null,
+     "uncertain_reasons": []
+    },
+    {
+     "state": false,
+     "duration_s": 2388.6297113895416,
+     "brief": false,
+     "uncertain": null,
+     "uncertain_reasons": []
+    }
+   ]
+  }
+ ]
+}

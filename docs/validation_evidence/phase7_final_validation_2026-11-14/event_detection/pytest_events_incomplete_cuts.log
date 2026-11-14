@@ -1,0 +1,14 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.7.0 -- E:\LUNA-OPS\backend\.venv\Scripts\python.exe
+rootdir: E:\LUNA-OPS\backend
+configfile: pytest.ini
+plugins: anyio-4.16.0
+collecting ... collected 5 items
+
+tests/test_events_incomplete_cuts.py::test_visible_time_over_missing_terrain_is_unknown PASSED [ 20%]
+tests/test_events_incomplete_cuts.py::test_two_missing_terrain_runs_give_two_unknown_intervals PASSED [ 40%]
+tests/test_events_incomplete_cuts.py::test_window_opening_on_missing_terrain_at_the_analysis_start PASSED [ 60%]
+tests/test_events_incomplete_cuts.py::test_hidden_over_missing_terrain_stays_hidden PASSED [ 80%]
+tests/test_events_incomplete_cuts.py::test_complete_horizons_keep_the_previous_intervals PASSED [100%]
+
+============================= 5 passed in 27.46s ==============================

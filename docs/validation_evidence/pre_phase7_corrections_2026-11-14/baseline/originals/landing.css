@@ -1,0 +1,115 @@
+/* LUNA-OPS 2.0 Phase 5: Landing Safety workspace (preliminary hazard screening). Built on the Phase 1-4 design system:
+   cards like the mission dashboard, the South Polar Map stage styles for the hazard map, the shared table, field and
+   metric styles. Colours of finding statuses use existing tokens; raster ramps come from the API (legend only). */
+
+.landing { padding-bottom: 28px; }
+.landing-pad { padding: 0 var(--gutter); }
+.landing .run-button.landing-run { width: auto; margin: 0; }
+.landing-disclaimer { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 0 var(--gutter) 6px; padding: 10px 14px;
+  border: 1px solid var(--line); border-left: 3px solid var(--alert); border-radius: var(--r-m); background: var(--panel); }
+.landing-disclaimer p { margin: 0; flex: 1 1 360px; font-size: var(--fs-s); color: var(--text); }
+
+.landing-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px; padding: 14px var(--gutter) 0; align-items: start; }
+.landing-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-m); padding: 14px 16px; min-width: 0;
+  box-shadow: var(--shadow-1); }
+.landing-wide { margin: 16px var(--gutter) 0; }
+/* Spacing fix (2026-11-14): on two-column screens the four main cards sit in two independent column stacks (selected
+   site above footprint; hazard map above terrain analysis) instead of two shared grid rows, so a short card never takes
+   the height of the taller card beside it. Each card keeps its natural height; when the left stack is the taller one,
+   the remaining height goes to the hazard map's display area (its minimum height is unchanged), not to blank space. */
+.landing-band { align-items: stretch; }
+.landing-col { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.landing-col > .landing-mapcard.has-map { flex: 1 0 auto; display: flex; flex-direction: column; }
+.landing-col > .landing-mapcard.has-map > .landing-map.pane-body { flex: 1 0 auto; height: auto; min-height: clamp(360px, 58vh, 620px); }
+.landing-card h2 { margin: -14px -16px 12px; padding: 10px 16px; font-size: var(--fs-2xs); font-weight: 650; letter-spacing: var(--tracking-label);
+  text-transform: uppercase; font-stretch: 92%; border-bottom: 1px solid var(--line-soft); border-radius: var(--r-m) var(--r-m) 0 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent); color: var(--text); }
+.landing-subhead { margin: 16px 0 8px; font-size: var(--fs-xs); font-weight: 650; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; }
+.landing-coords { margin: 0 0 4px; font-size: 20px; color: var(--text); }
+.landing-metrics { margin: 10px 0 4px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.landing fieldset { border: 1px solid var(--line-soft); border-radius: var(--r-m); padding: 8px 12px 6px; margin: 8px 0; min-width: 0; }
+.landing legend { padding: 0 4px; font-size: var(--fs-xs); color: var(--muted); font-weight: 600; }
+
+/* ---------------------------------------------------------------- hazard map */
+.landing-layers { display: grid; gap: 6px; }
+.layer-options { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: var(--fs-s); }
+.layer-options label { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; cursor: pointer; }
+.layer-options label.is-off { color: var(--faint); cursor: not-allowed; }
+.layer-options label.opacity { gap: 8px; }
+.layer-options input[type="range"] { width: 110px; }
+.landing-map.pane-body { height: clamp(360px, 58vh, 620px); flex: none; border: 1px solid var(--line); border-radius: var(--r-m); overflow: hidden; margin: 8px 0; }
+.landing-map .map-host { cursor: crosshair; }
+.landing-readout { flex-wrap: wrap; white-space: normal; max-width: calc(100% - 24px); }
+.landing-readout .bad { color: var(--alert); }
+.landing-legend { list-style: none; margin: 6px 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: var(--fs-xs); color: var(--muted); align-items: center; }
+.landing-legend li { display: inline-flex; align-items: center; gap: 6px; }
+div.landing-legend { display: grid; gap: 4px; max-width: 420px; }
+.lg-ramp { display: block; height: 10px; border-radius: 3px; border: 1px solid var(--line); }
+.lg-range { display: flex; justify-content: space-between; gap: 8px; color: var(--text); }
+.lg-swatch { width: 14px; height: 14px; border-radius: 3px; border: 1px solid var(--line-strong); flex: none; }
+.lg-swatch.is-measured { background: rgb(127, 200, 169); }
+.lg-swatch.is-interpolated { background: rgba(95, 168, 232, 0.6); }
+.lg-swatch.is-present { background: rgba(150, 160, 175, 0.5); }
+.lg-swatch.is-missing { background: rgb(238, 154, 107); }
+.lg-swatch.is-exceed { background: rgb(238, 90, 90); }
+.lg-ring { width: 16px; height: 12px; border-radius: 50%; border: 2px solid rgba(238, 154, 107, 0.95); flex: none; }
+.lg-ring.is-weak { border-style: dashed; }
+.lg-ring.is-within { border: 2px dotted rgba(163, 177, 191, 0.8); }
+.lg-ring.is-footprint { border-color: var(--sun); background: rgba(242, 181, 68, 0.1); }
+.lg-ring.is-window { border-radius: 2px; border: 2px dashed var(--candidate); }
+
+/* ---------------------------------------------------------------- findings */
+.landing-findings { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.landing-finding { border: 1px solid var(--line-soft); border-left: 3px solid var(--line-strong); border-radius: var(--r-s); padding: 8px 12px;
+  background: var(--night); display: grid; gap: 3px; }
+.landing-finding p { margin: 0; }
+.landing-finding.is-hazard { border-left-color: var(--alert); }
+.landing-finding.is-clear { border-left-color: var(--valid); }
+.landing-finding.is-insufficient, .landing-finding.is-higher_res, .landing-finding.is-manual { border-left-style: dashed; }
+.finding-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; }
+.finding-status { font-size: var(--fs-xs); font-weight: 600; padding: 1px 8px; border-radius: var(--r-pill); border: 1px solid var(--line-strong); color: var(--text); }
+.finding-status.is-hazard { color: var(--alert); border-color: var(--alert); }
+.finding-status.is-clear { color: var(--valid); border-color: rgba(127, 200, 169, 0.55); }
+.finding-status.is-no_threshold, .finding-status.is-none_detected { color: var(--muted); }
+.finding-status.is-insufficient, .finding-status.is-higher_res, .finding-status.is-manual { color: var(--text); border-style: dashed; }
+.landing-finding .basis { color: var(--faint); }
+
+/* ---------------------------------------------------------------- tables */
+table.data.landing-stats td.unavail { color: var(--faint); }
+table.data.landing-stats td.basis { color: var(--muted); font-size: var(--fs-xs); min-width: 160px; }
+table.data.landing-stats { min-width: 640px; }
+.landing-cand-scroll { max-height: 420px; }
+table.data.landing-cands { min-width: 820px; }
+table.data.landing-cands tr.is-selected td { background: rgba(76, 201, 214, 0.08); }
+.link-button { background: none; border: 0; padding: 2px 6px; min-height: 24px; min-width: 24px; color: var(--accent); font: inherit;
+  text-decoration: underline; cursor: pointer; border-radius: var(--r-s); }
+.link-button[aria-pressed="true"] { color: var(--text); text-decoration: none; background: var(--accent-soft); }
+
+.landing-hist { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.landing-hist li { display: grid; grid-template-columns: 92px minmax(0, 1fr) 56px; gap: 10px; align-items: center; font-size: var(--fs-xs); }
+.hist-bar { height: 10px; background: var(--night); border: 1px solid var(--line-soft); border-radius: 2px; overflow: hidden; }
+.hist-bar span { display: block; height: 100%; background: var(--accent); }
+.hist-v { text-align: right; color: var(--text); }
+.hist-k { color: var(--muted); }
+
+.landing-prov { display: grid; grid-template-columns: minmax(140px, 220px) minmax(0, 1fr); gap: 6px 16px; margin: 0 0 12px; font-size: var(--fs-s); }
+.landing-prov dt { color: var(--muted); }
+.landing-prov dd { margin: 0; overflow-wrap: anywhere; }
+.landing-prov ul { margin: 0; padding-left: 18px; }
+
+/* ---------------------------------------------------------------- mission dashboard: landing screening in a card */
+.cand-landing { display: grid; gap: 4px; margin-top: 6px; padding: 8px 10px; border: 1px solid var(--line-soft); border-radius: var(--r-s); background: var(--panel); }
+.cand-landing-findings { display: flex; flex-wrap: wrap; gap: 4px; }
+.cand-landing .finding-status { font-weight: 500; }
+
+@media (max-width: 1100px) {
+  .landing-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .landing-map.pane-body { height: min(440px, 92vw); }
+  .landing-prov { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .landing-prov dd { margin-bottom: 8px; }
+  .landing-hist li { grid-template-columns: 76px minmax(0, 1fr) 48px; }
+}
+/* the status badge's long text wraps on narrow screens instead of widening the page */
+.landing-disclaimer .status-badge { white-space: normal; max-width: 100%; }

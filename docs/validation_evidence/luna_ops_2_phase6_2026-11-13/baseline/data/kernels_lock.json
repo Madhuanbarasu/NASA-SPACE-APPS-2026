@@ -1,0 +1,81 @@
+{
+  "profile": "production",
+  "body_fixed_frame": "MOON_ME_DE440_ME421",
+  "pa_frame": "MOON_PA_DE440",
+  "manifest_sha256": "c54f8025a01e5f4258236a192756b2adc88fb998aecb2d84800165e01c766db6",
+  "created_utc": "2026-11-07T13:49:21Z",
+  "files": [
+    {
+      "role": "lsk",
+      "name": "naif0012.tls",
+      "source": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls",
+      "bytes": 5257,
+      "sha256": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+      "retrieved_utc": "2026-11-07T13:48:50Z",
+      "evidence": "NAIF PDS4 label pub/naif/pds/pds4/insight/insight_spice/spice_kernels/lsk/naif0012.xml (file_size 5,257 bytes, md5 25a2fff30b0dedb4d76c06727b1895b1)",
+      "naif_md5_match": true,
+      "naif_md5_source": "NAIF PDS4 label pub/naif/pds/pds4/insight/insight_spice/spice_kernels/lsk/naif0012.xml (file_size 5,257 bytes, md5 25a2fff30b0dedb4d76c06727b1895b1)"
+    },
+    {
+      "role": "text_pck",
+      "name": "pck00011.tpc",
+      "source": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00011.tpc",
+      "bytes": 131226,
+      "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+      "retrieved_utc": "2026-11-07T13:48:52Z",
+      "evidence": "NAIF generic PCK readme (requires Toolkit N0067 or later)",
+      "naif_checksum_note": "no NAIF checksum published for this file; SHA-256 pinned on first download"
+    },
+    {
+      "role": "spk",
+      "name": "de440s.bsp",
+      "source": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de440s.bsp",
+      "bytes": 32726016,
+      "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+      "retrieved_utc": "2026-11-07T13:49:08Z",
+      "evidence": "NAIF planets directory listing (31 MB); MD5 checked against aa_checksums.txt in the same directory at download time",
+      "naif_checksum_match": true
+    },
+    {
+      "role": "lunar_pck",
+      "name": "moon_pa_de440_200625.bpc",
+      "source": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de440_200625.bpc",
+      "bytes": 12863488,
+      "sha256": "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+      "retrieved_utc": "2026-11-07T13:49:14Z",
+      "evidence": "NAIF generic PCK readme, revised 2026-10-03 (coverage about 1550-2650); no NAIF checksum found for the generic_kernels copy, so SHA-256 is pinned on first download",
+      "naif_checksum_note": "no NAIF checksum published for this file; SHA-256 pinned on first download"
+    },
+    {
+      "role": "lunar_fk",
+      "name": "moon_de440_250416.tf",
+      "source": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_de440_250416.tf",
+      "bytes": 19478,
+      "sha256": "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+      "retrieved_utc": "2026-11-07T13:49:16Z",
+      "evidence": "NAIF PDS4 label pub/naif/pds/pds4/clps/clps_spice/spice_kernels/fk/moon_de440_250416.xml (file_size 19,478 bytes, md5 3556dde4bb7ca54a89917c301e650bbf). Its location under generic_kernels/fk/satellites is not confirmed (IB-2), hence the CLPS archive URL second.",
+      "naif_md5_match": true,
+      "naif_md5_source": "NAIF PDS4 label pub/naif/pds/pds4/clps/clps_spice/spice_kernels/fk/moon_de440_250416.xml (file_size 19,478 bytes, md5 3556dde4bb7ca54a89917c301e650bbf). Its location under generic_kernels/fk/satellites is not confirmed (IB-2), hence the CLPS archive URL second."
+    },
+    {
+      "role": "de421_pck",
+      "name": "moon_pa_de421_1900-2050.bpc",
+      "source": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de421_1900-2050.bpc",
+      "bytes": 1770496,
+      "sha256": "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+      "retrieved_utc": "2026-11-07T13:49:19Z",
+      "evidence": "Used only by V-02e (DE421/DE440 residual)",
+      "naif_checksum_note": "no NAIF checksum published for this file; SHA-256 pinned on first download"
+    },
+    {
+      "role": "de421_fk",
+      "name": "moon_080317.tf",
+      "source": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/satellites/moon_080317.tf",
+      "bytes": 21437,
+      "sha256": "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+      "retrieved_utc": "2026-11-07T13:49:21Z",
+      "evidence": "Used only by V-02e (DE421/DE440 residual)",
+      "naif_checksum_note": "no NAIF checksum published for this file; SHA-256 pinned on first download"
+    }
+  ]
+}

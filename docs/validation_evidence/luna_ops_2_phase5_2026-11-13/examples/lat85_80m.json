@@ -1,0 +1,5296 @@
+{
+ "id": "7b3cb1a95028f4450396",
+ "config": {
+  "lat": -85.0,
+  "lon": 30.0,
+  "window_half_m": 20000.0,
+  "product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+  "roughness_baseline_m": null,
+  "roughness_window_px": 5,
+  "min_depth_m": 1.0,
+  "min_diameter_m": null,
+  "max_diameter_m": null,
+  "window_half_m_used": 20000.0
+ },
+ "summary": {
+  "pixels": 251001,
+  "valid_share": 1.0,
+  "measured_share": null,
+  "elevation_m": {
+   "n": 251001,
+   "min": 2102.43,
+   "max": 6814.06,
+   "mean": 5294.93,
+   "median": 5224.73,
+   "p95": 6514.67
+  },
+  "slope_deg": {
+   "n": 249001,
+   "min": 0.01,
+   "max": 33.99,
+   "mean": 9.83,
+   "median": 8.27,
+   "p95": 23.05
+  },
+  "slope_hist": {
+   "edges_deg": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    90
+   ],
+   "counts": [
+    59957,
+    93108,
+    47366,
+    21765,
+    21544,
+    5233,
+    28
+   ]
+  },
+  "roughness_m": {
+   "n": 247009,
+   "min": 0.329,
+   "max": 29.185,
+   "mean": 2.529,
+   "median": 2.115,
+   "p95": 5.453
+  },
+  "tri_m": {
+   "n": 249001,
+   "min": 0.826,
+   "max": 132.881,
+   "mean": 35.231,
+   "median": 29.08,
+   "p95": 83.55
+  },
+  "roughness_multiscale": [
+   {
+    "window_px": 3,
+    "baseline_m": 240.0,
+    "n": 249001,
+    "min": 0.062,
+    "max": 15.599,
+    "mean": 1.062,
+    "median": 0.864,
+    "p95": 2.438
+   },
+   {
+    "window_px": 5,
+    "baseline_m": 400.0,
+    "n": 247009,
+    "min": 0.329,
+    "max": 29.185,
+    "mean": 2.529,
+    "median": 2.115,
+    "p95": 5.453
+   },
+   {
+    "window_px": 9,
+    "baseline_m": 720.0,
+    "n": 243049,
+    "min": 0.854,
+    "max": 51.84,
+    "mean": 6.22,
+    "median": 5.438,
+    "p95": 12.67
+   },
+   {
+    "window_px": 15,
+    "baseline_m": 1200.0,
+    "n": 237169,
+    "min": 1.642,
+    "max": 63.246,
+    "mean": 13.144,
+    "median": 11.575,
+    "p95": 26.142
+   }
+  ],
+  "height_sigma_m": {
+   "n": 251001,
+   "min": 0.031,
+   "max": 1.928,
+   "mean": 0.139,
+   "median": 0.107,
+   "p95": 0.302
+  },
+  "nasa_slope_deg": null,
+  "slope_sigma_deg": null,
+  "depressions": {
+   "count": 189,
+   "by_quality": {
+    "defined": 155,
+    "weak": 34,
+    "within_uncertainty": 0,
+    "shape_only": 0
+   },
+   "truncated": false
+  },
+  "basis": "LOLA DEM: measured and interpolated pixels cannot be told apart (no count map for this product)"
+ },
+ "candidates": [
+  {
+   "id": 1,
+   "lat": -84.680457,
+   "lon": 21.145322,
+   "x": 58230.6,
+   "y": 150553.5,
+   "diameter_m": 1342.1,
+   "depth_m": 48.05,
+   "deepest": {
+    "lat": -84.699985,
+    "lon": 21.184837
+   },
+   "pixels": 222,
+   "axis_ratio": 0.49,
+   "fill_ratio": 0.9,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 345.7,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -38.6,
+   "axes_m": [
+    2022.4,
+    986.7
+   ]
+  },
+  {
+   "id": 2,
+   "lat": -84.108314,
+   "lon": 32.261614,
+   "x": 95448.0,
+   "y": 151208.0,
+   "diameter_m": 348.7,
+   "depth_m": 25.93,
+   "deepest": {
+    "lat": -84.106862,
+    "lon": 32.26481
+   },
+   "pixels": 15,
+   "axis_ratio": 0.88,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.21,
+   "depth_to_sigma": 123.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 45.0,
+   "axes_m": [
+    379.9,
+    334.2
+   ]
+  },
+  {
+   "id": 3,
+   "lat": -84.400394,
+   "lon": 27.398618,
+   "x": 78200.0,
+   "y": 150872.0,
+   "diameter_m": 348.8,
+   "depth_m": 8.24,
+   "deepest": {
+    "lat": -84.401328,
+    "lon": 27.403584
+   },
+   "pixels": 15,
+   "axis_ratio": 0.66,
+   "fill_ratio": 0.81,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 63.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 28.5,
+   "axes_m": [
+    477.7,
+    314.0
+   ]
+  },
+  {
+   "id": 4,
+   "lat": -84.507526,
+   "lon": 28.627138,
+   "x": 79856.7,
+   "y": 146302.5,
+   "diameter_m": 6869.6,
+   "depth_m": 428.03,
+   "deepest": {
+    "lat": -84.453821,
+    "lon": 28.581118
+   },
+   "pixels": 5818,
+   "axis_ratio": 0.58,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.16,
+   "depth_to_sigma": 2730.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -69.6,
+   "axes_m": [
+    9200.9,
+    5364.0
+   ]
+  },
+  {
+   "id": 5,
+   "lat": -84.492671,
+   "lon": 26.032469,
+   "x": 73349.8,
+   "y": 150173.3,
+   "diameter_m": 1114.0,
+   "depth_m": 84.03,
+   "deepest": {
+    "lat": -84.491101,
+    "lon": 25.98261
+   },
+   "pixels": 153,
+   "axis_ratio": 0.69,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.19,
+   "depth_to_sigma": 449.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 45.0,
+   "axes_m": [
+    1358.1,
+    942.2
+   ]
+  },
+  {
+   "id": 6,
+   "lat": -84.555451,
+   "lon": 24.513188,
+   "x": 68550.8,
+   "y": 150329.2,
+   "diameter_m": 324.7,
+   "depth_m": 39.17,
+   "deepest": {
+    "lat": -84.557345,
+    "lon": 24.510562
+   },
+   "pixels": 13,
+   "axis_ratio": 0.86,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 284.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 45.0,
+   "axes_m": [
+    356.8,
+    307.8
+   ]
+  },
+  {
+   "id": 7,
+   "lat": -84.17758,
+   "lon": 32.388902,
+   "x": 94655.6,
+   "y": 149217.3,
+   "diameter_m": 1530.6,
+   "depth_m": 14.64,
+   "deepest": {
+    "lat": -84.1866,
+    "lon": 32.331714
+   },
+   "pixels": 289,
+   "axis_ratio": 0.72,
+   "fill_ratio": 0.86,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 100.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -57.2,
+   "axes_m": [
+    1942.1,
+    1397.8
+   ]
+  },
+  {
+   "id": 8,
+   "lat": -84.458161,
+   "lon": 27.078112,
+   "x": 76555.6,
+   "y": 149743.7,
+   "diameter_m": 468.0,
+   "depth_m": 22.07,
+   "deepest": {
+    "lat": -84.459388,
+    "lon": 27.071001
+   },
+   "pixels": 27,
+   "axis_ratio": 0.51,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 231.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -31.8,
+   "axes_m": [
+    685.9,
+    348.4
+   ]
+  },
+  {
+   "id": 9,
+   "lat": -84.182473,
+   "lon": 31.924509,
+   "x": 93364.4,
+   "y": 149853.3,
+   "diameter_m": 270.1,
+   "depth_m": 8.33,
+   "deepest": {
+    "lat": -84.181111,
+    "lon": 31.929724
+   },
+   "pixels": 9,
+   "axis_ratio": 0.65,
+   "fill_ratio": 0.9,
+   "sigma_m": 0.16,
+   "depth_to_sigma": 52.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -6.0,
+   "axes_m": [
+    353.5,
+    230.1
+   ]
+  },
+  {
+   "id": 10,
+   "lat": -84.497978,
+   "lon": 26.752467,
+   "x": 75158.5,
+   "y": 149095.7,
+   "diameter_m": 1734.7,
+   "depth_m": 239.38,
+   "deepest": {
+    "lat": -84.497232,
+    "lon": 26.779871
+   },
+   "pixels": 371,
+   "axis_ratio": 0.78,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 1549.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 15.8,
+   "axes_m": [
+    1975.6,
+    1549.0
+   ]
+  },
+  {
+   "id": 11,
+   "lat": -84.315568,
+   "lon": 30.022107,
+   "x": 86313.9,
+   "y": 149367.0,
+   "diameter_m": 863.7,
+   "depth_m": 57.67,
+   "deepest": {
+    "lat": -84.315185,
+    "lon": 30.006865
+   },
+   "pixels": 92,
+   "axis_ratio": 0.71,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 424.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 33.3,
+   "axes_m": [
+    1031.9,
+    734.2
+   ]
+  },
+  {
+   "id": 12,
+   "lat": -84.357906,
+   "lon": 29.276076,
+   "x": 83732.4,
+   "y": 149355.6,
+   "diameter_m": 604.1,
+   "depth_m": 30.25,
+   "deepest": {
+    "lat": -84.35683,
+    "lon": 29.265173
+   },
+   "pixels": 45,
+   "axis_ratio": 0.66,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 225.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 66.2,
+   "axes_m": [
+    755.2,
+    500.6
+   ]
+  },
+  {
+   "id": 13,
+   "lat": -84.742125,
+   "lon": 20.647673,
+   "x": 56260.0,
+   "y": 149300.0,
+   "diameter_m": 402.9,
+   "depth_m": 21.15,
+   "deepest": {
+    "lat": -84.741277,
+    "lon": 20.65186
+   },
+   "pixels": 20,
+   "axis_ratio": 0.96,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 166.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 45.0,
+   "axes_m": [
+    420.4,
+    405.0
+   ]
+  },
+  {
+   "id": 14,
+   "lat": -84.323663,
+   "lon": 30.569745,
+   "x": 87612.5,
+   "y": 148323.3,
+   "diameter_m": 1660.4,
+   "depth_m": 49.15,
+   "deepest": {
+    "lat": -84.338016,
+    "lon": 30.666392
+   },
+   "pixels": 340,
+   "axis_ratio": 0.46,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 341.8,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 82.7,
+   "axes_m": [
+    2476.3,
+    1146.8
+   ]
+  },
+  {
+   "id": 15,
+   "lat": -84.76048,
+   "lon": 21.177142,
+   "x": 57435.8,
+   "y": 148253.7,
+   "diameter_m": 1412.9,
+   "depth_m": 84.13,
+   "deepest": {
+    "lat": -84.759694,
+    "lon": 21.252744
+   },
+   "pixels": 246,
+   "axis_ratio": 0.72,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 727.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -88.7,
+   "axes_m": [
+    1687.6,
+    1211.3
+   ]
+  },
+  {
+   "id": 16,
+   "lat": -84.69336,
+   "lon": 22.197315,
+   "x": 60836.8,
+   "y": 149096.0,
+   "diameter_m": 450.4,
+   "depth_m": 7.6,
+   "deepest": {
+    "lat": -84.694802,
+    "lon": 22.174159
+   },
+   "pixels": 25,
+   "axis_ratio": 0.76,
+   "fill_ratio": 0.83,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 71.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 78.2,
+   "axes_m": [
+    569.4,
+    431.3
+   ]
+  },
+  {
+   "id": 17,
+   "lat": -84.213749,
+   "lon": 31.953091,
+   "x": 92936.0,
+   "y": 149000.0,
+   "diameter_m": 284.7,
+   "depth_m": 8.4,
+   "deepest": {
+    "lat": -84.214027,
+    "lon": 31.948662
+   },
+   "pixels": 10,
+   "axis_ratio": 0.81,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 57.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 0.0,
+   "axes_m": [
+    326.0,
+    263.9
+   ]
+  },
+  {
+   "id": 18,
+   "lat": -84.605142,
+   "lon": 24.674514,
+   "x": 68343.3,
+   "y": 148763.3,
+   "diameter_m": 441.3,
+   "depth_m": 12.85,
+   "deepest": {
+    "lat": -84.605012,
+    "lon": 24.680301
+   },
+   "pixels": 24,
+   "axis_ratio": 0.82,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 125.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 52.2,
+   "axes_m": [
+    507.2,
+    414.0
+   ]
+  },
+  {
+   "id": 19,
+   "lat": -84.723988,
+   "lon": 21.995668,
+   "x": 59963.1,
+   "y": 148446.2,
+   "diameter_m": 914.2,
+   "depth_m": 138.86,
+   "deepest": {
+    "lat": -84.724216,
+    "lon": 21.99547
+   },
+   "pixels": 103,
+   "axis_ratio": 0.85,
+   "fill_ratio": 0.99,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 936.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 30.3,
+   "axes_m": [
+    998.3,
+    846.5
+   ]
+  },
+  {
+   "id": 20,
+   "lat": -84.309197,
+   "lon": 30.861092,
+   "x": 88591.1,
+   "y": 148253.3,
+   "diameter_m": 270.1,
+   "depth_m": 11.63,
+   "deepest": {
+    "lat": -84.308294,
+    "lon": 30.859086
+   },
+   "pixels": 9,
+   "axis_ratio": 0.75,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 76.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 69.7,
+   "axes_m": [
+    323.5,
+    241.4
+   ]
+  },
+  {
+   "id": 21,
+   "lat": -84.696719,
+   "lon": 23.704546,
+   "x": 64696.4,
+   "y": 147350.8,
+   "diameter_m": 974.3,
+   "depth_m": 25.97,
+   "deepest": {
+    "lat": -84.701033,
+    "lon": 23.625297
+   },
+   "pixels": 117,
+   "axis_ratio": 0.56,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 226.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -63.6,
+   "axes_m": [
+    1329.8,
+    745.1
+   ]
+  },
+  {
+   "id": 22,
+   "lat": -84.663594,
+   "lon": 24.151598,
+   "x": 66256.0,
+   "y": 147760.0,
+   "diameter_m": 284.8,
+   "depth_m": 8.08,
+   "deepest": {
+    "lat": -84.665549,
+    "lon": 24.139305
+   },
+   "pixels": 10,
+   "axis_ratio": 0.61,
+   "fill_ratio": 0.88,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 64.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -52.5,
+   "axes_m": [
+    388.3,
+    236.3
+   ]
+  },
+  {
+   "id": 23,
+   "lat": -84.575849,
+   "lon": 26.30228,
+   "x": 72936.0,
+   "y": 147560.0,
+   "diameter_m": 284.8,
+   "depth_m": 5.9,
+   "deepest": {
+    "lat": -84.576082,
+    "lon": 26.297287
+   },
+   "pixels": 10,
+   "axis_ratio": 0.81,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 62.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 0.0,
+   "axes_m": [
+    326.1,
+    263.9
+   ]
+  },
+  {
+   "id": 24,
+   "lat": -84.795149,
+   "lon": 22.125665,
+   "x": 59485.3,
+   "y": 146306.7,
+   "diameter_m": 348.9,
+   "depth_m": 12.25,
+   "deepest": {
+    "lat": -84.797474,
+    "lon": 22.16535
+   },
+   "pixels": 15,
+   "axis_ratio": 0.42,
+   "fill_ratio": 0.75,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 102.3,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 56.7,
+   "axes_m": [
+    620.4,
+    262.7
+   ]
+  },
+  {
+   "id": 25,
+   "lat": -84.658936,
+   "lon": 25.578366,
+   "x": 69975.7,
+   "y": 146192.2,
+   "diameter_m": 643.3,
+   "depth_m": 43.82,
+   "deepest": {
+    "lat": -84.6613,
+    "lon": 25.58438
+   },
+   "pixels": 51,
+   "axis_ratio": 0.63,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 325.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -60.7,
+   "axes_m": [
+    826.3,
+    524.4
+   ]
+  },
+  {
+   "id": 26,
+   "lat": -84.591659,
+   "lon": 26.936285,
+   "x": 74346.7,
+   "y": 146315.6,
+   "diameter_m": 382.1,
+   "depth_m": 16.16,
+   "deepest": {
+    "lat": -84.589001,
+    "lon": 26.895876
+   },
+   "pixels": 18,
+   "axis_ratio": 0.54,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 124.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 80.8,
+   "axes_m": [
+    536.7,
+    292.2
+   ]
+  },
+  {
+   "id": 27,
+   "lat": -84.560205,
+   "lon": 27.678576,
+   "x": 76680.0,
+   "y": 146186.7,
+   "diameter_m": 312.0,
+   "depth_m": 8.88,
+   "deepest": {
+    "lat": -84.559816,
+    "lon": 27.676426
+   },
+   "pixels": 12,
+   "axis_ratio": 0.61,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.25,
+   "depth_to_sigma": 35.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -70.2,
+   "axes_m": [
+    413.3,
+    253.4
+   ]
+  },
+  {
+   "id": 28,
+   "lat": -84.810094,
+   "lon": 23.345563,
+   "x": 62406.7,
+   "y": 144590.1,
+   "diameter_m": 3535.2,
+   "depth_m": 229.38,
+   "deepest": {
+    "lat": -84.805569,
+    "lon": 23.305507
+   },
+   "pixels": 1540,
+   "axis_ratio": 0.88,
+   "fill_ratio": 0.99,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 1631.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -51.5,
+   "axes_m": [
+    3791.8,
+    3324.0
+   ]
+  },
+  {
+   "id": 29,
+   "lat": -84.370393,
+   "lon": 31.341439,
+   "x": 88863.3,
+   "y": 145916.7,
+   "diameter_m": 441.2,
+   "depth_m": 9.7,
+   "deepest": {
+    "lat": -84.369574,
+    "lon": 31.327198
+   },
+   "pixels": 24,
+   "axis_ratio": 0.59,
+   "fill_ratio": 0.87,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 70.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 79.8,
+   "axes_m": [
+    617.5,
+    363.5
+   ]
+  },
+  {
+   "id": 30,
+   "lat": -84.305916,
+   "lon": 32.445841,
+   "x": 92710.8,
+   "y": 145830.8,
+   "diameter_m": 324.7,
+   "depth_m": 15.14,
+   "deepest": {
+    "lat": -84.307313,
+    "lon": 32.442704
+   },
+   "pixels": 13,
+   "axis_ratio": 0.86,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.24,
+   "depth_to_sigma": 64.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -45.0,
+   "axes_m": [
+    356.7,
+    307.8
+   ]
+  },
+  {
+   "id": 31,
+   "lat": -84.721478,
+   "lon": 24.789731,
+   "x": 67160.0,
+   "y": 145416.0,
+   "diameter_m": 284.9,
+   "depth_m": 16.66,
+   "deepest": {
+    "lat": -84.719566,
+    "lon": 24.780135
+   },
+   "pixels": 10,
+   "axis_ratio": 0.81,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 154.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 90.0,
+   "axes_m": [
+    326.2,
+    264.0
+   ]
+  },
+  {
+   "id": 32,
+   "lat": -84.493599,
+   "lon": 30.875986,
+   "x": 85753.2,
+   "y": 143419.6,
+   "diameter_m": 2379.4,
+   "depth_m": 113.63,
+   "deepest": {
+    "lat": -84.483413,
+    "lon": 30.799411
+   },
+   "pixels": 698,
+   "axis_ratio": 0.68,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 784.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 87.1,
+   "axes_m": [
+    2993.0,
+    2049.4
+   ]
+  },
+  {
+   "id": 33,
+   "lat": -84.642334,
+   "lon": 27.415286,
+   "x": 74858.2,
+   "y": 144321.8,
+   "diameter_m": 597.5,
+   "depth_m": 23.62,
+   "deepest": {
+    "lat": -84.64486,
+    "lon": 27.517475
+   },
+   "pixels": 44,
+   "axis_ratio": 0.62,
+   "fill_ratio": 0.85,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 168.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 26.1,
+   "axes_m": [
+    822.9,
+    509.0
+   ]
+  },
+  {
+   "id": 34,
+   "lat": -84.296205,
+   "lon": 33.45995,
+   "x": 95440.0,
+   "y": 144413.3,
+   "diameter_m": 311.9,
+   "depth_m": 6.16,
+   "deepest": {
+    "lat": -84.294748,
+    "lon": 33.466128
+   },
+   "pixels": 12,
+   "axis_ratio": 0.78,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 52.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 52.8,
+   "axes_m": [
+    368.0,
+    287.3
+   ]
+  },
+  {
+   "id": 35,
+   "lat": -84.895815,
+   "lon": 22.193007,
+   "x": 58501.9,
+   "y": 143404.5,
+   "diameter_m": 655.9,
+   "depth_m": 35.4,
+   "deepest": {
+    "lat": -84.89329,
+    "lon": 22.188667
+   },
+   "pixels": 53,
+   "axis_ratio": 0.56,
+   "fill_ratio": 0.9,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 314.7,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -45.3,
+   "axes_m": [
+    920.4,
+    516.8
+   ]
+  },
+  {
+   "id": 36,
+   "lat": -84.725591,
+   "lon": 26.37216,
+   "x": 71094.5,
+   "y": 143393.9,
+   "diameter_m": 731.8,
+   "depth_m": 111.75,
+   "deepest": {
+    "lat": -84.722097,
+    "lon": 26.379463
+   },
+   "pixels": 66,
+   "axis_ratio": 0.9,
+   "fill_ratio": 0.99,
+   "sigma_m": 0.21,
+   "depth_to_sigma": 544.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -31.3,
+   "axes_m": [
+    778.1,
+    698.2
+   ]
+  },
+  {
+   "id": 37,
+   "lat": -84.791606,
+   "lon": 24.99762,
+   "x": 66786.7,
+   "y": 143240.0,
+   "diameter_m": 348.9,
+   "depth_m": 10.99,
+   "deepest": {
+    "lat": -84.789591,
+    "lon": 24.976611
+   },
+   "pixels": 15,
+   "axis_ratio": 0.35,
+   "fill_ratio": 0.89,
+   "sigma_m": 0.2,
+   "depth_to_sigma": 54.2,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 56.0,
+   "axes_m": [
+    621.1,
+    219.6
+   ]
+  },
+  {
+   "id": 38,
+   "lat": -84.809633,
+   "lon": 24.865061,
+   "x": 66224.8,
+   "y": 142897.1,
+   "diameter_m": 583.8,
+   "depth_m": 3.79,
+   "deepest": {
+    "lat": -84.818848,
+    "lon": 24.902408
+   },
+   "pixels": 42,
+   "axis_ratio": 0.54,
+   "fill_ratio": 0.6,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 24.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -61.1,
+   "axes_m": [
+    1023.7,
+    550.7
+   ]
+  },
+  {
+   "id": 39,
+   "lat": -84.604085,
+   "lon": 30.415861,
+   "x": 82898.7,
+   "y": 141207.9,
+   "diameter_m": 3509.3,
+   "depth_m": 128.05,
+   "deepest": {
+    "lat": -84.633516,
+    "lon": 30.413456
+   },
+   "pixels": 1518,
+   "axis_ratio": 0.96,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 851.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -69.3,
+   "axes_m": [
+    3611.6,
+    3473.4
+   ]
+  },
+  {
+   "id": 40,
+   "lat": -84.460776,
+   "lon": 31.802727,
+   "x": 88587.4,
+   "y": 142861.7,
+   "diameter_m": 753.5,
+   "depth_m": 32.41,
+   "deepest": {
+    "lat": -84.465638,
+    "lon": 31.839041
+   },
+   "pixels": 70,
+   "axis_ratio": 0.78,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 249.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 8.0,
+   "axes_m": [
+    864.2,
+    678.2
+   ]
+  },
+  {
+   "id": 41,
+   "lat": -84.896874,
+   "lon": 22.557247,
+   "x": 59400.0,
+   "y": 143000.0,
+   "diameter_m": 270.3,
+   "depth_m": 8.93,
+   "deepest": {
+    "lat": -84.896874,
+    "lon": 22.557247
+   },
+   "pixels": 9,
+   "axis_ratio": 1.0,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 83.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 0.0,
+   "axes_m": [
+    276.6,
+    276.6
+   ]
+  },
+  {
+   "id": 42,
+   "lat": -84.68106,
+   "lon": 27.723893,
+   "x": 75087.0,
+   "y": 142874.8,
+   "diameter_m": 432.0,
+   "depth_m": 46.05,
+   "deepest": {
+    "lat": -84.68218,
+    "lon": 27.727452
+   },
+   "pixels": 23,
+   "axis_ratio": 0.81,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.22,
+   "depth_to_sigma": 211.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -60.6,
+   "axes_m": [
+    490.0,
+    394.8
+   ]
+  },
+  {
+   "id": 43,
+   "lat": -84.802487,
+   "lon": 25.41814,
+   "x": 67694.3,
+   "y": 142447.4,
+   "diameter_m": 840.3,
+   "depth_m": 13.2,
+   "deepest": {
+    "lat": -84.796569,
+    "lon": 25.493923
+   },
+   "pixels": 87,
+   "axis_ratio": 0.61,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 143.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -76.1,
+   "axes_m": [
+    1099.7,
+    671.8
+   ]
+  },
+  {
+   "id": 44,
+   "lat": -84.760825,
+   "lon": 25.968339,
+   "x": 69613.3,
+   "y": 142928.9,
+   "diameter_m": 270.2,
+   "depth_m": 7.6,
+   "deepest": {
+    "lat": -84.760703,
+    "lon": 25.978381
+   },
+   "pixels": 9,
+   "axis_ratio": 0.75,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 59.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -20.3,
+   "axes_m": [
+    323.6,
+    241.5
+   ]
+  },
+  {
+   "id": 45,
+   "lat": -84.40703,
+   "lon": 32.998096,
+   "x": 92438.2,
+   "y": 142352.6,
+   "diameter_m": 840.0,
+   "depth_m": 16.82,
+   "deepest": {
+    "lat": -84.41131,
+    "lon": 33.124137
+   },
+   "pixels": 87,
+   "axis_ratio": 0.76,
+   "fill_ratio": 0.67,
+   "sigma_m": 0.17,
+   "depth_to_sigma": 97.7,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 59.8,
+   "axes_m": [
+    1176.7,
+    891.0
+   ]
+  },
+  {
+   "id": 46,
+   "lat": -84.922365,
+   "lon": 22.518394,
+   "x": 59006.4,
+   "y": 142324.8,
+   "diameter_m": 450.5,
+   "depth_m": 65.18,
+   "deepest": {
+    "lat": -84.921376,
+    "lon": 22.511184
+   },
+   "pixels": 25,
+   "axis_ratio": 0.81,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 486.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 81.5,
+   "axes_m": [
+    505.8,
+    411.3
+   ]
+  },
+  {
+   "id": 47,
+   "lat": -84.701176,
+   "lon": 27.764975,
+   "x": 74904.6,
+   "y": 142280.0,
+   "diameter_m": 649.6,
+   "depth_m": 20.78,
+   "deepest": {
+    "lat": -84.70106,
+    "lon": 27.706098
+   },
+   "pixels": 52,
+   "axis_ratio": 0.42,
+   "fill_ratio": 0.77,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 156.2,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 14.2,
+   "axes_m": [
+    1133.2,
+    480.7
+   ]
+  },
+  {
+   "id": 48,
+   "lat": -84.366758,
+   "lon": 33.761952,
+   "x": 95008.0,
+   "y": 142125.3,
+   "diameter_m": 493.2,
+   "depth_m": 14.69,
+   "deepest": {
+    "lat": -84.365587,
+    "lon": 33.783002
+   },
+   "pixels": 30,
+   "axis_ratio": 0.61,
+   "fill_ratio": 0.91,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 108.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -0.6,
+   "axes_m": [
+    662.5,
+    405.3
+   ]
+  },
+  {
+   "id": 49,
+   "lat": -84.828234,
+   "lon": 25.281703,
+   "x": 67020.7,
+   "y": 141900.7,
+   "diameter_m": 468.1,
+   "depth_m": 62.95,
+   "deepest": {
+    "lat": -84.826762,
+    "lon": 25.265621
+   },
+   "pixels": 27,
+   "axis_ratio": 0.82,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 611.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -45.0,
+   "axes_m": [
+    527.3,
+    431.3
+   ]
+  },
+  {
+   "id": 50,
+   "lat": -84.705181,
+   "lon": 28.163985,
+   "x": 75836.2,
+   "y": 141647.6,
+   "diameter_m": 583.8,
+   "depth_m": 19.87,
+   "deepest": {
+    "lat": -84.707042,
+    "lon": 28.192516
+   },
+   "pixels": 42,
+   "axis_ratio": 0.34,
+   "fill_ratio": 0.71,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 204.9,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 81.0,
+   "axes_m": [
+    1190.5,
+    404.1
+   ]
+  },
+  {
+   "id": 51,
+   "lat": -84.871754,
+   "lon": 24.1902,
+   "x": 63763.6,
+   "y": 141945.5,
+   "diameter_m": 298.8,
+   "depth_m": 16.0,
+   "deepest": {
+    "lat": -84.871906,
+    "lon": 24.173349
+   },
+   "pixels": 11,
+   "axis_ratio": 0.69,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 125.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 41.0,
+   "axes_m": [
+    373.5,
+    257.5
+   ]
+  },
+  {
+   "id": 52,
+   "lat": -84.749213,
+   "lon": 27.029694,
+   "x": 72409.2,
+   "y": 141929.2,
+   "diameter_m": 324.8,
+   "depth_m": 23.28,
+   "deepest": {
+    "lat": -84.74785,
+    "lon": 27.03452
+   },
+   "pixels": 13,
+   "axis_ratio": 0.86,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.19,
+   "depth_to_sigma": 122.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -45.0,
+   "axes_m": [
+    356.9,
+    307.9
+   ]
+  },
+  {
+   "id": 53,
+   "lat": -84.481648,
+   "lon": 32.400832,
+   "x": 89734.0,
+   "y": 141393.6,
+   "diameter_m": 1099.3,
+   "depth_m": 114.24,
+   "deepest": {
+    "lat": -84.480305,
+    "lon": 32.418724
+   },
+   "pixels": 149,
+   "axis_ratio": 0.83,
+   "fill_ratio": 0.99,
+   "sigma_m": 0.19,
+   "depth_to_sigma": 595.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -27.4,
+   "axes_m": [
+    1212.7,
+    1006.0
+   ]
+  },
+  {
+   "id": 54,
+   "lat": -84.808591,
+   "lon": 26.052043,
+   "x": 69184.6,
+   "y": 141523.1,
+   "diameter_m": 324.8,
+   "depth_m": 33.59,
+   "deepest": {
+    "lat": -84.809064,
+    "lon": 26.077024
+   },
+   "pixels": 13,
+   "axis_ratio": 0.53,
+   "fill_ratio": 0.71,
+   "sigma_m": 0.21,
+   "depth_to_sigma": 157.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 29.4,
+   "axes_m": [
+    532.4,
+    280.6
+   ]
+  },
+  {
+   "id": 55,
+   "lat": -84.549767,
+   "lon": 31.849525,
+   "x": 87276.8,
+   "y": 140491.8,
+   "diameter_m": 1598.5,
+   "depth_m": 88.99,
+   "deepest": {
+    "lat": -84.540345,
+    "lon": 31.675469
+   },
+   "pixels": 315,
+   "axis_ratio": 0.51,
+   "fill_ratio": 0.78,
+   "sigma_m": 0.17,
+   "depth_to_sigma": 514.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 42.3,
+   "axes_m": [
+    2530.5,
+    1289.8
+   ]
+  },
+  {
+   "id": 56,
+   "lat": -84.823344,
+   "lon": 25.966378,
+   "x": 68776.7,
+   "y": 141223.3,
+   "diameter_m": 441.3,
+   "depth_m": 30.74,
+   "deepest": {
+    "lat": -84.821938,
+    "lon": 25.984481
+   },
+   "pixels": 24,
+   "axis_ratio": 0.61,
+   "fill_ratio": 0.8,
+   "sigma_m": 0.17,
+   "depth_to_sigma": 181.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -61.8,
+   "axes_m": [
+    628.1,
+    386.1
+   ]
+  },
+  {
+   "id": 57,
+   "lat": -84.792177,
+   "lon": 26.51965,
+   "x": 70560.0,
+   "y": 141400.0,
+   "diameter_m": 284.9,
+   "depth_m": 6.81,
+   "deepest": {
+    "lat": -84.789234,
+    "lon": 26.519676
+   },
+   "pixels": 10,
+   "axis_ratio": 0.64,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 68.7,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -26.6,
+   "axes_m": [
+    361.8,
+    233.2
+   ]
+  },
+  {
+   "id": 58,
+   "lat": -84.739368,
+   "lon": 28.125089,
+   "x": 75250.3,
+   "y": 140782.9,
+   "diameter_m": 753.7,
+   "depth_m": 28.55,
+   "deepest": {
+    "lat": -84.7261,
+    "lon": 28.10871
+   },
+   "pixels": 70,
+   "axis_ratio": 0.56,
+   "fill_ratio": 0.81,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 215.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -79.1,
+   "axes_m": [
+    1120.2,
+    623.0
+   ]
+  },
+  {
+   "id": 59,
+   "lat": -84.655244,
+   "lon": 29.641791,
+   "x": 80214.5,
+   "y": 140963.6,
+   "diameter_m": 298.7,
+   "depth_m": 11.07,
+   "deepest": {
+    "lat": -84.656729,
+    "lon": 29.64495
+   },
+   "pixels": 11,
+   "axis_ratio": 0.69,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 98.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -49.0,
+   "axes_m": [
+    373.4,
+    257.5
+   ]
+  },
+  {
+   "id": 60,
+   "lat": -84.750703,
+   "lon": 27.909987,
+   "x": 74560.0,
+   "y": 140760.0,
+   "diameter_m": 459.3,
+   "depth_m": 62.64,
+   "deepest": {
+    "lat": -84.751319,
+    "lon": 27.897271
+   },
+   "pixels": 26,
+   "axis_ratio": 0.84,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 436.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 0.0,
+   "axes_m": [
+    503.6,
+    425.5
+   ]
+  },
+  {
+   "id": 61,
+   "lat": -84.777315,
+   "lon": 27.748659,
+   "x": 73786.9,
+   "y": 140253.7,
+   "diameter_m": 737.4,
+   "depth_m": 16.34,
+   "deepest": {
+    "lat": -84.77965,
+    "lon": 27.865681
+   },
+   "pixels": 67,
+   "axis_ratio": 0.6,
+   "fill_ratio": 0.81,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 129.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 69.0,
+   "axes_m": [
+    1052.4,
+    635.6
+   ]
+  },
+  {
+   "id": 62,
+   "lat": -84.871058,
+   "lon": 25.365633,
+   "x": 66671.1,
+   "y": 140626.7,
+   "diameter_m": 382.2,
+   "depth_m": 5.57,
+   "deepest": {
+    "lat": -84.872853,
+    "lon": 25.346176
+   },
+   "pixels": 18,
+   "axis_ratio": 0.71,
+   "fill_ratio": 0.87,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 51.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -7.5,
+   "axes_m": [
+    485.7,
+    346.2
+   ]
+  },
+  {
+   "id": 63,
+   "lat": -84.492739,
+   "lon": 32.841515,
+   "x": 90636.0,
+   "y": 140416.0,
+   "diameter_m": 402.8,
+   "depth_m": 16.01,
+   "deepest": {
+    "lat": -84.489079,
+    "lon": 32.834857
+   },
+   "pixels": 20,
+   "axis_ratio": 0.31,
+   "fill_ratio": 0.89,
+   "sigma_m": 0.17,
+   "depth_to_sigma": 92.6,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -51.6,
+   "axes_m": [
+    759.8,
+    238.9
+   ]
+  },
+  {
+   "id": 64,
+   "lat": -84.480794,
+   "lon": 34.030406,
+   "x": 93733.1,
+   "y": 138806.1,
+   "diameter_m": 3982.1,
+   "depth_m": 679.82,
+   "deepest": {
+    "lat": -84.483764,
+    "lon": 34.012825
+   },
+   "pixels": 1955,
+   "axis_ratio": 0.9,
+   "fill_ratio": 1.0,
+   "sigma_m": 0.21,
+   "depth_to_sigma": 3311.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -19.8,
+   "axes_m": [
+    4210.8,
+    3772.7
+   ]
+  },
+  {
+   "id": 65,
+   "lat": -84.813383,
+   "lon": 26.870514,
+   "x": 71133.3,
+   "y": 140390.5,
+   "diameter_m": 412.8,
+   "depth_m": 14.84,
+   "deepest": {
+    "lat": -84.811533,
+    "lon": 26.871025
+   },
+   "pixels": 21,
+   "axis_ratio": 0.71,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 160.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -86.4,
+   "axes_m": [
+    506.4,
+    357.5
+   ]
+  },
+  {
+   "id": 66,
+   "lat": -84.745541,
+   "lon": 28.544252,
+   "x": 76188.6,
+   "y": 140063.8,
+   "diameter_m": 825.6,
+   "depth_m": 29.4,
+   "deepest": {
+    "lat": -84.747307,
+    "lon": 28.526689
+   },
+   "pixels": 84,
+   "axis_ratio": 0.82,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 201.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 15.4,
+   "axes_m": [
+    929.6,
+    760.1
+   ]
+  },
+  {
+   "id": 67,
+   "lat": -84.884775,
+   "lon": 25.481296,
+   "x": 66775.6,
+   "y": 140115.6,
+   "diameter_m": 540.5,
+   "depth_m": 9.71,
+   "deepest": {
+    "lat": -84.88373,
+    "lon": 25.502061
+   },
+   "pixels": 36,
+   "axis_ratio": 0.77,
+   "fill_ratio": 0.82,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 62.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 53.9,
+   "axes_m": [
+    681.6,
+    525.8
+   ]
+  },
+  {
+   "id": 68,
+   "lat": -84.706209,
+   "lon": 29.901457,
+   "x": 80080.5,
+   "y": 139256.1,
+   "diameter_m": 1392.6,
+   "depth_m": 50.6,
+   "deepest": {
+    "lat": -84.696571,
+    "lon": 29.693657
+   },
+   "pixels": 239,
+   "axis_ratio": 0.49,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 358.8,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 73.7,
+   "axes_m": [
+    2038.8,
+    1000.3
+   ]
+  },
+  {
+   "id": 69,
+   "lat": -84.757974,
+   "lon": 28.262503,
+   "x": 75320.0,
+   "y": 140104.0,
+   "diameter_m": 284.9,
+   "depth_m": 22.14,
+   "deepest": {
+    "lat": -84.75751,
+    "lon": 28.259774
+   },
+   "pixels": 10,
+   "axis_ratio": 0.81,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.25,
+   "depth_to_sigma": 90.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 90.0,
+   "axes_m": [
+    326.2,
+    264.0
+   ]
+  },
+  {
+   "id": 70,
+   "lat": -84.709134,
+   "lon": 29.279216,
+   "x": 78520.0,
+   "y": 140040.0,
+   "diameter_m": 270.2,
+   "depth_m": 4.8,
+   "deepest": {
+    "lat": -84.709134,
+    "lon": 29.279216
+   },
+   "pixels": 9,
+   "axis_ratio": 1.0,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 38.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 0.0,
+   "axes_m": [
+    276.5,
+    276.5
+   ]
+  },
+  {
+   "id": 71,
+   "lat": -84.843364,
+   "lon": 26.947035,
+   "x": 70907.9,
+   "y": 139483.3,
+   "diameter_m": 769.7,
+   "depth_m": 138.28,
+   "deepest": {
+    "lat": -84.84328,
+    "lon": 26.951515
+   },
+   "pixels": 73,
+   "axis_ratio": 0.91,
+   "fill_ratio": 0.99,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 1102.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -8.8,
+   "axes_m": [
+    813.2,
+    739.1
+   ]
+  },
+  {
+   "id": 72,
+   "lat": -84.823767,
+   "lon": 27.633235,
+   "x": 72849.5,
+   "y": 139151.6,
+   "diameter_m": 1077.3,
+   "depth_m": 51.67,
+   "deepest": {
+    "lat": -84.820114,
+    "lon": 27.641055
+   },
+   "pixels": 143,
+   "axis_ratio": 0.94,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 421.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -74.0,
+   "axes_m": [
+    1123.8,
+    1057.3
+   ]
+  },
+  {
+   "id": 73,
+   "lat": -84.971958,
+   "lon": 24.347544,
+   "x": 62898.0,
+   "y": 138996.1,
+   "diameter_m": 1153.8,
+   "depth_m": 18.91,
+   "deepest": {
+    "lat": -84.978278,
+    "lon": 24.257235
+   },
+   "pixels": 164,
+   "axis_ratio": 0.91,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 160.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -12.9,
+   "axes_m": [
+    1247.8,
+    1139.2
+   ]
+  },
+  {
+   "id": 74,
+   "lat": -84.533133,
+   "lon": 32.82238,
+   "x": 89923.6,
+   "y": 139414.5,
+   "diameter_m": 298.7,
+   "depth_m": 6.7,
+   "deepest": {
+    "lat": -84.530675,
+    "lon": 32.820682
+   },
+   "pixels": 11,
+   "axis_ratio": 0.69,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.19,
+   "depth_to_sigma": 34.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -41.0,
+   "axes_m": [
+    373.4,
+    257.4
+   ]
+  },
+  {
+   "id": 75,
+   "lat": -85.01808,
+   "lon": 22.79247,
+   "x": 58560.0,
+   "y": 139360.0,
+   "diameter_m": 337.1,
+   "depth_m": 12.11,
+   "deepest": {
+    "lat": -85.016356,
+    "lon": 22.800571
+   },
+   "pixels": 14,
+   "axis_ratio": 0.76,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.08,
+   "depth_to_sigma": 145.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -45.0,
+   "axes_m": [
+    392.7,
+    297.7
+   ]
+  },
+  {
+   "id": 76,
+   "lat": -84.926319,
+   "lon": 25.168162,
+   "x": 65472.0,
+   "y": 139336.0,
+   "diameter_m": 284.9,
+   "depth_m": 9.84,
+   "deepest": {
+    "lat": -84.929066,
+    "lon": 25.186061
+   },
+   "pixels": 10,
+   "axis_ratio": 0.78,
+   "fill_ratio": 0.9,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 73.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 63.4,
+   "axes_m": [
+    340.0,
+    264.0
+   ]
+  },
+  {
+   "id": 77,
+   "lat": -84.951453,
+   "lon": 25.695699,
+   "x": 66421.0,
+   "y": 138039.1,
+   "diameter_m": 1513.0,
+   "depth_m": 36.39,
+   "deepest": {
+    "lat": -84.948784,
+    "lon": 25.688996
+   },
+   "pixels": 282,
+   "axis_ratio": 0.69,
+   "fill_ratio": 0.69,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 273.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 78.0,
+   "axes_m": [
+    2178.9,
+    1513.6
+   ]
+  },
+  {
+   "id": 78,
+   "lat": -84.609955,
+   "lon": 32.418472,
+   "x": 87687.0,
+   "y": 138074.1,
+   "diameter_m": 1541.8,
+   "depth_m": 70.96,
+   "deepest": {
+    "lat": -84.623442,
+    "lon": 32.423789
+   },
+   "pixels": 293,
+   "axis_ratio": 0.5,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 515.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 65.3,
+   "axes_m": [
+    2259.0,
+    1136.1
+   ]
+  },
+  {
+   "id": 79,
+   "lat": -84.576597,
+   "lon": 32.372933,
+   "x": 88120.0,
+   "y": 139000.0,
+   "diameter_m": 270.2,
+   "depth_m": 17.47,
+   "deepest": {
+    "lat": -84.576597,
+    "lon": 32.372933
+   },
+   "pixels": 9,
+   "axis_ratio": 1.0,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 135.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 90.0,
+   "axes_m": [
+    276.5,
+    276.5
+   ]
+  },
+  {
+   "id": 80,
+   "lat": -84.640378,
+   "lon": 31.661881,
+   "x": 85370.8,
+   "y": 138433.0,
+   "diameter_m": 1011.1,
+   "depth_m": 30.31,
+   "deepest": {
+    "lat": -84.6433,
+    "lon": 31.660151
+   },
+   "pixels": 126,
+   "axis_ratio": 0.81,
+   "fill_ratio": 0.91,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 275.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -36.0,
+   "axes_m": [
+    1180.3,
+    954.8
+   ]
+  },
+  {
+   "id": 81,
+   "lat": -84.900346,
+   "lon": 26.330576,
+   "x": 68635.2,
+   "y": 138686.4,
+   "diameter_m": 450.5,
+   "depth_m": 10.91,
+   "deepest": {
+    "lat": -84.89988,
+    "lon": 26.346492
+   },
+   "pixels": 25,
+   "axis_ratio": 0.81,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.19,
+   "depth_to_sigma": 59.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -8.5,
+   "axes_m": [
+    505.8,
+    411.3
+   ]
+  },
+  {
+   "id": 82,
+   "lat": -84.822315,
+   "lon": 28.341873,
+   "x": 74585.9,
+   "y": 138278.8,
+   "diameter_m": 742.9,
+   "depth_m": 105.55,
+   "deepest": {
+    "lat": -84.82206,
+    "lon": 28.3462
+   },
+   "pixels": 68,
+   "axis_ratio": 0.88,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 1004.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -28.8,
+   "axes_m": [
+    799.9,
+    701.0
+   ]
+  },
+  {
+   "id": 83,
+   "lat": -84.693543,
+   "lon": 31.157543,
+   "x": 83313.0,
+   "y": 137796.5,
+   "diameter_m": 432.0,
+   "depth_m": 9.71,
+   "deepest": {
+    "lat": -84.693327,
+    "lon": 31.159021
+   },
+   "pixels": 23,
+   "axis_ratio": 0.52,
+   "fill_ratio": 0.9,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 77.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -73.5,
+   "axes_m": [
+    632.3,
+    329.1
+   ]
+  },
+  {
+   "id": 84,
+   "lat": -84.90042,
+   "lon": 27.099539,
+   "x": 70489.2,
+   "y": 137750.8,
+   "diameter_m": 324.8,
+   "depth_m": 30.35,
+   "deepest": {
+    "lat": -84.90086,
+    "lon": 27.114872
+   },
+   "pixels": 13,
+   "axis_ratio": 0.86,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 214.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 45.0,
+   "axes_m": [
+    356.9,
+    307.9
+   ]
+  },
+  {
+   "id": 85,
+   "lat": -84.929986,
+   "lon": 26.559341,
+   "x": 68785.7,
+   "y": 137605.7,
+   "diameter_m": 476.7,
+   "depth_m": 30.32,
+   "deepest": {
+    "lat": -84.928178,
+    "lon": 26.571711
+   },
+   "pixels": 28,
+   "axis_ratio": 0.86,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 275.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 83.6,
+   "axes_m": [
+    524.2,
+    452.5
+   ]
+  },
+  {
+   "id": 86,
+   "lat": -84.858117,
+   "lon": 28.256186,
+   "x": 73864.0,
+   "y": 137432.0,
+   "diameter_m": 348.9,
+   "depth_m": 2.07,
+   "deepest": {
+    "lat": -84.858795,
+    "lon": 28.266926
+   },
+   "pixels": 15,
+   "axis_ratio": 0.27,
+   "fill_ratio": 0.76,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 18.3,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 60.9,
+   "axes_m": [
+    774.4,
+    206.8
+   ]
+  },
+  {
+   "id": 87,
+   "lat": -84.845178,
+   "lon": 28.540688,
+   "x": 74733.3,
+   "y": 137408.9,
+   "diameter_m": 270.3,
+   "depth_m": 18.66,
+   "deepest": {
+    "lat": -84.845016,
+    "lon": 28.550824
+   },
+   "pixels": 9,
+   "axis_ratio": 0.75,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.24,
+   "depth_to_sigma": 77.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -20.3,
+   "axes_m": [
+    323.6,
+    241.5
+   ]
+  },
+  {
+   "id": 88,
+   "lat": -84.649156,
+   "lon": 32.310189,
+   "x": 86789.1,
+   "y": 137232.7,
+   "diameter_m": 298.7,
+   "depth_m": 8.21,
+   "deepest": {
+    "lat": -84.649465,
+    "lon": 32.300141
+   },
+   "pixels": 11,
+   "axis_ratio": 0.73,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 65.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 15.1,
+   "axes_m": [
+    359.0,
+    261.6
+   ]
+  },
+  {
+   "id": 89,
+   "lat": -84.897601,
+   "lon": 27.675755,
+   "x": 71910.8,
+   "y": 137110.8,
+   "diameter_m": 324.8,
+   "depth_m": 27.79,
+   "deepest": {
+    "lat": -84.895414,
+    "lon": 27.683424
+   },
+   "pixels": 13,
+   "axis_ratio": 0.86,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 284.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -45.0,
+   "axes_m": [
+    356.9,
+    307.9
+   ]
+  },
+  {
+   "id": 90,
+   "lat": -84.716449,
+   "lon": 31.257448,
+   "x": 83192.0,
+   "y": 137056.0,
+   "diameter_m": 284.9,
+   "depth_m": 2.99,
+   "deepest": {
+    "lat": -84.718571,
+    "lon": 31.258056
+   },
+   "pixels": 10,
+   "axis_ratio": 0.53,
+   "fill_ratio": 0.87,
+   "sigma_m": 0.18,
+   "depth_to_sigma": 16.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -79.7,
+   "axes_m": [
+    420.4,
+    222.0
+   ]
+  },
+  {
+   "id": 91,
+   "lat": -84.950042,
+   "lon": 26.641814,
+   "x": 68710.5,
+   "y": 136961.9,
+   "diameter_m": 412.9,
+   "depth_m": 5.26,
+   "deepest": {
+    "lat": -84.951725,
+    "lon": 26.638653
+   },
+   "pixels": 21,
+   "axis_ratio": 0.78,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.18,
+   "depth_to_sigma": 29.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 86.3,
+   "axes_m": [
+    478.1,
+    372.9
+   ]
+  },
+  {
+   "id": 92,
+   "lat": -84.937802,
+   "lon": 27.578246,
+   "x": 71111.8,
+   "y": 136150.3,
+   "diameter_m": 914.4,
+   "depth_m": 101.51,
+   "deepest": {
+    "lat": -84.940174,
+    "lon": 27.679978
+   },
+   "pixels": 103,
+   "axis_ratio": 0.62,
+   "fill_ratio": 0.84,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 654.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 47.9,
+   "axes_m": [
+    1267.4,
+    782.3
+   ]
+  },
+  {
+   "id": 93,
+   "lat": -84.868128,
+   "lon": 28.691507,
+   "x": 74760.0,
+   "y": 136600.0,
+   "diameter_m": 270.3,
+   "depth_m": 3.93,
+   "deepest": {
+    "lat": -84.870437,
+    "lon": 28.705645
+   },
+   "pixels": 9,
+   "axis_ratio": 1.0,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 46.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 0.0,
+   "axes_m": [
+    276.6,
+    276.6
+   ]
+  },
+  {
+   "id": 94,
+   "lat": -84.767371,
+   "lon": 31.074544,
+   "x": 81955.4,
+   "y": 135995.6,
+   "diameter_m": 1351.2,
+   "depth_m": 22.37,
+   "deepest": {
+    "lat": -84.790409,
+    "lon": 31.127856
+   },
+   "pixels": 225,
+   "axis_ratio": 0.64,
+   "fill_ratio": 0.78,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 157.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -64.7,
+   "axes_m": [
+    1917.5,
+    1227.6
+   ]
+  },
+  {
+   "id": 95,
+   "lat": -84.685063,
+   "lon": 32.136702,
+   "x": 85792.7,
+   "y": 136570.9,
+   "diameter_m": 298.7,
+   "depth_m": 4.52,
+   "deepest": {
+    "lat": -84.686354,
+    "lon": 32.148513
+   },
+   "pixels": 11,
+   "axis_ratio": 0.73,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 40.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -74.9,
+   "axes_m": [
+    359.0,
+    261.6
+   ]
+  },
+  {
+   "id": 96,
+   "lat": -84.875378,
+   "lon": 29.88511,
+   "x": 77479.5,
+   "y": 134822.1,
+   "diameter_m": 3037.8,
+   "depth_m": 71.82,
+   "deepest": {
+    "lat": -84.885319,
+    "lon": 29.67711
+   },
+   "pixels": 1137,
+   "axis_ratio": 0.64,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 553.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -25.6,
+   "axes_m": [
+    3924.9,
+    2519.6
+   ]
+  },
+  {
+   "id": 97,
+   "lat": -84.956468,
+   "lon": 27.056402,
+   "x": 69610.9,
+   "y": 136287.3,
+   "diameter_m": 298.8,
+   "depth_m": 37.32,
+   "deepest": {
+    "lat": -84.956246,
+    "lon": 27.067339
+   },
+   "pixels": 11,
+   "axis_ratio": 0.73,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 304.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 15.1,
+   "axes_m": [
+    359.1,
+    261.7
+   ]
+  },
+  {
+   "id": 98,
+   "lat": -85.092668,
+   "lon": 24.906375,
+   "x": 62706.3,
+   "y": 135049.9,
+   "diameter_m": 1601.7,
+   "depth_m": 30.66,
+   "deepest": {
+    "lat": -85.113778,
+    "lon": 25.07853
+   },
+   "pixels": 316,
+   "axis_ratio": 0.84,
+   "fill_ratio": 0.87,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 280.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 23.4,
+   "axes_m": [
+    1875.3,
+    1575.8
+   ]
+  },
+  {
+   "id": 99,
+   "lat": -84.587594,
+   "lon": 34.774553,
+   "x": 93676.6,
+   "y": 134910.8,
+   "diameter_m": 1933.9,
+   "depth_m": 83.4,
+   "deepest": {
+    "lat": -84.599023,
+    "lon": 34.741142
+   },
+   "pixels": 461,
+   "axis_ratio": 0.69,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 555.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 38.4,
+   "axes_m": [
+    2383.3,
+    1654.2
+   ]
+  },
+  {
+   "id": 100,
+   "lat": -84.68651,
+   "lon": 33.565573,
+   "x": 89147.3,
+   "y": 134352.5,
+   "diameter_m": 2257.3,
+   "depth_m": 52.04,
+   "deepest": {
+    "lat": -84.69329,
+    "lon": 33.346652
+   },
+   "pixels": 628,
+   "axis_ratio": 0.59,
+   "fill_ratio": 0.89,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 375.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 25.7,
+   "axes_m": [
+    3110.0,
+    1841.2
+   ]
+  },
+  {
+   "id": 101,
+   "lat": -85.0486,
+   "lon": 26.16385,
+   "x": 66245.3,
+   "y": 134842.8,
+   "diameter_m": 1267.8,
+   "depth_m": 29.51,
+   "deepest": {
+    "lat": -85.049412,
+    "lon": 26.285296
+   },
+   "pixels": 198,
+   "axis_ratio": 0.6,
+   "fill_ratio": 0.84,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 272.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 13.1,
+   "axes_m": [
+    1790.6,
+    1065.5
+   ]
+  },
+  {
+   "id": 102,
+   "lat": -84.77634,
+   "lon": 31.967965,
+   "x": 83921.6,
+   "y": 134469.9,
+   "diameter_m": 1412.9,
+   "depth_m": 38.6,
+   "deepest": {
+    "lat": -84.779842,
+    "lon": 31.871956
+   },
+   "pixels": 246,
+   "axis_ratio": 0.77,
+   "fill_ratio": 0.99,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 273.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 42.5,
+   "axes_m": [
+    1618.4,
+    1247.7
+   ]
+  },
+  {
+   "id": 103,
+   "lat": -84.992143,
+   "lon": 27.805902,
+   "x": 70882.1,
+   "y": 134406.3,
+   "diameter_m": 555.4,
+   "depth_m": 13.73,
+   "deepest": {
+    "lat": -84.999894,
+    "lon": 27.868999
+   },
+   "pixels": 38,
+   "axis_ratio": 0.35,
+   "fill_ratio": 0.85,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 131.6,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -84.4,
+   "axes_m": [
+    1014.8,
+    357.0
+   ]
+  },
+  {
+   "id": 104,
+   "lat": -85.05874,
+   "lon": 26.829244,
+   "x": 67667.7,
+   "y": 133789.5,
+   "diameter_m": 1452.9,
+   "depth_m": 19.96,
+   "deepest": {
+    "lat": -85.063602,
+    "lon": 26.571894
+   },
+   "pixels": 260,
+   "axis_ratio": 0.73,
+   "fill_ratio": 0.86,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 157.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 57.0,
+   "axes_m": [
+    1828.7,
+    1337.2
+   ]
+  },
+  {
+   "id": 105,
+   "lat": -84.949601,
+   "lon": 28.828349,
+   "x": 73892.4,
+   "y": 134252.4,
+   "diameter_m": 686.1,
+   "depth_m": 14.34,
+   "deepest": {
+    "lat": -84.955114,
+    "lon": 28.75504
+   },
+   "pixels": 58,
+   "axis_ratio": 0.56,
+   "fill_ratio": 0.91,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 125.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -5.9,
+   "axes_m": [
+    960.2,
+    537.2
+   ]
+  },
+  {
+   "id": 106,
+   "lat": -85.083922,
+   "lon": 26.015493,
+   "x": 65425.2,
+   "y": 134049.6,
+   "diameter_m": 864.3,
+   "depth_m": 34.46,
+   "deepest": {
+    "lat": -85.081099,
+    "lon": 26.091203
+   },
+   "pixels": 92,
+   "axis_ratio": 0.43,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 327.0,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 10.3,
+   "axes_m": [
+    1358.5,
+    590.6
+   ]
+  },
+  {
+   "id": 107,
+   "lat": -85.134713,
+   "lon": 24.890544,
+   "x": 62131.4,
+   "y": 133908.6,
+   "diameter_m": 337.2,
+   "depth_m": 4.99,
+   "deepest": {
+    "lat": -85.135724,
+    "lon": 24.891187
+   },
+   "pixels": 14,
+   "axis_ratio": 0.73,
+   "fill_ratio": 0.79,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 52.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -5.8,
+   "axes_m": [
+    443.7,
+    322.3
+   ]
+  },
+  {
+   "id": 108,
+   "lat": -84.861036,
+   "lon": 31.621041,
+   "x": 81756.6,
+   "y": 132784.1,
+   "diameter_m": 1631.6,
+   "depth_m": 57.16,
+   "deepest": {
+    "lat": -84.865967,
+    "lon": 31.604611
+   },
+   "pixels": 328,
+   "axis_ratio": 0.77,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.16,
+   "depth_to_sigma": 365.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 84.7,
+   "axes_m": [
+    1902.9,
+    1455.8
+   ]
+  },
+  {
+   "id": 109,
+   "lat": -85.02628,
+   "lon": 28.063504,
+   "x": 70997.8,
+   "y": 133171.1,
+   "diameter_m": 764.5,
+   "depth_m": 9.52,
+   "deepest": {
+    "lat": -85.017554,
+    "lon": 27.873628
+   },
+   "pixels": 72,
+   "axis_ratio": 0.34,
+   "fill_ratio": 0.67,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 84.3,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 38.8,
+   "axes_m": [
+    1606.6,
+    544.0
+   ]
+  },
+  {
+   "id": 110,
+   "lat": -85.045307,
+   "lon": 27.39869,
+   "x": 69181.8,
+   "y": 133472.7,
+   "diameter_m": 298.8,
+   "depth_m": 5.17,
+   "deepest": {
+    "lat": -85.045336,
+    "lon": 27.458201
+   },
+   "pixels": 11,
+   "axis_ratio": 0.7,
+   "fill_ratio": 0.76,
+   "sigma_m": 0.19,
+   "depth_to_sigma": 27.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 18.4,
+   "axes_m": [
+    408.7,
+    287.6
+   ]
+  },
+  {
+   "id": 111,
+   "lat": -85.112696,
+   "lon": 26.019015,
+   "x": 65050.0,
+   "y": 133260.0,
+   "diameter_m": 360.4,
+   "depth_m": 47.93,
+   "deepest": {
+    "lat": -85.112855,
+    "lon": 26.032822
+   },
+   "pixels": 16,
+   "axis_ratio": 0.87,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 536.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -75.1,
+   "axes_m": [
+    397.1,
+    345.2
+   ]
+  },
+  {
+   "id": 112,
+   "lat": -85.173417,
+   "lon": 24.69942,
+   "x": 61193.1,
+   "y": 133046.9,
+   "diameter_m": 485.3,
+   "depth_m": 32.22,
+   "deepest": {
+    "lat": -85.174174,
+    "lon": 24.72376
+   },
+   "pixels": 29,
+   "axis_ratio": 0.74,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 301.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 45.0,
+   "axes_m": [
+    570.4,
+    421.2
+   ]
+  },
+  {
+   "id": 113,
+   "lat": -85.025325,
+   "lon": 28.449295,
+   "x": 71906.7,
+   "y": 132715.6,
+   "diameter_m": 382.3,
+   "depth_m": 5.29,
+   "deepest": {
+    "lat": -85.018376,
+    "lon": 28.497923
+   },
+   "pixels": 18,
+   "axis_ratio": 0.42,
+   "fill_ratio": 0.68,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 58.2,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -40.6,
+   "axes_m": [
+    720.1,
+    300.6
+   ]
+  },
+  {
+   "id": 114,
+   "lat": -84.999022,
+   "lon": 28.961228,
+   "x": 73476.5,
+   "y": 132767.0,
+   "diameter_m": 432.1,
+   "depth_m": 58.08,
+   "deepest": {
+    "lat": -84.999167,
+    "lon": 28.963649
+   },
+   "pixels": 23,
+   "axis_ratio": 0.87,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 527.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -20.9,
+   "axes_m": [
+    473.0,
+    411.5
+   ]
+  },
+  {
+   "id": 115,
+   "lat": -85.12796,
+   "lon": 26.200777,
+   "x": 65267.7,
+   "y": 132636.9,
+   "diameter_m": 459.5,
+   "depth_m": 14.69,
+   "deepest": {
+    "lat": -85.12709,
+    "lon": 26.183778
+   },
+   "pixels": 26,
+   "axis_ratio": 0.56,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 101.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 64.2,
+   "axes_m": [
+    639.6,
+    356.7
+   ]
+  },
+  {
+   "id": 116,
+   "lat": -84.834996,
+   "lon": 32.367263,
+   "x": 83902.6,
+   "y": 132376.4,
+   "diameter_m": 562.6,
+   "depth_m": 21.56,
+   "deepest": {
+    "lat": -84.836663,
+    "lon": 32.403878
+   },
+   "pixels": 39,
+   "axis_ratio": 0.6,
+   "fill_ratio": 0.86,
+   "sigma_m": 0.16,
+   "depth_to_sigma": 137.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -70.0,
+   "axes_m": [
+    784.4,
+    467.1
+   ]
+  },
+  {
+   "id": 117,
+   "lat": -85.177449,
+   "lon": 25.158374,
+   "x": 62204.8,
+   "y": 132441.6,
+   "diameter_m": 637.2,
+   "depth_m": 19.46,
+   "deepest": {
+    "lat": -85.17406,
+    "lon": 25.171966
+   },
+   "pixels": 50,
+   "axis_ratio": 0.62,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 214.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -39.9,
+   "axes_m": [
+    844.8,
+    523.8
+   ]
+  },
+  {
+   "id": 118,
+   "lat": -85.022616,
+   "lon": 29.611842,
+   "x": 74625.2,
+   "y": 131300.9,
+   "diameter_m": 2018.7,
+   "depth_m": 90.86,
+   "deepest": {
+    "lat": -85.041094,
+    "lon": 29.897912
+   },
+   "pixels": 502,
+   "axis_ratio": 0.45,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 700.3,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 73.7,
+   "axes_m": [
+    3119.0,
+    1388.8
+   ]
+  },
+  {
+   "id": 119,
+   "lat": -85.133806,
+   "lon": 26.450347,
+   "x": 65765.7,
+   "y": 132192.4,
+   "diameter_m": 412.9,
+   "depth_m": 5.27,
+   "deepest": {
+    "lat": -85.137782,
+    "lon": 26.419155
+   },
+   "pixels": 21,
+   "axis_ratio": 0.78,
+   "fill_ratio": 0.82,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 56.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -54.1,
+   "axes_m": [
+    516.5,
+    403.7
+   ]
+  },
+  {
+   "id": 120,
+   "lat": -85.161885,
+   "lon": 25.72898,
+   "x": 63725.9,
+   "y": 132241.5,
+   "diameter_m": 468.2,
+   "depth_m": 10.16,
+   "deepest": {
+    "lat": -85.157393,
+    "lon": 25.804687
+   },
+   "pixels": 27,
+   "axis_ratio": 0.54,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 100.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -6.2,
+   "axes_m": [
+    665.2,
+    358.5
+   ]
+  },
+  {
+   "id": 121,
+   "lat": -85.147666,
+   "lon": 26.126465,
+   "x": 64832.0,
+   "y": 132184.0,
+   "diameter_m": 284.9,
+   "depth_m": 3.8,
+   "deepest": {
+    "lat": -85.148281,
+    "lon": 26.168186
+   },
+   "pixels": 10,
+   "axis_ratio": 0.37,
+   "fill_ratio": 0.81,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 39.5,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 10.8,
+   "axes_m": [
+    520.3,
+    192.6
+   ]
+  },
+  {
+   "id": 122,
+   "lat": -85.123128,
+   "lon": 26.773838,
+   "x": 66657.1,
+   "y": 132108.6,
+   "diameter_m": 337.1,
+   "depth_m": 11.66,
+   "deepest": {
+    "lat": -85.126007,
+    "lon": 26.696734
+   },
+   "pixels": 14,
+   "axis_ratio": 0.3,
+   "fill_ratio": 0.72,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 95.6,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -4.7,
+   "axes_m": [
+    726.8,
+    216.5
+   ]
+  },
+  {
+   "id": 123,
+   "lat": -85.080176,
+   "lon": 27.830371,
+   "x": 69690.9,
+   "y": 132010.9,
+   "diameter_m": 298.8,
+   "depth_m": 10.3,
+   "deepest": {
+    "lat": -85.07998,
+    "lon": 27.87652
+   },
+   "pixels": 11,
+   "axis_ratio": 0.4,
+   "fill_ratio": 0.62,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 79.2,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 36.0,
+   "axes_m": [
+    599.2,
+    240.2
+   ]
+  },
+  {
+   "id": 124,
+   "lat": -84.978125,
+   "lon": 31.182185,
+   "x": 78895.2,
+   "y": 130362.9,
+   "diameter_m": 4026.2,
+   "depth_m": 208.71,
+   "deepest": {
+    "lat": -85.006725,
+    "lon": 30.932626
+   },
+   "pixels": 1997,
+   "axis_ratio": 0.63,
+   "fill_ratio": 0.89,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 1595.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -16.7,
+   "axes_m": [
+    5376.3,
+    3390.1
+   ]
+  },
+  {
+   "id": 125,
+   "lat": -85.137219,
+   "lon": 26.898857,
+   "x": 66751.6,
+   "y": 131581.1,
+   "diameter_m": 392.8,
+   "depth_m": 16.96,
+   "deepest": {
+    "lat": -85.137673,
+    "lon": 26.974945
+   },
+   "pixels": 19,
+   "axis_ratio": 0.73,
+   "fill_ratio": 0.91,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 117.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 33.4,
+   "axes_m": [
+    484.0,
+    351.6
+   ]
+  },
+  {
+   "id": 126,
+   "lat": -85.091737,
+   "lon": 28.048821,
+   "x": 70028.6,
+   "y": 131434.3,
+   "diameter_m": 412.9,
+   "depth_m": 5.44,
+   "deepest": {
+    "lat": -85.092556,
+    "lon": 28.058906
+   },
+   "pixels": 21,
+   "axis_ratio": 0.69,
+   "fill_ratio": 0.69,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 40.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 64.9,
+   "axes_m": [
+    598.7,
+    414.9
+   ]
+  },
+  {
+   "id": 127,
+   "lat": -85.06727,
+   "lon": 28.477524,
+   "x": 71364.4,
+   "y": 131560.0,
+   "diameter_m": 270.3,
+   "depth_m": 15.62,
+   "deepest": {
+    "lat": -85.070282,
+    "lon": 28.477171
+   },
+   "pixels": 9,
+   "axis_ratio": 0.4,
+   "fill_ratio": 0.78,
+   "sigma_m": 0.08,
+   "depth_to_sigma": 195.6,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -62.5,
+   "axes_m": [
+    480.9,
+    194.1
+   ]
+  },
+  {
+   "id": 128,
+   "lat": -85.102845,
+   "lon": 27.788712,
+   "x": 69273.8,
+   "y": 131452.3,
+   "diameter_m": 459.4,
+   "depth_m": 19.54,
+   "deepest": {
+    "lat": -85.10366,
+    "lon": 27.813864
+   },
+   "pixels": 26,
+   "axis_ratio": 0.7,
+   "fill_ratio": 0.89,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 180.7,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 12.2,
+   "axes_m": [
+    582.6,
+    406.3
+   ]
+  },
+  {
+   "id": 129,
+   "lat": -84.841759,
+   "lon": 32.902297,
+   "x": 85023.4,
+   "y": 131414.6,
+   "diameter_m": 815.8,
+   "depth_m": 53.18,
+   "deepest": {
+    "lat": -84.841151,
+    "lon": 32.922596
+   },
+   "pixels": 82,
+   "axis_ratio": 0.46,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 431.9,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -12.2,
+   "axes_m": [
+    1214.1,
+    564.0
+   ]
+  },
+  {
+   "id": 130,
+   "lat": -85.125998,
+   "lon": 27.765678,
+   "x": 68893.3,
+   "y": 130857.8,
+   "diameter_m": 270.3,
+   "depth_m": 15.14,
+   "deepest": {
+    "lat": -85.126107,
+    "lon": 27.778029
+   },
+   "pixels": 9,
+   "axis_ratio": 0.84,
+   "fill_ratio": 0.87,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 100.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 7.6,
+   "axes_m": [
+    315.8,
+    266.4
+   ]
+  },
+  {
+   "id": 131,
+   "lat": -85.087525,
+   "lon": 28.907704,
+   "x": 72052.7,
+   "y": 130481.8,
+   "diameter_m": 597.7,
+   "depth_m": 33.07,
+   "deepest": {
+    "lat": -85.087659,
+    "lon": 28.938113
+   },
+   "pixels": 44,
+   "axis_ratio": 0.73,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 227.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 59.7,
+   "axes_m": [
+    708.0,
+    518.7
+   ]
+  },
+  {
+   "id": 132,
+   "lat": -85.196281,
+   "lon": 26.917858,
+   "x": 65983.0,
+   "y": 129959.1,
+   "diameter_m": 873.7,
+   "depth_m": 70.04,
+   "deepest": {
+    "lat": -85.200101,
+    "lon": 26.966207
+   },
+   "pixels": 94,
+   "axis_ratio": 0.5,
+   "fill_ratio": 0.76,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 534.9,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 53.6,
+   "axes_m": [
+    1418.7,
+    705.0
+   ]
+  },
+  {
+   "id": 133,
+   "lat": -85.196161,
+   "lon": 26.578334,
+   "x": 65213.3,
+   "y": 130351.1,
+   "diameter_m": 270.3,
+   "depth_m": 21.77,
+   "deepest": {
+    "lat": -85.196685,
+    "lon": 26.558018
+   },
+   "pixels": 9,
+   "axis_ratio": 0.75,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.25,
+   "depth_to_sigma": 86.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 20.3,
+   "axes_m": [
+    323.7,
+    241.5
+   ]
+  },
+  {
+   "id": 134,
+   "lat": -85.079039,
+   "lon": 29.236276,
+   "x": 72925.7,
+   "y": 130291.4,
+   "diameter_m": 337.1,
+   "depth_m": 10.91,
+   "deepest": {
+    "lat": -85.078173,
+    "lon": 29.263288
+   },
+   "pixels": 14,
+   "axis_ratio": 0.62,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 123.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -23.1,
+   "axes_m": [
+    440.2,
+    275.0
+   ]
+  },
+  {
+   "id": 135,
+   "lat": -85.177819,
+   "lon": 27.186969,
+   "x": 66848.9,
+   "y": 130146.7,
+   "diameter_m": 270.3,
+   "depth_m": 19.87,
+   "deepest": {
+    "lat": -85.177593,
+    "lon": 27.146465
+   },
+   "pixels": 9,
+   "axis_ratio": 0.41,
+   "fill_ratio": 0.7,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 215.2,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 31.0,
+   "axes_m": [
+    506.6,
+    206.2
+   ]
+  },
+  {
+   "id": 136,
+   "lat": -85.105789,
+   "lon": 29.070541,
+   "x": 72153.7,
+   "y": 129791.6,
+   "diameter_m": 392.8,
+   "depth_m": 18.65,
+   "deepest": {
+    "lat": -85.104806,
+    "lon": 29.084578
+   },
+   "pixels": 19,
+   "axis_ratio": 0.79,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 149.7,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 77.2,
+   "axes_m": [
+    452.3,
+    355.2
+   ]
+  },
+  {
+   "id": 137,
+   "lat": -85.13186,
+   "lon": 29.162509,
+   "x": 71976.0,
+   "y": 128984.0,
+   "diameter_m": 349.0,
+   "depth_m": 6.49,
+   "deepest": {
+    "lat": -85.130638,
+    "lon": 29.111858
+   },
+   "pixels": 15,
+   "axis_ratio": 0.55,
+   "fill_ratio": 0.89,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 51.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -45.0,
+   "axes_m": [
+    496.6,
+    274.2
+   ]
+  },
+  {
+   "id": 138,
+   "lat": -84.846709,
+   "lon": 34.849516,
+   "x": 89353.7,
+   "y": 128326.3,
+   "diameter_m": 392.7,
+   "depth_m": 11.02,
+   "deepest": {
+    "lat": -84.848594,
+    "lon": 34.849084
+   },
+   "pixels": 19,
+   "axis_ratio": 0.67,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 89.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -84.4,
+   "axes_m": [
+    488.4,
+    327.5
+   ]
+  },
+  {
+   "id": 139,
+   "lat": -84.848097,
+   "lon": 35.234868,
+   "x": 90190.4,
+   "y": 127688.0,
+   "diameter_m": 450.4,
+   "depth_m": 6.29,
+   "deepest": {
+    "lat": -84.847055,
+    "lon": 35.230976
+   },
+   "pixels": 25,
+   "axis_ratio": 0.42,
+   "fill_ratio": 0.77,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 48.6,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 76.2,
+   "axes_m": [
+    790.7,
+    335.1
+   ]
+  },
+  {
+   "id": 140,
+   "lat": -85.146139,
+   "lon": 30.40941,
+   "x": 74546.2,
+   "y": 127013.1,
+   "diameter_m": 668.3,
+   "depth_m": 31.59,
+   "deepest": {
+    "lat": -85.151489,
+    "lon": 30.434739
+   },
+   "pixels": 55,
+   "axis_ratio": 0.61,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 215.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -67.3,
+   "axes_m": [
+    870.7,
+    527.8
+   ]
+  },
+  {
+   "id": 141,
+   "lat": -84.881603,
+   "lon": 36.118022,
+   "x": 91547.7,
+   "y": 125460.3,
+   "diameter_m": 726.3,
+   "depth_m": 13.2,
+   "deepest": {
+    "lat": -84.889914,
+    "lon": 36.22841
+   },
+   "pixels": 65,
+   "axis_ratio": 0.37,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 113.2,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 78.7,
+   "axes_m": [
+    1239.8,
+    461.5
+   ]
+  },
+  {
+   "id": 142,
+   "lat": -84.946077,
+   "lon": 34.863873,
+   "x": 87660.0,
+   "y": 125826.7,
+   "diameter_m": 312.1,
+   "depth_m": 15.84,
+   "deepest": {
+    "lat": -84.947174,
+    "lon": 34.863436
+   },
+   "pixels": 12,
+   "axis_ratio": 0.88,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.18,
+   "depth_to_sigma": 86.7,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -70.2,
+   "axes_m": [
+    345.3,
+    304.2
+   ]
+  },
+  {
+   "id": 143,
+   "lat": -84.967007,
+   "lon": 34.60372,
+   "x": 86726.7,
+   "y": 125700.0,
+   "diameter_m": 312.1,
+   "depth_m": 5.15,
+   "deepest": {
+    "lat": -84.965842,
+    "lon": 34.609751
+   },
+   "pixels": 12,
+   "axis_ratio": 0.78,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 49.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -32.1,
+   "axes_m": [
+    364.6,
+    284.6
+   ]
+  },
+  {
+   "id": 144,
+   "lat": -84.98062,
+   "lon": 34.632869,
+   "x": 86555.6,
+   "y": 125315.6,
+   "diameter_m": 382.3,
+   "depth_m": 8.53,
+   "deepest": {
+    "lat": -84.980492,
+    "lon": 34.579047
+   },
+   "pixels": 18,
+   "axis_ratio": 0.78,
+   "fill_ratio": 0.83,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 88.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 38.5,
+   "axes_m": [
+    475.8,
+    372.2
+   ]
+  },
+  {
+   "id": 145,
+   "lat": -84.944939,
+   "lon": 35.312791,
+   "x": 88663.2,
+   "y": 125164.2,
+   "diameter_m": 392.7,
+   "depth_m": 10.45,
+   "deepest": {
+    "lat": -84.946253,
+    "lon": 35.294444
+   },
+   "pixels": 19,
+   "axis_ratio": 0.3,
+   "fill_ratio": 0.9,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 80.0,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 15.5,
+   "axes_m": [
+    753.1,
+    227.4
+   ]
+  },
+  {
+   "id": 146,
+   "lat": -85.320733,
+   "lon": 28.232968,
+   "x": 67160.0,
+   "y": 125080.0,
+   "diameter_m": 413.0,
+   "depth_m": 61.43,
+   "deepest": {
+    "lat": -85.320733,
+    "lon": 28.232968
+   },
+   "pixels": 21,
+   "axis_ratio": 1.0,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 541.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 90.0,
+   "axes_m": [
+    416.8,
+    416.8
+   ]
+  },
+  {
+   "id": 147,
+   "lat": -85.091663,
+   "lon": 33.168158,
+   "x": 81478.4,
+   "y": 124663.2,
+   "diameter_m": 901.0,
+   "depth_m": 33.37,
+   "deepest": {
+    "lat": -85.09405,
+    "lon": 33.113585
+   },
+   "pixels": 100,
+   "axis_ratio": 0.83,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 223.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 23.0,
+   "axes_m": [
+    1004.8,
+    832.7
+   ]
+  },
+  {
+   "id": 148,
+   "lat": -84.918058,
+   "lon": 35.860188,
+   "x": 90333.3,
+   "y": 124973.3,
+   "diameter_m": 270.3,
+   "depth_m": 9.85,
+   "deepest": {
+    "lat": -84.918966,
+    "lon": 35.879831
+   },
+   "pixels": 9,
+   "axis_ratio": 0.61,
+   "fill_ratio": 0.83,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 101.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 45.0,
+   "axes_m": [
+    380.1,
+    232.0
+   ]
+  },
+  {
+   "id": 149,
+   "lat": -84.856493,
+   "lon": 37.069477,
+   "x": 94078.3,
+   "y": 124531.6,
+   "diameter_m": 748.3,
+   "depth_m": 51.28,
+   "deepest": {
+    "lat": -84.853869,
+    "lon": 37.066568
+   },
+   "pixels": 69,
+   "axis_ratio": 0.96,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 411.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 1.6,
+   "axes_m": [
+    773.7,
+    745.8
+   ]
+  },
+  {
+   "id": 150,
+   "lat": -84.987641,
+   "lon": 35.22693,
+   "x": 87727.1,
+   "y": 124237.1,
+   "diameter_m": 674.2,
+   "depth_m": 13.01,
+   "deepest": {
+    "lat": -84.98599,
+    "lon": 35.173433
+   },
+   "pixels": 56,
+   "axis_ratio": 0.45,
+   "fill_ratio": 0.78,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 86.1,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 60.1,
+   "axes_m": [
+    1132.5,
+    511.6
+   ]
+  },
+  {
+   "id": 151,
+   "lat": -85.23362,
+   "lon": 30.8459,
+   "x": 74149.1,
+   "y": 124160.0,
+   "diameter_m": 422.7,
+   "depth_m": 14.24,
+   "deepest": {
+    "lat": -85.233891,
+    "lon": 30.871344
+   },
+   "pixels": 22,
+   "axis_ratio": 0.67,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 142.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -90.0,
+   "axes_m": [
+    524.6,
+    353.4
+   ]
+  },
+  {
+   "id": 152,
+   "lat": -85.164019,
+   "lon": 32.594142,
+   "x": 79041.3,
+   "y": 123621.3,
+   "diameter_m": 987.1,
+   "depth_m": 21.06,
+   "deepest": {
+    "lat": -85.162627,
+    "lon": 32.490354
+   },
+   "pixels": 120,
+   "axis_ratio": 0.4,
+   "fill_ratio": 0.65,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 199.0,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 28.5,
+   "axes_m": [
+    1940.4,
+    766.8
+   ]
+  },
+  {
+   "id": 153,
+   "lat": -85.413438,
+   "lon": 27.104807,
+   "x": 63401.4,
+   "y": 123871.6,
+   "diameter_m": 680.4,
+   "depth_m": 21.65,
+   "deepest": {
+    "lat": -85.41081,
+    "lon": 27.161324
+   },
+   "pixels": 57,
+   "axis_ratio": 0.29,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 165.4,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -7.5,
+   "axes_m": [
+    1306.1,
+    376.6
+   ]
+  },
+  {
+   "id": 154,
+   "lat": -84.982358,
+   "lon": 35.583675,
+   "x": 88592.4,
+   "y": 123819.0,
+   "diameter_m": 412.9,
+   "depth_m": 8.4,
+   "deepest": {
+    "lat": -84.990069,
+    "lon": 35.576235
+   },
+   "pixels": 21,
+   "axis_ratio": 0.5,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 55.8,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -49.0,
+   "axes_m": [
+    608.9,
+    302.2
+   ]
+  },
+  {
+   "id": 155,
+   "lat": -84.880946,
+   "lon": 37.133373,
+   "x": 93768.6,
+   "y": 123834.3,
+   "diameter_m": 476.7,
+   "depth_m": 5.48,
+   "deepest": {
+    "lat": -84.888087,
+    "lon": 37.097437
+   },
+   "pixels": 28,
+   "axis_ratio": 0.56,
+   "fill_ratio": 0.7,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 40.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -6.1,
+   "axes_m": [
+    764.1,
+    426.5
+   ]
+  },
+  {
+   "id": 156,
+   "lat": -85.436321,
+   "lon": 26.680799,
+   "x": 62170.9,
+   "y": 123716.4,
+   "diameter_m": 422.7,
+   "depth_m": 12.98,
+   "deepest": {
+    "lat": -85.436967,
+    "lon": 26.661297
+   },
+   "pixels": 22,
+   "axis_ratio": 0.3,
+   "fill_ratio": 0.91,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 123.8,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -23.3,
+   "axes_m": [
+    808.9,
+    242.7
+   ]
+  },
+  {
+   "id": 157,
+   "lat": -85.34426,
+   "lon": 29.087063,
+   "x": 68669.6,
+   "y": 123440.5,
+   "diameter_m": 790.8,
+   "depth_m": 60.91,
+   "deepest": {
+    "lat": -85.347561,
+    "lon": 29.11453
+   },
+   "pixels": 77,
+   "axis_ratio": 0.84,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 490.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 77.3,
+   "axes_m": [
+    867.4,
+    732.9
+   ]
+  },
+  {
+   "id": 158,
+   "lat": -84.920815,
+   "lon": 36.941633,
+   "x": 92625.6,
+   "y": 123179.2,
+   "diameter_m": 450.5,
+   "depth_m": 14.1,
+   "deepest": {
+    "lat": -84.919722,
+    "lon": 36.920447
+   },
+   "pixels": 25,
+   "axis_ratio": 0.62,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 92.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 47.8,
+   "axes_m": [
+    585.9,
+    361.5
+   ]
+  },
+  {
+   "id": 159,
+   "lat": -85.514278,
+   "lon": 26.020071,
+   "x": 59701.5,
+   "y": 122297.5,
+   "diameter_m": 1579.2,
+   "depth_m": 172.5,
+   "deepest": {
+    "lat": -85.518147,
+    "lon": 26.165548
+   },
+   "pixels": 307,
+   "axis_ratio": 0.49,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 1409.5,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 50.0,
+   "axes_m": [
+    2295.7,
+    1127.9
+   ]
+  },
+  {
+   "id": 160,
+   "lat": -84.971069,
+   "lon": 36.239304,
+   "x": 90206.2,
+   "y": 123073.8,
+   "diameter_m": 324.8,
+   "depth_m": 5.05,
+   "deepest": {
+    "lat": -84.973149,
+    "lon": 36.253838
+   },
+   "pixels": 13,
+   "axis_ratio": 0.73,
+   "fill_ratio": 0.83,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 46.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -83.9,
+   "axes_m": [
+    416.6,
+    305.5
+   ]
+  },
+  {
+   "id": 161,
+   "lat": -85.004951,
+   "lon": 36.026722,
+   "x": 89143.4,
+   "y": 122575.2,
+   "diameter_m": 485.2,
+   "depth_m": 5.13,
+   "deepest": {
+    "lat": -85.007066,
+    "lon": 35.977324
+   },
+   "pixels": 29,
+   "axis_ratio": 0.79,
+   "fill_ratio": 0.88,
+   "sigma_m": 0.08,
+   "depth_to_sigma": 61.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -32.9,
+   "axes_m": [
+    579.9,
+    460.2
+   ]
+  },
+  {
+   "id": 162,
+   "lat": -85.409086,
+   "lon": 28.619352,
+   "x": 66716.6,
+   "y": 122268.6,
+   "diameter_m": 533.2,
+   "depth_m": 31.74,
+   "deepest": {
+    "lat": -85.410383,
+    "lon": 28.648553
+   },
+   "pixels": 35,
+   "axis_ratio": 0.87,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 293.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 50.8,
+   "axes_m": [
+    587.6,
+    513.5
+   ]
+  },
+  {
+   "id": 163,
+   "lat": -85.417019,
+   "lon": 28.997371,
+   "x": 67405.0,
+   "y": 121615.0,
+   "diameter_m": 360.5,
+   "depth_m": 14.4,
+   "deepest": {
+    "lat": -85.418683,
+    "lon": 29.006559
+   },
+   "pixels": 16,
+   "axis_ratio": 0.45,
+   "fill_ratio": 0.89,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 144.6,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 23.4,
+   "axes_m": [
+    568.4,
+    257.6
+   ]
+  },
+  {
+   "id": 164,
+   "lat": -84.9914,
+   "lon": 36.937927,
+   "x": 91328.9,
+   "y": 121471.1,
+   "diameter_m": 270.3,
+   "depth_m": 6.94,
+   "deepest": {
+    "lat": -84.991342,
+    "lon": 36.933235
+   },
+   "pixels": 9,
+   "axis_ratio": 0.74,
+   "fill_ratio": 0.88,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 61.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 12.0,
+   "axes_m": [
+    333.7,
+    248.5
+   ]
+  },
+  {
+   "id": 165,
+   "lat": -85.066379,
+   "lon": 35.961526,
+   "x": 87908.0,
+   "y": 121166.0,
+   "diameter_m": 569.9,
+   "depth_m": 121.74,
+   "deepest": {
+    "lat": -85.065534,
+    "lon": 35.978981
+   },
+   "pixels": 40,
+   "axis_ratio": 0.83,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.15,
+   "depth_to_sigma": 837.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -23.1,
+   "axes_m": [
+    635.0,
+    525.9
+   ]
+  },
+  {
+   "id": 166,
+   "lat": -85.561939,
+   "lon": 26.143609,
+   "x": 59327.3,
+   "y": 120869.1,
+   "diameter_m": 298.9,
+   "depth_m": 32.47,
+   "deepest": {
+    "lat": -85.562904,
+    "lon": 26.146285
+   },
+   "pixels": 11,
+   "axis_ratio": 0.73,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 292.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -74.9,
+   "axes_m": [
+    359.2,
+    261.8
+   ]
+  },
+  {
+   "id": 167,
+   "lat": -85.013363,
+   "lon": 36.969867,
+   "x": 90995.3,
+   "y": 120887.1,
+   "diameter_m": 371.5,
+   "depth_m": 15.85,
+   "deepest": {
+    "lat": -85.016091,
+    "lon": 36.957798
+   },
+   "pixels": 17,
+   "axis_ratio": 0.67,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.16,
+   "depth_to_sigma": 97.7,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -24.9,
+   "axes_m": [
+    464.0,
+    310.0
+   ]
+  },
+  {
+   "id": 168,
+   "lat": -85.328822,
+   "lon": 31.612221,
+   "x": 74287.3,
+   "y": 120694.5,
+   "diameter_m": 298.9,
+   "depth_m": 8.03,
+   "deepest": {
+    "lat": -85.326592,
+    "lon": 31.667859
+   },
+   "pixels": 11,
+   "axis_ratio": 0.59,
+   "fill_ratio": 0.64,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 71.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 49.7,
+   "axes_m": [
+    486.3,
+    287.3
+   ]
+  },
+  {
+   "id": 169,
+   "lat": -85.290324,
+   "lon": 33.926995,
+   "x": 79754.1,
+   "y": 118565.9,
+   "diameter_m": 3618.2,
+   "depth_m": 173.3,
+   "deepest": {
+    "lat": -85.292955,
+    "lon": 33.854748
+   },
+   "pixels": 1612,
+   "axis_ratio": 0.48,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 1400.6,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -58.2,
+   "axes_m": [
+    5358.5,
+    2595.8
+   ]
+  },
+  {
+   "id": 170,
+   "lat": -85.150957,
+   "lon": 35.270942,
+   "x": 84957.6,
+   "y": 120119.0,
+   "diameter_m": 820.9,
+   "depth_m": 40.24,
+   "deepest": {
+    "lat": -85.150752,
+    "lon": 35.327632
+   },
+   "pixels": 83,
+   "axis_ratio": 0.58,
+   "fill_ratio": 0.87,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 402.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 23.5,
+   "axes_m": [
+    1152.3,
+    673.8
+   ]
+  },
+  {
+   "id": 171,
+   "lat": -85.43839,
+   "lon": 30.024638,
+   "x": 69249.7,
+   "y": 119825.0,
+   "diameter_m": 1366.8,
+   "depth_m": 136.45,
+   "deepest": {
+    "lat": -85.439264,
+    "lon": 30.026335
+   },
+   "pixels": 230,
+   "axis_ratio": 0.88,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 1196.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -76.6,
+   "axes_m": [
+    1474.6,
+    1292.6
+   ]
+  },
+  {
+   "id": 172,
+   "lat": -85.018805,
+   "lon": 37.293265,
+   "x": 91576.0,
+   "y": 120240.0,
+   "diameter_m": 284.9,
+   "depth_m": 14.65,
+   "deepest": {
+    "lat": -85.020172,
+    "lon": 37.297629
+   },
+   "pixels": 10,
+   "axis_ratio": 0.75,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 139.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 90.0,
+   "axes_m": [
+    340.0,
+    256.2
+   ]
+  },
+  {
+   "id": 173,
+   "lat": -85.339819,
+   "lon": 31.813416,
+   "x": 74534.5,
+   "y": 120149.1,
+   "diameter_m": 298.9,
+   "depth_m": 10.0,
+   "deepest": {
+    "lat": -85.338647,
+    "lon": 31.797536
+   },
+   "pixels": 11,
+   "axis_ratio": 0.58,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 87.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 52.1,
+   "axes_m": [
+    407.7,
+    237.9
+   ]
+  },
+  {
+   "id": 174,
+   "lat": -85.406501,
+   "lon": 30.675242,
+   "x": 71100.0,
+   "y": 119864.0,
+   "diameter_m": 570.0,
+   "depth_m": 22.03,
+   "deepest": {
+    "lat": -85.407304,
+    "lon": 30.709888
+   },
+   "pixels": 40,
+   "axis_ratio": 0.72,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 198.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 79.7,
+   "axes_m": [
+    693.8,
+    499.9
+   ]
+  },
+  {
+   "id": 175,
+   "lat": -85.417398,
+   "lon": 31.115422,
+   "x": 71847.7,
+   "y": 119030.9,
+   "diameter_m": 680.4,
+   "depth_m": 53.84,
+   "deepest": {
+    "lat": -85.41861,
+    "lon": 31.178664
+   },
+   "pixels": 57,
+   "axis_ratio": 0.74,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 468.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 62.8,
+   "axes_m": [
+    806.1,
+    595.3
+   ]
+  },
+  {
+   "id": 176,
+   "lat": -85.018473,
+   "lon": 38.061752,
+   "x": 93186.7,
+   "y": 119008.9,
+   "diameter_m": 270.3,
+   "depth_m": 18.22,
+   "deepest": {
+    "lat": -85.019245,
+    "lon": 38.055869
+   },
+   "pixels": 9,
+   "axis_ratio": 0.75,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.16,
+   "depth_to_sigma": 111.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 20.3,
+   "axes_m": [
+    323.7,
+    241.5
+   ]
+  },
+  {
+   "id": 177,
+   "lat": -85.415086,
+   "lon": 32.217408,
+   "x": 74161.1,
+   "y": 117686.5,
+   "diameter_m": 775.3,
+   "depth_m": 51.98,
+   "deepest": {
+    "lat": -85.414873,
+    "lon": 32.195734
+   },
+   "pixels": 74,
+   "axis_ratio": 0.95,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.12,
+   "depth_to_sigma": 418.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -65.7,
+   "axes_m": [
+    803.7,
+    761.6
+   ]
+  },
+  {
+   "id": 178,
+   "lat": -85.460374,
+   "lon": 31.289088,
+   "x": 71530.3,
+   "y": 117697.1,
+   "diameter_m": 533.2,
+   "depth_m": 13.89,
+   "deepest": {
+    "lat": -85.460104,
+    "lon": 31.340434
+   },
+   "pixels": 35,
+   "axis_ratio": 0.51,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 161.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 15.3,
+   "axes_m": [
+    774.5,
+    394.9
+   ]
+  },
+  {
+   "id": 179,
+   "lat": -85.159001,
+   "lon": 36.836917,
+   "x": 88062.0,
+   "y": 117556.9,
+   "diameter_m": 643.5,
+   "depth_m": 25.65,
+   "deepest": {
+    "lat": -85.155135,
+    "lon": 36.791944
+   },
+   "pixels": 51,
+   "axis_ratio": 0.42,
+   "fill_ratio": 0.82,
+   "sigma_m": 0.18,
+   "depth_to_sigma": 144.3,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 49.0,
+   "axes_m": [
+    1104.0,
+    459.2
+   ]
+  },
+  {
+   "id": 180,
+   "lat": -85.196483,
+   "lon": 36.265803,
+   "x": 86212.3,
+   "y": 117510.8,
+   "diameter_m": 324.9,
+   "depth_m": 10.48,
+   "deepest": {
+    "lat": -85.199663,
+    "lon": 36.287675
+   },
+   "pixels": 13,
+   "axis_ratio": 0.54,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.18,
+   "depth_to_sigma": 59.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -77.0,
+   "axes_m": [
+    461.5,
+    247.4
+   ]
+  },
+  {
+   "id": 181,
+   "lat": -85.456587,
+   "lon": 31.625293,
+   "x": 72280.0,
+   "y": 117373.3,
+   "diameter_m": 382.4,
+   "depth_m": 12.21,
+   "deepest": {
+    "lat": -85.455839,
+    "lon": 31.619482
+   },
+   "pixels": 18,
+   "axis_ratio": 0.8,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 132.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 0.0,
+   "axes_m": [
+    435.9,
+    349.2
+   ]
+  },
+  {
+   "id": 182,
+   "lat": -85.703632,
+   "lon": 26.128266,
+   "x": 57400.0,
+   "y": 117021.8,
+   "diameter_m": 299.0,
+   "depth_m": 11.61,
+   "deepest": {
+    "lat": -85.701912,
+    "lon": 26.117007
+   },
+   "pixels": 11,
+   "axis_ratio": 0.58,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.09,
+   "depth_to_sigma": 129.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 74.7,
+   "axes_m": [
+    407.8,
+    237.9
+   ]
+  },
+  {
+   "id": 183,
+   "lat": -85.15182,
+   "lon": 37.335225,
+   "x": 89213.3,
+   "y": 116960.0,
+   "diameter_m": 312.1,
+   "depth_m": 6.65,
+   "deepest": {
+    "lat": -85.153931,
+    "lon": 37.328154
+   },
+   "pixels": 12,
+   "axis_ratio": 0.78,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.16,
+   "depth_to_sigma": 42.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -37.2,
+   "axes_m": [
+    368.2,
+    287.5
+   ]
+  },
+  {
+   "id": 184,
+   "lat": -85.208048,
+   "lon": 36.979819,
+   "x": 87458.7,
+   "y": 116146.7,
+   "diameter_m": 349.0,
+   "depth_m": 5.88,
+   "deepest": {
+    "lat": -85.204638,
+    "lon": 36.999063
+   },
+   "pixels": 15,
+   "axis_ratio": 0.71,
+   "fill_ratio": 0.89,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 40.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -5.5,
+   "axes_m": [
+    438.9,
+    313.6
+   ]
+  },
+  {
+   "id": 185,
+   "lat": -85.219458,
+   "lon": 37.223836,
+   "x": 87742.9,
+   "y": 115497.1,
+   "diameter_m": 337.2,
+   "depth_m": 8.86,
+   "deepest": {
+    "lat": -85.220866,
+    "lon": 37.265035
+   },
+   "pixels": 14,
+   "axis_ratio": 0.39,
+   "fill_ratio": 0.9,
+   "sigma_m": 0.13,
+   "depth_to_sigma": 68.8,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 79.4,
+   "axes_m": [
+    571.5,
+    221.7
+   ]
+  },
+  {
+   "id": 186,
+   "lat": -85.40495,
+   "lon": 34.290741,
+   "x": 78543.7,
+   "y": 115180.7,
+   "diameter_m": 468.3,
+   "depth_m": 12.28,
+   "deepest": {
+    "lat": -85.41179,
+    "lon": 34.297388
+   },
+   "pixels": 27,
+   "axis_ratio": 0.6,
+   "fill_ratio": 0.89,
+   "sigma_m": 0.1,
+   "depth_to_sigma": 117.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -51.5,
+   "axes_m": [
+    640.3,
+    383.2
+   ]
+  },
+  {
+   "id": 187,
+   "lat": -85.286617,
+   "lon": 36.335687,
+   "x": 84733.3,
+   "y": 115200.0,
+   "diameter_m": 312.2,
+   "depth_m": 17.14,
+   "deepest": {
+    "lat": -85.289279,
+    "lon": 36.372801
+   },
+   "pixels": 12,
+   "axis_ratio": 0.78,
+   "fill_ratio": 0.92,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 119.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -37.2,
+   "axes_m": [
+    368.3,
+    287.5
+   ]
+  },
+  {
+   "id": 188,
+   "lat": -85.43271,
+   "lon": 35.017092,
+   "x": 79513.7,
+   "y": 113485.3,
+   "diameter_m": 991.4,
+   "depth_m": 87.18,
+   "deepest": {
+    "lat": -85.431978,
+    "lon": 35.034017
+   },
+   "pixels": 121,
+   "axis_ratio": 0.91,
+   "fill_ratio": 0.99,
+   "sigma_m": 0.14,
+   "depth_to_sigma": 619.2,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 41.8,
+   "axes_m": [
+    1048.7,
+    949.8
+   ]
+  },
+  {
+   "id": 189,
+   "lat": -85.468993,
+   "lon": 34.574523,
+   "x": 78009.4,
+   "y": 113188.8,
+   "diameter_m": 850.3,
+   "depth_m": 63.15,
+   "deepest": {
+    "lat": -85.469201,
+    "lon": 34.591815
+   },
+   "pixels": 89,
+   "axis_ratio": 0.7,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.11,
+   "depth_to_sigma": 568.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -41.4,
+   "axes_m": [
+    1025.7,
+    717.7
+   ]
+  }
+ ],
+ "provenance": {
+  "landing_version": "0.1.0",
+  "landing_code_sha256": "e20d9b0be240c9063945dc85c21ee9ce1c4d56127568bca2ec8a85dd5cd5793a",
+  "validation_status": "Preliminary screening - not part of the validated engine",
+  "validation_note": "The official LUNA-OPS validation report covers the science engine (backend/lunaops) only. This screening package is outside that fingerprint and has not been validated.",
+  "engine_code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109",
+  "dem": {
+   "key": "80m:LDEM_80S_80MPP_ADJ.tiff",
+   "product": "PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_80MPP_ADJ",
+   "product_id": "pgda90_80m",
+   "file": "pgda90_80m/LDEM_80S_80MPP_ADJ.tiff",
+   "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+   "pixel_m": 80.0,
+   "level": "80m",
+   "page": "https://pgda.gsfc.nasa.gov/products/90",
+   "citation": "Barker et al. 2023, PSJ 4, 183, doi:10.3847/PSJ/acf3e1; data doi:10.60903/gsfcpgda-lola-spole",
+   "frame": "MOON_ME (DE421), south polar stereographic",
+   "crs": "south polar stereographic on the 1737.4 km sphere (true scale at the pole), metres",
+   "vertical": "height in metres above the 1737.4 km reference sphere",
+   "synthetic": false
+  },
+  "error_map": {
+   "product": "LDEM_80S_80MPP_ADJ_ERR.TIF (255 MB): LDEM surface height error in metres",
+   "file": "pgda90_80m/LDEM_80S_80MPP_ADJ_ERR.tiff",
+   "sha256": "e89306914bb209143f61ba66d341703d75221339424b774c6a1eb3c6c370ffc6",
+   "units": "m (RMS height uncertainty, declared by product)"
+  },
+  "auxiliary": {},
+  "window": {
+   "bounds_xy_m": [
+    55840.0,
+    111360.0,
+    95920.0,
+    151440.0
+   ],
+   "pixels": [
+    501,
+    501
+   ],
+   "col0": 4498,
+   "row0": 1907,
+   "half_m_requested": 20000.0,
+   "half_m_used": 20000.0
+  },
+  "config": {
+   "lat": -85.0,
+   "lon": 30.0,
+   "window_half_m": 20000.0,
+   "product": "80m:LDEM_80S_80MPP_ADJ.tiff",
+   "roughness_baseline_m": null,
+   "roughness_window_px": 5,
+   "min_depth_m": 1.0,
+   "min_diameter_m": null,
+   "max_diameter_m": null,
+   "window_half_m_used": 20000.0
+  },
+  "algorithms": {
+   "slope": "Horn (1981) 3 x 3 weighted finite differences; spacing = pixel / k x (R + h) / R, k = projection point scale; NaN if any of the 9 samples is missing",
+   "roughness": "RMS of residuals about the least-squares plane in a 5 x 5 window (complete windows only)",
+   "tri": "Terrain Ruggedness Index, Riley et al. (1999): sqrt of the sum of squared differences to the 8 neighbours",
+   "depressions": "Priority-Flood depression filling (Barnes et al. 2014) seeded at the window edge and next to missing data; 8-connected regions deeper than the configured minimum depth below their spill level; size from area-equivalent diameter; shape from second moments",
+   "depression_quality": {
+    "defined": "depth >= 3 x mean RMS height uncertainty in the region, axis ratio >= 0.5, ellipse fill >= 0.6",
+    "weak": "depth >= 1 x uncertainty but not 'defined'",
+    "within_uncertainty": "depth < 1 x uncertainty",
+    "shape_only": "no error map: depth cannot be compared with uncertainty",
+    "note": "LUNA-OPS landing 0.1.0 screening convention, not a published criterion"
+   },
+   "obstacles": "not available (manual review required)"
+  },
+  "notes": [],
+  "limitations": [
+   "Preliminary screening only: no result certifies a landing site as safe.",
+   "Slope and roughness describe the DEM at its pixel scale; LOLA 5 m products are mostly interpolated between laser tracks, so their effective resolution is coarser than the pixel size.",
+   "DEM roughness is not rock or boulder detection.",
+   "Depression candidates are unconfirmed; they are not identified as impact craters. Depth is counted only below the level at which a hollow could drain to the window edge or to missing data, so hollows open to the edge or to a data gap, and depressions breached on slopes, are missed or measured shallower.",
+   "Depth is measured below the spill level (lowest rim point), not from the rim crest.",
+   "Thresholds are user-defined assumptions; no default or published landing limit is applied."
+  ]
+ },
+ "status_text": {
+  "hazard": "Potential hazard detected",
+  "clear": "No configured threshold exceeded",
+  "no_threshold": "No threshold configured (values shown)",
+  "insufficient": "Insufficient terrain data",
+  "higher_res": "Requires higher-resolution data",
+  "manual": "Not available - manual review required",
+  "none_detected": "No candidate detected at this resolution"
+ },
+ "layers": [
+  {
+   "name": "elevation",
+   "unit": "m",
+   "basis": "measured/interpolated LOLA heights",
+   "available": true
+  },
+  {
+   "name": "slope",
+   "unit": "deg",
+   "basis": "calculated",
+   "available": true
+  },
+  {
+   "name": "roughness",
+   "unit": "m",
+   "basis": "calculated",
+   "available": true
+  },
+  {
+   "name": "coverage",
+   "unit": "",
+   "basis": "data coverage: missing, interpolated, measured",
+   "available": true
+  },
+  {
+   "name": "uncertainty",
+   "unit": "m",
+   "basis": "estimated: product-declared RMS height error",
+   "available": true
+  },
+  {
+   "name": "nasa_slope",
+   "unit": "deg",
+   "basis": "NASA PGDA slope product (cross-check)",
+   "available": false
+  }
+ ],
+ "footprint": {
+  "center": {
+   "lat": -85.0,
+   "lon": 30.0,
+   "x": 75856.5,
+   "y": 131387.4
+  },
+  "radius_m": 100.0,
+  "pixel_m_ground": 79.848,
+  "pixels_across": 2.5,
+  "inside_window": true,
+  "thresholds": {
+   "slope_deg": 10.0,
+   "roughness_m": null,
+   "relief_m": null,
+   "min_valid_pct": 95.0
+  },
+  "threshold_basis": "user-defined assumptions entered in this session; LUNA-OPS supplies no default and no published landing limit is implied",
+  "pixels": 5,
+  "coverage": {
+   "pixels": 5,
+   "valid_pct": 100.0,
+   "measured_pct": null,
+   "measured_basis": "unavailable: this product has no count map",
+   "height_sigma_m": {
+    "n": 5,
+    "min": 0.084,
+    "max": 0.114,
+    "mean": 0.099,
+    "median": 0.098,
+    "p95": 0.111
+   },
+   "slope_sigma_deg": null,
+   "nasa_slope_deg": null
+  },
+  "findings": [
+   {
+    "key": "slope",
+    "unit": "deg",
+    "stats": {
+     "n": 5,
+     "min": 5.334,
+     "max": 6.232,
+     "mean": 5.815,
+     "median": 5.8,
+     "p95": 6.202
+    },
+    "threshold": 10.0,
+    "basis": "calculated (Horn 1981, 3 x 3) from the DEM",
+    "baseline_m": 239.5,
+    "above_threshold_pct": 0.0,
+    "status": "higher_res",
+    "reason": "The footprint spans 2.5 DEM pixels; at least 3 are needed to resolve it with a 3 x 3 stencil.",
+    "status_text": "Requires higher-resolution data"
+   },
+   {
+    "key": "roughness",
+    "unit": "m",
+    "stats": {
+     "n": 5,
+     "min": 2.175,
+     "max": 3.15,
+     "mean": 2.737,
+     "median": 2.873,
+     "p95": 3.115
+    },
+    "threshold": null,
+    "basis": "calculated: RMS residual about a least-squares plane",
+    "baseline_m": 399.2,
+    "window_px": 5,
+    "status": "higher_res",
+    "reason": "The footprint spans 2.5 DEM pixels; at least 3 are needed to resolve it with a 3 x 3 stencil.",
+    "status_text": "Requires higher-resolution data"
+   },
+   {
+    "key": "relief",
+    "unit": "m",
+    "stats": {
+     "value": 13.55
+    },
+    "threshold": null,
+    "basis": "calculated: maximum minus minimum DEM height inside the footprint",
+    "elevation_m": {
+     "n": 5,
+     "min": 5186.27,
+     "max": 5199.82,
+     "mean": 5192.37,
+     "median": 5193.43,
+     "p95": 5198.62
+    },
+    "status": "higher_res",
+    "reason": "The footprint spans 2.5 DEM pixels; at least 3 are needed to resolve it with a 3 x 3 stencil.",
+    "status_text": "Requires higher-resolution data"
+   },
+   {
+    "key": "depressions",
+    "candidates": [],
+    "basis": "estimated: unconfirmed DEM depression candidates (priority-flood); no crater catalogue integrated",
+    "detection_limits": {
+     "min_depth_m": 1.0,
+     "min_diameter_m": null,
+     "min_pixels": 9,
+     "pixel_m": 80.0
+    },
+    "status": "higher_res",
+    "reason": "The footprint spans 2.5 DEM pixels; depressions inside it cannot be resolved at this resolution.",
+    "status_text": "Requires higher-resolution data"
+   },
+   {
+    "key": "obstacles",
+    "status": "manual",
+    "status_text": "Not available - manual review required",
+    "basis": "unavailable",
+    "reason": "No imagery-based obstacle product is registered. This screening uses 80 m DEM pixels, and even the finest registered LOLA product (PGDA 78, 5 m pixels, about 90% of them interpolated between laser tracks) cannot resolve boulders or other metre-scale obstacles. Orbital imagery review is required; even then orbital data cannot guarantee that every landing hazard is found."
+   }
+  ]
+ }
+}

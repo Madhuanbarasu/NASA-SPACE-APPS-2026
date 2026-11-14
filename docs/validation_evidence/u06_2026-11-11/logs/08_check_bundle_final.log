@@ -1,0 +1,4 @@
+$ npm run check:bundle
+check-bundle: initial JS 288.3 KB (91.2 KB gzip, 1 file(s)); lazy JS 926.6 KB (256.8 KB gzip, 2 file(s)); size limit: none approved (sizes reported only); 0 problem(s)
+exit=0
+check-bundle self-test: 6/6 passed

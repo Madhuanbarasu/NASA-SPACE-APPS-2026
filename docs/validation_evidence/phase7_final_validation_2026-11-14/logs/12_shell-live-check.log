@@ -1,0 +1,15 @@
+FAIL 1440 px: tabs in the bar, no compact menu, parameters docked and open, UTC clock shown  {"tabs":false,"navToggle":true,"panel":true,"mainW":1100,"clock":true}
+FAIL tabs keyboard: ArrowRight from Site selects Compare; the list stays one tab stop  {"focus":"","stops":1}
+PASS collapse: the parameters toggle hides the panel and the workspace takes the full width; the status line stays for screen readers  {"before":1100,"after":{"panel":false,"expanded":"false","mainW":1440,"status":true,"latInDom":true}}
+PASS collapse is remembered in this browser after a reload  {"panel":false,"mainW":1440}
+PASS expand: the toggle brings the docked panel back
+PASS 1024 px: compact menu button instead of the tab strip; parameters drawer closed; no sideways scrolling  {"tabs":false,"navToggle":true,"panel":false,"hscroll":false}
+PASS menu: opens; choosing a view selects it, closes the menu and shows the view's name on the button  {"m1":{"open":true,"expanded":"true"},"m2":{"open":false,"tab":"Guide","label":"Guide"}}
+PASS menu keyboard: Down moves through the views; Escape closes the menu and returns focus to the menu button  {"m3":"Mission","m4":{"open":false,"focus":"nav-toggle"}}
+PASS drawer: opens over the workspace with a scrim; focus moves to its close button  {"panel":true,"focus":"params-close","scrim":true,"sidebarLeft":0}
+PASS drawer: its fields work; Escape closes it and returns focus to the parameters toggle; the value is kept  {"typed":"-89.9","d2":{"panel":false,"focus":"icon-button params-toggle"}}
+PASS drawer: a press outside it and its close button both close it  {"outside":false,"close":false}
+PASS no sideways scrolling on any view at 1440, 1024, 768, 390 and 320 px  {"1440:mission":true,"1440:site":true,"1440:compare":true,"1440:data":true,"1440:guide":true,"1024:mission":true,"1024:site":true,"1024:compare":true,"1024:data":true,"1024:guide":true,"768:mission":true,"768:site":true,"768:compare":true,"768:data":true,"768:guide":true,"390:mission":true,"390:site":true,"390:compare":true,"390:data":true,"390:guide":true,"320:mission":true,"320:site":true,"320:compare":true,"320:data":true,"320:guide":true}
+PASS phone: every command-bar item stays inside the screen (the bar wraps onto two rows)  {"bar390":{"h":100,"allInside":true},"bar320":{"h":100,"allInside":true}}
+PASS no page exceptions or console errors  []
+shell-live-check: 12/14 checks passed

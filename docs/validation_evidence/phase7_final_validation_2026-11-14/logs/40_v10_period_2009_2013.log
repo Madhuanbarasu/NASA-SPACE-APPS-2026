@@ -1,0 +1,19 @@
+4. point  -85.33050 285.21040: NASA   0.0 | engine  39.8 | independent PGDA20  40.8 | independent PDS40  25.5  (horizon 
+4. blob   -85.34091 285.29565: NASA   0.0 | engine  48.2 | independent PGDA20  48.5 | independent PDS40  47.0  (horizon 
+4. blob   -85.32825 285.12749: NASA   0.0 | engine  38.2 | independent PGDA20  38.6 | independent PDS40   0.0  (horizon 
+4. blob   -85.33294 285.19337: NASA   0.0 | engine  38.6 | independent PGDA20  38.7 | independent PDS40  34.7  (horizon 
+4. blob   -85.33155 285.16359: NASA   0.0 | engine  37.2 | independent PGDA20  36.8 | independent PDS40  28.3  (horizon 
+4. blob   -85.33519 285.27642: NASA   0.0 | engine  39.5 | independent PGDA20  38.7 | independent PDS40  38.3  (horizon 
+4. blob   -85.34038 285.31910: NASA   0.0 | engine  42.6 | independent PGDA20  41.1 | independent PDS40  43.0  (horizon 
+4. blob   -85.34143 285.27218: NASA   0.0 | engine  50.0 | independent PGDA20  50.8 | independent PDS40  50.1  (horizon 
+4. blob   -85.33743 285.35956: NASA   0.0 | engine  41.6 | independent PGDA20  41.8 | independent PDS40  31.3  (horizon 
+4. beside -85.32253 285.10852: NASA  36.5 | engine  34.5 | independent PGDA20  31.4 | independent PDS40  34.9  (horizon 
+4. beside -85.33396 285.42337: NASA  47.4 | engine  45.1 | independent PGDA20  46.2 | independent PDS40  50.1  (horizon 
+4. beside -85.32705 285.27426: NASA  48.7 | engine  40.8 | independent PGDA20  41.4 | independent PDS40  47.2  (horizon 
+4. beside -85.32791 285.32744: NASA  33.7 | engine  29.1 | independent PGDA20  29.7 | independent PDS40  13.0  (horizon 
+4. beside -85.33221 285.04009: NASA  13.2 | engine  43.6 | independent PGDA20  44.2 | independent PDS40  31.4  (horizon 
+4. beside -85.32598 285.04463: NASA  21.7 | engine  39.4 | independent PGDA20  39.1 | independent PDS40  16.5  (horizon 
+4. beside -85.32113 285.07883: NASA  36.2 | engine  26.7 | independent PGDA20  21.8 | independent PDS40  29.3  (horizon 
+4. beside -85.33272 285.01664: NASA  17.4 | engine  44.0 | independent PGDA20  44.8 | independent PDS40  32.5  (horizon 
+   mean blob: {"nasa_pct": 0.0, "engine_pct": 42.0, "indep_pgda20_pct": 41.9, "indep_pds40_pct": 34.1}
+   mean beside: {"nasa_pct": 31.8, "engine_pct": 37.9, "indep_pgda20_pct": 37.3, "indep_pds40_pct": 31.9}

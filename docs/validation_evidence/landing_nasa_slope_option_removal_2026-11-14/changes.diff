@@ -1,0 +1,38 @@
+--- docs/validation_evidence/landing_nasa_slope_option_removal_2026-11-14/originals/LandingView.tsx	2026-11-14 13:29:05.636338000 +0530
++++ frontend/src/components/LandingView.tsx	2026-11-14 13:29:17.478104600 +0530
+@@ -21,7 +21,11 @@
+ const L = S.landing;
+ const WINDOWS_M = [500, 1000, 1500, 2500, 3000, 6000];
+ const ROUGH_PX = [3, 5, 9, 15, 25];
+-const RASTERS: RasterLayer[] = ["elevation", "slope", "roughness", "coverage", "uncertainty", "nasa_slope", "slope_exceed"];
++// UI change 2026-11-14 (owner request): the "NASA slope product" raster is no longer offered on the hazard map. It
++// exists only inside the Site01 5 m product set and is unavailable (a permanently disabled option) everywhere else.
++// The product, the backend layer and the NASA slope statistics in the tables below are unchanged.
++const RASTERS: RasterLayer[] = ["elevation", "slope", "roughness", "coverage", "uncertainty", "slope_exceed"];
++const DEFAULT_RASTER: RasterLayer = "slope";
+ const NONE = "none";
+ const TWO_COLUMNS = "(min-width: 1101px)";   // landing.css: one column at max-width 1100px
+ const AUTO = "auto";
+@@ -126,7 +130,11 @@
+   const [busy, setBusy] = useState(false);
+   const [fpBusy, setFpBusy] = useState(false);
+   const [error, setError] = useState<string | null>(null);
+-  const [layers, setLayers] = useState<MapLayers>({ raster: "slope", depressions: true, footprint: true, window: true, opacity: 0.85 });
++  const [layers, setLayers] = useState<MapLayers>({ raster: DEFAULT_RASTER, depressions: true, footprint: true, window: true, opacity: 0.85 });
++  // a raster that is no longer offered (for example the removed NASA slope option) falls back to the default
++  useEffect(() => {
++    if (layers.raster && !RASTERS.includes(layers.raster)) setLayers((v) => ({ ...v, raster: DEFAULT_RASTER }));
++  }, [layers.raster]);
+   const [selected, setSelected] = useState<number | null>(null);
+   const fp: LandingFootprint | undefined = a?.footprint;
+   const wide = useMediaQuery(TWO_COLUMNS);
+--- docs/validation_evidence/landing_nasa_slope_option_removal_2026-11-14/originals/en.ts	2026-11-14 13:29:05.685633100 +0530
++++ frontend/src/i18n/en.ts	2026-11-14 13:29:17.629474700 +0530
+@@ -1133,7 +1133,6 @@
+       roughness: "Roughness",
+       coverage: "Data coverage",
+       uncertainty: "Height uncertainty",
+-      nasa_slope: "NASA slope product",
+       slope_exceed: "Slope above threshold",
+       depressions: "Depression candidates",
+       footprint: "Landing footprint",

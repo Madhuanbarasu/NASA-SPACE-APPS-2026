@@ -1,0 +1,82 @@
+--- before/components/Sidebar.tsx
++++ after/components/Sidebar.tsx
+@@ -1,6 +1,7 @@
+ import type { ObserverProfile, PanelModel, Rule } from "../api/types";
+ import { S } from "../i18n";
+ import { PANEL_NAMES, RULE_NAMES, fmtLatLon, fromInputValue, toInputValue } from "../lib/format";
++import { parseSite } from "../lib/moonGeo";
+ import { useStore } from "../state/store";
+ import { Icon } from "../ui/Icon";
+ 
+@@ -34,9 +35,13 @@
+   // typed coordinates are no longer the curated site: drop its id and its name (a name the user typed is kept)
+   const typedCoords: Partial<typeof s> = s.siteId ? { siteId: null, siteName: null } : { siteId: null };
+ 
++  // AUD-01 (pre-Phase 7 audit): typed coordinates are checked with the same rules as the backend and the Site explorer
++  // (lib/moonGeo parseSite: a number, latitude -90 to 90, longitude -360 to 360). Each field is checked on its own (the
++  // other one replaced by a valid 0) so only the field that is wrong is marked invalid.
+   const latN = Number(s.lat), lonN = Number(s.lon);
+-  const coordsGiven = s.lat.trim() !== "" && s.lon.trim() !== "" && isFinite(latN) && isFinite(lonN);
+-  const latBad = s.lat.trim() !== "" && !isFinite(latN), lonBad = s.lon.trim() !== "" && !isFinite(lonN);
++  const coordsGiven = parseSite(s.lat, s.lon) !== null;
++  const latBad = s.lat.trim() !== "" && parseSite(s.lat, "0") === null;
++  const lonBad = s.lon.trim() !== "" && parseSite("0", s.lon) === null;
+ 
+   // terrain coverage is looked up once in the store and shared with the explorer and globe (Phase 5)
+   const cov = state.coverage, covErr = state.coverageError;
+--- before/state/store.tsx
++++ after/state/store.tsx
+@@ -3,6 +3,7 @@
+ import type { CatalogSite, CommsInputs, CommsResult, Comparison, Coverage, Job, LandingAssessment, ObserverProfile, PanelModel, Result, Rule, Status } from "../api/types";
+ import { S } from "../i18n";
+ import { isoNoMs } from "../lib/format";
++import { parseSite } from "../lib/moonGeo";
+ 
+ export interface Settings {
+   lat: string; lon: string; siteName: string | null; siteId: string | null;
+@@ -254,7 +255,10 @@
+     const key = `${sLat},${sLon}`;
+     dispatch({ type: "coverage", coverage: null, error: null, key: null });
+     const la = Number(sLat), lo = Number(sLon);
+-    if (sLat.trim() === "" || sLon.trim() === "" || !isFinite(la) || !isFinite(lo)) return;
++    // AUD-01 (pre-Phase 7 audit): only coordinates the backend accepts are looked up (lib/moonGeo parseSite: a number,
++    // latitude -90 to 90, longitude -360 to 360). Anything else is marked invalid in the sidebar and never sent, so an
++    // out-of-range value no longer produces a 422 response and a console error. The request itself is unchanged.
++    if (parseSite(sLat, sLon) === null) return;
+     let live = true;
+     const t = setTimeout(() => {
+       api.coverage(la, lo).then((c) => { if (live) dispatch({ type: "coverage", coverage: c, error: null, key }); })
+--- before/styles/landing.css
++++ after/styles/landing.css
+@@ -16,11 +16,18 @@
+ /* Spacing fix (2026-11-14): on two-column screens the four main cards sit in two independent column stacks (selected
+    site above footprint; hazard map above terrain analysis) instead of two shared grid rows, so a short card never takes
+    the height of the taller card beside it. Each card keeps its natural height; when the left stack is the taller one,
+-   the remaining height goes to the hazard map's display area (its minimum height is unchanged), not to blank space. */
++   the remaining height goes to the hazard map's display area (its minimum height: see AUD-04 below), not to blank space. */
++/* AUD-04 (pre-Phase 7 audit, 2026-11-14): at about 1920 px the map column was the taller one (the map display held at
++   its 620 px minimum), which left 76 px of blank space below the Landing footprint card. The map display's minimum in
++   this layout is now 360 px, the same floor as before on small screens, so the map column no longer forces extra height:
++   the display grows from that floor to fill the band (560 px at 1920 x 1080; unchanged at 1280-1600 px, where it was
++   already larger than its minimum). If the map column is still the taller one, the left column's last card extends to
++   the band's end instead of leaving blank space. The one-column layout (1100 px and below) does not use these rules. */
+ .landing-band { align-items: stretch; }
+ .landing-col { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+ .landing-col > .landing-mapcard.has-map { flex: 1 0 auto; display: flex; flex-direction: column; }
+-.landing-col > .landing-mapcard.has-map > .landing-map.pane-body { flex: 1 0 auto; height: auto; min-height: clamp(360px, 58vh, 620px); }
++.landing-col > .landing-mapcard.has-map > .landing-map.pane-body { flex: 1 0 auto; height: auto; min-height: 360px; }
++.landing-col:not(.landing-col-map) > .landing-card:last-child { flex-grow: 1; }
+ .landing-card h2 { margin: -14px -16px 12px; padding: 10px 16px; font-size: var(--fs-2xs); font-weight: 650; letter-spacing: var(--tracking-label);
+   text-transform: uppercase; font-stretch: 92%; border-bottom: 1px solid var(--line-soft); border-radius: var(--r-m) var(--r-m) 0 0;
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent); color: var(--text); }
+--- before/i18n/en.ts
++++ after/i18n/en.ts
+@@ -167,7 +167,7 @@
+     longitudePlaceholder: "0 to 360",
+     siteName: "Name (optional)",
+     pickHint: "Pick a curated site, click the map, or type planetocentric coordinates.",
+-    invalidCoordinates: "Latitude and longitude must be numbers in degrees, for example -89.5 and 222.5.",
++    invalidCoordinates: "Latitude must be a number from -90 to 90 and longitude a number from -360 to 360 degrees, for example -89.5 and 222.5.",
+     checkingCoverage: "Checking terrain coverage.",
+     coverage: (levels: string) => `Terrain coverage: ${levels} LOLA levels.`,
+     noCoverage: (reason: string | null) => `No terrain-adjusted results here: ${reason}`,

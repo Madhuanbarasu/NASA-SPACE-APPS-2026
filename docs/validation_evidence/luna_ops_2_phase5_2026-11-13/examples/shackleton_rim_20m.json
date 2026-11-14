@@ -1,0 +1,822 @@
+{
+ "id": "c1518dc0ccd711c19f1c",
+ "config": {
+  "lat": -89.9,
+  "lon": 0.0,
+  "window_half_m": 4000.0,
+  "product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+  "roughness_baseline_m": null,
+  "roughness_window_px": 5,
+  "min_depth_m": 1.0,
+  "min_diameter_m": null,
+  "max_diameter_m": null,
+  "window_half_m_used": 4000.0
+ },
+ "summary": {
+  "pixels": 160801,
+  "valid_share": 1.0,
+  "measured_share": null,
+  "elevation_m": {
+   "n": 160801,
+   "min": -619.03,
+   "max": 1399.28,
+   "mean": 482.18,
+   "median": 486.6,
+   "p95": 1289.04
+  },
+  "slope_deg": {
+   "n": 159201,
+   "min": 0.02,
+   "max": 38.69,
+   "mean": 18.13,
+   "median": 18.59,
+   "p95": 31.42
+  },
+  "slope_hist": {
+   "edges_deg": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    90
+   ],
+   "counts": [
+    5899,
+    19637,
+    29376,
+    36311,
+    41561,
+    14603,
+    11814
+   ]
+  },
+  "roughness_m": {
+   "n": 157609,
+   "min": 0.062,
+   "max": 4.347,
+   "mean": 0.74,
+   "median": 0.651,
+   "p95": 1.448
+  },
+  "tri_m": {
+   "n": 159201,
+   "min": 0.408,
+   "max": 38.956,
+   "mean": 16.502,
+   "median": 16.595,
+   "p95": 29.999
+  },
+  "roughness_multiscale": [
+   {
+    "window_px": 3,
+    "baseline_m": 60.0,
+    "n": 159201,
+    "min": 0.011,
+    "max": 2.801,
+    "mean": 0.37,
+    "median": 0.317,
+    "p95": 0.792
+   },
+   {
+    "window_px": 5,
+    "baseline_m": 100.0,
+    "n": 157609,
+    "min": 0.062,
+    "max": 4.347,
+    "mean": 0.74,
+    "median": 0.651,
+    "p95": 1.448
+   },
+   {
+    "window_px": 9,
+    "baseline_m": 180.0,
+    "n": 154449,
+    "min": 0.31,
+    "max": 7.751,
+    "mean": 1.425,
+    "median": 1.21,
+    "p95": 2.906
+   },
+   {
+    "window_px": 15,
+    "baseline_m": 300.0,
+    "n": 149769,
+    "min": 0.598,
+    "max": 13.795,
+    "mean": 2.423,
+    "median": 1.98,
+    "p95": 5.161
+   }
+  ],
+  "height_sigma_m": {
+   "n": 160801,
+   "min": 0.154,
+   "max": 1.699,
+   "mean": 0.234,
+   "median": 0.193,
+   "p95": 0.462
+  },
+  "nasa_slope_deg": null,
+  "slope_sigma_deg": null,
+  "depressions": {
+   "count": 17,
+   "by_quality": {
+    "defined": 15,
+    "weak": 2,
+    "within_uncertainty": 0,
+    "shape_only": 0
+   },
+   "truncated": false
+  },
+  "basis": "LOLA DEM: measured and interpolated pixels cannot be told apart (no count map for this product)"
+ },
+ "candidates": [
+  {
+   "id": 1,
+   "lat": -89.780971,
+   "lon": 336.551476,
+   "x": -2642.9,
+   "y": 6093.2,
+   "diameter_m": 125.7,
+   "depth_m": 5.65,
+   "deepest": {
+    "lat": -89.780975,
+    "lon": 336.484236
+   },
+   "pixels": 31,
+   "axis_ratio": 0.56,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.23,
+   "depth_to_sigma": 24.4,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -56.4,
+   "axes_m": [
+    170.1,
+    95.6
+   ]
+  },
+  {
+   "id": 2,
+   "lat": -89.777888,
+   "lon": 332.085719,
+   "x": -3153.1,
+   "y": 5951.5,
+   "diameter_m": 81.4,
+   "depth_m": 3.74,
+   "deepest": {
+    "lat": -89.778288,
+    "lon": 332.253367
+   },
+   "pixels": 13,
+   "axis_ratio": 0.77,
+   "fill_ratio": 0.91,
+   "sigma_m": 0.31,
+   "depth_to_sigma": 12.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -16.2,
+   "axes_m": [
+    97.7,
+    74.8
+   ]
+  },
+  {
+   "id": 3,
+   "lat": -89.778125,
+   "lon": 328.789873,
+   "x": -3486.3,
+   "y": 5754.3,
+   "diameter_m": 292.5,
+   "depth_m": 30.47,
+   "deepest": {
+    "lat": -89.778182,
+    "lon": 328.74407
+   },
+   "pixels": 168,
+   "axis_ratio": 0.88,
+   "fill_ratio": 0.99,
+   "sigma_m": 0.21,
+   "depth_to_sigma": 145.0,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 54.1,
+   "axes_m": [
+    313.7,
+    275.6
+   ]
+  },
+  {
+   "id": 4,
+   "lat": -89.810367,
+   "lon": 326.722595,
+   "x": -3155.2,
+   "y": 4807.4,
+   "diameter_m": 1577.5,
+   "depth_m": 80.26,
+   "deepest": {
+    "lat": -89.817365,
+    "lon": 322.778345
+   },
+   "pixels": 4886,
+   "axis_ratio": 0.47,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.21,
+   "depth_to_sigma": 381.1,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -54.7,
+   "axes_m": [
+    2363.8,
+    1099.6
+   ]
+  },
+  {
+   "id": 5,
+   "lat": -89.785241,
+   "lon": 324.625966,
+   "x": -3770.0,
+   "y": 5310.0,
+   "diameter_m": 103.4,
+   "depth_m": 4.05,
+   "deepest": {
+    "lat": -89.785241,
+    "lon": 324.625966
+   },
+   "pixels": 21,
+   "axis_ratio": 1.0,
+   "fill_ratio": 0.98,
+   "sigma_m": 0.21,
+   "depth_to_sigma": 18.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 90.0,
+   "axes_m": [
+    104.4,
+    104.4
+   ]
+  },
+  {
+   "id": 6,
+   "lat": -89.790898,
+   "lon": 321.467202,
+   "x": -3950.0,
+   "y": 4960.0,
+   "diameter_m": 71.4,
+   "depth_m": 3.04,
+   "deepest": {
+    "lat": -89.791156,
+    "lon": 321.41084
+   },
+   "pixels": 10,
+   "axis_ratio": 0.64,
+   "fill_ratio": 0.96,
+   "sigma_m": 0.21,
+   "depth_to_sigma": 14.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 63.4,
+   "axes_m": [
+    90.6,
+    58.4
+   ]
+  },
+  {
+   "id": 7,
+   "lat": -89.831202,
+   "lon": 314.085315,
+   "x": -3676.7,
+   "y": 3561.1,
+   "diameter_m": 95.7,
+   "depth_m": 2.7,
+   "deepest": {
+    "lat": -89.830695,
+    "lon": 314.368667
+   },
+   "pixels": 18,
+   "axis_ratio": 0.54,
+   "fill_ratio": 0.89,
+   "sigma_m": 0.17,
+   "depth_to_sigma": 15.5,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -5.0,
+   "axes_m": [
+    138.3,
+    74.6
+   ]
+  },
+  {
+   "id": 8,
+   "lat": -89.838357,
+   "lon": 311.975048,
+   "x": -3644.0,
+   "y": 3278.2,
+   "diameter_m": 319.2,
+   "depth_m": 10.21,
+   "deepest": {
+    "lat": -89.837459,
+    "lon": 311.874885
+   },
+   "pixels": 200,
+   "axis_ratio": 0.81,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.2,
+   "depth_to_sigma": 51.1,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -71.6,
+   "axes_m": [
+    367.5,
+    297.1
+   ]
+  },
+  {
+   "id": 9,
+   "lat": -89.832116,
+   "lon": 48.759019,
+   "x": 3828.0,
+   "y": 3356.0,
+   "diameter_m": 71.4,
+   "depth_m": 3.05,
+   "deepest": {
+    "lat": -89.831762,
+    "lon": 48.655595
+   },
+   "pixels": 10,
+   "axis_ratio": 0.92,
+   "fill_ratio": 0.86,
+   "sigma_m": 0.18,
+   "depth_to_sigma": 16.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 30.1,
+   "axes_m": [
+    80.6,
+    73.9
+   ]
+  },
+  {
+   "id": 10,
+   "lat": -89.858919,
+   "lon": 45.284109,
+   "x": 3040.0,
+   "y": 3010.0,
+   "diameter_m": 90.3,
+   "depth_m": 1.79,
+   "deepest": {
+    "lat": -89.858214,
+    "lon": 45.565401
+   },
+   "pixels": 16,
+   "axis_ratio": 0.5,
+   "fill_ratio": 0.97,
+   "sigma_m": 0.19,
+   "depth_to_sigma": 9.6,
+   "measured_share": null,
+   "quality": "weak",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -9.2,
+   "axes_m": [
+    129.8,
+    64.9
+   ]
+  },
+  {
+   "id": 11,
+   "lat": -89.906961,
+   "lon": 49.024228,
+   "x": 2130.0,
+   "y": 1850.0,
+   "diameter_m": 67.7,
+   "depth_m": 4.64,
+   "deepest": {
+    "lat": -89.906961,
+    "lon": 49.024228
+   },
+   "pixels": 9,
+   "axis_ratio": 1.0,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.17,
+   "depth_to_sigma": 26.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 0.0,
+   "axes_m": [
+    69.3,
+    69.3
+   ]
+  },
+  {
+   "id": 12,
+   "lat": -89.932145,
+   "lon": 37.972675,
+   "x": 1266.0,
+   "y": 1622.0,
+   "diameter_m": 71.4,
+   "depth_m": 2.2,
+   "deepest": {
+    "lat": -89.931856,
+    "lon": 37.923622
+   },
+   "pixels": 10,
+   "axis_ratio": 0.63,
+   "fill_ratio": 0.9,
+   "sigma_m": 0.25,
+   "depth_to_sigma": 8.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -40.9,
+   "axes_m": [
+    94.9,
+    59.8
+   ]
+  },
+  {
+   "id": 13,
+   "lat": -89.927786,
+   "lon": 47.571611,
+   "x": 1616.3,
+   "y": 1477.4,
+   "diameter_m": 98.4,
+   "depth_m": 1.76,
+   "deepest": {
+    "lat": -89.926684,
+    "lon": 47.917007
+   },
+   "pixels": 19,
+   "axis_ratio": 0.57,
+   "fill_ratio": 0.86,
+   "sigma_m": 0.18,
+   "depth_to_sigma": 9.8,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": -20.4,
+   "axes_m": [
+    140.3,
+    80.5
+   ]
+  },
+  {
+   "id": 14,
+   "lat": -89.970526,
+   "lon": 29.322832,
+   "x": 437.7,
+   "y": 779.2,
+   "diameter_m": 81.4,
+   "depth_m": 3.59,
+   "deepest": {
+    "lat": -89.970338,
+    "lon": 28.55962
+   },
+   "pixels": 13,
+   "axis_ratio": 0.69,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.2,
+   "depth_to_sigma": 17.7,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 50.7,
+   "axes_m": [
+    100.8,
+    69.5
+   ]
+  },
+  {
+   "id": 15,
+   "lat": -89.970192,
+   "lon": 51.684699,
+   "x": 709.2,
+   "y": 560.4,
+   "diameter_m": 112.8,
+   "depth_m": 4.74,
+   "deepest": {
+    "lat": -89.969457,
+    "lon": 52.016502
+   },
+   "pixels": 25,
+   "axis_ratio": 0.63,
+   "fill_ratio": 0.94,
+   "sigma_m": 0.19,
+   "depth_to_sigma": 24.6,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 8.5,
+   "axes_m": [
+    146.8,
+    92.2
+   ]
+  },
+  {
+   "id": 16,
+   "lat": -89.980031,
+   "lon": 61.076688,
+   "x": 530.0,
+   "y": 292.9,
+   "diameter_m": 84.4,
+   "depth_m": 4.97,
+   "deepest": {
+    "lat": -89.980076,
+    "lon": 61.313852
+   },
+   "pixels": 14,
+   "axis_ratio": 0.68,
+   "fill_ratio": 0.93,
+   "sigma_m": 0.19,
+   "depth_to_sigma": 26.3,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 18.9,
+   "axes_m": [
+    105.9,
+    72.5
+   ]
+  },
+  {
+   "id": 17,
+   "lat": -89.973735,
+   "lon": 216.284778,
+   "x": -471.3,
+   "y": -642.0,
+   "diameter_m": 87.4,
+   "depth_m": 3.35,
+   "deepest": {
+    "lat": -89.973548,
+    "lon": 215.869824
+   },
+   "pixels": 15,
+   "axis_ratio": 0.77,
+   "fill_ratio": 0.95,
+   "sigma_m": 0.2,
+   "depth_to_sigma": 16.9,
+   "measured_share": null,
+   "quality": "defined",
+   "status": "unconfirmed_candidate",
+   "orientation_deg": 9.5,
+   "axes_m": [
+    102.1,
+    78.9
+   ]
+  }
+ ],
+ "provenance": {
+  "landing_version": "0.1.0",
+  "landing_code_sha256": "e20d9b0be240c9063945dc85c21ee9ce1c4d56127568bca2ec8a85dd5cd5793a",
+  "validation_status": "Preliminary screening - not part of the validated engine",
+  "validation_note": "The official LUNA-OPS validation report covers the science engine (backend/lunaops) only. This screening package is outside that fingerprint and has not been validated.",
+  "engine_code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109",
+  "dem": {
+   "key": "20m:LDEM_80S_20MPP_ADJ.TIF",
+   "product": "PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_20MPP_ADJ",
+   "product_id": "pgda90_20m",
+   "file": "pgda90_20m/LDEM_80S_20MPP_ADJ.TIF",
+   "sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+   "pixel_m": 20.0,
+   "level": "20m",
+   "page": "https://pgda.gsfc.nasa.gov/products/90",
+   "citation": "Barker et al. 2023, PSJ 4, 183, doi:10.3847/PSJ/acf3e1; data doi:10.60903/gsfcpgda-lola-spole",
+   "frame": "MOON_ME (DE421), south polar stereographic",
+   "crs": "south polar stereographic on the 1737.4 km sphere (true scale at the pole), metres",
+   "vertical": "height in metres above the 1737.4 km reference sphere",
+   "synthetic": false
+  },
+  "error_map": {
+   "product": "LDEM_80S_20MPP_ADJ_ERR.TIF (3.7 GB): LDEM surface height error in metres",
+   "file": "pgda90_20m/LDEM_80S_20MPP_ADJ_ERR.TIF",
+   "sha256": "d64045b8aa58a24010f009ab5667ae02cc06cffa7796784dd5e2d48b3059d8cf",
+   "units": "m (RMS height uncertainty, declared by product)"
+  },
+  "auxiliary": {},
+  "window": {
+   "bounds_xy_m": [
+    -4000.0,
+    -980.0,
+    4020.0,
+    7040.0
+   ],
+   "pixels": [
+    401,
+    401
+   ],
+   "col0": 15000,
+   "row0": 14848,
+   "half_m_requested": 4000.0,
+   "half_m_used": 4000.0
+  },
+  "config": {
+   "lat": -89.9,
+   "lon": 0.0,
+   "window_half_m": 4000.0,
+   "product": "20m:LDEM_80S_20MPP_ADJ.TIF",
+   "roughness_baseline_m": null,
+   "roughness_window_px": 5,
+   "min_depth_m": 1.0,
+   "min_diameter_m": null,
+   "max_diameter_m": null,
+   "window_half_m_used": 4000.0
+  },
+  "algorithms": {
+   "slope": "Horn (1981) 3 x 3 weighted finite differences; spacing = pixel / k x (R + h) / R, k = projection point scale; NaN if any of the 9 samples is missing",
+   "roughness": "RMS of residuals about the least-squares plane in a 5 x 5 window (complete windows only)",
+   "tri": "Terrain Ruggedness Index, Riley et al. (1999): sqrt of the sum of squared differences to the 8 neighbours",
+   "depressions": "Priority-Flood depression filling (Barnes et al. 2014) seeded at the window edge and next to missing data; 8-connected regions deeper than the configured minimum depth below their spill level; size from area-equivalent diameter; shape from second moments",
+   "depression_quality": {
+    "defined": "depth >= 3 x mean RMS height uncertainty in the region, axis ratio >= 0.5, ellipse fill >= 0.6",
+    "weak": "depth >= 1 x uncertainty but not 'defined'",
+    "within_uncertainty": "depth < 1 x uncertainty",
+    "shape_only": "no error map: depth cannot be compared with uncertainty",
+    "note": "LUNA-OPS landing 0.1.0 screening convention, not a published criterion"
+   },
+   "obstacles": "not available (manual review required)"
+  },
+  "notes": [],
+  "limitations": [
+   "Preliminary screening only: no result certifies a landing site as safe.",
+   "Slope and roughness describe the DEM at its pixel scale; LOLA 5 m products are mostly interpolated between laser tracks, so their effective resolution is coarser than the pixel size.",
+   "DEM roughness is not rock or boulder detection.",
+   "Depression candidates are unconfirmed; they are not identified as impact craters. Depth is counted only below the level at which a hollow could drain to the window edge or to missing data, so hollows open to the edge or to a data gap, and depressions breached on slopes, are missed or measured shallower.",
+   "Depth is measured below the spill level (lowest rim point), not from the rim crest.",
+   "Thresholds are user-defined assumptions; no default or published landing limit is applied."
+  ]
+ },
+ "status_text": {
+  "hazard": "Potential hazard detected",
+  "clear": "No configured threshold exceeded",
+  "no_threshold": "No threshold configured (values shown)",
+  "insufficient": "Insufficient terrain data",
+  "higher_res": "Requires higher-resolution data",
+  "manual": "Not available - manual review required",
+  "none_detected": "No candidate detected at this resolution"
+ },
+ "layers": [
+  {
+   "name": "elevation",
+   "unit": "m",
+   "basis": "measured/interpolated LOLA heights",
+   "available": true
+  },
+  {
+   "name": "slope",
+   "unit": "deg",
+   "basis": "calculated",
+   "available": true
+  },
+  {
+   "name": "roughness",
+   "unit": "m",
+   "basis": "calculated",
+   "available": true
+  },
+  {
+   "name": "coverage",
+   "unit": "",
+   "basis": "data coverage: missing, interpolated, measured",
+   "available": true
+  },
+  {
+   "name": "uncertainty",
+   "unit": "m",
+   "basis": "estimated: product-declared RMS height error",
+   "available": true
+  },
+  {
+   "name": "nasa_slope",
+   "unit": "deg",
+   "basis": "NASA PGDA slope product (cross-check)",
+   "available": false
+  }
+ ],
+ "footprint": {
+  "center": {
+   "lat": -89.9,
+   "lon": 0.0,
+   "x": 0.0,
+   "y": 3032.3
+  },
+  "radius_m": 100.0,
+  "pixel_m_ground": 20.0,
+  "pixels_across": 10.0,
+  "inside_window": true,
+  "thresholds": {
+   "slope_deg": 10.0,
+   "roughness_m": null,
+   "relief_m": null,
+   "min_valid_pct": 95.0
+  },
+  "threshold_basis": "user-defined assumptions entered in this session; LUNA-OPS supplies no default and no published landing limit is implied",
+  "pixels": 80,
+  "coverage": {
+   "pixels": 80,
+   "valid_pct": 100.0,
+   "measured_pct": null,
+   "measured_basis": "unavailable: this product has no count map",
+   "height_sigma_m": {
+    "n": 80,
+    "min": 0.159,
+    "max": 0.514,
+    "mean": 0.218,
+    "median": 0.195,
+    "p95": 0.363
+   },
+   "slope_sigma_deg": null,
+   "nasa_slope_deg": null
+  },
+  "findings": [
+   {
+    "key": "slope",
+    "unit": "deg",
+    "stats": {
+     "n": 80,
+     "min": 18.372,
+     "max": 25.048,
+     "mean": 22.123,
+     "median": 22.182,
+     "p95": 24.376
+    },
+    "threshold": 10.0,
+    "basis": "calculated (Horn 1981, 3 x 3) from the DEM",
+    "baseline_m": 60.0,
+    "above_threshold_pct": 100.0,
+    "status": "hazard",
+    "reason": "100.0% of valid footprint pixels exceed the configured 10\u00b0.",
+    "status_text": "Potential hazard detected"
+   },
+   {
+    "key": "roughness",
+    "unit": "m",
+    "stats": {
+     "n": 80,
+     "min": 0.429,
+     "max": 0.947,
+     "mean": 0.702,
+     "median": 0.712,
+     "p95": 0.887
+    },
+    "threshold": null,
+    "basis": "calculated: RMS residual about a least-squares plane",
+    "baseline_m": 100.0,
+    "window_px": 5,
+    "status": "no_threshold",
+    "status_text": "No threshold configured (values shown)"
+   },
+   {
+    "key": "relief",
+    "unit": "m",
+    "stats": {
+     "value": 76.4
+    },
+    "threshold": null,
+    "basis": "calculated: maximum minus minimum DEM height inside the footprint",
+    "elevation_m": {
+     "n": 80,
+     "min": 589.06,
+     "max": 665.46,
+     "mean": 628.0,
+     "median": 628.57,
+     "p95": 659.94
+    },
+    "status": "no_threshold",
+    "status_text": "No threshold configured (values shown)"
+   },
+   {
+    "key": "depressions",
+    "candidates": [],
+    "basis": "estimated: unconfirmed DEM depression candidates (priority-flood); no crater catalogue integrated",
+    "detection_limits": {
+     "min_depth_m": 1.0,
+     "min_diameter_m": null,
+     "min_pixels": 9,
+     "pixel_m": 20.0
+    },
+    "status": "none_detected",
+    "reason": "No candidate intersects the footprint. Depressions smaller than about 60 m or shallower than 1 m below their spill level are not detectable here.",
+    "status_text": "No candidate detected at this resolution"
+   },
+   {
+    "key": "obstacles",
+    "status": "manual",
+    "status_text": "Not available - manual review required",
+    "basis": "unavailable",
+    "reason": "No imagery-based obstacle product is registered. This screening uses 20 m DEM pixels, and even the finest registered LOLA product (PGDA 78, 5 m pixels, about 90% of them interpolated between laser tracks) cannot resolve boulders or other metre-scale obstacles. Orbital imagery review is required; even then orbital data cannot guarantee that every landing hazard is found."
+   }
+  ]
+ }
+}

@@ -1,0 +1,90 @@
+6,7c6,7
+<    Original file name:                   moon_de440_220930.tf
+<    Creation date:                        2022 September 30 15:05
+---
+>    Original file name:                   moon_de440_250416.tf
+>    Creation date:                        2025 April 16 05:09
+20c20
+<       This frame kernel extends the previous version
+---
+>       This frame kernel differs from the previous version
+22c22
+<          moon_pa_de440_200625.tf
+---
+>          moon_pa_de440_220930.tf
+24c24
+<       by adding specifications of the alias frames
+---
+>       in that the ID codes of the alias frames
+27a28,29
+>  
+>       have been reset to their respective, original values 
+29,31c31,32
+<       and by upgrading the documentation to include discussion of
+<       frame association kernels and to present an example program
+<       that uses this kernel.
+---
+>          31000
+>          31001 
+33,37c34
+<       The description of the frame
+< 
+<          MOON_ME_DE440_ME421
+< 
+<       has been updated as well.
+---
+>       These codes will remain unchanged in future revisions of this kernel.
+45,46c42,43
+<    MOON_PA                     MOON_PA_DE440        FIXED  31010
+<    MOON_ME                     MOON_ME_DE440_ME421  FIXED  31011
+---
+>    MOON_PA                     MOON_PA_DE440        FIXED  31000
+>    MOON_ME                     MOON_ME_DE440_ME421  FIXED  31001
+333c330
+<        30-SEP-2022 (NJB)
+---
+>        16-APR-2025 (NJB)
+347c344
+<                                 'moon_de440_220930.tf'
+---
+>                                 'moon_de440_250416.tf'
+462,470c459,467
+<       FRAME_MOON_PA                 = 31010
+<       FRAME_31010_NAME              = 'MOON_PA'
+<       FRAME_31010_CLASS             = 4
+<       FRAME_31010_CLASS_ID          = 31010
+<       FRAME_31010_CENTER            = 301
+< 
+<       TKFRAME_31010_SPEC            = 'MATRIX'
+<       TKFRAME_31010_RELATIVE        = 'MOON_PA_DE440'
+<       TKFRAME_31010_MATRIX          = ( 1 0 0
+---
+>       FRAME_MOON_PA                 = 31000
+>       FRAME_31000_NAME              = 'MOON_PA'
+>       FRAME_31000_CLASS             = 4
+>       FRAME_31000_CLASS_ID          = 31000
+>       FRAME_31000_CENTER            = 301
+> 
+>       TKFRAME_31000_SPEC            = 'MATRIX'
+>       TKFRAME_31000_RELATIVE        = 'MOON_PA_DE440'
+>       TKFRAME_31000_MATRIX          = ( 1 0 0
+486,494c483,491
+<       FRAME_MOON_ME                 = 31011
+<       FRAME_31011_NAME              = 'MOON_ME'
+<       FRAME_31011_CLASS             = 4
+<       FRAME_31011_CLASS_ID          = 31011
+<       FRAME_31011_CENTER            = 301
+< 
+<       TKFRAME_31011_SPEC            = 'MATRIX'
+<       TKFRAME_31011_RELATIVE        = 'MOON_ME_DE440_ME421'
+<       TKFRAME_31011_MATRIX          = ( 1 0 0
+---
+>       FRAME_MOON_ME                 = 31001
+>       FRAME_31001_NAME              = 'MOON_ME'
+>       FRAME_31001_CLASS             = 4
+>       FRAME_31001_CLASS_ID          = 31001
+>       FRAME_31001_CENTER            = 301
+> 
+>       TKFRAME_31001_SPEC            = 'MATRIX'
+>       TKFRAME_31001_RELATIVE        = 'MOON_ME_DE440_ME421'
+>       TKFRAME_31001_MATRIX          = ( 1 0 0

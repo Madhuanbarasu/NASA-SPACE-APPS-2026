@@ -1,0 +1,8 @@
+Backend integrity after the Site spacing fix (2026-11-14T07:53:12Z)
+code_fingerprint 9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8
+suite_fingerprint 70606628abed3fdee2704e0b8e2891f648da27266b04791d7690531a517cd546
+8c03ebafc72c5c41a238565f51464413bd63f3132302491cc518587d93ebe10d *backend/validation/report.json
+backend files newer than this task's backup (expect none):
+frontend source files newer than the backup:
+frontend/src/styles/analysis.css
+api code_fingerprint 9cd7b08b | labels {'sun_earth_azel': None, 'horizon': None, 'disk_visibility': None, 'events': None, 'power_indicator': None} | blockers 2

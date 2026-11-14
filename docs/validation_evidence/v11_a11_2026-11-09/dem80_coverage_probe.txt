@@ -1,0 +1,6 @@
+80 m DEM 7600 7600 ('float32',) nodata nan transform (80.0, 0.0, -304000.0, 0.0, -80.0, 304000.0)
+corner (-77.8S): lat -76.08, finite 25/25, values [590.7000122070312, 592.5, 596.7999877929688]
+edge mid (-80.0S) read failed: Read failed. See previous exception for details.
+r=293km (~ -80.3S) read failed: Read failed. See previous exception for details.
+r=315km read failed: Read failed. See previous exception for details.
+sampled points beyond 80S: 8 of 200

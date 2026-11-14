@@ -1,0 +1,13 @@
+# Pinned per blueprint Section 12.1: no release younger than 14 days at pin time (checked 2026-11-06).
+spiceypy==8.3.0        # bundles CSPICE N0067 (needed for pck00011.tpc)
+numpy==2.5.4
+numba==0.68.0
+rasterio==1.5.2
+pyproj==3.8.0
+fastapi==0.161.1
+uvicorn==0.54.0
+pydantic==2.14.1
+pillow==13.0.0
+pyshp==3.1.6
+pytest==9.1.1
+httpx==0.28.1

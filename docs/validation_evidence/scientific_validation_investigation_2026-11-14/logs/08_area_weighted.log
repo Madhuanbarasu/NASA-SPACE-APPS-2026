@@ -1,0 +1,6 @@
+V-09 strata pixels/sampled: [([0.0, 0.2], 9603791, 46), ([0.2, 0.4], 8529795, 45), ([0.4, 0.6], 1940619, 45), ([0.6, 0.8], 1460, 45), ([0.8, 1.0], 19, 19)]
+  equal-per-stratum (as reported): RMSE 14.09 pp, bias -7.19 pp
+  area-weighted (each point weighted by its stratum's pixel count / points drawn): RMSE 3.77 pp, bias -0.97 pp
+V-10 strata pixels/sampled: [([0.0, 0.2], 8741964, 40), ([0.2, 0.4], 5755634, 40), ([0.4, 0.6], 4628919, 40), ([0.6, 0.8], 603502, 40), ([0.8, 1.0], 345665, 40)]
+  equal-per-stratum (as reported): RMSE 3.13 pp, bias -0.74 pp
+  area-weighted (each point weighted by its stratum's pixel count / points drawn): RMSE 3.28 pp, bias -0.90 pp

@@ -1,0 +1,33 @@
+reference around the point: {"+-60 m": {"min": 0.0, "max": 0.033440000000000004, "mean": 0.003715555555555556, "share_zero": 0.8888888888888888}, "+-300 m": {"min": 0.0, "max": 0.5836, "mean": 0.19762016528925622, "share_zero": 0.2975206611570248}, "+-1020 m": {"min": 0.0, "max": 0.59404, "mean": 0.40575020408163276, "share_zero": 0.05551020408163265}, "+-3000 m": {"min": 0.0, "max": 0.60504, "mean": 0.4097221331242035, "share_zero": 0.14714243701597882}}
+{
+ "earth": {
+  "az_range": [
+   66.36285258085573,
+   83.33289056247271
+  ],
+  "el_range": [
+   -6.476753589869155,
+   8.37055432233592
+  ],
+  "hours_above_0deg_share": 0.5447352926745498
+ },
+ "horizon_toward_earth": {
+  "bins": 170,
+  "h_min": 2.487496786809212,
+  "h_max": 5.3098334251724415,
+  "h_median": 3.966835157295529,
+  "blocker_distance_km_min": 0.01,
+  "blocker_distance_km_max": 0.02,
+  "blocker_products": [
+   "20m"
+  ],
+  "incomplete_bins": 0,
+  "near_field_bins": 170,
+  "ground_h_m": -627.5855701479677
+ },
+ "blockers_inside_reference_dem_share": 1.0,
+ "earth_centre_above_engine_horizon_share": 0.3463642608311663
+}
+engine_0m {'outcome': 'scored', 'computed': 0.3978889652126981, 'exact_hours': 40}
+engine_2m {'outcome': 'scored', 'computed': 0.427990530395957, 'exact_hours': 53}
+near_field_60m_0m {'outcome': 'scored', 'computed': 0.38077743977233697, 'exact_hours': 49}

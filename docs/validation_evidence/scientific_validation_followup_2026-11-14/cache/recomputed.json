@@ -1,0 +1,133 @@
+{
+ "results_total": 87,
+ "results_under_previous_fingerprints": 81,
+ "results_under_new_fingerprint": [
+  {
+   "id": "5998e02917bc98ba4ad6d994",
+   "created_utc": "2026-11-14 02:48:15",
+   "lat": -60.482591,
+   "lon": 266.96912,
+   "window": [
+    "2026-11-12T00:00:00Z",
+    "2026-12-12T00:00:00Z"
+   ],
+   "panel": {
+    "azimuth_deg": 0.0,
+    "description": "Vertical panel turning to face the Sun in azimuth (default)",
+    "model": "vertical_tracking"
+   },
+   "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8",
+   "horizon_key": "172cf04749b45999d9393116",
+   "incomplete_share": 0.1925
+  },
+  {
+   "id": "eda9338a7a50e3d57fa5bca9",
+   "created_utc": "2026-11-14 02:48:35",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "window": [
+    "2026-11-13T00:00:00Z",
+    "2026-12-13T00:00:00Z"
+   ],
+   "panel": {
+    "azimuth_deg": 0.0,
+    "description": "Vertical panel turning to face the Sun in azimuth (default)",
+    "model": "vertical_tracking"
+   },
+   "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8",
+   "horizon_key": "94150e39543a4789d997cf3a",
+   "incomplete_share": 0.0
+  },
+  {
+   "id": "3ac70f2c8ead53b491d4050f",
+   "created_utc": "2026-11-14 02:48:47",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "window": [
+    "2026-11-13T00:00:00Z",
+    "2026-12-13T00:00:00Z"
+   ],
+   "panel": {
+    "azimuth_deg": 0.0,
+    "description": "Horizontal panel",
+    "model": "horizontal"
+   },
+   "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8",
+   "horizon_key": "94150e39543a4789d997cf3a",
+   "incomplete_share": 0.0
+  },
+  {
+   "id": "0e0522dbe9f5b21b4677625e",
+   "created_utc": "2026-11-14 02:48:55",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "window": [
+    "2026-11-13T00:00:00Z",
+    "2026-11-14T00:00:00Z"
+   ],
+   "panel": {
+    "azimuth_deg": 400.0,
+    "description": "Vertical panel fixed at a chosen azimuth",
+    "model": "fixed_vertical"
+   },
+   "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8",
+   "horizon_key": "94150e39543a4789d997cf3a",
+   "incomplete_share": 0.0
+  },
+  {
+   "id": "47c26f2a9d4fa870f23f24a9",
+   "created_utc": "2026-11-14 02:49:09",
+   "lat": -84.313534,
+   "lon": 359.048681,
+   "window": [
+    "2026-11-13T00:00:00Z",
+    "2026-12-13T00:00:00Z"
+   ],
+   "panel": {
+    "azimuth_deg": 400.0,
+    "description": "Vertical panel turning to face the Sun in azimuth (default)",
+    "model": "vertical_tracking"
+   },
+   "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8",
+   "horizon_key": "ed2ab40d82c6247023c18758",
+   "incomplete_share": 0.0
+  },
+  {
+   "id": "f9d5518f3565a47004a176b2",
+   "created_utc": "2026-11-14 02:49:22",
+   "lat": -78.398411,
+   "lon": 21.869043,
+   "window": [
+    "2026-11-13T00:00:00Z",
+    "2026-12-13T00:00:00Z"
+   ],
+   "panel": {
+    "azimuth_deg": 400.0,
+    "description": "Vertical panel turning to face the Sun in azimuth (default)",
+    "model": "vertical_tracking"
+   },
+   "code_fingerprint": "9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8",
+   "horizon_key": "6d8ba64020a8048f52c65fe3",
+   "incomplete_share": 0.0
+  }
+ ],
+ "horizons_under_new_fingerprint": [
+  [
+   "172cf04749b45999d9393116",
+   "2026-11-14 02:47:38"
+  ],
+  [
+   "94150e39543a4789d997cf3a",
+   "2026-11-14 02:48:26"
+  ],
+  [
+   "ed2ab40d82c6247023c18758",
+   "2026-11-14 02:49:00"
+  ],
+  [
+   "6d8ba64020a8048f52c65fe3",
+   "2026-11-14 02:49:16"
+  ]
+ ],
+ "horizons_total": 34
+}

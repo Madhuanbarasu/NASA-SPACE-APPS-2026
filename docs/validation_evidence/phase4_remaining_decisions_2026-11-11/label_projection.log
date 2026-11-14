@@ -1,0 +1,43 @@
+report-level blockers: []
+
+current report
+   sun_earth_azel   status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   horizon          status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   disk_visibility  status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   events           status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   power_indicator  status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+
+D4 only: U-04 passed
+   sun_earth_azel   status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   horizon          status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   disk_visibility  status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   events           status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   power_indicator  status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+
+D3 + D4: U-04, U-06 passed
+   sun_earth_azel   status page: Validated            analysis result with horizon sigma (L_corr): Validated
+   horizon          status page: Validated            analysis result with horizon sigma (L_corr): Pending validation
+   disk_visibility  status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   events           status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   power_indicator  status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+
+D1 merged + D3 + D4
+   sun_earth_azel   status page: Validated            analysis result with horizon sigma (L_corr): Validated
+   horizon          status page: Validated            analysis result with horizon sigma (L_corr): Pending validation
+   disk_visibility  status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   events           status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   power_indicator  status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+
+D1 + D2 (both pass) + D3 + D4
+   sun_earth_azel   status page: Validated            analysis result with horizon sigma (L_corr): Validated
+   horizon          status page: Validated            analysis result with horizon sigma (L_corr): Pending validation
+   disk_visibility  status page: Validated            analysis result with horizon sigma (L_corr): Validated
+   events           status page: Validated            analysis result with horizon sigma (L_corr): Pending validation
+   power_indicator  status page: Validated            analysis result with horizon sigma (L_corr): Pending validation
+
+D1 + D2 (V-09 failed, V-10 passed) + D3 + D4
+   sun_earth_azel   status page: Validated            analysis result with horizon sigma (L_corr): Validated
+   horizon          status page: Validated            analysis result with horizon sigma (L_corr): Pending validation
+   disk_visibility  status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   events           status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation
+   power_indicator  status page: Pending validation   analysis result with horizon sigma (L_corr): Pending validation

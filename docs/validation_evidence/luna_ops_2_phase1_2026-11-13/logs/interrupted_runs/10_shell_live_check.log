@@ -1,0 +1,22 @@
+PASS 1440 px: tabs in the bar, no compact menu, parameters docked and open, UTC clock shown  {"tabs":true,"navToggle":false,"panel":true,"mainW":1100,"clock":true}
+PASS tabs keyboard: ArrowRight from Site selects Compare; the list stays one tab stop  {"focus":"tab-compare","stops":1}
+PASS collapse: the parameters toggle hides the panel and the workspace takes the full width; the status line stays for screen readers  {"before":1100,"after":{"panel":false,"expanded":"false","mainW":1440,"status":true,"latInDom":true}}
+PASS collapse is remembered in this browser after a reload  {"panel":false,"mainW":1440}
+PASS expand: the toggle brings the docked panel back
+PASS 1024 px: compact menu button instead of the tab strip; parameters drawer closed; no sideways scrolling  {"tabs":false,"navToggle":true,"panel":false,"hscroll":false}
+PASS menu: opens; choosing a view selects it, closes the menu and shows the view's name on the button  {"m1":{"open":true,"expanded":"true"},"m2":{"open":false,"tab":"Guide","label":"Guide"}}
+PASS menu keyboard: Down moves through the views; Escape closes the menu and returns focus to the menu button  {"m3":"Mission","m4":{"open":false,"focus":"nav-toggle"}}
+PASS drawer: opens over the workspace with a scrim; focus moves to its close button  {"panel":true,"focus":"params-close","scrim":true,"sidebarLeft":0}
+PASS drawer: its fields work; Escape closes it and returns focus to the parameters toggle; the value is kept  {"typed":"-89.9","d2":{"panel":false,"focus":"icon-button params-toggle"}}
+PASS drawer: a press outside it and its close button both close it  {"outside":false,"close":false}
+file:///E:/LUNA-OPS/frontend/scripts/shell-live-check.mjs:60
+  throw new Error("timeout waiting for " + what);
+        ^
+
+Error: timeout waiting for status
+    at waitFor (file:///E:/LUNA-OPS/frontend/scripts/shell-live-check.mjs:60:9)
+    at async load (file:///E:/LUNA-OPS/frontend/scripts/shell-live-check.mjs:99:78)
+    at async file:///E:/LUNA-OPS/frontend/scripts/shell-live-check.mjs:167:21
+
+Node.js v24.19.0
+exit 1

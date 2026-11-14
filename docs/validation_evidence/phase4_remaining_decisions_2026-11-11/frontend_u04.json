@@ -1,0 +1,184 @@
+{
+  "tests": {
+    "U-04": {
+      "status": "passed",
+      "detail": "Scoped U-04 (D4, approved 2026-11-11): WCAG 2.2 Level A/AA, 55 success criteria assessed, 24 defects fixed (docs/validation_evidence/u04_2026-11-11); current build re-audited 2026-11-11 (npm run audit:a11y): 0 automated problems in 6 views, 16/16 functional tests as in the release run. Scope: Chrome/Chromium 157 headless only; no real screen-reader (assistive-technology) user session; zoom emulated through the viewport; speech input not tested. Not a claim of unrestricted WCAG 2.2 AA conformance"
+    }
+  },
+  "decision": "D4",
+  "criterion": "WCAG 2.2 Level A and AA (requirement C02), scoped: Chrome/Chromium only, no real screen-reader user session; conditional on a current-build re-run of npm run audit:a11y matching the release run",
+  "result": {
+    "views": {
+      "site-welcome": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 34
+      },
+      "site-result-technical": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 52
+      },
+      "site-result-public": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": null
+      },
+      "compare-matrix": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 76
+      },
+      "data": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 34
+      },
+      "guide": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 33
+      }
+    },
+    "functional_same_as_release": {
+      "skipLink": true,
+      "tabsArrowKeys": true,
+      "invalidCoordinates": true,
+      "slider": true,
+      "readoutLive": true,
+      "panoramaHoverEscape": true,
+      "readoutLiveWhilePlaying": true,
+      "mapKeyboard": true,
+      "terrain3dKeyboard": true,
+      "panoramaKeyboard": true,
+      "pointerAlternatives": true,
+      "statusAfterAnalysis": true,
+      "statusAfterComparison": true,
+      "matrixCellSpace": true,
+      "matrixCellEnter": true,
+      "reducedMotionTransition": true
+    },
+    "evidence": {
+      "docs/validation_evidence/phase4_remaining_decisions_2026-11-11/u04_current_build/audit-current-build.json": "bb017e9d187c47d477cf2df2a6499739e3acb0a8d319e1a43c74f34da817852c",
+      "docs/validation_evidence/u04_2026-11-11/audit-release.json": "e2c6372f06bf02c0121d2a7b677ab85721840a458b04ea4fe845804b5501fc2c"
+    }
+  },
+  "frontend_build": {
+    "frontend_dist_sha256": {
+      "assets/archivo-latin-ext-wdth-normal-7khWdh9v.woff2": "5717f37059660ca5c899bad6c48ee22c3ac55cb3c484055241689d0f905a1a86",
+      "assets/archivo-latin-wdth-normal-DY7AcnAa.woff2": "e3a28eade21a900c7155a247757f4b2834c07bb7ef07ad7efa55cebaac1e8f5e",
+      "assets/archivo-vietnamese-wdth-normal-rJmnGBSt.woff2": "332e6f66de84927cdffc60894e4e186ced783f5cb4b3e88200f45b7c1d306810",
+      "assets/index-Dj8BEKWr.css": "abec53f9bbfe30b17038764c1536516bf4eacb9f2ff3a3a9dcc948e6ff7cc4b2",
+      "assets/index-kvDT7UBF.js": "007dbb5b1b2d4eb9d16b67b3e5382c8146ad8eec0a1942ffebf8f630b9c588b4",
+      "assets/MapView-CSDBvknB.js": "fc936ee08d836b6e71fe962e0fe5b5b21730f02f636569fb25a601704d152d1e",
+      "assets/Terrain3D-_0dC8YFW.js": "f87864a206ccb43c5885c12834cfc89f02f39932937cf391c00df5586be905e1",
+      "index.html": "9a105b9a7202c7f084d31ec375e9d13ab3e400c1a186cde6e1b5f6d433ca4298"
+    },
+    "equals_u06_final_build": true
+  },
+  "approved": {
+    "by": "project owner (working-session instruction, 2026-11-11)",
+    "decision": "D4"
+  },
+  "meta": {
+    "script": "frontend_u04",
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "kernels": [
+      "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+      "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+      "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+      "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+      "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+      "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+      "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    ],
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-11T18:19:06Z"
+  }
+}

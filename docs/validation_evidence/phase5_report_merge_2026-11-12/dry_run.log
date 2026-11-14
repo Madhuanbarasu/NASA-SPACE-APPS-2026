@@ -1,0 +1,12 @@
+v09_v10.json               sha_ok=True script=v09_v10_avgvisib   fp_match=True tests={'V-09': 'not run', 'V-10': 'not run'} rejected=[]
+v11.json                   sha_ok=True script=v11_psr            fp_match=True tests={'V-11': 'passed'} rejected=[]
+v12.json                   sha_ok=True script=v12_lroc           fp_match=True tests={'V-12': 'passed'} rejected=[]
+horizons.json              sha_ok=True script=horizons_compare   fp_match=True tests={'V-04': 'passed', 'V-05': 'passed'} rejected=[]
+v13.json                   sha_ok=True script=v13_eclipse        fp_match=True tests={'V-13': 'passed'} rejected=[]
+v14.json                   sha_ok=True script=v14_month          fp_match=True tests={'V-14': 'passed'} rejected=[]
+frontend_u04_phase5.json   sha_ok=True script=frontend_u04       fp_match=True tests={'U-04': 'passed'} rejected=[]
+frontend_u06_phase5.json   sha_ok=True script=frontend_u06       fp_match=True tests={'U-06': 'passed'} rejected=[]
+projected differences vs live report: {'U-04': ['detail', 'run_utc'], 'U-06': ['detail', 'run_utc']}
+U-04/U-06 projected: {'U-04': {'status': 'passed', 'detail_is_phase5': True}, 'U-06': {'status': 'passed', 'detail_is_phase5': True}}
+DRY RUN OK: zero rejections, hashes verified, only U-04/U-06 detail and run_utc change
+exit 0

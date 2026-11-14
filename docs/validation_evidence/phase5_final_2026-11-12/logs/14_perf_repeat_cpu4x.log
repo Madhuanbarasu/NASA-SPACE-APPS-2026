@@ -1,0 +1,11 @@
+06:03:13 cpu4x cold 1
+06:03:17 cpu4x cold 2
+06:03:20 cpu4x cold 3
+06:03:24 cpu4x warm 1
+06:03:27 cpu4x warm 2
+06:04:11 cpu4x workflow done
+06:04:54 cpu4x phase5 done
+cpu4x: cold appReady 1658.3 ms, FCP 748, LCP 748, TBT 350, JS 767.7 KB; warm appReady 1978.8; complete=true
+interactions {"tabs":{"Compare":107.6,"Data and validation":434.2,"Guide":71.4,"Site":119.1},"analysisToResultMs":921.9,"analysisTo3DDataMs":1514.4,"analysisToMapTilesMs":null,"resultJsonKB":319.5,"resultFetchMs":59.9,"terrainGridKB":190.2,"series":"337","cursorStep":{"interactions":20,"medianMs":56,"p95Ms":64,"maxMs":104},"playback":{"steps":28,"frames":297,"fps":59.2,"frameP95":16.9,"frameMax":33.4,"longTasks":0,"longestTask":0,"blockingMs":0,"expectedSteps":35,"scriptMsPerStep":23.5,"layoutMs":137.6,"domNodes":5408},"playbackTablesOpen":{"steps":24,"frames":264,"fps":52.8,"frameP95":33.3,"frameMax":133.2,"longTasks":1,"longestTask":101,"blockingMs":51,"expectedSteps":35,"scriptMsPerStep":38.8,"layoutMs":101.6,"domNodes":6451},"rotate3D":{"medianMs":31,"maxMs":34.6},"modeToPublicMs":74.9,"modeToTechnicalMs":57.3,"resultToDataMs":413.5,"dataToResultMs":736.7,"compareToMatrixMs":145.3,"metricSwitchMs":27.4,"cellToResultMs":309,"heapAfterWorkflowMB":74.8,"domNodesAfterWorkflow":11793}
+phase5 {"tabToMissionMs":146,"tabMissionToSiteMs":190.6,"globeToCanvasMs":918.8,"globeToImageryMs":356.4,"globeImageryKB":556.7,"globeKeySteps":{"interactions":10,"medianMs":32,"p95Ms":48,"maxMs":48},"terrainToCanvasMs":142.7,"terrainToDataMs":192.2,"terrainKeySteps":{"interactions":8,"medianMs":16,"p95Ms":24,"maxMs":24},"globeRemount":{"cycles":5,"before":{"heapMB":25.9,"nodes":431,"listeners":196},"after":{"heapMB":26.5,"nodes":456,"listeners":201},"heapGrowthMB":0.6,"nodeGrowth":25,"listenerGrowth":5,"canvasesInDom":1,"newConsoleWarnings":[]},"terrainRemount":{"cycles":5,"before":{"heapMB":26.9,"nodes":514,"listeners":191},"after":{"heapMB":27.1,"nodes":519,"listeners":196},"heapGrowthMB":0.2,"nodeGrowth":5,"listenerGrowth":5,"canvasesInDom":1,"newConsoleWarnings":[]},"heapAfterPhase5MB":27.1}
+exit 0

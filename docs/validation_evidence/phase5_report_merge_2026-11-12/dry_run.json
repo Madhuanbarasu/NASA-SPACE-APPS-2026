@@ -1,0 +1,158 @@
+{
+  "note": "no-write dry run; report.json only read",
+  "ok": true,
+  "now": {
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-12T06:12:47Z"
+  },
+  "report_sha256_before": "2279606ceab9354b8616ba9216e12e89e399f34cfc3cbfcbd7502d12d077d376",
+  "files": [
+    {
+      "file": "v09_v10_final_2026-11-10/v09_v10.json",
+      "sha256": "cc6d27a7b594050b72a481e4379a33c2c56d340134b3d821d3bb4cb34efce401",
+      "sha256_expected": "cc6d27a7b594050b72a481e4379a33c2c56d340134b3d821d3bb4cb34efce401",
+      "sha256_ok": true,
+      "script": "v09_v10_avgvisib",
+      "tests": {
+        "V-09": "not run",
+        "V-10": "not run"
+      },
+      "owned": [
+        "V-09",
+        "V-10"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "v11_final_2026-11-10/v11.json",
+      "sha256": "fa42c569dee745cd7f9acc0744bf8817956b7cc1bef96efd683de33da3cc2add",
+      "sha256_expected": "fa42c569dee745cd7f9acc0744bf8817956b7cc1bef96efd683de33da3cc2add",
+      "sha256_ok": true,
+      "script": "v11_psr",
+      "tests": {
+        "V-11": "passed"
+      },
+      "owned": [
+        "V-11"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "v12_final_2026-11-10/v12.json",
+      "sha256": "d01b97f5a38d4d935ae3a268844926b41192cecaee09e513812758607bbad668",
+      "sha256_expected": "d01b97f5a38d4d935ae3a268844926b41192cecaee09e513812758607bbad668",
+      "sha256_ok": true,
+      "script": "v12_lroc",
+      "tests": {
+        "V-12": "passed"
+      },
+      "owned": [
+        "V-12"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "refresh_v04_v05_v13_v14_2026-11-11/v04_horizons/horizons.json",
+      "sha256": "401e446dad093fae2a7dd5c01768231ff5886101da21be5c1e5c789a1e0ad49b",
+      "sha256_expected": "401e446dad093fae2a7dd5c01768231ff5886101da21be5c1e5c789a1e0ad49b",
+      "sha256_ok": true,
+      "script": "horizons_compare",
+      "tests": {
+        "V-04": "passed",
+        "V-05": "passed"
+      },
+      "owned": [
+        "V-04",
+        "V-05"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "refresh_v04_v05_v13_v14_2026-11-11/v13_eclipse/v13.json",
+      "sha256": "277fef85646a9a1451829e5fde28e9a119ba10f78b9079ba38f5bcb6ad7fd64a",
+      "sha256_expected": "277fef85646a9a1451829e5fde28e9a119ba10f78b9079ba38f5bcb6ad7fd64a",
+      "sha256_ok": true,
+      "script": "v13_eclipse",
+      "tests": {
+        "V-13": "passed"
+      },
+      "owned": [
+        "V-13"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "refresh_v04_v05_v13_v14_2026-11-11/v14_month/v14.json",
+      "sha256": "5ca3a28d0f1a6c9f455c5c7397960a149e049a944b8bf9bd2378aa41b2b2164e",
+      "sha256_expected": "5ca3a28d0f1a6c9f455c5c7397960a149e049a944b8bf9bd2378aa41b2b2164e",
+      "sha256_ok": true,
+      "script": "v14_month",
+      "tests": {
+        "V-14": "passed"
+      },
+      "owned": [
+        "V-14"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "phase5_final_2026-11-12/frontend_u04_phase5.json",
+      "sha256": "87ed89fa4ec99c815c6bd2f641f516893767b63d353f5b3290b18f50d703fa47",
+      "sha256_expected": "87ed89fa4ec99c815c6bd2f641f516893767b63d353f5b3290b18f50d703fa47",
+      "sha256_ok": true,
+      "script": "frontend_u04",
+      "tests": {
+        "U-04": "passed"
+      },
+      "owned": [
+        "U-04"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    },
+    {
+      "file": "phase5_final_2026-11-12/frontend_u06_phase5.json",
+      "sha256": "c5a2cf81c35b211d90b6bf7f224a2d94e71b9a7f1269c76eebaeff7a443bbcf0",
+      "sha256_expected": "c5a2cf81c35b211d90b6bf7f224a2d94e71b9a7f1269c76eebaeff7a443bbcf0",
+      "sha256_ok": true,
+      "script": "frontend_u06",
+      "tests": {
+        "U-06": "passed"
+      },
+      "owned": [
+        "U-06"
+      ],
+      "fingerprints_match": true,
+      "rejected_reasons": []
+    }
+  ],
+  "projected_differences_vs_live": {
+    "U-04": [
+      "detail",
+      "run_utc"
+    ],
+    "U-06": [
+      "detail",
+      "run_utc"
+    ]
+  },
+  "frontend_projection": {
+    "U-04": {
+      "status": "passed",
+      "detail_is_phase5": true
+    },
+    "U-06": {
+      "status": "passed",
+      "detail_is_phase5": true
+    }
+  }
+}

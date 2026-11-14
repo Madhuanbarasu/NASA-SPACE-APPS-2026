@@ -1,0 +1,2 @@
+# start.py --no-browser --no-build --port 8765 (fresh start before the U-06 runs, 2026-11-12T05:56:06Z)
+# The server wrote nothing further to stdout/stderr (no access log). Stopped deliberately after the last U-06 run and the result-file dry run (2026-11-12T06:07:32Z); the exit code 127 reported for the background shell is from that stop.

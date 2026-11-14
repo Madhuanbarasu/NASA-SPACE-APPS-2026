@@ -1,0 +1,8 @@
+# crosscheck_detector.py (2026-11-10T11:04:16Z, production kernels)
+ -89.5    0.0 v14      2010-06-01  29.5306 d every  3600 s:   709 epochs, detector intervals  525, exact    3; any visible   392 mismatches 0; centre visible   229 mismatches 0; full visible   131 mismatches 0; vectorised 0.10 s, detector 58.4 s
+ -88.6  120.0 v14      2010-09-01  29.5306 d every  3600 s:   709 epochs, detector intervals  313, exact    0; any visible   388 mismatches 0; centre visible   310 mismatches 0; full visible   243 mismatches 0; vectorised 0.00 s, detector 52.1 s
+ -88.2  250.0 v14      2010-03-01  10.0000 d every   600 s:  1440 epochs, detector intervals  202, exact    4; any visible   752 mismatches 0; centre visible   404 mismatches 0; full visible   100 mismatches 0; vectorised 0.02 s, detector 10.8 s
+ -89.0    0.0 flat-10  2010-12-21   0.3333 d every    60 s:   480 epochs, detector intervals    9, exact  281; any visible   322 mismatches 0; centre visible   261 mismatches 0; full visible   199 mismatches 0; vectorised 3.97 s, detector 0.7 s
+ -88.5  330.0 flat-10  2010-12-21   0.3333 d every    60 s:   480 epochs, detector intervals    9, exact  281; any visible   322 mismatches 0; centre visible   261 mismatches 0; full visible   199 mismatches 0; vectorised 4.03 s, detector 0.6 s
+TOTAL: 11454 epoch-rule pairs, 0 mismatches
+# exit 0

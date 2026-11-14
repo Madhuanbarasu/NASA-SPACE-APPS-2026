@@ -1,0 +1,102 @@
+pole angles (arcsec): {
+ "frozen-iau": {
+  "max": 1000.8981630501531,
+  "at_2026": 539.3988407678756,
+  "at_2036": 739.9188407805705,
+  "at_2049": 1000.8981630501531
+ },
+ "frozen-ref": {
+  "max": 1005.9945599338672,
+  "at_2026": 542.7344385721107,
+  "at_2036": 733.8295673583822,
+  "at_2049": 1005.9945599338672
+ },
+ "iau-ref": {
+  "max": 9.90919268812915,
+  "at_2026": 7.888697116618951,
+  "at_2036": 8.826105288483395,
+  "at_2049": 7.173287423216564
+ },
+ "iau-ref_mean": {
+  "max": 0.6154695929916447,
+  "at_2026": 0.3030911744132815,
+  "at_2036": 0.4326334296577625,
+  "at_2049": 0.6154695929916447
+ },
+ "ref-ref_mean": {
+  "max": 9.89353776068827,
+  "at_2026": 8.025181086102114,
+  "at_2036": 8.526266097673881,
+  "at_2049": 7.615456422405538
+ }
+}
+model vs reference pole: {
+ "frozen_vs_ref/flat": {
+  "P1_deg": 3.1028184137161803e-06,
+  "P2_deg": 3.102818413758257e-06,
+  "P3": 2.250552036953124e-07,
+  "P2_by_decade_deg": {
+   "2000": 5.730700278760992e-07,
+   "2010": 1.195479303994773e-06,
+   "2020": 1.8032939044232421e-06,
+   "2030": 2.274489267151125e-06,
+   "2040": 3.102818413758257e-06
+  }
+ },
+ "frozen_vs_ref/sloped0.8": {
+  "P1_deg": 3.1028184137161803e-06,
+  "P2_deg": 1.8280489477717765e-05,
+  "P3": 2.2010045442888426e-06,
+  "P2_by_decade_deg": {
+   "2000": 3.6927835758704397e-06,
+   "2010": 6.29630452708696e-06,
+   "2020": 1.1328440164604103e-05,
+   "2030": 1.5181087104743085e-05,
+   "2040": 1.8280489477717765e-05
+  }
+ },
+ "iau_vs_ref/flat": {
+  "P1_deg": 1.249140157887144e-07,
+  "P2_deg": 1.2491401424341575e-07,
+  "P3": 3.5571960863012286e-08,
+  "P2_by_decade_deg": {
+   "2000": 1.2491401424341575e-07,
+   "2010": 1.0891134505364164e-07,
+   "2020": 1.2043807728900902e-07,
+   "2030": 1.1220838727621363e-07,
+   "2040": 1.1605493455135729e-07
+  }
+ },
+ "iau_vs_ref/sloped0.8": {
+  "P1_deg": 1.249140157887144e-07,
+  "P2_deg": 1.684395449785825e-07,
+  "P3": 3.5050680330384054e-08,
+  "P2_by_decade_deg": {
+   "2000": 1.684395449785825e-07,
+   "2010": 1.568513798844151e-07,
+   "2020": 1.6038480277202893e-07,
+   "2030": 1.6143852699102013e-07,
+   "2040": 1.681677561649053e-07
+  }
+ }
+}
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-LUNA-OPS/caf15fc1-0d1e-52f5-a84b-513b226f251a/scratchpad/pole/pole_study.py", line 188, in <module>
+    print(start[:4], hn, f"{time.time() - t_start:.0f}s", json.dumps(
+                                                          ~~~~~~~~~~^
+        {k: (v if k == "estimate_failures" else (v["n"], v["unmatched"], round(v["max_abs_dt_s"], 3),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                   v["n_over_1s"])) for k, v in res.items()}))
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/json/__init__.py", line 235, in dumps
+    return _default_encoder.encode(obj)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/local/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type int64 is not JSON serializable
+exit 1

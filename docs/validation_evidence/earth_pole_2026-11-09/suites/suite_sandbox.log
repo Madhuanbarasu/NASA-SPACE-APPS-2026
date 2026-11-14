@@ -1,0 +1,44 @@
+# full suite, sandbox kernels 2026-11-09T05:35:32Z
+.................s..........................................ssssss.ssss. [ 22%]
+........................................................................ [ 44%]
+.................................................s...................... [ 66%]
+........................................................................ [ 88%]
+......................................s                                  [100%]
+=============================== warnings summary ===============================
+tests/test_events_api.py::test_U03_compare_4x3_equals_single_site
+  /home/user/LUNA-OPS/backend/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 15 durations =============================
+111.30s call     tests/test_phase3_joint.py::test_real_eclipse_joint_fraction
+75.67s call     tests/test_events_api.py::test_V14_synthetic_window_durations
+61.95s call     tests/test_phase3_joint.py::test_joint_exact_branches_match_dense_reference
+26.72s call     tests/test_phase3_joint.py::test_adaptive_three_way_converges_and_reports_its_error
+26.48s call     tests/test_phase3_subbin.py::test_analysis_phase2_flags_identical_for_m1_and_m4
+20.03s call     tests/test_phase3_earth_rates.py::test_complete_rate_bound_covers_the_clearance_derivative
+18.96s call     tests/test_phase3_earth_rates.py::test_limb_radial_speeds_and_limb_speed_bound
+18.90s call     tests/test_events_api.py::test_V14_three_sites_brute_force
+18.29s call     tests/test_phase3_joint.py::test_limb_radius_toward_matches_dense_limb
+17.59s call     tests/test_phase2_flags.py::test_near_field_propagates_into_intervals_and_results
+17.11s call     tests/test_phase3_earth.py::test_full_ellipse_matches_dense_reference
+16.63s call     tests/test_phase3_joint.py::test_ellipse_occultation_is_sandwiched_and_exact
+15.35s call     tests/test_engine.py::test_V07_exact_stopping_changes_nothing
+13.29s call     tests/test_phase2_golden.py::test_analysis_outputs_unchanged_except_flags
+13.05s call     tests/test_phase3_power.py::test_segments_from_slivers_to_almost_full_match_the_reference
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_engine.py:86: needs production DE440 kernels plus the DE421 lunar PCK/FK
+SKIPPED [1] tests/test_pgda90_integration.py:62: PGDA90 80m files not available on disk
+SKIPPED [1] tests/test_pgda90_integration.py:105: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:136: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:175: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:199: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:227: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:287: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:296: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:333: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:378: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_phase3_earth.py:306: IAU_EARTH orientation not loaded (production pck00011.tpc not installed)
+SKIPPED [1] tests/test_phase4_earth_pole.py:193: IAU_EARTH orientation not loaded (production pck00011.tpc not installed)
+314 passed, 13 skipped, 1 warning in 685.40s (0:11:25)
+# exit 0

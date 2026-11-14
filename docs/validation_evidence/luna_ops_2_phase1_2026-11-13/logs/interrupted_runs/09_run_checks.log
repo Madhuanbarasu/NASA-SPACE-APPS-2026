@@ -1,0 +1,5 @@
+shell:  [exit 1]
+mission:  [exit 1]
+viz:  [exit 1]
+explorer:  [exit 127]
+globe:  []

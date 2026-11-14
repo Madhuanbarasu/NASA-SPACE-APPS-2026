@@ -1,0 +1,57 @@
+{
+ "res": [
+  {
+   "lat": "-85",
+   "lon": "360",
+   "ms": 1058,
+   "hint": "Terrain coverage: 20m, 80m, 240m LOLA levels.",
+   "hintClass": "hint good",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "analyseDisabled": false,
+   "coverageRequests": [
+    "/api/coverage?lat=-85&lon=360"
+   ]
+  },
+  {
+   "lat": "-85",
+   "lon": "-10",
+   "ms": 623,
+   "hint": "Terrain coverage: 20m, 80m, 240m LOLA levels.",
+   "hintClass": "hint good",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "analyseDisabled": false,
+   "coverageRequests": [
+    "/api/coverage?lat=-85&lon=-10"
+   ]
+  },
+  {
+   "lat": "-90",
+   "lon": "0",
+   "ms": 1460,
+   "hint": "Terrain coverage: 20m, 80m, 240m LOLA levels.",
+   "hintClass": "hint good",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "analyseDisabled": false,
+   "coverageRequests": [
+    "/api/coverage?lat=-90&lon=0"
+   ]
+  },
+  {
+   "lat": "-89.463163",
+   "lon": "222.510447",
+   "ms": 638,
+   "hint": "Terrain coverage: 5m, 20m, 80m, 240m LOLA levels.",
+   "hintClass": "hint good",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "analyseDisabled": false,
+   "coverageRequests": [
+    "/api/coverage?lat=-89.463163&lon=222.510447"
+   ]
+  }
+ ],
+ "console": []
+}

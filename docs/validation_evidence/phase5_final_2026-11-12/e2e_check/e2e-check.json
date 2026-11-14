@@ -1,0 +1,175 @@
+{
+ "base": "http://127.0.0.1:8765",
+ "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+ "started": "2026-11-12T05:35:48.020Z",
+ "analyses": [
+  {
+   "id": "bf76ea02552ff03f87149b5a",
+   "lat": -89.9,
+   "lon": 0
+  }
+ ],
+ "globeLoadingTextSeen": true,
+ "checks": [
+  {
+   "name": "loading state: on a slow connection the Mission tab shows its loading text, then the dashboard",
+   "ok": true
+  },
+  {
+   "name": "globe selection: the pick reaches the sidebar, the explorer and the dashboard as the same site",
+   "ok": true,
+   "detail": {
+    "f1": {
+     "lat": "-89.9",
+     "lon": "0"
+    },
+    "exp1": "89.900° S, 0.000° E",
+    "mis1": "89.900° S, 0.000° E",
+    "globeSel": "Centre 0.000° N, 0.000° E"
+   }
+  },
+  {
+   "name": "terrain: the local terrain preview opens for the picked site with the registered product",
+   "ok": true,
+   "detail": {
+    "tStats": "Registered terrain in this window20m product: PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_20MPP_ADJ160 × 160 display grid, 101 m cells, 8 km radius (display-averaged from the sour",
+    "product": "PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_20MPP_ADJ"
+   }
+  },
+  {
+   "name": "analysis: the result is for exactly the picked coordinates",
+   "ok": true,
+   "detail": {
+    "coverage": {
+     "covered": true,
+     "finest": "20m",
+     "levels": [
+      "20m",
+      "80m",
+      "240m"
+     ],
+     "products": [
+      "20m:LDEM_80S_20MPP_ADJ.TIF",
+      "80m:LDEM_80S_80MPP_ADJ.tiff",
+      "240m:LDEM_60S_240MPP_ADJ.TIF"
+     ],
+     "reason": null
+    },
+    "ground_h_m": 628.023,
+    "id": null,
+    "lat": -89.9,
+    "lon": 0,
+    "name": null,
+    "terrain_level_at_site": "20m"
+   }
+  },
+  {
+   "name": "result preservation: leaving the result keeps it (explorer offers to return; dashboard shows it as kept)",
+   "ok": true,
+   "detail": {
+    "returnBtn": "Return to the result for 89.900° S, 0.000° E",
+    "curBefore": "57"
+   }
+  },
+  {
+   "name": "result preservation: Analysis returns to the same result at the same time step without fetching it again",
+   "ok": true,
+   "detail": {
+    "back": {
+     "id": "bf76ea02552ff03f87149b5a",
+     "cursor": "57"
+    },
+    "resReqs0": 2,
+    "resReqs1": 2
+   }
+  },
+  {
+   "name": "result preservation: the explorer's Return button restores it too",
+   "ok": true
+  },
+  {
+   "name": "comparison: candidates compared (2 × 2), a cell opens its result, the dashboard reports the comparison and lists the results",
+   "ok": true,
+   "detail": {
+    "cells": 4,
+    "cellId": "265d1d7bffe59914a1736598",
+    "histIds": 2
+   }
+  },
+  {
+   "name": "persistence: after a reload the session list is restored unchanged (same build and validation report)",
+   "ok": true,
+   "detail": {
+    "n": 2
+   }
+  },
+  {
+   "name": "persistence: the saved list is tied to the backend code fingerprint and the validation report time",
+   "ok": true,
+   "detail": {
+    "code": "5bf9753fa5c5",
+    "report": "2026-11-11T18:57:17Z"
+   }
+  },
+  {
+   "name": "persistence: a restored entry opens its result from the server",
+   "ok": true
+  },
+  {
+   "name": "persistence: a list saved by another build is discarded, never shown (no stale figures or labels)",
+   "ok": true,
+   "detail": {
+    "rows": 0,
+    "stored": null
+   }
+  },
+  {
+   "name": "error state: a missing result is reported in place (Run the analysis again), the dashboard stays usable",
+   "ok": true,
+   "detail": {
+    "alert": "The result could not be opened: Unknown result. Run the analysis again to recreate it.",
+    "tab": "Mission"
+   }
+  },
+  {
+   "name": "error state: with the status API unreachable the dashboard and sidebar say so; no readiness is invented",
+   "ok": true,
+   "detail": {
+    "status": "System statusThe API is not reachable: Failed to fetchA quantity stays Pending until every test it needs has passed; see Data and validation."
+   }
+  },
+  {
+   "name": "layout: no sideways scrolling on any tab at 1440, 390 and 320 px",
+   "ok": true,
+   "detail": {
+    "1440:Mission": true,
+    "1440:Site": true,
+    "1440:Compare": true,
+    "1440:Data and validation": true,
+    "1440:Guide": true,
+    "390:Mission": true,
+    "390:Site": true,
+    "390:Compare": true,
+    "390:Data and validation": true,
+    "390:Guide": true,
+    "320:Mission": true,
+    "320:Site": true,
+    "320:Compare": true,
+    "320:Data and validation": true,
+    "320:Guide": true
+   }
+  },
+  {
+   "name": "no page exceptions or console errors (apart from the deliberate 404 and blocked request)",
+   "ok": true,
+   "detail": []
+  }
+ ],
+ "console": [
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  }
+ ],
+ "finished": "2026-11-12T05:37:17.665Z"
+}

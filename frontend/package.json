@@ -1,0 +1,37 @@
+{
+  "name": "luna-ops-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p . && node scripts/check-strings.mjs && node scripts/check-a11y.mjs && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p .",
+    "check:strings": "node scripts/check-strings.mjs",
+    "test": "node scripts/check-strings.mjs --self-test && node scripts/check-strings.mjs && node scripts/check-a11y.mjs --self-test && node scripts/check-a11y.mjs && node scripts/check-moon-geo.mjs && node scripts/check-window.mjs",
+    "check:a11y": "node scripts/check-a11y.mjs",
+    "audit:a11y": "node scripts/a11y-live-audit.mjs",
+    "check:bundle": "node scripts/check-bundle.mjs",
+    "audit:perf": "node scripts/perf-audit.mjs",
+    "check:globe": "node scripts/check-moon-geo.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "5.3.0",
+    "d3": "7.9.0",
+    "ol": "10.11.0",
+    "proj4": "2.22.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@types/d3": "7.4.3",
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "@types/three": "0.170.0",
+    "@vitejs/plugin-react": "4.7.0",
+    "typescript": "5.6.3",
+    "vite": "5.4.21"
+  }
+}

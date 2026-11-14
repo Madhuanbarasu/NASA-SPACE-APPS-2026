@@ -1,0 +1,15 @@
+valid Site01                                       readout="Selected 89.463° S, 222.510° E" gold=96 centreBtnDisabled=false latInv=null lonInv=null kept=-89.463163,222.510447
+invalid latitude -95                               readout="Selected 95.000° S, 222.510° E" gold=96 centreBtnDisabled=false latInv=true lonInv=null kept=-95,222.510447
+valid Site01 (reset)                               readout="Selected 89.463° S, 222.510° E" gold=96 centreBtnDisabled=false latInv=null lonInv=null kept=-89.463163,222.510447
+invalid latitude 95                                readout=null gold=0 centreBtnDisabled=true latInv=true lonInv=null kept=95,222.510447
+valid Site01 (reset)                               readout="Selected 89.463° S, 222.510° E" gold=96 centreBtnDisabled=false latInv=null lonInv=null kept=-89.463163,222.510447
+invalid latitude -90.0001                          readout="Selected 90.000° S, 0.000° E" gold=96 centreBtnDisabled=false latInv=true lonInv=null kept=-90.0001,0
+valid Site01 (reset)                               readout="Selected 89.463° S, 222.510° E" gold=0 centreBtnDisabled=false latInv=null lonInv=null kept=-89.463163,222.510447
+invalid longitude 400                              readout="Selected 89.463° S, 40.000° E" gold=96 centreBtnDisabled=false latInv=null lonInv=true kept=-89.463163,400
+valid Site01 (reset)                               readout="Selected 89.463° S, 222.510° E" gold=96 centreBtnDisabled=false latInv=null lonInv=null kept=-89.463163,222.510447
+invalid longitude -361                             readout="Selected 89.463° S, 359.000° E" gold=96 centreBtnDisabled=false latInv=null lonInv=true kept=-89.463163,-361
+valid latitude -90 (pole)                          readout="Selected 90.000° S, 0.000° E" gold=96 centreBtnDisabled=false latInv=null lonInv=null kept=-90,0
+valid latitude 90 (north pole, outside this map)   readout=null gold=0 centreBtnDisabled=true latInv=null lonInv=null kept=90,0
+valid longitude -360                               readout="Selected 85.000° S, 0.000° E" gold=96 centreBtnDisabled=false latInv=null lonInv=null kept=-85,-360
+valid longitude 360                                readout="Selected 85.000° S, 0.000° E" gold=96 centreBtnDisabled=false latInv=null lonInv=null kept=-85,360
+{"console":0,"coverageRequests":["/api/coverage?lat=-89.463163&lon=222.510447","/api/coverage?lat=-89.463163&lon=222.510447","/api/coverage?lat=-89.463163&lon=222.510447","/api/coverage?lat=-89.463163&lon=222.510447","/api/coverage?lat=-89.463163&lon=222.510447","/api/coverage?lat=-90&lon=0","/api/coverage?lat=90&lon=0","/api/coverage?lat=-85&lon=-360","/api/coverage?lat=-85&lon=360"]}

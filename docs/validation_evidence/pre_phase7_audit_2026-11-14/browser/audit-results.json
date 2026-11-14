@@ -1,0 +1,569 @@
+{
+ "results": [
+  {
+   "id": "NAV-01-initial",
+   "area": "navigation",
+   "ok": true,
+   "detail": {
+    "active": "tab-site",
+    "tabs": [
+     "tab-mission:Mission",
+     "tab-site:Site",
+     "tab-landing:Landing",
+     "tab-comms:Communication",
+     "tab-compare:Compare",
+     "tab-data:Data and validation",
+     "tab-guide:Guide"
+    ],
+    "title": "LUNA-OPS: Lunar Landing Site Navigator",
+    "pill": "NAIF kernelsLOLA terrain, 4 products"
+   },
+   "console": []
+  },
+  {
+   "id": "NAV-02-mission",
+   "area": "navigation",
+   "ok": true,
+   "detail": {
+    "active": "tab-mission",
+    "h1": "Mission overview",
+    "textLen": 2537,
+    "h": 1395,
+    "fallback": false
+   },
+   "console": []
+  },
+  {
+   "id": "NAV-02-site",
+   "area": "navigation",
+   "ok": true,
+   "detail": {
+    "active": "tab-site",
+    "h1": "Where does the Sun reach, and where can you see Earth?",
+    "textLen": 1747,
+    "h": 1307,
+    "fallback": false
+   },
+   "console": []
+  },
+  {
+   "id": "NAV-02-landing",
+   "area": "navigation",
+   "ok": true,
+   "detail": {
+    "active": "tab-landing",
+    "h1": "Landing hazard screening",
+    "textLen": 1149,
+    "h": 653,
+    "fallback": false
+   },
+   "console": []
+  },
+  {
+   "id": "NAV-02-comms",
+   "area": "navigation",
+   "ok": true,
+   "detail": {
+    "active": "tab-comms",
+    "h1": "Mission communication simulation",
+    "textLen": 727,
+    "h": 418,
+    "fallback": false
+   },
+   "console": []
+  },
+  {
+   "id": "NAV-02-compare",
+   "area": "navigation",
+   "ok": true,
+   "detail": {
+    "active": "tab-compare",
+    "h1": "Compare sites and dates",
+    "textLen": 361,
+    "h": 377,
+    "fallback": false
+   },
+   "console": []
+  },
+  {
+   "id": "NAV-02-data",
+   "area": "navigation",
+   "ok": true,
+   "detail": {
+    "active": "tab-data",
+    "h1": "Data and validation",
+    "textLen": 34916,
+    "h": 2298,
+    "fallback": false
+   },
+   "console": []
+  },
+  {
+   "id": "NAV-02-guide",
+   "area": "navigation",
+   "ok": true,
+   "detail": {
+    "active": "tab-guide",
+    "h1": "How to read LUNA-OPS",
+    "textLen": 3018,
+    "h": 1645,
+    "fallback": false
+   },
+   "console": []
+  },
+  {
+   "id": "TOP-01-mode-switch",
+   "area": "topbar",
+   "ok": true,
+   "detail": {
+    "pub": "Technical=false Public=true South polar map=true 3D Moon globe=false Local terrain=false",
+    "tech": "Technical=true Public=false South polar map=true 3D Moon globe=false Local terrain=false"
+   },
+   "console": []
+  },
+  {
+   "id": "TOP-02-params-collapse",
+   "area": "topbar",
+   "ok": true,
+   "detail": {
+    "before": "workspace params-docked",
+    "after": "workspace params-collapsed",
+    "back": "workspace params-docked"
+   },
+   "console": []
+  },
+  {
+   "id": "TOP-03-compact-menu-1280",
+   "area": "topbar",
+   "ok": true,
+   "detail": {
+    "open": "true",
+    "afterChoose": "false",
+    "active": "tab-guide",
+    "toggleLabel": "Guide"
+   },
+   "console": []
+  },
+  {
+   "id": "TOP-04-drawer-1024",
+   "area": "topbar",
+   "ok": true,
+   "detail": {
+    "open": "workspace params-open",
+    "closed": "workspace params-closed"
+   },
+   "console": []
+  },
+  {
+   "id": "SITE-01-coordinates-coverage",
+   "area": "site",
+   "ok": true,
+   "detail": {
+    "hint": "Terrain coverage: 5m, 20m, 80m, 240m LOLA levels.",
+    "explorer": "Registered LOLA terrain covers this point: 5m, 20m, 80m, 240m."
+   },
+   "console": []
+  },
+  {
+   "id": "SITE-02-invalid-coordinates",
+   "area": "site",
+   "ok": false,
+   "detail": {
+    "invalid": null,
+    "hint": "Checking terrain coverage.",
+    "runDisabled": true
+   },
+   "console": [
+    {
+     "type": "log-error",
+     "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+    }
+   ]
+  },
+  {
+   "id": "SITE-03-map-controls",
+   "area": "site",
+   "ok": true,
+   "detail": {
+    "scaleStart": "10 km at the map centre",
+    "afterZoomIn": "5 km at the map centre",
+    "afterReset": "200 km at the map centre",
+    "readout": "Pointer 85.704° S, 44.397° E200 km at the map centre"
+   },
+   "console": []
+  },
+  {
+   "id": "SITE-04-map-click-picks-site",
+   "area": "site",
+   "ok": true,
+   "detail": {
+    "before": "-89.463163,222.510447",
+    "after": "-89.423323,123.690068"
+   },
+   "console": []
+  },
+  {
+   "id": "SITE-05-globe-controls",
+   "area": "site",
+   "ok": false,
+   "detail": "ERROR: timeout waiting for globe",
+   "console": []
+  },
+  {
+   "id": "SITE-06-terrain-controls",
+   "area": "site",
+   "ok": true,
+   "detail": {
+    "rotateChanged": true,
+    "zoomChanged": true,
+    "exaggerationOptions": [
+     "2",
+     "4",
+     "8",
+     "16"
+    ],
+    "exaggerationChanged": true,
+    "webglContexts": 1
+   },
+   "console": []
+  },
+  {
+   "id": "RES-01-analysis-runs",
+   "area": "analysis",
+   "ok": true,
+   "detail": {
+    "ms": 2740,
+    "figures": [
+     "Sunlight 100.0%",
+     "Direct-to-Earth 22.4%",
+     "Operational overlap 22.4%",
+     "Power indicator 1.033"
+    ]
+   },
+   "console": []
+  },
+  {
+   "id": "RES-02-figures-match-api",
+   "area": "science",
+   "ok": true,
+   "detail": {
+    "rid": "5703519acbf1e250a1648953",
+    "api": {
+     "sun": "100.0%",
+     "earth": "22.4%",
+     "overlap": "22.4%",
+     "labels": {
+      "disk_visibility": "Pending validation",
+      "events": "Pending validation",
+      "horizon": "Pending validation",
+      "power_indicator": "Pending validation",
+      "sun_earth_azel": "Validated"
+     }
+    },
+    "ui": [
+     "100.0%",
+     "22.4%",
+     "22.4%",
+     "1.033"
+    ],
+    "badges": [
+     "Disk visibilityPending validation",
+     "EventsPending validation",
+     "Disk visibilityPending validation",
+     "EventsPending validation",
+     "Disk visibilityPending validation",
+     "EventsPending validation",
+     "Power indicatorPending validation"
+    ]
+   },
+   "console": []
+  },
+  {
+   "id": "RES-03-time-bar-and-events",
+   "area": "analysis",
+   "ok": true,
+   "detail": {
+    "t0": "13 Dec 2026, 00:00 UTC",
+    "next": "clicked",
+    "t1": "17 Dec 2026, 14:00 UTC",
+    "prev": "disabled",
+    "t2": "17 Dec 2026, 14:00 UTC",
+    "events": 3,
+    "eventClickTime": "18 Dec 2026, 10:30 UTC",
+    "playing": "Pause animation",
+    "timeWhilePlaying": "18 Dec 2026, 15:30 UTC",
+    "paused": "Play animation"
+   },
+   "console": []
+  },
+  {
+   "id": "RES-04-tables-toggles",
+   "area": "analysis",
+   "ok": true,
+   "detail": {
+    "before": [
+     "false",
+     "false",
+     "false"
+    ],
+    "after": [
+     "true",
+     "true",
+     "true"
+    ],
+    "tableRows": [
+     5,
+     3,
+     338
+    ]
+   },
+   "console": []
+  },
+  {
+   "id": "RES-05-chart-click-moves-cursor",
+   "area": "analysis",
+   "ok": true,
+   "detail": {
+    "before": "18 Dec 2026, 15:30 UTC",
+    "after": "17 Dec 2026, 20:00 UTC",
+    "charts": 2
+   },
+   "console": []
+  },
+  {
+   "id": "RES-06-public-mode-result",
+   "area": "analysis",
+   "ok": true,
+   "detail": {
+    "techSections": 14,
+    "pub": {
+     "sections": 14,
+     "publicSummary": true,
+     "text": "Site analysisCustom site-89.46316°, 222.51045° E; ground 1944.8 m above 1,737.4 km; 13 Dec 2026, 00:00 UTC to 20 Dec 2026, 00:00 UTCBack to the Moon explorerSeries CSVEvents CSVIntervals CSVFull resul"
+    }
+   },
+   "console": []
+  },
+  {
+   "id": "RES-07-close-and-restore",
+   "area": "analysis",
+   "ok": true,
+   "detail": {
+    "closeBtn": "Back to the Moon explorer",
+    "explorer": true,
+    "restoreBtn": "Return to the result for 89.463° S, 222.510° E",
+    "back": true
+   },
+   "console": []
+  },
+  {
+   "id": "MIS-01-candidates",
+   "area": "mission",
+   "ok": true,
+   "detail": {
+    "cards": 1,
+    "buttons": [
+     "Select(disabled)",
+     "Analyse",
+     "Open result",
+     "Landing safety",
+     "Communication",
+     "Remove"
+    ],
+    "strip": "SPICE kernelsproductionMOON_ME_DE440_ME421LOLA terrain4 productsValidation labels2 validated, 3 pendingCandidate sites1Analyses this session1Comparisonnone yet",
+    "current": "Current analysisCustom site 89.463° S, 222.510° E13 Dec 2026, 00:00 UTC to 20 Dec 2026, 00:00 UTCDisk visibility: Geometric, pending validationEvents: Geometric, pending validationHorizon: Geometric, "
+   },
+   "console": []
+  },
+  {
+   "id": "MIS-02-quick-actions",
+   "area": "mission",
+   "ok": true,
+   "detail": {
+    "actions": [
+     "3D Moon",
+     "South polar map",
+     "Local terrain",
+     "Analysis",
+     "Comparison"
+    ],
+    "out": [
+     {
+      "action": "South polar map",
+      "result": "clicked",
+      "active": "tab-site"
+     },
+     {
+      "action": "Analysis",
+      "result": "clicked",
+      "active": "tab-site"
+     },
+     {
+      "action": "Comparison",
+      "result": "clicked",
+      "active": "tab-compare"
+     }
+    ]
+   },
+   "console": []
+  },
+  {
+   "id": "MIS-03-locator-and-history",
+   "area": "mission",
+   "ok": true,
+   "detail": {
+    "locatorMarks": 1,
+    "history": 1,
+    "h2": 6
+   },
+   "console": []
+  },
+  {
+   "id": "LAND-01-run",
+   "area": "landing",
+   "ok": true,
+   "detail": {
+    "findings": [
+     "Slope: No threshold configured (values shown)",
+     "Roughness: No threshold configured (values shown)",
+     "Elevation range: No threshold configured (values shown)",
+     "Depression candidates: No candidate detected at this resolution",
+     "Obstacles (boulders): Not available - manual review required"
+    ],
+    "status": "Preliminary screening - not part of the validated engine",
+    "disclaimer": "Preliminary screening - not part of the validated engineDEM-based hazard screening for orientation. It does not certify "
+   },
+   "console": []
+  },
+  {
+   "id": "LAND-02-thresholds-and-layers",
+   "area": "landing",
+   "ok": true,
+   "detail": {
+    "slopeStatusWith10deg": "Potential hazard detected",
+    "layers": [
+     "Roughness:clicked:1637970167",
+     "Data coverage:clicked:28552647",
+     "Height uncertainty:clicked:-1149609597",
+     "Elevation:clicked:-1392794043",
+     "Slope above threshold:clicked:-1916777663",
+     "Slope:clicked:1890538753"
+    ]
+   },
+   "console": []
+  },
+  {
+   "id": "LAND-03-footprint-radius-and-candidate",
+   "area": "landing",
+   "ok": true,
+   "detail": {
+    "before": "The footprint is 20.0 pixels across (pixel 5.00 m on the ground).",
+    "after": "The footprint is 60.0 pixels across (pixel 5.00 m on the ground).",
+    "candidateButton": "clicked",
+    "pressed": "true"
+   },
+   "console": []
+  },
+  {
+   "id": "COMM-01-simulation",
+   "area": "comms",
+   "ok": true,
+   "detail": {
+    "labels": [
+     "Earth azimuth and elevationValidated",
+     "Terrain horizonPending validation",
+     "Earth-disk visibilityPending validation",
+     "Visibility eventsPending validation"
+    ],
+    "direct": [
+     "Earth elevation (centre)-2.783°Engine value",
+     "Earth azimuth134.400°Degrees east of north at the site",
+     "Distance to the Earth's centre405251 kmApparent (light time and aberration), from the site",
+     "One-way light time1.352 s",
+     "Clearance above the terrain horizon-7.099°Earth-centre elevation minus the horizon at its azimuth",
+     "Earth geometrically visiblenot visible"
+    ]
+   },
+   "console": []
+  },
+  {
+   "id": "COMM-02-link-tabs-and-relay",
+   "area": "comms",
+   "ok": true,
+   "detail": {
+    "r1": "clicked",
+    "s1": "Lander to relay",
+    "note": "This link's distance comes from a hypothetical relay's orbit, so it is evaluated only when a relay i",
+    "status": "Direct to Earth complete margin 13.98 to 14.71 dB over the window",
+    "relay": [
+     "Lander to relay5 d 8 h233999 to 8133 kmAgainst the site's terrain horizon and the lunar sphere; unknown 0.0% of samples; highest elevation 54.5°",
+     "Relay to Earth6 d 19 h7373425 to 409909 kmLine from the relay to the Earth's centre clears the lunar sphere (plus the grazing altitude)",
+     "Both legs5 d 8 h23n/aRelay-assisted contact needs both legs at once; longest gap 2 h 49 min"
+    ]
+   },
+   "console": []
+  },
+  {
+   "id": "CMP-01-run-comparison",
+   "area": "compare",
+   "ok": false,
+   "detail": "ERROR: timeout waiting for coverage 2",
+   "console": []
+  },
+  {
+   "id": "DATA-01-tables",
+   "area": "data",
+   "ok": true,
+   "detail": {
+    "tables": [
+     7,
+     4,
+     424,
+     5,
+     6
+    ],
+    "headings": [
+     "SPICE kernels",
+     "Terrain",
+     "Validation report",
+     "Result labels now in force",
+     "Sources and attribution"
+    ]
+   },
+   "console": []
+  },
+  {
+   "id": "GUIDE-01-render",
+   "area": "guide",
+   "ok": true,
+   "detail": {
+    "headings": 6,
+    "links": 0
+   },
+   "console": []
+  },
+  {
+   "id": "SESS-01-reload-keeps-history",
+   "area": "session",
+   "ok": true,
+   "detail": {
+    "before": 1,
+    "after": 1,
+    "stored": {
+     "code": "84cbd4ea34f6606a",
+     "items": 1
+    },
+    "note": "comparison sites, landing and comms results are kept in memory only (not restored after reload, by design)"
+   },
+   "console": []
+  }
+ ],
+ "net": [
+  {
+   "step": "SITE-02-invalid-coordinates",
+   "status": 422,
+   "url": "http://127.0.0.1:8000/api/coverage?lat=-95&lon=222.510447"
+  }
+ ],
+ "layout": {}
+}

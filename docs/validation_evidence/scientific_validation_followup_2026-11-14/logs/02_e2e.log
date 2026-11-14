@@ -1,0 +1,9 @@
+{"id":"E2E-01","result":"Pass","actual":"V-09 row found true, V-10 row found true, blockers mention different code true, labels 5 all pending true"}
+{"id":"E2E-02","result":"Pass","actual":"UI unknown 140 h vs backend 140.06 h; hatched rects 1; analysis 42 s"}
+{"id":"E2E-03","result":"Pass","actual":"intervals identical to pre-fix: true; UI 55.5% vs backend 55.54 %; analysis 17 s"}
+{"id":"E2E-06","result":"Pass","actual":"vertical UI 0.539 vs 0.5386; horizontal UI 0.014 vs 0.0139; watt claim false"}
+{"id":"E2E-07","result":"Fail","actual":"lat flagged true, analyse disabled true; window: analyse disabled false api 200; panel az 400 api 200; unknown panel api 422"}
+{"id":"E2E-04","result":"Pass","actual":"UI 75.7% vs backend 75.70 %; f samples partial 266 full 964 none 212; any 614.08 h centre 545.02 h; 15 s"}
+{"id":"E2E-05","result":"Pass","actual":"UI 0.0% vs backend 0.00 %; f samples partial 0 full 0 none 1442; any 0.00 h centre 0.00 h; 12 s"}
+{"summary":[["E2E-01","Pass"],["E2E-02","Pass"],["E2E-03","Pass"],["E2E-06","Pass"],["E2E-07","Fail"],["E2E-04","Pass"],["E2E-05","Pass"]],"console":1}
+exit 0

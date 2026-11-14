@@ -1,0 +1,3 @@
+V-02a frame MOON_ME_DE440_ME421 id 31009 frinfo (301, 4, 31009) pa_frame MOON_PA_DE440
+V-02b PA->ME angle 0.028863 deg (rule |ang-0.02886|<5e-5) orthonormality err 2.2e-16 det-1 2.2e-16
+kernel coverage ('1849-12-25T23:59:19', '2150-01-21T23:58:51') de421_available True

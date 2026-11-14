@@ -1,0 +1,313 @@
+{
+  "tests": {
+    "V-14": {
+      "status": "passed",
+      "detail": "full V-14: 29.5306 days x 3 site(s), 1 s brute force; 955 required window edges, 0 missed, 0 beyond 1.0 s, 0 spurious; worst offset 0.5 s"
+    }
+  },
+  "parameters": {
+    "start": "2026-11-14T00:00:00Z",
+    "days": 29.530589,
+    "sites": [
+      [
+        -89.5,
+        0.0
+      ],
+      [
+        -88.0,
+        120.0
+      ],
+      [
+        -86.5,
+        250.0
+      ]
+    ],
+    "match_s": 3.0,
+    "tolerance_s": 1.0,
+    "min_window_s": 2.0
+  },
+  "algorithm_version": "1.5.0",
+  "totals": {
+    "required_edges": 955,
+    "missed": 0,
+    "over_tolerance": 0,
+    "spurious": 0,
+    "worst_offset_s": 0.5,
+    "detector_events": 955,
+    "estimate_failures": 33
+  },
+  "sites": [
+    {
+      "site": [
+        -89.5,
+        0.0
+      ],
+      "days": 29.530589,
+      "functions": {
+        "sun_c": {
+          "reference_crossings": 286,
+          "required_edges": 286,
+          "detector_events": 286,
+          "missed": 0,
+          "worst_offset_s": 0.5,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_top": {
+          "reference_crossings": 240,
+          "required_edges": 240,
+          "detector_events": 240,
+          "missed": 0,
+          "worst_offset_s": 0.4998,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_bot": {
+          "reference_crossings": 128,
+          "required_edges": 128,
+          "detector_events": 128,
+          "missed": 0,
+          "worst_offset_s": 0.4999,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_c": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.3009,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_top": {
+          "reference_crossings": 3,
+          "required_edges": 3,
+          "detector_events": 3,
+          "missed": 0,
+          "worst_offset_s": 0.4205,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_bot": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.1912,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        }
+      },
+      "adaptive_samples": 32621,
+      "estimate_failures": 11,
+      "adaptive_s": 28.3,
+      "brute_force_s": 84.6
+    },
+    {
+      "site": [
+        -88.0,
+        120.0
+      ],
+      "days": 29.530589,
+      "functions": {
+        "sun_c": {
+          "reference_crossings": 72,
+          "required_edges": 72,
+          "detector_events": 72,
+          "missed": 0,
+          "worst_offset_s": 0.5,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_top": {
+          "reference_crossings": 50,
+          "required_edges": 50,
+          "detector_events": 50,
+          "missed": 0,
+          "worst_offset_s": 0.4997,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_bot": {
+          "reference_crossings": 54,
+          "required_edges": 54,
+          "detector_events": 54,
+          "missed": 0,
+          "worst_offset_s": 0.4999,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_c": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.2317,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_top": {
+          "reference_crossings": 3,
+          "required_edges": 3,
+          "detector_events": 3,
+          "missed": 0,
+          "worst_offset_s": 0.4763,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_bot": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.3348,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        }
+      },
+      "adaptive_samples": 15424,
+      "estimate_failures": 11,
+      "adaptive_s": 13.7,
+      "brute_force_s": 86.1
+    },
+    {
+      "site": [
+        -86.5,
+        250.0
+      ],
+      "days": 29.530589,
+      "functions": {
+        "sun_c": {
+          "reference_crossings": 34,
+          "required_edges": 34,
+          "detector_events": 34,
+          "missed": 0,
+          "worst_offset_s": 0.5,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_top": {
+          "reference_crossings": 38,
+          "required_edges": 38,
+          "detector_events": 38,
+          "missed": 0,
+          "worst_offset_s": 0.4998,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "sun_bot": {
+          "reference_crossings": 32,
+          "required_edges": 32,
+          "detector_events": 32,
+          "missed": 0,
+          "worst_offset_s": 0.4984,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_c": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.2843,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_top": {
+          "reference_crossings": 3,
+          "required_edges": 3,
+          "detector_events": 3,
+          "missed": 0,
+          "worst_offset_s": 0.4932,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        },
+        "earth_bot": {
+          "reference_crossings": 2,
+          "required_edges": 2,
+          "detector_events": 2,
+          "missed": 0,
+          "worst_offset_s": 0.4223,
+          "over_tolerance": 0,
+          "unmatched_confirmed": 0,
+          "spurious": 0,
+          "missed_examples": [],
+          "spurious_examples": []
+        }
+      },
+      "adaptive_samples": 11852,
+      "estimate_failures": 11,
+      "adaptive_s": 11.0,
+      "brute_force_s": 175.0
+    }
+  ],
+  "meta": {
+    "script": "v14_month",
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "kernels": [
+      "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+      "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+      "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+      "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+      "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+      "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+      "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    ],
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-11T16:34:11Z"
+  }
+}

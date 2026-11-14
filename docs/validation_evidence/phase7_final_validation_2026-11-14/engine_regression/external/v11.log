@@ -1,0 +1,8 @@
+# ./.venv/Scripts/python.exe -m validation.v11_psr --lpsr ../data/reference_validation/LPSR_80S_20MPP_ADJ.TIF --out ../docs/validation_evidence/phase7_final_validation_2026-11-14/engine_regression/external/v11.json (start 2026-11-14T04:31:24Z; fingerprints 9cd7b08b36ba6be4fe0e623ff0a8b04da4dae15b1f9867e496927ff945dd73c8 70606628abed3fdee2704e0b8e2891f648da27266b04791d7690531a517cd546)
+{
+  "V-11": {
+    "status": "passed",
+    "detail": "200/200 formal points dark with a complete horizon (100.0%; criterion >= 99%), 0 lit, 0 inconclusive (incomplete terrain coverage: not scored, never counted as dark)"
+  }
+}
+# exit 0; wall time 942 s (end 2026-11-14T04:47:06Z)

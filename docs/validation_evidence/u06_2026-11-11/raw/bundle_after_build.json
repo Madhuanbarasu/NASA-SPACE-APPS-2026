@@ -1,0 +1,90 @@
+{
+  "entry": "assets/index-P4Z6nxS-.js",
+  "preloads": [],
+  "files": [
+    {
+      "file": "assets/archivo-latin-ext-wdth-normal-7khWdh9v.woff2",
+      "initial": false,
+      "type": "woff2",
+      "raw": 86240,
+      "gzip": 86288,
+      "brotli": 86245,
+      "libraries": []
+    },
+    {
+      "file": "assets/archivo-latin-wdth-normal-DY7AcnAa.woff2",
+      "initial": false,
+      "type": "woff2",
+      "raw": 90104,
+      "gzip": 90152,
+      "brotli": 90109,
+      "libraries": []
+    },
+    {
+      "file": "assets/archivo-vietnamese-wdth-normal-rJmnGBSt.woff2",
+      "initial": false,
+      "type": "woff2",
+      "raw": 34464,
+      "gzip": 34497,
+      "brotli": 34468,
+      "libraries": []
+    },
+    {
+      "file": "assets/index-Dj8BEKWr.css",
+      "initial": false,
+      "type": "css",
+      "raw": 20862,
+      "gzip": 5318,
+      "brotli": 4681,
+      "libraries": []
+    },
+    {
+      "file": "assets/index-P4Z6nxS-.js",
+      "initial": true,
+      "type": "js",
+      "raw": 295512,
+      "gzip": 93473,
+      "brotli": 81775,
+      "libraries": []
+    },
+    {
+      "file": "assets/MapView-DaxEmyac.js",
+      "initial": false,
+      "type": "js",
+      "raw": 456582,
+      "gzip": 139288,
+      "brotli": 118268,
+      "libraries": [
+        "OpenLayers"
+      ]
+    },
+    {
+      "file": "assets/Terrain3D-eqvmoVX6.js",
+      "initial": false,
+      "type": "js",
+      "raw": 492225,
+      "gzip": 123699,
+      "brotli": 102042,
+      "libraries": [
+        "three.js"
+      ]
+    }
+  ],
+  "initialJs": {
+    "files": 1,
+    "raw": 295512,
+    "gzip": 93473,
+    "brotli": 81775
+  },
+  "lazyJs": {
+    "files": 2,
+    "raw": 948807,
+    "gzip": 262987
+  },
+  "totalJs": {
+    "raw": 1244319,
+    "gzip": 356460
+  },
+  "sizeLimit": null,
+  "problems": []
+}

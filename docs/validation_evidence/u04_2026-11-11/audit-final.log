@@ -1,0 +1,45 @@
+┌─────────┬─────────────────────────┬───────────┬─────────────────┬──────────────┬────────────┬──────────┬──────────────────┬──────────────┬──────────┬───────────────┬─────────────────┬────────────────┬───────────┬────────┬─────────────────┐
+│ (index) │ view                    │ axUnnamed │ focusableNoRole │ contrastFail │ targetFail │ tabStops │ noFocusIndicator │ focusClipped │ obscured │ reflowHScroll │ reflowOffenders │ spacingClipped │ unlabeled │ dupIds │ roleApplication │
+├─────────┼─────────────────────────┼───────────┼─────────────────┼──────────────┼────────────┼──────────┼──────────────────┼──────────────┼──────────┼───────────────┼─────────────────┼────────────────┼───────────┼────────┼─────────────────┤
+│ 0       │ 'site-welcome'          │ 0         │ 0               │ 0            │ 0          │ 31       │ 2                │ 0            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 1       │ 'site-result-technical' │ 0         │ 0               │ 0            │ 0          │ 43       │ 2                │ 2            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 2       │ 'site-result-public'    │ 0         │ 0               │ 0            │ 0          │ '-'      │ '-'              │ '-'          │ '-'      │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 3       │ 'compare-matrix'        │ 0         │ 0               │ 0            │ 0          │ 76       │ 6                │ 1            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 4       │ 'data'                  │ 0         │ 0               │ 0            │ 0          │ 34       │ 2                │ 1            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+│ 5       │ 'guide'                 │ 0         │ 0               │ 0            │ 0          │ 33       │ 2                │ 1            │ 0        │ false         │ 0               │ 0              │ 0         │ 0      │ 0               │
+└─────────┴─────────────────────────┴───────────┴─────────────────┴──────────────┴────────────┴──────────┴──────────────────┴──────────────┴──────────┴───────────────┴─────────────────┴────────────────┴───────────┴────────┴─────────────────┘
+{
+ "skipLink": {
+  "firstTabStop": "a.skip-link \"Skip to main content\"",
+  "afterEnter": "main"
+ },
+ "tabsArrowKeys": {
+  "afterRight": {
+   "selected": "Compare",
+   "focused": "Compare",
+   "tabStops": 1
+  },
+  "afterLeft": "Site"
+ },
+ "invalidCoordinates": {
+  "hint": "Latitude and longitude must be numbers in degrees, for example -89.5 and 222.5.",
+  "latInvalid": "true",
+  "describedBy": "coord-hint",
+  "runDisabled": true
+ },
+ "slider": {
+  "valuenow": "0",
+  "valuetext": "14 Nov 2026, 00:00 UTC"
+ },
+ "readoutLive": "polite",
+ "panoramaHoverEscape": {
+  "shown": true,
+  "afterEscape": false
+ },
+ "readoutLiveWhilePlaying": "off",
+ "matrixCellSpace": "Site",
+ "matrixCellEnter": "Site",
+ "reducedMotionTransition": "0s",
+ "mobileSite": "screenshots/final-mobile-390-site.png"
+}
+exit=0

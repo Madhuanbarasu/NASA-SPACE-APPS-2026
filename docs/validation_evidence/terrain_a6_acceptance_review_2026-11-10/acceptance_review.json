@@ -1,0 +1,115 @@
+{
+  "timestamp_utc": "2026-11-10T16:45:00Z",
+  "algorithm_version": "1.5.0",
+  "review_type": "READ-ONLY SCIENTIFIC ACCEPTANCE REVIEW",
+  "evidence_sources": [
+    "docs/validation_evidence/terrain_a6_2026-11-10/",
+    "docs/validation_evidence/terrain_a6_240m_2026-11-10/",
+    "docs/validation_evidence/terrain_a6_polar_wide_240m_2026-11-10/",
+    "docs/validation_evidence/terrain_a6_polar_wide_corrected_2026-11-10/"
+  ],
+  "pair_evaluations": {
+    "5m_vs_20m": {
+      "pair": "5m / 20m",
+      "evaluated_domain": "Site01 Footprint (16 km x 16 km)",
+      "valid_sample_count": 40000,
+      "mean_bias_m": -0.0629,
+      "population_std_m": 0.5230,
+      "rms_discrepancy_m": 0.5267,
+      "annulus_4_8km": {
+        "n": 376986,
+        "mean_bias_m": -0.0642,
+        "rms_m": 0.4004
+      },
+      "recommendation": "ACCEPT",
+      "justification": "Satisfies all numerical, structural, and integration assertions; reduces transition uncertainty by >56.9% over 80m."
+    },
+    "5m_vs_80m": {
+      "pair": "5m / 80m",
+      "evaluated_domain": "Site01 Footprint (16 km x 16 km)",
+      "valid_sample_count": 40000,
+      "mean_bias_m": -0.0532,
+      "population_std_m": 1.2227,
+      "rms_discrepancy_m": 1.2239,
+      "annulus_4_8km": {
+        "n": 23572,
+        "mean_bias_m": -0.0727,
+        "rms_m": 1.1971
+      },
+      "recommendation": "ACCEPT",
+      "justification": "Fully satisfies approved baseline criteria established in Phase 2/3 and verified in PR #12."
+    },
+    "20m_vs_80m": {
+      "pair": "20m / 80m",
+      "evaluated_domain": "Polar Disk (80S-90S, r <= 304 km)",
+      "valid_sample_count": 113373,
+      "mean_bias_m": 0.0020,
+      "population_std_m": 0.5785,
+      "rms_discrepancy_m": 0.5785,
+      "site01_window": {
+        "n": 27889,
+        "mean_bias_m": -0.0251,
+        "rms_m": 1.1054
+      },
+      "recommendation": "ACCEPT",
+      "justification": "Outstanding polar-wide geodetic agreement (2 mm mean bias, 0.58 m RMS across 113,373 points)."
+    },
+    "5m_vs_240m": {
+      "pair": "5m / 240m",
+      "evaluated_domain": "Site01 Footprint (16 km x 16 km)",
+      "valid_sample_count": 4489,
+      "mean_bias_m": 0.1504,
+      "population_std_m": 4.3110,
+      "rms_discrepancy_m": 4.3136,
+      "annulus_4_8km": {
+        "n": 2617,
+        "mean_bias_m": 0.0130,
+        "rms_m": 4.3247
+      },
+      "recommendation": "ACCEPT",
+      "justification": "Sub-decimetre annulus bias (+0.013 m); safe conservative transition bound (sx = 4.314 m); clean bilinear interpolation."
+    },
+    "20m_vs_240m": {
+      "pair": "20m / 240m",
+      "evaluated_domain": "Polar Disk (80S-90S, r <= 304 km)",
+      "valid_sample_count": 113373,
+      "mean_bias_m": 0.0112,
+      "population_std_m": 3.1323,
+      "rms_discrepancy_m": 3.1323,
+      "benchmark_site01": {
+        "n": 27889,
+        "mean_bias_m": -0.0307,
+        "rms_m": 2.7354
+      },
+      "recommendation": "ACCEPT",
+      "justification": "Sub-2 cm mean bias across 113,373 polar points; consistent behavior across all 8 benchmarks; dispersion reflects legitimate sensor smoothing across 144x area ratio."
+    },
+    "80m_vs_240m": {
+      "pair": "80m / 240m",
+      "evaluated_domain": "Polar Disk (80S-90S, r <= 304 km)",
+      "valid_sample_count": 113373,
+      "mean_bias_m": 0.0092,
+      "population_std_m": 2.9341,
+      "rms_discrepancy_m": 2.9341,
+      "benchmark_site01": {
+        "n": 36100,
+        "mean_bias_m": -0.0000,
+        "rms_m": 2.6199
+      },
+      "recommendation": "ACCEPT",
+      "justification": "Near-zero mean bias (+0.0092 m) and tight dispersion (2.93 m RMS) across 113,373 polar points; 100% finite data coverage."
+    }
+  },
+  "overall_summary": {
+    "total_pairs_evaluated": 6,
+    "recommended_accept": 6,
+    "recommended_reject": 0,
+    "recommended_pending": 0
+  },
+  "missing_administrative_steps": [
+    "Update formal acceptance record (terrain_acceptance.json) with 240m SHA-256 hashes and accepted allowances for all 6 pairs.",
+    "Add integration test assertions for the three 240m pairs to backend/tests/test_pgda90_integration.py.",
+    "Obtain formal user/lead scientist approval and authorization before mutating the acceptance gate."
+  ]
+}
+

@@ -1,0 +1,40 @@
+{
+  "note": "In-memory dry run of validation.common.merge_external against the live report.json tests; nothing written to report.json. V-05 would be merged as passed by the unapproved 1.0 s threshold, so horizons.json must not be merged until a V-05 criterion is approved.",
+  "now": {
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce"
+  },
+  "results": {
+    "v04_horizons/horizons.json": {
+      "rejected_reasons": [],
+      "would_become": {
+        "V-04": "passed",
+        "V-05": "passed"
+      },
+      "currently": {
+        "V-04": "not run",
+        "V-05": "not run"
+      }
+    },
+    "v13_eclipse/v13.json": {
+      "rejected_reasons": [],
+      "would_become": {
+        "V-13": "passed"
+      },
+      "currently": {
+        "V-13": "not run"
+      }
+    },
+    "v14_month/v14.json": {
+      "rejected_reasons": [],
+      "would_become": {
+        "V-14": "passed"
+      },
+      "currently": {
+        "V-14": "passed"
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "report_before_sha256": "5135efe88e5feb0fd36e0230ecba9f2d2b99322a70e1e69e822e13def69df53f",
+  "now": {
+    "code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-12T16:42:45Z"
+  },
+  "all_eight_pass_merge_guard": true,
+  "combined_rejections": {},
+  "candidates": {
+    "horizons.json": {
+      "path": "docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12/validation/v04_horizons/horizons.json",
+      "sha256": "cdd023498603951f430386d53da51d6691eee3a2bb7206e23d9a8ce95fead2ea",
+      "script": "horizons_compare",
+      "owned_tests": [
+        "V-04",
+        "V-05"
+      ],
+      "rejections": [],
+      "allowed": true
+    },
+    "v09_v10.json": {
+      "path": "docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12/validation/v09_v10.json",
+      "sha256": "6a0cd6f4618ef45e0cf04713b5c3ac0832101b1edd340bca84c528d385dfb3cb",
+      "script": "v09_v10_avgvisib",
+      "owned_tests": [
+        "V-09",
+        "V-10"
+      ],
+      "rejections": [],
+      "allowed": true
+    },
+    "v11.json": {
+      "path": "docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12/validation/v11.json",
+      "sha256": "b113fe154a3d50a8521da69a14e6bd82841f52b5e42d15aa2be73b789e93380d",
+      "script": "v11_psr",
+      "owned_tests": [
+        "V-11"
+      ],
+      "rejections": [],
+      "allowed": true
+    },
+    "v12.json": {
+      "path": "docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12/validation/v12.json",
+      "sha256": "fd4ee5b7c6cd6c7903090ec36e799806dfc514af67aaeb8dd924853c34203f36",
+      "script": "v12_lroc",
+      "owned_tests": [
+        "V-12"
+      ],
+      "rejections": [],
+      "allowed": true
+    },
+    "v13.json": {
+      "path": "docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12/validation/v13.json",
+      "sha256": "697e8037c8441b67c78982f2b224d5a6332764fa7101677d1a90832fd0cda44d",
+      "script": "v13_eclipse",
+      "owned_tests": [
+        "V-13"
+      ],
+      "rejections": [],
+      "allowed": true
+    },
+    "v14.json": {
+      "path": "docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12/validation/v14.json",
+      "sha256": "bfaf3f0b72afacf3481a2d57bc3b8b94b4bf7d2cc16aaff86a9f7edc7dd301e5",
+      "script": "v14_month",
+      "owned_tests": [
+        "V-14"
+      ],
+      "rejections": [],
+      "allowed": true
+    },
+    "frontend_u04.json": {
+      "path": "docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12/frontend_u04.json",
+      "sha256": "400314ac85fc3d63978ddfe874c2168f68ec27c7669445a490f38bb42ed45994",
+      "script": "frontend_u04",
+      "owned_tests": [
+        "U-04"
+      ],
+      "rejections": [],
+      "allowed": true
+    },
+    "frontend_u06.json": {
+      "path": "docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12/frontend_u06.json",
+      "sha256": "c13b480eefcef37f15613ccca133181a859f7fd2f0031beb1e8fdadd291e4c98",
+      "script": "frontend_u06",
+      "owned_tests": [
+        "U-06"
+      ],
+      "rejections": [],
+      "allowed": true
+    }
+  }
+}

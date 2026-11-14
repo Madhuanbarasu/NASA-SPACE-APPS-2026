@@ -1,0 +1,24 @@
+--- before/frontend/src/components/Sidebar.tsx
++++ after/frontend/src/components/Sidebar.tsx
+@@ -180,8 +180,10 @@
+         {s.panel === "fixed_vertical" && (
+           <div className="field">
+             <label htmlFor="paz">{T.panelAzimuth}</label>
+-            <input id="paz" type="number" min={0} max={360} step={1} value={s.panelAz}
++            {/* no min/max: any finite azimuth is accepted and normalised modulo 360 deg (store requestBody, lon360) */}
++            <input id="paz" type="number" step={1} value={s.panelAz} aria-describedby="paz-hint"
+                    onChange={(e) => set({ panelAz: Number(e.target.value) })} />
++            <p id="paz-hint" className="hint">{T.panelAzimuthHint}</p>
+             {Number.isFinite(azUsed) && azUsed !== s.panelAz && <p className="hint">{T.panelAzimuthNormalized(azUsed)}</p>}
+           </div>
+         )}
+--- before/frontend/src/i18n/en.ts
++++ after/frontend/src/i18n/en.ts
+@@ -193,6 +193,7 @@
+     referencePanel: "Reference panel",
+     panelAzimuth: "Panel facing azimuth (°)",
+     panelHint: "A relative estimate of available sunlight, not electrical output.",
++    panelAzimuthHint: "Azimuth in degrees; values are normalized modulo 360° (400° → 40°).",
+     panelAzimuthNormalized: (deg: number) => `Azimuths are taken modulo 360°: this value is used as ${deg}°.`,
+     invalidWindow: "The end must be after the start (UTC). Analyse is disabled until it is.",
+     analysing: "Analysing",

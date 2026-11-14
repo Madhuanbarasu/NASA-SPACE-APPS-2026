@@ -1,0 +1,8 @@
+U-06 (D3 criteria) on the final Phase 5 build; baseline = accepted 2026-11-11 final U-06 build
+native           LCP worst 540 ms (baseline 192) met | CLS worst 0 (baseline 0) met | p95 56 ms over 16 (baseline 32) NOT MET | memory met {'heapGrowthMB': (0.3, 1.3), 'nodeGrowth': (5, 55), 'listenerGrowth': (5, 15), 'newConsoleWarnings': 0} | TBT cold/warm 0/0 ms (info; baseline 0/0)
+   Phase 5 supplement: Mission tab 38 ms; globe canvas 250.8 ms, imagery 250.1 ms (556.7 KB); terrain canvas 100.4 ms, data 328.6 ms; key p95 globe 40 / terrain 24 ms (n = 7/4 events >= 16 ms); remount globe ok {'heapGrowthMB': (0.8, 1.3), 'nodeGrowth': (25, 55), 'listenerGrowth': (5, 15), 'newConsoleWarnings': 0}, terrain ok {'heapGrowthMB': (0.2, 1.3), 'nodeGrowth': (5, 55), 'listenerGrowth': (5, 15), 'newConsoleWarnings': 0}
+cpu4x            LCP worst 1728 ms (baseline 632) met | CLS worst 0 (baseline 0) met | p95 88 ms over 20 (baseline 40) met | TBT cold/warm 510/601.5 ms (info; baseline 410/248.5)
+   Phase 5 supplement: Mission tab 155.2 ms; globe canvas 873.9 ms, imagery 302.1 ms (556.7 KB); terrain canvas 185.7 ms, data 255.1 ms; key p95 globe 64 / terrain 40 ms (n = 10/8 events >= 16 ms); remount globe ok {'heapGrowthMB': (0.7, 1.3), 'nodeGrowth': (25, 55), 'listenerGrowth': (5, 15), 'newConsoleWarnings': 0}, terrain ok {'heapGrowthMB': (0.2, 1.3), 'nodeGrowth': (5, 55), 'listenerGrowth': (5, 15), 'newConsoleWarnings': 0}
+cpu4x-net10mbps  LCP worst 1332 ms (baseline 1044) met | CLS worst 0 (baseline 0) met | interaction: not measured (as in D3) | TBT cold/warm 417/543.5 ms (info; baseline 214/281.5)
+U-06 D3 CRITERIA NOT MET (see above)
+exit 1

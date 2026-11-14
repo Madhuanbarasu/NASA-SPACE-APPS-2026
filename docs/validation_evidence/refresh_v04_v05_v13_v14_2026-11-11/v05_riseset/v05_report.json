@@ -1,0 +1,732 @@
+{
+  "test": "V-05",
+  "formal_status": "PROVISIONAL",
+  "formal_status_reason": "event sets agree (0 missed, 0 spurious); the timing differences cannot be judged PASS/FAIL because the proposed 1.0 s V-05 threshold is not approved",
+  "approval": {
+    "proposed_threshold_s": 1.0,
+    "approved": false,
+    "note": "The 1.0 s threshold (EVENT_TOL_S) was proposed in A9 because the blueprint's V-05 criterion text was unavailable. It has not been formally approved (instruction of 2026-11-11), so V-05 is not marked PASS."
+  },
+  "script_mechanical_evaluation": {
+    "status": "passed",
+    "detail": "18 matched centre crossings, 0 missed, 0 spurious; max |t_LUNA - t_Horizons| 0.500 s (tolerance 1.0 s); kernel profile production",
+    "note": "written by horizons_compare.py against the unapproved proposed threshold; not the formal result"
+  },
+  "summary": {
+    "n_matched": 18,
+    "n_missed": 0,
+    "n_spurious": 0,
+    "max_abs_dt_s": 0.4999523162841797,
+    "mean_dt_s": 0.2906475133366055,
+    "median_abs_dt_s": 0.3389323353767395,
+    "min_dt_s": -0.1093369722366333,
+    "max_dt_s": 0.4999523162841797,
+    "n_within_proposed_threshold": 18,
+    "n_within_detector_half_bracket_0p5s": 18
+  },
+  "window": {
+    "start_tt": "2026-11-14 00:00",
+    "stop_tt": "2026-12-14 00:00"
+  },
+  "sites_deg": [
+    {
+      "label": "south-polar A",
+      "lat": -89.5,
+      "lon": 0.0,
+      "height_km": 0.0
+    },
+    {
+      "label": "south-polar B",
+      "lat": -86.0,
+      "lon": 210.0,
+      "height_km": 0.0
+    },
+    {
+      "label": "north-polar",
+      "lat": 87.0,
+      "lon": 30.0,
+      "height_km": 0.0
+    },
+    {
+      "label": "nearside equatorial",
+      "lat": 0.0,
+      "lon": 0.0,
+      "height_km": 0.0
+    },
+    {
+      "label": "limb",
+      "lat": 0.0,
+      "lon": 90.0,
+      "height_km": 0.0
+    },
+    {
+      "label": "farside",
+      "lat": 0.0,
+      "lon": 180.0,
+      "height_km": 0.0
+    }
+  ],
+  "bodies": [
+    "sun (Horizons 10)",
+    "earth (Horizons 399; not at the farside site)"
+  ],
+  "event_definition": "centre of the Sun / Earth crosses an ideal flat 0 deg horizon (no terrain, no refraction)",
+  "search_steps": {
+    "reference_horizons": {
+      "stage_1": "hourly Horizons elevations (the V-04 tables, STEP_SIZE=1h); a sign change brackets a crossing",
+      "stage_2": "Horizons table over the bracketing hour at 1-minute steps (STEP_SIZE=60 i.e. 60 intervals)",
+      "stage_3": "Horizons table over the bracketing minute at 1-second steps, TIME_DIGITS=FRACSEC",
+      "interpolation": "linear between the two 1-s samples that bracket 0 deg",
+      "confirmation": "an unmatched detector event triggers a +-30 min, 1-minute Horizons table and the same refinement (double crossing inside one hour)",
+      "time_scale": "TT tags from Horizons converted to ET with SPICE (TDT)"
+    },
+    "luna_ops_detector": {
+      "engine": "lunaops.engine.events.EventDetector, functions sun_c / earth_c",
+      "step_cap_s": 600.0,
+      "step_floor_s": 1.0,
+      "bisection_tolerance_s": 1.0,
+      "reported_time": "midpoint of the final bisection bracket, so its resolution limit is +-0.5 s"
+    },
+    "matching": {
+      "same_body_and_direction": true,
+      "window_s": 600.0
+    }
+  },
+  "events": [
+    {
+      "site": "south-polar A",
+      "body": "earth",
+      "direction": 1,
+      "t_horizons_utc": "2026-11-17T08:05:50.798",
+      "et_horizons": 848174819.980829,
+      "et_luna": 848174819.8807886,
+      "dt_s": -0.10004043579101562,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "south-polar A",
+      "body": "earth",
+      "direction": -1,
+      "t_horizons_utc": "2026-11-30T06:58:22.895",
+      "et_horizons": 849293972.0779469,
+      "et_luna": 849293972.0245267,
+      "dt_s": -0.053420186042785645,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "south-polar B",
+      "body": "sun",
+      "direction": -1,
+      "t_horizons_utc": "2026-11-16T10:01:31.984",
+      "et_horizons": 848095361.1667638,
+      "et_luna": 848095361.6667161,
+      "dt_s": 0.4999523162841797,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "south-polar B",
+      "body": "sun",
+      "direction": 1,
+      "t_horizons_utc": "2026-11-27T13:17:29.463",
+      "et_horizons": 849057518.6457424,
+      "et_luna": 849057519.094018,
+      "dt_s": 0.4482755661010742,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "south-polar B",
+      "body": "earth",
+      "direction": 1,
+      "t_horizons_utc": "2026-11-20T00:17:07.595",
+      "et_horizons": 848405896.7774532,
+      "et_luna": 848405896.8839257,
+      "dt_s": 0.10647249221801758,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "south-polar B",
+      "body": "earth",
+      "direction": -1,
+      "t_horizons_utc": "2026-11-27T15:54:06.267",
+      "et_horizons": 849066915.4499408,
+      "et_luna": 849066915.779447,
+      "dt_s": 0.32950615882873535,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "north-polar",
+      "body": "sun",
+      "direction": 1,
+      "t_horizons_utc": "2026-11-17T02:29:16.343",
+      "et_horizons": 848154625.5261002,
+      "et_luna": 848154625.9726692,
+      "dt_s": 0.4465690851211548,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "north-polar",
+      "body": "sun",
+      "direction": -1,
+      "t_horizons_utc": "2026-11-26T21:14:36.289",
+      "et_horizons": 848999745.4719791,
+      "et_luna": 848999745.9233596,
+      "dt_s": 0.45138049125671387,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "north-polar",
+      "body": "earth",
+      "direction": -1,
+      "t_horizons_utc": "2026-11-19T00:54:25.097",
+      "et_horizons": 848321734.27979,
+      "et_luna": 848321734.1704531,
+      "dt_s": -0.1093369722366333,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "north-polar",
+      "body": "earth",
+      "direction": 1,
+      "t_horizons_utc": "2026-11-28T14:53:56.409",
+      "et_horizons": 849149705.5918393,
+      "et_luna": 849149705.896501,
+      "dt_s": 0.3046616315841675,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "nearside equatorial",
+      "body": "sun",
+      "direction": 1,
+      "t_horizons_utc": "2026-11-17T00:09:13.006",
+      "et_horizons": 848146222.1890401,
+      "et_luna": 848146222.687702,
+      "dt_s": 0.4986618757247925,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "nearside equatorial",
+      "body": "sun",
+      "direction": -1,
+      "t_horizons_utc": "2026-12-01T19:51:31.290",
+      "et_horizons": 849426760.4729563,
+      "et_luna": 849426760.9654654,
+      "dt_s": 0.492509126663208,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "limb",
+      "body": "sun",
+      "direction": -1,
+      "t_horizons_utc": "2026-11-24T09:58:20.425",
+      "et_horizons": 848786369.6076518,
+      "et_luna": 848786369.9560103,
+      "dt_s": 0.34835851192474365,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "limb",
+      "body": "sun",
+      "direction": 1,
+      "t_horizons_utc": "2026-12-09T05:09:42.389",
+      "et_horizons": 850065051.5723621,
+      "et_luna": 850065052.0673218,
+      "dt_s": 0.4949597120285034,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "limb",
+      "body": "earth",
+      "direction": 1,
+      "t_horizons_utc": "2026-11-26T00:30:52.948",
+      "et_horizons": 848925122.1304737,
+      "et_luna": 848925122.2728403,
+      "dt_s": 0.14236652851104736,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "limb",
+      "body": "earth",
+      "direction": -1,
+      "t_horizons_utc": "2026-12-10T14:35:10.206",
+      "et_horizons": 850185379.3890411,
+      "et_luna": 850185379.6171483,
+      "dt_s": 0.22810721397399902,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "farside",
+      "body": "sun",
+      "direction": -1,
+      "t_horizons_utc": "2026-11-17T00:09:03.446",
+      "et_horizons": 848146212.6288015,
+      "et_luna": 848146212.8482984,
+      "dt_s": 0.2194969654083252,
+      "ref_bracket_s": 1.0
+    },
+    {
+      "site": "farside",
+      "body": "sun",
+      "direction": 1,
+      "t_horizons_utc": "2026-12-01T19:51:40.882",
+      "et_horizons": 849426770.0651963,
+      "et_luna": 849426770.5483714,
+      "dt_s": 0.4831751585006714,
+      "ref_bracket_s": 1.0
+    }
+  ],
+  "missed": [],
+  "spurious": [],
+  "horizons_responses_by_stage": {
+    "hourly_scan": [
+      {
+        "file": "v04_south-polar_A_sun_hourly.json",
+        "sha256": "49d0c500dda4c1f56e5061c52a4f3e377f108c9ecef9ad91db9b9eb30122fcdb",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'10'",
+        "site_coord": "'0.000000,-89.500000,0.000000'"
+      },
+      {
+        "file": "v04_south-polar_A_earth_hourly.json",
+        "sha256": "14b6d9494ceb711f13dadf213a667b2a60940c5e2fde0f6057215469b0418469",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'399'",
+        "site_coord": "'0.000000,-89.500000,0.000000'"
+      },
+      {
+        "file": "v04_south-polar_B_sun_hourly.json",
+        "sha256": "02bc180a4fa2d4e7da50042b2c3cc7ac81dbd0d4644788f876ec95aa4f3c1ef6",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'10'",
+        "site_coord": "'210.000000,-86.000000,0.000000'"
+      },
+      {
+        "file": "v04_south-polar_B_earth_hourly.json",
+        "sha256": "15e42278ec3cbc3d0f17ed2d57c121d8ed0cca70ef17411a5b9761287c7dd658",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'399'",
+        "site_coord": "'210.000000,-86.000000,0.000000'"
+      },
+      {
+        "file": "v04_north-polar_sun_hourly.json",
+        "sha256": "ed1c32718b0070035cf73967d71f6d6eb6ffc635f9164c919860c9f7e2ca6788",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'10'",
+        "site_coord": "'30.000000,87.000000,0.000000'"
+      },
+      {
+        "file": "v04_north-polar_earth_hourly.json",
+        "sha256": "6867c3f393593d86252a9011c79c6ffeed004827a50bb704b6478d52f01d7b7e",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'399'",
+        "site_coord": "'30.000000,87.000000,0.000000'"
+      },
+      {
+        "file": "v04_nearside_equatorial_sun_hourly.json",
+        "sha256": "c021c4cc75c72db6fc4be047edd2832e41e36082c64fbb29718d320add1e50e6",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'10'",
+        "site_coord": "'0.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v04_nearside_equatorial_earth_hourly.json",
+        "sha256": "132abd30444de43dc0cb48cecbf688a74333a83a7534f704342e10213c785d69",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'399'",
+        "site_coord": "'0.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v04_limb_sun_hourly.json",
+        "sha256": "f1a3cbef708a397351f267e9988d15fde7b05e6925097add539c6e99e32c0bdc",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'10'",
+        "site_coord": "'90.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v04_limb_earth_hourly.json",
+        "sha256": "7bdaf7892014f81949dd8606044fe29cc702af7034b742aa6f244228b850eca9",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'399'",
+        "site_coord": "'90.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v04_farside_sun_hourly.json",
+        "sha256": "55c057e4d993b558856efa1bca02e4809e270bbb270b2b8342816c75f3aa9741",
+        "step": "'1h'",
+        "start": "'2026-11-14 00:00'",
+        "stop": "'2026-12-14 00:00'",
+        "target": "'10'",
+        "site_coord": "'180.000000,0.000000,0.000000'"
+      }
+    ],
+    "minute_refine": [
+      {
+        "file": "v05_south-polar_A_earth_848174400_min.json",
+        "sha256": "604b48c6a680f8a41cfbb67dc79b5b3d102eb2219ffcbc70531d671b518affe6",
+        "step": "'60'",
+        "start": "'JD 2461361.833333333'",
+        "stop": "'JD 2461361.875000000'",
+        "target": "'399'",
+        "site_coord": "'0.000000,-89.500000,0.000000'"
+      },
+      {
+        "file": "v05_south-polar_A_earth_849290400_min.json",
+        "sha256": "be0a5b72ab09cb1f8c7d904e23d44e0a05052a0161f4c3d684e6af7917a3f80d",
+        "step": "'60'",
+        "start": "'JD 2461374.750000000'",
+        "stop": "'JD 2461374.791666667'",
+        "target": "'399'",
+        "site_coord": "'0.000000,-89.500000,0.000000'"
+      },
+      {
+        "file": "v05_south-polar_B_sun_848095200_min.json",
+        "sha256": "0c26ec32182068681b5d3da9954080331c9e909c2b30a1a924555e1f24bd9df4",
+        "step": "'60'",
+        "start": "'JD 2461360.916666667'",
+        "stop": "'JD 2461360.958333333'",
+        "target": "'10'",
+        "site_coord": "'210.000000,-86.000000,0.000000'"
+      },
+      {
+        "file": "v05_south-polar_B_sun_849056400_min.json",
+        "sha256": "e76d5afcc7c33a2ece3926c4e9755f02c37720bfac2b9c7710eeff9ad62c8d88",
+        "step": "'60'",
+        "start": "'JD 2461372.041666667'",
+        "stop": "'JD 2461372.083333333'",
+        "target": "'10'",
+        "site_coord": "'210.000000,-86.000000,0.000000'"
+      },
+      {
+        "file": "v05_south-polar_B_earth_848404800_min.json",
+        "sha256": "4964bb4e28c73c6d26df5eabf2f52835d625c924862addfc91d0edfb475b1669",
+        "step": "'60'",
+        "start": "'JD 2461364.500000000'",
+        "stop": "'JD 2461364.541666667'",
+        "target": "'399'",
+        "site_coord": "'210.000000,-86.000000,0.000000'"
+      },
+      {
+        "file": "v05_south-polar_B_earth_849063600_min.json",
+        "sha256": "6fcd8d798940c094fa8e53916a796073446431b054a11c288111f3c892e5db4f",
+        "step": "'60'",
+        "start": "'JD 2461372.125000000'",
+        "stop": "'JD 2461372.166666667'",
+        "target": "'399'",
+        "site_coord": "'210.000000,-86.000000,0.000000'"
+      },
+      {
+        "file": "v05_north-polar_sun_848152800_min.json",
+        "sha256": "538616b449f8903332fd1d3af212ad3227a68b0de41f8ac5077208b841bbafb5",
+        "step": "'60'",
+        "start": "'JD 2461361.583333333'",
+        "stop": "'JD 2461361.625000000'",
+        "target": "'10'",
+        "site_coord": "'30.000000,87.000000,0.000000'"
+      },
+      {
+        "file": "v05_north-polar_sun_848998800_min.json",
+        "sha256": "5d0c50b4f9aeb64a7e2bda57beb696540e1fbc906cb24c05427cbc162a12daf4",
+        "step": "'60'",
+        "start": "'JD 2461371.375000000'",
+        "stop": "'JD 2461371.416666667'",
+        "target": "'10'",
+        "site_coord": "'30.000000,87.000000,0.000000'"
+      },
+      {
+        "file": "v05_north-polar_earth_848318400_min.json",
+        "sha256": "f0b5f9b866365a0dd562d404e846434aaee87afd2a5f6378b0d10d41a65dbfac",
+        "step": "'60'",
+        "start": "'JD 2461363.500000000'",
+        "stop": "'JD 2461363.541666667'",
+        "target": "'399'",
+        "site_coord": "'30.000000,87.000000,0.000000'"
+      },
+      {
+        "file": "v05_north-polar_earth_849146400_min.json",
+        "sha256": "0b5becfd4de48c28ab5b0099b75bec5b642ed30f52a1ae950ea82a13d7937a2c",
+        "step": "'60'",
+        "start": "'JD 2461373.083333333'",
+        "stop": "'JD 2461373.125000000'",
+        "target": "'399'",
+        "site_coord": "'30.000000,87.000000,0.000000'"
+      },
+      {
+        "file": "v05_nearside_equatorial_sun_848145600_min.json",
+        "sha256": "a07f5af0bbf5d1a5b85e3e5ccc3b1cf31e7cba94714e1c84bf38b73220a7b5b6",
+        "step": "'60'",
+        "start": "'JD 2461361.500000000'",
+        "stop": "'JD 2461361.541666667'",
+        "target": "'10'",
+        "site_coord": "'0.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_nearside_equatorial_sun_849423600_min.json",
+        "sha256": "2ee0116f6ffa66f8e81d8d79af9493080f4d16c8027693f5ac8d4f2a439ad796",
+        "step": "'60'",
+        "start": "'JD 2461376.291666667'",
+        "stop": "'JD 2461376.333333333'",
+        "target": "'10'",
+        "site_coord": "'0.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_limb_sun_848782800_min.json",
+        "sha256": "72f39dbdfccd12f69e687ee574249e56bc742e639ea08eee2fdc522d2ace53c9",
+        "step": "'60'",
+        "start": "'JD 2461368.875000000'",
+        "stop": "'JD 2461368.916666667'",
+        "target": "'10'",
+        "site_coord": "'90.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_limb_sun_850064400_min.json",
+        "sha256": "3ed102e23c94adc3595ce81eaa4d1f7a43ce726ed9680e74c9548d2d8e068f90",
+        "step": "'60'",
+        "start": "'JD 2461383.708333333'",
+        "stop": "'JD 2461383.750000000'",
+        "target": "'10'",
+        "site_coord": "'90.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_limb_earth_848923200_min.json",
+        "sha256": "0edaf01f1c8cd293bbcd3efa94be3a41616039a17d2534556ead43714ea20bca",
+        "step": "'60'",
+        "start": "'JD 2461370.500000000'",
+        "stop": "'JD 2461370.541666667'",
+        "target": "'399'",
+        "site_coord": "'90.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_limb_earth_850183200_min.json",
+        "sha256": "19fdd6e5a5e48bf952a72783f0336f81794e3ce256b60c2fa06cb682081b66b1",
+        "step": "'60'",
+        "start": "'JD 2461385.083333333'",
+        "stop": "'JD 2461385.125000000'",
+        "target": "'399'",
+        "site_coord": "'90.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_farside_sun_848145600_min.json",
+        "sha256": "2de8391630637b2599f7168257eee4335f0200399069e496b1fda78a7ebdbdf7",
+        "step": "'60'",
+        "start": "'JD 2461361.500000000'",
+        "stop": "'JD 2461361.541666667'",
+        "target": "'10'",
+        "site_coord": "'180.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_farside_sun_849423600_min.json",
+        "sha256": "2bc8ceec7024ddf10ceb0f7c8327d9ff978c70f5d2925fc6cc9ebe1b8368f9cd",
+        "step": "'60'",
+        "start": "'JD 2461376.291666667'",
+        "stop": "'JD 2461376.333333333'",
+        "target": "'10'",
+        "site_coord": "'180.000000,0.000000,0.000000'"
+      }
+    ],
+    "second_refine": [
+      {
+        "file": "v05_south-polar_A_earth_848174760_sec.json",
+        "sha256": "8f5b81054bedacabc849f9b168df2db191eb51450d0f855911353972e22caa00",
+        "step": "'60'",
+        "start": "'JD 2461361.837500000'",
+        "stop": "'JD 2461361.838194444'",
+        "target": "'399'",
+        "site_coord": "'0.000000,-89.500000,0.000000'"
+      },
+      {
+        "file": "v05_south-polar_A_earth_849293940_sec.json",
+        "sha256": "5829eecd54d21c617063ee706d418580370c387d5e406434b9ad9cc2f212404d",
+        "step": "'60'",
+        "start": "'JD 2461374.790972222'",
+        "stop": "'JD 2461374.791666667'",
+        "target": "'399'",
+        "site_coord": "'0.000000,-89.500000,0.000000'"
+      },
+      {
+        "file": "v05_south-polar_B_sun_848095320_sec.json",
+        "sha256": "13b9d963fe7b6a5e88dd7371d232fd34ce26bd7fb0680bbf7daec587a6d69b17",
+        "step": "'60'",
+        "start": "'JD 2461360.918055556'",
+        "stop": "'JD 2461360.918750000'",
+        "target": "'10'",
+        "site_coord": "'210.000000,-86.000000,0.000000'"
+      },
+      {
+        "file": "v05_south-polar_B_sun_849057480_sec.json",
+        "sha256": "b09d46148b271ca5aa40c4e5c0888827b8baebd2da61b4a7ec8cedef8198e302",
+        "step": "'60'",
+        "start": "'JD 2461372.054166667'",
+        "stop": "'JD 2461372.054861111'",
+        "target": "'10'",
+        "site_coord": "'210.000000,-86.000000,0.000000'"
+      },
+      {
+        "file": "v05_south-polar_B_earth_848405880_sec.json",
+        "sha256": "001f01b779e066a469921b2e644f0db95b87d2f7dd12941a9b7ee500041dee37",
+        "step": "'60'",
+        "start": "'JD 2461364.512500000'",
+        "stop": "'JD 2461364.513194445'",
+        "target": "'399'",
+        "site_coord": "'210.000000,-86.000000,0.000000'"
+      },
+      {
+        "file": "v05_south-polar_B_earth_849066900_sec.json",
+        "sha256": "d7c39620ca9712e841efe3e05ffa2189eae8203242b495e8b2e0cd15891e6e1c",
+        "step": "'60'",
+        "start": "'JD 2461372.163194444'",
+        "stop": "'JD 2461372.163888889'",
+        "target": "'399'",
+        "site_coord": "'210.000000,-86.000000,0.000000'"
+      },
+      {
+        "file": "v05_north-polar_sun_848154600_sec.json",
+        "sha256": "c8842f9109ca5961900f17d4cee5c8444dd4af844fb5db9ec3b9fcd2f5b878db",
+        "step": "'60'",
+        "start": "'JD 2461361.604166667'",
+        "stop": "'JD 2461361.604861111'",
+        "target": "'10'",
+        "site_coord": "'30.000000,87.000000,0.000000'"
+      },
+      {
+        "file": "v05_north-polar_sun_848999700_sec.json",
+        "sha256": "00fb2900a44fb90e9e3377d7d648376bc55b64b04c880f1af25137c93145a452",
+        "step": "'60'",
+        "start": "'JD 2461371.385416667'",
+        "stop": "'JD 2461371.386111111'",
+        "target": "'10'",
+        "site_coord": "'30.000000,87.000000,0.000000'"
+      },
+      {
+        "file": "v05_north-polar_earth_848321700_sec.json",
+        "sha256": "b6c5eec4b1b6e983d866a506b2da82ca747ab743780b4a0b67c2c440ab7979d9",
+        "step": "'60'",
+        "start": "'JD 2461363.538194444'",
+        "stop": "'JD 2461363.538888889'",
+        "target": "'399'",
+        "site_coord": "'30.000000,87.000000,0.000000'"
+      },
+      {
+        "file": "v05_north-polar_earth_849149700_sec.json",
+        "sha256": "2e30e0bf87ee9a616cdc0f760846367cc8d7d5ec4643e3f6addb9ce6e7c4a633",
+        "step": "'60'",
+        "start": "'JD 2461373.121527778'",
+        "stop": "'JD 2461373.122222222'",
+        "target": "'399'",
+        "site_coord": "'30.000000,87.000000,0.000000'"
+      },
+      {
+        "file": "v05_nearside_equatorial_sun_848146200_sec.json",
+        "sha256": "b89419e09f52e7e559a289891c234af957f9c4515cf7c0dae15247e4047541aa",
+        "step": "'60'",
+        "start": "'JD 2461361.506944444'",
+        "stop": "'JD 2461361.507638889'",
+        "target": "'10'",
+        "site_coord": "'0.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_nearside_equatorial_sun_849426720_sec.json",
+        "sha256": "96d3d5a7d873a9efb47775ce60beb26ac19dd8f209757985f82abde6fbd3d2df",
+        "step": "'60'",
+        "start": "'JD 2461376.327777778'",
+        "stop": "'JD 2461376.328472222'",
+        "target": "'10'",
+        "site_coord": "'0.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_limb_sun_848786340_sec.json",
+        "sha256": "9d619dfea7b31dac261114ccc75a1e3d41c3871565ba0fe6840ff1aceff1c63d",
+        "step": "'60'",
+        "start": "'JD 2461368.915972222'",
+        "stop": "'JD 2461368.916666667'",
+        "target": "'10'",
+        "site_coord": "'90.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_limb_sun_850065000_sec.json",
+        "sha256": "9b41a18691d78430f1887764f7c20fd26c8948f78114b1b29901c4c45a4de44a",
+        "step": "'60'",
+        "start": "'JD 2461383.715277778'",
+        "stop": "'JD 2461383.715972222'",
+        "target": "'10'",
+        "site_coord": "'90.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_limb_earth_848925120_sec.json",
+        "sha256": "c89a8b08212c67e1fd5c7e086b6c7ceaa9fe51f03d4bd80fc9c292fd47d6d94c",
+        "step": "'60'",
+        "start": "'JD 2461370.522222222'",
+        "stop": "'JD 2461370.522916667'",
+        "target": "'399'",
+        "site_coord": "'90.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_limb_earth_850185360_sec.json",
+        "sha256": "5678aa67266114212655cf337cd01bd86e684b26b0184a298908969142731371",
+        "step": "'60'",
+        "start": "'JD 2461385.108333333'",
+        "stop": "'JD 2461385.109027778'",
+        "target": "'399'",
+        "site_coord": "'90.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_farside_sun_848146200_sec.json",
+        "sha256": "94f3037ade8666cbdaf6df3b032fd9bbe30b7aaea88b9cb9bd58cc2b7b69b936",
+        "step": "'60'",
+        "start": "'JD 2461361.506944444'",
+        "stop": "'JD 2461361.507638889'",
+        "target": "'10'",
+        "site_coord": "'180.000000,0.000000,0.000000'"
+      },
+      {
+        "file": "v05_farside_sun_849426720_sec.json",
+        "sha256": "0e717b912a0e1936383667436c940c77dbf670feaa66598b254489260ad6a766",
+        "step": "'60'",
+        "start": "'JD 2461376.327777778'",
+        "stop": "'JD 2461376.328472222'",
+        "target": "'10'",
+        "site_coord": "'180.000000,0.000000,0.000000'"
+      }
+    ],
+    "confirm_window": []
+  },
+  "source_file": {
+    "path": "../docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11/v04_horizons/horizons.json",
+    "sha256": "401e446dad093fae2a7dd5c01768231ff5886101da21be5c1e5c789a1e0ad49b"
+  },
+  "meta": {
+    "script": "horizons_compare",
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "kernels": [
+      "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+      "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+      "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+      "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+      "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+      "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+      "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    ],
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-11T16:26:36Z"
+  }
+}

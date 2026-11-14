@@ -1,0 +1,15 @@
+Obstacle (boulder) data check, 2026-11-14
+
+Registered auxiliary landing products (data/landing/manifest.json):
+  5m:Site01_final_adj_5mpp_surf.tif#count        LDEC count map (LOLA returns per pixel)
+  5m:Site01_final_adj_5mpp_surf.tif#slope        NASA PGDA 78 slope product
+  5m:Site01_final_adj_5mpp_surf.tif#slope_error  NASA PGDA 78 slope uncertainty
+Other imagery-derived files present: data/landing/WAC_POLE_ILL_PCT_SOUTH_100M and WAC_POLE_ILL_TWI_SOUTH_100M
+  (LROC WAC 100 m illumination statistics: headers, labels and readme, used as the V-12 validation reference).
+  They give the percentage of time illuminated per 100 m pixel. They are not images of the surface and cannot show boulders.
+Terrain products (data/dem/registry.json): LOLA DEMs at 5 m (PGDA 78 Site01; about 9 to 10% of pixels hold a LOLA return,
+  the rest interpolated), 20 m and 80 m (PGDA 90), 240 m (LDEM_60S).
+No LROC NAC image, boulder map, rock-abundance product or other obstacle catalogue is registered.
+
+Conclusion: no registered dataset can legitimately support obstacle detection. The finding stays
+"Not available - manual review required". The 5 m and 240 m elevation products cannot identify boulders.

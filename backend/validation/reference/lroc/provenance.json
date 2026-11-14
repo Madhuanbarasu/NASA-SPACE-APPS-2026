@@ -1,0 +1,151 @@
+{
+  "retrieved_utc": "2026-11-10",
+  "volume": "LROLRC_2001 (LRO-L-LROC-5-RDR-V1.0), BDR WAC_POLE, product version v1.3 (created 2020-08-31)",
+  "products": {
+    "TWI": {
+      "product_id": "WAC_POLE_ILL_TWI_SOUTH_100M",
+      "role": "primary reference",
+      "img": {
+        "url": "https://pds.mcp.nasa.gov/data/store/img/lunar_reconnaissance_orbiter/pds4/lroc/lro-l-lroc-5-rdr/LROLRC_2001/DATA/BDR/WAC_POLE/WAC_POLE_ILL_TWI_SOUTH/WAC_POLE_ILL_TWI_SOUTH_100M.IMG",
+        "bytes": 5904896,
+        "sha256": "dfecc026012fe24f67ca70ed21a09a1723ca0750bf3ec120f1a4ed2c4604717b",
+        "md5": "be37f6f41433f44ad9956abf3800c9db",
+        "md5_matches_pds4_label": true
+      },
+      "pds4_label": {
+        "file": "WAC_POLE_ILL_TWI_SOUTH_100M.xml",
+        "sha256": "720227bb767c77af6e6b4cfa23bf0a93c4cb3f299d6093c6c2f0483e9a615766"
+      },
+      "readme": {
+        "file": "WAC_POLE_ILL_TWI_SOUTH_README.TXT",
+        "sha256": "6bdda47bc3236fcee4cb3a276b7a4b2e06816a85161cd1477a96d8d7bbba9a40"
+      },
+      "pds3_header": {
+        "file": "WAC_POLE_ILL_TWI_SOUTH_100M.pds3_header",
+        "bytes": 9712,
+        "sha256": "95fde16a69f88182ea72542a3f3b66d12615ee4fe0d699c1c953377d11190fb3"
+      },
+      "browse_geotiff_crosscheck": {
+        "url": "https://pds.mcp.nasa.gov/data/store/img/lunar_reconnaissance_orbiter/pds4/lroc/lro-l-lroc-5-rdr/LROLRC_2001/EXTRAS/BROWSE/WAC_POLE/WAC_POLE_ILL_TWI_SOUTH/WAC_POLE_ILL_TWI_SOUTH_100M.TIF",
+        "sha256": "65297119e2c81b2a31163974801a72ba7407eb7c0d4a595c0219cc54e6a7a3a7",
+        "geotransform": [
+          100.0,
+          0.0,
+          -60700.0,
+          0.0,
+          -100.0,
+          60700.0
+        ],
+        "result": "equals the PDS3-header geotransform; 8-bit values correlate 0.99999 with the float map read at byte 9712"
+      }
+    },
+    "PCT": {
+      "product_id": "WAC_POLE_ILL_PCT_SOUTH_100M",
+      "role": "secondary sensitivity comparison",
+      "img": {
+        "url": "https://pds.mcp.nasa.gov/data/store/img/lunar_reconnaissance_orbiter/pds4/lroc/lro-l-lroc-5-rdr/LROLRC_2001/DATA/BDR/WAC_POLE/WAC_POLE_ILL_PCT_SOUTH/WAC_POLE_ILL_PCT_SOUTH_100M.IMG",
+        "bytes": 5904896,
+        "sha256": "30b35ae2de695198f62afe2845c3a67cbc4975dca199be3c848d931414aced5f",
+        "md5": "86c5be41ba876fd5fa190f6bbfe34b31",
+        "md5_matches_pds4_label": true
+      },
+      "pds4_label": {
+        "file": "WAC_POLE_ILL_PCT_SOUTH_100M.xml",
+        "sha256": "0da9505112053f10dbb902bd6443da7fe1b0e16bede3b739fa4a487b17fa252b"
+      },
+      "readme": {
+        "file": "WAC_POLE_ILL_PCT_SOUTH_README.TXT",
+        "sha256": "e2ca09c2fcd76862ea4825c793605885e059b53978d5088cce543645a5e9d74c"
+      },
+      "pds3_header": {
+        "file": "WAC_POLE_ILL_PCT_SOUTH_100M.pds3_header",
+        "bytes": 9712,
+        "sha256": "f1d1335eb37f9fc6b7c76429c994dd08da49597bbc8daeb72ed229f30d435932"
+      }
+    }
+  },
+  "documented_facts": [
+    {
+      "fact": "one lunar year of WAC images, 15 February 2010 to 5 February 2011, 3807 observations plus 229 gap fills at virtually identical lighting",
+      "source": "README"
+    },
+    {
+      "fact": "each image map-projected at 100 m/pixel onto a 30 m LOLA DEM; binary lit images from 'a series of spatial filters and a conservative global threshold'; value = times illuminated / times imaged",
+      "source": "README"
+    },
+    {
+      "fact": "TWI weights images from infrequent periods twice and linearly interpolates areas outside the field of view; PCT does not account for non-linear temporal sampling",
+      "source": "README, PDS4 label description"
+    },
+    {
+      "fact": "image noise and scattered light leave values close to, but not equal to, zero inside permanently shadowed regions; ignore them",
+      "source": "README"
+    },
+    {
+      "fact": "88-90 deg S, polar stereographic, 1737.4 km sphere, 100 m/pixel, 1214 x 1214, PC_REAL 32-bit, CORE_NULL 16#FF7FFFFB#",
+      "source": "attached PDS3 header"
+    },
+    {
+      "fact": "WAC 643 nm imaging; repeat coverage every orbit for 88-90 deg",
+      "source": "LROC RDR SIS (DOCUMENT/RDRSIS.PDF)"
+    },
+    {
+      "fact": "citation: Speyerer & Robinson (2013), Icarus 222, 122-136, doi:10.1016/j.icarus.2012.10.010",
+      "source": "README"
+    }
+  ],
+  "label_defects": [
+    "PDS4 label Array offset = 4856 bytes, but the attached PDS3 header is 2 records x 4856 bytes and ^IMAGE = 3: the image starts at byte 9712. Reading at 4856 returns header text and values up to ~1e19.",
+    "PDS4 label Cartography upperleft_corner_x/y = +60650; the grid's upper-left pixel centre is (-60650, +60650) and its corner (-60700, +60700) (PDS3 header and LROC's GeoTIFF)."
+  ],
+  "measured": {
+    "twi_minus_pct_pp": {
+      "mean": 0.009,
+      "rms": 1.314,
+      "p95_abs": 3.024,
+      "max_abs": 7.89,
+      "pixels": 1155716
+    },
+    "psr_interior_twi_pct": {
+      "points": 71346,
+      "zero_share": 0.994,
+      "p99_9": 0.033,
+      "max": 0.87,
+      "source": "PGDA 90 LPSR interior cells (2-cell margin) inside 88-90 S"
+    },
+    "coregistration_with_pgda90": "LROC==0 vs LPSR fully-shadowed 100 m pixels: best IoU 0.863 at zero shift (0.858-0.860 at +-1 pixel)",
+    "wac_frames_in_period": {
+      "listed": 3559,
+      "readme": "3807 + 229",
+      "median_interval_h": 1.88,
+      "gaps_over_6h": 31,
+      "gap_hours": 581,
+      "period_hours": 8519,
+      "source": "WAC_POLE_MOVIE_SOUTH file names (LROLRC_2001)"
+    }
+  },
+  "paper_access": {
+    "target": "Speyerer & Robinson (2013), Icarus 222, 122-136",
+    "attempts": [
+      "NASA ADS link gateway (ui.adsabs.harvard.edu): no EPRINT_PDF, AUTHOR_PDF, PUB_PDF or ADS_PDF; PUB_HTML redirects to doi.org",
+      "doi.org -> linkinghub.elsevier.com -> www.sciencedirect.com: HTTP 403 to automated access; the page declares tdm-reservation 1 (text and data mining reserved); not pursued",
+      "NASA NTRS: no record of the paper; related record 20160012274 (Speyerer, Lawrence, Stopar 2016) is an abstract only, without the threshold",
+      "LROC publications page (lroc.im-ldi.com/about/publications): lists the paper with the publisher DOI only"
+    ],
+    "result": "not obtained through an authorized route; the binary threshold, spatial filters and registration accuracy remain unquantified"
+  },
+  "methodology_approved": {
+    "reference": "TWI primary, PCT secondary sensitivity",
+    "rules": "bracket LUNA-OPS whole-disc (full) and any-part (any)",
+    "C1": "LROC <= 1 % for predicted permanent-shadow samples (gating)",
+    "C2": "non-gating; sensitivity at 1.31 pp (TWI-PCT RMS) and 3.0 pp (p95); no pass share",
+    "C3": "reported benchmark only",
+    "spatial": "central pixel compared; 3x3 neighbourhood reported separately",
+    "observer_height_m": 0.0,
+    "period": [
+      "2010-02-15T00:00:00Z",
+      "2011-02-05T00:00:00Z"
+    ],
+    "final_prerequisites": "the shared terrain gate (validation/terrain_gate.py): A5 20 m and the wider 240 m terrain registered and present, and every overlapping product pair accepted in A6 for the registered bytes (reference/terrain_acceptance.json)"
+  }
+}

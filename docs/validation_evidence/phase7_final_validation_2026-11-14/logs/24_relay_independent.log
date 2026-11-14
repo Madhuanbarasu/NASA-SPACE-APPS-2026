@@ -1,0 +1,4 @@
+a=6000.0 e=0.6 i=60.0: period 11.585 h; |r_pkg - r_indep| max 7.05e-12 km; vis-viva rel err 2.7e-15; h spread 6.3e-16; closure 9.70e-12 km
+a=1837.4 e=0.0 i=90.0: period 1.963 h; |r_pkg - r_indep| max 1.33e-12 km; vis-viva rel err 6.7e-16; h spread 6.1e-16; closure 7.63e-13 km
+a=9000.0 e=0.75 i=85.0: period 21.282 h; |r_pkg - r_indep| max 1.33e-11 km; vis-viva rel err 4.9e-15; h spread 8.3e-16; closure 0.00e+00 km
+leg 2 line of sight: 500 random relay/Earth geometries; max clearance difference 1.82e-12 km; open/blocked verdicts agree 500/500

@@ -1,0 +1,22 @@
+$ npm run build
+
+> luna-ops-frontend@0.1.0 build
+> tsc --noEmit -p . && node scripts/check-strings.mjs && node scripts/check-a11y.mjs && vite build
+
+check-strings: 433 keys, 433 referenced, 21 files scanned, 5 allow-listed literals, 0 problem(s)
+check-a11y: 14 components, 33 colour pairs, 0 problem(s)
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 385 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                                            [39m[1m[2m  0.77 kB[22m[1m[22m[2m │ gzip:   0.48 kB[22m
+[2mdist/[22m[32massets/archivo-vietnamese-wdth-normal-rJmnGBSt.woff2  [39m[1m[2m 34.46 kB[22m[1m[22m
+[2mdist/[22m[32massets/archivo-latin-ext-wdth-normal-7khWdh9v.woff2   [39m[1m[2m 86.24 kB[22m[1m[22m
+[2mdist/[22m[32massets/archivo-latin-wdth-normal-DY7AcnAa.woff2       [39m[1m[2m 90.10 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-Dj8BEKWr.css                             [39m[1m[2m 20.86 kB[22m[1m[22m[2m │ gzip:   5.33 kB[22m
+[2mdist/[22m[36massets/index-kvDT7UBF.js                              [39m[1m[2m295.23 kB[22m[1m[22m[2m │ gzip:  93.60 kB[22m
+[2mdist/[22m[36massets/MapView-CSDBvknB.js                            [39m[1m[2m456.55 kB[22m[1m[22m[2m │ gzip: 139.75 kB[22m
+[2mdist/[22m[36massets/Terrain3D-_0dC8YFW.js                          [39m[1m[2m492.22 kB[22m[1m[22m[2m │ gzip: 124.10 kB[22m
+[32m✓ built in 12.37s[39m
+exit=0

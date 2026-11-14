@@ -1,0 +1,78 @@
+====================================================================================================
+Phase 4 A6: Corrected Polar-Wide Cross-Product Terrain Validation
+Execution Timestamp (UTC): 2026-11-10T16:40:51.665514Z
+Algorithm Version: 1.5.0
+Status: MEASUREMENT-ONLY (PENDING SCIENTIFIC ACCEPTANCE)
+====================================================================================================
+
+Registered Terrain Products:
+  - 20m : pgda90_20m/LDEM_80S_20MPP_ADJ.TIF (2,696,082,051 bytes, sha256=09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649)
+  - 80m : pgda90_80m/LDEM_80S_80MPP_ADJ.tiff (189,158,392 bytes, sha256=82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a)
+  - 240m: pgda90_240m/LDEM_60S_240MPP_ADJ.TIF (218,961,039 bytes, sha256=3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34)
+
+1. Candidate Lattice Generation:
+   Grid dimensions: 380 rows x 380 cols = 144,400 total candidate points
+   Grid spacing: 1,600.0 m in projected IAU:30135 coordinates
+   Bounding Box: [-304000.0, -304000.0, 304000.0, 304000.0] m
+
+2. Domain Candidate Verification:
+   Primary Circular Polar Disk (r^2 <= 304000^2): 113,373 candidate points
+   Radial Exclusions (points outside circular disk): 31,027 points (21.49%)
+   Secondary Full Square Domain: 144,400 candidate points
+   -> Exact candidate counts independently verified matching approved specification.
+
+3. Elevation Sampling:
+   Evaluating 80m elevations at exact pixel centres...
+   80m points finite: 144,400 / 144,400
+   Evaluating 240m elevations via production bilinear_many...
+   240m bilinear points finite: 144,400 / 144,400
+   Evaluating 20m elevations via memory-bounded chunked bilinear interpolation...
+   20m bilinear points finite: 144,400 / 144,400
+
+4. Statistical Evaluation Across Both Domains:
+=============================================================================================================================
+PRIMARY DOMAIN: CIRCULAR POLAR DISK (r^2 <= 304000^2, Expected Candidates = 113,373)
+=============================================================================================================================
+Comparison                   | Candidates | Radial Excl | Valid (n) |  Mean (m) |  Std (m) |  RMS (m) | Median (m) | [p5, p95] (m)    
+--------------------------------------------------------------------------------------------------------------------------------------
+80m vs 240m                  |    113,373 |      31,027 |   113,373 |   +0.0092 |   2.9341 |   2.9341 |    +0.1313 | [ -4.48,  +4.17] 
+20m vs 240m                  |    113,373 |      31,027 |   113,373 |   +0.0112 |   3.1323 |   3.1323 |    +0.1591 | [ -4.78,  +4.39] 
+20m vs 80m                   |    113,373 |      31,027 |   113,373 |   +0.0020 |   0.5785 |   0.5785 |    +0.0249 | [ -0.59,  +0.54] 
+Common Subset: 80m vs 240m   |    113,373 |      31,027 |   113,373 |   +0.0092 |   2.9341 |   2.9341 |    +0.1313 | [ -4.48,  +4.17] 
+Common Subset: 20m vs 240m   |    113,373 |      31,027 |   113,373 |   +0.0112 |   3.1323 |   3.1323 |    +0.1591 | [ -4.78,  +4.39] 
+Common Subset: 20m vs 80m    |    113,373 |      31,027 |   113,373 |   +0.0020 |   0.5785 |   0.5785 |    +0.0249 | [ -0.59,  +0.54] 
+=============================================================================================================================
+
+=============================================================================================================================
+SECONDARY DOMAIN: FULL SQUARE BOUNDING BOX (608 km x 608 km, Expected Candidates = 144,400)
+=============================================================================================================================
+Comparison                   | Candidates | Radial Excl | Valid (n) |  Mean (m) |  Std (m) |  RMS (m) | Median (m) | [p5, p95] (m)    
+--------------------------------------------------------------------------------------------------------------------------------------
+80m vs 240m                  |    144,400 |           0 |   144,400 |   +0.0036 |   2.9870 |   2.9870 |    +0.1209 | [ -4.58,  +4.25] 
+20m vs 240m                  |    144,400 |           0 |   144,400 |   +0.0091 |   3.1911 |   3.1911 |    +0.1505 | [ -4.87,  +4.48] 
+20m vs 80m                   |    144,400 |           0 |   144,400 |   +0.0055 |   0.6238 |   0.6238 |    +0.0262 | [ -0.59,  +0.55] 
+Common Subset: 80m vs 240m   |    144,400 |           0 |   144,400 |   +0.0036 |   2.9870 |   2.9870 |    +0.1209 | [ -4.58,  +4.25] 
+Common Subset: 20m vs 240m   |    144,400 |           0 |   144,400 |   +0.0091 |   3.1911 |   3.1911 |    +0.1505 | [ -4.87,  +4.48] 
+Common Subset: 20m vs 80m    |    144,400 |           0 |   144,400 |   +0.0055 |   0.6238 |   0.6238 |    +0.0262 | [ -0.59,  +0.55] 
+=============================================================================================================================
+
+=============================================================================================================================
+SEPARATE DIAGNOSTIC: NEAREST-NEIGHBOUR VS BILINEAR (SLOPE-COUPLING EFFECT)
+=============================================================================================================================
+Comparison                   | Candidates | Radial Excl | Valid (n) |  Mean (m) |  Std (m) |  RMS (m) | Median (m) | [p5, p95] (m)    
+--------------------------------------------------------------------------------------------------------------------------------------
+Diagnostic NN: 80m vs 240m   |    113,373 |      31,027 |   113,373 |   -0.0342 |  13.2456 |  13.2456 |    +0.0779 | [-22.40, +22.16] 
+80m vs 240m                  |    113,373 |      31,027 |   113,373 |   +0.0092 |   2.9341 |   2.9341 |    +0.1313 | [ -4.48,  +4.17] 
+Diagnostic NN: 80m vs 240m   |    144,400 |           0 |   144,400 |   +0.0218 |  13.0566 |  13.0566 |    +0.0813 | [-21.96, +21.88] 
+80m vs 240m                  |    144,400 |           0 |   144,400 |   +0.0036 |   2.9870 |   2.9870 |    +0.1209 | [ -4.58,  +4.25] 
+=============================================================================================================================
+
+Detailed Extrema Ranges:
+  Circular Disk 80m vs 240m: min =  -61.08 m, max =  +24.94 m
+  Circular Disk 20m vs 240m: min =  -64.46 m, max =  +41.08 m
+  Circular Disk 20m vs 80m : min =  -33.14 m, max =  +40.42 m
+  Full Square   80m vs 240m: min =  -61.08 m, max =  +59.24 m
+  Full Square   20m vs 240m: min =  -64.46 m, max =  +60.74 m
+  Full Square   20m vs 80m : min =  -33.14 m, max =  +61.85 m
+
+Corrected polar-wide validation completed in 24.96 seconds.

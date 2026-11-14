@@ -1,0 +1,37 @@
+browser: Chrome/157.0.8103.51
+RELEASE VIEWS            tabStops(release -> now)  problems
+site-welcome              34 -> 36   (expected 36)  none
+site-result-technical     52 -> 55   (expected 55)  none
+site-result-public      None -> None (expected None)  none
+compare-matrix            76 -> 76   (expected 76)  none
+data                      34 -> 34   (expected 34)  none
+guide                     33 -> 33   (expected 33)  none
+PHASE 5 VIEWS            tabStops  cycled  problems
+site-explorer-globe           55  True    none
+site-explorer-terrain         48  True    none
+mission                       55  True    none
+mission-empty                 35  True    none
+RELEASE FUNCTIONAL TESTS (release -> now):
+  skipLink                     same
+  tabsArrowKeys                same
+  invalidCoordinates           same
+  slider                       same
+  readoutLive                  same
+  panoramaHoverEscape          same
+  readoutLiveWhilePlaying      same
+  mapKeyboard                  same
+  terrain3dKeyboard            same
+  panoramaKeyboard             equivalent (release readout kept; sigma/near-field appended: 'Az 264.0°  horizon -1.55°  ±0.09° (1σ)  near field')
+  pointerAlternatives          same
+  statusAfterAnalysis          same
+  statusAfterComparison        same
+  matrixCellSpace              same
+  matrixCellEnter              same
+  reducedMotionTransition      same
+PHASE 5 FUNCTIONAL TESTS:
+  globeKeyboard (rotate, zoom: focused and view changed)     pass
+  terrainPreviewKeyboard (pan, rotate, zoom)                 pass
+  returnToResult (explorer offers the kept result)           pass
+  missionDeepLinkFocus (focus on the visibility section)     pass
+U-04 RE-EVALUATION: NO AUTOMATED PROBLEM IN ANY VIEW; RELEASE BEHAVIOUR KEPT (documented additions only)
+exit 0

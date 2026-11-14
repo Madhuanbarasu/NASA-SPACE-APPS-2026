@@ -1,0 +1,72 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.7.0 -- E:\LUNA-OPS\backend\.venv\Scripts\python.exe
+rootdir: E:\LUNA-OPS\backend
+configfile: pytest.ini
+plugins: anyio-4.16.0
+collecting ... collected 57 items
+
+lunaops_comms/tests/test_linkbudget.py::test_fspl_matches_definition_and_handbook_form PASSED [  1%]
+lunaops_comms/tests/test_linkbudget.py::test_full_chain_by_hand PASSED   [  3%]
+lunaops_comms/tests/test_linkbudget.py::test_dbw_input_and_bandwidth PASSED [  5%]
+lunaops_comms/tests/test_linkbudget.py::test_array_distances_follow_inverse_square PASSED [  7%]
+lunaops_comms/tests/test_linkbudget.py::test_missing_input_leaves_stage_and_later_unevaluated[ts_k-cn0_dbhz] PASSED [  8%]
+lunaops_comms/tests/test_linkbudget.py::test_missing_input_leaves_stage_and_later_unevaluated[gr_dbi-pr_dbw] PASSED [ 10%]
+lunaops_comms/tests/test_linkbudget.py::test_missing_input_leaves_stage_and_later_unevaluated[gt_dbi-eirp_dbw] PASSED [ 12%]
+lunaops_comms/tests/test_linkbudget.py::test_missing_input_leaves_stage_and_later_unevaluated[rb_bps-ebn0_db] PASSED [ 14%]
+lunaops_comms/tests/test_linkbudget.py::test_missing_input_leaves_stage_and_later_unevaluated[ebn0_req_db-margin_db] PASSED [ 15%]
+lunaops_comms/tests/test_linkbudget.py::test_missing_input_leaves_stage_and_later_unevaluated[freq_hz-fspl_db] PASSED [ 17%]
+lunaops_comms/tests/test_linkbudget.py::test_missing_input_leaves_stage_and_later_unevaluated[pt_w-eirp_dbw] PASSED [ 19%]
+lunaops_comms/tests/test_linkbudget.py::test_missing_input_leaves_stage_and_later_unevaluated[lother_db-pr_dbw] PASSED [ 21%]
+lunaops_comms/tests/test_linkbudget.py::test_invalid_values_are_reported_never_used[pt_w-0.0] PASSED [ 22%]
+lunaops_comms/tests/test_linkbudget.py::test_invalid_values_are_reported_never_used[pt_w--5.0] PASSED [ 24%]
+lunaops_comms/tests/test_linkbudget.py::test_invalid_values_are_reported_never_used[freq_hz-0.0] PASSED [ 26%]
+lunaops_comms/tests/test_linkbudget.py::test_invalid_values_are_reported_never_used[freq_hz--1000000000.0] PASSED [ 28%]
+lunaops_comms/tests/test_linkbudget.py::test_invalid_values_are_reported_never_used[rb_bps-0.0] PASSED [ 29%]
+lunaops_comms/tests/test_linkbudget.py::test_invalid_values_are_reported_never_used[rb_bps--10.0] PASSED [ 31%]
+lunaops_comms/tests/test_linkbudget.py::test_invalid_values_are_reported_never_used[ts_k-0.0] PASSED [ 33%]
+lunaops_comms/tests/test_linkbudget.py::test_invalid_values_are_reported_never_used[ltx_db--1.0] PASSED [ 35%]
+lunaops_comms/tests/test_linkbudget.py::test_invalid_values_are_reported_never_used[freq_hz-nan] PASSED [ 36%]
+lunaops_comms/tests/test_linkbudget.py::test_invalid_values_are_reported_never_used[freq_hz-abc] PASSED [ 38%]
+lunaops_comms/tests/test_linkbudget.py::test_inconsistent_power_units_rejected_and_nothing_assumed PASSED [ 40%]
+lunaops_comms/tests/test_linkbudget.py::test_breakdown_rows_and_basis PASSED [ 42%]
+lunaops_comms/tests/test_relay.py::test_gm_read_from_verified_naif_file PASSED [ 43%]
+lunaops_comms/tests/test_relay.py::test_kepler_solver PASSED             [ 45%]
+lunaops_comms/tests/test_relay.py::test_circular_orbit_radius_period_and_energy PASSED [ 47%]
+lunaops_comms/tests/test_relay.py::test_elliptic_vis_viva_and_apsides PASSED [ 49%]
+lunaops_comms/tests/test_relay.py::test_lunar_equator_frame_at_epoch PASSED [ 50%]
+lunaops_comms/tests/test_relay.py::test_incomplete_or_invalid_elements_rejected[bad0-Eccentricity] PASSED [ 52%]
+lunaops_comms/tests/test_relay.py::test_incomplete_or_invalid_elements_rejected[bad1-intersects the Moon] PASSED [ 54%]
+lunaops_comms/tests/test_relay.py::test_incomplete_or_invalid_elements_rejected[bad2-intersects the Moon] PASSED [ 56%]
+lunaops_comms/tests/test_relay.py::test_incomplete_or_invalid_elements_rejected[bad3-frame] PASSED [ 57%]
+lunaops_comms/tests/test_relay.py::test_incomplete_or_invalid_elements_rejected[bad4-Inclination] PASSED [ 59%]
+lunaops_comms/tests/test_relay.py::test_incomplete_or_invalid_elements_rejected[bad5-Epoch] PASSED [ 61%]
+lunaops_comms/tests/test_relay.py::test_incomplete_or_invalid_elements_rejected[bad6-Semi-major axis (km) is missing] PASSED [ 63%]
+lunaops_comms/tests/test_relay.py::test_incomplete_or_invalid_elements_rejected[bad7-66,000] PASSED [ 64%]
+lunaops_comms/tests/test_relay.py::test_relay_to_earth_occultation_geometry PASSED [ 66%]
+lunaops_comms/tests/test_relay.py::test_lander_leg_horizon_wall_flat_and_incomplete PASSED [ 68%]
+lunaops_comms/tests/test_relay.py::test_line_through_the_moon_is_blocked_even_if_dem_horizon_is_low PASSED [ 70%]
+lunaops_comms/tests/test_relay.py::test_site_below_the_reference_sphere_still_sees_overhead_relay PASSED [ 71%]
+lunaops_comms/tests/test_service_api.py::test_meta_precedes_catch_all_and_reports_gm PASSED [ 73%]
+lunaops_comms/tests/test_service_api.py::test_direct_windows_are_the_engine_intervals_and_labels_pass_through PASSED [ 75%]
+lunaops_comms/tests/test_service_api.py::test_terrain_blocks_earth PASSED [ 77%]
+lunaops_comms/tests/test_service_api.py::test_rf_feasible_needs_margin_and_geometry PASSED [ 78%]
+lunaops_comms/tests/test_service_api.py::test_relay_two_legs_and_assisted_contacts PASSED [ 80%]
+lunaops_comms/tests/test_service_api.py::test_incomplete_horizon_gives_unknown_not_open PASSED [ 82%]
+lunaops_comms/tests/test_service_api.py::test_store_and_forward PASSED   [ 84%]
+lunaops_comms/tests/test_service_api.py::test_errors PASSED              [ 85%]
+lunaops_comms/tests/test_service_api.py::test_no_reliability_or_ranking_vocabulary PASSED [ 87%]
+lunaops_comms/tests/test_windows.py::test_crossings_are_linearly_interpolated PASSED [ 89%]
+lunaops_comms/tests/test_windows.py::test_unknown_samples_stay_unknown PASSED [ 91%]
+lunaops_comms/tests/test_windows.py::test_three_valued_and_or PASSED     [ 92%]
+lunaops_comms/tests/test_windows.py::test_intersection_of_contact_windows PASSED [ 94%]
+lunaops_comms/tests/test_windows.py::test_stats_and_gaps PASSED          [ 96%]
+lunaops_comms/tests/test_windows.py::test_next_change_and_next_open PASSED [ 98%]
+lunaops_comms/tests/test_windows.py::test_engine_intervals_keep_flags_and_fill_gaps PASSED [100%]
+
+============================== warnings summary ===============================
+lunaops_comms/tests/test_service_api.py::test_meta_precedes_catch_all_and_reports_gm
+  E:\LUNA-OPS\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 57 passed, 1 warning in 1.86s ========================

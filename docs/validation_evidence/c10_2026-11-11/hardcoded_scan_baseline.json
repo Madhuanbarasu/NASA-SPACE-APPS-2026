@@ -1,0 +1,95 @@
+{
+  "srcDir": "C:\\Users\\THILAKHAESH\\AppData\\Local\\Temp\\claude\\bcccb0abf070946f\\451fcf80-35ed-419a-8908-b31a1da3d8b9\\scratchpad\\baseline\\src",
+  "files": 19,
+  "hardcodedFindings": 398,
+  "allowListed": 5,
+  "perFile": {
+    "src/App.tsx": 0,
+    "src/api/client.ts": 1,
+    "src/api/client.ts (examples)": [
+      "32: error message: Cancelled"
+    ],
+    "src/api/types.ts": 0,
+    "src/components/CompareView.tsx": 38,
+    "src/components/CompareView.tsx (examples)": [
+      "10: value of UI property 'label': Sunlit time",
+      "11: value of UI property 'label': Longest darkness",
+      "12: value of UI property 'label': Earth in view"
+    ],
+    "src/components/DataView.tsx": 87,
+    "src/components/DataView.tsx (examples)": [
+      "4: prose-like string literal: UTC to TDB round trip",
+      "4: prose-like string literal: Lunar frame definitions",
+      "4: prose-like string literal: Rotation matrices"
+    ],
+    "src/components/GuideView.tsx": 35,
+    "src/components/GuideView.tsx (examples)": [
+      "4: JSX text: How to read LUNA-OPS",
+      "5: JSX text: Near the Moon's south pole the Sun never climbs high. It cir",
+      "9: JSX text: The horizon panorama"
+    ],
+    "src/components/HorizonPanorama.tsx": 3,
+    "src/components/HorizonPanorama.tsx (examples)": [
+      "79: literal in JSX attribute aria-label: Terrain horizon around the site with the Sun and Earth track",
+      "122: string rendered as JSX content: Az ${…}°  horizon ${…}°${…}",
+      "122: prose-like string literal:  (lower bound)"
+    ],
+    "src/components/MapView.tsx": 6,
+    "src/components/MapView.tsx (examples)": [
+      "52: prose-like string literal: Loading terrain tiles.",
+      "86: argument of state setter setNote: No terrain registered: map shows the graticule only.",
+      "95: argument of state setter setNote: Synthetic test terrain shown: not lunar data."
+    ],
+    "src/components/Sidebar.tsx": 44,
+    "src/components/Sidebar.tsx (examples)": [
+      "18: value of UI property 't': Any part",
+      "18: value of UI property 't': Centre",
+      "18: value of UI property 't': Whole disk"
+    ],
+    "src/components/SiteView.tsx": 106,
+    "src/components/SiteView.tsx (examples)": [
+      "13: prose-like string literal: Sun and Earth positions",
+      "13: prose-like string literal: Horizon",
+      "14: prose-like string literal: Disk visibility"
+    ],
+    "src/components/Terrain3D.tsx": 8,
+    "src/components/Terrain3D.tsx (examples)": [
+      "35: argument of state setter setErr: WebGL is not available in this browser, so the 3D view is of",
+      "120: literal in JSX attribute aria-label: 3D terrain around the site lit by the computed Sun direction",
+      "121: string rendered as JSX content: Loading terrain."
+    ],
+    "src/components/Timeline.tsx": 4,
+    "src/components/Timeline.tsx (examples)": [
+      "13: value of UI property 'label': Sunlit (${…})",
+      "14: value of UI property 'label': Earth in view (${…})",
+      "15: value of UI property 'label': Sunlit and Earth in view"
+    ],
+    "src/components/TopBar.tsx": 18,
+    "src/components/TopBar.tsx (examples)": [
+      "4: value of UI property 'label': Site",
+      "5: value of UI property 'label': Compare",
+      "6: value of UI property 'label': Data and validation"
+    ],
+    "src/components/Welcome.tsx": 21,
+    "src/components/Welcome.tsx (examples)": [
+      "9: value of UI property 'text': Connecting to the LUNA-OPS engine",
+      "10: value of UI property 'text': NAIF kernels loaded, frame ${…}",
+      "10: value of UI property 'text': Test kernels loaded (${…}); download the NAIF set for real r"
+    ],
+    "src/lib/countdown.ts": 0,
+    "src/lib/format.ts": 24,
+    "src/lib/format.ts (examples)": [
+      "1: prose-like string literal: Jan",
+      "1: prose-like string literal: Feb",
+      "1: prose-like string literal: Mar"
+    ],
+    "src/lib/useWidth.ts": 0,
+    "src/main.tsx": 0,
+    "src/state/store.tsx": 3,
+    "src/state/store.tsx (examples)": [
+      "112: value of UI property 'reason': The catalogue could not be loaded.",
+      "129: error message: The analysis stopped.",
+      "154: error message: The comparison stopped."
+    ]
+  }
+}

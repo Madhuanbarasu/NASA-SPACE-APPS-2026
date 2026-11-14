@@ -1,0 +1,1 @@
+import{j as s}from"./index-etxjwEmK.js";function m({x:t,y:a,boxWidth:r,children:i}){const o=t>r*.62?{right:Math.max(4,r-t+14),top:Math.max(4,a-10)}:{left:t+14,top:Math.max(4,a-10)};return s.jsx("div",{className:"chart-tip",style:o,"aria-hidden":!0,children:i})}export{m as C};

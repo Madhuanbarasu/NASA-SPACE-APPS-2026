@@ -1,0 +1,84 @@
+{
+ "summary": {
+  "tileRequests": 84,
+  "routes": [
+   "/api/display/tiles"
+  ],
+  "renderers": [
+   "lunaops_tiles 0.1.0"
+  ],
+  "statuses": [
+   200
+  ],
+  "fromCache": 6,
+  "msMedian": 1335,
+  "msMax": 2186
+ },
+ "shots": [
+  {
+   "name": "map-1-whole",
+   "scale": "200 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-2-site",
+   "scale": "10 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-3-zoom-in-1",
+   "scale": "5 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-4-zoom-in-2",
+   "scale": "2 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-5-zoom-in-3",
+   "scale": "1 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-6-zoom-in-4",
+   "scale": "500 m at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "landing-slope-default"
+  },
+  {
+   "name": "landing-backdrop-only"
+  }
+ ],
+ "cacheTest": {
+  "engineUrlTwice": [
+   {
+    "url": "/api/tiles/7/63/64.png",
+    "status": 200,
+    "renderer": null,
+    "fromDiskCache": false,
+    "fromMemoryCache": false,
+    "servedFromCache": false,
+    "ms": 987
+   },
+   {
+    "url": "/api/tiles/7/63/64.png",
+    "status": 200,
+    "renderer": null,
+    "fromDiskCache": true,
+    "fromMemoryCache": false,
+    "servedFromCache": false,
+    "ms": 29
+   }
+  ]
+ },
+ "console": 0
+}

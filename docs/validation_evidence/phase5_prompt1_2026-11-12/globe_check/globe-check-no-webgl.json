@@ -1,0 +1,31 @@
+{
+ "base": "http://127.0.0.1:8765",
+ "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+ "started": "2026-11-11T19:43:51.785Z",
+ "checks": [
+  {
+   "name": "fallback: without WebGL the globe shows the no-WebGL message and creates no canvas",
+   "ok": true,
+   "detail": "WebGL is not available in this browser, so the 3D globe is off. The south polar map and typed coordinates still work."
+  },
+  {
+   "name": "fallback: the south polar map still works without WebGL",
+   "ok": true
+  }
+ ],
+ "console": [
+  {
+   "type": "error",
+   "text": "THREE.WebGLRenderer: A WebGL context could not be created. Reason:  disabled by enterprise policy or commandline switch"
+  },
+  {
+   "type": "error",
+   "text": "THREE.WebGLRenderer: A WebGL context could not be created. Reason:  disabled by enterprise policy or commandline switch"
+  },
+  {
+   "type": "error",
+   "text": "THREE.WebGLRenderer: Error creating WebGL context."
+  }
+ ],
+ "finished": "2026-11-11T19:43:56.011Z"
+}

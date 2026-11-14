@@ -1,0 +1,40 @@
+PASS backup report_before.json is the original 2279606c…
+PASS report.json rewritten by this run  [5135efe88e5feb0fd36e0230ecba9f2d2b99322a70e1e69e822e13def69df53f]
+PASS run_validation exit 0
+PASS pytest: 0 failed / 0 errors in output  [438 passed, 2 skipped, 1 warning in 857.31s]
+PASS pytest: same counts as the previous merge (438 passed, 2 skipped)  [438 passed, 2 skipped, 1 warning in 857.31s]
+PASS pytest exit code 0 in report  [0]
+PASS no 'NOT merged' lines
+PASS zero rejected merges  [{}]
+PASS algorithm 1.5.0
+PASS code_fingerprint = current build = previous report  [5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8]
+PASS suite_fingerprint = current build = previous report  [1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc]
+PASS kernel profile production; SHA-256 = loaded
+PASS terrain acceptance digest unchanged  [e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce]
+PASS report-level fields unchanged except run_utc (and tests)  [[]]
+PASS label rules digest current
+PASS no report-level label blockers  [[]]
+PASS same set of test entries  [[]]
+PASS every test status unchanged  [{}]
+PASS external entries other than U-04/U-06 byte-identical to the previous report  [[]]
+PASS automated entries identical to the previous report  [[]]
+PASS V-04 = passed (external, horizons_compare)  [status=passed script=horizons_compare]
+PASS V-05 = passed (external, horizons_compare)  [status=passed script=horizons_compare]
+PASS V-09 = not run (external, v09_v10_avgvisib)  [status=not run script=v09_v10_avgvisib]
+PASS V-10 = not run (external, v09_v10_avgvisib)  [status=not run script=v09_v10_avgvisib]
+PASS V-11 = passed (external, v11_psr)  [status=passed script=v11_psr]
+PASS V-12 = passed (external, v12_lroc)  [status=passed script=v12_lroc]
+PASS V-13 = passed (external, v13_eclipse)  [status=passed script=v13_eclipse]
+PASS V-14 = passed (external, v14_month)  [status=passed script=v14_month]
+PASS U-04 = passed (external, frontend_u04)  [status=passed script=frontend_u04]
+PASS U-06 = passed (external, frontend_u06)  [status=passed script=frontend_u06]
+PASS U-04 now carries the Phase 5 result (detail and run_utc of frontend_u04_phase5.json)  [2026-11-12T06:06:55Z]
+PASS U-04 previous entry described the Phase 4 build  [2026-11-11T18:19:06Z]
+PASS U-06 now carries the Phase 5 result (detail and run_utc of frontend_u06_phase5.json)  [2026-11-12T06:06:55Z]
+PASS U-06 previous entry described the Phase 4 build  [2026-11-11T18:19:06Z]
+PASS status counts unchanged (420 passed, 2 not run, 2 skipped)  [{'passed': 420, 'not run': 2, 'skipped': 2}]
+PASS labels (status page) identical to the previous report  [{'sun_earth_azel': 'Validated', 'horizon': 'Validated', 'disk_visibility': 'Pending validation', 'events': 'Pending validation', 'power_indicator': 'Pending validation'}]
+PASS labels (result with horizon sigma) identical, L_corr limitation kept  [{'sun_earth_azel': 'Validated', 'horizon': 'Pending validation', 'disk_visibility': 'Pending validation', 'events': 'Pending validation', 'power_indicator': 'Pending validation'}]
+status counts: {'passed': 420, 'not run': 2, 'skipped': 2}
+ALL CHECKS OK
+exit 0

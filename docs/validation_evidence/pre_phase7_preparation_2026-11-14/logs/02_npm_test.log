@@ -1,0 +1,91 @@
+
+> luna-ops-frontend@0.1.0 test
+> node scripts/check-strings.mjs --self-test && node scripts/check-strings.mjs && node scripts/check-a11y.mjs --self-test && node scripts/check-a11y.mjs && node scripts/check-moon-geo.mjs && node scripts/check-window.mjs
+
+PASS  detects argument of state setter setNote|Loading tiles.
+PASS  detects error message|Something failed
+PASS  detects value of UI property 't'|Any part
+PASS  detects literal in JSX attribute aria-label|Hard coded label
+PASS  detects literal in JSX attribute title|Hard title
+PASS  detects JSX text|Hello world
+PASS  detects literal in JSX attribute placeholder|e.g. 5
+PASS  detects string rendered as JSX content|Hide
+PASS  detects string rendered as JSX content|Show
+PASS  detects returned text|passed
+PASS  detects returned text|Plain prose here
+PASS  ignores technical literal "./not-text-but-a-path"
+PASS  ignores technical literal "hint warn"
+PASS  ignores technical literal "repeating-linear-gradient(45deg,#000 0 2px)"
+PASS  ignores technical literal "not checked"
+PASS  ignores technical literal "sun"
+PASS  ignores technical literal "any"
+PASS  ignores technical literal "cursorMove"
+PASS  ignores technical literal "LUNAOPS:GEO"
+PASS  ignores technical literal "LUNAOPS:SPS"
+PASS  ignores technical literal "featureName"
+PASS  ignores technical literal "#e7ecf1"
+PASS  ignores technical literal "/api/tiles/${…}.png"
+PASS  ignores technical literal "aria-description"
+PASS  finds exactly the expected set
+PASS  resolves an existing key
+PASS  stops at a function call
+PASS  rejects a missing key
+PASS  rejects a misspelt section
+PASS  array method marks the array used
+PASS  string method is not a key
+PASS  dynamic index uses the subtree
+PASS  program check: unknown key via S
+PASS  program check: unknown key via alias
+PASS  program check: hardcoded JSX text
+PASS  dictionary check: malformed placeholder
+PASS  dictionary check: empty string
+PASS  dictionary check: real dictionary is clean
+check-strings self-test: 38/38 passed
+check-strings: 1372 keys, 1372 referenced, 53 files scanned, 7 allow-listed literals, 0 problem(s)
+PASS  detects non-interactive-handler
+PASS  detects positive-tabindex
+PASS  detects focusable-without-role
+PASS  detects role-application
+PASS  detects img-without-name
+PASS  detects svg-without-role
+PASS  detects img-without-alt
+PASS  detects unlabelled-control
+PASS  detects range-without-valuetext
+PASS  detects button-without-name
+PASS  accepts compliant markup
+PASS  allow-listed pointer convenience is accepted
+PASS  detects small text below 4.5:1 (old --faint on panel)
+PASS  detects control boundary below 3:1 (old --line)
+PASS  ratio() matches WCAG reference (#777777 on white = 4.48)
+check-a11y self-test: 15/15 passed
+check-a11y: 40 components, 52 colour pairs, 0 problem(s)
+{
+ "checks": 238972,
+ "roundTripWorstDeg": 3.126388037344441e-13,
+ "sphereGeometryVertices": 64619,
+ "uvWorst": 3.772113232880514e-8,
+ "pickWorstDeg": 1.9108773394776104e-11,
+ "failures": []
+}
+check-moon-geo: 238972 checks passed
+PASS  window valid 30-day window: "2026-11-13T00:00:00Z" -> "2026-12-13T00:00:00Z" = true
+PASS  window one minute (the input's resolution): "2026-11-13T00:00:00Z" -> "2026-11-13T00:01:00Z" = true
+PASS  window one second after the start: "2026-11-13T00:00:00Z" -> "2026-11-13T00:00:01Z" = true
+PASS  window equal start and end: "2026-11-13T00:00:00Z" -> "2026-11-13T00:00:00Z" = false
+PASS  window reversed (end before start): "2026-12-13T00:00:00Z" -> "2026-11-13T00:00:00Z" = false
+PASS  window reversed by one minute: "2026-11-13T00:01:00Z" -> "2026-11-13T00:00:00Z" = false
+PASS  window across a leap day: "2028-02-28T23:00:00Z" -> "2028-02-29T01:00:00Z" = true
+PASS  window across the year boundary: "2026-12-31T23:59:00Z" -> "2027-01-01T00:00:00Z" = true
+PASS  window missing start: "" -> "2026-11-13T00:00:00Z" = false
+PASS  window missing end: "2026-11-13T00:00:00Z" -> "" = false
+PASS  window invalid start: "not a date" -> "2026-11-13T00:00:00Z" = false
+PASS  window null / undefined: null -> undefined = false
+PASS  window with an explicit offset compares by instant (00:00:00Z -> 00:00:01Z) = true
+PASS  panel azimuth 400 deg -> 40 deg (modulo 360)
+PASS  panel azimuth 360 deg -> 0 deg (modulo 360)
+PASS  panel azimuth 720 deg -> 0 deg (modulo 360)
+PASS  panel azimuth -20 deg -> 340 deg (modulo 360)
+PASS  panel azimuth 0 deg -> 0 deg (modulo 360)
+PASS  panel azimuth 359.5 deg -> 359.5 deg (modulo 360)
+PASS  panel azimuth 40 deg -> 40 deg (modulo 360)
+check-window: 20/20 passed

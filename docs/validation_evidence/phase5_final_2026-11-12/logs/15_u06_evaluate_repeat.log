@@ -1,0 +1,7 @@
+U-06 (D3 criteria) on the final Phase 5 build, run set 'repeat'; baseline = accepted 2026-11-11 final U-06 build
+native           LCP worst 520 ms (baseline 192) met | CLS worst 0 (baseline 0) met | p95 32 ms over 20 recorded of 20 (baseline 32) met | memory met {'heapGrowthMB': (0.3, 1.3), 'nodeGrowth': (5, 55), 'listenerGrowth': (5, 15), 'newConsoleWarnings': 0} | TBT cold/warm 0/0 ms (info; baseline 0/0)
+   Phase 5 supplement: Mission tab 62.1 ms; globe canvas 400.2 ms, imagery 398.1 ms (556.7 KB); terrain canvas 126.7 ms, data 280.1 ms; key p95 globe 56 / terrain 32 ms (n = 9/9 events >= 16 ms); remount globe ok {'heapGrowthMB': (0.6, 1.3), 'nodeGrowth': (25, 55), 'listenerGrowth': (5, 15), 'newConsoleWarnings': 0}, terrain ok {'heapGrowthMB': (0.3, 1.3), 'nodeGrowth': (5, 55), 'listenerGrowth': (5, 15), 'newConsoleWarnings': 0}
+cpu4x            LCP worst 988 ms (baseline 632) met | CLS worst 0 (baseline 0) met | p95 64 ms over 20 recorded of 20 (baseline 40) met | TBT cold/warm 350/534 ms (info; baseline 410/248.5)
+   Phase 5 supplement: Mission tab 146 ms; globe canvas 918.8 ms, imagery 356.4 ms (556.7 KB); terrain canvas 142.7 ms, data 192.2 ms; key p95 globe 48 / terrain 24 ms (n = 10/8 events >= 16 ms); remount globe ok {'heapGrowthMB': (0.6, 1.3), 'nodeGrowth': (25, 55), 'listenerGrowth': (5, 15), 'newConsoleWarnings': 0}, terrain ok {'heapGrowthMB': (0.2, 1.3), 'nodeGrowth': (5, 55), 'listenerGrowth': (5, 15), 'newConsoleWarnings': 0}
+U-06 D3 CRITERIA MET IN EVERY MEASURED PROFILE (scoped; not a field Core Web Vitals claim)
+exit 0

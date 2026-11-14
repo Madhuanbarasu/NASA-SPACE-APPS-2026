@@ -1,0 +1,27 @@
+Phase 6 changed files (computed from the baseline and after hash lists)
+
+frontend/ (modified):
+  src/App.tsx
+  src/api/client.ts
+  src/api/types.ts
+  src/components/MissionView.tsx
+  src/components/TopBar.tsx
+  src/i18n/en.ts
+  src/state/store.tsx
+  src/styles/app.css
+  src/styles/shell.css
+frontend/ (new):
+  src/components/CommsCharts.tsx
+  src/components/CommsView.tsx
+  src/styles/comms.css
+frontend/ (removed):
+  none
+
+start.py (modified: four lines attach the /api/comms routes after the landing routes; see README)
+backend/lunaops_comms/ (new package, outside the code and suite fingerprints): logs/lunaops_comms_sha256.txt
+data/comms/ (new: manifest.json and NAIF gm_de440.tpc): logs/data_comms_sha256.txt
+
+Unchanged (verified): backend/lunaops/** (logs/backend_lunaops_sha256_after.txt equals the baseline), backend/tests/**,
+backend/validation/** (suite fingerprint), backend/validation/report.json, backend/lunaops_landing/** (Phase 5 package),
+data/dem/registry.json, data/landing/manifest.json, data/kernels/lock.json, backend/lunaops/manifests/datasets.json,
+backend/requirements.txt, frontend/package.json and package-lock.json (no new dependency).

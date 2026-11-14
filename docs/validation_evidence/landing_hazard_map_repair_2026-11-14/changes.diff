@@ -1,0 +1,235 @@
+diff --git a/docs/validation_evidence/landing_hazard_map_repair_2026-11-14/originals/LandingView.tsx b/frontend/src/components/LandingView.tsx
+index d1eec1d..b064e8f 100644
+--- a/docs/validation_evidence/landing_hazard_map_repair_2026-11-14/originals/LandingView.tsx
++++ b/frontend/src/components/LandingView.tsx
+@@ -175,6 +175,47 @@ export function LandingView() {
+   // footprint changes (position, radius, thresholds) are re-evaluated on the assessment already held by the server
+   const aRef = useRef(a);
+   aRef.current = a;
++
++  // The server holds only its latest few screenings (backend/lunaops_landing/assess.py CACHE_MAX), so the one on screen
++  // can be dropped when other screenings run (another site, the mission dashboard, another browser tab). Its layer
++  // images and footprint requests then fail with 404 and the overlay used to vanish without explanation. The screening
++  // is re-run with the configuration the server reported for it (same site, window, resolved product, roughness window
++  // and depression limits). The assessment id is a hash of exactly these inputs, the product checksum and the landing
++  // code, so the server recomputes the same result from the same data; nothing is computed or substituted here.
++  const [rev, setRev] = useState(0);
++  const restores = useRef(new Map<string, number>());
++  const restoring = useRef(false);
++  const restore = useCallback(async () => {
++    const cur = aRef.current;
++    if (!cur || restoring.current) return;
++    const n = restores.current.get(cur.id) ?? 0;
++    if (n >= 2) { setError(L.restoreFailed); return; }   // at most two re-runs per screening, never a loop
++    restores.current.set(cur.id, n + 1);
++    restoring.current = true;
++    try {
++      const c = cur.config;
++      const res = await api.landingAssess({
++        lat: c.lat, lon: c.lon, window_half_m: c.window_half_m, product: c.product, roughness_window_px: c.roughness_window_px,
++        min_depth_m: c.min_depth_m, min_diameter_m: c.min_diameter_m ?? null, max_diameter_m: c.max_diameter_m ?? null,
++        footprint: { lat: fpPos?.lat ?? c.lat, lon: fpPos?.lon ?? c.lon, radius_m: radiusM, thresholds },
++      });
++      if (aRef.current?.id !== cur.id) return;          // another screening replaced it in the meantime
++      setError(null);
++      dispatch({ type: "landing", landing: res });
++      setRev((r) => r + 1);
++    } catch (e: any) {
++      setError(String(e?.message || e));
++    } finally {
++      restoring.current = false;
++    }
++  }, [fpPos, radiusM, thresholds, dispatch]);
++  const restoreRef = useRef(restore);
++  restoreRef.current = restore;
++
++  // a terrain product chosen for an earlier site is not carried to a site it does not cover (the request would fail)
++  useEffect(() => {
++    if (product !== AUTO && coverage?.products && !coverage.products.includes(product)) setProduct(AUTO);
++  }, [product, coverage]);
+   const first = useRef(true);
+   useEffect(() => {
+     if (first.current) { first.current = false; return; }
+@@ -185,7 +226,7 @@ export function LandingView() {
+       setFpBusy(true);
+       api.landingFootprint(cur.id, { lat: fpPos.lat, lon: fpPos.lon, radius_m: radiusM, thresholds })
+         .then((res) => { if (live) dispatch({ type: "landing", landing: { ...cur, footprint: res } }); })
+-        .catch((e) => { if (live) setError(String(e?.message || e)); })
++        .catch((e) => { if (!live) return; if (e?.status === 404) void restoreRef.current(); else setError(String(e?.message || e)); })
+         .finally(() => { if (live) setFpBusy(false); });
+     }, DEBOUNCE_MS);
+     return () => { live = false; window.clearTimeout(t); };
+@@ -210,6 +251,16 @@ export function LandingView() {
+     : coverage.covered ? S.explorer.covered(coverage.levels.join(", ")) : S.explorer.notCovered(coverage.reason ?? S.common.unknown);
+   const layerOf = (n: string) => a?.layers.find((x) => x.name === n);
+   const rasterAvailable = (r: RasterLayer) => r === "slope_exceed" || r === "coverage" || !!layerOf(r)?.available;
++  // a value layer with no values in the analysed window (no colour range from the server) is said so on the map itself
++  const shownLayer = layers.raster && layers.raster !== "coverage" && layers.raster !== "slope_exceed" ? layerOf(layers.raster) : undefined;
++  const mapNotice = shownLayer && (!shownLayer.available || !shownLayer.legend?.range)
++    ? L.layerNoData(L.layers[layers.raster as keyof typeof L.layers]) : null;
++  // A footprint finer than the DEM pixels cannot be resolved (the server reports "Requires higher-resolution data").
++  // Name the finer registered products that cover this site, from the coverage check; the pixel size is the level
++  // prefix of the product key ("20m:..."). Nothing is resampled here.
++  const pixelOf = (k: string) => { const m = /^(\d+(?:\.\d+)?)m:/.exec(k); return m ? Number(m[1]) : null; };
++  const coarseFp = !!fp && fp.findings.some((f) => f.key !== "obstacles" && f.status === "higher_res");
++  const finer = a && coarseFp && !stale ? (coverage?.products ?? []).filter((k) => { const p = pixelOf(k); return p != null && p < a.provenance.dem.pixel_m; }) : [];
+   const sm = a?.summary;
+   const prov = a?.provenance;
+   const histMax = sm ? Math.max(1, ...sm.slope_hist.counts) : 1;
+@@ -312,7 +363,8 @@ export function LandingView() {
+             <Suspense fallback={<div className="pane-empty">{L.mapLoading}</div>}>
+               <LandingMap key={a.id} assessment={a} layers={layers} slopeThreshold={thresholds.slope_deg}
+                           footprint={{ lat: fpPos?.lat ?? a.config.lat, lon: fpPos?.lon ?? a.config.lon, radius_m: radiusM }}
+-                          onMoveFootprint={(la, lo) => setFpPos({ lat: la, lon: lo })} selected={selected} onSelect={setSelected} />
++                          onMoveFootprint={(la, lo) => setFpPos({ lat: la, lon: lo })} selected={selected} onSelect={setSelected}
++                          rev={rev} onLayerError={() => void restore()} notice={mapNotice} />
+             </Suspense>
+           </LazyBoundary>
+           <Legend layer={layers.raster ? layerOf(layers.raster) : undefined} raster={layers.raster} threshold={thresholds.slope_deg}
+@@ -382,6 +434,12 @@ export function LandingView() {
+         </dl>
+       )}
+       <h3 className="landing-subhead">{L.findingsHeading}{fpBusy && <span className="hint"> {L.updating}</span>}</h3>
++      {coarseFp && (
++        <p className="hint warn landing-footprint-hint">
++          {finer.length > 0 ? L.fpCoarseFiner(a.provenance.dem.key, fmtNum(a.provenance.dem.pixel_m, 0), finer.join(", "))
++            : L.fpCoarseNone(a.provenance.dem.key, fmtNum(a.provenance.dem.pixel_m, 0))}
++        </p>
++      )}
+       <ul className="landing-findings" aria-live="polite">{fp.findings.map((f) => <Finding key={f.key} f={f} />)}</ul>
+       <p className="hint">{L.findingsNote}</p>
+     </section>
+diff --git a/docs/validation_evidence/landing_hazard_map_repair_2026-11-14/originals/LandingMap.tsx b/frontend/src/components/LandingMap.tsx
+index 5a58442..bdcaa89 100644
+--- a/docs/validation_evidence/landing_hazard_map_repair_2026-11-14/originals/LandingMap.tsx
++++ b/frontend/src/components/LandingMap.tsx
+@@ -50,6 +50,12 @@ interface Props {
+   onMoveFootprint: (lat: number, lon: number) => void;
+   selected: number | null;
+   onSelect: (id: number | null) => void;
++  /** increases each time the screening was re-run on the server after the overlay image failed to load */
++  rev: number;
++  /** the overlay image of the selected layer could not be loaded (the base map and outlines stay on screen) */
++  onLayerError: () => void;
++  /** a message about the selected layer shown over the map (for example: no values in the analysed window) */
++  notice: string | null;
+ }
+ 
+ const reducedMotion = () => !!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+@@ -75,7 +81,7 @@ function ellipse(c: LandingCandidate): Polygon {
+   return new Polygon([ring]);
+ }
+ 
+-export function LandingMap({ assessment, layers, slopeThreshold, footprint, onMoveFootprint, selected, onSelect }: Props) {
++export function LandingMap({ assessment, layers, slopeThreshold, footprint, onMoveFootprint, selected, onSelect, rev, onLayerError, notice }: Props) {
+   const host = useRef<HTMLDivElement>(null);
+   const mapRef = useRef<OlMap | null>(null);
+   const rasterRef = useRef<ImageLayer<ImageStatic> | null>(null);
+@@ -85,6 +91,9 @@ export function LandingMap({ assessment, layers, slopeThreshold, footprint, onMo
+   const fpFeature = useRef(new Feature());
+   const [pointer, setPointer] = useState<{ lat: number; lon: number; v: LandingPoint | null } | null>(null);
+   const [tileNote, setTileNote] = useState<string | null>(null);
++  const [overlayFailed, setOverlayFailed] = useState(false);
++  const layerErrorRef = useRef(onLayerError);
++  layerErrorRef.current = onLayerError;
+   const moveRef = useRef(onMoveFootprint);
+   moveRef.current = onMoveFootprint;
+   const selectRef = useRef(onSelect);
+@@ -171,12 +180,24 @@ export function LandingMap({ assessment, layers, slopeThreshold, footprint, onMo
+   useEffect(() => {
+     const L = rasterRef.current;
+     if (!L) return;
++    setOverlayFailed(false);
+     if (!layers.raster || (layers.raster === "slope_exceed" && slopeThreshold == null)) { L.setSource(null); return; }
+-    L.setSource(new ImageStatic({
+-      url: api.landingLayerUrl(assessment.id, layers.raster, layers.raster === "slope_exceed" ? slopeThreshold : null),
++    const src = new ImageStatic({
++      url: api.landingLayerUrl(assessment.id, layers.raster, layers.raster === "slope_exceed" ? slopeThreshold : null, rev),
+       imageExtent: extent, projection: "LUNAOPS:SPS", interpolate: false,
+-    }));
+-  }, [assessment.id, layers.raster, slopeThreshold, extent]);
++    });
++    // A failed overlay image (for example a screening the server no longer holds) is removed, so no image of another
++    // layer stays under this layer's legend; the backdrop, outlines and footprint stay, and LandingView is told.
++    let live = true;
++    src.on("imageloaderror", () => {
++      if (!live) return;
++      L.setSource(null);
++      setOverlayFailed(true);
++      layerErrorRef.current();
++    });
++    L.setSource(src);
++    return () => { live = false; };
++  }, [assessment.id, layers.raster, slopeThreshold, extent, rev]);
+   useEffect(() => { rasterRef.current?.setOpacity(layers.opacity); }, [layers.opacity]);
+ 
+   // analysis window outline
+@@ -234,6 +255,9 @@ export function LandingMap({ assessment, layers, slopeThreshold, footprint, onMo
+           <button type="button" aria-label={S.landing.map.reset} title={S.landing.map.reset} onClick={reset}><Icon name="fit" /></button>
+           <button type="button" aria-label={S.landing.map.toFootprint} title={S.landing.map.toFootprint} onClick={toFootprint}><Icon name="target" /></button>
+         </div>
++        {(overlayFailed || notice) && (
++          <p className="landing-map-status" role="status">{overlayFailed ? S.landing.layerFailed : notice}</p>
++        )}
+         <div className="stage-readout map-readout landing-readout" aria-hidden>
+           {pointer ? (
+             <>
+diff --git a/docs/validation_evidence/landing_hazard_map_repair_2026-11-14/originals/en.ts b/frontend/src/i18n/en.ts
+index ebdeb46..33d07da 100644
+--- a/docs/validation_evidence/landing_hazard_map_repair_2026-11-14/originals/en.ts
++++ b/frontend/src/i18n/en.ts
+@@ -1124,6 +1124,13 @@ export const en = {
+     mapEmpty: "Run the screening to see the hazard layers for the selected site.",
+     mapLoading: "Loading the hazard map.",
+     mapFailed: "The hazard map could not be loaded.",
++    layerFailed: "This layer's image could not be loaded, so it is not drawn. The base map and outlines are still shown. Re-running this screening with the same settings.",
++    layerNoData: (layer: string) => `No data: ${layer} has no values in the analysed window (coverage unavailable). The base map is still shown.`,
++    restoreFailed: "the server no longer holds this screening and re-running it did not restore its layers. Run the screening again.",
++    fpCoarseFiner: (product: string, px: string, finer: string) =>
++      `This screening uses ${product} (${px} m pixels), which is too coarse for this footprint. Finer registered products cover this site: ${finer}. Choose "Finest product covering the window" (or one of these) and run the screening again.`,
++    fpCoarseNone: (product: string, px: string) =>
++      `This screening uses ${product} (${px} m pixels), which is too coarse for this footprint. No finer registered product covers this site, so these findings cannot be resolved here. Enlarging the footprint would assess a different area.`,
+     layersLegend: "Layers",
+     rasterLabel: "Raster layer",
+     layers: {
+diff --git a/docs/validation_evidence/landing_hazard_map_repair_2026-11-14/originals/landing.css b/frontend/src/styles/landing.css
+index a06dc75..72e7f57 100644
+--- a/docs/validation_evidence/landing_hazard_map_repair_2026-11-14/originals/landing.css
++++ b/frontend/src/styles/landing.css
+@@ -48,6 +48,8 @@
+ .landing-map .map-host { cursor: crosshair; }
+ .landing-readout { flex-wrap: wrap; white-space: normal; max-width: calc(100% - 24px); }
+ .landing-readout .bad { color: var(--alert); }
++/* a message about the selected layer over the map (load failure, no values); the base map stays visible beneath it */
++.landing-map-status { position: absolute; top: 12px; left: 56px; right: 56px; z-index: 3; margin: 0; padding: 6px 10px; border: 1px solid var(--line); border-radius: var(--r-m); background: var(--hud-strong); color: var(--text); font-size: var(--fs-s); line-height: 1.35; pointer-events: none; }
+ .landing-legend { list-style: none; margin: 6px 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: var(--fs-xs); color: var(--muted); align-items: center; }
+ .landing-legend li { display: inline-flex; align-items: center; gap: 6px; }
+ div.landing-legend { display: grid; gap: 4px; max-width: 420px; }
+diff --git a/docs/validation_evidence/landing_hazard_map_repair_2026-11-14/originals/client.ts b/frontend/src/api/client.ts
+index 36faece..041a70f 100644
+--- a/docs/validation_evidence/landing_hazard_map_repair_2026-11-14/originals/client.ts
++++ b/frontend/src/api/client.ts
+@@ -6,7 +6,8 @@ async function req<T>(url: string, init?: RequestInit): Promise<T> {
+   if (!r.ok) {
+     let detail = r.statusText;
+     try { const j = await r.json(); detail = typeof j.detail === "string" ? j.detail : JSON.stringify(j.detail); } catch { /* keep */ }
+-    throw new Error(detail);
++    // the HTTP status travels with the error, so a caller can tell "no longer held by the server" (404) from other failures
++    throw Object.assign(new Error(detail), { status: r.status });
+   }
+   return r.json() as Promise<T>;
+ }
+@@ -32,8 +33,11 @@ export const api = {
+   landingPoint: (id: string, lat: number, lon: number) => req<LandingPoint>(`/api/landing/${id}/point?lat=${lat}&lon=${lon}`),
+   // Phase 6: preliminary communication simulation (backend/lunaops_comms)
+   commsSimulate: (body: unknown) => req<CommsResult>("/api/comms/simulate", { method: "POST", body: JSON.stringify(body) }),
+-  landingLayerUrl: (id: string, name: string, threshold?: number | null) =>
+-    `/api/landing/${id}/layer/${name}.png${threshold != null ? `?threshold=${threshold}` : ""}`,
++  // rev > 0 only after the screening was re-run on the server: a new URL, so a failed image is not reused from the cache
++  landingLayerUrl: (id: string, name: string, threshold?: number | null, rev = 0) => {
++    const q = [threshold != null ? `threshold=${threshold}` : "", rev > 0 ? `rev=${rev}` : ""].filter(Boolean).join("&");
++    return `/api/landing/${id}/layer/${name}.png${q ? `?${q}` : ""}`;
++  },
+ };
+ 
+ export async function waitForJob(id: string, onProgress: (j: Job) => void, signal?: AbortSignal): Promise<Job> {

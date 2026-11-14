@@ -1,0 +1,122 @@
+{
+ "withLanding-1200": {
+  "sw": 1200,
+  "vw": 1200,
+  "over": [],
+  "kids": [
+   "icon-button params-toggl:36",
+   "brand:220",
+   "nav-toggle:72",
+   "tabs:0",
+   "topbar-right:585"
+  ]
+ },
+ "withLanding-1440": {
+  "sw": 1440,
+  "vw": 1440,
+  "over": [],
+  "kids": [
+   "icon-button params-toggl:36",
+   "brand:220",
+   "nav-toggle:72",
+   "tabs:0",
+   "topbar-right:585"
+  ]
+ },
+ "withLanding-1599": {
+  "sw": 1599,
+  "vw": 1599,
+  "over": [],
+  "kids": [
+   "icon-button params-toggl:36",
+   "brand:220",
+   "nav-toggle:72",
+   "tabs:0",
+   "topbar-right:585"
+  ]
+ },
+ "withLanding-1600": {
+  "sw": 1600,
+  "vw": 1600,
+  "over": [],
+  "kids": [
+   "icon-button params-toggl:36",
+   "brand:220",
+   "nav-toggle:0",
+   "tabs:600",
+   "topbar-right:585"
+  ]
+ },
+ "withLanding-1680": {
+  "sw": 1680,
+  "vw": 1680,
+  "over": [],
+  "kids": [
+   "icon-button params-toggl:36",
+   "brand:220",
+   "nav-toggle:0",
+   "tabs:600",
+   "topbar-right:585"
+  ]
+ },
+ "withLanding-1920": {
+  "sw": 1920,
+  "vw": 1920,
+  "over": [],
+  "kids": [
+   "icon-button params-toggl:36",
+   "brand:220",
+   "nav-toggle:0",
+   "tabs:600",
+   "topbar-right:585"
+  ]
+ },
+ "withLanding-1024": {
+  "sw": 1024,
+  "vw": 1024,
+  "over": [],
+  "kids": [
+   "icon-button params-toggl:36",
+   "brand:220",
+   "nav-toggle:72",
+   "tabs:0",
+   "topbar-right:388"
+  ]
+ },
+ "withLanding-390": {
+  "sw": 390,
+  "vw": 390,
+  "over": [],
+  "kids": [
+   "icon-button params-toggl:36",
+   "brand:30",
+   "nav-toggle:69",
+   "tabs:0",
+   "topbar-right:366"
+  ]
+ },
+ "withLanding-320": {
+  "sw": 320,
+  "vw": 320,
+  "over": [],
+  "kids": [
+   "icon-button params-toggl:36",
+   "brand:30",
+   "nav-toggle:69",
+   "tabs:0",
+   "topbar-right:296"
+  ]
+ },
+ "menu1280": {
+  "open": "true",
+  "items": [
+   "Mission:44",
+   "Site:44",
+   "Landing:44",
+   "Comms:44",
+   "Compare:44",
+   "Data and validation:44",
+   "Guide:44"
+  ]
+ }
+}

@@ -1,0 +1,8 @@
+# whatif_240m.py ... all: the 200 formal points, LUNAOPS_WINDOW_MODE=full, registered 80 m DEM plus PGDA 90
+# LDEM_60S_240MPP_ADJ.TIF (218,961,039 B, SHA-256 3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34;
+# scratch only, not registered) as the 240 m window (600 km); 2026-11-10. Completeness only; no sunlight computed.
+baseline (registered terrain, reference mode) equals the adaptive-mode diagnostic at 200/200 points
+incomplete with the registered terrain: 7/200; incomplete with the 240 m product added: 0/200
+complete with the 240 m product added: 200/200
+h_max with the 240 m product: 7024.8 to 7026.3 m
+levels used: [('80m', '240m')]

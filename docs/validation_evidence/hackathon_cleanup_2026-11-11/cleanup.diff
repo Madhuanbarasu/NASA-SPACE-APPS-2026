@@ -1,0 +1,29 @@
+--- before: frontend/src/components/CompareView.tsx	2026-11-11 13:43:50.799296000 +0530
++++ frontend/src/components/CompareView.tsx	2026-11-11 13:43:56.796655300 +0530
+@@ -52,7 +52,6 @@
+     return `rgba(242, 181, 68, ${0.06 + 0.3 * t})`;
+   };
+ 
+-  const target = sites.length >= 4 && wins.length >= 3;
+   const busy = !!state.compareJob;
+ 
+   return (
+@@ -109,7 +108,6 @@
+       <div style={{ padding: "16px 24px 0", display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
+         <button className="run-button" style={{ width: "auto", marginTop: 0 }} disabled={!sites.length || !wins.length || busy}
+                 onClick={() => runComparison()}>{busy ? T.comparing : T.run(sites.length, wins.length)}</button>
+-        <span className="hint">{target ? T.targetMet : T.target}</span>
+         {state.compareJob && <span className="hint" aria-live="polite">{state.compareJob.message}</span>}
+         {state.compareError && <span className="hint bad" role="alert">{state.compareError}</span>}
+       </div>
+--- before: frontend/src/i18n/en.ts	2026-11-11 13:43:50.870723600 +0530
++++ frontend/src/i18n/en.ts	2026-11-11 13:43:57.304112700 +0530
+@@ -355,8 +355,6 @@
+     addNextMonth: "Add one synodic month later",
+     comparing: "Comparing",
+     run: (sites: number, windows: number) => `Compare ${sites} × ${windows}`,
+-    targetMet: "Meets the team target of at least 4 sites × 3 windows (C01).",
+-    target: "Team target: at least 4 sites × 3 windows (C01).",
+     matrixRegion: "Comparison matrix",
+     metricLabel: "Metric",
+     csv: "Comparison CSV",

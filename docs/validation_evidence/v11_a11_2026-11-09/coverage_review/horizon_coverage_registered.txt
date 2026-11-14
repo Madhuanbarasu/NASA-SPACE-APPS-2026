@@ -1,0 +1,18 @@
+# horizon_coverage.py on the 200 formal points (formal_points_seed1_80S.json), engine compute_horizon with the
+# registered terrain only: LDEM_80S_80MPP_ADJ (SHA-256 82030dcb...beee5a = registry), found via LUNAOPS_DEM_FALLBACK_DIRS;
+# data/ and the registry untouched; adaptive window mode (default); 2026-11-09. No sunlight computed.
+complete horizons: 193/200; incomplete: 7/200
+  -90 to -88:  30 points, 0 incomplete
+  -88 to -85:  63 points, 0 incomplete
+  -85 to -82:  72 points, 0 incomplete
+  -82 to -80:  35 points, 7 incomplete
+incomplete points (bins of 3600; why the rays broke; upper bound on the reach that would close every bin; how far north it goes):
+  lat  -80.979 lon   88.411:   14 bins; left the 80 m data   14 (from   31.7 km), end of the 250 km window   0; reach needed <=   32.0 km, to -79.999 deg; beyond the 80 m square: yes
+  lat  -80.942 lon   86.784:  620 bins; left the 80 m data  620 (from   29.0 km), end of the 250 km window   0; reach needed <=   43.5 km, to -79.748 deg; beyond the 80 m square: yes
+  lat  -80.815 lon  349.914:   34 bins; left the 80 m data    0, end of the 250 km window  34; reach needed <=  254.1 km, to -86.788 deg; beyond the 80 m square: no
+  lat  -80.771 lon  349.863:   78 bins; left the 80 m data    0, end of the 250 km window  78; reach needed <=  260.5 km, to -86.512 deg; beyond the 80 m square: no
+  lat  -80.676 lon   85.904:  391 bins; left the 80 m data  391 (from   21.2 km), end of the 250 km window   0; reach needed <=   23.1 km, to -79.915 deg; beyond the 80 m square: yes
+  lat  -80.624 lon   86.958:  408 bins; left the 80 m data  408 (from   19.4 km), end of the 250 km window   0; reach needed <=   28.0 km, to -79.866 deg; beyond the 80 m square: yes
+  lat  -80.339 lon  195.274:  920 bins; left the 80 m data  920 (from   20.6 km), end of the 250 km window   0; reach needed <=   50.5 km, to -79.331 deg; beyond the 80 m square: yes
+scoring with this terrain: at most 193/200 = 96.5% can be demonstrated dark (< 99%), so V-11 cannot pass on the registered terrain; it is at best inconclusive
+northernmost terrain needed: -79.331 deg (map radius 324.5 km); longest reach needed 260.5 km

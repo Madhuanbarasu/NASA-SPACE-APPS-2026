@@ -1,0 +1,4 @@
+# python -I timing.py <backend> <backend/tests>   (2026-11-09, same container as the suites, after the numba kernels)
+# EventDetector.run over 30 days from 2026-11-14, site -89, 45, sloped horizon (slope 0.6) through Earth's median position;
+# old frozen pole and new CIP pole alternated in one process, 3 repetitions each (seconds)
+{'frozen': [11.48, 10.81, 11.43], 'CIP': [11.64, 11.44, 12.73]} median ratio CIP/frozen 1.018

@@ -1,0 +1,7 @@
+10:02:02 cpu4x-net10mbps cold 1
+10:02:06 cpu4x-net10mbps cold 2
+10:02:10 cpu4x-net10mbps cold 3
+10:02:12 cpu4x-net10mbps warm 1
+10:02:15 cpu4x-net10mbps warm 2
+cpu4x-net10mbps: cold appReady 2355.6 ms, FCP 2000, LCP 2000, TBT 50, JS 1215.1 KB; warm appReady 1340.4; complete=true
+exit=0

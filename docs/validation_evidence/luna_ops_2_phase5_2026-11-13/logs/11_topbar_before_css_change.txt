@@ -1,0 +1,13 @@
+Top-bar overflow measured in this session BEFORE the shell.css change (compact menu only below 1200 px), with the
+Phase 5 build at 1200/1280/1366 px. "withoutLanding" hides the new Landing tab in the page, i.e. the Phase 1-4 five-tab
+bar. Values: document scrollWidth at the viewport width (overflow = scrollWidth - width). Transcribed from the
+session's measurement output (script: E:\Temp\LUNA-OPS\topbar.mjs, an earlier variant of scripts/topbar_body.mjs).
+
+width  five tabs (Phase 1-4 bar)   six tabs (with Landing)
+1200   1309  (overflow 109 px)      1368  (overflow 168 px)
+1280   1331  (overflow  51 px)      1390  (overflow 110 px)
+1366   1366  (none)                 1414  (overflow  48 px)
+1440   not measured                 1440 with label "Landing" (none); 1464 with label "Landing safety" (overflow 24 px)
+Overflowing elements at 1200 px: data-pill, mode-switch and its buttons (the Technical/Public switch left the screen).
+
+After the change (compact menu below 1440 px): no overflow from 320 to 1920 px, see previews/topbar.json.

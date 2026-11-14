@@ -1,0 +1,1 @@
+import{j as r}from"./index-etxjwEmK.js";function n({items:a,label:s,className:l}){return r.jsx("ul",{className:l?`chart-legend ${l}`:"chart-legend","aria-label":s,children:a.map(e=>r.jsxs("li",{children:[r.jsx("i",{className:`lg lg-${e.swatch}`,"aria-hidden":!0,style:e.color?{"--lg":e.color}:void 0}),e.text]},e.text))})}export{n as C};

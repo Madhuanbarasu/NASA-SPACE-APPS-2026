@@ -1,0 +1,162 @@
+{
+ "label": "before",
+ "report": {
+  "desktop": {
+   "heads": [
+    {
+     "text": "Test",
+     "w": 154
+    },
+    {
+     "text": "What it checks",
+     "w": 69
+    },
+    {
+     "text": "Status",
+     "w": 36
+    },
+    {
+     "text": "Detail",
+     "w": 792
+    }
+   ],
+   "rows": 424,
+   "statusWords": [
+    "passed",
+    "not run",
+    "skipped"
+   ],
+   "wrappedStatuses": 424,
+   "wrappedExamples": [
+    "passed",
+    "passed",
+    "passed"
+   ],
+   "scrollable": false,
+   "boxW": 1050,
+   "tableW": 1050
+  },
+  "phone": {
+   "heads": [
+    {
+     "text": "Test",
+     "w": 62
+    },
+    {
+     "text": "What it checks",
+     "w": 41
+    },
+    {
+     "text": "Status",
+     "w": 30
+    },
+    {
+     "text": "Detail",
+     "w": 224
+    }
+   ],
+   "rows": 424,
+   "statusWords": [
+    "passed",
+    "not run",
+    "skipped"
+   ],
+   "wrappedStatuses": 424,
+   "wrappedExamples": [
+    "passed",
+    "passed",
+    "passed"
+   ],
+   "scrollable": false,
+   "boxW": 356,
+   "tableW": 356
+  }
+ },
+ "map": {
+  "desktop": {
+   "mapPaneH": 782,
+   "terrainPaneH": 782,
+   "stageH": 468,
+   "stageW": 499,
+   "blankBelowCaption": 223,
+   "canvasH": 468,
+   "controls": true
+  },
+  "tablet": {
+   "mapPaneH": 730,
+   "terrainPaneH": 730,
+   "stageH": 399,
+   "stageW": 461,
+   "blankBelowCaption": 239,
+   "canvasH": 399,
+   "controls": true
+  },
+  "phone": {
+   "mapPaneH": 548,
+   "terrainPaneH": 942,
+   "stageH": 439,
+   "stageW": 330,
+   "blankBelowCaption": 1,
+   "canvasH": 439,
+   "controls": true
+  }
+ },
+ "layout": {
+  "data-desktop": {
+   "left": 340,
+   "width": 1100,
+   "headerLeft": 364,
+   "h2Left": 364,
+   "h2Width": 1052,
+   "firstTextWidth": 1052,
+   "hscroll": false
+  },
+  "guide-desktop": {
+   "left": 340,
+   "width": 900,
+   "headerLeft": 364,
+   "h2Left": 364,
+   "h2Width": 852,
+   "firstTextWidth": 852,
+   "hscroll": false
+  },
+  "data-tablet": {
+   "left": 0,
+   "width": 1024,
+   "headerLeft": 24,
+   "h2Left": 24,
+   "h2Width": 976,
+   "firstTextWidth": 976,
+   "hscroll": false
+  },
+  "guide-tablet": {
+   "left": 0,
+   "width": 900,
+   "headerLeft": 24,
+   "h2Left": 24,
+   "h2Width": 852,
+   "firstTextWidth": 852,
+   "hscroll": false
+  },
+  "data-phone": {
+   "left": 0,
+   "width": 390,
+   "headerLeft": 16,
+   "h2Left": 16,
+   "h2Width": 358,
+   "firstTextWidth": 358,
+   "hscroll": false
+  },
+  "guide-phone": {
+   "left": 0,
+   "width": 390,
+   "headerLeft": 16,
+   "h2Left": 16,
+   "h2Width": 358,
+   "firstTextWidth": 358,
+   "hscroll": false
+  }
+ },
+ "consoleErrors": []
+}
+exit 0

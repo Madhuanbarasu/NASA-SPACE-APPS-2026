@@ -1,0 +1,538 @@
+{
+ "run_set": "final",
+ "profiles_measured": [
+  "native",
+  "cpu4x",
+  "cpu4x-net10mbps"
+ ],
+ "criteria": {
+  "lcp_ms": 2500,
+  "cls": 0.1,
+  "interaction_p95_ms": 200,
+  "memory_rule": "growth <= accepted baseline + margin {\"heapGrowthMB\": 1.0, \"nodeGrowth\": 50, \"listenerGrowth\": 10}, no new console warnings",
+  "tbt": "information only"
+ },
+ "profiles": {
+  "native": {
+   "runs": 5,
+   "blocked": [
+    "*/api/tiles/0/0/0.png",
+    "*/api/tiles/1/0/1.png"
+   ],
+   "browser": "Chrome/157.0.8103.51",
+   "webgl": "ANGLE (Intel, Intel(R) Graphics (0x0000A7AC) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+   "lcp_worst_ms": 540,
+   "lcp_worst_ms_baseline": 192,
+   "cls_worst": 0,
+   "cls_worst_baseline": 0,
+   "cold_median": {
+    "fcp": 240,
+    "lcp": 240,
+    "appReadyMs": 468.4,
+    "tbt": 0,
+    "longestTask": 92,
+    "heapMB": 24.2
+   },
+   "warm_median": {
+    "fcp": 220,
+    "lcp": 220,
+    "appReadyMs": 448.7,
+    "tbt": 0,
+    "longestTask": 89,
+    "heapMB": 23.2
+   },
+   "cold_median_baseline": {
+    "fcp": 180,
+    "lcp": 180,
+    "appReadyMs": 400.8,
+    "tbt": 0,
+    "longestTask": 76,
+    "heapMB": 23.4
+   },
+   "js_kb_cold": 767.7,
+   "js_kb_cold_baseline": 734.9,
+   "lcp_met": true,
+   "cls_met": true,
+   "interaction": {
+    "cursorStep": {
+     "interactions": 16,
+     "medianMs": 20,
+     "p95Ms": 56,
+     "maxMs": 56
+    },
+    "baseline": {
+     "interactions": 20,
+     "medianMs": 16,
+     "p95Ms": 32,
+     "maxMs": 48
+    },
+    "met": true
+   },
+   "interactions_reported": {
+    "tabs": {
+     "Compare": 25.4,
+     "Data and validation": 53.6,
+     "Guide": 26.5,
+     "Site": 33.5
+    },
+    "analysisToResultMs": 269.3,
+    "analysisTo3DDataMs": 475.7,
+    "analysisToMapTilesMs": null,
+    "resultJsonKB": 319.5,
+    "resultFetchMs": 128.4,
+    "terrainGridKB": 190.2,
+    "series": "337",
+    "playback": {
+     "steps": 34,
+     "frames": 302,
+     "fps": 60.3,
+     "frameP95": 16.9,
+     "frameMax": 17.2,
+     "longTasks": 0,
+     "longestTask": 0,
+     "blockingMs": 0,
+     "expectedSteps": 35,
+     "scriptMsPerStep": 2.7,
+     "layoutMs": 20,
+     "domNodes": 1342
+    },
+    "playbackTablesOpen": {
+     "steps": 34,
+     "frames": 302,
+     "fps": 60.3,
+     "frameP95": 16.8,
+     "frameMax": 16.9,
+     "longTasks": 0,
+     "longestTask": 0,
+     "blockingMs": 0,
+     "expectedSteps": 35,
+     "scriptMsPerStep": 3,
+     "layoutMs": 11.8,
+     "domNodes": 6087
+    },
+    "rotate3D": {
+     "medianMs": 32.3,
+     "maxMs": 32.7
+    },
+    "modeToPublicMs": 32.6,
+    "modeToTechnicalMs": 32.3,
+    "resultToDataMs": 37.4,
+    "dataToResultMs": 103,
+    "compareToMatrixMs": 677.5,
+    "metricSwitchMs": 30.7,
+    "cellToResultMs": 156.8,
+    "heapAfterWorkflowMB": 40.8,
+    "domNodesAfterWorkflow": 11220
+   },
+   "memory": {
+    "measured": {
+     "cycles": 5,
+     "before": {
+      "heapMB": 30.8,
+      "nodes": 1585,
+      "listeners": 214
+     },
+     "after": {
+      "heapMB": 31.1,
+      "nodes": 1590,
+      "listeners": 219
+     },
+     "heapGrowthMB": 0.3,
+     "nodeGrowth": 5,
+     "listenerGrowth": 5,
+     "canvasesInDom": 2,
+     "newConsoleWarnings": []
+    },
+    "baseline": {
+     "cycles": 5,
+     "before": {
+      "heapMB": 29.6,
+      "nodes": 1066,
+      "listeners": 202
+     },
+     "after": {
+      "heapMB": 29.9,
+      "nodes": 1071,
+      "listeners": 207
+     },
+     "heapGrowthMB": 0.3,
+     "nodeGrowth": 5,
+     "listenerGrowth": 5,
+     "canvasesInDom": 2,
+     "newConsoleWarnings": []
+    },
+    "check": {
+     "heapGrowthMB": [
+      0.3,
+      1.3
+     ],
+     "nodeGrowth": [
+      5,
+      55
+     ],
+     "listenerGrowth": [
+      5,
+      15
+     ],
+     "newConsoleWarnings": 0
+    },
+    "met": true
+   },
+   "tbt_info": {
+    "cold": 0,
+    "warm": 0,
+    "baseline_cold": 0,
+    "baseline_warm": 0
+   }
+  },
+  "cpu4x": {
+   "runs": 5,
+   "blocked": [
+    "*/api/tiles/0/0/0.png",
+    "*/api/tiles/1/0/1.png"
+   ],
+   "browser": "Chrome/157.0.8103.51",
+   "webgl": "ANGLE (Intel, Intel(R) Graphics (0x0000A7AC) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+   "lcp_worst_ms": 1728,
+   "lcp_worst_ms_baseline": 632,
+   "cls_worst": 0,
+   "cls_worst_baseline": 0,
+   "cold_median": {
+    "fcp": 1284,
+    "lcp": 1284,
+    "appReadyMs": 3647.9,
+    "tbt": 510,
+    "longestTask": 738,
+    "heapMB": 23.2
+   },
+   "warm_median": {
+    "fcp": 904,
+    "lcp": 904,
+    "appReadyMs": 2068.6,
+    "tbt": 601.5,
+    "longestTask": 626,
+    "heapMB": 23
+   },
+   "cold_median_baseline": {
+    "fcp": 480,
+    "lcp": 480,
+    "appReadyMs": 1166.1,
+    "tbt": 410,
+    "longestTask": 435,
+    "heapMB": 23.1
+   },
+   "js_kb_cold": 767.7,
+   "js_kb_cold_baseline": 734.9,
+   "lcp_met": true,
+   "cls_met": true,
+   "interaction": {
+    "cursorStep": {
+     "interactions": 20,
+     "medianMs": 40,
+     "p95Ms": 88,
+     "maxMs": 160
+    },
+    "baseline": {
+     "interactions": 20,
+     "medianMs": 16,
+     "p95Ms": 40,
+     "maxMs": 40
+    },
+    "met": true
+   },
+   "interactions_reported": {
+    "tabs": {
+     "Compare": 106.3,
+     "Data and validation": 412.2,
+     "Guide": 102.6,
+     "Site": 141.3
+    },
+    "analysisToResultMs": 1065.5,
+    "analysisTo3DDataMs": 1984.9,
+    "analysisToMapTilesMs": null,
+    "resultJsonKB": 319.5,
+    "resultFetchMs": 78,
+    "terrainGridKB": 190.2,
+    "series": "337",
+    "playback": {
+     "steps": 30,
+     "frames": 299,
+     "fps": 59.7,
+     "frameP95": 16.8,
+     "frameMax": 66.6,
+     "longTasks": 0,
+     "longestTask": 0,
+     "blockingMs": 0,
+     "expectedSteps": 35,
+     "scriptMsPerStep": 18.7,
+     "layoutMs": 92.8,
+     "domNodes": 1286
+    },
+    "playbackTablesOpen": {
+     "steps": 25,
+     "frames": 278,
+     "fps": 55.5,
+     "frameP95": 33.2,
+     "frameMax": 100.2,
+     "longTasks": 2,
+     "longestTask": 63,
+     "blockingMs": 21,
+     "expectedSteps": 35,
+     "scriptMsPerStep": 33.3,
+     "layoutMs": 97.4,
+     "domNodes": 6031
+    },
+    "rotate3D": {
+     "medianMs": 30.5,
+     "maxMs": 35.2
+    },
+    "modeToPublicMs": 44.5,
+    "modeToTechnicalMs": 29.3,
+    "resultToDataMs": 211.8,
+    "dataToResultMs": 414.8,
+    "compareToMatrixMs": 722.2,
+    "metricSwitchMs": 31.4,
+    "cellToResultMs": 376.2,
+    "heapAfterWorkflowMB": 41.3,
+    "domNodesAfterWorkflow": 2319
+   },
+   "tbt_info": {
+    "cold": 510,
+    "warm": 601.5,
+    "baseline_cold": 410,
+    "baseline_warm": 248.5
+   }
+  },
+  "cpu4x-net10mbps": {
+   "runs": 5,
+   "blocked": [
+    "*/api/tiles/0/0/0.png",
+    "*/api/tiles/1/0/1.png"
+   ],
+   "browser": "Chrome/157.0.8103.51",
+   "webgl": "ANGLE (Intel, Intel(R) Graphics (0x0000A7AC) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+   "lcp_worst_ms": 1332,
+   "lcp_worst_ms_baseline": 1044,
+   "cls_worst": 0,
+   "cls_worst_baseline": 0,
+   "cold_median": {
+    "fcp": 1104,
+    "lcp": 1104,
+    "appReadyMs": 1984,
+    "tbt": 417,
+    "longestTask": 459,
+    "heapMB": 23.3
+   },
+   "warm_median": {
+    "fcp": 784,
+    "lcp": 784,
+    "appReadyMs": 1828.2,
+    "tbt": 543.5,
+    "longestTask": 461,
+    "heapMB": 23.1
+   },
+   "cold_median_baseline": {
+    "fcp": 852,
+    "lcp": 852,
+    "appReadyMs": 1280.4,
+    "tbt": 214,
+    "longestTask": 343,
+    "heapMB": 24.1
+   },
+   "js_kb_cold": 767.7,
+   "js_kb_cold_baseline": 734.9,
+   "lcp_met": true,
+   "cls_met": true,
+   "interaction": "not measured (no workflow in this profile, as in D3)",
+   "tbt_info": {
+    "cold": 417,
+    "warm": 543.5,
+    "baseline_cold": 214,
+    "baseline_warm": 281.5
+   }
+  }
+ },
+ "phase5_supplement": {
+  "native": {
+   "tabToMissionMs": 38,
+   "tabMissionToSiteMs": 34.7,
+   "globeToCanvasMs": 250.8,
+   "globeToImageryMs": 250.1,
+   "globeImageryKB": 556.7,
+   "terrainToCanvasMs": 100.4,
+   "terrainToDataMs": 328.6,
+   "globeKeySteps": {
+    "interactions": 7,
+    "medianMs": 16,
+    "p95Ms": 40,
+    "maxMs": 40
+   },
+   "terrainKeySteps": {
+    "interactions": 4,
+    "medianMs": 16,
+    "p95Ms": 24,
+    "maxMs": 24
+   },
+   "globeRemount": {
+    "cycles": 5,
+    "before": {
+     "heapMB": 25.6,
+     "nodes": 491,
+     "listeners": 200
+    },
+    "after": {
+     "heapMB": 26.4,
+     "nodes": 516,
+     "listeners": 205
+    },
+    "heapGrowthMB": 0.8,
+    "nodeGrowth": 25,
+    "listenerGrowth": 5,
+    "canvasesInDom": 1,
+    "newConsoleWarnings": []
+   },
+   "terrainRemount": {
+    "cycles": 5,
+    "before": {
+     "heapMB": 26.8,
+     "nodes": 574,
+     "listeners": 194
+    },
+    "after": {
+     "heapMB": 27,
+     "nodes": 579,
+     "listeners": 199
+    },
+    "heapGrowthMB": 0.2,
+    "nodeGrowth": 5,
+    "listenerGrowth": 5,
+    "canvasesInDom": 1,
+    "newConsoleWarnings": []
+   },
+   "globeRemount_rule": {
+    "heapGrowthMB": [
+     0.8,
+     1.3
+    ],
+    "nodeGrowth": [
+     25,
+     55
+    ],
+    "listenerGrowth": [
+     5,
+     15
+    ],
+    "newConsoleWarnings": 0
+   },
+   "terrainRemount_rule": {
+    "heapGrowthMB": [
+     0.2,
+     1.3
+    ],
+    "nodeGrowth": [
+     5,
+     55
+    ],
+    "listenerGrowth": [
+     5,
+     15
+    ],
+    "newConsoleWarnings": 0
+   },
+   "globeRemount_met": true,
+   "terrainRemount_met": true,
+   "keySteps_p95_within_200ms": true
+  },
+  "cpu4x": {
+   "tabToMissionMs": 155.2,
+   "tabMissionToSiteMs": 151.8,
+   "globeToCanvasMs": 873.9,
+   "globeToImageryMs": 302.1,
+   "globeImageryKB": 556.7,
+   "terrainToCanvasMs": 185.7,
+   "terrainToDataMs": 255.1,
+   "globeKeySteps": {
+    "interactions": 10,
+    "medianMs": 32,
+    "p95Ms": 64,
+    "maxMs": 64
+   },
+   "terrainKeySteps": {
+    "interactions": 8,
+    "medianMs": 20,
+    "p95Ms": 40,
+    "maxMs": 40
+   },
+   "globeRemount": {
+    "cycles": 5,
+    "before": {
+     "heapMB": 26.2,
+     "nodes": 486,
+     "listeners": 199
+    },
+    "after": {
+     "heapMB": 26.9,
+     "nodes": 511,
+     "listeners": 204
+    },
+    "heapGrowthMB": 0.7,
+    "nodeGrowth": 25,
+    "listenerGrowth": 5,
+    "canvasesInDom": 1,
+    "newConsoleWarnings": []
+   },
+   "terrainRemount": {
+    "cycles": 5,
+    "before": {
+     "heapMB": 27.3,
+     "nodes": 569,
+     "listeners": 194
+    },
+    "after": {
+     "heapMB": 27.5,
+     "nodes": 574,
+     "listeners": 199
+    },
+    "heapGrowthMB": 0.2,
+    "nodeGrowth": 5,
+    "listenerGrowth": 5,
+    "canvasesInDom": 1,
+    "newConsoleWarnings": []
+   },
+   "globeRemount_rule": {
+    "heapGrowthMB": [
+     0.7,
+     1.3
+    ],
+    "nodeGrowth": [
+     25,
+     55
+    ],
+    "listenerGrowth": [
+     5,
+     15
+    ],
+    "newConsoleWarnings": 0
+   },
+   "terrainRemount_rule": {
+    "heapGrowthMB": [
+     0.2,
+     1.3
+    ],
+    "nodeGrowth": [
+     5,
+     55
+    ],
+    "listenerGrowth": [
+     5,
+     15
+    ],
+    "newConsoleWarnings": 0
+   },
+   "globeRemount_met": true,
+   "terrainRemount_met": true,
+   "keySteps_p95_within_200ms": true
+  }
+ },
+ "all_d3_criteria_met": true
+}

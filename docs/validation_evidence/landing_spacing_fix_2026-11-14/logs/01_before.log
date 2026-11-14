@@ -1,0 +1,236 @@
+{
+ "label": "before",
+ "before_run": {
+  "desktop": {
+   "cards": {
+    "site": {
+     "top": 274,
+     "h": 481,
+     "left": 364,
+     "w": 432,
+     "blankBelow": null,
+     "emptyInside": 15
+    },
+    "map": {
+     "top": 274,
+     "h": 82,
+     "left": 812,
+     "w": 604,
+     "blankBelow": null,
+     "emptyInside": 15
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  },
+  "tablet": {
+   "cards": {
+    "site": {
+     "top": 274,
+     "h": 411,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "map": {
+     "top": 701,
+     "h": 82,
+     "left": 24,
+     "w": 976,
+     "blankBelow": null,
+     "emptyInside": 15
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  },
+  "phone": {
+   "cards": {
+    "site": {
+     "top": 475,
+     "h": 550,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "map": {
+     "top": 1041,
+     "h": 100,
+     "left": 16,
+     "w": 358,
+     "blankBelow": null,
+     "emptyInside": 15
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  }
+ },
+ "after_run": {
+  "desktop": {
+   "cards": {
+    "site": {
+     "top": 274,
+     "h": 625,
+     "left": 364,
+     "w": 432,
+     "blankBelow": 359,
+     "emptyInside": 15
+    },
+    "map": {
+     "top": 274,
+     "h": 970,
+     "left": 812,
+     "w": 604,
+     "blankBelow": 14,
+     "emptyInside": 15
+    },
+    "footprint": {
+     "top": 1258,
+     "h": 1533,
+     "left": 364,
+     "w": 432,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "terrain": {
+     "top": 1258,
+     "h": 894,
+     "left": 812,
+     "w": 604,
+     "blankBelow": 655,
+     "emptyInside": 15
+    },
+    "candidates": {
+     "top": 2806,
+     "h": 539,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "provenance": {
+     "top": 3362,
+     "h": 961,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": null,
+     "emptyInside": 15
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  },
+  "tablet": {
+   "cards": {
+    "site": {
+     "top": 274,
+     "h": 491,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "map": {
+     "top": 781,
+     "h": 821,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 14,
+     "emptyInside": 15
+    },
+    "footprint": {
+     "top": 1615,
+     "h": 1281,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "terrain": {
+     "top": 2912,
+     "h": 860,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "candidates": {
+     "top": 3788,
+     "h": 539,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "provenance": {
+     "top": 4343,
+     "h": 1014,
+     "left": 24,
+     "w": 976,
+     "blankBelow": null,
+     "emptyInside": 15
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  },
+  "phone": {
+   "cards": {
+    "site": {
+     "top": 475,
+     "h": 784,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "map": {
+     "top": 1275,
+     "h": 996,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 14,
+     "emptyInside": 15
+    },
+    "footprint": {
+     "top": 2285,
+     "h": 1792,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "terrain": {
+     "top": 4093,
+     "h": 946,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "candidates": {
+     "top": 5056,
+     "h": 626,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "provenance": {
+     "top": 5698,
+     "h": 2207,
+     "left": 16,
+     "w": 358,
+     "blankBelow": null,
+     "emptyInside": 15
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  }
+ },
+ "consoleErrors": []
+}

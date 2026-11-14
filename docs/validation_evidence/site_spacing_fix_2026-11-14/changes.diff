@@ -1,0 +1,31 @@
+--- docs/validation_evidence/site_spacing_fix_2026-11-14/originals/analysis.css	2026-11-14 13:17:52.464040700 +0530
++++ frontend/src/styles/analysis.css	2026-11-14 13:21:19.841218100 +0530
+@@ -219,6 +219,28 @@
+ .compare-chart figcaption { margin-bottom: 8px; font-size: var(--fs-2xs); font-weight: 650; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text); }
+ .compare-chart svg { display: block; width: 100%; height: auto; }
+ 
++/* Site result spacing (2026-11-14). In both two-column sections the taller column set the row height and left an empty
++   block under the shorter one:
++   - Events and intervals: the event list (up to 380 px plus heading and note) was taller than the timeline column, so
++     a blank area stayed under "Intervals (n) Show". The list now takes the timeline column's height and scrolls inside
++     it (contain: size keeps the list from sizing the row); expanding the intervals table grows both columns together.
++   - Sunlight / Earth: the statistics card (nine metrics in two narrow columns, labels wrapping to two or three lines) was
++     taller than the fixed-aspect chart column, leaving a gap under the chart notes. The metrics are one label-value line
++     each, and the columns stretch to a common bottom edge.
++   Only the two-column layouts are affected; the single-column layouts (below 1101 / 901 px) are unchanged. */
++@media (min-width: 1101px) {
++  .timeline-grid { align-items: stretch; }
++  .timeline-grid > .event-list-wrap { contain: size; display: flex; flex-direction: column; min-height: 220px; }
++  .timeline-grid > .event-list-wrap > .event-list { flex: 1 1 auto; min-height: 0; max-height: none; }
++}
++@media (min-width: 901px) {
++  .body-grid { align-items: stretch; }
++  .body-stats .metrics { grid-template-columns: minmax(0, 1fr); gap: 3px; }
++  .body-stats .metric { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; line-height: 1.35; }
++  .body-stats .metric dt { flex: 1 1 auto; min-width: 0; }
++  .body-stats .metric dd { margin: 0; flex: none; text-align: right; }
++}
++
+ /* ---------------------------------------------------------------- responsive */
+ @media (max-width: 1100px) {
+   .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }

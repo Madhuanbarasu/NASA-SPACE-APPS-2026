@@ -1,0 +1,26 @@
+[
+ {
+  "fig": "figure is-sun",
+  "sw": 244,
+  "cw": 244,
+  "wide": []
+ },
+ {
+  "fig": "figure is-earth",
+  "sw": 244,
+  "cw": 244,
+  "wide": []
+ },
+ {
+  "fig": "figure is-both",
+  "sw": 244,
+  "cw": 244,
+  "wide": []
+ },
+ {
+  "fig": "figure is-power",
+  "sw": 244,
+  "cw": 244,
+  "wide": []
+ }
+]

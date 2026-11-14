@@ -1,0 +1,142 @@
+[
+ {
+  "result": "0ee29edff63034bf81a930c3",
+  "lat": -60.02,
+  "lon": 0.0,
+  "incomplete_share": 0.49583333333333335,
+  "window": [
+   "2026-11-14T00:00:00Z",
+   "2026-11-15T00:00:00Z"
+  ],
+  "sun": {
+   "minutes": 1440,
+   "minutes_over_incomplete_and_clear": 0,
+   "reported_unknown_there": 0,
+   "reported_visible_there": 0,
+   "reported_hidden_there": 0,
+   "reported_unknown_total_min": 0,
+   "summary_unknown_hours": 0.0
+  },
+  "earth": {
+   "minutes": 1440,
+   "minutes_over_incomplete_and_clear": 1440,
+   "reported_unknown_there": 1440,
+   "reported_visible_there": 0,
+   "reported_hidden_there": 0,
+   "reported_unknown_total_min": 1440,
+   "summary_unknown_hours": 24.00000000509951
+  }
+ },
+ {
+  "result": "04d1d762c9ddb77ce72f668c",
+  "lat": -60.02,
+  "lon": 0.0,
+  "incomplete_share": 0.49583333333333335,
+  "window": [
+   "2026-11-14T00:00:00Z",
+   "2026-11-15T00:00:00Z"
+  ],
+  "sun": {
+   "minutes": 1440,
+   "minutes_over_incomplete_and_clear": 0,
+   "reported_unknown_there": 0,
+   "reported_visible_there": 0,
+   "reported_hidden_there": 0,
+   "reported_unknown_total_min": 0,
+   "summary_unknown_hours": 0.0
+  },
+  "earth": {
+   "minutes": 1440,
+   "minutes_over_incomplete_and_clear": 1440,
+   "reported_unknown_there": 1440,
+   "reported_visible_there": 0,
+   "reported_hidden_there": 0,
+   "reported_unknown_total_min": 1440,
+   "summary_unknown_hours": 24.00000000509951
+  }
+ },
+ {
+  "result": "241f64fe0f3aa5c7e9870d11",
+  "lat": -60.02,
+  "lon": 0.0,
+  "incomplete_share": 0.49583333333333335,
+  "window": [
+   "2026-11-14T00:00:00Z",
+   "2026-11-15T00:00:00Z"
+  ],
+  "sun": {
+   "minutes": 1440,
+   "minutes_over_incomplete_and_clear": 0,
+   "reported_unknown_there": 0,
+   "reported_visible_there": 0,
+   "reported_hidden_there": 0,
+   "reported_unknown_total_min": 0,
+   "summary_unknown_hours": 0.0
+  },
+  "earth": {
+   "minutes": 1440,
+   "minutes_over_incomplete_and_clear": 1440,
+   "reported_unknown_there": 1440,
+   "reported_visible_there": 0,
+   "reported_hidden_there": 0,
+   "reported_unknown_total_min": 1440,
+   "summary_unknown_hours": 24.00000000509951
+  }
+ },
+ {
+  "result": "a667129a40f4c80e9e3ff6b4",
+  "lat": -60.482591,
+  "lon": 266.96912,
+  "incomplete_share": 0.1925,
+  "window": [
+   "2026-11-12T00:00:00Z",
+   "2026-12-12T00:00:00Z"
+  ],
+  "sun": {
+   "minutes": 43200,
+   "minutes_over_incomplete_and_clear": 8404,
+   "reported_unknown_there": 6166,
+   "reported_visible_there": 2238,
+   "reported_hidden_there": 0,
+   "reported_unknown_total_min": 7567,
+   "summary_unknown_hours": 126.11389190544685
+  },
+  "earth": {
+   "minutes": 43200,
+   "minutes_over_incomplete_and_clear": 0,
+   "reported_unknown_there": 0,
+   "reported_visible_there": 0,
+   "reported_hidden_there": 0,
+   "reported_unknown_total_min": 0,
+   "summary_unknown_hours": 0.0
+  }
+ },
+ {
+  "result": "f82c5203a53cef67c7ca64f6",
+  "lat": -60.02,
+  "lon": 0.0,
+  "incomplete_share": 0.49583333333333335,
+  "window": [
+   "2026-11-14T00:00:00Z",
+   "2026-11-15T00:00:00Z"
+  ],
+  "sun": {
+   "minutes": 1440,
+   "minutes_over_incomplete_and_clear": 0,
+   "reported_unknown_there": 0,
+   "reported_visible_there": 0,
+   "reported_hidden_there": 0,
+   "reported_unknown_total_min": 0,
+   "summary_unknown_hours": 0.0
+  },
+  "earth": {
+   "minutes": 1440,
+   "minutes_over_incomplete_and_clear": 1440,
+   "reported_unknown_there": 1440,
+   "reported_visible_there": 0,
+   "reported_hidden_there": 0,
+   "reported_unknown_total_min": 1440,
+   "summary_unknown_hours": 24.00000000509951
+  }
+ }
+]

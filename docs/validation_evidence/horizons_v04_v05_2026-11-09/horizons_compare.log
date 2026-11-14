@@ -1,0 +1,12 @@
+# python -m validation.horizons_compare --out /home/user/LUNA-OPS/docs/validation_evidence/horizons_v04_v05_2026-11-09/horizons.json  (2026-11-09T18:54:18Z, base 2a0f0b9 + working tree, final code and tests)
+{
+  "V-04": {
+    "status": "passed",
+    "detail": "max |dAz cos El| 5.235e-07 deg, max |dEl| 5.226e-07 deg (tolerance 0.01 deg); 7931 epochs; kernel profile production"
+  },
+  "V-05": {
+    "status": "passed",
+    "detail": "18 matched centre crossings, 0 missed, 0 spurious; max |t_LUNA - t_Horizons| 0.500 s (tolerance 1.0 s); kernel profile production"
+  }
+}
+# exit 0

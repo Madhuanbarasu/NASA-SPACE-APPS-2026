@@ -1,0 +1,15 @@
+{'tile': '10/505/518', 'after_opaque_share': 1.0, 'identical': True, 'pixels_differing': 0, 'max_abs_diff': 0, 'mean_abs_diff_rgb': 0.0, 'alpha_changed': 0}
+{'tile': '12/2023/2074', 'after_opaque_share': 1.0, 'identical': True, 'pixels_differing': 0, 'max_abs_diff': 0, 'mean_abs_diff_rgb': 0.0, 'alpha_changed': 0}
+{'tile': '1/0/1', 'after_opaque_share': 1.0, 'before': 'not completed before (stopped at the cap)'}
+{'tile': '1/1/0', 'after_opaque_share': 1.0, 'identical': False, 'pixels_differing': 4684, 'max_abs_diff': 27, 'mean_abs_diff_rgb': 0.2221, 'alpha_changed': 0}
+{'tile': '1/1/1', 'after_opaque_share': 1.0, 'identical': False, 'pixels_differing': 2202, 'max_abs_diff': 14, 'mean_abs_diff_rgb': 0.0643, 'alpha_changed': 0}
+{'tile': '2/0/2', 'after_opaque_share': 1.0, 'identical': True, 'pixels_differing': 0, 'max_abs_diff': 0, 'mean_abs_diff_rgb': 0.0, 'alpha_changed': 0}
+{'tile': '2/1/2', 'after_opaque_share': 1.0, 'identical': False, 'pixels_differing': 411, 'max_abs_diff': 22, 'mean_abs_diff_rgb': 0.0174, 'alpha_changed': 0}
+{'tile': '2/2/1', 'after_opaque_share': 1.0, 'identical': False, 'pixels_differing': 447, 'max_abs_diff': 16, 'mean_abs_diff_rgb': 0.0301, 'alpha_changed': 0}
+{'tile': '3/2/4', 'after_opaque_share': 1.0, 'identical': True, 'pixels_differing': 0, 'max_abs_diff': 0, 'mean_abs_diff_rgb': 0.0, 'alpha_changed': 0}
+{'tile': '3/3/4', 'after_opaque_share': 1.0, 'identical': False, 'pixels_differing': 96, 'max_abs_diff': 26, 'mean_abs_diff_rgb': 0.0089, 'alpha_changed': 0}
+{'tile': '4/6/8', 'after_opaque_share': 1.0, 'identical': True, 'pixels_differing': 0, 'max_abs_diff': 0, 'mean_abs_diff_rgb': 0.0, 'alpha_changed': 0}
+{'tile': '4/7/8', 'after_opaque_share': 1.0, 'identical': False, 'pixels_differing': 92, 'max_abs_diff': 13, 'mean_abs_diff_rgb': 0.0078, 'alpha_changed': 0}
+{'tile': '5/15/16', 'after_opaque_share': 1.0, 'identical': False, 'pixels_differing': 182, 'max_abs_diff': 9, 'mean_abs_diff_rgb': 0.0107, 'alpha_changed': 0}
+{'tile': '6/31/32', 'after_opaque_share': 1.0, 'identical': False, 'pixels_differing': 816, 'max_abs_diff': 11, 'mean_abs_diff_rgb': 0.0431, 'alpha_changed': 0}
+{'tile': '8/126/129', 'after_opaque_share': 1.0, 'identical': True, 'pixels_differing': 0, 'max_abs_diff': 0, 'mean_abs_diff_rgb': 0.0, 'alpha_changed': 0}

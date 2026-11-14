@@ -1,0 +1,14 @@
+PASS T1 Navigation: {"s0":"Site","s1":"Landing","s2":"Site","s3":"Guide","s4":"Mission","tabStops":1,"tabsInBar":true}
+PASS T2 South polar map: {"latBefore":"","latAfter":"","note":"direction); not the lunar Sun. Click the map to set coordinates. That point is north of 60° S, outside the south polar map; no site was set."}
+PASS T3 South polar map: {"note":"rom LOLA heights (fixed light direction); not the lunar Sun. Click the map to set coordinates. Loading 16 terrain tiles.","statusChip":"16 tiles loading"}
+PASS T4 South polar map: {"imageChanged":true,"latBefore":"-89.463163","latAfter":"-89.463163"}
+PASS T5 3D Moon globe: {"before":"Centre 89.463° S, 222.510° E","after":"Centre 89.463° S, 274.082° E"}
+PASS T6 Local terrain: {"imageChanged":true}
+FAIL T7 Downloads: {"links":["Series CSV","Events CSV","Intervals CSV","Full result JSON"],"series":{"status":200,"type":"text/csv; charset=utf-8","disp":null,"lines":348,"jsonId":null},"events":{"status":200,"type":"text/csv; charset=utf-
+PASS T8 Charts: {"readouts":["13 Nov 2026, 00:00 UTC  Sun disc visible 100%","13 Nov 2026, 00:00 UTC  Earth disc visible 0%"],"timelineLegend":["Sunlit","Earth in view","Both","Dark or out of view","Unknown","Uncertain","Brief window","
+PASS T9 Public/Technical mode: {"publicPressed":"true","publicHasTablesLink":false,"technicalHasTablesLink":true}
+PASS T10 Top bar: {"a":"UTC2026-11-14 03:53:20","b":"UTC2026-11-14 03:53:23"}
+PASS T11 Navigation: {"openedTo":"true","open":"false","selected":"Landing","toggle":"Landing"}
+PASS T12 Landing Safety: {"findings":5,"radiusInput":"#ls-radius","footprintRequests":[200],"roughnessLayer":[200],"backdropTiles":6,"onDisplayRoute":6,"evidence":"screenshots/t12-landing.png"}
+FAIL T13 Communication: {"simulateStatus":null,"uiDirectWindowRows":0,"relayTable":true,"relayRows":3,"linkSwitching":[["Lander to relay","Lander to relay"],["Relay to Earth","Relay to Earth"],["Direct to Earth","Direct to Earth"]],"evidence":"
+{"summary":[["T1","Pass"],["T2","Pass"],["T3","Pass"],["T4","Pass"],["T5","Pass"],["T6","Pass"],["T7","Fail"],["T8","Pass"],["T9","Pass"],["T10","Pass"],["T11","Pass"],["T12","Pass"],["T13","Fail"]],"console":0}

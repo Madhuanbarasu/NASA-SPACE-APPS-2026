@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-11-10T09:52:24.949351+00:00",
+  "surface_dem": {
+    "file": "LDEM_80S_20MPP_ADJ.TIF",
+    "driver": "GTiff",
+    "width": 30400,
+    "height": 30400,
+    "count": 1,
+    "dtypes": [
+      "float32"
+    ],
+    "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+    "transform": [
+      20.0,
+      0.0,
+      -304000.0,
+      0.0,
+      -20.0,
+      304000.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "bounds": {
+      "left": -304000.0,
+      "bottom": -304000.0,
+      "right": 304000.0,
+      "top": 304000.0
+    },
+    "res": [
+      20.0,
+      20.0
+    ],
+    "nodata": NaN,
+    "sample_1000x1000": {
+      "valid_count": 1000000,
+      "min_elevation_m": -2872.114013671875,
+      "max_elevation_m": 1738.431884765625,
+      "mean_elevation_m": -127.00302124023438
+    }
+  },
+  "error_map": {
+    "file": "LDEM_80S_20MPP_ADJ_ERR.TIF",
+    "driver": "GTiff",
+    "width": 30400,
+    "height": 30400,
+    "count": 1,
+    "dtypes": [
+      "float32"
+    ],
+    "crs": "PROJCS[\"Moon (2015) - Sphere / Ocentric / South Polar\",GEOGCS[\"Moon (2015) - Sphere / Ocentric\",DATUM[\"Moon (2015) - Sphere\",SPHEROID[\"Moon (2015) - Sphere\",1737400,0,AUTHORITY[\"IAU\",\"30100\"]],AUTHORITY[\"IAU\",\"30100\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"30100\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"30100\"]],PROJECTION[\"Polar_Stereographic\"],PARAMETER[\"latitude_of_origin\",-90],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",NORTH],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"30135\"]]",
+    "transform": [
+      20.0,
+      0.0,
+      -304000.0,
+      0.0,
+      -20.0,
+      304000.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "bounds": {
+      "left": -304000.0,
+      "bottom": -304000.0,
+      "right": 304000.0,
+      "top": 304000.0
+    },
+    "res": [
+      20.0,
+      20.0
+    ],
+    "nodata": NaN,
+    "sample_1000x1000": {
+      "valid_count": 1000000,
+      "min_err_m": 0.15360094606876373,
+      "max_err_m": 1.6985061168670654,
+      "mean_err_m": 0.21346387267112732
+    }
+  },
+  "alignment_checks": {
+    "dimensions_identical": true,
+    "transform_identical": true,
+    "bounds_identical": true,
+    "crs_identical": true,
+    "resolution_exact_20m": true,
+    "error_values_positive": true
+  }
+}

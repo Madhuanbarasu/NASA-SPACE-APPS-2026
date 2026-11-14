@@ -1,0 +1,30 @@
+U-06 finding: the welcome map's zoom-0 basemap tile (2026-11-11, measured with curl against the running server, production terrain)
+
+GET /api/tiles/meta       -> 13 resolution levels, level 0 = 7275 m/px (extent +/-931.2 km)
+GET /api/tiles/0/0/0.png  -> no response within 120 s (curl timeout, HTTP 000)
+GET /api/tiles/1/0/0.png  -> HTTP 200, 67,780 B, 0.580 s
+GET /api/tiles/1/1/1.png  -> HTTP 200, 64,569 B, 0.487 s
+
+Server process after the first native baseline run (one zoom-0 request per page load, 5 loads + workflow):
+  working set 1,982 MB, private 2,554 MB, 5,493.9 CPU-seconds, 29 threads; system free RAM fell to 2.47 GB.
+  The server was stopped to protect memory (free RAM recovered to 4.67 GB).
+
+Cause (read-only reading of backend/lunaops/api/tiles.py render_tile; backend not modified):
+  a level is skipped only when `lv["pixel_m"] > res * 4` (i.e. far coarser than the tile); finer levels are never
+  skipped, so the zoom-0 tile (7275 m/px) reads the 5 m, 20 m (2.6 GB) and 80 m DEMs over the whole polar window
+  with boundless, resampled reads.
+
+Effect in the interface: the welcome screen's map requests only this tile at its initial fit, so it shows the
+graticule without hillshade for minutes, while the server spends CPU and memory on it; repeated page loads stack
+these renders. This also contaminated the CPU-bound timings of the first native baseline run (perf-before-native.json).
+
+Follow-up after the frontend change (tile grid minZoom 1; the welcome map now requests the four zoom-1 tiles):
+GET /api/tiles/1/1/0.png  -> HTTP 200, 69,108 B, 0.373 s
+GET /api/tiles/1/0/1.png  -> no response within 15 s (curl timeout)          [1/0/0: 0.580 s, 1/1/1: 0.487 s, above]
+Tile 1/0/1 (lower-left quadrant, x -931..0 km, y -931..0 km) contains Site01 (about -11 km, -12 km) and its
+16 x 16 km 5 m DEM; tile 0/0/0 contains it too. The renderer reads every product finer than the tile, so a coarse tile
+covering Site01 performs a boundless, resampled read of the 5 m DEM over the whole tile window (931 km / 5 m = 186,240
+pixels on a side). The frontend can avoid zoom 0 but not this zoom-1 quadrant; the remedy is in render_tile (skip
+products whose pixel size is far finer than the tile), which this task may not change.
+During the native after-run, the server used 1,266.9 CPU-seconds in about 8 minutes on these renders; that run's
+interaction timings are therefore contaminated (perf-after-native.json) and were repeated with 0/0/0 and 1/0/1 blocked.

@@ -1,0 +1,65 @@
+{
+ "shots": [
+  {
+   "name": "aud05-repro-after-resize-150ms",
+   "msAfterResize": 157,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 0,
+   "z11Done": []
+  },
+  {
+   "name": "aud05-repro-after-resize-400ms",
+   "msAfterResize": 931,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 0,
+   "z11Done": []
+  },
+  {
+   "name": "aud05-repro-after-resize-700ms",
+   "msAfterResize": 1420,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 0,
+   "z11Done": []
+  },
+  {
+   "name": "aud05-repro-after-resize-1200ms",
+   "msAfterResize": 1965,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 0,
+   "z11Done": []
+  },
+  {
+   "name": "aud05-repro-after-resize-4000ms",
+   "msAfterResize": 4003,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 0,
+   "z11Done": []
+  }
+ ],
+ "extent": null
+}

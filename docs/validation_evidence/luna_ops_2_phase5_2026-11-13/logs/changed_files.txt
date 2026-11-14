@@ -1,0 +1,26 @@
+Phase 5 changed files (computed from the baseline and after hash lists)
+
+frontend/ (modified):
+  src/App.tsx
+  src/api/client.ts
+  src/api/types.ts
+  src/components/MissionView.tsx
+  src/components/TopBar.tsx
+  src/i18n/en.ts
+  src/state/store.tsx
+  src/styles/app.css
+  src/styles/shell.css
+frontend/ (new):
+  src/components/LandingMap.tsx
+  src/components/LandingView.tsx
+  src/styles/landing.css
+frontend/ (removed):
+  none
+
+start.py (modified: attaches the /api/landing routes; see README)
+backend/lunaops_landing/ (new package, outside the code and suite fingerprints): see logs/lunaops_landing_sha256.txt
+data/landing/ (new: landing manifest and the three PGDA 78 Site01 auxiliary files): see logs/data_landing_sha256.txt
+
+Unchanged (verified): backend/lunaops/** (logs/backend_lunaops_sha256_after.txt equals the baseline),
+backend/tests/**, backend/validation/** (suite fingerprint), backend/validation/report.json, data/dem/registry.json,
+backend/lunaops/manifests/datasets.json, backend/requirements.txt, frontend/package.json and package-lock.json (no new dependency).

@@ -1,0 +1,75 @@
+{
+ "python": {
+  "distributions": 35,
+  "direct": 12,
+  "transitive": 22,
+  "tooling": 1,
+  "without_licence_file": []
+ },
+ "native_binaries": {
+  "total": 49,
+  "licence_shipped": 5,
+  "unresolved": [
+   "llvmlite.libs/msvcp140-8f141b4454fa78db34bc1f28c571b4da.dll",
+   "numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+   "pyproj.libs/jpeg62-971fedc88cb0e86c3ad978ae1b7646db.dll",
+   "pyproj.libs/libcurl-f49442d4be7d953952a0509cdd4501fa.dll",
+   "pyproj.libs/liblzma-3c4c8780fcad6ce56344d2b5594bda5b.dll",
+   "pyproj.libs/msvcp140-7c26614e1d733892c2deac7e245ce115.dll",
+   "pyproj.libs/sqlite3-9415ebc42378ab15b741623972c45846.dll",
+   "pyproj.libs/tiff-69dcdf91c822b00d23e8dbf49655fe78.dll",
+   "pyproj.libs/zlib1-985e9fefa27bf900be8e4df7dcc97287.dll",
+   "rasterio.libs/freexl-1-f984fed45cb40bcf96e583a5d17e3e9f.dll",
+   "rasterio.libs/geos-353ca83806e765757ee1ac85230fad94.dll",
+   "rasterio.libs/geos_c-ee1211e77d58bd95402e455720af8ce9.dll",
+   "rasterio.libs/geotiff-5e33421f0ae45bc20fe26c869841819c.dll",
+   "rasterio.libs/gif-1107c2c29ae9bc2dab88f8650eedf346.dll",
+   "rasterio.libs/hdf5-90d65e8c6734fd05e7f71019aea56e63.dll",
+   "rasterio.libs/hdf5_hl-0f04f4391d2304f0c3baecb4b64cc3c7.dll",
+   "rasterio.libs/iconv-2-ebb8d125e8964d978f001ad727bb1f6a.dll",
+   "rasterio.libs/jpeg62-f01e7c07b88707d3293da417a2270e8d.dll",
+   "rasterio.libs/json-c-69add94c2356636200f46910429b496e.dll",
+   "rasterio.libs/Lerc-bd596e02be0e2a4d97970986d405b306.dll",
+   "rasterio.libs/libcrypto-3-x64-2afd3870ac1ca9227daaf71022d519dd.dll",
+   "rasterio.libs/libcurl-59fd99b636208c0efd91cad8b4cf028c.dll",
+   "rasterio.libs/libexpat-533441caabb6e8e810f3c428aac8662a.dll",
+   "rasterio.libs/liblzma-493fcad0ab8b3babd9c41dbd94a1afe5.dll",
+   "rasterio.libs/libpng16-644a70bf72a6c164e16c88d6a0c64f5b.dll",
+   "rasterio.libs/libpq-95c240938b5ffe9f0191160d951f9302.dll",
+   "rasterio.libs/libsharpyuv-39f8caaabd4dd845629ed7064c22149b.dll",
+   "rasterio.libs/libssl-3-x64-cdfaf2036db9847e1470a7adabf3576a.dll",
+   "rasterio.libs/libwebp-c62a0ecd823a4ac55d020b1e5b4e214d.dll",
+   "rasterio.libs/libxml2-ee3a45b6842891635a7194ed3bf4439b.dll",
+   "rasterio.libs/minizip-a17a1f1144c99133fb8ac04c5fc0d727.dll",
+   "rasterio.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+   "rasterio.libs/netcdf-80fff5a18c54bb9f3a649624658cc0ae.dll",
+   "rasterio.libs/openjp2-c1951c6e297b4dfbc1ecfed46df803af.dll",
+   "rasterio.libs/pcre2-8-4250f3875b7c8017370f480e5933b922.dll",
+   "rasterio.libs/qhull_r-9dfe5950fe3ffbeff1f83f37ef8a3b6a.dll",
+   "rasterio.libs/spatialite-462100c3ae387a5046878044decbecb9.dll",
+   "rasterio.libs/sqlite3-a95e23ad82678982e28e9780f07ae1f7.dll",
+   "rasterio.libs/szip-237b7e7db63858546dc0b6d1d1113e6c.dll",
+   "rasterio.libs/tiff-ab336932b464eb213b8c0ba892721190.dll",
+   "rasterio.libs/tinyxml2-b1394948d9bf11d7822da2aabdf5ab40.dll",
+   "rasterio.libs/zlib1-63e59a7591925180e9af63ff1cf293fb.dll",
+   "rasterio.libs/zstd-2363c320dd62f9f202293b4b1406aac1.dll",
+   "spiceypy/utils/cspice.dll"
+  ]
+ },
+ "npm": {
+  "installed": 172,
+  "shipped in browser bundle": 26,
+  "runtime dependency, not in bundle (tree-shaken or unused)": 45,
+  "build/dev tooling only": 101,
+  "without_licence_file": [
+   "lerc@3.0.0 (runtime dependency, not in bundle (tree-shaken or unused))",
+   "@esbuild/win32-x64@0.21.5 (build/dev tooling only)",
+   "@rollup/rollup-win32-x64-gnu@4.67.5 (build/dev tooling only)",
+   "@rollup/rollup-win32-x64-msvc@4.67.5 (build/dev tooling only)"
+  ],
+  "shipped_restrictions": {
+   "@fontsource-variable/archivo": "OFL Reserved Font Name rules may apply to modified fonts",
+   "d3-ease": "no endorsement using the authors' or contributors' names"
+  }
+ }
+}

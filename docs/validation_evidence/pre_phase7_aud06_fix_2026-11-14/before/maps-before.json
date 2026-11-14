@@ -1,0 +1,753 @@
+{
+ "label": "before",
+ "base": "http://127.0.0.1:8000",
+ "shots": [
+  {
+   "name": "map-1-whole",
+   "scale": "200 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-2-site",
+   "scale": "10 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-3-zoom-in-1",
+   "scale": "5 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-4-zoom-in-2",
+   "scale": "2 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-5-zoom-in-3",
+   "scale": "1 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-6-zoom-in-4",
+   "scale": "500 m at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "landing-slope-default"
+  },
+  {
+   "name": "landing-backdrop-only"
+  }
+ ],
+ "cacheTest": null,
+ "siteTiles": [
+  {
+   "url": "/api/tiles/2/2/2.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1572
+  },
+  {
+   "url": "/api/tiles/2/2/1.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1663
+  },
+  {
+   "url": "/api/tiles/2/1/1.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1571
+  },
+  {
+   "url": "/api/tiles/2/1/2.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 6356
+  },
+  {
+   "url": "/api/tiles/2/2/0.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1415
+  },
+  {
+   "url": "/api/tiles/2/1/3.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1325
+  },
+  {
+   "url": "/api/tiles/2/3/2.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1748
+  },
+  {
+   "url": "/api/tiles/2/0/1.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1780
+  },
+  {
+   "url": "/api/tiles/2/1/0.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1814
+  },
+  {
+   "url": "/api/tiles/2/2/3.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1813
+  },
+  {
+   "url": "/api/tiles/2/0/2.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1818
+  },
+  {
+   "url": "/api/tiles/2/3/1.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1883
+  },
+  {
+   "url": "/api/tiles/2/3/3.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1982
+  },
+  {
+   "url": "/api/tiles/2/0/3.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2065
+  },
+  {
+   "url": "/api/tiles/2/0/0.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2069
+  },
+  {
+   "url": "/api/tiles/2/3/0.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2065
+  },
+  {
+   "url": "/api/tiles/6/31/32.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2868
+  },
+  {
+   "url": "/api/tiles/6/32/32.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1464
+  },
+  {
+   "url": "/api/tiles/6/32/31.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1478
+  },
+  {
+   "url": "/api/tiles/6/31/31.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1640
+  },
+  {
+   "url": "/api/tiles/6/31/33.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1459
+  },
+  {
+   "url": "/api/tiles/6/30/32.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1844
+  },
+  {
+   "url": "/api/tiles/6/32/33.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1842
+  },
+  {
+   "url": "/api/tiles/6/30/31.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2081
+  },
+  {
+   "url": "/api/tiles/6/30/33.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2046
+  },
+  {
+   "url": "/api/tiles/7/63/64.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2076
+  },
+  {
+   "url": "/api/tiles/7/63/65.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1492
+  },
+  {
+   "url": "/api/tiles/7/62/64.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2048
+  },
+  {
+   "url": "/api/tiles/7/62/65.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2040
+  },
+  {
+   "url": "/api/tiles/7/64/64.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1576
+  },
+  {
+   "url": "/api/tiles/7/63/63.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1456
+  },
+  {
+   "url": "/api/tiles/7/64/65.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2018
+  },
+  {
+   "url": "/api/tiles/7/62/63.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2629
+  },
+  {
+   "url": "/api/tiles/7/63/66.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2550
+  },
+  {
+   "url": "/api/tiles/7/64/63.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2799
+  },
+  {
+   "url": "/api/tiles/7/62/66.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2871
+  },
+  {
+   "url": "/api/tiles/7/64/66.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2812
+  },
+  {
+   "url": "/api/tiles/8/126/129.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2006
+  },
+  {
+   "url": "/api/tiles/8/126/130.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2004
+  },
+  {
+   "url": "/api/tiles/8/125/129.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2612
+  },
+  {
+   "url": "/api/tiles/8/127/129.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2040
+  },
+  {
+   "url": "/api/tiles/8/126/128.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2684
+  },
+  {
+   "url": "/api/tiles/8/125/130.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1932
+  },
+  {
+   "url": "/api/tiles/8/127/130.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2970
+  },
+  {
+   "url": "/api/tiles/8/125/128.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 3047
+  },
+  {
+   "url": "/api/tiles/8/127/128.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2802
+  },
+  {
+   "url": "/api/tiles/9/252/259.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1576
+  },
+  {
+   "url": "/api/tiles/9/253/259.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1573
+  },
+  {
+   "url": "/api/tiles/9/252/258.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1561
+  },
+  {
+   "url": "/api/tiles/9/253/258.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1582
+  },
+  {
+   "url": "/api/tiles/9/252/260.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1585
+  },
+  {
+   "url": "/api/tiles/9/253/260.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1695
+  },
+  {
+   "url": "/api/tiles/9/251/259.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2890
+  },
+  {
+   "url": "/api/tiles/9/254/259.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2869
+  },
+  {
+   "url": "/api/tiles/9/251/258.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2708
+  },
+  {
+   "url": "/api/tiles/9/254/258.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2708
+  },
+  {
+   "url": "/api/tiles/9/251/260.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2770
+  },
+  {
+   "url": "/api/tiles/9/254/260.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2787
+  },
+  {
+   "url": "/api/tiles/10/505/518.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1388
+  },
+  {
+   "url": "/api/tiles/10/506/518.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1338
+  },
+  {
+   "url": "/api/tiles/10/505/519.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1365
+  },
+  {
+   "url": "/api/tiles/10/506/519.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1324
+  },
+  {
+   "url": "/api/tiles/10/505/517.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1359
+  },
+  {
+   "url": "/api/tiles/10/506/517.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1320
+  },
+  {
+   "url": "/api/tiles/10/504/518.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2668
+  },
+  {
+   "url": "/api/tiles/10/507/518.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2654
+  },
+  {
+   "url": "/api/tiles/10/504/519.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2472
+  },
+  {
+   "url": "/api/tiles/10/507/519.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2507
+  },
+  {
+   "url": "/api/tiles/10/504/517.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2480
+  },
+  {
+   "url": "/api/tiles/10/507/517.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2480
+  }
+ ],
+ "landingTiles": [
+  {
+   "url": "/api/tiles/10/505/518.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 17
+  },
+  {
+   "url": "/api/tiles/10/506/518.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 27
+  },
+  {
+   "url": "/api/tiles/10/505/519.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 31
+  },
+  {
+   "url": "/api/tiles/10/506/519.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 31
+  },
+  {
+   "url": "/api/tiles/10/505/517.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 31
+  },
+  {
+   "url": "/api/tiles/10/506/517.png",
+   "status": 200,
+   "renderer": null,
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 29
+  }
+ ],
+ "console": [],
+ "summary": {
+  "tileRequests": 76,
+  "routes": [
+   "/api/tiles"
+  ],
+  "renderers": [
+   null
+  ],
+  "statuses": [
+   200
+  ],
+  "fromCache": 6,
+  "msMedian": 1932,
+  "msMax": 6356
+ }
+}

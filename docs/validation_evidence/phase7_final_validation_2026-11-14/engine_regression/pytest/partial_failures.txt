@@ -1,0 +1,12 @@
+F lunaops_comms/tests/test_relay.py::test_gm_read_from_verified_naif_file
+F lunaops_comms/tests/test_relay.py::test_circular_orbit_radius_period_and_energy
+F lunaops_comms/tests/test_relay.py::test_elliptic_vis_viva_and_apsides
+F lunaops_comms/tests/test_relay.py::test_lunar_equator_frame_at_epoch
+F lunaops_comms/tests/test_service_api.py::test_meta_precedes_catch_all_and_reports_gm
+F lunaops_comms/tests/test_service_api.py::test_direct_windows_are_the_engine_intervals_and_labels_pass_through
+F lunaops_comms/tests/test_service_api.py::test_terrain_blocks_earth
+F lunaops_comms/tests/test_service_api.py::test_rf_feasible_needs_margin_and_geometry
+F lunaops_comms/tests/test_service_api.py::test_relay_two_legs_and_assisted_contacts
+F lunaops_comms/tests/test_service_api.py::test_incomplete_horizon_gives_unknown_not_open
+F lunaops_comms/tests/test_service_api.py::test_store_and_forward
+F lunaops_comms/tests/test_service_api.py::test_no_reliability_or_ranking_vocabulary

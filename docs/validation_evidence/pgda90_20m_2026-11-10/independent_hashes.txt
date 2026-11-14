@@ -1,0 +1,21 @@
+Independent SHA-256 hashes computed on 2026-11-10:
+
+Product: NASA PGDA 90 LOLA 20m Lunar South Pole Topography
+File: data/dem/pgda90_20m/LDEM_80S_20MPP_ADJ.TIF
+Size: 2696082051 bytes (2.51 GB)
+SHA-256: 09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649
+URL: https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LDEM_80S_20MPP_ADJ.TIF
+
+Product: NASA PGDA 90 LOLA 20m Lunar South Pole Uncertainty Error Map
+File: data/dem/pgda90_20m/LDEM_80S_20MPP_ADJ_ERR.TIF
+Size: 3954709201 bytes (3.68 GB)
+SHA-256: d64045b8aa58a24010f009ab5667ae02cc06cffa7796784dd5e2d48b3059d8cf
+URL: https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LDEM_80S_20MPP_ADJ_ERR.TIF
+
+Integrity:
+- Exact byte count match: PASS
+- SHA-256 match: PASS
+- IAU:30135 South Polar Stereographic CRS match: PASS
+- Grid dimension (30400 x 30400) alignment: PASS
+- Pixel resolution (20.0 m x 20.0 m) match: PASS
+- Bounds [-304000.0, -304000.0, 304000.0, 304000.0] match: PASS

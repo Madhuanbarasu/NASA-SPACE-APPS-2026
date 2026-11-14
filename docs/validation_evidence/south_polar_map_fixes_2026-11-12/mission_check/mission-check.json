@@ -1,0 +1,487 @@
+{
+ "base": "http://127.0.0.1:8000",
+ "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+ "started": "2026-11-12T08:20:49.640Z",
+ "analyses": [
+  {
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "start": "2026-11-14T00:00:00Z",
+   "end": "2026-11-21T00:00:00Z",
+   "id": "63790a1725befb49f04de987"
+  },
+  {
+   "lat": -89.9,
+   "lon": 0,
+   "start": "2026-11-14T00:00:00Z",
+   "end": "2026-11-21T00:00:00Z",
+   "id": "5679c84cd9d60db35d28629d"
+  },
+  {
+   "lat": -60.02,
+   "lon": 0,
+   "start": "2026-11-14T00:00:00Z",
+   "end": "2026-11-15T00:00:00Z",
+   "id": "241f64fe0f3aa5c7e9870d11"
+  }
+ ],
+ "siteO1": {
+  "figures": {
+   "Sunlit time": "100.0%",
+   "Longest darkness": "<1 min",
+   "Earth in view": "0.0%",
+   "Longest Earth gap": "7 d 0 h",
+   "Sunlit and Earth in view": "0.0%"
+  },
+  "resultViewFigures": [
+   {
+    "Sunlit time": "7 d 0 h",
+    "Longest darkness": "<1 min",
+    "Sunlit windows": "1"
+   },
+   {
+    "Earth in view": "<1 min",
+    "Longest window": "<1 min",
+    "Longest gap": "7 d 0 h"
+   },
+   {
+    "Total": "<1 min",
+    "Longest window": "<1 min",
+    "Longest gap": "7 d 0 h"
+   },
+   {
+    "Equivalent full-Sun": "7 d 3 h",
+    "Mean visible Sun": "100.0%"
+   }
+  ]
+ },
+ "checks": [
+  {
+   "name": "tabs: Mission is listed first and the app still opens on the Site tab",
+   "ok": true,
+   "detail": [
+    "Mission",
+    "Site",
+    "Compare",
+    "Data and validation",
+    "Guide"
+   ]
+  },
+  {
+   "name": "lazy loading: the dashboard chunk loads only when the Mission tab is first opened, and opening it loads no three.js",
+   "ok": true,
+   "detail": {
+    "missionReqBefore": 0,
+    "missionReq": 1
+   }
+  },
+  {
+   "name": "empty states: no site, no candidates, no analyses, no comparison, each explained",
+   "ok": true,
+   "detail": {
+    "sel": "Selected siteNo site selected. Click the 3D globe or the south polar map, choose a curated site, or type coordinates in the sidebar.",
+    "cand": "Candidate sites (0)No candidate sites yet. Add the selected site, or add sites in the sidebar or the Compare tab.Add the selected siteCompare candidatesCandidates are the comparison sites; the Compare tab adds the date windows.",
+    "hist": "Analyses in this session (0)Analyses you run or open appear here (this browser session only).Kept in this browser tab while the same LUNA-OPS build and validation report are in use; closing the tab clears it.",
+    "cur": "Current analysisNo analysis open. Analyse the selected site to see its results here.",
+    "cmp": "ComparisonNo comparison has been run yet.Compare candidates"
+   }
+  },
+  {
+   "name": "empty states: Local terrain and Analysis are unavailable until there is a covered site or a result",
+   "ok": true
+  },
+  {
+   "name": "status: kernels, terrain products, report and label counts come from GET /api/status",
+   "ok": true,
+   "detail": {
+    "stText": "System status NAIF kernels loaded, frame MOON_ME_DE440_ME421 LOLA terrain products: 5m:Site01_final_adj_5mpp_surf.tif, 20m:LDEM_80S_20MPP_ADJ.TIF, 80m:LDEM_80S_80MPP_ADJ.tiff, 240m:LDEM_60S_240MPP_ADJ.TIF No curated sites registered; custom coordinates work Validation report from 2026-11-12T06:27:21",
+    "stOk": 2,
+    "n": 5
+   }
+  },
+  {
+   "name": "keyboard: ArrowLeft from Site selects Mission, ArrowRight goes back through Site to Compare; one tab stop",
+   "ok": true,
+   "detail": {
+    "kb1": {
+     "active": "tab-mission",
+     "mission": true
+    },
+    "kb2": {
+     "active": "tab-compare",
+     "tabStops": 1
+    }
+   }
+  },
+  {
+   "name": "selected site: coordinates and the registered terrain levels from GET /api/coverage",
+   "ok": true,
+   "detail": "Selected site89.463° S, 222.510° ELatitude -89.463163°, longitude 222.510447° east (east-positive, 0–360°, as in the site coordinates).Registered LOLA terrain covers this point: 5m, 20m, 80m, 240m.Inspect local terrainAnalyse this siteAdd the selected siteThe "
+  },
+  {
+   "name": "navigation: 3D Moon opens the globe for the selected site; focus moves to the main region",
+   "ok": true,
+   "detail": {
+    "tab": "true",
+    "pressed": "3D Moon globe",
+    "focus": "main"
+   }
+  },
+  {
+   "name": "navigation state: the globe view and the selected site are kept after leaving and returning to the Site tab",
+   "ok": true,
+   "detail": {
+    "globe": true,
+    "lat": "-89.463163",
+    "explorer": "89.463° S, 222.510° E"
+   }
+  },
+  {
+   "name": "navigation: South polar map opens the map view",
+   "ok": true
+  },
+  {
+   "name": "navigation: Local terrain opens the registered-terrain preview of the selected site",
+   "ok": true,
+   "detail": "Local terrain at 89.463° S, 222.510° E"
+  },
+  {
+   "name": "current analysis: percentages equal the API summary (sunlit, Earth in view, both)",
+   "ok": true,
+   "detail": {
+    "f1": {
+     "Sunlit time": "100.0%",
+     "Longest darkness": "<1 min",
+     "Earth in view": "0.0%",
+     "Longest Earth gap": "7 d 0 h",
+     "Sunlit and Earth in view": "0.0%"
+    },
+    "api": [
+     100,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "name": "current analysis: durations equal the result view's figures (same API fields, same formatter)",
+   "ok": true,
+   "detail": {
+    "f1": {
+     "Sunlit time": "100.0%",
+     "Longest darkness": "<1 min",
+     "Earth in view": "0.0%",
+     "Longest Earth gap": "7 d 0 h",
+     "Sunlit and Earth in view": "0.0%"
+    },
+    "dark": "<1 min",
+    "gap": "7 d 0 h"
+   }
+  },
+  {
+   "name": "current analysis: validation labels exactly as the API gives them (nothing Pending shown as Validated)",
+   "ok": true,
+   "detail": {
+    "chips": [
+     "Disk visibility: Geometric, pending validation",
+     "Events: Geometric, pending validation",
+     "Horizon: Geometric, pending validation",
+     "Power indicator: Estimated, pending validation",
+     "Sun and Earth positions: Geometric, validated"
+    ],
+    "apiOk": 1
+   }
+  },
+  {
+   "name": "current analysis: uncertainty from the API (unknown time, uncertain and near-field windows, sigma statement)",
+   "ok": true,
+   "detail": [
+    "Sunlit time unknown: <1 min. Uncertain sunlit windows: 0. Sunlit windows that depend on near-field terrain: 1.",
+    "Horizon uncertainty (±1σ) available, under the uncalibrated L_corr assumption."
+   ]
+  },
+  {
+   "name": "integrity: no score, probability, ranking or recommendation anywhere on the dashboard (outside the disclaimer)",
+   "ok": true
+  },
+  {
+   "name": "deep link \"Visibility chart\": opens the result at that section and moves focus to it",
+   "ok": true,
+   "detail": {
+    "active": "result-visibility",
+    "top": 70,
+    "sameResult": "63790a1725befb49f04de987"
+   }
+  },
+  {
+   "name": "deep link \"Horizon panorama\": opens the result at that section and moves focus to it",
+   "ok": true,
+   "detail": {
+    "active": "result-panorama",
+    "top": 70,
+    "sameResult": "63790a1725befb49f04de987"
+   }
+  },
+  {
+   "name": "deep link \"3D terrain and map\": opens the result at that section and moves focus to it",
+   "ok": true,
+   "detail": {
+    "active": "result-terrain",
+    "top": 70,
+    "sameResult": "63790a1725befb49f04de987"
+   }
+  },
+  {
+   "name": "reduced motion: the deep link scrolls smoothly by default (many positions) but jumps in one step (one move covers the whole distance) when reduced motion is preferred",
+   "ok": true,
+   "detail": {
+    "smooth": {
+     "active": "result-tables",
+     "top": 777,
+     "moves": 17,
+     "maxStepShare": 0.89,
+     "reduce": false
+    },
+    "reduced": {
+     "active": "result-tables",
+     "top": 777,
+     "moves": 3,
+     "maxStepShare": 1,
+     "reduce": true
+    }
+   }
+  },
+  {
+   "name": "candidates: both sites listed with coverage from GET /api/coverage; the selected one is marked",
+   "ok": true,
+   "detail": [
+    {
+     "t": "89.463° S, 222.510° ERegistered LOLA terrain covers this point: 5m, 20m, 80m, 240m.SelectAnalyseOpen resultRemove",
+     "sel": false
+    },
+    {
+     "t": "89.900° S, 0.000° EselectedRegistered LOLA terrain covers this point: 20m, 80m, 240m.SelectAnalyseRemove",
+     "sel": true
+    }
+   ]
+  },
+  {
+   "name": "candidates: the selected site cannot be added twice",
+   "ok": true
+  },
+  {
+   "name": "site switching: Select makes a candidate the selected site everywhere (sidebar, overview, marker)",
+   "ok": true,
+   "detail": {
+    "lat": "-89.463163",
+    "lon": "222.510447",
+    "sel": "89.463° S, 222.510° E",
+    "marked": [
+     true,
+     false
+    ]
+   }
+  },
+  {
+   "name": "candidates: Analyse selects that candidate and runs its analysis (result for the candidate's coordinates)",
+   "ok": true,
+   "detail": {
+    "site": {
+     "coverage": {
+      "covered": true,
+      "finest": "20m",
+      "levels": [
+       "20m",
+       "80m",
+       "240m"
+      ],
+      "products": [
+       "20m:LDEM_80S_20MPP_ADJ.TIF",
+       "80m:LDEM_80S_80MPP_ADJ.tiff",
+       "240m:LDEM_60S_240MPP_ADJ.TIF"
+      ],
+      "reason": null
+     },
+     "ground_h_m": 628.023,
+     "id": null,
+     "lat": -89.9,
+     "lon": 0,
+     "name": null,
+     "terrain_level_at_site": "20m"
+    }
+   }
+  },
+  {
+   "name": "session analyses: newest first, each row's figures and label counts equal its API result",
+   "ok": true,
+   "detail": [
+    [
+     "89.900° S, 0.000° E",
+     "14 Nov 2026, 00:00 UTC to 21 Nov 2026, 00:00 UTC",
+     "3.0%",
+     "6 d 18 h",
+     "51.4%",
+     "3.0%",
+     "1 validated, 4 pending",
+     "Open"
+    ],
+    [
+     "89.463° S, 222.510° E",
+     "14 Nov 2026, 00:00 UTC to 21 Nov 2026, 00:00 UTC",
+     "100.0%",
+     "<1 min",
+     "0.0%",
+     "0.0%",
+     "1 validated, 4 pending",
+     "Open"
+    ]
+   ]
+  },
+  {
+   "name": "candidates: Open result reopens that site's analysis from this session",
+   "ok": true
+  },
+  {
+   "name": "session analyses: Open shows that result in the Site tab",
+   "ok": true
+  },
+  {
+   "name": "unsupported location: the backend's reason is shown and terrain and analysis are unavailable",
+   "ok": true,
+   "detail": {
+    "u": {
+     "t": "Not covered by the registered terrain: The registered LOLA products cover 60-90 S only (south-pole-first scope, Q6). Local terrain and analysis are not available here."
+    },
+    "reason": "The registered LOLA products cover 60-90 S only (south-pole-first scope, Q6)."
+   }
+  },
+  {
+   "name": "unsupported candidate: listed with the backend's reason; its Analyse is disabled",
+   "ok": true,
+   "detail": "30.000° S, 10.000° EselectedNot covered by the registered terrain: The registered LOLA products cover 60-90 S only (south-pole-first scope, Q6). Local terrain and analysis are not available here.Selec"
+  },
+  {
+   "name": "candidates: Remove takes a site off the list",
+   "ok": true
+  },
+  {
+   "name": "error state: a failed coverage request is reported, and terrain and analysis stay unavailable",
+   "ok": true,
+   "detail": "Coverage could not be checked: Failed to fetch"
+  },
+  {
+   "name": "3D terrain fix: when no product covers the window, the backend's message covers the pane (opaque, on top) so no Earth or Sun marker is drawn over it",
+   "ok": true,
+   "detail": {
+    "msg": true,
+    "text": "No single terrain product covers this 3D window.",
+    "role": "status",
+    "covers": true,
+    "bg": "rgb(30, 42, 55)",
+    "z": "3",
+    "onTop": true
+   }
+  },
+  {
+   "name": "missing data: lower-bound horizon share and unknown Earth time reported from the API, never filled",
+   "ok": true,
+   "detail": {
+    "flags3": [
+     "Sunlit time unknown: <1 min. Uncertain sunlit windows: 0. Sunlit windows that depend on near-field terrain: 0.",
+     "Earth-in-view time unknown: 1 d 0 h.",
+     "Horizon lower bounds: 49.6 % of bins (terrain coverage ran out).",
+     "Horizon uncertainty (±1σ) available, under the uncalibrated L_corr assumption."
+    ],
+    "inc": 0.49583333333333335,
+    "eu": 24.00000000509951
+   }
+  },
+  {
+   "name": "missing data: terrain-dependent quantities stay Pending exactly as the API gives them",
+   "ok": true,
+   "detail": [
+    "Disk visibility: Geometric, pending validation",
+    "Events: Geometric, pending validation",
+    "Horizon: Geometric, pending validation",
+    "Power indicator: Estimated, pending validation",
+    "Sun and Earth positions: Geometric, validated"
+   ]
+  },
+  {
+   "name": "comparison: Compare candidates opens the Compare tab with the candidate sites",
+   "ok": true
+  },
+  {
+   "name": "comparison: the dashboard reports the comparison that ran (2 sites × 2 windows) and links to it",
+   "ok": true,
+   "detail": "Comparison2 sites × 2 windows compared.Open the comparison"
+  },
+  {
+   "name": "comparison: Open the comparison returns to its table",
+   "ok": true
+  },
+  {
+   "name": "public mode: links only to sections that exist in that mode (no data tables link)",
+   "ok": true,
+   "detail": [
+    "Horizon panorama",
+    "Timeline",
+    "Visibility chart",
+    "3D terrain and map"
+   ]
+  },
+  {
+   "name": "accessibility: every control named, unique ids, one h1 with h2 sections, labelled regions, table caption",
+   "ok": true,
+   "detail": {
+    "controls": 27,
+    "unnamed": 0,
+    "dup": [],
+    "h1": 1,
+    "h2": 6,
+    "secs": true,
+    "caption": true
+   }
+  },
+  {
+   "name": "accessibility: dashboard buttons show a focus indicator",
+   "ok": true,
+   "detail": {
+    "tag": "BUTTON",
+    "outline": "solid",
+    "w": "2px",
+    "shadow": "none"
+   }
+  },
+  {
+   "name": "responsive: at 390 px the dashboard has no sideways scroll and the cards stack in one column (tables scroll inside their box)",
+   "ok": true,
+   "detail": {
+    "scrollW": 390,
+    "clientW": 390,
+    "oneColumn": true,
+    "overflow": 0
+   }
+  },
+  {
+   "name": "no page exceptions or console errors (apart from the deliberately blocked coverage request)",
+   "ok": true,
+   "detail": []
+  }
+ ],
+ "console": [
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  },
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  },
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  }
+ ],
+ "finished": "2026-11-12T08:21:55.499Z"
+}

@@ -1,0 +1,32 @@
+browser: Chrome/157.0.8103.51
+RELEASE VIEWS            tabStops(release -> now)  problems
+site-welcome              34 -> 37   (expected 37)  none
+site-result-technical     52 -> 56   (expected 56)  {'contrastFail': 1}
+site-result-public      None -> None (expected None)  {'contrastFail': 1}
+compare-matrix            76 -> 77   (expected 77)  {'contrastFail': 2}
+data                      34 -> 195  (expected 35)  {'contrastFail': 1}
+guide                     33 -> 1    (expected 34)  {'contrastFail': 1}
+PHASE 5 VIEWS            tabStops  cycled  problems
+site-explorer-globe           56  True    (Phase 5 final 55 + 1 = 56)  {'contrastFail': 2}
+site-explorer-terrain         49  True    (Phase 5 final 48 + 1 = 49)  {'contrastFail': 2}
+mission                       56  True    (Phase 5 final 55 + 1 = 56)  {'contrastFail': 1}
+mission-empty                 36  True    (Phase 5 final 35 + 1 = 36)  none
+RELEASE FUNCTIONAL TESTS (release -> now):
+  skipLink                     same
+  tabsArrowKeys                same
+  invalidCoordinates           same
+  slider                       same
+  readoutLive                  same
+  panoramaHoverEscape          same
+  readoutLiveWhilePlaying      same
+  mapKeyboard                  same
+  terrain3dKeyboard            same
+Traceback (most recent call last):
+  File "E:\LUNA-OPS\docs\validation_evidence\luna_ops_2_phase1_2026-11-13\u04_compare_phase1.py", line 80, in <module>
+    print(f"  {key:28s} equivalent (release readout kept; sigma/near-field appended: {now['onFocus']['text']!r})")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THILAKHAESH\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u03c3' in position 129: character maps to <undefined>
+exit 1

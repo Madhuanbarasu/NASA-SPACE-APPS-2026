@@ -1,0 +1,51 @@
+# coverage_review.py on LPSR_80S_20MPP_ADJ.TIF (SHA-256 ad95311b...f470834e) and LDEM_80S_80MPP_ADJ.TIF (SHA-256 82030dcb...beee5a, equal to the registry), 2026-11-09
+## Geometry (south polar stereographic, sphere R = 1737.4 km, map extent +-304 km)
+radius of the 80S circle in the map plane: 304.006 km (half-width of the map: 304 km)
+edge midpoints: -80.000 deg; corners: -75.894 deg
+map-plane share of the square outside the 80S circle (the four corners): 0.2146
+
+## LPSR cells (160 m), full resolution, as sampled by the validator
+shadow cells: 711,098; beyond 80S (corners): 43,414 (6.11%)
+interior cells: 493,105; beyond 80S (corners): 22,028 (4.47%)
+interior-cell share by latitude band:
+   -90 to  -88: cells   451,464  shadow   87,852 (19.46% of band)  interior  73,180
+   -88 to  -86: cells 1,355,440  shadow  144,865 (10.69% of band)  interior 117,322
+   -86 to  -84: cells 2,262,812  shadow  128,643 ( 5.69% of band)  interior  83,885
+   -84 to  -82: cells 3,175,628  shadow  145,929 ( 4.60% of band)  interior  95,610
+   -82 to  -80: cells 4,096,264  shadow  160,395 ( 3.92% of band)  interior 101,080
+   -80 to  -79: cells 1,497,468  shadow   25,204 ( 1.68% of band)  interior  13,596
+   -79 to  -78: cells   901,540  shadow   13,469 ( 1.49% of band)  interior   6,342
+   -78 to  -77: cells   513,048  shadow    3,700 ( 0.72% of band)  interior   1,784
+   -77 to  -76: cells   184,712  shadow    1,041 ( 0.56% of band)  interior     306
+shadow share of corner cells (beyond 80S) by distance to the raster edge:
+     0-  2 km:  168,096 cells, shadow  1.49%
+     2-  5 km:  242,548 cells, shadow  1.48%
+     5- 10 km:  356,508 cells, shadow  1.39%
+    10- 20 km:  615,220 cells, shadow  0.72%
+    20- 40 km:  893,700 cells, shadow  1.60%
+    40- 90 km:  822,320 cells, shadow  1.66%
+outermost full-resolution pixel ring: 121,600 pixels, shadow 2,773 (2.28%)
+
+## Sampled points (seed 1, n = 200)
+latitude range: -89.745 to -77.796 deg; beyond 80S: 8 (expected 8.9 +- 2.9 from the interior-cell share 4.47%)
+80 m DEM: finite share of the whole raster 1.000000; finite height at the point: 200/200; 5 km x 5 km neighbourhood fully finite: 200/200
+share of azimuths whose 250 km horizon ray runs off the 80 m DEM (horizon there is a lower bound):
+  -90 to -88:  34 points, incomplete azimuths median   0.0%, max   3.1%; equatorward data reach min  255.1 km
+  -88 to -85:  47 points, incomplete azimuths median  13.1%, max  38.2%; equatorward data reach min  153.1 km
+  -85 to -82:  68 points, incomplete azimuths median  42.1%, max  53.7%; equatorward data reach min   63.1 km
+  -82 to -80:  43 points, incomplete azimuths median  55.9%, max  62.4%; equatorward data reach min   12.6 km
+  -80 to -76:   8 points, incomplete azimuths median  65.9%, max  69.8%; equatorward data reach min    8.4 km
+points with any incomplete azimuth: 159/200; with no incomplete azimuth: 41/200
+points whose equatorward data reach is under 10 km: 2/200
+points whose equatorward data reach is under 20 km: 7/200
+points whose equatorward data reach is under 50 km: 22/200
+points whose equatorward data reach is under 100 km: 53/200
+the 8 points beyond 80S:
+  lat  -77.796 lon   44.197  r  371.5 km  to raster edge  37.7 km, equatorward data reach  52.0 km, incomplete azimuths 69.8%
+  lat  -78.342 lon  319.647  r  354.7 km  to raster edge  33.7 km, equatorward data reach  43.7 km, incomplete azimuths 68.1%
+  lat  -78.353 lon  319.706  r  354.4 km  to raster edge  33.7 km, equatorward data reach  43.7 km, incomplete azimuths 68.1%
+  lat  -78.514 lon  320.015  r  349.5 km  to raster edge  36.2 km, equatorward data reach  46.8 km, incomplete azimuths 67.6%
+  lat  -79.104 lon  243.058  r  331.4 km  to raster edge   8.6 km, equatorward data reach   9.5 km, incomplete azimuths 64.0%
+  lat  -79.343 lon   23.927  r  324.1 km  to raster edge   7.8 km, equatorward data reach   8.4 km, incomplete azimuths 62.5%
+  lat  -79.655 lon  322.731  r  314.6 km  to raster edge  53.7 km, equatorward data reach  66.9 km, incomplete azimuths 64.1%
+  lat  -79.907 lon   30.436  r  306.8 km  to raster edge  39.4 km, equatorward data reach  45.4 km, incomplete azimuths 62.5%

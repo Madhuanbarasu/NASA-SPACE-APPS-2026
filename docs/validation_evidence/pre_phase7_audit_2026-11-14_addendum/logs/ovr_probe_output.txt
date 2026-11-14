@@ -1,0 +1,14 @@
+# ovr_probe.py re-run (read only, offline, no server), 2026-11-14T00:58:27Z
+# command: python scripts/ovr_probe.py scripts/level_probe.py
+overview 40 m, native size (364, 364) line score (0.68, 0.65)
+full-res 20 m -> 56.8 m, overviews disabled, bilinear: line score (0.82, 0.66)
+full-res 20 m -> 56.8 m, overviews disabled, average: line score (0.73, 0.61)
+overview 40 m read with out_shape, bilinear: line score (0.89, 0.69)
+overview 40 m read with out_shape, average: line score (1.7, 1.26)
+overview 40 m read natively, then warp bilinear: line score (0.85, 0.7)
+overview 40 m read natively, then warp average: line score (1.64, 1.26)
+default open, boundless=True, bilinear: line score (3.23, 2.5)
+default open, boundless=True, average: line score (3.23, 2.5)
+default open, boundless=False, bilinear: line score (0.89, 0.69)
+default open, boundless=False, average: line score (1.7, 1.26)
+rasterio 1.5.2 GDAL 3.12.2

@@ -1,0 +1,846 @@
+{
+ "label": "after",
+ "base": "http://127.0.0.1:8000",
+ "shots": [
+  {
+   "name": "map-1-whole",
+   "scale": "200 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-2-site",
+   "scale": "10 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-3-zoom-in-1",
+   "scale": "5 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-4-zoom-in-2",
+   "scale": "2 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-5-zoom-in-3",
+   "scale": "1 km at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "map-6-zoom-in-4",
+   "scale": "500 m at the map centre",
+   "readout": "Selected 89.463° S, 222.510° E",
+   "status": null
+  },
+  {
+   "name": "landing-slope-default"
+  },
+  {
+   "name": "landing-backdrop-only"
+  }
+ ],
+ "cacheTest": {
+  "engineUrlTwice": [
+   {
+    "url": "/api/tiles/7/63/64.png",
+    "status": 200,
+    "renderer": null,
+    "fromDiskCache": false,
+    "fromMemoryCache": false,
+    "servedFromCache": false,
+    "ms": 987
+   },
+   {
+    "url": "/api/tiles/7/63/64.png",
+    "status": 200,
+    "renderer": null,
+    "fromDiskCache": true,
+    "fromMemoryCache": false,
+    "servedFromCache": false,
+    "ms": 29
+   }
+  ]
+ },
+ "siteTiles": [
+  {
+   "url": "/api/display/tiles/2/2/2.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 982
+  },
+  {
+   "url": "/api/display/tiles/2/2/1.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 956
+  },
+  {
+   "url": "/api/display/tiles/2/1/1.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1015
+  },
+  {
+   "url": "/api/display/tiles/2/1/2.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1335
+  },
+  {
+   "url": "/api/display/tiles/2/2/0.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1003
+  },
+  {
+   "url": "/api/display/tiles/2/1/3.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 993
+  },
+  {
+   "url": "/api/display/tiles/2/3/2.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1240
+  },
+  {
+   "url": "/api/display/tiles/2/0/1.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1219
+  },
+  {
+   "url": "/api/display/tiles/2/1/0.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1227
+  },
+  {
+   "url": "/api/display/tiles/2/2/3.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1323
+  },
+  {
+   "url": "/api/display/tiles/2/0/2.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1229
+  },
+  {
+   "url": "/api/display/tiles/2/3/1.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1622
+  },
+  {
+   "url": "/api/display/tiles/2/3/3.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1725
+  },
+  {
+   "url": "/api/display/tiles/2/0/3.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1596
+  },
+  {
+   "url": "/api/display/tiles/2/0/0.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1802
+  },
+  {
+   "url": "/api/display/tiles/2/3/0.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1800
+  },
+  {
+   "url": "/api/display/tiles/6/31/32.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1564
+  },
+  {
+   "url": "/api/display/tiles/6/32/32.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1575
+  },
+  {
+   "url": "/api/display/tiles/6/31/31.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1585
+  },
+  {
+   "url": "/api/display/tiles/6/31/33.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1655
+  },
+  {
+   "url": "/api/display/tiles/6/30/32.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1683
+  },
+  {
+   "url": "/api/display/tiles/6/32/31.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1892
+  },
+  {
+   "url": "/api/display/tiles/6/32/33.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1885
+  },
+  {
+   "url": "/api/display/tiles/6/30/31.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1880
+  },
+  {
+   "url": "/api/display/tiles/6/30/33.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1917
+  },
+  {
+   "url": "/api/display/tiles/3/3/4.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 828
+  },
+  {
+   "url": "/api/display/tiles/3/4/4.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 808
+  },
+  {
+   "url": "/api/display/tiles/3/3/3.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 842
+  },
+  {
+   "url": "/api/display/tiles/3/4/3.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 836
+  },
+  {
+   "url": "/api/display/tiles/3/3/5.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 795
+  },
+  {
+   "url": "/api/display/tiles/3/2/4.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 821
+  },
+  {
+   "url": "/api/display/tiles/4/7/8.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1572
+  },
+  {
+   "url": "/api/display/tiles/4/8/8.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1306
+  },
+  {
+   "url": "/api/display/tiles/7/63/64.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1205
+  },
+  {
+   "url": "/api/display/tiles/7/63/65.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1196
+  },
+  {
+   "url": "/api/display/tiles/7/62/64.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1319
+  },
+  {
+   "url": "/api/display/tiles/7/62/65.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1264
+  },
+  {
+   "url": "/api/display/tiles/7/64/64.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1196
+  },
+  {
+   "url": "/api/display/tiles/7/63/63.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1196
+  },
+  {
+   "url": "/api/display/tiles/7/64/65.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1987
+  },
+  {
+   "url": "/api/display/tiles/7/62/63.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2186
+  },
+  {
+   "url": "/api/display/tiles/7/63/66.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2050
+  },
+  {
+   "url": "/api/display/tiles/7/64/63.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2055
+  },
+  {
+   "url": "/api/display/tiles/7/62/66.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2064
+  },
+  {
+   "url": "/api/display/tiles/7/64/66.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2084
+  },
+  {
+   "url": "/api/display/tiles/8/126/129.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1352
+  },
+  {
+   "url": "/api/display/tiles/8/126/130.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1321
+  },
+  {
+   "url": "/api/display/tiles/8/125/129.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1381
+  },
+  {
+   "url": "/api/display/tiles/8/127/129.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1509
+  },
+  {
+   "url": "/api/display/tiles/8/126/128.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1386
+  },
+  {
+   "url": "/api/display/tiles/8/125/130.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1362
+  },
+  {
+   "url": "/api/display/tiles/8/127/130.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2064
+  },
+  {
+   "url": "/api/display/tiles/8/125/128.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 2072
+  },
+  {
+   "url": "/api/display/tiles/8/127/128.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1901
+  },
+  {
+   "url": "/api/display/tiles/9/252/259.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1108
+  },
+  {
+   "url": "/api/display/tiles/9/253/259.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1099
+  },
+  {
+   "url": "/api/display/tiles/9/252/258.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1141
+  },
+  {
+   "url": "/api/display/tiles/9/253/258.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1104
+  },
+  {
+   "url": "/api/display/tiles/9/252/260.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1064
+  },
+  {
+   "url": "/api/display/tiles/9/253/260.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1082
+  },
+  {
+   "url": "/api/display/tiles/9/251/259.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1854
+  },
+  {
+   "url": "/api/display/tiles/9/254/259.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1825
+  },
+  {
+   "url": "/api/display/tiles/9/251/258.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1676
+  },
+  {
+   "url": "/api/display/tiles/9/254/258.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1678
+  },
+  {
+   "url": "/api/display/tiles/9/251/260.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1683
+  },
+  {
+   "url": "/api/display/tiles/9/254/260.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1699
+  },
+  {
+   "url": "/api/display/tiles/10/505/518.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 906
+  },
+  {
+   "url": "/api/display/tiles/10/506/518.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 859
+  },
+  {
+   "url": "/api/display/tiles/10/505/519.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 905
+  },
+  {
+   "url": "/api/display/tiles/10/506/519.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 859
+  },
+  {
+   "url": "/api/display/tiles/10/505/517.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 887
+  },
+  {
+   "url": "/api/display/tiles/10/506/517.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 870
+  },
+  {
+   "url": "/api/display/tiles/10/504/518.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1643
+  },
+  {
+   "url": "/api/display/tiles/10/507/518.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1681
+  },
+  {
+   "url": "/api/display/tiles/10/504/519.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1513
+  },
+  {
+   "url": "/api/display/tiles/10/507/519.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1513
+  },
+  {
+   "url": "/api/display/tiles/10/504/517.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1523
+  },
+  {
+   "url": "/api/display/tiles/10/507/517.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": false,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 1505
+  }
+ ],
+ "landingTiles": [
+  {
+   "url": "/api/display/tiles/10/505/518.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 13
+  },
+  {
+   "url": "/api/display/tiles/10/506/518.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 16
+  },
+  {
+   "url": "/api/display/tiles/10/505/519.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 16
+  },
+  {
+   "url": "/api/display/tiles/10/506/519.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 18
+  },
+  {
+   "url": "/api/display/tiles/10/505/517.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 18
+  },
+  {
+   "url": "/api/display/tiles/10/506/517.png",
+   "status": 200,
+   "renderer": "lunaops_tiles 0.1.0",
+   "fromDiskCache": true,
+   "fromMemoryCache": false,
+   "servedFromCache": false,
+   "ms": 19
+  }
+ ],
+ "console": [],
+ "summary": {
+  "tileRequests": 84,
+  "routes": [
+   "/api/display/tiles"
+  ],
+  "renderers": [
+   "lunaops_tiles 0.1.0"
+  ],
+  "statuses": [
+   200
+  ],
+  "fromCache": 6,
+  "msMedian": 1335,
+  "msMax": 2186
+ }
+}

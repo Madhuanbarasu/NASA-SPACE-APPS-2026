@@ -1,0 +1,32 @@
+# Phase 3 changed frontend files (baseline/frontend_files_sha256.txt vs logs/frontend_files_after_sha256.txt)
+
+modified (15):
+  scripts/check-strings.mjs
+  src/components/CompareView.tsx
+  src/components/HorizonPanorama.tsx
+  src/components/MapView.tsx
+  src/components/MissionView.tsx
+  src/components/ResultContext.tsx
+  src/components/SiteView.tsx
+  src/components/Terrain3D.tsx
+  src/components/TerrainPreview.tsx
+  src/components/Timeline.tsx
+  src/components/VisibilityChart.tsx
+  src/i18n/en.ts
+  src/lib/format.ts
+  src/styles/app.css
+  src/styles/views.css
+added (12):
+  src/components/CompareCharts.tsx
+  src/components/EventList.tsx
+  src/components/ResultLabels.tsx
+  src/components/ResultWorkspace.tsx
+  src/lib/terrainStats.ts
+  src/lib/timeAxis.ts
+  src/styles/analysis.css
+  src/ui/ChartLegend.tsx
+  src/ui/ChartTooltip.tsx
+  src/ui/Metric.tsx
+  src/ui/SectionHeader.tsx
+  src/ui/StatusBadge.tsx
+removed (0):

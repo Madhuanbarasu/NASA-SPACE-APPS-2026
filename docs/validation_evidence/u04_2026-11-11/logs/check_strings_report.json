@@ -1,0 +1,58 @@
+{
+  "dictionary": "src/i18n/en.ts",
+  "keys": 433,
+  "keysReferenced": 433,
+  "filesScanned": 21,
+  "allowlist": [
+    {
+      "file": "src/components/SiteView.tsx",
+      "text": "Validated",
+      "reason": "prefix of the API's validation status word, compared (not displayed) to pick the chip style"
+    },
+    {
+      "file": "src/components/SiteView.tsx",
+      "text": "Synthetic",
+      "reason": "prefix of the API's validation status word, compared (not displayed) to pick the chip style"
+    },
+    {
+      "file": "src/components/MapView.tsx",
+      "text": "12px 'Archivo Variable', sans-serif",
+      "reason": "CSS font shorthand for OpenLayers labels (font family name, not text)"
+    },
+    {
+      "file": "src/components/CompareView.tsx",
+      "text": "transparent",
+      "reason": "CSS colour keyword returned by the matrix shading function"
+    },
+    {
+      "file": "src/state/store.tsx",
+      "text": "useStore outside provider",
+      "reason": "developer invariant (programming error), never shown in the interface"
+    }
+  ],
+  "problems": 0,
+  "files": [
+    "src/i18n/rich.ts",
+    "src/i18n/index.ts",
+    "src/api/types.ts",
+    "src/api/client.ts",
+    "src/lib/format.ts",
+    "src/state/store.tsx",
+    "src/components/TopBar.tsx",
+    "src/components/Sidebar.tsx",
+    "src/lib/countdown.ts",
+    "src/lib/useWidth.ts",
+    "src/components/HorizonPanorama.tsx",
+    "src/components/MapView.tsx",
+    "src/components/Terrain3D.tsx",
+    "src/components/Timeline.tsx",
+    "src/components/Welcome.tsx",
+    "src/components/SiteView.tsx",
+    "src/components/CompareView.tsx",
+    "src/components/DataView.tsx",
+    "src/components/GuideView.tsx",
+    "src/App.tsx",
+    "src/main.tsx"
+  ],
+  "problemList": []
+}

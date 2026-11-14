@@ -1,0 +1,4 @@
+full-res cell grid (3800, 3800): shadow cells 711,098, interior cells 493,105 (9.1 s)
+new sampler: 200 points, info {'cells_shadow': 711098, 'cells_interior': 493105, 'cell_m': 160.0, 'margin_cells': 2}, 8.8 s
+new points latitude range -89.745 .. -77.796
+old (overview) sampler: 200 points; 3 lie in a cell that is NOT entirely shadow at full resolution; 32 fail the full-resolution 2-cell interior test

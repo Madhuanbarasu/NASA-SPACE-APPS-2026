@@ -1,0 +1,54 @@
+--- before/backend/lunaops/engine/events.py
++++ after/backend/lunaops/engine/events.py
+@@ -366,8 +366,50 @@
+     return out
+ 
+ 
++# Missing-terrain boundaries (2026-11-14, scientific_validation_followup): a disk whose azimuth span touches incomplete
++# (lower-bound) horizon bins while it would be visible is "unknown" (visibility.disk_state, earth.earth_disk_state).
++# Entering or leaving such bins is not a geometric event function, and interval states are taken at segment midpoints,
++# so without these cuts a segment that only partly rests on incomplete bins took one state for its whole length and
++# unknown time could be reported as visible. The cuts are found from the engine's own per-target unknown flag
++# (Sample.geo[target]["state"]["unknown"]) on a fixed grid and refined by bisection to the event tolerance. They are
++# computed only when the horizon has incomplete bins, so complete horizons keep exactly the previous intervals.
++INCOMPLETE_SCAN_S = 60.0
++
++
++def _unknown_flags(det: EventDetector, et: float) -> tuple[bool, bool]:
++    geo = det.evaluate(et).geo
++    return bool(geo["sun"]["state"].get("unknown")), bool(geo["earth"]["state"].get("unknown"))
++
++
++def incomplete_cuts(det: EventDetector, et0: float, et1: float) -> list[float]:
++    """Times (ET) at which the Sun's or Earth's verdict starts or stops resting on incomplete horizon bins."""
++    if not det.hp.inc.any() or et1 <= et0:
++        return []
++    n = max(2, int(math.ceil((et1 - et0) / INCOMPLETE_SCAN_S)) + 1)
++    ts = np.linspace(et0, et1, n)
++    flags = [_unknown_flags(det, float(t)) for t in ts]
++    out = []
++    for k in range(n - 1):
++        for j in (0, 1):
++            if flags[k][j] == flags[k + 1][j]:
++                continue
++            a, b, fa = float(ts[k]), float(ts[k + 1]), flags[k][j]
++            while b - a > det.cfg.tol_s:
++                m = 0.5 * (a + b)
++                if _unknown_flags(det, m)[j] == fa:
++                    a = m
++                else:
++                    b = m
++            out.append(0.5 * (a + b))
++    return out
++
++
+ def build_intervals(det: EventDetector, et0: float, et1: float, events: list[dict], samples: list[Sample]) -> dict:
+-    cuts = sorted({et0, et1, *[ev["et"] for ev in events if et0 < ev["et"] < et1]})
++    base = {et0, et1, *[ev["et"] for ev in events if et0 < ev["et"] < et1]}
++    for t in incomplete_cuts(det, et0, et1):
++        if et0 < t < et1 and min(abs(t - b) for b in base) > det.cfg.tol_s:
++            base.add(t)
++    cuts = sorted(base)
+     segs = []
+     for a, b in zip(cuts[:-1], cuts[1:]):
+         if b - a <= 0:

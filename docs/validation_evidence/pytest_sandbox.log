@@ -1,0 +1,152 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0 -- /home/claude/venv/bin/python
+rootdir: /home/claude/prod/luna-ops/backend
+plugins: anyio-4.16.0
+collecting ... collected 59 items
+
+tests/test_audit_fixes.py::test_V08_disk_exact_on_sphere_vs_independent_reference exact-sphere disk: worst |df| 5.7e-09, worst |dg| 4.2e-10 deg
+PASSED
+tests/test_audit_fixes.py::test_V08_switch_to_sampled_cap_at_60_deg_is_small clearance step at the 60 deg switch: 7.1e-04 deg
+PASSED
+tests/test_audit_fixes.py::test_V08_occultation_clearance_exact PASSED
+tests/test_audit_fixes.py::test_terrain_missing_or_changed_file_is_refused_not_skipped PASSED
+tests/test_audit_fixes.py::test_terrain_digest_follows_synthetic_permission PASSED
+tests/test_audit_fixes.py::test_dem_rejects_implausible_values_and_accepts_error_maps PASSED
+tests/test_audit_fixes.py::test_sigma_uses_the_error_map_of_the_product_that_was_sampled   hashing error map (SHA-256) ...
+  hashing error map (SHA-256) ...
+PASSED
+tests/test_audit_fixes.py::test_error_map_must_share_the_dem_grid   hashing error map (SHA-256) ...
+PASSED
+tests/test_audit_fixes.py::test_pgda_roi_tgz_registers_with_unique_ids Registered 1 catalogue entries from /tmp/pytest-of-root/pytest-8/test_pgda_roi_tgz_registers_wi0/Site01_ROIs.tgz
+Registered 1 catalogue entries from /tmp/pytest-of-root/pytest-8/test_pgda_roi_tgz_registers_wi0/Site04_ROIs.tgz
+PASSED
+tests/test_audit_fixes.py::test_merge_guard_ownership_status_and_no_upgrade PASSED
+tests/test_audit_fixes.py::test_suite_fingerprint_tracks_tests PASSED
+tests/test_audit_fixes.py::test_V14_crossing_helpers_open_windows_and_direction PASSED
+tests/test_engine.py::test_V01_utc_tdb_roundtrip PASSED
+tests/test_engine.py::test_V02a_frame_definitions PASSED
+tests/test_engine.py::test_V02b_rotation_matrices PASSED
+tests/test_engine.py::test_V02c_transformation_direction PASSED
+tests/test_engine.py::test_V02d_site_roundtrip PASSED
+tests/test_engine.py::test_V02e_de421_de440_residual SKIPPED (needs ...)
+tests/test_engine.py::test_V03_azel_vs_azlcpo[-89.5-0.0] PASSED
+tests/test_engine.py::test_V03_azel_vs_azlcpo[-85.3-210.0] PASSED
+tests/test_engine.py::test_V03_azel_vs_azlcpo[-60.0-33.0] PASSED
+tests/test_engine.py::test_V03_azel_vs_azlcpo[0.0-0.0] PASSED
+tests/test_engine.py::test_V03_azel_vs_azlcpo[45.0-300.0] PASSED
+tests/test_engine.py::test_V03_azel_vs_azlcpo[90.0-0.0] PASSED
+tests/test_engine.py::test_V03_south_pole_recorded VT-10 south pole: LUNA-OPS az 126.617466 el 1.556596; AZLCPO az 126.617466 el 1.556596
+PASSED
+tests/test_engine.py::test_V06_sphere_dip PASSED
+tests/test_engine.py::test_V06_synthetic_crater PASSED
+tests/test_engine.py::test_V07_exact_stopping_changes_nothing PASSED
+tests/test_engine.py::test_V07_convergence_and_incomplete_flags PASSED
+tests/test_engine.py::test_V08_disk_integrator_vs_circular_segment PASSED
+tests/test_engine.py::test_V08_tangent_plane_vs_spherical_cap PASSED
+tests/test_engine.py::test_V08_joint_terrain_and_earth PASSED
+tests/test_engine.py::test_V08b_power_indicator_analytic PASSED
+tests/test_engine.py::test_V08_spherical_disk_near_zenith PASSED
+tests/test_engine.py::test_dem_registry_migration_and_multi_product PASSED
+tests/test_engine.py::test_dem_multi_product_sampling PASSED
+tests/test_engine.py::test_label_integrity PASSED
+tests/test_engine.py::test_external_merge_guard PASSED
+tests/test_events_api.py::test_V14_narrow_notch_and_grazing_windows V-14: 3 reference windows >= 2 s, 3 detected, 614 samples, 0 estimate failures, 0.3 s
+PASSED
+tests/test_events_api.py::test_V14_zero_rate_step_is_finite PASSED
+tests/test_events_api.py::test_V14_step_halving_independence PASSED
+tests/test_events_api.py::test_U01_coordinate_validation PASSED
+tests/test_events_api.py::test_U01_coverage_refusal PASSED
+tests/test_events_api.py::test_U02_time_validation PASSED
+tests/test_events_api.py::test_U03_compare_4x3_equals_single_site PASSED
+tests/test_events_api.py::test_U05_reproducible_bytes PASSED
+tests/test_events_api.py::test_U07_export_matches_result PASSED
+tests/test_events_api.py::test_V14_synthetic_window_durations V-14 synthetic windows (target s, actual s, found, worst offset s): [(0.5, np.float64(0.5), False, 1000000000.0), (1.5, np.float64(1.7), np.True_, np.float64(0.294)), (5.0, np.float64(4.5), np.True_, np.float64(0.259)), (60.0, np.float64(58.85), np.True_, np.float64(0.483))]
+PASSED
+tests/test_events_api.py::test_V14_three_sites_brute_force V-14 three-site brute force (1 day each): [{'site': (-89.5, 0.0), 'required_edges': 37, 'confirmed_subsecond_events': 0, 'samples': 1648, 'estimate_failures': 0}, {'site': (-88.0, 120.0), 'required_edges': 38, 'confirmed_subsecond_events': 0, 'samples': 1425, 'estimate_failures': 0}, {'site': (-86.5, 250.0), 'required_edges': 27, 'confirmed_subsecond_events': 0, 'samples': 1031, 'estimate_failures': 0}] worst event offset 0.500 s
+PASSED
+tests/test_events_api.py::test_V14_curvature_estimates_vs_minute_grid PASSED
+tests/test_events_api.py::test_V14_eclipse_boundaries V-14 eclipse boundaries: {'ecl_contact': ['2026-03-03T09:13:56Z', '2026-03-03T13:48:24Z'], 'ecl_centre': ['2026-03-03T09:47:06Z', '2026-03-03T13:15:09Z'], 'ecl_total': ['2026-03-03T10:21:59Z', '2026-03-03T12:40:14Z']} estimate failures 0
+PASSED
+tests/test_kernel_setup.py::test_kernel_sets_live_in_separate_folders PASSED
+tests/test_kernel_setup.py::test_demo_lock_in_production_folder_is_refused_then_migrated PASSED
+tests/test_kernel_setup.py::test_install_pipeline_checks_stages_loads_and_commits   copying de440s.bsp from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  copying moon_pa_de421_1900-2050.bpc from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  copying moon_080317.tf from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+    REJECTED moon_080317.tf: MD5 93b7d5f7c2c3678590149a652e9d8835 does not match the NAIF-published 00000000000000000000000000000000
+  copying fallback_moon_080317.tf from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  copying moon_assoc_me.tf from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  copying lunaops_test_lsk.tls from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  copying lunaops_test_radii.tpc from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  test-loading the staged set with SPICE ...
+Installed 6 kernels in /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/kernels (lock.json written last).
+  frame MOON_ME_DE421; coverage 1899-12-31T23:59:19 to 2050-12-31T23:58:51; DE421 validation kernels absent (V-02e will be skipped)
+  note: Sandbox test kernels are loaded. They are for automated tests only; results are not production results. Run `python -m lunaops.acquire kernels` for the pinned NAIF set.
+  note: fallback_moon_080317.tf: Fallback used: test fallback
+Next: `python -m lunaops.acquire verify-kernels`, then `python -m validation.run_validation`.
+  copying de440s.bsp from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  copying moon_pa_de421_1900-2050.bpc from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  copying moon_080317.tf from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+    REJECTED moon_080317.tf: MD5 93b7d5f7c2c3678590149a652e9d8835 does not match the NAIF-published 00000000000000000000000000000000
+  copying fallback_moon_080317.tf from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  copying moon_assoc_me.tf from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  copying lunaops_test_lsk.tls from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  copying lunaops_test_radii.tpc from /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/downloads
+  test-loading the staged set with SPICE ...
+  previous production set kept in /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/kernels/superseded_20261107T130237Z
+Installed 6 kernels in /tmp/pytest-of-root/pytest-8/test_install_pipeline_checks_s0/kernels (lock.json written last).
+  frame MOON_ME_DE421; coverage 1899-12-31T23:59:19 to 2050-12-31T23:58:51; DE421 validation kernels absent (V-02e will be skipped)
+  note: Sandbox test kernels are loaded. They are for automated tests only; results are not production results. Run `python -m lunaops.acquire kernels` for the pinned NAIF set.
+  note: fallback_moon_080317.tf: Fallback used: test fallback
+Next: `python -m lunaops.acquire verify-kernels`, then `python -m validation.run_validation`.
+PASSED
+tests/test_kernel_setup.py::test_failed_install_leaves_existing_set_untouched   copying de440s.bsp from /tmp/pytest-of-root/pytest-8/test_failed_install_leaves_exi0/downloads
+  copying moon_pa_de421_1900-2050.bpc from /tmp/pytest-of-root/pytest-8/test_failed_install_leaves_exi0/downloads
+  copying moon_080317.tf from /tmp/pytest-of-root/pytest-8/test_failed_install_leaves_exi0/downloads
+    REJECTED moon_080317.tf: MD5 93b7d5f7c2c3678590149a652e9d8835 does not match the NAIF-published 00000000000000000000000000000000
+  copying fallback_moon_080317.tf from /tmp/pytest-of-root/pytest-8/test_failed_install_leaves_exi0/downloads
+  copying moon_assoc_me.tf from /tmp/pytest-of-root/pytest-8/test_failed_install_leaves_exi0/downloads
+  copying lunaops_test_lsk.tls from /tmp/pytest-of-root/pytest-8/test_failed_install_leaves_exi0/downloads
+  copying lunaops_test_radii.tpc from /tmp/pytest-of-root/pytest-8/test_failed_install_leaves_exi0/downloads
+  test-loading the staged set with SPICE ...
+Installed 6 kernels in /tmp/pytest-of-root/pytest-8/test_failed_install_leaves_exi0/kernels (lock.json written last).
+  frame MOON_ME_DE421; coverage 1899-12-31T23:59:19 to 2050-12-31T23:58:51; DE421 validation kernels absent (V-02e will be skipped)
+  note: Sandbox test kernels are loaded. They are for automated tests only; results are not production results. Run `python -m lunaops.acquire kernels` for the pinned NAIF set.
+  note: fallback_moon_080317.tf: Fallback used: test fallback
+Next: `python -m lunaops.acquire verify-kernels`, then `python -m validation.run_validation`.
+    failed: /tmp/pytest-of-root/pytest-8/test_failed_install_leaves_exi0/downloads/de440s.bsp not found
+  copying de440s.bsp from /tmp/pytest-of-root/pytest-8/test_failed_install_leaves_exi0/downloads
+    REJECTED de440s.bsp: 32726016 bytes, NAIF publishes 32726017
+PASSED
+tests/test_kernel_setup.py::test_set_that_does_not_load_is_not_installed   copying de440s.bsp from /tmp/pytest-of-root/pytest-8/test_set_that_does_not_load_is0/downloads
+  copying moon_pa_de421_1900-2050.bpc from /tmp/pytest-of-root/pytest-8/test_set_that_does_not_load_is0/downloads
+  copying moon_080317.tf from /tmp/pytest-of-root/pytest-8/test_set_that_does_not_load_is0/downloads
+  copying moon_assoc_me.tf from /tmp/pytest-of-root/pytest-8/test_set_that_does_not_load_is0/downloads
+  copying lunaops_test_lsk.tls from /tmp/pytest-of-root/pytest-8/test_set_that_does_not_load_is0/downloads
+  copying lunaops_test_radii.tpc from /tmp/pytest-of-root/pytest-8/test_set_that_does_not_load_is0/downloads
+  test-loading the staged set with SPICE ...
+PASSED
+tests/test_kernel_setup.py::test_verify_kernels_passes_then_catches_tampering PASSED
+tests/test_kernel_setup.py::test_production_manifest_is_pinned_and_checkable PASSED
+tests/test_kernel_setup.py::test_checksum_listing_parsed_in_any_common_layout PASSED
+
+=============================== warnings summary ===============================
+tests/test_events_api.py::test_U03_compare_4x3_equals_single_site
+  /home/claude/venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 10 durations =============================
+71.72s call     tests/test_events_api.py::test_V14_synthetic_window_durations
+23.68s call     tests/test_events_api.py::test_V14_three_sites_brute_force
+7.77s call     tests/test_engine.py::test_V07_exact_stopping_changes_nothing
+5.65s call     tests/test_audit_fixes.py::test_V08_disk_exact_on_sphere_vs_independent_reference
+4.06s call     tests/test_events_api.py::test_U03_compare_4x3_equals_single_site
+3.91s setup    tests/test_audit_fixes.py::test_terrain_missing_or_changed_file_is_refused_not_skipped
+3.56s call     tests/test_events_api.py::test_V14_eclipse_boundaries
+3.45s call     tests/test_audit_fixes.py::test_sigma_uses_the_error_map_of_the_product_that_was_sampled
+3.35s call     tests/test_engine.py::test_dem_multi_product_sampling
+2.09s call     tests/test_events_api.py::test_V14_narrow_notch_and_grazing_windows
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_engine.py:86: needs production DE440 kernels plus the DE421 lunar PCK/FK
+============= 58 passed, 1 skipped, 1 warning in 139.15s (0:02:19) =============
+EXIT 0

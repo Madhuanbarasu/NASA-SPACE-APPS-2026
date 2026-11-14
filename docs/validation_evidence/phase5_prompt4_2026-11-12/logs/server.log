@@ -1,0 +1,4 @@
+# start.py --no-browser --no-build --port 8765 (started 2026-11-12 03:18 local, from the repository root, backend/.venv Python)
+# The server wrote nothing to its captured stdout/stderr during the run (the capture file was empty).
+# It served every live check in this folder (04 to 08). The Claude Code session was interrupted after the last run;
+# the server process outlived it and was stopped in the resumed session once port 8765 was confirmed to belong to it.

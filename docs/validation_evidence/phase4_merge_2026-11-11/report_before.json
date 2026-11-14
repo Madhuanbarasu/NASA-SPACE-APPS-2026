@@ -1,0 +1,318 @@
+{
+  "run_utc": "2026-11-10T21:19:33Z",
+  "code_version": "0.1.0+c621f98",
+  "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+  "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+  "kernel_profile": "production",
+  "kernels": [
+    {
+      "name": "naif0012.tls",
+      "sha256": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b"
+    },
+    {
+      "name": "pck00011.tpc",
+      "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1"
+    },
+    {
+      "name": "de440s.bsp",
+      "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    },
+    {
+      "name": "moon_pa_de440_200625.bpc",
+      "sha256": "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f"
+    },
+    {
+      "name": "moon_de440_250416.tf",
+      "sha256": "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768"
+    },
+    {
+      "name": "moon_pa_de421_1900-2050.bpc",
+      "sha256": "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf"
+    },
+    {
+      "name": "moon_080317.tf",
+      "sha256": "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993"
+    }
+  ],
+  "pytest_exit_code": 0,
+  "tests": {
+    "V-01": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02a": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02b": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02c": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02d": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02e": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-03": {
+      "status": "passed",
+      "detail": "7 case(s)"
+    },
+    "V-04": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-05": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-06": {
+      "status": "passed",
+      "detail": "2 case(s)"
+    },
+    "V-07": {
+      "status": "passed",
+      "detail": "2 case(s)"
+    },
+    "V-08": {
+      "status": "passed",
+      "detail": "7 case(s)"
+    },
+    "V-08b": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-09": {
+      "status": "not run",
+      "detail": "200/200 points scored (0 inconclusive); RMSE 14.09 pp, bias -7.19 pp, max |d| 53.09 pp over 18.6 years; criteria (RMSE <= 5.0 pp, |bias| <= 2.0 pp) are provisional and not approved, so no pass/fail is reported",
+      "source": "external",
+      "script": "v09_v10_avgvisib",
+      "external_status": "not run",
+      "automated_status": "not run",
+      "run_utc": "2026-11-10T21:12:04Z"
+    },
+    "V-10": {
+      "status": "not run",
+      "detail": "200/200 points scored (0 inconclusive); RMSE 3.13 pp, bias -0.74 pp, max |d| 22.27 pp over 18.6 years; criteria (RMSE <= 5.0 pp, |bias| <= 2.0 pp) are provisional and not approved, so no pass/fail is reported",
+      "source": "external",
+      "script": "v09_v10_avgvisib",
+      "external_status": "not run",
+      "automated_status": "not run",
+      "run_utc": "2026-11-10T21:12:04Z"
+    },
+    "V-11": {
+      "status": "passed",
+      "detail": "200/200 formal points dark with a complete horizon (100.0%; criterion >= 99%), 0 lit, 0 inconclusive (incomplete terrain coverage: not scored, never counted as dark)",
+      "source": "external",
+      "script": "v11_psr",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-10T18:50:02Z"
+    },
+    "V-12": {
+      "status": "passed",
+      "detail": "200/200 samples scored (0 inconclusive); C1 (TWI <= 1 % where LUNA-OPS predicts permanent shadow): passed (26 samples, 0 above); C2 TWI in [full, any] 127/200, with 1.31 pp 157/200, with 3.0 pp 175/200 (reported, not gating)",
+      "source": "external",
+      "script": "v12_lroc",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-10T19:30:24Z"
+    },
+    "V-13": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-14": {
+      "status": "passed",
+      "detail": "8 case(s)"
+    },
+    "U-01": {
+      "status": "passed",
+      "detail": "2 case(s)"
+    },
+    "U-02": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "U-03": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "U-04": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-05": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "U-06": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-07": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_terrain_missing_or_changed_file_is_refused_not_skipped": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_terrain_digest_follows_synthetic_permission": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dem_rejects_implausible_values_and_accepts_error_maps": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_sigma_uses_the_error_map_of_the_product_that_was_sampled": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_error_map_must_share_the_dem_grid": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_pgda_roi_tgz_registers_with_unique_ids": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_merge_guard_ownership_status_and_no_upgrade": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_suite_fingerprint_tracks_tests": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dem_registry_migration_and_multi_product": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dem_multi_product_sampling": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_label_integrity": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_external_merge_guard": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_kernel_sets_live_in_separate_folders": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_demo_lock_in_production_folder_is_refused_then_migrated": {
+      "status": "skipped",
+      "detail": "needs the sandbox test set as the session's kernel source"
+    },
+    "other:test_install_pipeline_checks_stages_loads_and_commits": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_failed_install_leaves_existing_set_untouched": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_set_that_does_not_load_is_not_installed": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_verify_kernels_passes_then_catches_tampering": {
+      "status": "skipped",
+      "detail": "checks the demo folder with the sandbox set"
+    },
+    "other:test_production_manifest_is_pinned_and_checkable": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_checksum_listing_parsed_in_any_common_layout": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_manifest_and_settings_include_80m": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_pgda90_file_integrity_and_geometry": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_registry_contains_both_5m_and_80m": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_multi_resolution_sampling_and_5m_priority": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_coverage_completes_with_80m": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_3d_terrain_grid_multi_resolution": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_uncertainty_uses_both_error_maps": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_nodata_is_never_treated_as_valid_terrain": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_cli_verify_all_registered": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_near_field_uncertainty_correlation_eliminates_7_deg_artifact": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_5m_footprint_and_overlap_elevation_offsets": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_registry_paths_are_portable": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    }
+  },
+  "rejected_merges": {},
+  "note": "U-04 (accessibility) and U-06 (performance) are run with frontend/scripts and recorded here via --merge.",
+  "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+  "terrain_products": [
+    {
+      "key": "20m:LDEM_80S_20MPP_ADJ.TIF",
+      "sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+      "error_map_sha256": "d64045b8aa58a24010f009ab5667ae02cc06cffa7796784dd5e2d48b3059d8cf"
+    },
+    {
+      "key": "240m:LDEM_60S_240MPP_ADJ.TIF",
+      "sha256": "3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34",
+      "error_map_sha256": "6b987570acf20cba527d29a519a9b1fd9d4550e98a81d4b8c1be4903b6d38fab"
+    },
+    {
+      "key": "5m:Site01_final_adj_5mpp_surf.tif",
+      "sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+      "error_map_sha256": "cf2cf52f52d2aa51e60d058010d10b0ebfb1d3e920f5a2b9a46eb6c51054ab1c"
+    },
+    {
+      "key": "80m:LDEM_80S_80MPP_ADJ.tiff",
+      "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+      "error_map_sha256": "e89306914bb209143f61ba66d341703d75221339424b774c6a1eb3c6c370ffc6"
+    }
+  ],
+  "label_rules_digest": "8d8e229fd52cbe79"
+}

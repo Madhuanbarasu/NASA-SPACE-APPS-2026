@@ -1,0 +1,134 @@
+{
+  "timestamp_utc": "2026-11-10T16:31:46.723844Z",
+  "algorithm_version": "1.5.0",
+  "coverage_domain": "80S-90S Polar Disk (IAU:30135, radius <= 304 km)",
+  "sampling_design": {
+    "candidate_locations": 144400,
+    "grid_rows": 380,
+    "grid_cols": 380,
+    "spacing_m": 1600.0,
+    "bounding_box_m": [
+      -304000.0,
+      -304000.0,
+      304000.0,
+      304000.0
+    ],
+    "elevation_methods": {
+      "80m": "Exact pixel centres from LDEM_80S_80MPP_ADJ.tiff",
+      "20m": "Production bilinear interpolation from LDEM_80S_20MPP_ADJ.TIF (chunked)",
+      "240m": "Production bilinear interpolation from LDEM_60S_240MPP_ADJ.TIF"
+    }
+  },
+  "products": {
+    "20m": {
+      "path": "pgda90_20m/LDEM_80S_20MPP_ADJ.TIF",
+      "sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+      "bytes": 2696082051
+    },
+    "80m": {
+      "path": "pgda90_80m/LDEM_80S_80MPP_ADJ.tiff",
+      "sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+      "bytes": 189158392
+    },
+    "240m": {
+      "path": "pgda90_240m/LDEM_60S_240MPP_ADJ.TIF",
+      "sha256": "3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34",
+      "bytes": 218961039
+    }
+  },
+  "pairwise_evaluations": {
+    "80m_vs_240m": {
+      "evaluation_name": "80m vs 240m (Polar-Wide Bilinear)",
+      "n_candidates": 144400,
+      "n_valid": 144400,
+      "n_excluded": 0,
+      "coverage_percentage": 100.0,
+      "mean_m": 0.00358765480732059,
+      "std_m": 2.987014655907022,
+      "rms_m": 2.9870168104432158,
+      "median_m": 0.12093098958393966,
+      "p5_m": -4.5754279242547105,
+      "p95_m": 4.248377821179655,
+      "min_m": -61.07845052084167,
+      "max_m": 59.23597547747022
+    },
+    "20m_vs_240m": {
+      "evaluation_name": "20m vs 240m (Polar-Wide Bilinear)",
+      "n_candidates": 144400,
+      "n_valid": 144400,
+      "n_excluded": 0,
+      "coverage_percentage": 100.0,
+      "mean_m": 0.00907180547904159,
+      "std_m": 3.1910664659699712,
+      "rms_m": 3.191079360951829,
+      "median_m": 0.15046013726640695,
+      "p5_m": -4.874250115279323,
+      "p95_m": 4.478030395521386,
+      "min_m": -64.45927937826355,
+      "max_m": 60.73601616754604
+    },
+    "20m_vs_80m": {
+      "evaluation_name": "20m vs 80m (Polar-Wide Reference)",
+      "n_candidates": 144400,
+      "n_valid": 144400,
+      "n_excluded": 0,
+      "coverage_percentage": 100.0,
+      "mean_m": 0.0054841506717209975,
+      "std_m": 0.6238099004385596,
+      "rms_m": 0.6238340066025223,
+      "median_m": 0.0262451171875,
+      "p5_m": -0.5854111671447754,
+      "p95_m": 0.5457763671875,
+      "min_m": -33.14447021484375,
+      "max_m": 61.8511962890625
+    }
+  },
+  "common_subset_evaluations": {
+    "common_valid_points": 144400,
+    "80m_vs_240m": {
+      "evaluation_name": "Common Subset: 80m vs 240m",
+      "n_candidates": 144400,
+      "n_valid": 144400,
+      "n_excluded": 0,
+      "coverage_percentage": 100.0,
+      "mean_m": 0.00358765480732059,
+      "std_m": 2.987014655907022,
+      "rms_m": 2.9870168104432158,
+      "median_m": 0.12093098958393966,
+      "p5_m": -4.5754279242547105,
+      "p95_m": 4.248377821179655,
+      "min_m": -61.07845052084167,
+      "max_m": 59.23597547747022
+    },
+    "20m_vs_240m": {
+      "evaluation_name": "Common Subset: 20m vs 240m",
+      "n_candidates": 144400,
+      "n_valid": 144400,
+      "n_excluded": 0,
+      "coverage_percentage": 100.0,
+      "mean_m": 0.00907180547904159,
+      "std_m": 3.1910664659699712,
+      "rms_m": 3.191079360951829,
+      "median_m": 0.15046013726640695,
+      "p5_m": -4.874250115279323,
+      "p95_m": 4.478030395521386,
+      "min_m": -64.45927937826355,
+      "max_m": 60.73601616754604
+    },
+    "20m_vs_80m": {
+      "evaluation_name": "Common Subset: 20m vs 80m",
+      "n_candidates": 144400,
+      "n_valid": 144400,
+      "n_excluded": 0,
+      "coverage_percentage": 100.0,
+      "mean_m": 0.0054841506717209975,
+      "std_m": 0.6238099004385596,
+      "rms_m": 0.6238340066025223,
+      "median_m": 0.0262451171875,
+      "p5_m": -0.5854111671447754,
+      "p95_m": 0.5457763671875,
+      "min_m": -33.14447021484375,
+      "max_m": 61.8511962890625
+    }
+  }
+}

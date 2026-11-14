@@ -1,0 +1,31 @@
+{
+  "note": "IN-MEMORY DRY RUN ONLY (validation.common.merge_external) of each Phase 5 result file against the live report. No pytest, no merge, nothing written to backend/validation/report.json.",
+  "now": {
+    "code_fingerprint": "5bf9753fa5c5493eadeb9839c07b837f2e3e69e3986e76146a2ed1717e37d2f8",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-12T06:06:55Z"
+  },
+  "live_report_sha256": "2279606ceab9354b8616ba9216e12e89e399f34cfc3cbfcbd7502d12d077d376",
+  "each_file_against_live_report": {
+    "frontend_u04_phase5.json": {
+      "rejected_reasons": [],
+      "status_after": {
+        "U-04": "passed"
+      },
+      "status_in_live_report": {
+        "U-04": "passed"
+      }
+    },
+    "frontend_u06_phase5.json": {
+      "rejected_reasons": [],
+      "status_after": {
+        "U-06": "passed"
+      },
+      "status_in_live_report": {
+        "U-06": "passed"
+      }
+    }
+  }
+}

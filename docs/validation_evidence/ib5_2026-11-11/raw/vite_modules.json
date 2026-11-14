@@ -1,0 +1,186 @@
+{
+ "shipped_with_rendered_code": [
+  "(project source)",
+  "d3-array",
+  "d3-color",
+  "d3-dispatch",
+  "d3-ease",
+  "d3-format",
+  "d3-interpolate",
+  "d3-path",
+  "d3-scale",
+  "d3-selection",
+  "d3-shape",
+  "d3-time",
+  "d3-time-format",
+  "d3-timer",
+  "d3-transition",
+  "d3-zoom",
+  "mgrs",
+  "ol",
+  "proj4",
+  "quickselect",
+  "rbush",
+  "react",
+  "react-dom",
+  "scheduler",
+  "three",
+  "wkt-parser"
+ ],
+ "in_graph_but_fully_tree_shaken": [],
+ "packages": {
+  "(project source)": {
+   "modules": 24,
+   "renderedLength": 118036,
+   "originalLength": 121819
+  },
+  "react": {
+   "modules": 8,
+   "renderedLength": 8906,
+   "originalLength": 8475
+  },
+  "react-dom": {
+   "modules": 5,
+   "renderedLength": 134746,
+   "originalLength": 133805
+  },
+  "scheduler": {
+   "modules": 4,
+   "renderedLength": 4522,
+   "originalLength": 4575
+  },
+  "ol": {
+   "modules": 179,
+   "renderedLength": 1349361,
+   "originalLength": 1490124
+  },
+  "d3-array": {
+   "modules": 1,
+   "renderedLength": 4276,
+   "originalLength": 37884
+  },
+  "d3-dispatch": {
+   "modules": 1,
+   "renderedLength": 2807,
+   "originalLength": 2812
+  },
+  "d3-selection": {
+   "modules": 1,
+   "renderedLength": 25416,
+   "originalLength": 27157
+  },
+  "d3-color": {
+   "modules": 1,
+   "renderedLength": 16363,
+   "originalLength": 16557
+  },
+  "d3-interpolate": {
+   "modules": 1,
+   "renderedLength": 10369,
+   "originalLength": 15010
+  },
+  "d3-timer": {
+   "modules": 1,
+   "renderedLength": 3191,
+   "originalLength": 3734
+  },
+  "d3-ease": {
+   "modules": 1,
+   "renderedLength": 2686,
+   "originalLength": 5184
+  },
+  "d3-transition": {
+   "modules": 1,
+   "renderedLength": 24491,
+   "originalLength": 25372
+  },
+  "d3-path": {
+   "modules": 1,
+   "renderedLength": 5199,
+   "originalLength": 5385
+  },
+  "d3-format": {
+   "modules": 1,
+   "renderedLength": 11928,
+   "originalLength": 12074
+  },
+  "d3-time": {
+   "modules": 1,
+   "renderedLength": 10593,
+   "originalLength": 12266
+  },
+  "d3-time-format": {
+   "modules": 1,
+   "renderedLength": 19598,
+   "originalLength": 19999
+  },
+  "d3-scale": {
+   "modules": 1,
+   "renderedLength": 8412,
+   "originalLength": 30245
+  },
+  "d3-shape": {
+   "modules": 1,
+   "renderedLength": 21631,
+   "originalLength": 56231
+  },
+  "d3-zoom": {
+   "modules": 1,
+   "renderedLength": 1250,
+   "originalLength": 17632
+  },
+  "quickselect": {
+   "modules": 1,
+   "renderedLength": 2071,
+   "originalLength": 2088
+  },
+  "rbush": {
+   "modules": 1,
+   "renderedLength": 15087,
+   "originalLength": 15116
+  },
+  "proj4": {
+   "modules": 94,
+   "renderedLength": 238078,
+   "originalLength": 250143
+  },
+  "wkt-parser": {
+   "modules": 8,
+   "renderedLength": 35482,
+   "originalLength": 36099
+  },
+  "mgrs": {
+   "modules": 1,
+   "renderedLength": 20924,
+   "originalLength": 20951
+  },
+  "three": {
+   "modules": 2,
+   "renderedLength": 879648,
+   "originalLength": 1346793
+  }
+ },
+ "assets": [
+  {
+   "fileName": "assets/archivo-vietnamese-wdth-normal-rJmnGBSt.woff2",
+   "bytes": 34464
+  },
+  {
+   "fileName": "assets/archivo-latin-wdth-normal-DY7AcnAa.woff2",
+   "bytes": 90104
+  },
+  {
+   "fileName": "assets/archivo-latin-ext-wdth-normal-7khWdh9v.woff2",
+   "bytes": 86240
+  },
+  {
+   "fileName": "assets/index-DU2XMcvH.css",
+   "bytes": 18820
+  },
+  {
+   "fileName": "index.html",
+   "bytes": 766
+  }
+ ],
+ "dist_untouched": true
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "LDEM_80S_20MPP_ADJ.TIF",
+    "path": "E:\\LUNA-OPS\\staging_a5\\LDEM_80S_20MPP_ADJ.TIF",
+    "bytes": 2696082051,
+    "sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+    "skipped": true
+  },
+  {
+    "name": "LDEM_80S_20MPP_ADJ_ERR.TIF",
+    "url": "https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LDEM_80S_20MPP_ADJ_ERR.TIF",
+    "path": "E:\\LUNA-OPS\\staging_a5\\LDEM_80S_20MPP_ADJ_ERR.TIF",
+    "expected_bytes": 3954709201,
+    "actual_bytes": 3954709201,
+    "sha256": "d64045b8aa58a24010f009ab5667ae02cc06cffa7796784dd5e2d48b3059d8cf",
+    "duration_seconds": 17881.6
+  }
+]

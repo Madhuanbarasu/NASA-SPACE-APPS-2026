@@ -1,0 +1,19 @@
+{
+ "result": "eda9338a7a50e3d57fa5bca9",
+ "samples": 1442,
+ "az 40 vs 400 vs -320": {
+  "max_abs_diff": 1.9984014443252818e-15,
+  "nonzero_samples": 230,
+  "max_value": 0.6592605103950835
+ },
+ "az 0 vs 360 vs -360": {
+  "max_abs_diff": 2.0816681711721685e-15,
+  "nonzero_samples": 409,
+  "max_value": 1.0163414000953148
+ },
+ "az 200 vs 560 vs -160": {
+  "max_abs_diff": 7.771561172376096e-16,
+  "nonzero_samples": 493,
+  "max_value": 1.0216413699239175
+ }
+}

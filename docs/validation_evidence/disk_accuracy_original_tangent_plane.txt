@@ -1,0 +1,32 @@
+sun   el=  1.0 level  max|df|=6.53e-06  max|dg|=3.32e-12 deg
+sun   el=  1.0 steep  max|df|=6.75e-06  max|dg|=9.16e-06 deg
+sun   el=  1.0 rough  max|df|=6.89e-06  max|dg|=9.35e-06 deg
+sun   el=  7.0 level  max|df|=4.80e-05  max|dg|=1.95e-12 deg
+sun   el=  7.0 steep  max|df|=4.72e-05  max|dg|=6.26e-05 deg
+sun   el=  7.0 rough  max|df|=5.19e-05  max|dg|=6.97e-05 deg
+sun   el= 20.0 level  max|df|=1.43e-04  max|dg|=2.15e-12 deg
+sun   el= 20.0 steep  max|df|=1.35e-04  max|dg|=1.89e-04 deg
+sun   el= 20.0 rough  max|df|=1.34e-04  max|dg|=2.00e-04 deg
+sun   el= 37.0 level  max|df|=2.96e-04  max|dg|=1.95e-12 deg
+sun   el= 37.0 steep  max|df|=2.49e-04  max|dg|=4.10e-04 deg
+sun   el= 37.0 rough  max|df|=2.53e-04  max|dg|=3.78e-04 deg
+sun   el= 59.9 level  max|df|=6.78e-04  max|dg|=6.04e-13 deg
+sun   el= 59.9 steep  max|df|=3.87e-04  max|dg|=1.02e-03 deg
+sun   el= 59.9 rough  max|df|=8.11e-04  max|dg|=8.21e-04 deg
+earth el=  1.0 level  max|df|=2.87e-05  max|dg|=9.02e-13 deg
+earth el=  1.0 steep  max|df|=2.42e-05  max|dg|=1.27e-04 deg
+earth el=  1.0 rough  max|df|=3.24e-05  max|dg|=6.07e-05 deg
+earth el=  7.0 level  max|df|=2.11e-04  max|dg|=5.19e-13 deg
+earth el=  7.0 steep  max|df|=1.70e-04  max|dg|=8.06e-04 deg
+earth el=  7.0 rough  max|df|=2.41e-04  max|dg|=6.87e-04 deg
+earth el= 20.0 level  max|df|=6.28e-04  max|dg|=6.39e-13 deg
+earth el= 20.0 steep  max|df|=4.85e-04  max|dg|=2.41e-03 deg
+earth el= 20.0 rough  max|df|=6.83e-04  max|dg|=1.26e-03 deg
+earth el= 37.0 level  max|df|=1.30e-03  max|dg|=5.16e-13 deg
+earth el= 37.0 steep  max|df|=8.97e-04  max|dg|=5.25e-03 deg
+earth el= 37.0 rough  max|df|=1.56e-03  max|dg|=2.48e-03 deg
+earth el= 59.9 level  max|df|=2.98e-03  max|dg|=1.53e-13 deg
+earth el= 59.9 steep  max|df|=1.40e-03  max|dg|=1.32e-02 deg
+earth el= 59.9 rough  max|df|=3.26e-03  max|dg|=5.80e-03 deg
+rho=0.2667: 4.1 us per disk
+rho=0.95: 11.7 us per disk

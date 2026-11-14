@@ -1,0 +1,6 @@
+# interior_points(LPSR_80S_20MPP_ADJ.TIF, 200, seed=1) with the 80-90 deg S coverage limit; 9.7 s; repeat identical: True
+cells: shadow 711,098; shadow inside coverage 667,521 (excluded 43,577); interior 470,581 (without the limit: 493,105)
+coverage: {"lat_limit_deg": -80.0, "source": "PGDA 90 product page: \"LAT gives the latitude limit (80S, ...)\"; the 20 m products \"cover 80 - 90 deg South\"", "rule": "a cell is used only if all four corners lie at or south of the limit; the interior margin then also applies from the limit"}
+formal sample: 200 points, latitude -89.652 to -80.081 deg; all south of 80 S: True; smallest distance inside the 80 S circle 2.469 km
+latitude bands: -90 to -88: 30, -88 to -85: 63, -85 to -82: 72, -82 to -80: 35
+points shared with the previous (unlimited) seed-1 sample: 0

@@ -1,0 +1,65 @@
+/* LUNA-OPS 2.0 Phase 6: Mission communication simulation. Reuses the Landing workspace cards, grid, disclaimer, metrics,
+   tables and finding chips (landing.css) and the chart legend; adds the timeline, elevation chart, link-budget form and
+   comparison bars. Geometry uses the Earth colour, RF feasibility the valid colour, unknown time is hatched. */
+
+.comms { padding-bottom: 28px; }
+.comms-pad { padding: 0 var(--gutter); }
+.comms .run-button.comms-run { width: auto; margin: 0; }
+.comms-disclaimer { border-left-color: var(--earth); }
+
+/* timeline */
+.comms-timeline, .comms-elev { width: 100%; min-width: 0; margin: 6px 0 10px; }
+.comms-timeline svg, .comms-elev svg { display: block; overflow: visible; }
+.ct-label { fill: var(--muted); font-size: 11px; }
+.ct-group { fill: var(--text); font-size: 11px; font-weight: 650; letter-spacing: 0.05em; text-transform: uppercase; }
+.ct-track { fill: var(--night); stroke: var(--line-soft); }
+.ct-track.is-off { fill: none; stroke: var(--faint); stroke-dasharray: 4 3; }
+.ct-off { fill: var(--faint); font-size: 11px; }
+.ct-open.is-geo { fill: var(--earth); }
+.ct-open.is-block { fill: var(--alert); }
+.ct-open.is-none { fill: var(--faint); }
+.ct-open.is-rf { fill: var(--valid); }
+.ct-open.is-uncertain { fill-opacity: 0.55; stroke: var(--text); stroke-dasharray: 3 2; stroke-width: 1; }
+.ct-unknown { fill: rgba(167, 180, 195, 0.18); stroke: rgba(167, 180, 195, 0.5); stroke-dasharray: 2 2; }
+.ct-tick { stroke: var(--line-soft); stroke-width: 1; }
+.ct-ticklabel { fill: var(--muted); font-size: 10.5px; font-family: var(--font-mono); }
+.ct-cursor { stroke: var(--sun); stroke-width: 1.5; }
+.ct-grid { stroke: var(--line-soft); }
+.ct-zero { stroke: var(--line-strong); }
+.ce-earth { fill: none; stroke: var(--earth); stroke-width: 1.6; }
+.ce-clear { fill: none; stroke: var(--earth); stroke-width: 1.2; stroke-dasharray: 5 3; opacity: 0.85; }
+.ce-relay { fill: none; stroke: var(--candidate); stroke-width: 1.1; opacity: 0.9; }
+.comms-windows { margin-top: 8px; }
+.comms-windows summary { cursor: pointer; color: var(--accent); font-size: var(--fs-s); min-height: 28px; }
+
+/* link budget */
+.comms-linktabs { margin: 0 0 8px; }
+/* UI review: the configuration cards are full width (sized by their own content), so their contents use responsive
+   columns: the transmitter / receiver / signal groups and the two breakdown tables side by side, and the relay's orbital
+   fields in a field grid. Each group has the same number of rows as its neighbours, so no group leaves a gap. */
+.comms-linkform-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 0 14px; align-items: start; }
+.comms-breakdown-tables { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 0 16px; align-items: start; }
+.comms-relay-fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 0 12px; align-items: end; }
+.comms-relay-needed { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0 0 8px; }
+.comms-linkform fieldset { margin: 8px 0; }
+.comms-breakdown { margin-top: 10px; }
+.comms-linkstatus { margin: 0 0 4px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; }
+table.data.comms-budget { min-width: 560px; margin-bottom: 10px; }
+table.data.comms-budget caption { text-align: left; color: var(--muted); font-size: var(--fs-xs); padding: 4px 0; caption-side: top; }
+table.data.comms-budget td.formula { color: var(--muted); font-size: var(--fs-xs); }
+table.data.comms-budget .unavail, table.data.comms-cmp td.unavail { color: var(--faint); }
+.comms-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; font-size: var(--fs-s); cursor: pointer; }
+.comms .hint.warn { color: var(--text); border-left: 2px solid var(--alert); padding-left: 8px; }
+
+/* comparison */
+table.data.comms-cmp { min-width: 620px; }
+.comms-bars { list-style: none; margin: 10px 0 4px; padding: 0; display: grid; gap: 4px; }
+.comms-bars li { display: grid; grid-template-columns: minmax(120px, 230px) minmax(0, 1fr) 96px; gap: 10px; align-items: center; font-size: var(--fs-xs); }
+.comms-bars .hist-bar span.is-geo { background: var(--earth); }
+.comms-bars .hist-bar span.is-rf { background: var(--valid); }
+
+@media (max-width: 600px) {
+  .comms-bars li { grid-template-columns: minmax(0, 1fr) 84px; }
+  .comms-bars .hist-bar { grid-column: 1 / -1; grid-row: 2; }
+  table.data.comms-budget { min-width: 480px; }
+}

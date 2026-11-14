@@ -1,0 +1,33 @@
+
+> luna-ops-frontend@0.1.0 build
+> tsc --noEmit -p . && node scripts/check-strings.mjs && node scripts/check-a11y.mjs && vite build
+
+check-strings: 1111 keys, 1111 referenced, 50 files scanned, 7 allow-listed literals, 0 problem(s)
+check-a11y: 38 components, 52 colour pairs, 0 problem(s)
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 424 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                                            [39m[1m[2m  0.77 kB[22m[1m[22m[2m │ gzip:   0.49 kB[22m
+[2mdist/[22m[32massets/archivo-vietnamese-wdth-normal-rJmnGBSt.woff2  [39m[1m[2m 34.46 kB[22m[1m[22m
+[2mdist/[22m[32massets/archivo-latin-ext-wdth-normal-7khWdh9v.woff2   [39m[1m[2m 86.24 kB[22m[1m[22m
+[2mdist/[22m[32massets/archivo-latin-wdth-normal-DY7AcnAa.woff2       [39m[1m[2m 90.10 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-DG1vq18P.css                             [39m[1m[2m 74.22 kB[22m[1m[22m[2m │ gzip:  14.70 kB[22m
+[2mdist/[22m[36massets/StageLegend-DLUi0ZZX.js                        [39m[1m[2m  0.58 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m
+[2mdist/[22m[36massets/terrainStats-BZmUF93F.js                       [39m[1m[2m  0.90 kB[22m[1m[22m[2m │ gzip:   0.51 kB[22m
+[2mdist/[22m[36massets/ChartLegend-CHQpGXDW.js                        [39m[1m[2m  1.11 kB[22m[1m[22m[2m │ gzip:   0.59 kB[22m
+[2mdist/[22m[36massets/CompareCharts-c2KlNHb-.js                      [39m[1m[2m  5.03 kB[22m[1m[22m[2m │ gzip:   2.07 kB[22m
+[2mdist/[22m[36massets/TerrainPreview-Cr9BkMdS.js                     [39m[1m[2m  6.48 kB[22m[1m[22m[2m │ gzip:   2.60 kB[22m
+[2mdist/[22m[36massets/Terrain3D-6fRM8L3-.js                          [39m[1m[2m  7.09 kB[22m[1m[22m[2m │ gzip:   2.95 kB[22m
+[2mdist/[22m[36massets/ChartTooltip-BUMi1Lz8.js                       [39m[1m[2m  9.29 kB[22m[1m[22m[2m │ gzip:   3.97 kB[22m
+[2mdist/[22m[36massets/MapView-Ca2Gat-2.js                            [39m[1m[2m 13.34 kB[22m[1m[22m[2m │ gzip:   5.26 kB[22m
+[2mdist/[22m[36massets/MoonGlobe-DarCz51z.js                          [39m[1m[2m 15.54 kB[22m[1m[22m[2m │ gzip:   6.25 kB[22m
+[2mdist/[22m[36massets/LandingMap-DNmcX4pf.js                         [39m[1m[2m 20.44 kB[22m[1m[22m[2m │ gzip:   7.39 kB[22m
+[2mdist/[22m[36massets/MissionView-DWN_ypiP.js                        [39m[1m[2m 22.06 kB[22m[1m[22m[2m │ gzip:   6.70 kB[22m
+[2mdist/[22m[36massets/LandingView-C7100fAI.js                        [39m[1m[2m 24.67 kB[22m[1m[22m[2m │ gzip:   6.27 kB[22m
+[2mdist/[22m[36massets/ResultWorkspace-CmZJbUNp.js                    [39m[1m[2m 63.73 kB[22m[1m[22m[2m │ gzip:  17.31 kB[22m
+[2mdist/[22m[36massets/index-B_60DYrT.js                              [39m[1m[2m308.10 kB[22m[1m[22m[2m │ gzip:  99.68 kB[22m
+[2mdist/[22m[36massets/index-Bo8M58ku.js                              [39m[1m[2m452.88 kB[22m[1m[22m[2m │ gzip: 138.31 kB[22m
+[2mdist/[22m[36massets/OrbitControls-DT1z0Qlr.js                      [39m[1m[2m505.59 kB[22m[1m[22m[2m │ gzip: 126.86 kB[22m
+[32m✓ built in 4.44s[39m

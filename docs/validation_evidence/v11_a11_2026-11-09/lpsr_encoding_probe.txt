@@ -1,0 +1,30 @@
+driver GTiff size 30400 30400 count 1 dtype ('float32',) nodata nan
+crs +proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +x_0=0 +y_0=0 +R=1737400 +units=m +no_defs=True
+transform (20.0, 0.0, -304000.0, 0.0, -20.0, 304000.0) res (20.0, 20.0)
+overviews [2, 4, 8, 16, 32, 64] block [(512, 512)] compress Compression.deflate interleave Interleaving.band
+tags {'NC_GLOBAL#Conventions': 'CF-1.7', 'NC_GLOBAL#GMT_version': '6.5.0_daaa813_2022.09.22 [64-bit]', 'NC_GLOBAL#node_offset': '1', 'NC_GLOBAL#title': 'Produced by grdcut', 'x#actual_range': '{-304000,304000}', 'x#axis': 'X', 'x#long_name': 'x', 'y#actual_range': '{-304000,304000}', 'y#axis': 'Y', 'y#long_name': 'y', 'z#actual_range': '{0,1}', 'z#long_name': 'z', 'z#_FillValue': 'nan', 'AREA_OR_POINT': 'Area'} band tags {'actual_range': '{0,1}', 'long_name': 'z', 'NETCDF_VARNAME': 'z', '_FillValue': 'nan'} desc (None,) scales (1.0,) offsets (0.0,) units (None,)
+mask flags ([<MaskFlags.nodata: 8>],)
+coarsest-overview read (1/64): shape (475, 475); unique values (up to 20): [(-0.08126892894506454, 1), (-0.07245659828186035, 1), (-0.07170750945806503, 1), (-0.07166185975074768, 1), (-0.07081997394561768, 1), (-0.06927204877138138, 1), (-0.06875811517238617, 1), (-0.06846382468938828, 1), (-0.06717749685049057, 1), (-0.06685306131839752, 1), (-0.06653979420661926, 1), (-0.06576988101005554, 1), (-0.06503131240606308, 1), (-0.06481222063302994, 1), (-0.06340159475803375, 1), (-0.06285027414560318, 1), (-0.06275155395269394, 1), (-0.06262653321027756, 1), (-0.06259983777999878, 1), (-0.06255297362804413, 1)] n unique 223017
+full-res block pole: unique [(0.0, 201720), (1.0, 60424)]
+rasterio._err.CPLE_AppDefinedError: _TIFFPartialReadStripArray:Cannot read offset/size for strile around ~1949
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "rasterio/_io.pyx", line 898, in rasterio._io.DatasetReaderBase._read
+    io_multi_band(self._hds, 0, xoff, yoff, width, height, out, indexes_arr, resampling=resampling.value)
+  File "rasterio/_io.pyx", line 173, in rasterio._io.io_multi_band
+    with stack_errors() as checker:
+  File "rasterio/_io.pyx", line 179, in rasterio._io.io_multi_band
+    return checker.exc_wrap_int(retval)
+  File "rasterio/_err.pyx", line 325, in rasterio._err.StackChecker.exc_wrap_int
+rasterio._err.CPLE_AppDefinedError: LPSR_80S_20MPP_ADJ.TIF, band 1: IReadBlock failed at X offset 29, Y offset 32: _TIFFPartialReadStripArray:Cannot read offset/size for strile around ~1949
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<stdin>", line 20, in <module>
+  File "rasterio/_io.pyx", line 571, in rasterio._io.DatasetReaderBase.read
+  File "rasterio/_io.pyx", line 901, in rasterio._io.DatasetReaderBase._read
+    raise RasterioIOError("Read failed. See previous exception for details.") from cplerr
+rasterio.errors.RasterioIOError: Read failed. See previous exception for details.

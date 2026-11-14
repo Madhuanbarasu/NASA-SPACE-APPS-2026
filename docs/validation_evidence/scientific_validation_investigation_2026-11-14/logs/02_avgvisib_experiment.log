@@ -1,0 +1,27 @@
+track: 163048 hours in 18 s
+{"test": "V-09", "role": "worst", "lat": -89.87172921715288, "lon": 211.11533231474183, "reference": 65.11, "stored_computed": 12.02} {'A_engine_0m': 12.02, 'B_engine_2m': 70.11, 'C_60m_near_field_0m': 57.91}
+{"test": "V-09", "role": "worst", "lat": -85.30147370869575, "lon": 37.0797006905198, "reference": 73.5, "stored_computed": 20.87} {'A_engine_0m': 20.87, 'B_engine_2m': 66.84, 'C_60m_near_field_0m': 45.95}
+{"test": "V-09", "role": "worst", "lat": -89.7843294170829, "lon": 204.09592091666732, "reference": 85.46, "stored_computed": 37.02} {'A_engine_0m': 37.02, 'B_engine_2m': 85.56, 'C_60m_near_field_0m': 57.31}
+{"test": "V-09", "role": "worst", "lat": -89.47485136585945, "lon": 222.55686188749715, "reference": 88.44, "stored_computed": 45.46} {'A_engine_0m': 45.46, 'B_engine_2m': 88.99, 'C_60m_near_field_0m': 62.04}
+{"test": "V-09", "role": "worst", "lat": -89.7788973807371, "lon": 203.46789889234364, "reference": 80.02, "stored_computed": 37.67} {'A_engine_0m': 37.67, 'B_engine_2m': 81.49, 'C_60m_near_field_0m': 58.02}
+{"test": "V-09", "role": "worst", "lat": -89.29900390547873, "lon": 128.69769393041545, "reference": 69.38, "stored_computed": 27.48} {'A_engine_0m': 27.48, 'B_engine_2m': 65.49, 'C_60m_near_field_0m': 54.88}
+{"test": "V-09", "role": "worst", "lat": -89.45114258547964, "lon": 222.80862860002117, "reference": 86.42, "stored_computed": 47.26} {'A_engine_0m': 47.26, 'B_engine_2m': 90.29, 'C_60m_near_field_0m': 62.57}
+{"test": "V-09", "role": "worst", "lat": -89.46242899365296, "lon": 223.06103965526657, "reference": 83.13, "stored_computed": 44.48} {'A_engine_0m': 44.48, 'B_engine_2m': 85.27, 'C_60m_near_field_0m': 58.85}
+{"test": "V-09", "role": "worst", "lat": -88.4563015623898, "lon": 292.17642113380225, "reference": 66.53, "stored_computed": 27.97} {'A_engine_0m': 27.97, 'B_engine_2m': 78.27, 'C_60m_near_field_0m': 54.36}
+{"test": "V-09", "role": "worst", "lat": -88.6627872058328, "lon": 291.5731406561984, "reference": 69.12, "stored_computed": 31.27} {'A_engine_0m': 31.27, 'B_engine_2m': 51.06, 'C_60m_near_field_0m': 41.03}
+{"test": "V-09", "role": "control", "lat": -88.66462682251607, "lon": 291.60435503042095, "reference": 82.69, "stored_computed": 81.16} {'A_engine_0m': 81.16, 'B_engine_2m': 83.88, 'C_60m_near_field_0m': 57.83}
+{"test": "V-09", "role": "control", "lat": -88.62863155218832, "lon": 291.80908474143155, "reference": 62.56, "stored_computed": 60.57} {'A_engine_0m': 60.57, 'B_engine_2m': 69.38, 'C_60m_near_field_0m': 54.61}
+{"test": "V-09", "role": "control", "lat": -85.79861795828351, "lon": 356.1536306950029, "reference": 41.52, "stored_computed": 41.59} {'A_engine_0m': 41.59, 'B_engine_2m': 41.68, 'C_60m_near_field_0m': 41.65}
+{"test": "V-09", "role": "control", "lat": -85.58543986004611, "lon": 4.432172512119885, "reference": 34.62, "stored_computed": 34.61} {'A_engine_0m': 34.61, 'B_engine_2m': 35.07, 'C_60m_near_field_0m': 34.57}
+{"test": "V-09", "role": "control", "lat": -86.28578686620773, "lon": 32.737976249523925, "reference": 0.0, "stored_computed": 0.0} {'A_engine_0m': 0.0, 'B_engine_2m': 0.0, 'C_60m_near_field_0m': 0.0}
+{"test": "V-10", "role": "worst", "lat": -85.03497637805862, "lon": 144.31907642593578, "reference": 26.18, "stored_computed": 3.91} {'A_engine_0m': 3.91, 'B_engine_2m': 26.56, 'C_60m_near_field_0m': 24.99}
+{"test": "V-10", "role": "worst", "lat": -85.74268371583725, "lon": 352.5662969386201, "reference": 92.18, "stored_computed": 71.75} {'A_engine_0m': 71.75, 'B_engine_2m': 100.0, 'C_60m_near_field_0m': 77.82}
+{"test": "V-10", "role": "worst", "lat": -87.3425560430044, "lon": 239.76044930209235, "reference": 24.62, "stored_computed": 10.66} {'A_engine_0m': 10.66, 'B_engine_2m': 26.04, 'C_60m_near_field_0m': 17.87}
+{"test": "V-10", "role": "worst", "lat": -85.10927713140853, "lon": 341.65296177861507, "reference": 73.36, "stored_computed": 60.69} {'A_engine_0m': 60.69, 'B_engine_2m': 78.61, 'C_60m_near_field_0m': 69.99}
+{"test": "V-10", "role": "worst", "lat": -86.17303569919281, "lon": 178.94868343437494, "reference": 16.33, "stored_computed": 3.98} {'A_engine_0m': 3.98, 'B_engine_2m': 19.36, 'C_60m_near_field_0m': 6.61}
+{"test": "V-10", "role": "worst", "lat": -87.18590586012459, "lon": 238.3938171122033, "reference": 22.8, "stored_computed": 11.46} {'A_engine_0m': 11.46, 'B_engine_2m': 27.98, 'C_60m_near_field_0m': 13.59}
+{"test": "V-10", "role": "control", "lat": -85.677376851422, "lon": 4.94759885898979, "reference": 100.0, "stored_computed": 100.0} {'A_engine_0m': 100.0, 'B_engine_2m': 100.0, 'C_60m_near_field_0m': 100.0}
+{"test": "V-10", "role": "control", "lat": -86.21745463716346, "lon": 335.4519027480616, "reference": 67.63, "stored_computed": 67.61} {'A_engine_0m': 67.61, 'B_engine_2m': 67.63, 'C_60m_near_field_0m': 67.62}
+{"test": "V-10", "role": "control", "lat": -89.1796910980164, "lon": 108.78457547954939, "reference": 56.49, "stored_computed": 56.48} {'A_engine_0m': 56.48, 'B_engine_2m': 56.56, 'C_60m_near_field_0m': 56.51}
+{"test": "V-10", "role": "control", "lat": -86.44613835474044, "lon": 228.15856591414877, "reference": 39.92, "stored_computed": 39.92} {'A_engine_0m': 39.92, 'B_engine_2m': 39.93, 'C_60m_near_field_0m': 39.92}
+done in 588 s

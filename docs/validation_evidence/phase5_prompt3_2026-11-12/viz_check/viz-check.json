@@ -1,0 +1,252 @@
+{
+ "base": "http://127.0.0.1:8765",
+ "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+ "started": "2026-11-11T21:35:16.494Z",
+ "analyses": [
+  {
+   "lat": "-89.463163",
+   "lon": "222.510447",
+   "start": "2026-11-14T00:00",
+   "end": "2026-11-21T00:00",
+   "id": "dc500f6d8c68baa16cdc1201"
+  },
+  {
+   "lat": "-89.463163",
+   "lon": "222.510447",
+   "start": "2026-12-13T12:44",
+   "end": "2026-12-20T12:44",
+   "id": "34839a84e69f5c006ca87e44"
+  },
+  {
+   "lat": "-89.9",
+   "lon": "0",
+   "start": "2026-11-14T00:00",
+   "end": "2026-11-21T00:00",
+   "id": "bf76ea02552ff03f87149b5a"
+  },
+  {
+   "lat": "-60.02",
+   "lon": "0",
+   "start": "2026-11-14T00:00",
+   "end": "2026-11-15T00:00",
+   "id": "0ee29edff63034bf81a930c3"
+  }
+ ],
+ "edgeSite": {
+  "incomplete_share": 0.49583333333333335,
+  "labels": {
+   "disk_visibility": "Pending validation",
+   "events": "Pending validation",
+   "horizon": "Pending validation",
+   "power_indicator": "Pending validation",
+   "sun_earth_azel": "Validated"
+  }
+ },
+ "checks": [
+  {
+   "name": "context: site card shows the result's coordinates and ground height",
+   "ok": true,
+   "detail": "Site Calculated89.463° S, 222.510° ELatitude -89.463163°, longitude 222.510447° east (east-positive, 0–360°, as in the site coordinates).Ground 1944.8 m above the 1737.4 km sphere (5m terrain at the site)"
+  },
+  {
+   "name": "context: observer and window from the result's provenance",
+   "ok": true,
+   "detail": "Observer / WindowSurface reference, 0.0 m above the ground14 Nov 2026, 00:00 UTC to 21 Nov 2026, 00:00 UTC, display step 30 min"
+  },
+  {
+   "name": "context: horizon range, near-field share and sigma statement match the result",
+   "ok": true,
+   "detail": "Horizon Calculated-2.17° to 4.74° over 3600 azimuth bins of 0.1°Every bin found its horizon inside the registered terrain44.2 % of bins are set by terrain within 2 site pixels (near field)Horizon uncertainty (±1σ) comes from the registered error maps and depends on the uncalibrated L_corr assumption."
+  },
+  {
+   "name": "context: every terrain level the horizon used is listed with its product",
+   "ok": true,
+   "detail": "Terrain used Measured input5m, 5 m pixels, out to 8 km: PGDA 78: High-Resolution LOLA Topography for Lunar South Pole Sites (one LDEM per site)20m, 20 m pixels, out to 40 km: PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_20MPP_ADJ80m, 80 m pixels, out to 250 km: PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_80MPP_ADJ240m, 240 m pixels, out to 600 km: PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_60S_240MPP_ADJ"
+  },
+  {
+   "name": "labels: chips unchanged in number and status (no Pending shown as Validated)",
+   "ok": true,
+   "detail": {
+    "chips": [
+     "Disk visibility: Geometric, pending validation",
+     "Events: Geometric, pending validation",
+     "Horizon: Geometric, pending validation",
+     "Power indicator: Estimated, pending validation",
+     "Sun and Earth positions: Geometric, validated"
+    ],
+    "apiValidated": 1
+   }
+  },
+  {
+   "name": "data key: four data classes explained",
+   "ok": true
+  },
+  {
+   "name": "visibility: two panels drawn; unknown gaps only where the API has null values",
+   "ok": true,
+   "detail": {
+    "vis": {
+     "panels": 4,
+     "gaps": 0,
+     "readout": "14 Nov 2026, 00:00 UTC  Sun 100%  Earth 0%"
+    },
+    "nNull": {
+     "sun": 0,
+     "earth": 0
+    }
+   }
+  },
+  {
+   "name": "visibility: readout at the cursor shows the API's Sun and Earth fractions at the cursor time",
+   "ok": true,
+   "detail": "14 Nov 2026, 00:00 UTC  Sun 100%  Earth 0%"
+  },
+  {
+   "name": "visibility: clicking the chart moves the shared time cursor (slider, panorama, timeline)",
+   "ok": true,
+   "detail": {
+    "before": "0",
+    "after": "251",
+    "n": 338
+   }
+  },
+  {
+   "name": "timeline: every interval (including dark and unknown periods) has a tooltip",
+   "ok": true,
+   "detail": {
+    "nTitles": 3,
+    "nIv": 3
+   }
+  },
+  {
+   "name": "timeline: the intervals table lists every interval with the API's flags (near field shown where set)",
+   "ok": true,
+   "detail": {
+    "nRows": 3,
+    "apiNear": 1,
+    "flags": [
+     "depends on near-field terrain"
+    ]
+   }
+  },
+  {
+   "name": "timeline: legend explains the nine encodings",
+   "ok": true
+  },
+  {
+   "name": "horizon: legend shows the sigma band and near-field bins when the result has them",
+   "ok": true,
+   "detail": "Sun pathEarth pathTerrain (5m near field)Horizon ±1σ (L_corr assumption)Near-field bins"
+  },
+  {
+   "name": "horizon: the readout gives the API's horizon and 1-sigma for the focused azimuth",
+   "ok": true,
+   "detail": {
+    "vt": "Az 200.0°  horizon 0.02°  ±0.08° (1σ)",
+    "bin": 2000,
+    "sigma": 0.08122
+   }
+  },
+  {
+   "name": "switching dates updates the context, chart and figures from the new result",
+   "ok": true,
+   "detail": {
+    "ctx": "Observer / WindowSurface reference, 0.0 m above the ground13 Dec 2026, 12:44 UTC to 20 Dec 2026, 12:44 UTC, display step 30 min",
+    "readout": "13 Dec 2026, 12:44 UTC  Sun 100%  Earth 0%"
+   }
+  },
+  {
+   "name": "switching sites updates the context to the new site",
+   "ok": true,
+   "detail": "Site Calculated89.900° S, 0.000° ELatitude -89.900000°, longitude 0.000000° east (east-positive, 0–360°, as in the site coordinates).Ground 628.0 m above the 1737.4 km sphere (20m terrain at the site)"
+  },
+  {
+   "name": "missing data: an incomplete horizon is reported as lower bounds (context and legend), never as complete",
+   "ok": true,
+   "detail": {
+    "inc": 0.49583333333333335,
+    "ctx": "Horizon Calculated-0.88° to 8.17° over 3600 azimuth bins of 0.1°49.6 % of bins ran out of terrain coverage (lower bounds)15.5 % of bins are set by terrain within 2 site pixels (near field)Horizon uncertainty (±1σ) comes from the registered error maps and depends on the uncalibrated L_corr assumption."
+   }
+  },
+  {
+   "name": "missing data: labels stay as the API gives them (terrain quantities not Validated)",
+   "ok": true,
+   "detail": {
+    "chips": [
+     "Disk visibility: Geometric, pending validation",
+     "Events: Geometric, pending validation",
+     "Horizon: Geometric, pending validation",
+     "Power indicator: Estimated, pending validation",
+     "Sun and Earth positions: Geometric, validated"
+    ],
+    "labels": {
+     "disk_visibility": "Pending validation",
+     "events": "Pending validation",
+     "horizon": "Pending validation",
+     "power_indicator": "Pending validation",
+     "sun_earth_azel": "Validated"
+    }
+   }
+  },
+  {
+   "name": "missing data: unknown values from the API are shown as gaps (chart), hatched unknown intervals (timeline) and 'unknown' rows, never filled",
+   "ok": true,
+   "detail": {
+    "nNull": 50,
+    "chartGaps": 1,
+    "unknownIntervals": 1,
+    "unknownRows": 1,
+    "hatched": 1
+   }
+  },
+  {
+   "name": "unsupported: analysis disabled with the backend's reason",
+   "ok": true
+  },
+  {
+   "name": "comparison: every result cell has a bar and its validation label counts; the legend shows the scale",
+   "ok": true,
+   "detail": {
+    "bars": 4,
+    "cells": 4,
+    "labels": [
+     "1 validated, 4 pending",
+     "1 validated, 4 pending",
+     "1 validated, 4 pending",
+     "1 validated, 4 pending"
+    ],
+    "legend": "Colour scale 1.3% to 100.0% (higher is better)"
+   }
+  },
+  {
+   "name": "comparison: metric switch updates the legend direction (lower is better for darkness)",
+   "ok": true,
+   "detail": "Colour scale 6 d 21 h to <1 min (lower is better)"
+  },
+  {
+   "name": "comparison: opening a cell shows its result with the context and visibility chart",
+   "ok": true
+  },
+  {
+   "name": "responsive: at 390 px the result view has no sideways scroll and the context cards stack",
+   "ok": true,
+   "detail": {
+    "scrollW": 390,
+    "clientW": 390,
+    "cardsOneColumn": true
+   }
+  },
+  {
+   "name": "no page exceptions or console errors",
+   "ok": true,
+   "detail": []
+  }
+ ],
+ "console": [
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  }
+ ],
+ "finished": "2026-11-11T21:35:47.791Z"
+}

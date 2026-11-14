@@ -1,0 +1,1358 @@
+{
+  "run_utc": "2026-11-09T19:04:58Z",
+  "code_version": "0.1.0+2a0f0b9",
+  "code_fingerprint": "230071e055662b22fd0c5ff03e86b461f6358652179fd079a37f611b1d8942c0",
+  "suite_fingerprint": "dd2304cdcaca121ed2c0028e5f5ae5c0ebe0c81fb32b94c2e0d5de0126da25c7",
+  "kernel_profile": "production",
+  "kernels": [
+    {
+      "name": "naif0012.tls",
+      "sha256": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b"
+    },
+    {
+      "name": "pck00011.tpc",
+      "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1"
+    },
+    {
+      "name": "de440s.bsp",
+      "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    },
+    {
+      "name": "moon_pa_de440_200625.bpc",
+      "sha256": "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f"
+    },
+    {
+      "name": "moon_de440_250416.tf",
+      "sha256": "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768"
+    },
+    {
+      "name": "moon_pa_de421_1900-2050.bpc",
+      "sha256": "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf"
+    },
+    {
+      "name": "moon_080317.tf",
+      "sha256": "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993"
+    }
+  ],
+  "pytest_exit_code": 0,
+  "tests": {
+    "V-01": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02a": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02b": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02c": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02d": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-02e": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-03": {
+      "status": "passed",
+      "detail": "7 case(s)"
+    },
+    "V-04": {
+      "status": "passed",
+      "detail": "max |dAz cos El| 5.235e-07 deg, max |dEl| 5.226e-07 deg (tolerance 0.01 deg); 7931 epochs; kernel profile production",
+      "source": "external",
+      "script": "horizons_compare",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-09T18:55:40Z"
+    },
+    "V-05": {
+      "status": "passed",
+      "detail": "18 matched centre crossings, 0 missed, 0 spurious; max |t_LUNA - t_Horizons| 0.500 s (tolerance 1.0 s); kernel profile production",
+      "source": "external",
+      "script": "horizons_compare",
+      "external_status": "passed",
+      "automated_status": "not run",
+      "run_utc": "2026-11-09T18:55:40Z"
+    },
+    "V-06": {
+      "status": "passed",
+      "detail": "2 case(s)"
+    },
+    "V-07": {
+      "status": "passed",
+      "detail": "2 case(s)"
+    },
+    "V-08": {
+      "status": "passed",
+      "detail": "7 case(s)"
+    },
+    "V-08b": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "V-09": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-10": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-11": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-12": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-13": {
+      "status": "not run",
+      "detail": null
+    },
+    "V-14": {
+      "status": "passed",
+      "detail": "8 case(s)"
+    },
+    "U-01": {
+      "status": "passed",
+      "detail": "2 case(s)"
+    },
+    "U-02": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "U-03": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "U-04": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-05": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "U-06": {
+      "status": "not run",
+      "detail": null
+    },
+    "U-07": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_terrain_missing_or_changed_file_is_refused_not_skipped": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_terrain_digest_follows_synthetic_permission": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dem_rejects_implausible_values_and_accepts_error_maps": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_sigma_uses_the_error_map_of_the_product_that_was_sampled": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_error_map_must_share_the_dem_grid": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_pgda_roi_tgz_registers_with_unique_ids": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_merge_guard_ownership_status_and_no_upgrade": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_suite_fingerprint_tracks_tests": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dem_registry_migration_and_multi_product": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dem_multi_product_sampling": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_label_integrity": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_external_merge_guard": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_kernel_sets_live_in_separate_folders": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_demo_lock_in_production_folder_is_refused_then_migrated": {
+      "status": "skipped",
+      "detail": "needs the sandbox test set as the session's kernel source"
+    },
+    "other:test_install_pipeline_checks_stages_loads_and_commits": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_failed_install_leaves_existing_set_untouched": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_set_that_does_not_load_is_not_installed": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_verify_kernels_passes_then_catches_tampering": {
+      "status": "skipped",
+      "detail": "checks the demo folder with the sandbox set"
+    },
+    "other:test_production_manifest_is_pinned_and_checkable": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_checksum_listing_parsed_in_any_common_layout": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_manifest_and_settings_include_80m": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_pgda90_file_integrity_and_geometry": {
+      "status": "skipped",
+      "detail": "PGDA90 80m files not available on disk"
+    },
+    "other:test_registry_contains_both_5m_and_80m": {
+      "status": "skipped",
+      "detail": "PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)"
+    },
+    "other:test_multi_resolution_sampling_and_5m_priority": {
+      "status": "skipped",
+      "detail": "PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)"
+    },
+    "other:test_horizon_coverage_completes_with_80m": {
+      "status": "skipped",
+      "detail": "PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)"
+    },
+    "other:test_3d_terrain_grid_multi_resolution": {
+      "status": "skipped",
+      "detail": "PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)"
+    },
+    "other:test_horizon_uncertainty_uses_both_error_maps": {
+      "status": "skipped",
+      "detail": "PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)"
+    },
+    "other:test_nodata_is_never_treated_as_valid_terrain": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_cli_verify_all_registered": {
+      "status": "skipped",
+      "detail": "PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)"
+    },
+    "other:test_near_field_uncertainty_correlation_eliminates_7_deg_artifact": {
+      "status": "skipped",
+      "detail": "PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)"
+    },
+    "other:test_5m_footprint_and_overlap_elevation_offsets": {
+      "status": "skipped",
+      "detail": "PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)"
+    },
+    "other:test_registry_paths_are_portable": {
+      "status": "skipped",
+      "detail": "PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)"
+    },
+    "other:test_dist_file_refuses_paths_outside_dist": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_spa_route_does_not_serve_files_outside_dist": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_cors_allows_only_local_origins": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_terrain_radius_is_bounded[-1]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_terrain_radius_is_bounded[0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_terrain_radius_is_bounded[1e6]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_terrain_radius_is_bounded[50.5]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_resolve_windows_absolute_path_on_any_os": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_tiles_render_from_relative_registry_paths": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_no_terrain_reason_names_missing_files": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dem_dir_override_keeps_demo_terrain_out_of_the_lola_registry": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_real_grids_put_every_lattice_point_at_one_fixed_offset": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_allowance_is_bilinear_over_the_window_intersection": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_nearest_neighbour_spread_is_the_slope_term": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_window_rule": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gap_rule_uses_the_deepest_sample": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_limiting_edge_not_centre": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_nonlinear_forces_uncertain_and_threshold_boundary": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_unknown_discrepancy_forces_uncertain": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_no_sigma_or_unknown_state_gives_none": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_near_field_flag_follows_the_span": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_sample_free_interval_is_evaluated_at_its_midpoint": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_intersect_or_semantics": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_summary_counts": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_near_field_propagates_into_intervals_and_results": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_unknown_discrepancy_flags_every_affected_interval": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_nonlinear_bins_flag_intervals_in_results": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_level_digest_tracks_encoding_not_terrain": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_values_unchanged[0.0-0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_values_unchanged[0.0-1]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_values_unchanged[0.0-2]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_values_unchanged[0.0-3]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_values_unchanged[2.0-0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_values_unchanged[2.0-1]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_values_unchanged[2.0-2]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_values_unchanged[2.0-3]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_analysis_outputs_unchanged_except_flags": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[2.5-0.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[2.5-0.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[2.5-10.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[2.5-10.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[2.5-25.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[2.5-25.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[2.5-40.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[2.5-40.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[500.0-0.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[500.0-0.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[500.0-10.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[500.0-10.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[500.0-25.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[500.0-25.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[500.0-40.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[500.0-40.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[50000.0-0.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[50000.0-0.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[50000.0-10.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[50000.0-10.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[50000.0-25.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[50000.0-25.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[50000.0-40.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_finite_differences[50000.0-40.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[2.5-0.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[2.5-0.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[2.5-10.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[2.5-10.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[2.5-25.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[2.5-25.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[2.5-40.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[2.5-40.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[500.0-0.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[500.0-0.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[500.0-10.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[500.0-10.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[500.0-25.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[500.0-25.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[500.0-40.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[500.0-40.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[50000.0-0.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[50000.0-0.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[50000.0-10.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[50000.0-10.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[50000.0-25.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[50000.0-25.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[50000.0-40.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gradients_match_complex_step[50000.0-40.0-2.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_reference_needs_no_extended_precision": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_propagation_algebra": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_monte_carlo_matches_first_order_propagation[0.0-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_monte_carlo_matches_first_order_propagation[0.5-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_monte_carlo_matches_first_order_propagation[0.95-0.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_monte_carlo_matches_first_order_propagation[0.0-1.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_nonlinear_threshold_unit": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_correlation_model": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_discrepancy_boundary_at_min_pairs": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_discrepancy_uses_min_pairs_setting": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_site_window_identity_not_level": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_same_resolution_products_keep_identity[20.0-3000.0-20000.0-hill_args0-ring_args0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_same_resolution_products_keep_identity[5.0-800.0-5000.0-hill_args1-ring_args1]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_unknown_discrepancy_is_never_zero": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_sigma_nonlinear_bins": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_near_field_on_tilted_plane": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_cache_keys_cover_uncertainty_settings": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_fallback_dirs_are_explicit": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_l_corr_label_everywhere_sigma_is_used": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_no_l_corr_label_without_sigma": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_pixel_texture_no_longer_inflates_near_field_sigma": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_constant_map_is_unchanged": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_mean_variance_is_preserved": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_step_map_transition_and_gradient_bound": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_nodata_is_excluded_not_zero": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_covariance_stays_positive_semidefinite": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_mean_square_continuity_in_a_horizon": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_cross_product_blockers_keep_pointwise_values": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_upper_and_lower_limbs_match_spice_edlimb": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_full_limb_deviation_matches_spice": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_shape_bounds_on_real_geometry": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_synthetic_poles_reach_both_shape_extremes": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_full_ellipse_matches_dense_reference": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_cap_bounds_hold_on_random_cases": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_decision_rule_uses_the_ellipse_whenever_a_bound_exceeds_tolerance": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_frozen_pole_bounds_hold_on_random_rotations": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_pole_bound_reproduces_alpha_minus_beta_epsilon": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_frozen_pole_against_iau_earth": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_solver_matches_dense_sampling_on_adversarial_ellipses": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_solver_fallback_branch_is_exercised_and_safe": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_segment_integral_is_cancellation_free": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_sun_sampling_is_bitwise_unchanged": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_earth_parameters_are_in_the_result_key": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_every_earth_setting_is_keyed": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_iers_radii_and_pole_label": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_provenance_records_the_earth_model": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_centre_rates_match_finite_differences": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_psi_rate_matches_finite_differences": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_limb_radial_speeds_and_limb_speed_bound": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_complete_rate_bound_covers_the_clearance_derivative": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_earth_limb_r0_does_not_use_rho_rate": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_earth_limb_events_match_brute_force[earthset-flat]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_earth_limb_events_match_brute_force[earthset-sloped]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_earth_limb_events_match_brute_force[earthset-notched]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_earth_limb_events_match_brute_force[earthrise-flat]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_earth_limb_events_match_brute_force[earthrise-sloped]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_earth_limb_events_match_brute_force[earthrise-notched]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_lens_matches_independent_integral": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_lens_small_angle_limit_is_planar": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_lens_branches_and_tangencies": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_lens_is_continuous_across_every_branch_boundary": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_lens_safety_symmetry_monotonicity_on_a_million_cases": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_limb_radius_toward_matches_dense_limb": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_ellipse_occultation_is_sandwiched_and_exact": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_joint_exact_branches_match_dense_reference": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_joint_occultation_without_terrain_is_the_lens": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_adaptive_three_way_converges_and_reports_its_error": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_g_vis_contacts_unchanged": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_disk_exact_visible_fraction_regression": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_disk_exact_agrees_with_the_independent_kernel": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_real_eclipse_joint_fraction": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_joint_parameters_are_in_the_result_key": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_every_blueprint_id_is_automated_or_owned": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_v12_owner_may_report_only_v12": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_v12_stub_refuses_to_produce_a_result": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_all_passing_with_covered_terrain_is_validated": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_each_test_gates_exactly_its_quantities[not run]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_each_test_gates_exactly_its_quantities[failed]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_each_test_gates_exactly_its_quantities[skipped]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_external_validations_gate_the_agreed_quantities": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_u04_u06_block_every_label": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_readme_requirements_match_the_code": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_traceability_table_matches_the_code": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_uncovered_terrain_keeps_terrain_labels_pending": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_error_map_change_breaks_coverage": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_synthetic_products_need_no_coverage_and_keep_their_label": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_status_page_without_a_result_has_no_terrain_reason": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_report_records_the_terrain_it_covers": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_frame_text_comes_from_product_metadata": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_label_rules_are_in_the_result_key": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gap_is_not_bridged": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_known_part_integral_is_analytic": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_coverage_is_time_weighted": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_isolated_known_sample_adds_no_time": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_all_unknown_or_empty[p0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_all_unknown_or_empty[p1]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_fully_known_series_is_unchanged": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_p_rel_keeps_unknown_unknown": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_interior_unknown_variance_is_not_borrowed": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_border_points_take_the_nearest_cell": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_regularized_sigma_far_from_any_error_data_is_unknown": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_cross3_is_bitwise_np_cross": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_pruned_kernel_is_bitwise_the_unpruned_one": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_pruning_speeds_up_the_kernel": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_site_caches_are_exact_and_safe": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_detector_skips_earth_fraction_but_states_keep_it": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_analysis_identical_with_and_without_pruning": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_future_warning_follows_the_leap_second_kernel_not_the_clock": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_importing_the_engine_creates_no_folders": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_dead_code_is_gone": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_selected_row_is_exactly_a_table_entry": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_table_satisfies_the_papers_printed_relations": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_selected_law_is_normalised_positive_and_monotone": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_full_disk_flux_matches_direct_integration[0.2666]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_full_disk_flux_matches_direct_integration[0.2725]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_full_disk_flux_matches_direct_integration[1.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_full_disk_flux_matches_direct_integration[5.0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_full_disk_flux_small_disk_limit_is_the_papers_f_over_i": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_segments_from_slivers_to_almost_full_match_the_reference": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_full_disk_and_centre_chord": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_uniform_law_reproduces_the_visible_fraction": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_limb_sliver_tends_to_the_limb_intensity_ratio": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_earth_occultation_matches_the_reference": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_short_circuits_are_exact": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_analysis_keeps_p_rel_and_adds_the_limb_darkened_series": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_limb_darkening_parameters_are_in_the_result_key": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_invalid_subbin_rays_are_rejected[0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_invalid_subbin_rays_are_rejected[17]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_invalid_subbin_rays_are_rejected[-1]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_invalid_subbin_rays_are_rejected[2.5_0]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_invalid_subbin_rays_are_rejected[4x]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_invalid_subbin_rays_are_rejected[2.5_1]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_invalid_subbin_rays_are_rejected[]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_invalid_subbin_rays_are_rejected[True]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_invalid_subbin_rays_are_rejected[None]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_valid_subbin_rays_and_startup_check": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_invalid_value_set_at_run_time_is_rejected": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_node_outputs_and_phase2_arrays_are_bitwise_identical_for_any_m": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_subrays_are_the_finer_node_rays": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_subray_elevations_match_an_analytic_brute_force": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_spike_between_nodes_is_detected": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_flat_peak_gives_no_excess": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_spike_in_the_last_bin_wraps_to_node_zero": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_missing_data_seen_only_by_subrays_makes_the_excess_unknown": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_nested_m_is_monotone_and_converges": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_smooth_crater_deficit_is_tiny": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_window_flag_rule": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_gaps_never_flagged_and_unknown_cases": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_window_flag_never_touches_the_uncertainty_flags": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_subbin_rays_are_in_the_horizon_key": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_cached_horizon_keeps_the_excess": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_analysis_phase2_flags_identical_for_m1_and_m4": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_m4_horizon_cost": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_synthetic_crater_identical_for_every_reach": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_summit_observer_forces_expansions_and_stays_identical": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_edges_and_nodata_at_the_initial_reach": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_without_the_stopping_rule": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_phase2_scene_with_error_maps_and_a_partial_coarse_window": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_pyramid_structure_is_the_reference_one": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_initial_reach_validation": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_performance_settings_cannot_change_coverage": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_horizon_key_ignores_performance_settings": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_peak_memory_is_at_least_40_percent_lower": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_erfa_published_values": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_nutation_table_is_the_iau2000b_series": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_matches_erfa_over_2000_2049": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_frame_bias_and_nutation_amplitude": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_time_scale_and_derivative": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_engine_pole_is_the_cip_and_kernel_independent": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_engine_pole_rate_matches_finite_differences": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_cip_against_iau_earth": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_no_generic_lunar_frame_names_in_engine_source": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_engine_frame_arguments_are_explicit": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_de440_transformations_identical_without_de421_kernels": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_installed_frame_kernels_match_the_ib2_decision": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_parse_probe_rows_and_header": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_probe_agrees_with_engine_within_v04": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_time_conversions_round_trip": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_crossing_detection_and_interpolation": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_v05_verdict_is_its_own": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_end_to_end_v05_independent_of_v04[0.0-passed-passed]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_end_to_end_v05_independent_of_v04[0.005-passed-failed]": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    },
+    "other:test_report_merges_v04_and_v05_separately": {
+      "status": "passed",
+      "detail": "1 case(s)"
+    }
+  },
+  "rejected_merges": {},
+  "terrain_products": [],
+  "label_rules_digest": "8d8e229fd52cbe79",
+  "note": "U-04 (accessibility) and U-06 (performance) are run with frontend/scripts and recorded here via --merge."
+}

@@ -1,0 +1,26 @@
+PASS tabs: Mission is listed first and the app still opens on the Site tab  ["Mission","Site","Landing","Communication","Compare","Data and validation","Guide"]
+PASS lazy loading: the dashboard chunk loads only when the Mission tab is first opened, and opening it loads no three.js  {"missionReqBefore":0,"missionReq":1}
+PASS empty states: no site, no candidates, no analyses, no comparison, each explained  {"sel":"Selected siteNo site selected. Click the 3D globe or the south polar map, choose a curated site, or type coordinates in the sidebar.","cand":"Candidate sites (0)No candidate sites yet. Add the selected site, or add sites in the sidebar or the Compare tab.Add the selected siteCompare candidatesCandidates are the comparison sites; the Compare tab adds the date windows.","hist":"Analyses in t
+PASS empty states: Local terrain and Analysis are unavailable until there is a covered site or a result
+PASS status: kernels, terrain products, report and label counts come from GET /api/status  {"stText":"System status NAIF kernels loaded, frame MOON_ME_DE440_ME421 LOLA terrain products: 5m:Site01_final_adj_5mpp_surf.tif, 20m:LDEM_80S_20MPP_ADJ.TIF, 80m:LDEM_80S_80MPP_ADJ.tiff, 240m:LDEM_60S_240MPP_ADJ.TIF No curated sites registered; custom coordinates work Validation report from 2026-11-12T17:23:45","stOk":0,"n":5}
+FAIL keyboard: ArrowLeft from Site selects Mission, ArrowRight goes back through Site to Compare; one tab stop  {"kb1":{"active":"","mission":false},"kb2":{"active":"","tabStops":1}}
+PASS selected site: coordinates and the registered terrain levels from GET /api/coverage  "Selected site89.463° S, 222.510° ELatitude -89.463163°, longitude 222.510447° east (east-positive, 0–360°, as in the site coordinates).Registered LOLA terrain covers this point: 5m, 20m, 80m, 240m.5m20m80m240mfinest 5mInspect local terrainAnalyse this siteAdd "
+PASS navigation: 3D Moon opens the globe for the selected site; focus moves to the main region  {"tab":"true","pressed":"3D Moon globe","focus":"main"}
+PASS navigation state: the globe view and the selected site are kept after leaving and returning to the Site tab  {"globe":true,"lat":"-89.463163","explorer":"89.463° S, 222.510° E"}
+PASS navigation: South polar map opens the map view
+PASS navigation: Local terrain opens the registered-terrain preview of the selected site  "Local terrain at 89.463° S, 222.510° E"
+PASS current analysis: percentages equal the API summary (sunlit, Earth in view, both)  {"f1":{"Sunlit time":"100.0%","Longest darkness":"0 min","Earth in view":"0.0%","Longest Earth gap":"7 d 0 h","Sunlit and Earth in view":"0.0%"},"api":[100,0,0]}
+PASS current analysis: durations equal the result view's figures (same API fields, same formatter)  {"f1":{"Sunlit time":"100.0%","Longest darkness":"0 min","Earth in view":"0.0%","Longest Earth gap":"7 d 0 h","Sunlit and Earth in view":"0.0%"},"dark":"0 min","gap":"7 d 0 h"}
+PASS current analysis: validation labels exactly as the API gives them (nothing Pending shown as Validated)  {"chips":["Disk visibility: Geometric, pending validation","Events: Geometric, pending validation","Horizon: Geometric, pending validation","Power indicator: Estimated, pending validation","Sun and Earth positions: Geometric, pending validation"],"apiOk":0}
+PASS current analysis: uncertainty from the API (unknown time, uncertain and near-field windows, sigma statement)  ["Sunlit time unknown: 0 min. Uncertain sunlit windows: 0. Sunlit windows that depend on near-field terrain: 1.","Horizon uncertainty (±1σ) available, under the uncalibrated L_corr assumption."]
+PASS integrity: no score, probability, ranking or recommendation anywhere on the dashboard (outside the disclaimer)
+file:///E:/LUNA-OPS/frontend/scripts/mission-live-check.mjs:57
+  if (r.exceptionDetails) throw new Error("page error: " + (r.exceptionDetails.exception?.description || r.exceptionDetails.text));
+                                ^
+
+Error: page error: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')
+    at <anonymous>:1:99
+    at evaluate (file:///E:/LUNA-OPS/frontend/scripts/mission-live-check.mjs:57:33)
+    at async file:///E:/LUNA-OPS/frontend/scripts/mission-live-check.mjs:219:13
+
+Node.js v24.19.0

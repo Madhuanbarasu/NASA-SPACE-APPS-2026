@@ -1,0 +1,110 @@
+[
+ {
+  "fig": "figure is-sun",
+  "sw": 262,
+  "cw": 244,
+  "wide": [
+   {
+    "tag": "div.figure-labels",
+    "text": "Disk visibilityPending validationEventsP",
+    "right_over": -17,
+    "sw": 244,
+    "cw": 210,
+    "width": 210,
+    "ws": "normal",
+    "disp": "flex"
+   },
+   {
+    "tag": "span.status-badge.is-pending",
+    "text": "Disk visibilityPending validation",
+    "right_over": 17,
+    "sw": 242,
+    "cw": 242,
+    "width": 244,
+    "ws": "nowrap",
+    "disp": "flex"
+   }
+  ]
+ },
+ {
+  "fig": "figure is-earth",
+  "sw": 262,
+  "cw": 244,
+  "wide": [
+   {
+    "tag": "div.figure-labels",
+    "text": "Disk visibilityPending validationEventsP",
+    "right_over": -17,
+    "sw": 244,
+    "cw": 210,
+    "width": 210,
+    "ws": "normal",
+    "disp": "flex"
+   },
+   {
+    "tag": "span.status-badge.is-pending",
+    "text": "Disk visibilityPending validation",
+    "right_over": 17,
+    "sw": 242,
+    "cw": 242,
+    "width": 244,
+    "ws": "nowrap",
+    "disp": "flex"
+   }
+  ]
+ },
+ {
+  "fig": "figure is-both",
+  "sw": 262,
+  "cw": 244,
+  "wide": [
+   {
+    "tag": "div.figure-labels",
+    "text": "Disk visibilityPending validationEventsP",
+    "right_over": -17,
+    "sw": 244,
+    "cw": 210,
+    "width": 210,
+    "ws": "normal",
+    "disp": "flex"
+   },
+   {
+    "tag": "span.status-badge.is-pending",
+    "text": "Disk visibilityPending validation",
+    "right_over": 17,
+    "sw": 242,
+    "cw": 242,
+    "width": 244,
+    "ws": "nowrap",
+    "disp": "flex"
+   }
+  ]
+ },
+ {
+  "fig": "figure is-power",
+  "sw": 275,
+  "cw": 244,
+  "wide": [
+   {
+    "tag": "div.figure-labels",
+    "text": "Power indicatorPending validation",
+    "right_over": -17,
+    "sw": 257,
+    "cw": 210,
+    "width": 210,
+    "ws": "normal",
+    "disp": "flex"
+   },
+   {
+    "tag": "span.status-badge.is-pending",
+    "text": "Power indicatorPending validation",
+    "right_over": 30,
+    "sw": 255,
+    "cw": 255,
+    "width": 257,
+    "ws": "nowrap",
+    "disp": "flex"
+   }
+  ]
+ }
+]

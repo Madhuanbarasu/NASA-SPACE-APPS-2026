@@ -1,0 +1,95 @@
+/* LUNA-OPS 2.0 design tokens: Hybrid Mission Operations.
+
+   Two colour families that never mix:
+   - instrument chrome: deep-space surfaces, ice-white text and one teal signal accent for navigation, selection and
+     active state;
+   - science colours, which always carry meaning: gold is the Sun, blue is Earth, cream is both, green is validated,
+     orange (and hatching) is unknown or a warning. Their values are unchanged from LUNA-OPS 1.0.
+
+   scripts/check-a11y.mjs reads the hex tokens in the first :root block below and checks every text and boundary pair
+   (WCAG 2.2 AA). Breakpoints (used literally in media queries): 1200 px compact navigation and parameters drawer,
+   900 px single document scroll, 600 px phone. */
+:root {
+  /* surfaces, darkest to lightest */
+  --space: #070b11;          /* command bar and page edge */
+  --night: #0b121b;          /* application background */
+  --panel: #111a25;          /* panels and cards */
+  --panel-raised: #18222f;   /* raised controls, selected fills, overlays */
+  --panel-hover: #1f2b3a;
+  --line: #2a3a4d;
+  --line-soft: #1c2735;
+  --line-strong: #3d5168;
+
+  /* text */
+  --text: #e8eef5;
+  --muted: #a7b4c3;
+  --faint: #8b9bad;
+
+  /* chrome accent (navigation, selection, active state; never data) */
+  --accent: #4cc9d6;
+  --accent-soft: rgba(76, 201, 214, 0.13);
+  --accent-line: rgba(76, 201, 214, 0.42);
+
+  /* science colours (meanings and values unchanged) */
+  --sun: #f2b544;
+  --sun-soft: rgba(242, 181, 68, 0.18);
+  --earth: #5fa8e8;
+  --earth-soft: rgba(95, 168, 232, 0.18);
+  --both: #e9dfb8;
+  --terrain: #4b5c6d;
+  --terrain-edge: #8a9aab;
+  --sky: #1a2633;
+  --valid: #7fc8a9;
+  --alert: #ee9a6b;
+
+  /* interaction */
+  --focus: #ffd98a;
+  --control-edge: #5f748a;   /* input/select boundary, >= 3:1 against page and fill (1.4.11) */
+  --on-sun: #1b1406;         /* label on the amber primary action */
+
+  /* typography: Archivo (variable width) for interface text, the system monospace for telemetry */
+  --font: "Archivo Variable", "Archivo", "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "Cascadia Code", Consolas, "SFMono-Regular", Menlo, "Liberation Mono", monospace;
+  --fs-2xs: 11px;
+  --fs-xs: 12px;
+  --fs-s: 13px;
+  --fs-m: 14.5px;
+  --fs-l: 17px;
+  --fs-xl: 21px;
+  --fs-2xl: 28px;
+  --fs-3xl: clamp(30px, 3.4vw, 44px);
+  --tracking-label: 0.09em;
+
+  /* spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --gutter: 24px;
+
+  /* shape and depth */
+  --r-s: 4px;
+  --r-m: 8px;
+  --r-l: 12px;
+  --r-pill: 999px;
+  --shadow-1: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 14px 36px rgba(0, 0, 0, 0.5);
+
+  /* layout */
+  --bar-h: 60px;
+  --sidebar-w: 340px;
+
+  /* motion (turned off by prefers-reduced-motion in base.css) */
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  color-scheme: dark;
+}
+
+@media (max-width: 600px) {
+  :root { --gutter: 16px; }
+}

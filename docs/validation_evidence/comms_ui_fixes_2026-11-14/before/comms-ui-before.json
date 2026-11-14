@@ -1,0 +1,564 @@
+{
+ "label": "before",
+ "layout": {
+  "relayOff-desktop": {
+   "cards": {
+    "site": {
+     "h": 416,
+     "left": 364,
+     "w": 432,
+     "blankBelow": 122,
+     "emptyInside": 15
+    },
+    "direct": {
+     "h": 522,
+     "left": 812,
+     "w": 604,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "timeline": {
+     "h": 696,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": 14,
+     "emptyInside": 15
+    },
+    "link": {
+     "h": 1547,
+     "left": 364,
+     "w": 432,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "relay": {
+     "h": 134,
+     "left": 812,
+     "w": 604,
+     "blankBelow": 1429,
+     "emptyInside": 15
+    },
+    "compare": {
+     "h": 476,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "dtn": {
+     "h": 229,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "provenance": {
+     "h": 910,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": null,
+     "emptyInside": 27
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  },
+  "relayOff-tablet": {
+   "cards": {
+    "site": {
+     "h": 262,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "direct": {
+     "h": 365,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "timeline": {
+     "h": 696,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 14,
+     "emptyInside": 15
+    },
+    "link": {
+     "h": 1402,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "relay": {
+     "h": 116,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "compare": {
+     "h": 476,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "dtn": {
+     "h": 229,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "provenance": {
+     "h": 910,
+     "left": 24,
+     "w": 976,
+     "blankBelow": null,
+     "emptyInside": 27
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  },
+  "relayOff-phone": {
+   "cards": {
+    "site": {
+     "h": 529,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "direct": {
+     "h": 804,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "timeline": {
+     "h": 1032,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 14,
+     "emptyInside": 15
+    },
+    "link": {
+     "h": 1637,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "relay": {
+     "h": 151,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "compare": {
+     "h": 723,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "dtn": {
+     "h": 298,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "provenance": {
+     "h": 2029,
+     "left": 16,
+     "w": 358,
+     "blankBelow": null,
+     "emptyInside": 27
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  },
+  "relayOn-desktop": {
+   "cards": {
+    "site": {
+     "h": 416,
+     "left": 364,
+     "w": 432,
+     "blankBelow": 122,
+     "emptyInside": 15
+    },
+    "direct": {
+     "h": 522,
+     "left": 812,
+     "w": 604,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "timeline": {
+     "h": 793,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": 14,
+     "emptyInside": 15
+    },
+    "link": {
+     "h": 1547,
+     "left": 364,
+     "w": 432,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "relay": {
+     "h": 977,
+     "left": 812,
+     "w": 604,
+     "blankBelow": 586,
+     "emptyInside": 15
+    },
+    "compare": {
+     "h": 495,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "dtn": {
+     "h": 229,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "provenance": {
+     "h": 910,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": null,
+     "emptyInside": 27
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  },
+  "relayOn-tablet": {
+   "cards": {
+    "site": {
+     "h": 262,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "direct": {
+     "h": 365,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "timeline": {
+     "h": 793,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 14,
+     "emptyInside": 15
+    },
+    "link": {
+     "h": 1402,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "relay": {
+     "h": 887,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "compare": {
+     "h": 495,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "dtn": {
+     "h": 229,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "provenance": {
+     "h": 910,
+     "left": 24,
+     "w": 976,
+     "blankBelow": null,
+     "emptyInside": 27
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  },
+  "relayOn-phone": {
+   "cards": {
+    "site": {
+     "h": 529,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "direct": {
+     "h": 804,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "timeline": {
+     "h": 1219,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 14,
+     "emptyInside": 15
+    },
+    "link": {
+     "h": 1637,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "relay": {
+     "h": 1285,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "compare": {
+     "h": 770,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "dtn": {
+     "h": 298,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInside": 15
+    },
+    "provenance": {
+     "h": 2029,
+     "left": 16,
+     "w": 358,
+     "blankBelow": null,
+     "emptyInside": 27
+    }
+   },
+   "overlaps": [],
+   "hscroll": false
+  }
+ },
+ "buttons": {
+  "relayOff_initial": [
+   {
+    "text": "Direct to Earth",
+    "pressed": "true",
+    "disabled": false
+   },
+   {
+    "text": "Lander to relay",
+    "pressed": "false",
+    "disabled": true
+   },
+   {
+    "text": "Relay to Earth",
+    "pressed": "false",
+    "disabled": true
+   }
+  ],
+  "relayOff_clickUp": "disabled",
+  "relayOff_afterUp": {
+   "pressed": "Direct to Earth",
+   "formId": "cl-direct-power",
+   "power": "",
+   "status": "Direct to Earth incomplete: some terms not evaluated",
+   "note": "",
+   "marginRow": "Link marginnot evaluated (missing: required Eb/N0)dBEb/N0 - required Eb/N0"
+  },
+  "relayOff_clickDown": "disabled",
+  "relayOff_afterDown": {
+   "pressed": "Direct to Earth",
+   "formId": "cl-direct-power",
+   "power": "",
+   "status": "Direct to Earth incomplete: some terms not evaluated",
+   "note": "",
+   "marginRow": "Link marginnot evaluated (missing: required Eb/N0)dBEb/N0 - required Eb/N0"
+  },
+  "direct": {
+   "pressed": "Direct to Earth",
+   "formId": "cl-direct-power",
+   "power": "20",
+   "status": "Direct to Earth complete margin 13.98 to 14.71 dB over the window",
+   "note": "",
+   "marginRow": "Link margin14.71dBEb/N0 - required Eb/N0"
+  },
+  "relayOff_up_after_direct": {
+   "pressed": "Direct to Earth",
+   "formId": "cl-direct-power",
+   "power": "20",
+   "status": "Direct to Earth complete margin 13.98 to 14.71 dB over the window",
+   "note": "",
+   "marginRow": "Link margin14.71dBEb/N0 - required Eb/N0"
+  },
+  "relayOn_initial": [
+   {
+    "text": "Direct to Earth",
+    "pressed": "true",
+    "disabled": false
+   },
+   {
+    "text": "Lander to relay",
+    "pressed": "false",
+    "disabled": false
+   },
+   {
+    "text": "Relay to Earth",
+    "pressed": "false",
+    "disabled": false
+   }
+  ],
+  "relayOn_switching": [
+   {
+    "click": "Lander to relay",
+    "result": "clicked",
+    "pressed": "Lander to relay",
+    "formId": "cl-up-power",
+    "power": "5",
+    "status": "Lander to relay complete margin -11.63 to -5.46 dB over the window",
+    "note": "",
+    "marginRow": "Link margin-5.46dBEb/N0 - required Eb/N0"
+   },
+   {
+    "click": "Relay to Earth",
+    "result": "clicked",
+    "pressed": "Relay to Earth",
+    "formId": "cl-down-power",
+    "power": "50",
+    "status": "Relay to Earth complete margin 27.86 to 28.67 dB over the window",
+    "note": "",
+    "marginRow": "Link margin28.67dBEb/N0 - required Eb/N0"
+   },
+   {
+    "click": "Direct to Earth",
+    "result": "clicked",
+    "pressed": "Direct to Earth",
+    "formId": "cl-direct-power",
+    "power": "20",
+    "status": "Direct to Earth complete margin 13.98 to 14.71 dB over the window",
+    "note": "",
+    "marginRow": "Link margin14.71dBEb/N0 - required Eb/N0"
+   },
+   {
+    "click": "Lander to relay",
+    "result": "clicked",
+    "pressed": "Lander to relay",
+    "formId": "cl-up-power",
+    "power": "5",
+    "status": "Lander to relay complete margin -11.63 to -5.46 dB over the window",
+    "note": "",
+    "marginRow": "Link margin-5.46dBEb/N0 - required Eb/N0"
+   },
+   {
+    "click": "Relay to Earth",
+    "result": "clicked",
+    "pressed": "Relay to Earth",
+    "formId": "cl-down-power",
+    "power": "50",
+    "status": "Relay to Earth complete margin 27.86 to 28.67 dB over the window",
+    "note": "",
+    "marginRow": "Link margin28.67dBEb/N0 - required Eb/N0"
+   },
+   {
+    "click": "Lander to relay",
+    "result": "clicked",
+    "pressed": "Lander to relay",
+    "formId": "cl-up-power",
+    "power": "5",
+    "status": "Lander to relay complete margin -11.63 to -5.46 dB over the window",
+    "note": "",
+    "marginRow": "Link margin-5.46dBEb/N0 - required Eb/N0"
+   }
+  ]
+ },
+ "tabLabels": [
+  "Mission",
+  "Site",
+  "Landing",
+  "Comms",
+  "Compare",
+  "Data and validation",
+  "Guide"
+ ],
+ "activeTab": "Comms",
+ "topbar": {
+  "390": {
+   "overflow": 0,
+   "inline": false,
+   "label": "Comms",
+   "selected": "true",
+   "toggle": "Comms"
+  },
+  "1024": {
+   "overflow": 0,
+   "inline": false,
+   "label": "Comms",
+   "selected": "true",
+   "toggle": "Comms"
+  },
+  "1440": {
+   "overflow": 0,
+   "inline": false,
+   "label": "Comms",
+   "selected": "true",
+   "toggle": "Comms"
+  },
+  "1599": {
+   "overflow": 0,
+   "inline": false,
+   "label": "Comms",
+   "selected": "true",
+   "toggle": "Comms"
+  },
+  "1600": {
+   "overflow": 0,
+   "inline": true,
+   "label": "Comms",
+   "selected": "true",
+   "toggle": "Comms"
+  },
+  "1920": {
+   "overflow": 0,
+   "inline": true,
+   "label": "Comms",
+   "selected": "true",
+   "toggle": "Comms"
+  }
+ },
+ "consoleErrors": []
+}

@@ -1,0 +1,318 @@
+{
+  "files": [
+    "src/App.tsx",
+    "src/components/CompareView.tsx",
+    "src/components/DataView.tsx",
+    "src/components/GuideView.tsx",
+    "src/components/HorizonPanorama.tsx",
+    "src/components/MapView.tsx",
+    "src/components/Sidebar.tsx",
+    "src/components/SiteView.tsx",
+    "src/components/Terrain3D.tsx",
+    "src/components/Timeline.tsx",
+    "src/components/TopBar.tsx",
+    "src/components/Welcome.tsx",
+    "src/main.tsx",
+    "src/state/store.tsx"
+  ],
+  "pairs": [
+    {
+      "fg": "text",
+      "bg": "night",
+      "min": 4.5,
+      "why": "--text text on --night",
+      "fgHex": "#e7ecf1",
+      "bgHex": "#17212c",
+      "ratio": 13.69
+    },
+    {
+      "fg": "text",
+      "bg": "panel",
+      "min": 4.5,
+      "why": "--text text on --panel",
+      "fgHex": "#e7ecf1",
+      "bgHex": "#1e2a37",
+      "ratio": 12.25
+    },
+    {
+      "fg": "text",
+      "bg": "panel-raised",
+      "min": 4.5,
+      "why": "--text text on --panel-raised",
+      "fgHex": "#e7ecf1",
+      "bgHex": "#243345",
+      "ratio": 10.81
+    },
+    {
+      "fg": "muted",
+      "bg": "night",
+      "min": 4.5,
+      "why": "--muted text on --night",
+      "fgHex": "#a3b1bf",
+      "bgHex": "#17212c",
+      "ratio": 7.44
+    },
+    {
+      "fg": "muted",
+      "bg": "panel",
+      "min": 4.5,
+      "why": "--muted text on --panel",
+      "fgHex": "#a3b1bf",
+      "bgHex": "#1e2a37",
+      "ratio": 6.66
+    },
+    {
+      "fg": "muted",
+      "bg": "panel-raised",
+      "min": 4.5,
+      "why": "--muted text on --panel-raised",
+      "fgHex": "#a3b1bf",
+      "bgHex": "#243345",
+      "ratio": 5.87
+    },
+    {
+      "fg": "faint",
+      "bg": "night",
+      "min": 4.5,
+      "why": "--faint text on --night",
+      "fgHex": "#8b9bab",
+      "bgHex": "#17212c",
+      "ratio": 5.72
+    },
+    {
+      "fg": "faint",
+      "bg": "panel",
+      "min": 4.5,
+      "why": "--faint text on --panel",
+      "fgHex": "#8b9bab",
+      "bgHex": "#1e2a37",
+      "ratio": 5.12
+    },
+    {
+      "fg": "faint",
+      "bg": "panel-raised",
+      "min": 4.5,
+      "why": "--faint text on --panel-raised",
+      "fgHex": "#8b9bab",
+      "bgHex": "#243345",
+      "ratio": 4.51
+    },
+    {
+      "fg": "sun",
+      "bg": "night",
+      "min": 4.5,
+      "why": "--sun text on --night",
+      "fgHex": "#f2b544",
+      "bgHex": "#17212c",
+      "ratio": 8.89
+    },
+    {
+      "fg": "sun",
+      "bg": "panel",
+      "min": 4.5,
+      "why": "--sun text on --panel",
+      "fgHex": "#f2b544",
+      "bgHex": "#1e2a37",
+      "ratio": 7.96
+    },
+    {
+      "fg": "sun",
+      "bg": "panel-raised",
+      "min": 4.5,
+      "why": "--sun text on --panel-raised",
+      "fgHex": "#f2b544",
+      "bgHex": "#243345",
+      "ratio": 7.02
+    },
+    {
+      "fg": "earth",
+      "bg": "night",
+      "min": 4.5,
+      "why": "--earth text on --night",
+      "fgHex": "#5fa8e8",
+      "bgHex": "#17212c",
+      "ratio": 6.4
+    },
+    {
+      "fg": "earth",
+      "bg": "panel",
+      "min": 4.5,
+      "why": "--earth text on --panel",
+      "fgHex": "#5fa8e8",
+      "bgHex": "#1e2a37",
+      "ratio": 5.72
+    },
+    {
+      "fg": "earth",
+      "bg": "panel-raised",
+      "min": 4.5,
+      "why": "--earth text on --panel-raised",
+      "fgHex": "#5fa8e8",
+      "bgHex": "#243345",
+      "ratio": 5.05
+    },
+    {
+      "fg": "both",
+      "bg": "night",
+      "min": 4.5,
+      "why": "--both text on --night",
+      "fgHex": "#e9dfb8",
+      "bgHex": "#17212c",
+      "ratio": 12.18
+    },
+    {
+      "fg": "both",
+      "bg": "panel",
+      "min": 4.5,
+      "why": "--both text on --panel",
+      "fgHex": "#e9dfb8",
+      "bgHex": "#1e2a37",
+      "ratio": 10.9
+    },
+    {
+      "fg": "both",
+      "bg": "panel-raised",
+      "min": 4.5,
+      "why": "--both text on --panel-raised",
+      "fgHex": "#e9dfb8",
+      "bgHex": "#243345",
+      "ratio": 9.61
+    },
+    {
+      "fg": "valid",
+      "bg": "night",
+      "min": 4.5,
+      "why": "--valid text on --night",
+      "fgHex": "#7fc8a9",
+      "bgHex": "#17212c",
+      "ratio": 8.32
+    },
+    {
+      "fg": "valid",
+      "bg": "panel",
+      "min": 4.5,
+      "why": "--valid text on --panel",
+      "fgHex": "#7fc8a9",
+      "bgHex": "#1e2a37",
+      "ratio": 7.45
+    },
+    {
+      "fg": "valid",
+      "bg": "panel-raised",
+      "min": 4.5,
+      "why": "--valid text on --panel-raised",
+      "fgHex": "#7fc8a9",
+      "bgHex": "#243345",
+      "ratio": 6.57
+    },
+    {
+      "fg": "alert",
+      "bg": "night",
+      "min": 4.5,
+      "why": "--alert text on --night",
+      "fgHex": "#ee9a6b",
+      "bgHex": "#17212c",
+      "ratio": 7.34
+    },
+    {
+      "fg": "alert",
+      "bg": "panel",
+      "min": 4.5,
+      "why": "--alert text on --panel",
+      "fgHex": "#ee9a6b",
+      "bgHex": "#1e2a37",
+      "ratio": 6.57
+    },
+    {
+      "fg": "alert",
+      "bg": "panel-raised",
+      "min": 4.5,
+      "why": "--alert text on --panel-raised",
+      "fgHex": "#ee9a6b",
+      "bgHex": "#243345",
+      "ratio": 5.79
+    },
+    {
+      "fg": "#1b1406",
+      "bg": "sun",
+      "min": 4.5,
+      "why": "run button label on --sun",
+      "fgHex": "#1b1406",
+      "bgHex": "#f2b544",
+      "ratio": 9.98
+    },
+    {
+      "fg": "control-edge",
+      "bg": "night",
+      "min": 3,
+      "why": "text-input/select border against the page (1.4.11)",
+      "fgHex": "#617588",
+      "bgHex": "#17212c",
+      "ratio": 3.42
+    },
+    {
+      "fg": "control-edge",
+      "bg": "panel",
+      "min": 3,
+      "why": "text-input/select border against its own fill (1.4.11)",
+      "fgHex": "#617588",
+      "bgHex": "#1e2a37",
+      "ratio": 3.06
+    },
+    {
+      "fg": "focus",
+      "bg": "night",
+      "min": 3,
+      "why": "focus ring on the page",
+      "fgHex": "#ffd98a",
+      "bgHex": "#17212c",
+      "ratio": 12.05
+    },
+    {
+      "fg": "focus",
+      "bg": "panel",
+      "min": 3,
+      "why": "focus ring on panels",
+      "fgHex": "#ffd98a",
+      "bgHex": "#1e2a37",
+      "ratio": 10.78
+    },
+    {
+      "fg": "focus",
+      "bg": "panel-raised",
+      "min": 3,
+      "why": "focus ring on raised surfaces",
+      "fgHex": "#ffd98a",
+      "bgHex": "#243345",
+      "ratio": 9.51
+    },
+    {
+      "fg": "sun",
+      "bg": "panel-raised",
+      "min": 3,
+      "why": "selected-state indicator (segmented, mode switch) on raised fill",
+      "fgHex": "#f2b544",
+      "bgHex": "#243345",
+      "ratio": 7.02
+    },
+    {
+      "fg": "sun",
+      "bg": "panel",
+      "min": 3,
+      "why": "selected-site indicator on panel fill",
+      "fgHex": "#f2b544",
+      "bgHex": "#1e2a37",
+      "ratio": 7.96
+    },
+    {
+      "fg": "sun",
+      "bg": "night",
+      "min": 3,
+      "why": "selected-tab underline on the page",
+      "fgHex": "#f2b544",
+      "bgHex": "#17212c",
+      "ratio": 8.89
+    }
+  ],
+  "problems": []
+}

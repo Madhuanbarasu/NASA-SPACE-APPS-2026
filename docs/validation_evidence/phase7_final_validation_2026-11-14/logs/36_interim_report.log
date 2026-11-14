@@ -1,0 +1,14 @@
+interim report: ..\docs\validation_evidence\phase7_final_validation_2026-11-14\report_regeneration\interim_report_phase7.json {'not run': 17, 'passed': 8, 'failed': 1}
+rejected merges: none
+  V-04: passed
+  V-05: passed
+  V-09: passed
+  V-10: failed
+  V-11: passed
+  V-12: passed
+  V-13: passed
+  V-14: passed
+  U-04: passed
+  U-06: not run
+Validated labels from interim report: [] | blockers: ['the automated test suite did not pass completely (pytest exit code None); every test, including integrity tests, must pass']
+Validated labels from installed official report: [] | blockers: ['the validation report was produced by different code', 'the validation report was produced by a different version of the tests or validation scripts']

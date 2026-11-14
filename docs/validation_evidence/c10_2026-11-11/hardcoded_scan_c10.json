@@ -1,0 +1,27 @@
+{
+  "srcDir": "E:\\LUNA-OPS\\frontend\\src",
+  "files": 19,
+  "hardcodedFindings": 0,
+  "allowListed": 5,
+  "perFile": {
+    "src/App.tsx": 0,
+    "src/api/client.ts": 0,
+    "src/api/types.ts": 0,
+    "src/components/CompareView.tsx": 0,
+    "src/components/DataView.tsx": 0,
+    "src/components/GuideView.tsx": 0,
+    "src/components/HorizonPanorama.tsx": 0,
+    "src/components/MapView.tsx": 0,
+    "src/components/Sidebar.tsx": 0,
+    "src/components/SiteView.tsx": 0,
+    "src/components/Terrain3D.tsx": 0,
+    "src/components/Timeline.tsx": 0,
+    "src/components/TopBar.tsx": 0,
+    "src/components/Welcome.tsx": 0,
+    "src/lib/countdown.ts": 0,
+    "src/lib/format.ts": 0,
+    "src/lib/useWidth.ts": 0,
+    "src/main.tsx": 0,
+    "src/state/store.tsx": 0
+  }
+}

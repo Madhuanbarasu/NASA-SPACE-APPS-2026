@@ -1,0 +1,338 @@
+--- docs/validation_evidence/ui_nav_badge_removal_2026-11-14/originals/TopBar.tsx	2026-11-14 13:00:28.495595700 +0530
++++ frontend/src/components/TopBar.tsx	2026-11-14 13:09:15.415175300 +0530
+@@ -7,8 +7,11 @@
+ 
+ const T = S.topBar;
+ const SH = S.shell;
+-// Phase 5 prompt 4: the mission dashboard is listed first; the app still opens on the Site tab
+-const TABS: Tab[] = ["mission", "site", "landing", "comms", "compare", "data", "guide"];
++// Phase 5 prompt 4: the mission dashboard is listed first; the app still opens on the Site tab.
++// UI change 2026-11-14 (owner request): "Data and validation" is no longer listed in the navigation (desktop tabs and
++// compact menu); the view, its data and the report are unchanged and it opens from the address bar at #data.
++const TABS: Tab[] = ["mission", "site", "landing", "comms", "compare", "guide"];
++const DATA_HASH = "#data";
+ 
+ interface TopBarProps {
+   /** whether the Mission Parameters panel is shown (docked on wide screens, a drawer below 1200 px) */
+@@ -46,6 +49,15 @@
+     return () => window.removeEventListener("keydown", onKey);
+   }, [menuOpen]);
+   const choose = (id: Tab) => { dispatch({ type: "tab", tab: id }); setMenuOpen(false); };
++  // the unlisted Data and validation view: opened by the #data address (on load and when the address changes)
++  useEffect(() => {
++    const fromHash = () => { if (window.location.hash === DATA_HASH) dispatch({ type: "tab", tab: "data" }); };
++    fromHash();
++    window.addEventListener("hashchange", fromHash);
++    return () => window.removeEventListener("hashchange", fromHash);
++  }, [dispatch]);
++  // while an unlisted view is shown, the first tab keeps the tab list reachable with the keyboard
++  const listed = TABS.includes(state.tab);
+ 
+   const ks = state.status?.kernels;
+   const terrain = state.status?.terrain;
+@@ -73,7 +85,7 @@
+       <nav className="tabs" id="primary-nav" data-open={menuOpen} role="tablist" aria-label={T.tabsLabel}>
+         {TABS.map((id) => (
+           <button key={id} id={`tab-${id}`} role="tab" className="tab" aria-selected={state.tab === id} aria-controls="view-panel"
+-                  tabIndex={state.tab === id ? 0 : -1} onKeyDown={onTabKey}
++                  tabIndex={state.tab === id || (!listed && id === TABS[0]) ? 0 : -1} onKeyDown={onTabKey}
+                   onClick={() => choose(id)}>{T.tabs[id]}</button>
+         ))}
+       </nav>
+--- docs/validation_evidence/ui_nav_badge_removal_2026-11-14/originals/MissionView.tsx	2026-11-14 13:00:28.824528000 +0530
++++ frontend/src/components/MissionView.tsx	2026-11-14 13:09:15.556447600 +0530
+@@ -5,12 +5,11 @@
+ import { RULE_NAMES, fmtDuration, fmtLatLon, fmtPct, fmtUTC } from "../lib/format";
+ import { windowValid } from "../lib/timeWindow";
+ import { historyItem, landingKey, useStore, type CommsSummary, type CompareSite, type HistoryItem, type LandingSummary, type SiteViewMode } from "../state/store";
+-import { LabelChips, RESULT_SECTIONS } from "./ResultLabels";
++import { RESULT_SECTIONS } from "./ResultLabels";
+ import { useSiteCoverage } from "./SiteExplorer";
+ import { MissionLocator } from "./MissionLocator";
+ import { Icon, type IconName } from "../ui/Icon";
+ import { Metric } from "../ui/Metric";
+-import { StatusBadge } from "../ui/StatusBadge";
+ import { ViewHeader } from "../ui/ViewHeader";
+ import { readinessRows } from "./Welcome";
+ 
+@@ -25,7 +24,6 @@
+ const M = S.mission;
+ const E = S.explorer;
+ const CM = S.compare.metrics;
+-const QUANTITY_NAMES: Record<string, string> = S.quantities;
+ // internal tokens (never displayed)
+ const VIEW = { map: "map", globe: "globe", terrain: "terrain" } as const;
+ const TAB = { site: "site", compare: "compare", landing: "landing", comms: "comms" } as const;
+@@ -247,7 +245,6 @@
+ 
+   const selCov = !site ? null : error ? { text: E.error(error), tone: "bad" } : checking || !coverage ? { text: E.checking, tone: "" }
+     : coverage.covered ? { text: E.covered(coverage.levels.join(", ")), tone: "good" } : { text: E.notCovered(coverage.reason ?? S.common.unknown), tone: "bad" };
+-  const statusLabels = state.status?.labels ? labelCounts(Object.fromEntries(Object.entries(state.status.labels).map(([k, v]) => [k, v.validation]))) : null;
+   const current = cr ? historyItem(cr) : null;
+   const sunNow = cr ? cr.summary[`sun_${cr.provenance.parameters.rules.sunlit}`] : null;
+   const earthNow = cr ? cr.summary[`earth_${cr.provenance.parameters.rules.dte}`] : null;
+@@ -293,7 +290,6 @@
+                   note={st?.kernels.frame} state={st && (!st.kernels.loaded || st.kernels.profile !== "production") ? FLAG : undefined} />
+           <Metric label={M.stripTerrain} value={!st ? S.common.unknown : M.stripProducts(nLevels)}
+                   note={st?.terrain.synthetic_in_use ? S.viz.synthetic : undefined} state={st?.terrain.synthetic_in_use || (st && !nLevels) ? FLAG : undefined} />
+-          <Metric label={M.stripLabels} value={statusLabels ? M.stripLabelsValue(statusLabels.ok, statusLabels.pending) : S.common.na} />
+           <Metric label={M.stripCandidates} value={String(sites.length)} />
+           <Metric label={M.stripSession} value={String(state.history.length)} />
+           <Metric label={M.stripComparison} value={state.compareJob ? M.stripRunning : cmp ? M.stripCells(cmp.sites.length, cmp.windows.length) : M.stripNone} />
+@@ -345,13 +341,6 @@
+                   ))}
+                 </ul>
+               )}
+-              {st?.labels && (
+-                <div className="mission-badges" aria-label={M.labelsByQuantity}>
+-                  {Object.entries(st.labels).map(([k, v]) => <StatusBadge key={k} word={v.validation} prefix={QUANTITY_NAMES[k] ?? k} />)}
+-                </div>
+-              )}
+-              {statusLabels && <p className="hint">{M.labelsNow(statusLabels.ok, statusLabels.pending)}</p>}
+-              <p className="hint">{M.labelsNote}</p>
+             </section>
+           </div>
+           <section className="mission-card mission-locator" aria-label={M.locatorHeading}>
+@@ -374,7 +363,6 @@
+                 <p className="hint mono">{M.windowRange(fmtUTC(cr.window.start_utc), fmtUTC(cr.window.end_utc))}</p>
+               </div>
+               {!r && <p className="hint">{M.parkedNote}</p>}
+-              <LabelChips result={cr} />
+               <SummaryFigures item={current} />
+               <ul className="mission-flags">
+                 {sunNow && <li>{M.uncertainty(fmtDuration(sunNow.unknown_hours), String(sunNow.uncertain_windows ?? S.common.na),
+@@ -404,7 +392,6 @@
+                 const last = latestFor(c);
+                 const lsun = last ? last.summary[`sun_${last.rules.sunlit}`]?.percent ?? null : null;
+                 const learth = last ? last.summary[`earth_${last.rules.dte}`]?.percent ?? null : null;
+-                const llc = last ? labelCounts(last.labels) : null;
+                 return (
+                   <li key={k} className={isSel ? "is-selected" : undefined}>
+                     <div className="mission-cand-head">
+@@ -425,7 +412,6 @@
+                             <span className="cand-value is-sun"><span className="cand-k">{CM.sunlit}</span><span className="cand-v">{fmtPct(lsun)}</span></span>
+                             <span className="cand-value is-earth"><span className="cand-k">{CM.dte}</span><span className="cand-v">{fmtPct(learth)}</span></span>
+                           </span>
+-                          {llc && <span className="cand-labels">{S.viz.cellLabels(llc.ok, llc.pending)}</span>}
+                         </>
+                       )}
+                     </div>
+@@ -467,10 +453,9 @@
+               <table className="data">
+                 <caption className="sr-only">{M.historyCaption}</caption>
+                 <thead><tr><th>{M.colSite}</th><th>{M.colWindow}</th><th className="num">{M.colSunlit}</th><th className="num">{M.colDark}</th>
+-                  <th className="num">{M.colEarth}</th><th className="num">{M.colOverlap}</th><th>{M.colLabels}</th><th>{M.colOpen}</th></tr></thead>
++                  <th className="num">{M.colEarth}</th><th className="num">{M.colOverlap}</th><th>{M.colOpen}</th></tr></thead>
+                 <tbody>{state.history.map((h) => {
+                   const sun = h.summary[`sun_${h.rules.sunlit}`], earth = h.summary[`earth_${h.rules.dte}`];
+-                  const lc = labelCounts(h.labels);
+                   const named = !!h.site.name && !coordLabel(h.site.name, h.site.lat, h.site.lon);
+                   const name = named ? h.site.name! : fmtLatLon(h.site.lat, h.site.lon);
+                   return (
+@@ -481,7 +466,6 @@
+                       <td className="num">{fmtDuration(sun?.longest_gap_h ?? null)}</td>
+                       <td className="num">{fmtPct(earth?.percent ?? null)}</td>
+                       <td className="num">{fmtPct(h.summary.overlap?.percent ?? null)}</td>
+-                      <td>{S.viz.cellLabels(lc.ok, lc.pending)}</td>
+                       <td><button type="button" className="quiet-button" aria-label={M.openFor(name)} onClick={() => { void open(h.id); }}>{M.open}</button></td>
+                     </tr>
+                   );
+@@ -504,7 +488,7 @@
+                 <caption className="sr-only">{M.cmpCaption}</caption>
+                 <thead><tr><th>{M.colSite}</th><th>{M.colWindow}</th>
+                   <th className="num">{M.cmpSunlit(RULE_NAMES[cmp.base.sunlit_rule] ?? String(cmp.base.sunlit_rule))}</th>
+-                  <th className="num">{M.cmpEarth(RULE_NAMES[cmp.base.dte_rule] ?? String(cmp.base.dte_rule))}</th><th>{M.colLabels}</th></tr></thead>
++                  <th className="num">{M.cmpEarth(RULE_NAMES[cmp.base.dte_rule] ?? String(cmp.base.dte_rule))}</th></tr></thead>
+                 <tbody>{cmpRows.map((c) => (
+                   <tr key={c.k}>
+                     <td>{c.name}</td>
+@@ -513,7 +497,6 @@
+                       <td className="num cmp-sun">{c.sun == null ? S.compare.unavailable : fmtPct(c.sun)}</td>
+                       <td className="num cmp-earth">{c.earth == null ? S.compare.unavailable : fmtPct(c.earth)}</td>
+                     </>)}
+-                    <td>{c.labels ? S.viz.cellLabels(c.labels.ok, c.labels.pending) : S.common.na}</td>
+                   </tr>
+                 ))}</tbody>
+               </table>
+--- docs/validation_evidence/ui_nav_badge_removal_2026-11-14/originals/ResultWorkspace.tsx	2026-11-14 13:00:28.964784900 +0530
++++ frontend/src/components/ResultWorkspace.tsx	2026-11-14 13:09:15.689193000 +0530
+@@ -8,12 +8,11 @@
+ import { Icon } from "../ui/Icon";
+ import { Metric } from "../ui/Metric";
+ import { SectionHeader } from "../ui/SectionHeader";
+-import { StatusBadge } from "../ui/StatusBadge";
+ import { ViewHeader } from "../ui/ViewHeader";
+ import { EventList } from "./EventList";
+ import { HorizonPanorama } from "./HorizonPanorama";
+ import { DataKey, SiteContext, ValidationPanel } from "./ResultContext";
+-import { LabelChips, RESULT_SECTIONS } from "./ResultLabels";
++import { RESULT_SECTIONS } from "./ResultLabels";
+ import { Timeline } from "./Timeline";
+ import { VisibilityChart, type Body } from "./VisibilityChart";
+ 
+@@ -28,7 +27,6 @@
+ 
+ const T = S.site;
+ const A = S.analysis;
+-const QUANTITY_NAMES: Record<string, string> = S.quantities;
+ // Metric style token: a count or duration that deserves attention when it is not zero
+ const FLAG = "flag" as const;
+ 
+@@ -36,17 +34,6 @@
+   return <div className="pane-body"><div className="pane-empty is-loading">{text}</div></div>;
+ }
+ 
+-/** The validation words of the labels a figure depends on, as the API states them. */
+-function LabelStatus({ r, keys }: { r: Result; keys: string[] }) {
+-  const present = keys.filter((k) => r.labels[k]);
+-  if (!present.length) return null;
+-  return (
+-    <div className="figure-labels">
+-      {present.map((k) => <StatusBadge key={k} word={r.labels[k].validation} prefix={QUANTITY_NAMES[k] ?? k} />)}
+-    </div>
+-  );
+-}
+-
+ function Readout({ r, i, playing }: { r: Result; i: number; playing: boolean }) {
+   const s = r.series;
+   const pm = r.provenance.parameters.panel.model;
+@@ -112,7 +99,6 @@
+           <Metric label={F.unknown} value={fmtDuration(sun.unknown_hours)} state={sun.unknown_hours > 0 ? "flag" : undefined} />
+           <Metric label={A.uncertainWindows} value={count(sun.uncertain_windows)} state={flag(sun.uncertain_windows)} />
+         </dl>
+-        <LabelStatus r={r} keys={["disk_visibility", "events"]} />
+       </div>
+       <div className="figure is-earth">
+         <h3>{F.dte}</h3><div className="rule">{F.dteRule(RULE_NAMES[p.rules.dte])}</div>
+@@ -124,7 +110,6 @@
+           <Metric label={F.unknown} value={fmtDuration(earth.unknown_hours)} state={earth.unknown_hours > 0 ? "flag" : undefined} />
+           <Metric label={A.uncertainWindows} value={count(earth.uncertain_windows)} state={flag(earth.uncertain_windows)} />
+         </dl>
+-        <LabelStatus r={r} keys={["disk_visibility", "events"]} />
+       </div>
+       <div className="figure is-both">
+         <h3>{F.overlap}</h3><div className="rule">{F.overlapRule}</div>
+@@ -136,7 +121,6 @@
+           <Metric label={A.windows} value={count(ov.windows)} />
+           <Metric label={F.unknown} value={fmtDuration(ov.unknown_hours)} state={ov.unknown_hours > 0 ? "flag" : undefined} />
+         </dl>
+-        <LabelStatus r={r} keys={["disk_visibility", "events"]} />
+       </div>
+       <div className="figure is-power">
+         <h3>{F.power}</h3><div className="rule">{F.powerRule(PANEL_NAMES[p.panel.model].toLowerCase())}</div>
+@@ -148,7 +132,6 @@
+           <Metric label={A.powerKnown} value={pw.coverage == null ? S.common.na : fmtPct(pw.coverage * 100)} />
+           {pw.unknown_hours != null && <Metric label={F.unknown} value={fmtDuration(pw.unknown_hours)} state={pw.unknown_hours > 0 ? "flag" : undefined} />}
+         </dl>
+-        <LabelStatus r={r} keys={["power_indicator"]} />
+       </div>
+     </div>
+   );
+@@ -180,7 +163,6 @@
+         {body === "sun" && <Metric label={S.figures.meanVisibleSun}
+                                    value={r.summary.mean_sun_fraction == null ? S.common.na : fmtPct(r.summary.mean_sun_fraction * 100)} />}
+       </dl>
+-      <LabelStatus r={r} keys={["disk_visibility", "events"]} />
+     </aside>
+   );
+ }
+@@ -319,7 +301,7 @@
+           <a className="quiet-button" href={`/api/results/${r.id}/intervals.csv`} download>{T.downloads.intervals}</a>
+           <a className="quiet-button" href={`/api/results/${r.id}/result.json`} download>{T.downloads.result}</a>
+         </>} />
+-      <div className="result-labels"><LabelChips result={r} /><DataKey /></div>
++      <div className="result-labels"><DataKey /></div>
+       <SiteContext r={r} />
+ 
+       {state.mode === "public" && <PublicSummary r={r} />}
+--- docs/validation_evidence/ui_nav_badge_removal_2026-11-14/originals/ResultContext.tsx	2026-11-14 13:05:53.432851800 +0530
++++ frontend/src/components/ResultContext.tsx	2026-11-14 13:09:15.817987200 +0530
+@@ -108,14 +108,13 @@
+       <div className="table-scroll validation-table">
+         <table className="data">
+           <caption className="sr-only">{A.valCaption}</caption>
+-          <thead><tr><th scope="col">{A.colQuantity}</th><th scope="col">{A.colKind}</th><th scope="col">{A.colStatus}</th>
++          <thead><tr><th scope="col">{A.colQuantity}</th><th scope="col">{A.colKind}</th>
+             <th scope="col">{A.colTests}</th><th scope="col">{A.colReasons}</th></tr></thead>
+           <tbody>
+             {Object.entries(r.labels).map(([k, v]) => (
+               <tr key={k}>
+                 <th scope="row">{QUANTITY_NAMES[k] ?? k}</th>
+                 <td>{v.kind}</td>
+-                <td><StatusBadge word={v.validation} /></td>
+                 <td><ul className="test-list">{Object.entries(v.tests).map(([t, st]) => <li key={t}><StatusBadge word={st} prefix={t} /></li>)}</ul></td>
+                 <td>{(v.reasons ?? []).length ? (v.reasons ?? []).join("; ") : S.common.na}</td>
+               </tr>
+--- docs/validation_evidence/ui_nav_badge_removal_2026-11-14/originals/App.tsx	2026-11-14 13:00:28.658047800 +0530
++++ frontend/src/App.tsx	2026-11-14 13:09:15.960604800 +0530
+@@ -64,7 +64,8 @@
+         <Sidebar open={open} onClose={wide ? toggle : closeDrawer} />
+         {!wide && drawer && <div className="scrim" aria-hidden="true" />}
+         <main className="main" id="main" tabIndex={-1}>
+-          <div role="tabpanel" id="view-panel" aria-labelledby={`tab-${state.tab}`}>
++          <div role="tabpanel" id="view-panel" aria-labelledby={state.tab === "data" ? undefined : `tab-${state.tab}`}
++               aria-label={state.tab === "data" ? S.topBar.tabs.data : undefined}>
+           {state.tab === "mission" && (
+             <LazyBoundary fallback={<div className="pane-empty">{S.mission.loadFailed}</div>}>
+               <Suspense fallback={<div className="pane-empty">{S.mission.loading}</div>}><MissionView /></Suspense>
+--- docs/validation_evidence/ui_nav_badge_removal_2026-11-14/originals/en.ts	2026-11-14 13:02:08.620870300 +0530
++++ frontend/src/i18n/en.ts	2026-11-14 13:09:16.074093700 +0530
+@@ -565,7 +565,6 @@
+     valCaption: "Validation label of each result quantity and the status of each test it depends on",
+     colQuantity: "Quantity",
+     colKind: "Kind",
+-    colStatus: "Status",
+     colTests: "Tests",
+     colReasons: "Not validated because",
+     valNote: "Statuses are the engine's own words. A quantity is Validated only when every test it depends on has passed; a test that has not run keeps it Pending validation.",
+@@ -647,7 +646,7 @@
+   viz: {
+     keyHeading: "How to read this result",
+     keyCalculated: "Calculated",
+-    keyCalculatedText: "LUNA-OPS engine outputs: positions, horizon, windows, events and power. Each carries the validation label shown above, Validated or Pending validation.",
++    keyCalculatedText: "LUNA-OPS engine outputs: positions, horizon, windows, events and power.",
+     keyMeasured: "Measured input",
+     keyMeasuredText: "Registered LOLA terrain heights and error maps, listed under Site, observer and terrain.",
+     keyIllustrative: "Illustrative",
+@@ -730,8 +729,6 @@
+     navCompare: "Comparison",
+     selectedHeading: "Selected site",
+     statusHeading: "System status",
+-    labelsNow: (validated: number, pending: number) => `Validation labels now: ${validated} validated, ${pending} pending validation.`,
+-    labelsNote: "A quantity stays Pending until every test it needs has passed; see Data and validation.",
+     candidatesHeading: (n: number) => `Candidate sites (${n})`,
+     candidatesEmpty: "No candidate sites yet. Add the selected site, or add sites in the sidebar or the Compare tab.",
+     candidatesHint: "Candidates are the comparison sites; the Compare tab adds the date windows.",
+@@ -775,7 +772,6 @@
+     colDark: "Longest darkness",
+     colEarth: "Earth in view",
+     colOverlap: "Both",
+-    colLabels: "Labels",
+     colOpen: "Result",
+     open: "Open",
+     openFor: (site: string) => `Open the result for ${site}`,
+@@ -783,15 +779,13 @@
+     comparisonNone: "No comparison has been run yet.",
+     comparisonReady: (sites: number, windows: number) => `${sites} sites × ${windows} windows compared.`,
+     openComparison: "Open the comparison",
+-    integrity: "No mission score, landing probability or recommendation is calculated. Pending validation means a quantity is not validated yet.",
++    integrity: "No mission score, landing probability or recommendation is calculated.",
+     // LUNA-OPS 2.0 Phase 4: mission-control layout (states and counts the app already holds; no value is combined)
+     stripLabel: "Mission status",
+     stripKernels: "SPICE kernels",
+     stripNotLoaded: "not loaded",
+     stripTerrain: "LOLA terrain",
+     stripProducts: (n: number) => `${n} product${n === 1 ? "" : "s"}`,
+-    stripLabels: "Validation labels",
+-    stripLabelsValue: (validated: number, pending: number) => `${validated} validated, ${pending} pending`,
+     stripCandidates: "Candidate sites",
+     stripSession: "Analyses this session",
+     stripComparison: "Comparison",
+@@ -800,7 +794,6 @@
+     stripNone: "none yet",
+     levelsLabel: "Registered terrain levels at this point",
+     finestLevel: (level: string) => `finest ${level}`,
+-    labelsByQuantity: "Validation status of each quantity",
+     locatorHeading: "South polar locator",
+     locatorLabel: (edge: string) => `Schematic plot of the selected site, the candidate sites and the sites analysed in this session around the south pole, out to ${edge}°.`,
+     locatorLon: (lon: number) => `${lon}°E`,

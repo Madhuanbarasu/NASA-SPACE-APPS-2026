@@ -1,0 +1,115 @@
+{
+ "shots": [
+  {
+   "name": "aud05-repro2-after-map-0ms",
+   "msAfterResize": 1,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 0,
+   "z11Done": []
+  },
+  {
+   "name": "aud05-repro2-after-map-120ms",
+   "msAfterResize": 264,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 0,
+   "z11Done": []
+  },
+  {
+   "name": "aud05-repro2-after-map-250ms",
+   "msAfterResize": 439,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 5,
+   "z11Done": []
+  },
+  {
+   "name": "aud05-repro2-after-map-400ms",
+   "msAfterResize": 925,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 6,
+   "z11Done": []
+  },
+  {
+   "name": "aud05-repro2-after-map-600ms",
+   "msAfterResize": 1198,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 8,
+   "z11Done": []
+  },
+  {
+   "name": "aud05-repro2-after-map-900ms",
+   "msAfterResize": 1596,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 8,
+   "z11Done": []
+  },
+  {
+   "name": "aud05-repro2-after-map-1500ms",
+   "msAfterResize": 2101,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 8,
+   "z11Done": [
+    "11/1009/1037.png",
+    "11/1009/1036.png",
+    "11/1014/1037.png",
+    "11/1014/1036.png"
+   ]
+  },
+  {
+   "name": "aud05-repro2-after-map-4000ms",
+   "msAfterResize": 4002,
+   "rect": {
+    "x": 1028.65625,
+    "y": 285.59375,
+    "width": 850.34375,
+    "height": 620
+   },
+   "z11Requested": 8,
+   "z11Done": [
+    "11/1009/1037.png",
+    "11/1009/1036.png",
+    "11/1014/1037.png",
+    "11/1014/1036.png",
+    "11/1009/1038.png",
+    "11/1014/1038.png",
+    "11/1009/1035.png",
+    "11/1014/1035.png"
+   ]
+  }
+ ],
+ "extent": null
+}

@@ -1,0 +1,9 @@
+10:00:54 cpu4x cold 1
+10:00:57 cpu4x cold 2
+10:01:00 cpu4x cold 3
+10:01:02 cpu4x warm 1
+10:01:05 cpu4x warm 2
+10:01:44 cpu4x workflow done
+cpu4x: cold appReady 1489.6 ms, FCP 1064, LCP 1064, TBT 32, JS 1215.1 KB; warm appReady 1164; complete=true
+interactions {"tabs":{"Compare":47.1,"Data and validation":95.9,"Guide":21.2,"Site":47.7},"analysisToResultMs":542.7,"analysisTo3DDataMs":620.1,"analysisToMapTilesMs":null,"resultJsonKB":320.1,"resultFetchMs":42.7,"terrainGridKB":190.2,"series":"337","cursorStep":{"interactions":20,"medianMs":32,"p95Ms":48,"maxMs":56},"playback":{"steps":33,"frames":302,"fps":60.2,"frameP95":16.8,"frameMax":17,"longTasks":0,"longestTask":0,"blockingMs":0,"expectedSteps":35,"scriptMsPerStep":7.9,"layoutMs":45.8,"domNodes":1029},"playbackTablesOpen":{"steps":31,"frames":302,"fps":60.2,"frameP95":16.8,"frameMax":17,"longTasks":0,"longestTask":0,"blockingMs":0,"expectedSteps":35,"scriptMsPerStep":13,"layoutMs":39.3,"domNodes":5795},"rotate3D":{"medianMs":31.8,"maxMs":34.7},"modeToPublicMs":32.1,"modeToTechnicalMs":31.6,"resultToDataMs":38.8,"dataToResultMs":245.1,"compareToMatrixMs":72.3,"metricSwitchMs":20.9,"cellToResultMs":221.2,"heapAfterWorkflowMB":29.4,"domNodesAfterWorkflow":1209}
+exit=0

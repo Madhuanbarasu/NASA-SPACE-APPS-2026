@@ -1,0 +1,48 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.7.0 -- E:\LUNA-OPS\backend\.venv\Scripts\python.exe
+rootdir: E:\LUNA-OPS\backend
+configfile: pytest.ini
+plugins: anyio-4.16.0
+collecting ... collected 33 items
+
+lunaops_tiles/tests/test_api.py::test_info_states_what_the_tiles_are PASSED [  3%]
+lunaops_tiles/tests/test_api.py::test_tile_route_is_ahead_of_the_catch_all PASSED [  6%]
+lunaops_tiles/tests/test_api.py::test_other_paths_still_reach_the_catch_all PASSED [  9%]
+lunaops_tiles/tests/test_read.py::test_plane_is_reproduced_at_the_right_place[56.8359375] PASSED [ 12%]
+lunaops_tiles/tests/test_read.py::test_plane_is_reproduced_at_the_right_place[28.41796875] PASSED [ 15%]
+lunaops_tiles/tests/test_read.py::test_plane_is_reproduced_at_the_right_place[3.55224609375] PASSED [ 18%]
+lunaops_tiles/tests/test_read.py::test_hillshade_of_a_plane_has_no_grid[56.8359375] PASSED [ 21%]
+lunaops_tiles/tests/test_read.py::test_hillshade_of_a_plane_has_no_grid[3.55224609375] PASSED [ 24%]
+lunaops_tiles/tests/test_read.py::test_partly_covered_and_outside_pixels_stay_empty PASSED [ 27%]
+lunaops_tiles/tests/test_read.py::test_aligned_edges_lose_no_pixel PASSED [ 30%]
+lunaops_tiles/tests/test_read.py::test_block_outside_the_product_is_all_empty PASSED [ 33%]
+lunaops_tiles/tests/test_read.py::test_missing_data_is_never_blended_into_heights[56.8359375-100-1200.0-6800.0-nan] PASSED [ 36%]
+lunaops_tiles/tests/test_read.py::test_missing_data_is_never_blended_into_heights[56.8359375-100-1200.0-6800.0--9999.0] PASSED [ 39%]
+lunaops_tiles/tests/test_read.py::test_missing_data_is_never_blended_into_heights[7.1044921875-200-3300.0-4700.0-nan] PASSED [ 42%]
+lunaops_tiles/tests/test_read.py::test_missing_data_is_never_blended_into_heights[7.1044921875-200-3300.0-4700.0--9999.0] PASSED [ 45%]
+lunaops_tiles/tests/test_read.py::test_rotated_products_are_refused PASSED [ 48%]
+lunaops_tiles/tests/test_read.py::test_hillshade_colours_are_the_engines PASSED [ 51%]
+lunaops_tiles/tests/test_read.py::test_enlarged_coarse_terrain_has_no_creases PASSED [ 54%]
+lunaops_tiles/tests/test_real_tiles.py::test_same_footprint_and_brightness_as_the_engine[zxy0] PASSED [ 57%]
+lunaops_tiles/tests/test_real_tiles.py::test_same_footprint_and_brightness_as_the_engine[zxy1] PASSED [ 60%]
+lunaops_tiles/tests/test_real_tiles.py::test_same_footprint_and_brightness_as_the_engine[zxy2] PASSED [ 63%]
+lunaops_tiles/tests/test_real_tiles.py::test_same_footprint_and_brightness_as_the_engine[zxy3] PASSED [ 66%]
+lunaops_tiles/tests/test_real_tiles.py::test_same_footprint_and_brightness_as_the_engine[zxy4] PASSED [ 69%]
+lunaops_tiles/tests/test_real_tiles.py::test_same_footprint_and_brightness_as_the_engine[zxy5] PASSED [ 72%]
+lunaops_tiles/tests/test_real_tiles.py::test_same_footprint_and_brightness_as_the_engine[zxy6] PASSED [ 75%]
+lunaops_tiles/tests/test_real_tiles.py::test_no_grid_lines_where_the_engine_has_them[zxy0] PASSED [ 78%]
+lunaops_tiles/tests/test_real_tiles.py::test_no_grid_lines_where_the_engine_has_them[zxy1] PASSED [ 81%]
+lunaops_tiles/tests/test_real_tiles.py::test_no_grid_lines_where_the_engine_has_them[zxy2] PASSED [ 84%]
+lunaops_tiles/tests/test_real_tiles.py::test_no_grid_lines_where_the_engine_has_them[zxy3] PASSED [ 87%]
+lunaops_tiles/tests/test_real_tiles.py::test_no_grid_lines_where_the_engine_has_them[zxy4] PASSED [ 90%]
+lunaops_tiles/tests/test_real_tiles.py::test_no_grid_lines_where_the_engine_has_them[zxy5] PASSED [ 93%]
+lunaops_tiles/tests/test_real_tiles.py::test_twenty_metre_level_alone_has_no_grid PASSED [ 96%]
+lunaops_tiles/tests/test_real_tiles.py::test_out_of_range_zoom_gives_the_engines_empty_tile PASSED [100%]
+
+============================== warnings summary ===============================
+lunaops_tiles/tests/test_api.py::test_info_states_what_the_tiles_are
+  E:\LUNA-OPS\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 33 passed, 1 warning in 11.14s ========================

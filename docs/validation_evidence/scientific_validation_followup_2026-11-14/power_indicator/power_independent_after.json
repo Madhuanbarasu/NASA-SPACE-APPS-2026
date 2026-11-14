@@ -1,0 +1,7187 @@
+{
+ "power_rows": [
+  {
+   "result": "ede7dcca91e61b7837854ece",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ede7dcca91e61b7837854ece",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ede7dcca91e61b7837854ece",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "442458810450acbbce8bfbd9",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "442458810450acbbce8bfbd9",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "442458810450acbbce8bfbd9",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "e9d90804e752cecfc5a15c73",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.86830011070927e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 172.73908891925777,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 1.0282088622871222,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.0282088204241648,
+    "equivalent_full_sun_h": 172.7390821168866,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.186295732289125e-08,
+   "efsh_abs_diff_h": 6.802371160574694e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "e9d90804e752cecfc5a15c73",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024126185932537e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.944326157192057,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.017525750930084665,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.017525750176112007,
+    "equivalent_full_sun_h": 2.944326034455308,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.53972658612545e-10,
+   "efsh_abs_diff_h": 1.22736748764396e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "e9d90804e752cecfc5a15c73",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "b6a4a07160ae450b6db1f4e0",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.567056830664164e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.8609826256714226,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.02298203943334272,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02298202099421374,
+    "equivalent_full_sun_h": 3.8609795270279084,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.843912897717126e-08,
+   "efsh_abs_diff_h": 3.0986435142210667e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "b6a4a07160ae450b6db1f4e0",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.830793577562109e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.108857526285858,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0006479614658412698,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0006479611390887147,
+    "equivalent_full_sun_h": 0.10885747136690406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.2675255513467394e-10,
+   "efsh_abs_diff_h": 5.491895394005297e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "b6a4a07160ae450b6db1f4e0",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 7.490852393043923e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.849428878582901,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016960886178219937,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016960872979014427,
+    "equivalent_full_sun_h": 2.849426660474424,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3199205509822898e-08,
+   "efsh_abs_diff_h": 2.2181084773365e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "9d6534ea2167bf1c2fb4edb5",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.192696321351889e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.9635530001229793,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00573543452271468,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0057354354677026965,
+    "equivalent_full_sun_h": 0.963553160167304,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.449880166573221e-10,
+   "efsh_abs_diff_h": 1.600443246818628e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "9d6534ea2167bf1c2fb4edb5",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.750523701880019e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.022657719153611377,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00013486737587139517,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.00013486758161767746,
+    "equivalent_full_sun_h": 0.02265775374923478,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.057462822888708e-10,
+   "efsh_abs_diff_h": 3.4595623404215514e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "9d6534ea2167bf1c2fb4edb5",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 6.1804709599877494e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.7088814441591299,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0042195324043650916,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.004219533114923607,
+    "equivalent_full_sun_h": 0.7088815644793134,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.105585156721994e-10,
+   "efsh_abs_diff_h": 1.203201834831802e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "dc349ca252198d9f3923eb84",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "dc349ca252198d9f3923eb84",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "dc349ca252198d9f3923eb84",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3938214f5c03e3a2d8ff60d6",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3938214f5c03e3a2d8ff60d6",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3938214f5c03e3a2d8ff60d6",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "4c3b85fba71e8ca824121555",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.86830011070927e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 172.73908891925777,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 1.0282088622871222,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.0282088204241648,
+    "equivalent_full_sun_h": 172.7390821168866,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.186295732289125e-08,
+   "efsh_abs_diff_h": 6.802371160574694e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "4c3b85fba71e8ca824121555",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024126185932537e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.944326157192057,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.017525750930084665,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.017525750176112007,
+    "equivalent_full_sun_h": 2.944326034455308,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.53972658612545e-10,
+   "efsh_abs_diff_h": 1.22736748764396e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "4c3b85fba71e8ca824121555",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3ecc81b47a75067457e677c9",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.567056830664164e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.8609826256714226,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.02298203943334272,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02298202099421374,
+    "equivalent_full_sun_h": 3.8609795270279084,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.843912897717126e-08,
+   "efsh_abs_diff_h": 3.0986435142210667e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3ecc81b47a75067457e677c9",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.830793577562109e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.108857526285858,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0006479614658412698,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0006479611390887147,
+    "equivalent_full_sun_h": 0.10885747136690406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.2675255513467394e-10,
+   "efsh_abs_diff_h": 5.491895394005297e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3ecc81b47a75067457e677c9",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 7.490852393043923e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.849428878582901,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016960886178219937,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016960872979014427,
+    "equivalent_full_sun_h": 2.849426660474424,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3199205509822898e-08,
+   "efsh_abs_diff_h": 2.2181084773365e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "a7d882ea054c7c7591517637",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.192696321351889e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.9635530001229793,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00573543452271468,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0057354354677026965,
+    "equivalent_full_sun_h": 0.963553160167304,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.449880166573221e-10,
+   "efsh_abs_diff_h": 1.600443246818628e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "a7d882ea054c7c7591517637",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.750523701880019e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.022657719153611377,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00013486737587139517,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.00013486758161767746,
+    "equivalent_full_sun_h": 0.02265775374923478,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.057462822888708e-10,
+   "efsh_abs_diff_h": 3.4595623404215514e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "a7d882ea054c7c7591517637",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 6.1804709599877494e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.7088814441591299,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0042195324043650916,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.004219533114923607,
+    "equivalent_full_sun_h": 0.7088815644793134,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.105585156721994e-10,
+   "efsh_abs_diff_h": 1.203201834831802e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "dc500f6d8c68baa16cdc1201",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "dc500f6d8c68baa16cdc1201",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "dc500f6d8c68baa16cdc1201",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "4675d0312ebd518223fac046",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "4675d0312ebd518223fac046",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "4675d0312ebd518223fac046",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ca5811e0e8aa1df1ebe59ec3",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.86830011070927e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 172.73908891925777,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 1.0282088622871222,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.0282088204241648,
+    "equivalent_full_sun_h": 172.7390821168866,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.186295732289125e-08,
+   "efsh_abs_diff_h": 6.802371160574694e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ca5811e0e8aa1df1ebe59ec3",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024126185932537e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.944326157192057,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.017525750930084665,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.017525750176112007,
+    "equivalent_full_sun_h": 2.944326034455308,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.53972658612545e-10,
+   "efsh_abs_diff_h": 1.22736748764396e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ca5811e0e8aa1df1ebe59ec3",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c9a68e2b1f7538a83658c63e",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.567056830664164e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.8609826256714226,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.02298203943334272,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02298202099421374,
+    "equivalent_full_sun_h": 3.8609795270279084,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.843912897717126e-08,
+   "efsh_abs_diff_h": 3.0986435142210667e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c9a68e2b1f7538a83658c63e",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.830793577562109e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.108857526285858,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0006479614658412698,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0006479611390887147,
+    "equivalent_full_sun_h": 0.10885747136690406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.2675255513467394e-10,
+   "efsh_abs_diff_h": 5.491895394005297e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c9a68e2b1f7538a83658c63e",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 7.490852393043923e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.849428878582901,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016960886178219937,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016960872979014427,
+    "equivalent_full_sun_h": 2.849426660474424,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3199205509822898e-08,
+   "efsh_abs_diff_h": 2.2181084773365e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c2e00f67697f6e229691d5cb",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.192696321351889e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.9635530001229793,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00573543452271468,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0057354354677026965,
+    "equivalent_full_sun_h": 0.963553160167304,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.449880166573221e-10,
+   "efsh_abs_diff_h": 1.600443246818628e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c2e00f67697f6e229691d5cb",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.750523701880019e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.022657719153611377,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00013486737587139517,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.00013486758161767746,
+    "equivalent_full_sun_h": 0.02265775374923478,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.057462822888708e-10,
+   "efsh_abs_diff_h": 3.4595623404215514e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c2e00f67697f6e229691d5cb",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 6.1804709599877494e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.7088814441591299,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0042195324043650916,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.004219533114923607,
+    "equivalent_full_sun_h": 0.7088815644793134,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.105585156721994e-10,
+   "efsh_abs_diff_h": 1.203201834831802e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "34839a84e69f5c006ca87e44",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 7.957849669226746e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 172.73919459465014,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 1.0282094913073148,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.0282094975306257,
+    "equivalent_full_sun_h": 172.7391958707722,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.223310977659935e-09,
+   "efsh_abs_diff_h": 1.2761220489210245e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "34839a84e69f5c006ca87e44",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024507329032257e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.9443336163527762,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.017525795329850838,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.01752579270302747,
+    "equivalent_full_sun_h": 2.9443331789771183,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.626823366463915e-09,
+   "efsh_abs_diff_h": 4.3737565791346356e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "34839a84e69f5c006ca87e44",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "bf76ea02552ff03f87149b5a",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.567056830664164e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.8609826256714226,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.02298203943334272,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02298202099421374,
+    "equivalent_full_sun_h": 3.8609795270279084,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.843912897717126e-08,
+   "efsh_abs_diff_h": 3.0986435142210667e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "bf76ea02552ff03f87149b5a",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.830793577562109e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.108857526285858,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0006479614658412698,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0006479611390887147,
+    "equivalent_full_sun_h": 0.10885747136690406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.2675255513467394e-10,
+   "efsh_abs_diff_h": 5.491895394005297e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "bf76ea02552ff03f87149b5a",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 7.490852393043923e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.849428878582901,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016960886178219937,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016960872979014427,
+    "equivalent_full_sun_h": 2.849426660474424,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3199205509822898e-08,
+   "efsh_abs_diff_h": 2.2181084773365e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "8fa1d28dbe4a2f06b9148e35",
+   "lat": -61.0,
+   "lon": 30.0,
+   "model": "vertical_tracking",
+   "samples": 50,
+   "series_max_abs_diff": 4.769856559283525e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 15.991507301628184,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.6663128040929298,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.6663128068657224,
+    "equivalent_full_sun_h": 15.991507364777338,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.7727925511200624e-09,
+   "efsh_abs_diff_h": 6.314915346194994e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "8fa1d28dbe4a2f06b9148e35",
+   "lat": -61.0,
+   "lon": 30.0,
+   "model": "horizontal",
+   "samples": 50,
+   "series_max_abs_diff": 4.7719759419528884e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.5965038980082326,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.02485432907839532,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.024854337346215075,
+    "equivalent_full_sun_h": 0.5965040963091618,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 8.2678197552144e-09,
+   "efsh_abs_diff_h": 1.9830092923278642e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "8fa1d28dbe4a2f06b9148e35",
+   "lat": -61.0,
+   "lon": 30.0,
+   "model": "fixed_vertical",
+   "samples": 50,
+   "series_max_abs_diff": 4.992361204776696e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.3407113826046007,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.014196307605508605,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.014196311323758207,
+    "equivalent_full_sun_h": 0.340711471770197,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.718249602310819e-09,
+   "efsh_abs_diff_h": 8.916559629534859e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "0ee29edff63034bf81a930c3",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "0ee29edff63034bf81a930c3",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "0ee29edff63034bf81a930c3",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "265d1d7bffe59914a1736598",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.567056830664164e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.8609826256714226,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.02298203943334272,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02298202099421374,
+    "equivalent_full_sun_h": 3.8609795270279084,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.843912897717126e-08,
+   "efsh_abs_diff_h": 3.0986435142210667e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "265d1d7bffe59914a1736598",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.830793577562109e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.108857526285858,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0006479614658412698,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0006479611390887147,
+    "equivalent_full_sun_h": 0.10885747136690406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.2675255513467394e-10,
+   "efsh_abs_diff_h": 5.491895394005297e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "265d1d7bffe59914a1736598",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 7.490852393043923e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.849428878582901,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016960886178219937,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016960872979014427,
+    "equivalent_full_sun_h": 2.849426660474424,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3199205509822898e-08,
+   "efsh_abs_diff_h": 2.2181084773365e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "04d1d762c9ddb77ce72f668c",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "04d1d762c9ddb77ce72f668c",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "04d1d762c9ddb77ce72f668c",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "950a28339c1e8a55092d17cf",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "950a28339c1e8a55092d17cf",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "950a28339c1e8a55092d17cf",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "48b9da39c818287988b9a79b",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.86830011070927e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 172.73908891925777,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 1.0282088622871222,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.0282088204241648,
+    "equivalent_full_sun_h": 172.7390821168866,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.186295732289125e-08,
+   "efsh_abs_diff_h": 6.802371160574694e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "48b9da39c818287988b9a79b",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024126185932537e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.944326157192057,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.017525750930084665,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.017525750176112007,
+    "equivalent_full_sun_h": 2.944326034455308,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.53972658612545e-10,
+   "efsh_abs_diff_h": 1.22736748764396e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "48b9da39c818287988b9a79b",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "72b75b7ece1533699f4d3a44",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.192696321351889e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.9635530001229793,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00573543452271468,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0057354354677026965,
+    "equivalent_full_sun_h": 0.963553160167304,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.449880166573221e-10,
+   "efsh_abs_diff_h": 1.600443246818628e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "72b75b7ece1533699f4d3a44",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.750523701880019e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.022657719153611377,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00013486737587139517,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.00013486758161767746,
+    "equivalent_full_sun_h": 0.02265775374923478,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.057462822888708e-10,
+   "efsh_abs_diff_h": 3.4595623404215514e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "72b75b7ece1533699f4d3a44",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 6.1804709599877494e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.7088814441591299,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0042195324043650916,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.004219533114923607,
+    "equivalent_full_sun_h": 0.7088815644793134,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.105585156721994e-10,
+   "efsh_abs_diff_h": 1.203201834831802e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "74f196793fac71ed25e7203a",
+   "lat": -69.370769,
+   "lon": 332.265612,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 5.141933146046718e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 265.55202221588166,
+    "known_hours": 720.0000001873904,
+    "lower_bound": false,
+    "mean": 0.36882225298162213,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.3688222582292278,
+    "equivalent_full_sun_h": 265.55202592504406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.247605683322831e-09,
+   "efsh_abs_diff_h": 3.7091623994456313e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "74f196793fac71ed25e7203a",
+   "lat": -69.370769,
+   "lon": 332.265612,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.030679925743797e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 79.18457844320669,
+    "known_hours": 720.0000001873904,
+    "lower_bound": false,
+    "mean": 0.10997858114249688,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.10997858137994876,
+    "equivalent_full_sun_h": 79.1845785935631,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.374518776049328e-10,
+   "efsh_abs_diff_h": 1.5035641354188556e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "74f196793fac71ed25e7203a",
+   "lat": -69.370769,
+   "lon": 332.265612,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 6.933252139395066e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 189.4832315384971,
+    "known_hours": 720.0000001873904,
+    "lower_bound": false,
+    "mean": 0.2631711548460852,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.26317115766665017,
+    "equivalent_full_sun_h": 189.4832335199881,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.820564948269322e-09,
+   "efsh_abs_diff_h": 1.9814909819615423e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "63790a1725befb49f04de987",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "63790a1725befb49f04de987",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "63790a1725befb49f04de987",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "be721c17eff7691d34ccd0c8",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "be721c17eff7691d34ccd0c8",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "be721c17eff7691d34ccd0c8",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "eb48013626ceb12a082920fe",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.86830011070927e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 172.73908891925777,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 1.0282088622871222,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.0282088204241648,
+    "equivalent_full_sun_h": 172.7390821168866,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.186295732289125e-08,
+   "efsh_abs_diff_h": 6.802371160574694e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "eb48013626ceb12a082920fe",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024126185932537e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.944326157192057,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.017525750930084665,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.017525750176112007,
+    "equivalent_full_sun_h": 2.944326034455308,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.53972658612545e-10,
+   "efsh_abs_diff_h": 1.22736748764396e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "eb48013626ceb12a082920fe",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "964c0e8e5a41d548cb6a79dd",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.567056830664164e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.8609826256714226,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.02298203943334272,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02298202099421374,
+    "equivalent_full_sun_h": 3.8609795270279084,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.843912897717126e-08,
+   "efsh_abs_diff_h": 3.0986435142210667e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "964c0e8e5a41d548cb6a79dd",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.830793577562109e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.108857526285858,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0006479614658412698,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0006479611390887147,
+    "equivalent_full_sun_h": 0.10885747136690406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.2675255513467394e-10,
+   "efsh_abs_diff_h": 5.491895394005297e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "964c0e8e5a41d548cb6a79dd",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 7.490852393043923e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.849428878582901,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016960886178219937,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016960872979014427,
+    "equivalent_full_sun_h": 2.849426660474424,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3199205509822898e-08,
+   "efsh_abs_diff_h": 2.2181084773365e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "a74062b82f8101c528877c3b",
+   "lat": -83.791253,
+   "lon": 146.158014,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 7.4284180752171025e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 260.6444929086029,
+    "known_hours": 720.0000001873904,
+    "lower_bound": false,
+    "mean": 0.36200624005662,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.362006252451609,
+    "equivalent_full_sun_h": 260.6445017651585,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.2394988979647081e-08,
+   "efsh_abs_diff_h": 8.856555609781935e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "a74062b82f8101c528877c3b",
+   "lat": -83.791253,
+   "lon": 146.158014,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 4.992621552138421e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 28.505564568259373,
+    "known_hours": 720.0000001873904,
+    "lower_bound": false,
+    "mean": 0.039591061890056095,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.03959106319783381,
+    "equivalent_full_sun_h": 28.50556550244034,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3077777125114487e-09,
+   "efsh_abs_diff_h": 9.341809672491763e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "a74062b82f8101c528877c3b",
+   "lat": -83.791253,
+   "lon": 146.158014,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 5.1490761530659235e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 199.44819543324178,
+    "known_hours": 720.0000001873904,
+    "lower_bound": false,
+    "mean": 0.2770113824740729,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.277011388275456,
+    "equivalent_full_sun_h": 199.44819955832833,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.801383096137869e-09,
+   "efsh_abs_diff_h": 4.1250865479014465e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d5d243579261c92677113efb",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.192696321351889e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.9635530001229793,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00573543452271468,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0057354354677026965,
+    "equivalent_full_sun_h": 0.963553160167304,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.449880166573221e-10,
+   "efsh_abs_diff_h": 1.600443246818628e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d5d243579261c92677113efb",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.750523701880019e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.022657719153611377,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00013486737587139517,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.00013486758161767746,
+    "equivalent_full_sun_h": 0.02265775374923478,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.057462822888708e-10,
+   "efsh_abs_diff_h": 3.4595623404215514e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d5d243579261c92677113efb",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 6.1804709599877494e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.7088814441591299,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0042195324043650916,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.004219533114923607,
+    "equivalent_full_sun_h": 0.7088815644793134,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.105585156721994e-10,
+   "efsh_abs_diff_h": 1.203201834831802e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3d8f7ace0ab0a8985a775fc7",
+   "lat": -69.9,
+   "lon": 239.695543,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 5.758238394566045e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 250.13842232425768,
+    "known_hours": 720.0000001873904,
+    "lower_bound": false,
+    "mean": 0.34741447535993825,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.34741446280721616,
+    "equivalent_full_sun_h": 250.13841322119563,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.255272208400271e-08,
+   "efsh_abs_diff_h": 9.10306204104927e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3d8f7ace0ab0a8985a775fc7",
+   "lat": -69.9,
+   "lon": 239.695543,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.047551151771135e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 78.42742236014796,
+    "known_hours": 720.0000001873904,
+    "lower_bound": false,
+    "mean": 0.10892697547185567,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.10892697312789565,
+    "equivalent_full_sun_h": 78.42742065208488,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.3439600260743987e-09,
+   "efsh_abs_diff_h": 1.7080630811960873e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3d8f7ace0ab0a8985a775fc7",
+   "lat": -69.9,
+   "lon": 239.695543,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 6.1852491065605975e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 194.8970170148407,
+    "known_hours": 720.0000001873904,
+    "lower_bound": false,
+    "mean": 0.2706903013390499,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.27069029602604067,
+    "equivalent_full_sun_h": 194.89701313874926,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.313009254770407e-09,
+   "efsh_abs_diff_h": 3.876091454912967e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "5679c84cd9d60db35d28629d",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.567056830664164e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.8609826256714226,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.02298203943334272,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02298202099421374,
+    "equivalent_full_sun_h": 3.8609795270279084,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.843912897717126e-08,
+   "efsh_abs_diff_h": 3.0986435142210667e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "5679c84cd9d60db35d28629d",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.830793577562109e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.108857526285858,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0006479614658412698,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0006479611390887147,
+    "equivalent_full_sun_h": 0.10885747136690406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.2675255513467394e-10,
+   "efsh_abs_diff_h": 5.491895394005297e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "5679c84cd9d60db35d28629d",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 7.490852393043923e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.849428878582901,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016960886178219937,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016960872979014427,
+    "equivalent_full_sun_h": 2.849426660474424,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3199205509822898e-08,
+   "efsh_abs_diff_h": 2.2181084773365e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "241f64fe0f3aa5c7e9870d11",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "241f64fe0f3aa5c7e9870d11",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "241f64fe0f3aa5c7e9870d11",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "45f55261cea73c2273d831b1",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "45f55261cea73c2273d831b1",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "45f55261cea73c2273d831b1",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "519a10ed791a144f55219575",
+   "lat": -89.9,
+   "lon": 10.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "519a10ed791a144f55219575",
+   "lat": -89.9,
+   "lon": 10.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "519a10ed791a144f55219575",
+   "lat": -89.9,
+   "lon": 10.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "829a9a61cc84b5b709c82b90",
+   "lat": -89.9,
+   "lon": 10.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "829a9a61cc84b5b709c82b90",
+   "lat": -89.9,
+   "lon": 10.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "829a9a61cc84b5b709c82b90",
+   "lat": -89.9,
+   "lon": 10.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ff4a114e2fe07f0f02933d60",
+   "lat": -89.9,
+   "lon": 10.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ff4a114e2fe07f0f02933d60",
+   "lat": -89.9,
+   "lon": 10.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ff4a114e2fe07f0f02933d60",
+   "lat": -89.9,
+   "lon": 10.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "08a460ae2be76f58aa3ed754",
+   "lat": -89.7,
+   "lon": 200.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "08a460ae2be76f58aa3ed754",
+   "lat": -89.7,
+   "lon": 200.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "08a460ae2be76f58aa3ed754",
+   "lat": -89.7,
+   "lon": 200.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "1111dd7dd5a5a1395cf025cb",
+   "lat": -89.7,
+   "lon": 200.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "1111dd7dd5a5a1395cf025cb",
+   "lat": -89.7,
+   "lon": 200.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "1111dd7dd5a5a1395cf025cb",
+   "lat": -89.7,
+   "lon": 200.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "fa77ec8d7bf8618b4e860ddc",
+   "lat": -89.7,
+   "lon": 200.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "fa77ec8d7bf8618b4e860ddc",
+   "lat": -89.7,
+   "lon": 200.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "fa77ec8d7bf8618b4e860ddc",
+   "lat": -89.7,
+   "lon": 200.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "b895af89e4b420c031b21b93",
+   "lat": -89.8,
+   "lon": 300.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "b895af89e4b420c031b21b93",
+   "lat": -89.8,
+   "lon": 300.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "b895af89e4b420c031b21b93",
+   "lat": -89.8,
+   "lon": 300.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "60eeffc0a28cbeabe42be902",
+   "lat": -89.8,
+   "lon": 300.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "60eeffc0a28cbeabe42be902",
+   "lat": -89.8,
+   "lon": 300.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "60eeffc0a28cbeabe42be902",
+   "lat": -89.8,
+   "lon": 300.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "658f037c8a7e7ec6d6707fc4",
+   "lat": -89.8,
+   "lon": 300.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "658f037c8a7e7ec6d6707fc4",
+   "lat": -89.8,
+   "lon": 300.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "658f037c8a7e7ec6d6707fc4",
+   "lat": -89.8,
+   "lon": 300.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "718f6c201031df361729c057",
+   "lat": -89.6,
+   "lon": 90.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "718f6c201031df361729c057",
+   "lat": -89.6,
+   "lon": 90.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "718f6c201031df361729c057",
+   "lat": -89.6,
+   "lon": 90.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000002549754,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "9aee4af8c60a786ac92726b7",
+   "lat": -89.6,
+   "lon": 90.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "9aee4af8c60a786ac92726b7",
+   "lat": -89.6,
+   "lon": 90.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "9aee4af8c60a786ac92726b7",
+   "lat": -89.6,
+   "lon": 90.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000003741848,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "9551a8838a015a968448655c",
+   "lat": -89.6,
+   "lon": 90.0,
+   "model": "vertical_tracking",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "9551a8838a015a968448655c",
+   "lat": -89.6,
+   "lon": 90.0,
+   "model": "horizontal",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "9551a8838a015a968448655c",
+   "lat": -89.6,
+   "lon": 90.0,
+   "model": "fixed_vertical",
+   "samples": 14,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 12.000000004006756,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d83990440a5dc84bed348afe",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d83990440a5dc84bed348afe",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d83990440a5dc84bed348afe",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "8feece9c8608ade1ca76bd98",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.86830011070927e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 172.73908891925777,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 1.0282088622871222,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.0282088204241648,
+    "equivalent_full_sun_h": 172.7390821168866,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.186295732289125e-08,
+   "efsh_abs_diff_h": 6.802371160574694e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "8feece9c8608ade1ca76bd98",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024126185932537e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.944326157192057,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.017525750930084665,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.017525750176112007,
+    "equivalent_full_sun_h": 2.944326034455308,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.53972658612545e-10,
+   "efsh_abs_diff_h": 1.22736748764396e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "8feece9c8608ade1ca76bd98",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "a5d64f38243debc72df8a3fc",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.567056830664164e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.8609826256714226,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.02298203943334272,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02298202099421374,
+    "equivalent_full_sun_h": 3.8609795270279084,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.843912897717126e-08,
+   "efsh_abs_diff_h": 3.0986435142210667e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "a5d64f38243debc72df8a3fc",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.830793577562109e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.108857526285858,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0006479614658412698,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0006479611390887147,
+    "equivalent_full_sun_h": 0.10885747136690406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.2675255513467394e-10,
+   "efsh_abs_diff_h": 5.491895394005297e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "a5d64f38243debc72df8a3fc",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 7.490852393043923e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.849428878582901,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016960886178219937,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016960872979014427,
+    "equivalent_full_sun_h": 2.849426660474424,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3199205509822898e-08,
+   "efsh_abs_diff_h": 2.2181084773365e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "2b4f3db623786c38b341a53b",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.192696321351889e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.9635530001229793,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00573543452271468,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0057354354677026965,
+    "equivalent_full_sun_h": 0.963553160167304,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.449880166573221e-10,
+   "efsh_abs_diff_h": 1.600443246818628e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "2b4f3db623786c38b341a53b",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.750523701880019e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.022657719153611377,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00013486737587139517,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.00013486758161767746,
+    "equivalent_full_sun_h": 0.02265775374923478,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.057462822888708e-10,
+   "efsh_abs_diff_h": 3.4595623404215514e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "2b4f3db623786c38b341a53b",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 6.1804709599877494e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.7088814441591299,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0042195324043650916,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.004219533114923607,
+    "equivalent_full_sun_h": 0.7088815644793134,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.105585156721994e-10,
+   "efsh_abs_diff_h": 1.203201834831802e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "bb1189d4be1264092b067d00",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "bb1189d4be1264092b067d00",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "bb1189d4be1264092b067d00",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3729d9436d386bb03eecb27b",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.99639513584782e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 171.80241432643552,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 1.0226334183793448,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.022633418475452,
+    "equivalent_full_sun_h": 171.80241430387593,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.610712226049145e-11,
+   "efsh_abs_diff_h": 2.255958975183603e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3729d9436d386bb03eecb27b",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.5541200583683343,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.021155476533140607,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.021155472076722262,
+    "equivalent_full_sun_h": 3.5541193088893404,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.456418345455404e-09,
+   "efsh_abs_diff_h": 7.494789939777036e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3729d9436d386bb03eecb27b",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "929d769cf6d2f97f9ba599ce",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.86830011070927e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 172.73908891925777,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 1.0282088622871222,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.0282088204241648,
+    "equivalent_full_sun_h": 172.7390821168866,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.186295732289125e-08,
+   "efsh_abs_diff_h": 6.802371160574694e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "929d769cf6d2f97f9ba599ce",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024126185932537e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.944326157192057,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.017525750930084665,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.017525750176112007,
+    "equivalent_full_sun_h": 2.944326034455308,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.53972658612545e-10,
+   "efsh_abs_diff_h": 1.22736748764396e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "929d769cf6d2f97f9ba599ce",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d984b45fbac9083c74d58f0b",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.567056830664164e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.8609826256714226,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.02298203943334272,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02298202099421374,
+    "equivalent_full_sun_h": 3.8609795270279084,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.843912897717126e-08,
+   "efsh_abs_diff_h": 3.0986435142210667e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d984b45fbac9083c74d58f0b",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.830793577562109e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.108857526285858,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0006479614658412698,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0006479611390887147,
+    "equivalent_full_sun_h": 0.10885747136690406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.2675255513467394e-10,
+   "efsh_abs_diff_h": 5.491895394005297e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d984b45fbac9083c74d58f0b",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 7.490852393043923e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.849428878582901,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016960886178219937,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016960872979014427,
+    "equivalent_full_sun_h": 2.849426660474424,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3199205509822898e-08,
+   "efsh_abs_diff_h": 2.2181084773365e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "048e5a0238f99f4172508e6a",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.192696321351889e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.9635530001229793,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00573543452271468,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0057354354677026965,
+    "equivalent_full_sun_h": 0.963553160167304,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.449880166573221e-10,
+   "efsh_abs_diff_h": 1.600443246818628e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "048e5a0238f99f4172508e6a",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.750523701880019e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.022657719153611377,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.00013486737587139517,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.00013486758161767746,
+    "equivalent_full_sun_h": 0.02265775374923478,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.057462822888708e-10,
+   "efsh_abs_diff_h": 3.4595623404215514e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "048e5a0238f99f4172508e6a",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 6.1804709599877494e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.7088814441591299,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0042195324043650916,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.004219533114923607,
+    "equivalent_full_sun_h": 0.7088815644793134,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.105585156721994e-10,
+   "efsh_abs_diff_h": 1.203201834831802e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "a667129a40f4c80e9e3ff6b4",
+   "lat": -60.482591,
+   "lon": 266.96912,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 6.61678079716399e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 0.8048611111618988,
+    "equivalent_full_sun_h": 198.91943895365864,
+    "known_hours": 579.5000001873904,
+    "lower_bound": true,
+    "mean": 0.3432604640023036,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 140.5
+   },
+   "independent": {
+    "mean": 0.3432604613015871,
+    "equivalent_full_sun_h": 198.91943732426975,
+    "coverage": 0.8048611111111111,
+    "unknown_hours": 140.5
+   },
+   "mean_abs_diff": 2.7007164837833386e-09,
+   "efsh_abs_diff_h": 1.629388890478367e-06,
+   "coverage_abs_diff": 5.07877073729901e-11
+  },
+  {
+   "result": "a667129a40f4c80e9e3ff6b4",
+   "lat": -60.482591,
+   "lon": 266.96912,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 4.955665797279352e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 0.8048611111618988,
+    "equivalent_full_sun_h": 75.19414604125092,
+    "known_hours": 579.5000001873904,
+    "lower_bound": true,
+    "mean": 0.12975693876951805,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 140.5
+   },
+   "independent": {
+    "mean": 0.12975693871445654,
+    "equivalent_full_sun_h": 75.19414598502757,
+    "coverage": 0.8048611111111111,
+    "unknown_hours": 140.5
+   },
+   "mean_abs_diff": 5.506151090628464e-11,
+   "efsh_abs_diff_h": 5.622334242616489e-08,
+   "coverage_abs_diff": 5.07877073729901e-11
+  },
+  {
+   "result": "a667129a40f4c80e9e3ff6b4",
+   "lat": -60.482591,
+   "lon": 266.96912,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 4.958405798394239e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 0.8048611111618988,
+    "equivalent_full_sun_h": 122.33824092409309,
+    "known_hours": 579.5000001873904,
+    "lower_bound": true,
+    "mean": 0.21110999289824522,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 140.5
+   },
+   "independent": {
+    "mean": 0.2111099929463254,
+    "equivalent_full_sun_h": 122.33824091239558,
+    "coverage": 0.8048611111111111,
+    "unknown_hours": 140.5
+   },
+   "mean_abs_diff": 4.8080178727261114e-11,
+   "efsh_abs_diff_h": 1.1697508739416662e-08,
+   "coverage_abs_diff": 5.07877073729901e-11
+  },
+  {
+   "result": "176803896364de22e8373d3e",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.567056830664164e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.8609826256714226,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.02298203943334272,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02298202099421374,
+    "equivalent_full_sun_h": 3.8609795270279084,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.843912897717126e-08,
+   "efsh_abs_diff_h": 3.0986435142210667e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "176803896364de22e8373d3e",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.830793577562109e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.108857526285858,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.0006479614658412698,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0006479611390887147,
+    "equivalent_full_sun_h": 0.10885747136690406,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.2675255513467394e-10,
+   "efsh_abs_diff_h": 5.491895394005297e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "176803896364de22e8373d3e",
+   "lat": -89.9,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 7.490852393043923e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.849428878582901,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016960886178219937,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016960872979014427,
+    "equivalent_full_sun_h": 2.849426660474424,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3199205509822898e-08,
+   "efsh_abs_diff_h": 2.2181084773365e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "f82c5203a53cef67c7ca64f6",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "vertical_tracking",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "f82c5203a53cef67c7ca64f6",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "horizontal",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "f82c5203a53cef67c7ca64f6",
+   "lat": -60.02,
+   "lon": 0.0,
+   "model": "fixed_vertical",
+   "samples": 50,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.00000000509951,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ed1d46ecace2cbae1c710283",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 7.957849669226746e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 172.73919459465014,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 1.0282094913073148,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.0282094975306257,
+    "equivalent_full_sun_h": 172.7391958707722,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.223310977659935e-09,
+   "efsh_abs_diff_h": 1.2761220489210245e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ed1d46ecace2cbae1c710283",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024507329032257e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.9443336163527762,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.017525795329850838,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.01752579270302747,
+    "equivalent_full_sun_h": 2.9443331789771183,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.626823366463915e-09,
+   "efsh_abs_diff_h": 4.3737565791346356e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "ed1d46ecace2cbae1c710283",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 168.0000000535117,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c2119090cd2ba9da7600ea6d",
+   "lat": -78.398411,
+   "lon": 21.869043,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 8.377540862802846e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 62.608337868492534,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.08695602479441124,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.08695602740751913,
+    "equivalent_full_sun_h": 62.60833973341378,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.613107896731748e-09,
+   "efsh_abs_diff_h": 1.864921244987272e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c2119090cd2ba9da7600ea6d",
+   "lat": -78.398411,
+   "lon": 21.869043,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 4.908417693558209e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 8.554515722844208,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.011881271834149274,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.011881273522548953,
+    "equivalent_full_sun_h": 8.554516936235247,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.6883996787481204e-09,
+   "efsh_abs_diff_h": 1.2133910392009284e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c2119090cd2ba9da7600ea6d",
+   "lat": -78.398411,
+   "lon": 21.869043,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 8.24203262084211e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 33.16110233447802,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.04605708656351379,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.04605709341226065,
+    "equivalent_full_sun_h": 33.16110725682767,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.848746861298771e-09,
+   "efsh_abs_diff_h": 4.922349653213587e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "684a93e585762c77b11ef389",
+   "lat": -89.2,
+   "lon": 200.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.630205489579268e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 109.47846601433189,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.6516575356527817,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.6516575136236873,
+    "equivalent_full_sun_h": 109.47846228877945,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.2029094437492347e-08,
+   "efsh_abs_diff_h": 3.7255524318879907e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "684a93e585762c77b11ef389",
+   "lat": -89.2,
+   "lon": 200.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.015161318143446e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.701144717668671,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016078242363453135,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016078241669041406,
+    "equivalent_full_sun_h": 2.701144600398956,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.944117295071273e-10,
+   "efsh_abs_diff_h": 1.1726971482772797e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "684a93e585762c77b11ef389",
+   "lat": -89.2,
+   "lon": 200.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 4.939781551888123e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 4.813491103496534,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.028651732752452953,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02865173152656878,
+    "equivalent_full_sun_h": 4.813490896463556,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.2258841719514635e-09,
+   "efsh_abs_diff_h": 2.070329783165903e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c0464f29c22a759c66c8326b",
+   "lat": -78.685715,
+   "lon": 23.757704,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c0464f29c22a759c66c8326b",
+   "lat": -78.685715,
+   "lon": 23.757704,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c0464f29c22a759c66c8326b",
+   "lat": -78.685715,
+   "lon": 23.757704,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d55d2958df7a1c4547db2b7d",
+   "lat": -81.21596,
+   "lon": 34.518449,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 9.541257592837749e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 57.274007214996374,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.0795472322220655,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.07954722576297715,
+    "equivalent_full_sun_h": 57.27400254934355,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.459088347510189e-09,
+   "efsh_abs_diff_h": 4.665652824087374e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d55d2958df7a1c4547db2b7d",
+   "lat": -81.21596,
+   "lon": 34.518449,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.306921605739701e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 9.52950258208501,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.013235420249404268,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.013235419229423267,
+    "equivalent_full_sun_h": 9.529501845184752,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.0199810007022192e-09,
+   "efsh_abs_diff_h": 7.369002581469886e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "d55d2958df7a1c4547db2b7d",
+   "lat": -81.21596,
+   "lon": 34.518449,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 9.632107910267858e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 51.41144190463786,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.07140478040427116,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0714047729273541,
+    "equivalent_full_sun_h": 51.41143650769495,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.476917057713806e-09,
+   "efsh_abs_diff_h": 5.396942910351754e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "1cc5887fb7f7868e27b6415f",
+   "lat": -89.2,
+   "lon": 200.0,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 8.630205489579268e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 109.47846601433189,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.6516575356527817,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.6516575136236873,
+    "equivalent_full_sun_h": 109.47846228877945,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.2029094437492347e-08,
+   "efsh_abs_diff_h": 3.7255524318879907e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "1cc5887fb7f7868e27b6415f",
+   "lat": -89.2,
+   "lon": 200.0,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.015161318143446e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.701144717668671,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.016078242363453135,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.016078241669041406,
+    "equivalent_full_sun_h": 2.701144600398956,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.944117295071273e-10,
+   "efsh_abs_diff_h": 1.1726971482772797e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "1cc5887fb7f7868e27b6415f",
+   "lat": -89.2,
+   "lon": 200.0,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 4.939781551888123e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 4.813491103496534,
+    "known_hours": 168.00000003784896,
+    "lower_bound": false,
+    "mean": 0.028651732752452953,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02865173152656878,
+    "equivalent_full_sun_h": 4.813490896463556,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.2258841719514635e-09,
+   "efsh_abs_diff_h": 2.070329783165903e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "7c557d54e5a0617b54faec27",
+   "lat": -72.087426,
+   "lon": 329.736798,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "7c557d54e5a0617b54faec27",
+   "lat": -72.087426,
+   "lon": 329.736798,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "7c557d54e5a0617b54faec27",
+   "lat": -72.087426,
+   "lon": 329.736798,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c9b10862d307661e0c2b7ef0",
+   "lat": -84.313534,
+   "lon": 359.048681,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 8.325740348036348e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 358.95604611189646,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.4985500639127803,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.49855006071337354,
+    "equivalent_full_sun_h": 358.95604371362896,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.1994067395402226e-09,
+   "efsh_abs_diff_h": 2.3982674974831752e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c9b10862d307661e0c2b7ef0",
+   "lat": -84.313534,
+   "lon": 359.048681,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.047758514849232e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 32.329373768451674,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.044901907999893055,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.04490190812526403,
+    "equivalent_full_sun_h": 32.3293738501901,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.2537097748843706e-10,
+   "efsh_abs_diff_h": 8.17384275819677e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c9b10862d307661e0c2b7ef0",
+   "lat": -84.313534,
+   "lon": 359.048681,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 5.0057455419638686e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 228.86213599592912,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.3178640776882694,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.317864078668905,
+    "equivalent_full_sun_h": 228.86213664161158,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.80635572744859e-10,
+   "efsh_abs_diff_h": 6.45682462163677e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "5703519acbf1e250a1648953",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.987884608231852e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 173.53359165525097,
+    "known_hours": 168.00000005334616,
+    "lower_bound": false,
+    "mean": 1.0329380452389743,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.032938045233042,
+    "equivalent_full_sun_h": 173.53359188609167,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.9323657097820615e-12,
+   "efsh_abs_diff_h": 2.308406976680999e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "5703519acbf1e250a1648953",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024334447555762e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.1006809728807365,
+    "known_hours": 168.00000005334616,
+    "lower_bound": false,
+    "mean": 0.01845643435652474,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.018456433632274394,
+    "equivalent_full_sun_h": 3.1006808553491245,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.242503471949213e-10,
+   "efsh_abs_diff_h": 1.1753161199834494e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "5703519acbf1e250a1648953",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 4.47923916713569e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.03240408089763837,
+    "known_hours": 168.00000005334616,
+    "lower_bound": false,
+    "mean": 0.0001928814338532672,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0001928821107381312,
+    "equivalent_full_sun_h": 0.03240419465758691,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.768848639958965e-10,
+   "efsh_abs_diff_h": 1.1375994854456728e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "0d0f57b54d238c3edf2daba3",
+   "lat": -79.696507,
+   "lon": 294.545833,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 8.294873856229401e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 341.0266470936525,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.4736481208384552,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.47364813677334927,
+    "equivalent_full_sun_h": 341.02665847681146,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.5934894070923633e-08,
+   "efsh_abs_diff_h": 1.1383158948774508e-05,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "0d0f57b54d238c3edf2daba3",
+   "lat": -79.696507,
+   "lon": 294.545833,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.050358243885444e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 50.169667581848486,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.06968009384529644,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.06968009297655892,
+    "equivalent_full_sun_h": 50.16966694312242,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 8.68737526360519e-10,
+   "efsh_abs_diff_h": 6.387260640394743e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "0d0f57b54d238c3edf2daba3",
+   "lat": -79.696507,
+   "lon": 294.545833,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 5.070099265813699e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 226.00191504795555,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.31389154859490964,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.3138915505789398,
+    "equivalent_full_sun_h": 226.00191641683665,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.9840301623830214e-09,
+   "efsh_abs_diff_h": 1.3688811009160418e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "aa9e05c62b362842024687b6",
+   "lat": -87.671265,
+   "lon": 117.373621,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 8.013856792332685e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 50.38175808163185,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.06997466398380674,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.06997468093825134,
+    "equivalent_full_sun_h": 50.38177027554096,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.6954444598260565e-08,
+   "efsh_abs_diff_h": 1.219390910733864e-05,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "aa9e05c62b362842024687b6",
+   "lat": -87.671265,
+   "lon": 117.373621,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.072037580058919e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.4018071707860473,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.004724732180400876,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.004724733630598355,
+    "equivalent_full_sun_h": 3.4018082140308157,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.450197478596038e-09,
+   "efsh_abs_diff_h": 1.043244768350604e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "aa9e05c62b362842024687b6",
+   "lat": -87.671265,
+   "lon": 117.373621,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 8.817470323774224e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 49.89754690202591,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.06930214845675368,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.06930216484111643,
+    "equivalent_full_sun_h": 49.89755868560383,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.6384362741539427e-08,
+   "efsh_abs_diff_h": 1.1783577924973088e-05,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "39c32159dd11fab6e2ee2eb1",
+   "lat": -81.147875,
+   "lon": 282.44054,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 9.497426345571498e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 284.5268283631694,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.3951761504001522,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.39517615956025576,
+    "equivalent_full_sun_h": 284.52683488338414,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.160103564553879e-09,
+   "efsh_abs_diff_h": 6.520214753891196e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "39c32159dd11fab6e2ee2eb1",
+   "lat": -81.147875,
+   "lon": 282.44054,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.592890779601567e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 35.98349800129563,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.0499770805441708,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.04997708298247528,
+    "equivalent_full_sun_h": 35.983499747382204,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.4383044819331623e-09,
+   "efsh_abs_diff_h": 1.7460865748830656e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "39c32159dd11fab6e2ee2eb1",
+   "lat": -81.147875,
+   "lon": 282.44054,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 8.782622516134708e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 186.05393077043337,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.2584082371129879,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.2584082435082577,
+    "equivalent_full_sun_h": 186.05393532594553,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.395269813719295e-09,
+   "efsh_abs_diff_h": 4.5555121630513895e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "cee9b9da7c6864b5b6c7a55f",
+   "lat": -74.231274,
+   "lon": 113.810574,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 8.354424404499738e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 330.2964432683722,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.45874505997394177,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.4587450715767938,
+    "equivalent_full_sun_h": 330.2964515352915,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.1602852012515541e-08,
+   "efsh_abs_diff_h": 8.266919337529544e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "cee9b9da7c6864b5b6c7a55f",
+   "lat": -74.231274,
+   "lon": 113.810574,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.010003859884371e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 70.14734724742499,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.09742687115127738,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0974268731162477,
+    "equivalent_full_sun_h": 70.14734864369834,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.9649703253410422e-09,
+   "efsh_abs_diff_h": 1.396273347609167e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "cee9b9da7c6864b5b6c7a55f",
+   "lat": -74.231274,
+   "lon": 113.810574,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 6.075933730198546e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 217.28979275930948,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.30179137875275996,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.3017913849488492,
+    "equivalent_full_sun_h": 217.28979716317144,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.196089252785697e-09,
+   "efsh_abs_diff_h": 4.4038619648745225e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c8ab7a498c11d463840b251e",
+   "lat": -69.282735,
+   "lon": 188.73762,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 8.98078173450223e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 346.44868094114884,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.48117872340243567,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.48117872208992013,
+    "equivalent_full_sun_h": 346.4486799047425,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.3125155406967792e-09,
+   "efsh_abs_diff_h": 1.0364063314227678e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c8ab7a498c11d463840b251e",
+   "lat": -69.282735,
+   "lon": 188.73762,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.063505120306289e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 92.92675199580718,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.12906493329346191,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.1290649338363622,
+    "equivalent_full_sun_h": 92.92675236218079,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.429002802870286e-10,
+   "efsh_abs_diff_h": 3.663736123371564e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "c8ab7a498c11d463840b251e",
+   "lat": -69.282735,
+   "lon": 188.73762,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 4.983342846265337e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 219.61659156293848,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.3050230437569477,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.30502304368563066,
+    "equivalent_full_sun_h": 219.61659145365408,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.131706336593879e-11,
+   "efsh_abs_diff_h": 1.0928440019597474e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "45d03443e0208b6ee1bda31b",
+   "lat": -70.819781,
+   "lon": 267.502832,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 7.2348884776474165e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 331.55205067825443,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.4604889591538738,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.4604889674181475,
+    "equivalent_full_sun_h": 331.5520565410662,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 8.264273709812642e-09,
+   "efsh_abs_diff_h": 5.862811747192609e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "45d03443e0208b6ee1bda31b",
+   "lat": -70.819781,
+   "lon": 267.502832,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.327577010237508e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 83.05435272307285,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.11535326764050367,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.1153532695111752,
+    "equivalent_full_sun_h": 83.05435404804615,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.8706715204652724e-09,
+   "efsh_abs_diff_h": 1.3249732973008577e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "45d03443e0208b6ee1bda31b",
+   "lat": -70.819781,
+   "lon": 267.502832,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 5.051532756095156e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 212.56377274957592,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.29522746207430606,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.295227463777673,
+    "equivalent_full_sun_h": 212.56377391992456,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.7033669474919577e-09,
+   "efsh_abs_diff_h": 1.1703486393344065e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "57cfafccbca5eabfc2d1f9f4",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 4.987884608231852e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 173.53359165525097,
+    "known_hours": 168.00000005334616,
+    "lower_bound": false,
+    "mean": 1.0329380452389743,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.032938045233042,
+    "equivalent_full_sun_h": 173.53359188609167,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.9323657097820615e-12,
+   "efsh_abs_diff_h": 2.308406976680999e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "57cfafccbca5eabfc2d1f9f4",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 5.024334447555762e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 3.1006809728807365,
+    "known_hours": 168.00000005334616,
+    "lower_bound": false,
+    "mean": 0.01845643435652474,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.018456433632274394,
+    "equivalent_full_sun_h": 3.1006808553491245,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 7.242503471949213e-10,
+   "efsh_abs_diff_h": 1.1753161199834494e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "57cfafccbca5eabfc2d1f9f4",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 4.47923916713569e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.03240408089763837,
+    "known_hours": 168.00000005334616,
+    "lower_bound": false,
+    "mean": 0.0001928814338532672,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0001928821107381312,
+    "equivalent_full_sun_h": 0.03240419465758691,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.768848639958965e-10,
+   "efsh_abs_diff_h": 1.1375994854456728e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "81838f5fd6f5068bf6ff5f4a",
+   "lat": -84.313534,
+   "lon": 359.048681,
+   "model": "vertical_tracking",
+   "samples": 338,
+   "series_max_abs_diff": 6.4342991762389445e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 69.36375634948186,
+    "known_hours": 168.00000005334616,
+    "lower_bound": false,
+    "mean": 0.41287950194914474,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.41287947624519683,
+    "equivalent_full_sun_h": 69.36375212388717,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.5703947914568204e-08,
+   "efsh_abs_diff_h": 4.225594693707535e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "81838f5fd6f5068bf6ff5f4a",
+   "lat": -84.313534,
+   "lon": 359.048681,
+   "model": "horizontal",
+   "samples": 338,
+   "series_max_abs_diff": 4.895406682976777e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 4.259941910442702,
+    "known_hours": 168.00000005334616,
+    "lower_bound": false,
+    "mean": 0.025356797077916753,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.02535679517565815,
+    "equivalent_full_sun_h": 4.2599415965544525,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.90225860410842e-09,
+   "efsh_abs_diff_h": 3.1388824961453565e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "81838f5fd6f5068bf6ff5f4a",
+   "lat": -84.313534,
+   "lon": 359.048681,
+   "model": "fixed_vertical",
+   "samples": 338,
+   "series_max_abs_diff": 5.029758850916277e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 26.735447551585803,
+    "known_hours": 168.00000005334616,
+    "lower_bound": false,
+    "mean": 0.15913956870890666,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.1591395644288828,
+    "equivalent_full_sun_h": 26.73544686825981,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.280023863101334e-09,
+   "efsh_abs_diff_h": 6.833259931227076e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "976a3d8fe1814d14e9efe07f",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 9.353194798833453e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 387.8055493487124,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.5386188183977876,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.5386188266973221,
+    "equivalent_full_sun_h": 387.8055552220719,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 8.29953450409704e-09,
+   "efsh_abs_diff_h": 5.873359498309583e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "976a3d8fe1814d14e9efe07f",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 9.981992645712472,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.013863878670943283,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.01386387810848836,
+    "equivalent_full_sun_h": 9.98199223811162,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.624549229144016e-10,
+   "efsh_abs_diff_h": 4.076008526254782e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "976a3d8fe1814d14e9efe07f",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 8.597905037266429e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 115.214284862866,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.16001984004509973,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.16001984509111455,
+    "equivalent_full_sun_h": 115.21428846560248,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.046014828202772e-09,
+   "efsh_abs_diff_h": 3.60273648425391e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "4f36ff93652542ccadce48a9",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 9.353194798833453e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 388.0628963309094,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.5389762447599719,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.5389762530669261,
+    "equivalent_full_sun_h": 388.06290220818676,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 8.306954235592912e-09,
+   "efsh_abs_diff_h": 5.877277374111145e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "4f36ff93652542ccadce48a9",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 9.897694749519372,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.013746798259546816,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.013746797356945485,
+    "equivalent_full_sun_h": 9.897694097000748,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 9.026013304824776e-10,
+   "efsh_abs_diff_h": 6.525186240224912e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "4f36ff93652542ccadce48a9",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 8.597905037266429e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 114.55228036642654,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.15910038935528695,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.15910039483776814,
+    "equivalent_full_sun_h": 114.55228428319307,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.482481191254607e-09,
+   "efsh_abs_diff_h": 3.916766530664972e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "2120116047404c2b356582f2",
+   "lat": -76.044848,
+   "lon": 306.374106,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "2120116047404c2b356582f2",
+   "lat": -76.044848,
+   "lon": 306.374106,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "2120116047404c2b356582f2",
+   "lat": -76.044848,
+   "lon": 306.374106,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3f4b73f952327ebdf32e5dcc",
+   "lat": -82.992508,
+   "lon": 178.912225,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 8.823620667675058e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 353.72549582111657,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.49128541073134074,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.4912854104723726,
+    "equivalent_full_sun_h": 353.7254955401083,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.589681247222586e-10,
+   "efsh_abs_diff_h": 2.8100828330934746e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3f4b73f952327ebdf32e5dcc",
+   "lat": -82.992508,
+   "lon": 178.912225,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.035131863159736e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 37.92100346459861,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.05266806035341985,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.05266806068222834,
+    "equivalent_full_sun_h": 37.921003691204405,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.288084873820374e-10,
+   "efsh_abs_diff_h": 2.2660579190869612e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3f4b73f952327ebdf32e5dcc",
+   "lat": -82.992508,
+   "lon": 178.912225,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 5.0595959409927005e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 234.15317054278285,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.32521273677804646,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.32521273561647307,
+    "equivalent_full_sun_h": 234.1531696438606,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.1615733930270267e-09,
+   "efsh_abs_diff_h": 8.989222521904594e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "55ec1b92512608376a8cc237",
+   "lat": -85.02292,
+   "lon": 47.128465,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 1.0068648859551388e-05,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 147.49712529059082,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.20485711840439538,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.2048571229329161,
+    "equivalent_full_sun_h": 147.4971285116996,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.5285207250778114e-09,
+   "efsh_abs_diff_h": 3.221108784146054e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "55ec1b92512608376a8cc237",
+   "lat": -85.02292,
+   "lon": 47.128465,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 4.96168171932633e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 2.9736032310662526,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.004130004486488063,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.004130004670173586,
+    "equivalent_full_sun_h": 2.973603362524982,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.8368552338887678e-10,
+   "efsh_abs_diff_h": 1.3145872923558954e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "55ec1b92512608376a8cc237",
+   "lat": -85.02292,
+   "lon": 47.128465,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 5.901912471899251e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 12.10735418033236,
+    "known_hours": 720.0000001924568,
+    "lower_bound": false,
+    "mean": 0.01681576969041118,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0168157698031745,
+    "equivalent_full_sun_h": 12.107354258285639,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.127633195152633e-10,
+   "efsh_abs_diff_h": 7.795327938708851e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "5998e02917bc98ba4ad6d994",
+   "lat": -60.482591,
+   "lon": 266.96912,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 6.61678079716399e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 0.8048611111618988,
+    "equivalent_full_sun_h": 198.91943895365864,
+    "known_hours": 579.5000001873904,
+    "lower_bound": true,
+    "mean": 0.3432604640023036,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 140.5
+   },
+   "independent": {
+    "mean": 0.3432604613015871,
+    "equivalent_full_sun_h": 198.91943732426975,
+    "coverage": 0.8048611111111111,
+    "unknown_hours": 140.5
+   },
+   "mean_abs_diff": 2.7007164837833386e-09,
+   "efsh_abs_diff_h": 1.629388890478367e-06,
+   "coverage_abs_diff": 5.07877073729901e-11
+  },
+  {
+   "result": "5998e02917bc98ba4ad6d994",
+   "lat": -60.482591,
+   "lon": 266.96912,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 4.955665797279352e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 0.8048611111618988,
+    "equivalent_full_sun_h": 75.19414604125092,
+    "known_hours": 579.5000001873904,
+    "lower_bound": true,
+    "mean": 0.12975693876951805,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 140.5
+   },
+   "independent": {
+    "mean": 0.12975693871445654,
+    "equivalent_full_sun_h": 75.19414598502757,
+    "coverage": 0.8048611111111111,
+    "unknown_hours": 140.5
+   },
+   "mean_abs_diff": 5.506151090628464e-11,
+   "efsh_abs_diff_h": 5.622334242616489e-08,
+   "coverage_abs_diff": 5.07877073729901e-11
+  },
+  {
+   "result": "5998e02917bc98ba4ad6d994",
+   "lat": -60.482591,
+   "lon": 266.96912,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 4.958405798394239e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 0.8048611111618988,
+    "equivalent_full_sun_h": 122.33824092409309,
+    "known_hours": 579.5000001873904,
+    "lower_bound": true,
+    "mean": 0.21110999289824522,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 140.5
+   },
+   "independent": {
+    "mean": 0.2111099929463254,
+    "equivalent_full_sun_h": 122.33824091239558,
+    "coverage": 0.8048611111111111,
+    "unknown_hours": 140.5
+   },
+   "mean_abs_diff": 4.8080178727261114e-11,
+   "efsh_abs_diff_h": 1.1697508739416662e-08,
+   "coverage_abs_diff": 5.07877073729901e-11
+  },
+  {
+   "result": "eda9338a7a50e3d57fa5bca9",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 9.353194798833453e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 387.8055493487124,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.5386188183977876,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.5386188266973221,
+    "equivalent_full_sun_h": 387.8055552220719,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 8.29953450409704e-09,
+   "efsh_abs_diff_h": 5.873359498309583e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "eda9338a7a50e3d57fa5bca9",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 9.981992645712472,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.013863878670943283,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.01386387810848836,
+    "equivalent_full_sun_h": 9.98199223811162,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.624549229144016e-10,
+   "efsh_abs_diff_h": 4.076008526254782e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "eda9338a7a50e3d57fa5bca9",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 8.597905037266429e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 115.214284862866,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.16001984004509973,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.16001984509111455,
+    "equivalent_full_sun_h": 115.21428846560248,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.046014828202772e-09,
+   "efsh_abs_diff_h": 3.60273648425391e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3ac70f2c8ead53b491d4050f",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 9.353194798833453e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 387.8055493487124,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.5386188183977876,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.5386188266973221,
+    "equivalent_full_sun_h": 387.8055552220719,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 8.29953450409704e-09,
+   "efsh_abs_diff_h": 5.873359498309583e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3ac70f2c8ead53b491d4050f",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.0638728633228824e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 9.981992645712472,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.013863878670943283,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.01386387810848836,
+    "equivalent_full_sun_h": 9.98199223811162,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.624549229144016e-10,
+   "efsh_abs_diff_h": 4.076008526254782e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "3ac70f2c8ead53b491d4050f",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 8.597905037266429e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 115.214284862866,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.16001984004509973,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.16001984509111455,
+    "equivalent_full_sun_h": 115.21428846560248,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 5.046014828202772e-09,
+   "efsh_abs_diff_h": 3.60273648425391e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "0e0522dbe9f5b21b4677625e",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "vertical_tracking",
+   "samples": 98,
+   "series_max_abs_diff": 4.991021824052311e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 24.587337726773914,
+    "known_hours": 24.000000004967053,
+    "lower_bound": false,
+    "mean": 1.024472405070221,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 1.024472405130569,
+    "equivalent_full_sun_h": 24.587337723133654,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 6.034794886033978e-11,
+   "efsh_abs_diff_h": 3.640259649273503e-09,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "0e0522dbe9f5b21b4677625e",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "horizontal",
+   "samples": 98,
+   "series_max_abs_diff": 4.8754865493542965e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.6687864245443114,
+    "known_hours": 24.000000004967053,
+    "lower_bound": false,
+    "mean": 0.02786610101691246,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.027866099744988153,
+    "equivalent_full_sun_h": 0.6687863938797156,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.271924305462635e-09,
+   "efsh_abs_diff_h": 3.0664595751517254e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "0e0522dbe9f5b21b4677625e",
+   "lat": -89.463163,
+   "lon": 222.510447,
+   "model": "fixed_vertical",
+   "samples": 98,
+   "series_max_abs_diff": 0.0,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 0.0,
+    "known_hours": 24.000000004967053,
+    "lower_bound": false,
+    "mean": 0.0,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0,
+    "equivalent_full_sun_h": 0.0,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 0,
+   "efsh_abs_diff_h": 0,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "47c26f2a9d4fa870f23f24a9",
+   "lat": -84.313534,
+   "lon": 359.048681,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 8.325740348036348e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 358.95604611189646,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.4985500639127803,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.49855006071337354,
+    "equivalent_full_sun_h": 358.95604371362896,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 3.1994067395402226e-09,
+   "efsh_abs_diff_h": 2.3982674974831752e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "47c26f2a9d4fa870f23f24a9",
+   "lat": -84.313534,
+   "lon": 359.048681,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 5.047758514849232e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 32.329373768451674,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.044901907999893055,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.04490190812526403,
+    "equivalent_full_sun_h": 32.3293738501901,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.2537097748843706e-10,
+   "efsh_abs_diff_h": 8.17384275819677e-08,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "47c26f2a9d4fa870f23f24a9",
+   "lat": -84.313534,
+   "lon": 359.048681,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 6.950445787579085e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 195.19632999892553,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.27110601381587723,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.2711060129783564,
+    "equivalent_full_sun_h": 195.1963293444166,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 8.375208304656212e-10,
+   "efsh_abs_diff_h": 6.545089377141267e-07,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "f9d5518f3565a47004a176b2",
+   "lat": -78.398411,
+   "lon": 21.869043,
+   "model": "vertical_tracking",
+   "samples": 1442,
+   "series_max_abs_diff": 8.377540862802846e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 62.608337868492534,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.08695602479441124,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.08695602740751913,
+    "equivalent_full_sun_h": 62.60833973341378,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 2.613107896731748e-09,
+   "efsh_abs_diff_h": 1.864921244987272e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "f9d5518f3565a47004a176b2",
+   "lat": -78.398411,
+   "lon": 21.869043,
+   "model": "horizontal",
+   "samples": 1442,
+   "series_max_abs_diff": 4.908417693558209e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 8.554515722844208,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.011881271834149274,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.011881273522548953,
+    "equivalent_full_sun_h": 8.554516936235247,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 1.6883996787481204e-09,
+   "efsh_abs_diff_h": 1.2133910392009284e-06,
+   "coverage_abs_diff": 0.0
+  },
+  {
+   "result": "f9d5518f3565a47004a176b2",
+   "lat": -78.398411,
+   "lon": 21.869043,
+   "model": "fixed_vertical",
+   "samples": 1442,
+   "series_max_abs_diff": 9.331832415027108e-06,
+   "unknown_samples_agree": true,
+   "engine": {
+    "coverage": 1.0,
+    "equivalent_full_sun_h": 58.946528472505506,
+    "known_hours": 720.0000001899401,
+    "lower_bound": false,
+    "mean": 0.0818701784124376,
+    "policy": "known-intervals-only/v1",
+    "unknown_hours": 0.0
+   },
+   "independent": {
+    "mean": 0.0818701828565734,
+    "equivalent_full_sun_h": 58.94653165673285,
+    "coverage": 1.0,
+    "unknown_hours": 0.0
+   },
+   "mean_abs_diff": 4.44413579547831e-09,
+   "efsh_abs_diff_h": 3.184227345798263e-06,
+   "coverage_abs_diff": 0.0
+  }
+ ],
+ "worst": {
+  "series": 1.0068648859551388e-05,
+  "mean": 4.186295732289125e-08,
+  "efsh_h": 1.219390910733864e-05,
+  "coverage": 5.07877073729901e-11
+ },
+ "edge_cases": [
+  {
+   "case": "f = 0 -> 0",
+   "engine": 0.0,
+   "expected": 0.0,
+   "ok": true
+  },
+  {
+   "case": "f unknown (NaN) stays unknown",
+   "engine": NaN,
+   "expected": NaN,
+   "ok": true
+  },
+  {
+   "case": "full disk at 1 au, el 0, vertical tracking -> 1",
+   "engine": 1.0,
+   "expected": 1.0,
+   "ok": true
+  },
+  {
+   "case": "distance 0.983 au (perihelion) scales by (1/0.983)^2",
+   "engine": 1.0348870782964519,
+   "expected": 1.0348870782964517,
+   "ok": true
+  },
+  {
+   "case": "horizontal panel, Sun below 0 deg -> 0",
+   "engine": 0.0,
+   "expected": 0.0,
+   "ok": true
+  },
+  {
+   "case": "horizontal panel, Sun at 1.5 deg -> sin(1.5 deg)",
+   "engine": 0.026176948307873153,
+   "expected": 0.026176948307873153,
+   "ok": true
+  },
+  {
+   "case": "fixed vertical, Sun behind the panel (180 deg) -> 0",
+   "engine": 0.0,
+   "expected": 0.0,
+   "ok": true
+  },
+  {
+   "case": "fixed vertical, Sun 60 deg off normal at el 0 -> 0.5",
+   "engine": 0.5000000000000001,
+   "expected": 0.5,
+   "ok": true
+  },
+  {
+   "case": "vertical tracking at el 89 deg -> cos 89 deg",
+   "engine": 0.0174524064372836,
+   "expected": 0.0174524064372836,
+   "ok": true
+  },
+  {
+   "case": "all samples unknown -> mean None",
+   "engine": null,
+   "expected": null,
+   "ok": true
+  },
+  {
+   "case": "all samples unknown -> coverage 0",
+   "engine": 0.0,
+   "expected": 0.0,
+   "ok": true
+  },
+  {
+   "case": "a known sample between unknown ones adds no time (coverage 1/3)",
+   "engine": 0.3333333333333333,
+   "expected": 0.3333333333333333,
+   "ok": true
+  },
+  {
+   "case": "... and the bound is flagged (lower_bound True)",
+   "engine": 1.0,
+   "expected": 1.0,
+   "ok": true
+  },
+  {
+   "case": "unknown panel model is refused",
+   "ok": true
+  }
+ ],
+ "rf_hand_case": {
+  "fspl_db": {
+   "engine": 222.68058498080737,
+   "hand": 222.68058498080737,
+   "diff": 0.0
+  },
+  "eirp_dbw": {
+   "engine": 32.01029995663981,
+   "hand": 32.01029995663981,
+   "diff": 0.0
+  },
+  "pr_dbw": {
+   "engine": -134.67028502416755,
+   "hand": -134.67028502416755,
+   "diff": 0.0
+  },
+  "cn0_dbhz": {
+   "engine": 76.93918210568992,
+   "hand": 76.93918210568992,
+   "diff": 0.0
+  },
+  "ebn0_db": {
+   "engine": 16.939182105689923,
+   "hand": 16.939182105689923,
+   "diff": 0.0
+  },
+  "margin_db": {
+   "engine": 14.439182105689923,
+   "hand": 14.439182105689923,
+   "diff": 0.0
+  },
+  "cn_db": {
+   "engine": 13.92888214905011,
+   "hand": 13.92888214905011,
+   "diff": 0.0
+  }
+ },
+ "rf_missing_ts": {
+  "complete": false
+ },
+ "rf_zero_rb": {
+  "complete": false,
+  "problems": {
+   "rb_bps": "Data rate must be greater than 0 bit/s"
+  }
+ }
+}

@@ -1,0 +1,8 @@
+# python -m validation.v13_eclipse --reference validation/reference/gsfc_lunar_eclipses_2025_2026.json --out ../docs/validation_evidence/refresh_v04_v05_v13_v14_2026-11-11/v13_eclipse/v13.json  (start 2026-11-11T16:27:03Z; production kernels; working tree)
+{
+  "V-13": {
+    "status": "passed",
+    "detail": "4 GSFC eclipses x 5 nearside sites: 20/20 pass; smallest margins (s): partial_start_after_P1 502.6, partial_end_before_P4 482.6, total_start_after_U1 600.8, total_end_before_U4 516.7"
+  }
+}
+# exit 0; wall time 12 s (end 2026-11-11T16:27:15Z)

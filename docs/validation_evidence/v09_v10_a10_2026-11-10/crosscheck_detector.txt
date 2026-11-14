@@ -1,0 +1,12 @@
+# crosscheck_detector.py (2026-11-10T09:01:20Z, production kernels)
+ -89.5    0.0 v14      2026-11-14   29.5306 d every  3600 s sun  :   709 epochs, detector intervals  241, visible   411, exact    0, hidden by Earth 0, mismatches 0; vectorised 0.01 s, detector 38.8 s
+ -89.5    0.0 v14      2026-11-14   29.5306 d every  3600 s earth:   709 epochs, detector intervals    4, visible   367, exact    1, mismatches 0; vectorised 0.02 s, detector 41.0 s
+ -88.0  120.0 v14      2026-11-14   29.5306 d every  3600 s sun  :   709 epochs, detector intervals   53, visible   401, exact    1, hidden by Earth 0, mismatches 0; vectorised 0.01 s, detector 17.5 s
+ -88.0  120.0 v14      2026-11-14   29.5306 d every  3600 s earth:   709 epochs, detector intervals    4, visible   373, exact    0, mismatches 0; vectorised 0.02 s, detector 17.7 s
+ -86.5  250.0 v14      2026-11-14   10.0000 d every   600 s sun  :  1440 epochs, detector intervals   65, visible   862, exact    1, hidden by Earth 0, mismatches 0; vectorised 0.01 s, detector 10.9 s
+ -86.5  250.0 v14      2026-11-14   10.0000 d every   600 s earth:  1440 epochs, detector intervals    2, visible   743, exact    0, mismatches 0; vectorised 0.04 s, detector 10.0 s
+ -89.0    0.0 flat-10  2026-03-03    0.3333 d every    60 s sun  :   480 epochs, detector intervals    3, visible   410, exact  247, hidden by Earth 70, mismatches 0; vectorised 3.81 s, detector 0.7 s
+ -87.0   20.0 flat-10  2026-03-03    0.3333 d every    60 s sun  :   480 epochs, detector intervals    3, visible   411, exact  247, hidden by Earth 69, mismatches 0; vectorised 3.62 s, detector 0.8 s
+ -85.5  340.0 flat-10  2026-03-03    0.3333 d every    60 s sun  :   480 epochs, detector intervals    3, visible   409, exact  247, hidden by Earth 71, mismatches 0; vectorised 3.88 s, detector 0.7 s
+TOTAL: 7156 epochs, 0 mismatches
+# exit 0

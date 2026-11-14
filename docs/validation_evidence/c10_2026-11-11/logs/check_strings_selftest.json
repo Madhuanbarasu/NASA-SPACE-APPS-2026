@@ -1,0 +1,189 @@
+{
+  "selfTest": [
+    {
+      "name": "detects argument of state setter setNote|Loading tiles.",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "detects error message|Something failed",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "detects value of UI property 't'|Any part",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "detects literal in JSX attribute aria-label|Hard coded label",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "detects literal in JSX attribute title|Hard title",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "detects JSX text|Hello world",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "detects literal in JSX attribute placeholder|e.g. 5",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "detects string rendered as JSX content|Hide",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "detects string rendered as JSX content|Show",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "detects returned text|passed",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "detects returned text|Plain prose here",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"./not-text-but-a-path\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"hint warn\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"repeating-linear-gradient(45deg,#000 0 2px)\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"not checked\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"sun\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"any\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"cursorMove\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"LUNAOPS:GEO\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"LUNAOPS:SPS\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"featureName\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"#e7ecf1\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "ignores technical literal \"/api/tiles/${…}.png\"",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "finds exactly the expected set",
+      "passed": true,
+      "detail": "argument of state setter setNote|Loading tiles.; error message|Something failed; value of UI property 't'|Any part; literal in JSX attribute aria-label|Hard coded label; literal in JSX attribute title|Hard title; JSX text|Hello world; literal in JSX attribute placeholder|e.g. 5; string rendered as JSX content|Hide; string rendered as JSX content|Show; returned text|passed; returned text|Plain prose here"
+    },
+    {
+      "name": "resolves an existing key",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "stops at a function call",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rejects a missing key",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rejects a misspelt section",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "array method marks the array used",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "string method is not a key",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dynamic index uses the subtree",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "program check: unknown key via S",
+      "passed": true,
+      "detail": "[{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":3,\"message\":\"unknown key 'site.noSuchKey'\"},{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":4,\"message\":\"unknown key 'site.alsoMissing'\"},{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":3,\"message\":\"unknown key 'site.noSuchKey'\"},{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":4,\"message\":\"unknown key 'site.alsoMissing'\"},{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":3,\"message\":\"unknown key 'site.noSuchKey'\"},{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":4,\"message\":\"unknown key 'site.alsoMissing'\"}]"
+    },
+    {
+      "name": "program check: unknown key via alias",
+      "passed": true,
+      "detail": "[{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":3,\"message\":\"unknown key 'site.noSuchKey'\"},{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":4,\"message\":\"unknown key 'site.alsoMissing'\"},{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":3,\"message\":\"unknown key 'site.noSuchKey'\"},{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":4,\"message\":\"unknown key 'site.alsoMissing'\"},{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":3,\"message\":\"unknown key 'site.noSuchKey'\"},{\"kind\":\"unknown-key\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":4,\"message\":\"unknown key 'site.alsoMissing'\"}]"
+    },
+    {
+      "name": "program check: hardcoded JSX text",
+      "passed": true,
+      "detail": "[{\"kind\":\"hardcoded\",\"file\":\"src/components/__C10SelfTest__.tsx\",\"line\":5,\"message\":\"JSX text: \\\"Left in English\\\"\"}]"
+    },
+    {
+      "name": "dictionary check: malformed placeholder",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dictionary check: empty string",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dictionary check: real dictionary is clean",
+      "passed": true,
+      "detail": "[]"
+    }
+  ]
+}

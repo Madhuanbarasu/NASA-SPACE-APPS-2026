@@ -1,0 +1,57 @@
+frontend_u04.json: U-04 passed
+frontend_u06.json: U-06 passed
+{
+ "each": {
+  "frontend_u04.json": {
+   "rejected_reasons": [],
+   "status_after": {
+    "U-04": "passed"
+   }
+  },
+  "frontend_u06.json": {
+   "rejected_reasons": [],
+   "status_after": {
+    "U-06": "passed"
+   }
+  }
+ },
+ "full_merge_rejections": {
+  "v09_v10.json": [],
+  "v11.json": [],
+  "v12.json": [],
+  "horizons.json": [],
+  "v13.json": [],
+  "v14.json": [],
+  "frontend_u04.json": [],
+  "frontend_u06.json": []
+ },
+ "statuses": {
+  "V-04": "passed",
+  "V-05": "passed",
+  "V-09": "not run",
+  "V-10": "not run",
+  "V-11": "passed",
+  "V-12": "passed",
+  "V-13": "passed",
+  "V-14": "passed",
+  "U-04": "passed",
+  "U-06": "passed"
+ },
+ "labels": {
+  "status_page": {
+   "sun_earth_azel": "Validated",
+   "horizon": "Validated",
+   "disk_visibility": "Pending validation",
+   "events": "Pending validation",
+   "power_indicator": "Pending validation"
+  },
+  "result_with_horizon_sigma": {
+   "sun_earth_azel": "Validated",
+   "horizon": "Pending validation",
+   "disk_visibility": "Pending validation",
+   "events": "Pending validation",
+   "power_indicator": "Pending validation"
+  }
+ },
+ "dist_equals_u06_final": true
+}

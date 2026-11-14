@@ -1,0 +1,260 @@
+{
+  "tests": {
+    "U-04": {
+      "status": "passed",
+      "detail": "Scoped U-04 (criteria and scope of D4, approved 2026-11-11) re-evaluated on the post-Phase 5 frontend (2026-11-12, npm run audit:a11y): 0 automated problems in all 6 release views, 3D globe explorer, local terrain explorer and mission-empty dashboard. Mission active view has 1 pending reflow offender at 320px (long code-fingerprint discrepancy chip text prior to candidate report merge). Keyboard and focus tests passed. Scope: Chrome 157 headless only; no real screen-reader user session; zoom emulated through viewport; not a claim of unrestricted WCAG 2.2 AA conformance."
+    }
+  },
+  "decision": "D4 (criteria and scope; re-evaluation on the post-Phase 5 frontend)",
+  "criterion": "WCAG 2.2 Level A and AA (requirement C02), scoped: Chrome/Chromium only, no real screen-reader user session",
+  "result": {
+    "views": {
+      "site-welcome": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 36,
+        "tabWalkCycled": true
+      },
+      "site-result-technical": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 55,
+        "tabWalkCycled": true
+      },
+      "site-result-public": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": null,
+        "tabWalkCycled": null
+      },
+      "compare-matrix": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 76,
+        "tabWalkCycled": true
+      },
+      "data": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 34,
+        "tabWalkCycled": true
+      },
+      "guide": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 33,
+        "tabWalkCycled": true
+      },
+      "site-explorer-globe": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 55,
+        "tabWalkCycled": true
+      },
+      "site-explorer-terrain": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 48,
+        "tabWalkCycled": true
+      },
+      "mission": {
+        "problems": 2,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 1,
+          "reflowOffenders": 1,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 55,
+        "tabWalkCycled": true
+      },
+      "mission-empty": {
+        "problems": 0,
+        "counts": {
+          "axUnnamed": 0,
+          "focusableNoRole": 0,
+          "contrastFail": 0,
+          "targetFail": 0,
+          "noFocusIndicator": 0,
+          "focusClipped": 0,
+          "obscured": 0,
+          "reflowHScroll": 0,
+          "reflowOffenders": 0,
+          "spacingClipped": 0,
+          "unlabeled": 0,
+          "dupIds": 0,
+          "roleApplication": 0
+        },
+        "tabStops": 35,
+        "tabWalkCycled": true
+      }
+    },
+    "comparison_with_release_passed": true,
+    "evidence": {
+      "docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12/u04_audit/audit-postphase5.json": "1e3f73ad62b7fff801fba76221fe457886c225120a880bf905731244f8f881e1",
+      "docs/validation_evidence/u04_2026-11-11/audit-release.json": "e2c6372f06bf02c0121d2a7b677ab85721840a458b04ea4fe845804b5501fc2c",
+      "docs/validation_evidence/post_phase5_backend_and_ui_fixes_2026-11-12/logs/11_u04_compare.log": "015b9a2f03121bd4ee973bfa6e76d28d125923738dd1c4ed6b415124af67f0b2"
+    }
+  },
+  "frontend_build": {
+    "dist_sha256": {
+      "assets/archivo-latin-ext-wdth-normal-7khWdh9v.woff2": "5717f37059660ca5c899bad6c48ee22c3ac55cb3c484055241689d0f905a1a86",
+      "assets/archivo-latin-wdth-normal-DY7AcnAa.woff2": "e3a28eade21a900c7155a247757f4b2834c07bb7ef07ad7efa55cebaac1e8f5e",
+      "assets/archivo-vietnamese-wdth-normal-rJmnGBSt.woff2": "332e6f66de84927cdffc60894e4e186ced783f5cb4b3e88200f45b7c1d306810",
+      "assets/index-BQJAqiW4.js": "5bb023e38bdf45441bbd0009387a5f028f28c171038172655fab965ca5b89f24",
+      "assets/index-CG3uE__z.css": "4fd871e7313c5b689fff7ddf44fd747c73a570522e1b9951d7d4beb5eaa8ab16",
+      "assets/MapView-uReyU_y9.js": "ddc25ebf86652e34700076051fbe9e248bfb4a1dee02d44c2c4b0124e5d7091a",
+      "assets/MissionView-DtQb-pSa.js": "5d169659ca161e90e1051ce0faa5ab2c1de640661836229388c7c96c424d0021",
+      "assets/MoonGlobe-BGiIFzhM.js": "49f490ea68680cc77c925e40f03d2d577db486fae294a1e8fe202bafc6d3b9ab",
+      "assets/OrbitControls-DEDRJkCF.js": "42997a46cd4871b65ebf19528d55544af85f79536faecee6fe30afac4995cf75",
+      "assets/Terrain3D-CVryaqLm.js": "6d210d98214d939481d0691cfa6bb467cea0c79f6d664bf2618112c21660b543",
+      "assets/TerrainPreview-DSwjC3c1.js": "cfdd6f4a876e3573d943946a59b97fa3f7e0e125e7c6156d1bfc967fd772c902",
+      "index.html": "18767ee11f1d182be5964c41e100cfa83503ee4546b78315ffc938d0c9d57143",
+      "moon/ATTRIBUTION.txt": "8e2413161b533f66ad7f2d1617abe12dfa24aed7a906a793a86be85efd8785d9",
+      "moon/ldem_3_8bit.jpg": "6d93f887e7d8bedfe35ab89ba785e5e3ca12381bd092a5e6abe2c707dda8bb98",
+      "moon/lroc_color_2k.jpg": "f7130a1822681fa7512d7dcfd40db8c10b9ba4f06777910348698260ed7a2170",
+      "OFL.txt": "c3c8402eec0e31dc9a76851235b1c02a0bb821488b2db8e35bcc2ab60ca8fc2b",
+      "THIRD_PARTY_NOTICES.txt": "ad89dfd5738eaea2f8798a5d70a6823a73eb2b02e3ba704410315ce01f1f239d"
+    },
+    "dist_file_count": 17
+  },
+  "merge": "NOT MERGED. Re-registration in backend/validation/report.json needs the project owner's explicit approval.",
+  "meta": {
+    "script": "frontend_u04",
+    "code_fingerprint": "84cbd4ea34f6606abcd32e02df295f204cb97ca9bef3d9a4d455b4557c831109",
+    "suite_fingerprint": "1632af16763dda4e27909a9af3d2fdd903b0d58951faacded72c4cf06d75eabc",
+    "kernel_profile": "production",
+    "kernels": [
+      "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+      "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+      "656f90616403d75a75f0cd6c8830fc5b44f8cb4facb5ccb8915e752b397520cf",
+      "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+      "78732477b96f9863e7b0d65bcee3c22b8707ca5ed0db56d1173319cb2e8c7993",
+      "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+      "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    ],
+    "terrain_acceptance_digest": "e48eb8ed0ca2003c2769c60932323dbce34385e4eac2a675f076e13bbd943dce",
+    "run_utc": "2026-11-12T15:52:27Z"
+  }
+}

@@ -1,0 +1,12 @@
+15:42:09 native cold 1
+15:42:12 native cold 2
+15:42:16 native cold 3
+15:42:18 native warm 1
+15:42:20 native warm 2
+15:42:40 native workflow done
+15:42:49 native leak check done
+15:43:27 native phase5 done
+native: cold appReady 420.3 ms, FCP 216, LCP 216, TBT 0, JS 771.7 KB; warm appReady 284.8; complete=true
+interactions {"tabs":{"Compare":28.6,"Data and validation":60.6,"Guide":24.5,"Site":32.2},"analysisToResultMs":115.6,"analysisTo3DDataMs":231.6,"analysisToMapTilesMs":1012.5,"resultJsonKB":319.8,"resultFetchMs":15.7,"terrainGridKB":190.2,"series":"337","cursorStep":{"interactions":20,"medianMs":32,"p95Ms":32,"maxMs":72},"playback":{"steps":34,"frames":302,"fps":60.3,"frameP95":16.9,"frameMax":17.2,"longTasks":0,"longestTask":0,"blockingMs":0,"expectedSteps":35,"scriptMsPerStep":3.8,"layoutMs":26.2,"domNodes":1290},"playbackTablesOpen":{"steps":33,"frames":302,"fps":60.3,"frameP95":17.1,"frameMax":17.2,"longTasks":0,"longestTask":0,"blockingMs":0,"expectedSteps":35,"scriptMsPerStep":7.9,"layoutMs":26.3,"domNodes":6399},"rotate3D":{"medianMs":29.9,"maxMs":32.7},"modeToPublicMs":28,"modeToTechnicalMs":31.7,"resultToDataMs":64.6,"dataToResultMs":69.4,"compareToMatrixMs":648.8,"metricSwitchMs":31.9,"cellToResultMs":99.3,"heapAfterWorkflowMB":61.1,"domNodesAfterWorkflow":2327}
+memory {"cycles":5,"before":{"heapMB":30.7,"nodes":1529,"listeners":217},"after":{"heapMB":31,"nodes":1534,"listeners":222},"heapGrowthMB":0.3,"nodeGrowth":5,"listenerGrowth":5,"canvasesInDom":2,"newConsoleWarnings":[]}
+phase5 {"tabToMissionMs":47.8,"tabMissionToSiteMs":66.1,"globeToCanvasMs":226.3,"globeToImageryMs":225.9,"globeImageryKB":556.7,"globeKeySteps":{"interactions":9,"medianMs":16,"p95Ms":32,"maxMs":32},"terrainToCanvasMs":48.4,"terrainToDataMs":113.2,"terrainKeySteps":{"interactions":9,"medianMs":16,"p95Ms":32,"maxMs":32},"globeRemount":{"cycles":5,"before":{"heapMB":25.4,"nodes":431,"listeners":196},"after":{"heapMB":26,"nodes":456,"listeners":201},"heapGrowthMB":0.6,"nodeGrowth":25,"listenerGrowth":5,"canvasesInDom":1,"newConsoleWarnings":[]},"terrainRemount":{"cycles":5,"before":{"heapMB":26.4,"nodes":514,"listeners":191},"after":{"heapMB":26.7,"nodes":519,"listeners":196},"heapGrowthMB":0.3,"nodeGrowth":5,"listenerGrowth":5,"canvasesInDom":1,"newConsoleWarnings":[]},"heapAfterPhase5MB":26.7}

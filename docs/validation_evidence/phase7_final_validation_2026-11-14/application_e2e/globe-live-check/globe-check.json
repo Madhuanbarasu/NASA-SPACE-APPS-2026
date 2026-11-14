@@ -1,0 +1,281 @@
+{
+ "base": "http://127.0.0.1:8000",
+ "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+ "started": "2026-11-14T03:32:55.609Z",
+ "version": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+ "checks": [
+  {
+   "name": "lazy: no globe chunk, three.js chunk or imagery before opening the globe",
+   "ok": true,
+   "detail": [
+    "/assets/index-WLONu4Rv.js",
+    "/assets/index-BQo0H1zF.css",
+    "/assets/MapView-BlX5wpk3.js",
+    "/assets/index-Bo8M58ku.js",
+    "/assets/StageLegend-d5-9FXVI.js",
+    "/assets/archivo-latin-wdth-normal-DY7AcnAa.woff2"
+   ]
+  },
+  {
+   "name": "map is the default view",
+   "ok": true
+  },
+  {
+   "name": "layout: the globe stage fits in the viewport",
+   "ok": true
+  },
+  {
+   "name": "rendering: globe chunk, shared three.js chunk and both images requested on demand",
+   "ok": true,
+   "detail": [
+    "/assets/MoonGlobe-PZf8Guut.js",
+    "/assets/OrbitControls-DT1z0Qlr.js",
+    "/moon/lroc_color_2k.jpg",
+    "/moon/ldem_3_8bit.jpg"
+   ]
+  },
+  {
+   "name": "rendering: lunar disc drawn (lit pixels in the stage)",
+   "ok": true,
+   "detail": 0.6592524102393617
+  },
+  {
+   "name": "coordinates: initial centre is the nearside (0, 0)",
+   "ok": true,
+   "detail": "Centre 0.000° N, 0.000° E"
+  },
+  {
+   "name": "coordinates: 'select centre' gives the centre readout",
+   "ok": true,
+   "detail": "0.000° N, 0.000° E"
+  },
+  {
+   "name": "coordinates: click at the canvas centre selects ~(0, 0)",
+   "ok": true,
+   "detail": {
+    "lat": 0,
+    "lon": 0
+   }
+  },
+  {
+   "name": "coordinates: right of centre is east, above centre is north",
+   "ok": true,
+   "detail": {
+    "right": {
+     "lat": 0,
+     "lon": 15.423
+    },
+    "up": {
+     "lat": 15.423,
+     "lon": 0
+    }
+   }
+  },
+  {
+   "name": "coordinates: picked longitude matches the exact ray-sphere geometry within 0.2 deg",
+   "ok": true,
+   "detail": {
+    "got": 15.423,
+    "expected": 15.423355603065152
+   }
+  },
+  {
+   "name": "orientation: Mare Moscoviense renders darker than its east-west mirror; Mare Imbrium darker than its north-south mirror",
+   "ok": true,
+   "detail": {
+    "moscoviense": {
+     "centre": {
+      "lat": 28,
+      "lon": 138
+     },
+     "mean": 172.368503819444
+    },
+    "mirrorLon": {
+     "centre": {
+      "lat": 28,
+      "lon": 202
+     },
+     "mean": 183.7105135416664
+    },
+    "imbrium": {
+     "centre": {
+      "lat": 32,
+      "lon": 344
+     },
+     "mean": 117.79134166666684
+    },
+    "mirrorLat": {
+     "centre": {
+      "lat": -32,
+      "lon": 344
+     },
+     "mean": 162.03927534722186
+    }
+   }
+  },
+  {
+   "name": "keyboard: Home returns to the nearside",
+   "ok": true,
+   "detail": "Centre 0.000° N, 0.000° E"
+  },
+  {
+   "name": "keyboard: ArrowRight turns 10 deg east, ArrowUp 10 deg north",
+   "ok": true,
+   "detail": {
+    "k1": {
+     "lat": 0,
+     "lon": 10
+    },
+    "k2": {
+     "lat": 10,
+     "lon": 10
+    }
+   }
+  },
+  {
+   "name": "zoom: + key enlarges the lunar disc",
+   "ok": true,
+   "detail": {
+    "before": 0.6745466949246454,
+    "after": 0.9395310422207447
+   }
+  },
+  {
+   "name": "keyboard: Enter selects the centre location",
+   "ok": true,
+   "detail": {
+    "selected": "10.000° N, 10.000° E",
+    "centre": "Centre 10.000° N, 10.000° E"
+   }
+  },
+  {
+   "name": "zoom: mouse wheel enlarges the lunar disc",
+   "ok": true,
+   "detail": {
+    "before": 0.6712620511968085,
+    "after": 0.9263613004210993
+   }
+  },
+  {
+   "name": "rotation: dragging left turns the view east (centre longitude increases)",
+   "ok": true,
+   "detail": {
+    "before": {
+     "lat": 0,
+     "lon": 0
+    },
+    "after": {
+     "lat": 0,
+     "lon": 36.176
+    }
+   }
+  },
+  {
+   "name": "rotation: a drag does not select (selection unchanged)",
+   "ok": true,
+   "detail": {
+    "before": "10.000° N, 10.000° E",
+    "after": "10.000° N, 10.000° E"
+   }
+  },
+  {
+   "name": "viewpoints: South Pole centres at 89.900 S",
+   "ok": true,
+   "detail": "Centre 89.900° S, 0.000° E"
+  },
+  {
+   "name": "viewpoints: North Pole centres at 89.900 N",
+   "ok": true,
+   "detail": "Centre 89.900° N, 0.000° E"
+  },
+  {
+   "name": "viewpoints: Farside centres at (0, 180 E)",
+   "ok": true,
+   "detail": "Centre 0.000° N, 180.000° E"
+  },
+  {
+   "name": "toggles: grid button toggles aria-pressed and the image",
+   "ok": true,
+   "detail": "false"
+  },
+  {
+   "name": "accessibility: every globe button named and >= 24 px; canvas host focusable and named",
+   "ok": true,
+   "detail": {
+    "buttons": 15,
+    "unnamed": 0,
+    "small": [],
+    "hostTabIndex": 0,
+    "hostRole": "region",
+    "hostName": true
+   }
+  },
+  {
+   "name": "accessibility: the selection is announced in a polite live region",
+   "ok": true,
+   "detail": "Selected 10.000° N, 10.000° E."
+  },
+  {
+   "name": "responsive: no sideways scroll at 390 px; toolbar inside the pane and above (not over) the globe; canvas fills the stage",
+   "ok": true,
+   "detail": {
+    "scrollW": 390,
+    "clientW": 390,
+    "stageW": 356,
+    "stageH": 446,
+    "toolbarInside": true,
+    "toolbarAboveStage": true,
+    "canvasW": 356
+   }
+  },
+  {
+   "name": "cleanup: no globe canvas left after switching back; no WebGL context warnings over 5 cycles",
+   "ok": true,
+   "detail": {
+    "canvasesLeft": 0,
+    "ctxWarnings": []
+   }
+  },
+  {
+   "name": "cleanup: no heap growth trend over 5 globe mount/unmount cycles (< 2 MB)",
+   "ok": true,
+   "detail": {
+    "heapsMB": [
+     25.76,
+     26.56,
+     26.61,
+     26.75,
+     27.03,
+     26.96
+    ],
+    "growthMB": 1.21
+   }
+  },
+  {
+   "name": "no page exceptions or console errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "fallback: blocked imagery shows a note and an untextured sphere (still rotatable)",
+   "ok": true,
+   "detail": 0.6476115774601063
+  },
+  {
+   "name": "fallback: a failed globe chunk shows the load-failed message instead of crashing the page",
+   "ok": true,
+   "detail": "The 3D globe could not be loaded. The south polar map and typed coordinates still work."
+  },
+  {
+   "name": "fallback: switching back to the map after a failed globe works",
+   "ok": true
+  }
+ ],
+ "console": [
+  {
+   "type": "error",
+   "text": "TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:8000/assets/MoonGlobe-PZf8Guut.js"
+  }
+ ],
+ "finished": "2026-11-14T03:33:59.703Z"
+}

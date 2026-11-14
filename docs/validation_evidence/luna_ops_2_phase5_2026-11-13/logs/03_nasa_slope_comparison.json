@@ -1,0 +1,71 @@
+{
+ "site": "PGDA 78 Site01 (5 m, 3200 x 3200)",
+ "pixels_compared": 10227204,
+ "nasa_slope_product": "NASA PGDA 78 slope product (Site01_final_adj_5mpp_slp.tif)",
+ "nasa_slope_sha256": "3a90035a4946b4a04b7332c52f0b2b1cff71648bd8c105e14d8a7e15c6bcfe8e",
+ "dem_sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+ "point_scale_range": [
+  1.0000312235101232,
+  1.0000338737815393
+ ],
+ "all": [
+  {
+   "estimator": "horn_3x3 (app)",
+   "n": 10227204,
+   "mean_diff_deg": -0.033,
+   "median_diff_deg": -0.01,
+   "rms_diff_deg": 0.38,
+   "p95_abs_diff_deg": 0.773,
+   "correlation": 0.9979,
+   "share_within_1x_nasa_slope_sigma": 0.9967,
+   "share_within_2x_nasa_slope_sigma": 0.9997,
+   "our_median_deg": 12.273,
+   "nasa_median_deg": 12.295
+  },
+  {
+   "estimator": "central_2px",
+   "n": 10227204,
+   "mean_diff_deg": -0.007,
+   "median_diff_deg": -0.007,
+   "rms_diff_deg": 0.008,
+   "p95_abs_diff_deg": 0.015,
+   "correlation": 1.0,
+   "share_within_1x_nasa_slope_sigma": 1.0,
+   "share_within_2x_nasa_slope_sigma": 1.0,
+   "our_median_deg": 12.287,
+   "nasa_median_deg": 12.295
+  }
+ ],
+ "measured_pixels": [
+  {
+   "estimator": "horn_3x3 (app)",
+   "n": 972015,
+   "mean_diff_deg": -0.045,
+   "median_diff_deg": -0.011,
+   "rms_diff_deg": 0.456,
+   "p95_abs_diff_deg": 0.954,
+   "correlation": 0.9971,
+   "share_within_1x_nasa_slope_sigma": 0.9942,
+   "share_within_2x_nasa_slope_sigma": 0.9993,
+   "our_median_deg": 11.579,
+   "nasa_median_deg": 11.601
+  }
+ ],
+ "interpolated_pixels": [
+  {
+   "estimator": "horn_3x3 (app)",
+   "n": 9255189,
+   "mean_diff_deg": -0.032,
+   "median_diff_deg": -0.01,
+   "rms_diff_deg": 0.371,
+   "p95_abs_diff_deg": 0.755,
+   "correlation": 0.998,
+   "share_within_1x_nasa_slope_sigma": 0.9969,
+   "share_within_2x_nasa_slope_sigma": 0.9997,
+   "our_median_deg": 12.347,
+   "nasa_median_deg": 12.368
+  }
+ ],
+ "measured_share": 0.0949,
+ "nasa_slope_sigma_median_deg": 1.901
+}

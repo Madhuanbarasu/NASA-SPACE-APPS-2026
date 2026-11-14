@@ -1,0 +1,640 @@
+{
+ "results": [
+  {
+   "result": "A-events",
+   "width": 1920,
+   "timeline": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 2207,
+    "timelineContentBottom": 2201,
+    "eventColBottom": 2207,
+    "blankUnderTimeline": 6,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 168,
+    "listScrollH": 168
+   },
+   "timelineIntervalsOpen": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 2376,
+    "timelineContentBottom": 2376,
+    "eventColBottom": 2376,
+    "blankUnderTimeline": 0,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 338,
+    "listScrollH": 338
+   },
+   "timelineIntervalsClosed": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 495,
+    "timelineContentBottom": 489,
+    "eventColBottom": 495,
+    "blankUnderTimeline": 6,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 168,
+    "listScrollH": 168
+   },
+   "sun": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 2699,
+    "statsCardBottom": 2699,
+    "statsContentBottom": 2699,
+    "chartContentBottom": 2657,
+    "blankUnderChart": 42,
+    "blankInsideStats": 0,
+    "statsH": 376,
+    "chartColH": 376,
+    "clippedLabels": 0
+   },
+   "hscroll": false,
+   "outside": 0,
+   "clipped": 0,
+   "checks": {
+    "tlOk": false,
+    "toggleOk": false,
+    "sunOk": true,
+    "layoutOk": true
+   },
+   "verdict": "Fail"
+  },
+  {
+   "result": "A-events",
+   "width": 1440,
+   "timeline": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 103,
+    "timelineContentBottom": 97,
+    "eventColBottom": 103,
+    "blankUnderTimeline": 6,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 168,
+    "listScrollH": 168
+   },
+   "timelineIntervalsOpen": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 348,
+    "timelineContentBottom": 348,
+    "eventColBottom": 348,
+    "blankUnderTimeline": 0,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 413,
+    "listScrollH": 413
+   },
+   "timelineIntervalsClosed": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 495,
+    "timelineContentBottom": 489,
+    "eventColBottom": 495,
+    "blankUnderTimeline": 6,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 168,
+    "listScrollH": 168
+   },
+   "sun": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 595,
+    "statsCardBottom": 595,
+    "statsContentBottom": 595,
+    "chartContentBottom": 570,
+    "blankUnderChart": 25,
+    "blankInsideStats": 0,
+    "statsH": 376,
+    "chartColH": 376,
+    "clippedLabels": 0
+   },
+   "hscroll": false,
+   "outside": 0,
+   "clipped": 0,
+   "checks": {
+    "tlOk": false,
+    "toggleOk": false,
+    "sunOk": true,
+    "layoutOk": true
+   },
+   "verdict": "Fail"
+  },
+  {
+   "result": "A-events",
+   "width": 1024,
+   "timeline": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 329,
+    "timelineContentBottom": 96,
+    "eventColBottom": 329,
+    "blankUnderTimeline": 233,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 139,
+    "listScrollH": 139
+   },
+   "timelineIntervalsOpen": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 499,
+    "timelineContentBottom": 272,
+    "eventColBottom": 499,
+    "blankUnderTimeline": 227,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 139,
+    "listScrollH": 139
+   },
+   "timelineIntervalsClosed": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 722,
+    "timelineContentBottom": 489,
+    "eventColBottom": 722,
+    "blankUnderTimeline": 233,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 139,
+    "listScrollH": 139
+   },
+   "sun": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 822,
+    "statsCardBottom": 822,
+    "statsContentBottom": 822,
+    "chartContentBottom": 797,
+    "blankUnderChart": 25,
+    "blankInsideStats": 0,
+    "statsH": 376,
+    "chartColH": 376,
+    "clippedLabels": 0
+   },
+   "hscroll": false,
+   "outside": 0,
+   "clipped": 0,
+   "checks": {
+    "tlOk": true,
+    "toggleOk": false,
+    "sunOk": true,
+    "layoutOk": true
+   },
+   "verdict": "Fail"
+  },
+  {
+   "result": "A-events",
+   "width": 390,
+   "timeline": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 4456,
+    "timelineContentBottom": 4188,
+    "eventColBottom": 4456,
+    "blankUnderTimeline": 268,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 139,
+    "listScrollH": 139
+   },
+   "timelineIntervalsOpen": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 4796,
+    "timelineContentBottom": 4607,
+    "eventColBottom": 4796,
+    "blankUnderTimeline": 190,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 139,
+    "listScrollH": 139
+   },
+   "timelineIntervalsClosed": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 4456,
+    "timelineContentBottom": 4188,
+    "eventColBottom": 4456,
+    "blankUnderTimeline": 268,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 139,
+    "listScrollH": 139
+   },
+   "sun": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 5429,
+    "statsCardBottom": 4957,
+    "statsContentBottom": 4957,
+    "chartContentBottom": 5429,
+    "blankUnderChart": 0,
+    "blankInsideStats": 0,
+    "statsH": 390,
+    "chartColH": 456,
+    "clippedLabels": 0
+   },
+   "hscroll": false,
+   "outside": 0,
+   "clipped": 0,
+   "checks": {
+    "tlOk": true,
+    "toggleOk": true,
+    "sunOk": true,
+    "layoutOk": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "result": "A-events",
+   "width": 320,
+   "timeline": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 4986,
+    "timelineContentBottom": 4701,
+    "eventColBottom": 4986,
+    "blankUnderTimeline": 285,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 156,
+    "listScrollH": 156
+   },
+   "timelineIntervalsOpen": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 5326,
+    "timelineContentBottom": 5119,
+    "eventColBottom": 5326,
+    "blankUnderTimeline": 207,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 156,
+    "listScrollH": 156
+   },
+   "timelineIntervalsClosed": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 4986,
+    "timelineContentBottom": 4701,
+    "eventColBottom": 4986,
+    "blankUnderTimeline": 285,
+    "blankUnderEvents": 0,
+    "events": 3,
+    "listVisibleH": 156,
+    "listScrollH": 156
+   },
+   "sun": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 6044,
+    "statsCardBottom": 5581,
+    "statsContentBottom": 5581,
+    "chartContentBottom": 6044,
+    "blankUnderChart": 0,
+    "blankInsideStats": 0,
+    "statsH": 454,
+    "chartColH": 447,
+    "clippedLabels": 0
+   },
+   "hscroll": false,
+   "outside": 0,
+   "clipped": 0,
+   "checks": {
+    "tlOk": true,
+    "toggleOk": true,
+    "sunOk": true,
+    "layoutOk": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "result": "B-site01",
+   "width": 1920,
+   "timeline": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 354,
+    "timelineContentBottom": 348,
+    "eventColBottom": 354,
+    "blankUnderTimeline": 6,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "timelineIntervalsOpen": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 490,
+    "timelineContentBottom": 490,
+    "eventColBottom": 490,
+    "blankUnderTimeline": 0,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "timelineIntervalsClosed": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 495,
+    "timelineContentBottom": 489,
+    "eventColBottom": 495,
+    "blankUnderTimeline": 6,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "sun": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 847,
+    "statsCardBottom": 847,
+    "statsContentBottom": 847,
+    "chartContentBottom": 804,
+    "blankUnderChart": 42,
+    "blankInsideStats": 0,
+    "statsH": 376,
+    "chartColH": 376,
+    "clippedLabels": 0
+   },
+   "hscroll": false,
+   "outside": 0,
+   "clipped": 0,
+   "checks": {
+    "tlOk": true,
+    "toggleOk": false,
+    "sunOk": true,
+    "layoutOk": true
+   },
+   "verdict": "Fail"
+  },
+  {
+   "result": "B-site01",
+   "width": 1440,
+   "timeline": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 103,
+    "timelineContentBottom": 97,
+    "eventColBottom": 103,
+    "blankUnderTimeline": 6,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "timelineIntervalsOpen": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 295,
+    "timelineContentBottom": 295,
+    "eventColBottom": 295,
+    "blankUnderTimeline": 0,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "timelineIntervalsClosed": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 495,
+    "timelineContentBottom": 489,
+    "eventColBottom": 495,
+    "blankUnderTimeline": 6,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "sun": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 595,
+    "statsCardBottom": 595,
+    "statsContentBottom": 595,
+    "chartContentBottom": 571,
+    "blankUnderChart": 25,
+    "blankInsideStats": 0,
+    "statsH": 376,
+    "chartColH": 376,
+    "clippedLabels": 0
+   },
+   "hscroll": false,
+   "outside": 0,
+   "clipped": 0,
+   "checks": {
+    "tlOk": true,
+    "toggleOk": false,
+    "sunOk": true,
+    "layoutOk": true
+   },
+   "verdict": "Fail"
+  },
+  {
+   "result": "B-site01",
+   "width": 1024,
+   "timeline": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 137,
+    "timelineContentBottom": 98,
+    "eventColBottom": 137,
+    "blankUnderTimeline": 39,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "timelineIntervalsOpen": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 273,
+    "timelineContentBottom": 240,
+    "eventColBottom": 273,
+    "blankUnderTimeline": 33,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "timelineIntervalsClosed": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 528,
+    "timelineContentBottom": 489,
+    "eventColBottom": 528,
+    "blankUnderTimeline": 39,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "sun": {
+    "twoCol": true,
+    "sectionSlack": 0,
+    "gridBottom": 630,
+    "statsCardBottom": 630,
+    "statsContentBottom": 630,
+    "chartContentBottom": 605,
+    "blankUnderChart": 25,
+    "blankInsideStats": 0,
+    "statsH": 376,
+    "chartColH": 376,
+    "clippedLabels": 0
+   },
+   "hscroll": false,
+   "outside": 0,
+   "clipped": 0,
+   "checks": {
+    "tlOk": true,
+    "toggleOk": false,
+    "sunOk": true,
+    "layoutOk": true
+   },
+   "verdict": "Fail"
+  },
+  {
+   "result": "B-site01",
+   "width": 390,
+   "timeline": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 4271,
+    "timelineContentBottom": 4232,
+    "eventColBottom": 4271,
+    "blankUnderTimeline": 39,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "timelineIntervalsOpen": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 4594,
+    "timelineContentBottom": 4561,
+    "eventColBottom": 4594,
+    "blankUnderTimeline": 33,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "timelineIntervalsClosed": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 4271,
+    "timelineContentBottom": 4232,
+    "eventColBottom": 4271,
+    "blankUnderTimeline": 39,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "sun": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 5244,
+    "statsCardBottom": 4772,
+    "statsContentBottom": 4772,
+    "chartContentBottom": 5244,
+    "blankUnderChart": 0,
+    "blankInsideStats": 0,
+    "statsH": 390,
+    "chartColH": 456,
+    "clippedLabels": 0
+   },
+   "hscroll": false,
+   "outside": 0,
+   "clipped": 0,
+   "checks": {
+    "tlOk": true,
+    "toggleOk": true,
+    "sunOk": true,
+    "layoutOk": true
+   },
+   "verdict": "Pass"
+  },
+  {
+   "result": "B-site01",
+   "width": 320,
+   "timeline": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 4800,
+    "timelineContentBottom": 4760,
+    "eventColBottom": 4800,
+    "blankUnderTimeline": 39,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "timelineIntervalsOpen": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 5123,
+    "timelineContentBottom": 5089,
+    "eventColBottom": 5123,
+    "blankUnderTimeline": 33,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "timelineIntervalsClosed": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 4800,
+    "timelineContentBottom": 4760,
+    "eventColBottom": 4800,
+    "blankUnderTimeline": 39,
+    "blankUnderEvents": 0,
+    "events": 0,
+    "listVisibleH": null,
+    "listScrollH": null
+   },
+   "sun": {
+    "twoCol": false,
+    "sectionSlack": 0,
+    "gridBottom": 5857,
+    "statsCardBottom": 5394,
+    "statsContentBottom": 5394,
+    "chartContentBottom": 5857,
+    "blankUnderChart": 0,
+    "blankInsideStats": 0,
+    "statsH": 454,
+    "chartColH": 447,
+    "clippedLabels": 0
+   },
+   "hscroll": false,
+   "outside": 0,
+   "clipped": 0,
+   "checks": {
+    "tlOk": true,
+    "toggleOk": true,
+    "sunOk": true,
+    "layoutOk": true
+   },
+   "verdict": "Pass"
+  }
+ ],
+ "console": [],
+ "summary": {
+  "pass": 4,
+  "total": 10,
+  "consoleErrors": 0
+ }
+}

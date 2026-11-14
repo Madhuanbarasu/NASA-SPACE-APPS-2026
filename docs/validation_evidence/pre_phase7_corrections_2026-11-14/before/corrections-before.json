@@ -1,0 +1,1857 @@
+{
+ "label": "before",
+ "base": "http://127.0.0.1:8000",
+ "started": "2026-11-14T01:05:23.051Z",
+ "aud01": [
+  {
+   "name": "valid Site01",
+   "lat": "-89.463163",
+   "lon": "222.510447",
+   "expect": "valid",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "-89.463163",
+   "lonValue": "222.510447",
+   "hint": "Terrain coverage: 5m, 20m, 80m, 240m LOLA levels.",
+   "hintClass": "hint good",
+   "analyseDisabled": false,
+   "addToCompareDisabled": false,
+   "coverageRequests": [
+    {
+     "url": "/api/coverage?lat=-89.463163&lon=222.510447",
+     "status": 200,
+     "failed": null
+    }
+   ],
+   "newConsole": []
+  },
+  {
+   "name": "latitude -95",
+   "lat": "-95",
+   "lon": "222.510447",
+   "expect": "invalid",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "-95",
+   "lonValue": "222.510447",
+   "hint": "Latitude -95.0 is outside -90 to 90 degrees.",
+   "hintClass": "hint bad",
+   "analyseDisabled": true,
+   "addToCompareDisabled": false,
+   "coverageRequests": [
+    {
+     "url": "/api/coverage?lat=-95&lon=222.510447",
+     "status": 422,
+     "failed": null
+    }
+   ],
+   "newConsole": [
+    {
+     "type": "log-error",
+     "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+    }
+   ]
+  },
+  {
+   "name": "latitude 95",
+   "lat": "95",
+   "lon": "222.510447",
+   "expect": "invalid",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "95",
+   "lonValue": "222.510447",
+   "hint": "Latitude 95.0 is outside -90 to 90 degrees.",
+   "hintClass": "hint bad",
+   "analyseDisabled": true,
+   "addToCompareDisabled": false,
+   "coverageRequests": [
+    {
+     "url": "/api/coverage?lat=95&lon=222.510447",
+     "status": 422,
+     "failed": null
+    }
+   ],
+   "newConsole": [
+    {
+     "type": "log-error",
+     "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+    }
+   ]
+  },
+  {
+   "name": "latitude -90.0001",
+   "lat": "-90.0001",
+   "lon": "0",
+   "expect": "invalid",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "-90.0001",
+   "lonValue": "0",
+   "hint": "Latitude -90.0001 is outside -90 to 90 degrees.",
+   "hintClass": "hint bad",
+   "analyseDisabled": true,
+   "addToCompareDisabled": false,
+   "coverageRequests": [
+    {
+     "url": "/api/coverage?lat=-90.0001&lon=0",
+     "status": 422,
+     "failed": null
+    }
+   ],
+   "newConsole": [
+    {
+     "type": "log-error",
+     "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+    }
+   ]
+  },
+  {
+   "name": "latitude -90 (edge)",
+   "lat": "-90",
+   "lon": "0",
+   "expect": "valid",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "-90",
+   "lonValue": "0",
+   "hint": "Terrain coverage: 20m, 80m, 240m LOLA levels.",
+   "hintClass": "hint good",
+   "analyseDisabled": false,
+   "addToCompareDisabled": false,
+   "coverageRequests": [
+    {
+     "url": "/api/coverage?lat=-90&lon=0",
+     "status": 200,
+     "failed": null
+    }
+   ],
+   "newConsole": []
+  },
+  {
+   "name": "longitude 400",
+   "lat": "-89.463163",
+   "lon": "400",
+   "expect": "invalid",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "-89.463163",
+   "lonValue": "400",
+   "hint": "Longitude 400.0 is outside -360 to 360 degrees.",
+   "hintClass": "hint bad",
+   "analyseDisabled": true,
+   "addToCompareDisabled": false,
+   "coverageRequests": [
+    {
+     "url": "/api/coverage?lat=-89.463163&lon=400",
+     "status": 422,
+     "failed": null
+    }
+   ],
+   "newConsole": [
+    {
+     "type": "log-error",
+     "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+    }
+   ]
+  },
+  {
+   "name": "longitude -361",
+   "lat": "-89.463163",
+   "lon": "-361",
+   "expect": "invalid",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "-89.463163",
+   "lonValue": "-361",
+   "hint": "Longitude -361.0 is outside -360 to 360 degrees.",
+   "hintClass": "hint bad",
+   "analyseDisabled": true,
+   "addToCompareDisabled": false,
+   "coverageRequests": [
+    {
+     "url": "/api/coverage?lat=-89.463163&lon=-361",
+     "status": 422,
+     "failed": null
+    }
+   ],
+   "newConsole": [
+    {
+     "type": "log-error",
+     "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+    }
+   ]
+  },
+  {
+   "name": "longitude 360 (edge)",
+   "lat": "-85",
+   "lon": "360",
+   "expect": "valid",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "-85",
+   "lonValue": "360",
+   "hint": "Terrain coverage: 20m, 80m, 240m LOLA levels.",
+   "hintClass": "hint good",
+   "analyseDisabled": false,
+   "addToCompareDisabled": false,
+   "coverageRequests": [
+    {
+     "url": "/api/coverage?lat=-85&lon=360",
+     "status": 200,
+     "failed": null
+    }
+   ],
+   "newConsole": []
+  },
+  {
+   "name": "longitude -10 (west, accepted)",
+   "lat": "-85",
+   "lon": "-10",
+   "expect": "valid",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "-85",
+   "lonValue": "-10",
+   "hint": "Terrain coverage: 20m, 80m, 240m LOLA levels.",
+   "hintClass": "hint good",
+   "analyseDisabled": false,
+   "addToCompareDisabled": false,
+   "coverageRequests": [
+    {
+     "url": "/api/coverage?lat=-85&lon=-10",
+     "status": 200,
+     "failed": null
+    }
+   ],
+   "newConsole": []
+  },
+  {
+   "name": "latitude not a number",
+   "lat": "abc",
+   "lon": "222.510447",
+   "expect": "invalid",
+   "latInvalid": "true",
+   "lonInvalid": null,
+   "latValue": "abc",
+   "lonValue": "222.510447",
+   "hint": "Latitude and longitude must be numbers in degrees, for example -89.5 and 222.5.",
+   "hintClass": "hint bad",
+   "analyseDisabled": true,
+   "addToCompareDisabled": true,
+   "coverageRequests": [],
+   "newConsole": []
+  },
+  {
+   "name": "latitude empty",
+   "lat": "",
+   "lon": "222.510447",
+   "expect": "empty",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "",
+   "lonValue": "222.510447",
+   "hint": "Pick a curated site, click the map, or type planetocentric coordinates.",
+   "hintClass": "hint ",
+   "analyseDisabled": true,
+   "addToCompareDisabled": true,
+   "coverageRequests": [],
+   "newConsole": []
+  },
+  {
+   "name": "valid again (Site01)",
+   "lat": "-89.463163",
+   "lon": "222.510447",
+   "expect": "valid",
+   "latInvalid": null,
+   "lonInvalid": null,
+   "latValue": "-89.463163",
+   "lonValue": "222.510447",
+   "hint": "Terrain coverage: 5m, 20m, 80m, 240m LOLA levels.",
+   "hintClass": "hint good",
+   "analyseDisabled": false,
+   "addToCompareDisabled": false,
+   "coverageRequests": [
+    {
+     "url": "/api/coverage?lat=-89.463163&lon=222.510447",
+     "status": 200,
+     "failed": null
+    }
+   ],
+   "newConsole": []
+  }
+ ],
+ "analysis": {
+  "ok": true,
+  "ms": 10400,
+  "figures": [
+   "Sunlight 55.5%",
+   "Direct-to-Earth 18.3%",
+   "Operational overlap 1.4%",
+   "Power indicator 0.539"
+  ],
+  "labels": [
+   "Disk visibility: Geometric, pending validation",
+   "Events: Geometric, pending validation",
+   "Horizon: Geometric, pending validation",
+   "Power indicator: Estimated, pending validation",
+   "Sun and Earth positions: Geometric, validated"
+  ]
+ },
+ "landing": {
+  "320": {
+   "cards": {
+    "site": {
+     "top": 429,
+     "h": 848,
+     "left": 16,
+     "w": 288,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "map": {
+     "top": 1293,
+     "h": 1036,
+     "left": 16,
+     "w": 288,
+     "blankBelow": 14,
+     "emptyInsideBelowContent": 1
+    },
+    "footprint": {
+     "top": 2342,
+     "h": 1927,
+     "left": 16,
+     "w": 288,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "terrain": {
+     "top": 4285,
+     "h": 999,
+     "left": 16,
+     "w": 288,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "candidates": {
+     "top": 5300,
+     "h": 678,
+     "left": 16,
+     "w": 288,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "provenance": {
+     "top": 5994,
+     "h": 2619,
+     "left": 16,
+     "w": 288,
+     "blankBelow": null,
+     "emptyInsideBelowContent": 1
+    }
+   },
+   "cols": [],
+   "overlaps": [],
+   "outside": 375,
+   "mapPaneH": 300,
+   "twoColumn": false,
+   "hscroll": false
+  },
+  "390": {
+   "cards": {
+    "site": {
+     "top": 375,
+     "h": 784,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "map": {
+     "top": 1175,
+     "h": 996,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 14,
+     "emptyInsideBelowContent": 1
+    },
+    "footprint": {
+     "top": 2185,
+     "h": 1711,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "terrain": {
+     "top": 3912,
+     "h": 946,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "candidates": {
+     "top": 4874,
+     "h": 626,
+     "left": 16,
+     "w": 358,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "provenance": {
+     "top": 5516,
+     "h": 2207,
+     "left": 16,
+     "w": 358,
+     "blankBelow": null,
+     "emptyInsideBelowContent": 1
+    }
+   },
+   "cols": [],
+   "overlaps": [],
+   "outside": 319,
+   "mapPaneH": 359,
+   "twoColumn": false,
+   "hscroll": false
+  },
+  "1024": {
+   "cards": {
+    "site": {
+     "top": 274,
+     "h": 491,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "map": {
+     "top": 781,
+     "h": 821,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 14,
+     "emptyInsideBelowContent": 1
+    },
+    "footprint": {
+     "top": 1615,
+     "h": 1200,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "terrain": {
+     "top": 2831,
+     "h": 860,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "candidates": {
+     "top": 3707,
+     "h": 539,
+     "left": 24,
+     "w": 976,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "provenance": {
+     "top": 4262,
+     "h": 1014,
+     "left": 24,
+     "w": 976,
+     "blankBelow": null,
+     "emptyInsideBelowContent": 1
+    }
+   },
+   "cols": [],
+   "overlaps": [],
+   "outside": 0,
+   "mapPaneH": 445,
+   "twoColumn": false,
+   "hscroll": false
+  },
+  "1280": {
+   "cards": {
+    "site": {
+     "top": 274,
+     "h": 784,
+     "left": 364,
+     "w": 365,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "footprint": {
+     "top": 1074,
+     "h": 1658,
+     "left": 364,
+     "w": 365,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "map": {
+     "top": 274,
+     "h": 1531,
+     "left": 745,
+     "w": 511,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "terrain": {
+     "top": 1821,
+     "h": 912,
+     "left": 745,
+     "w": 511,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "candidates": {
+     "top": 2748,
+     "h": 557,
+     "left": 364,
+     "w": 892,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "provenance": {
+     "top": 3321,
+     "h": 1127,
+     "left": 364,
+     "w": 892,
+     "blankBelow": null,
+     "emptyInsideBelowContent": 1
+    }
+   },
+   "cols": [
+    {
+     "cls": "landing-col",
+     "top": 274,
+     "bottom": 2732,
+     "lastCardBottom": 2732,
+     "spaceBelowLastCard": 0
+    },
+    {
+     "cls": "landing-col landing-col-map",
+     "top": 274,
+     "bottom": 2732,
+     "lastCardBottom": 2732,
+     "spaceBelowLastCard": 0
+    }
+   ],
+   "overlaps": [],
+   "outside": 37,
+   "mapPaneH": 981,
+   "twoColumn": true,
+   "hscroll": false
+  },
+  "1440": {
+   "cards": {
+    "site": {
+     "top": 274,
+     "h": 625,
+     "left": 364,
+     "w": 432,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "footprint": {
+     "top": 915,
+     "h": 1451,
+     "left": 364,
+     "w": 432,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "map": {
+     "top": 274,
+     "h": 1182,
+     "left": 812,
+     "w": 604,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "terrain": {
+     "top": 1472,
+     "h": 894,
+     "left": 812,
+     "w": 604,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "candidates": {
+     "top": 2382,
+     "h": 539,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "provenance": {
+     "top": 2937,
+     "h": 961,
+     "left": 364,
+     "w": 1052,
+     "blankBelow": null,
+     "emptyInsideBelowContent": 1
+    }
+   },
+   "cols": [
+    {
+     "cls": "landing-col",
+     "top": 274,
+     "bottom": 2366,
+     "lastCardBottom": 2366,
+     "spaceBelowLastCard": 0
+    },
+    {
+     "cls": "landing-col landing-col-map",
+     "top": 274,
+     "bottom": 2366,
+     "lastCardBottom": 2366,
+     "spaceBelowLastCard": 0
+    }
+   ],
+   "overlaps": [],
+   "outside": 32,
+   "mapPaneH": 704,
+   "twoColumn": true,
+   "hscroll": false
+  },
+  "1600": {
+   "cards": {
+    "site": {
+     "top": 255,
+     "h": 608,
+     "left": 364,
+     "w": 498,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "footprint": {
+     "top": 879,
+     "h": 1334,
+     "left": 364,
+     "w": 498,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "map": {
+     "top": 255,
+     "h": 1065,
+     "left": 878,
+     "w": 698,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "terrain": {
+     "top": 1335,
+     "h": 877,
+     "left": 878,
+     "w": 698,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "candidates": {
+     "top": 2228,
+     "h": 539,
+     "left": 364,
+     "w": 1212,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "provenance": {
+     "top": 2783,
+     "h": 887,
+     "left": 364,
+     "w": 1212,
+     "blankBelow": null,
+     "emptyInsideBelowContent": 1
+    }
+   },
+   "cols": [
+    {
+     "cls": "landing-col",
+     "top": 255,
+     "bottom": 2212,
+     "lastCardBottom": 2212,
+     "spaceBelowLastCard": 0
+    },
+    {
+     "cls": "landing-col landing-col-map",
+     "top": 255,
+     "bottom": 2212,
+     "lastCardBottom": 2212,
+     "spaceBelowLastCard": 0
+    }
+   ],
+   "overlaps": [],
+   "outside": 0,
+   "mapPaneH": 627,
+   "twoColumn": true,
+   "hscroll": false
+  },
+  "1920": {
+   "cards": {
+    "site": {
+     "top": 255,
+     "h": 590,
+     "left": 364,
+     "w": 632,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "footprint": {
+     "top": 861,
+     "h": 1252,
+     "left": 364,
+     "w": 632,
+     "blankBelow": 76,
+     "emptyInsideBelowContent": 1
+    },
+    "map": {
+     "top": 255,
+     "h": 1025,
+     "left": 1012,
+     "w": 884,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "terrain": {
+     "top": 1296,
+     "h": 877,
+     "left": 1012,
+     "w": 884,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "candidates": {
+     "top": 2189,
+     "h": 522,
+     "left": 364,
+     "w": 1532,
+     "blankBelow": 16,
+     "emptyInsideBelowContent": 1
+    },
+    "provenance": {
+     "top": 2726,
+     "h": 793,
+     "left": 364,
+     "w": 1532,
+     "blankBelow": null,
+     "emptyInsideBelowContent": 1
+    }
+   },
+   "cols": [
+    {
+     "cls": "landing-col",
+     "top": 255,
+     "bottom": 2173,
+     "lastCardBottom": 2113,
+     "spaceBelowLastCard": 60
+    },
+    {
+     "cls": "landing-col landing-col-map",
+     "top": 255,
+     "bottom": 2173,
+     "lastCardBottom": 2173,
+     "spaceBelowLastCard": 0
+    }
+   ],
+   "overlaps": [],
+   "outside": 0,
+   "mapPaneH": 620,
+   "twoColumn": true,
+   "hscroll": false
+  },
+  "runMs": 1251,
+  "assessment": {
+   "id": "d83ff9d8877b9c896f57",
+   "extent_xy_m": [
+    -12500,
+    -13500,
+    -9495,
+    -10495
+   ],
+   "config": {
+    "lat": -89.463163,
+    "lon": 222.510447,
+    "window_half_m": 1500,
+    "product": "5m:Site01_final_adj_5mpp_surf.tif",
+    "roughness_baseline_m": null,
+    "roughness_window_px": 5,
+    "min_depth_m": 1,
+    "min_diameter_m": null,
+    "max_diameter_m": null,
+    "window_half_m_used": 1500
+   }
+  }
+ },
+ "aud05": {
+  "hostRect": {
+   "x": 1028.65625,
+   "y": 285.59375,
+   "width": 850.34375,
+   "height": 620
+  },
+  "defaultOpacity": "0.85",
+  "defaultRaster": "slope",
+  "tileMeta": {
+   "available": true,
+   "extent": [
+    -931200,
+    -931200,
+    931200,
+    931200
+   ],
+   "origin": [
+    -931200,
+    931200
+   ],
+   "resolutions": [
+    7275,
+    3637.5,
+    1818.75,
+    909.375,
+    454.6875,
+    227.34375,
+    113.671875,
+    56.8359375,
+    28.41796875,
+    14.208984375,
+    7.1044921875,
+    3.55224609375,
+    1.776123046875
+   ],
+   "tile_size": 256,
+   "proj4": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +k=1 +x_0=0 +y_0=0 +R=1737400 +units=m +no_defs",
+   "code": "LUNAOPS:SPS",
+   "levels": [
+    {
+     "level": "5m",
+     "product": "PGDA 78: High-Resolution LOLA Topography for Lunar South Pole Sites (one LDEM per site)",
+     "synthetic": false
+    },
+    {
+     "level": "20m",
+     "product": "PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_20MPP_ADJ",
+     "synthetic": false
+    },
+    {
+     "level": "80m",
+     "product": "PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_80S_80MPP_ADJ",
+     "synthetic": false
+    },
+    {
+     "level": "240m",
+     "product": "PGDA 90: A New View of the Lunar South Pole from LOLA - LDEM_60S_240MPP_ADJ",
+     "synthetic": false
+    }
+   ],
+   "note": "Cartographic hillshade from LOLA heights (fixed light direction); not the lunar Sun."
+  },
+  "shots": [
+   {
+    "name": "aud05-slope-default-t0",
+    "t": 59672,
+    "rect": {
+     "x": 1028.65625,
+     "y": 285.59375,
+     "width": 850.34375,
+     "height": 620
+    }
+   },
+   {
+    "name": "aud05-slope-default-t15s",
+    "t": 74937,
+    "rect": {
+     "x": 1028.65625,
+     "y": 285.59375,
+     "width": 850.34375,
+     "height": 620
+    }
+   },
+   {
+    "name": "aud05-none-t2s",
+    "t": 77652,
+    "rect": {
+     "x": 1028.65625,
+     "y": 285.59375,
+     "width": 850.34375,
+     "height": 626.859375
+    }
+   },
+   {
+    "name": "aud05-none-t22s",
+    "t": 98093,
+    "rect": {
+     "x": 1028.65625,
+     "y": 285.59375,
+     "width": 850.34375,
+     "height": 626.859375
+    }
+   },
+   {
+    "name": "aud05-slope-opacity100",
+    "t": 100449,
+    "rect": {
+     "x": 1028.65625,
+     "y": 285.59375,
+     "width": 850.34375,
+     "height": 620
+    }
+   },
+   {
+    "name": "aud05-slope-opacity20",
+    "t": 102428,
+    "rect": {
+     "x": 1028.65625,
+     "y": 285.59375,
+     "width": 850.34375,
+     "height": 620
+    }
+   },
+   {
+    "name": "aud05-coverage-opacity100",
+    "t": 105048,
+    "rect": {
+     "x": 1028.65625,
+     "y": 285.59375,
+     "width": 850.34375,
+     "height": 620
+    }
+   },
+   {
+    "name": "aud05-elevation-opacity100",
+    "t": 107633,
+    "rect": {
+     "x": 1028.65625,
+     "y": 285.59375,
+     "width": 850.34375,
+     "height": 620
+    }
+   }
+  ],
+  "tileRequests": [
+   {
+    "url": "/api/tiles/2/2/2.png",
+    "t": 666,
+    "done": 1250,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/2/1.png",
+    "t": 666,
+    "done": 1251,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/1/1.png",
+    "t": 666,
+    "done": 1256,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/1/2.png",
+    "t": 667,
+    "done": 3222,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/2/0.png",
+    "t": 667,
+    "done": 1252,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/1/3.png",
+    "t": 667,
+    "done": 1250,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/3/2.png",
+    "t": 668,
+    "done": 1435,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/0/1.png",
+    "t": 668,
+    "done": 1433,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/1/0.png",
+    "t": 668,
+    "done": 1442,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/2/3.png",
+    "t": 669,
+    "done": 1429,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/0/2.png",
+    "t": 669,
+    "done": 1430,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/3/1.png",
+    "t": 669,
+    "done": 1582,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/3/3.png",
+    "t": 670,
+    "done": 1586,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/0/3.png",
+    "t": 671,
+    "done": 1572,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/0/0.png",
+    "t": 671,
+    "done": 1582,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/2/3/0.png",
+    "t": 671,
+    "done": 1589,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/32.png",
+    "t": 1677,
+    "done": 2735,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/32.png",
+    "t": 1677,
+    "done": 2068,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/31.png",
+    "t": 1694,
+    "done": 2067,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/31.png",
+    "t": 1695,
+    "done": 2203,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/33.png",
+    "t": 1710,
+    "done": 2205,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/32.png",
+    "t": 1711,
+    "done": 2386,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/33.png",
+    "t": 1728,
+    "done": 2414,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/31.png",
+    "t": 1981,
+    "done": 2522,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/33.png",
+    "t": 1981,
+    "done": 2552,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/34/29.png",
+    "t": 4194,
+    "done": 4840,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/35/29.png",
+    "t": 4195,
+    "done": 4841,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/34/28.png",
+    "t": 4217,
+    "done": 4969,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/35/28.png",
+    "t": 4218,
+    "done": 5055,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/36/29.png",
+    "t": 4238,
+    "done": 4840,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/34/27.png",
+    "t": 4239,
+    "done": 4966,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/33/32.png",
+    "t": 4250,
+    "done": 5393,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/30.png",
+    "t": 4251,
+    "done": 5343,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/35/27.png",
+    "t": 4512,
+    "done": 5369,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/36/28.png",
+    "t": 4512,
+    "done": 5371,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/36/27.png",
+    "t": 4512,
+    "done": 5527,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/35/26.png",
+    "t": 4512,
+    "done": 5578,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/36/26.png",
+    "t": 4512,
+    "done": 5574,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/34/26.png",
+    "t": 4513,
+    "done": 5620,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/33/30.png",
+    "t": 7439,
+    "done": 7878,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/30.png",
+    "t": 7440,
+    "done": 7876,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/33/31.png",
+    "t": 7448,
+    "done": 7911,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/30.png",
+    "t": 7449,
+    "done": 7908,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/33/33.png",
+    "t": 7466,
+    "done": 8008,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/33/28.png",
+    "t": 7509,
+    "done": 8003,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/33/29.png",
+    "t": 7509,
+    "done": 8098,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/33/27.png",
+    "t": 7526,
+    "done": 8119,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/27.png",
+    "t": 14836,
+    "done": 15408,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/27.png",
+    "t": 14837,
+    "done": 15383,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/27.png",
+    "t": 14849,
+    "done": 15401,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/26.png",
+    "t": 14849,
+    "done": 15407,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/26.png",
+    "t": 14863,
+    "done": 15514,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/26.png",
+    "t": 14864,
+    "done": 15512,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/33/26.png",
+    "t": 14878,
+    "done": 15843,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/25.png",
+    "t": 14878,
+    "done": 15845,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/25.png",
+    "t": 15160,
+    "done": 15842,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/25.png",
+    "t": 15161,
+    "done": 15871,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/33/25.png",
+    "t": 15161,
+    "done": 15940,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/28.png",
+    "t": 17366,
+    "done": 17946,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/28.png",
+    "t": 17366,
+    "done": 17806,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/28.png",
+    "t": 17384,
+    "done": 17987,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/29/26.png",
+    "t": 17385,
+    "done": 17945,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/29/27.png",
+    "t": 17395,
+    "done": 17987,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/29/25.png",
+    "t": 17396,
+    "done": 17987,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/29/28.png",
+    "t": 17415,
+    "done": 18096,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/29.png",
+    "t": 23213,
+    "done": 23470,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/29.png",
+    "t": 23213,
+    "done": 23452,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/29.png",
+    "t": 23230,
+    "done": 23473,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/34/30.png",
+    "t": 25981,
+    "done": 26199,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/34/31.png",
+    "t": 25981,
+    "done": 26204,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/35/30.png",
+    "t": 26026,
+    "done": 26262,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/34/32.png",
+    "t": 27860,
+    "done": 28023,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/32.png",
+    "t": 39897,
+    "done": 39903,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/32.png",
+    "t": 39898,
+    "done": 39903,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/31.png",
+    "t": 39898,
+    "done": 39903,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/31/33.png",
+    "t": 39898,
+    "done": 39903,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/32.png",
+    "t": 39898,
+    "done": 39903,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/31.png",
+    "t": 39898,
+    "done": 39903,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/32/33.png",
+    "t": 39899,
+    "done": 39904,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/31.png",
+    "t": 39899,
+    "done": 39904,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/6/30/33.png",
+    "t": 39899,
+    "done": 39904,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/505/518.png",
+    "t": 42581,
+    "done": 43029,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/506/518.png",
+    "t": 42581,
+    "done": 43036,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/505/519.png",
+    "t": 42581,
+    "done": 43036,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/506/519.png",
+    "t": 42581,
+    "done": 43036,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/505/517.png",
+    "t": 42581,
+    "done": 43009,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/506/517.png",
+    "t": 42581,
+    "done": 43371,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/504/518.png",
+    "t": 42677,
+    "done": 43393,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/507/518.png",
+    "t": 42677,
+    "done": 43394,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/504/519.png",
+    "t": 42678,
+    "done": 43392,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/507/519.png",
+    "t": 42678,
+    "done": 43392,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/504/517.png",
+    "t": 42678,
+    "done": 43407,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/507/517.png",
+    "t": 42678,
+    "done": 43505,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/505/520.png",
+    "t": 49314,
+    "done": 49479,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/10/506/520.png",
+    "t": 49314,
+    "done": 49466,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1011/1037.png",
+    "t": 57792,
+    "done": 58116,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1012/1037.png",
+    "t": 57792,
+    "done": 58089,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1011/1036.png",
+    "t": 57793,
+    "done": 58090,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1012/1036.png",
+    "t": 57793,
+    "done": 58116,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1011/1038.png",
+    "t": 57794,
+    "done": 58138,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1012/1038.png",
+    "t": 57794,
+    "done": 58115,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1010/1037.png",
+    "t": 57794,
+    "done": 58311,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1010/1036.png",
+    "t": 57795,
+    "done": 58314,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1013/1037.png",
+    "t": 57795,
+    "done": 58404,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1013/1036.png",
+    "t": 57796,
+    "done": 58411,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1011/1035.png",
+    "t": 57796,
+    "done": 58406,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1012/1035.png",
+    "t": 57796,
+    "done": 58387,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1010/1038.png",
+    "t": 57797,
+    "done": 58623,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1013/1038.png",
+    "t": 57797,
+    "done": 58451,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1010/1035.png",
+    "t": 57797,
+    "done": 58606,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1013/1035.png",
+    "t": 57798,
+    "done": 58628,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1009/1037.png",
+    "t": 58093,
+    "done": 58622,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1009/1036.png",
+    "t": 58093,
+    "done": 58627,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1014/1037.png",
+    "t": 58128,
+    "done": 58779,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1014/1036.png",
+    "t": 58128,
+    "done": 58778,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1009/1038.png",
+    "t": 58128,
+    "done": 58844,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1014/1038.png",
+    "t": 58143,
+    "done": 58822,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1009/1035.png",
+    "t": 58327,
+    "done": 58819,
+    "status": 200,
+    "failed": null
+   },
+   {
+    "url": "/api/tiles/11/1014/1035.png",
+    "t": 58327,
+    "done": 58853,
+    "status": 200,
+    "failed": null
+   }
+  ],
+  "layerRequests": [
+   {
+    "url": "/api/landing/d83ff9d8877b9c896f57/layer/slope.png",
+    "status": 200
+   },
+   {
+    "url": "/api/landing/d83ff9d8877b9c896f57/layer/slope.png",
+    "status": 200
+   },
+   {
+    "url": "/api/landing/d83ff9d8877b9c896f57/layer/slope.png",
+    "status": 200
+   },
+   {
+    "url": "/api/landing/d83ff9d8877b9c896f57/layer/coverage.png",
+    "status": 200
+   },
+   {
+    "url": "/api/landing/d83ff9d8877b9c896f57/layer/elevation.png",
+    "status": 200
+   },
+   {
+    "url": "/api/landing/d83ff9d8877b9c896f57/layer/slope.png",
+    "status": 200
+   }
+  ]
+ },
+ "console": [
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  },
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  },
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  },
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  },
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  },
+  {
+   "type": "log-error",
+   "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Content)"
+  }
+ ],
+ "failedRequests": [
+  {
+   "url": "/api/coverage?lat=-95&lon=222.510447",
+   "status": 422,
+   "failed": null
+  },
+  {
+   "url": "/api/coverage?lat=95&lon=222.510447",
+   "status": 422,
+   "failed": null
+  },
+  {
+   "url": "/api/coverage?lat=-90.0001&lon=0",
+   "status": 422,
+   "failed": null
+  },
+  {
+   "url": "/api/coverage?lat=-89.463163&lon=400",
+   "status": 422,
+   "failed": null
+  },
+  {
+   "url": "/api/coverage?lat=-89.463163&lon=-361",
+   "status": 422,
+   "failed": null
+  },
+  {
+   "url": "/api/coverage?lat=-95&lon=222.510447",
+   "status": 422,
+   "failed": null
+  }
+ ],
+ "finished": "2026-11-14T01:07:49.590Z"
+}

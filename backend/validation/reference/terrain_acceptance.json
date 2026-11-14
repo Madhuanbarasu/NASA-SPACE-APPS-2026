@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "description": "Hash-bound terrain acceptance (Phase 4 A6) used by validation/terrain_gate.py. A final V-09, V-10, V-11 or V-12 run needs every pair of overlapping registered non-synthetic DEM products to be accepted here, each product identified by its registry key, the SHA-256 of its DEM and the SHA-256 of its error map. Re-registering any listed file with other bytes ends that acceptance. The digest of this file is recorded in every validation run and checked when results are merged.",
+  "accepted_pairs": [
+    {
+      "fine": {
+        "key": "5m:Site01_final_adj_5mpp_surf.tif",
+        "dem_sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+        "error_map_sha256": "cf2cf52f52d2aa51e60d058010d10b0ebfb1d3e920f5a2b9a46eb6c51054ab1c"
+      },
+      "coarse": {
+        "key": "20m:LDEM_80S_20MPP_ADJ.TIF",
+        "dem_sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+        "error_map_sha256": "d64045b8aa58a24010f009ab5667ae02cc06cffa7796784dd5e2d48b3059d8cf"
+      },
+      "scope": "Phase 4 A6, cross-product allowance acceptance (5 m / 20 m / 80 m / 240 m hierarchy)",
+      "measurement": "cross-product allowance at Site01: n 40000, mean -0.0629 m, RMS 0.5267 m; allowance 0.527 m; 4-8 km annulus bilinear RMS 0.4004 m",
+      "evidence": "docs/validation_evidence/terrain_a6_2026-11-10/",
+      "source": "Madhuanbarasu/LUNA-OPS pull request 12, commit 2707db24e48991f199656436e0eabdf6ab9c2158",
+      "approver": "Thilakhaesh K",
+      "approved_date": "2026-11-10"
+    },
+    {
+      "fine": {
+        "key": "5m:Site01_final_adj_5mpp_surf.tif",
+        "dem_sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+        "error_map_sha256": "cf2cf52f52d2aa51e60d058010d10b0ebfb1d3e920f5a2b9a46eb6c51054ab1c"
+      },
+      "coarse": {
+        "key": "80m:LDEM_80S_80MPP_ADJ.tiff",
+        "dem_sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+        "error_map_sha256": "e89306914bb209143f61ba66d341703d75221339424b774c6a1eb3c6c370ffc6"
+      },
+      "scope": "Phase 4 A6, cross-product allowance acceptance (5 m / 20 m / 80 m / 240 m hierarchy)",
+      "measurement": "cross-product allowance at Site01: n 40000, mean -0.0532 m, RMS 1.2239 m; allowance 1.224 m; 4-8 km annulus bilinear RMS 1.1971 m",
+      "evidence": "docs/validation_evidence/terrain_a6_2026-11-10/",
+      "source": "Madhuanbarasu/LUNA-OPS pull request 12, commit 2707db24e48991f199656436e0eabdf6ab9c2158",
+      "approver": "Thilakhaesh K",
+      "approved_date": "2026-11-10"
+    },
+    {
+      "fine": {
+        "key": "20m:LDEM_80S_20MPP_ADJ.TIF",
+        "dem_sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+        "error_map_sha256": "d64045b8aa58a24010f009ab5667ae02cc06cffa7796784dd5e2d48b3059d8cf"
+      },
+      "coarse": {
+        "key": "80m:LDEM_80S_80MPP_ADJ.tiff",
+        "dem_sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+        "error_map_sha256": "e89306914bb209143f61ba66d341703d75221339424b774c6a1eb3c6c370ffc6"
+      },
+      "scope": "Phase 4 A6, cross-product allowance acceptance (5 m / 20 m / 80 m / 240 m hierarchy)",
+      "measurement": "cross-product allowance around Site01: n 27889, mean -0.0251 m, RMS 1.1054 m; allowance 1.105 m; polar-wide circular disk (80-90 S, 113373 points): mean -0.0465 m, RMS 0.5794 m",
+      "evidence": "docs/validation_evidence/terrain_a6_2026-11-10/",
+      "source": "Madhuanbarasu/LUNA-OPS pull request 12, commit 2707db24e48991f199656436e0eabdf6ab9c2158",
+      "approver": "Thilakhaesh K",
+      "approved_date": "2026-11-10"
+    },
+    {
+      "fine": {
+        "key": "5m:Site01_final_adj_5mpp_surf.tif",
+        "dem_sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+        "error_map_sha256": "cf2cf52f52d2aa51e60d058010d10b0ebfb1d3e920f5a2b9a46eb6c51054ab1c"
+      },
+      "coarse": {
+        "key": "240m:LDEM_60S_240MPP_ADJ.TIF",
+        "dem_sha256": "3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34",
+        "error_map_sha256": "6b987570acf20cba527d29a519a9b1fd9d4550e98a81d4b8c1be4903b6d38fab"
+      },
+      "scope": "Phase 4 A6, 240 m cross-product allowance acceptance",
+      "measurement": "cross-product allowance around Site01 (4-8 km annulus): n 4489, mean +0.1504 m, RMS 4.3136 m; allowance 4.314 m",
+      "evidence": "docs/validation_evidence/terrain_a6_240m_2026-11-10/",
+      "source": "LUNA-OPS Phase 4 A6 validation run 2026-11-10",
+      "approver": "Thilakhaesh K",
+      "approved_date": "2026-11-10"
+    },
+    {
+      "fine": {
+        "key": "20m:LDEM_80S_20MPP_ADJ.TIF",
+        "dem_sha256": "09b7ca80f9e6a146f970225d18af72fc02787669b3ef51b888e347d2b6845649",
+        "error_map_sha256": "d64045b8aa58a24010f009ab5667ae02cc06cffa7796784dd5e2d48b3059d8cf"
+      },
+      "coarse": {
+        "key": "240m:LDEM_60S_240MPP_ADJ.TIF",
+        "dem_sha256": "3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34",
+        "error_map_sha256": "6b987570acf20cba527d29a519a9b1fd9d4550e98a81d4b8c1be4903b6d38fab"
+      },
+      "scope": "Phase 4 A6, 240 m cross-product allowance acceptance",
+      "measurement": "cross-product allowance at Site01: n 27889, mean -0.0307 m, RMS 2.7354 m; allowance 2.735 m; polar-wide circular disk (80-90 S): n 113373, mean -0.0465 m, RMS 3.1322 m",
+      "evidence": "docs/validation_evidence/terrain_a6_polar_wide_corrected_2026-11-10/",
+      "source": "LUNA-OPS Phase 4 A6 validation run 2026-11-10",
+      "approver": "Thilakhaesh K",
+      "approved_date": "2026-11-10"
+    },
+    {
+      "fine": {
+        "key": "80m:LDEM_80S_80MPP_ADJ.tiff",
+        "dem_sha256": "82030dcbdd7c4bb0c7d858e9b4b293b9f2cda5a543ba31ec0f42784bd6beee5a",
+        "error_map_sha256": "e89306914bb209143f61ba66d341703d75221339424b774c6a1eb3c6c370ffc6"
+      },
+      "coarse": {
+        "key": "240m:LDEM_60S_240MPP_ADJ.TIF",
+        "dem_sha256": "3f9663257b63022f2b0d5a623482ff3cadddceb91594a4e4ca14a94d8cec8b34",
+        "error_map_sha256": "6b987570acf20cba527d29a519a9b1fd9d4550e98a81d4b8c1be4903b6d38fab"
+      },
+      "scope": "Phase 4 A6, 240 m cross-product allowance acceptance",
+      "measurement": "cross-product allowance at Site01: n 36100, mean -0.000037 m, RMS 2.6199 m; allowance 2.620 m; polar-wide circular disk (80-90 S): n 113373, mean -0.0007 m, RMS 2.9344 m",
+      "evidence": "docs/validation_evidence/terrain_a6_polar_wide_corrected_2026-11-10/",
+      "source": "LUNA-OPS Phase 4 A6 validation run 2026-11-10",
+      "approver": "Thilakhaesh K",
+      "approved_date": "2026-11-10"
+    }
+  ],
+  "pending_pairs": []
+}
+

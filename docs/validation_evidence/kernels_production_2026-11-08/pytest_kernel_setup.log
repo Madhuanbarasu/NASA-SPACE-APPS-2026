@@ -1,0 +1,42 @@
+# pytest tests/test_kernel_setup.py (production set) 2026-11-08T21:25:23Z
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.7.0 -- /home/user/LUNA-OPS/backend/.venv/bin/python
+rootdir: /home/user/LUNA-OPS/backend
+configfile: pytest.ini
+plugins: anyio-4.16.0
+collecting ... collected 8 items
+
+tests/test_kernel_setup.py::test_kernel_sets_live_in_separate_folders PASSED [ 12%]
+tests/test_kernel_setup.py::test_demo_lock_in_production_folder_is_refused_then_migrated SKIPPED [ 25%]
+tests/test_kernel_setup.py::test_install_pipeline_checks_stages_loads_and_commits PASSED [ 37%]
+tests/test_kernel_setup.py::test_failed_install_leaves_existing_set_untouched PASSED [ 50%]
+tests/test_kernel_setup.py::test_set_that_does_not_load_is_not_installed PASSED [ 62%]
+tests/test_kernel_setup.py::test_verify_kernels_passes_then_catches_tampering SKIPPED [ 75%]
+tests/test_kernel_setup.py::test_production_manifest_is_pinned_and_checkable PASSED [ 87%]
+tests/test_kernel_setup.py::test_checksum_listing_parsed_in_any_common_layout PASSED [100%]
+
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_kernel_setup.py:104: needs the sandbox test set as the session's kernel source
+SKIPPED [1] tests/test_kernel_setup.py:195: checks the demo folder with the sandbox set
+========================= 6 passed, 2 skipped in 1.78s =========================
+# exit 0
+
+# pytest tests/test_kernel_setup.py (LUNAOPS_KERNEL_SOURCE=data/kernels_demo) 2026-11-08T21:25:26Z
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.7.0 -- /home/user/LUNA-OPS/backend/.venv/bin/python
+rootdir: /home/user/LUNA-OPS/backend
+configfile: pytest.ini
+plugins: anyio-4.16.0
+collecting ... collected 8 items
+
+tests/test_kernel_setup.py::test_kernel_sets_live_in_separate_folders PASSED [ 12%]
+tests/test_kernel_setup.py::test_demo_lock_in_production_folder_is_refused_then_migrated PASSED [ 25%]
+tests/test_kernel_setup.py::test_install_pipeline_checks_stages_loads_and_commits PASSED [ 37%]
+tests/test_kernel_setup.py::test_failed_install_leaves_existing_set_untouched PASSED [ 50%]
+tests/test_kernel_setup.py::test_set_that_does_not_load_is_not_installed PASSED [ 62%]
+tests/test_kernel_setup.py::test_verify_kernels_passes_then_catches_tampering PASSED [ 75%]
+tests/test_kernel_setup.py::test_production_manifest_is_pinned_and_checkable PASSED [ 87%]
+tests/test_kernel_setup.py::test_checksum_listing_parsed_in_any_common_layout PASSED [100%]
+
+============================== 8 passed in 2.01s ===============================
+# exit 0

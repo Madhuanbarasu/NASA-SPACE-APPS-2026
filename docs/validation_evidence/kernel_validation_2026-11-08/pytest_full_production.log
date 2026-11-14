@@ -1,0 +1,86 @@
+# full suite, production kernels (data/kernels) 2026-11-08T21:38:01Z git 4eb5c3f
+....................................................s...s...ssssss.ssss. [ 22%]
+........................................................................ [ 45%]
+.................................................F...................... [ 67%]
+........................................................................ [ 90%]
+...............................                                          [100%]
+=================================== FAILURES ===================================
+______________________ test_frozen_pole_against_iau_earth ______________________
+
+kernels = KernelSet(profile='production', frame='MOON_ME_DE440_ME421', pa_frame='MOON_PA_DE440', files=[{'role': 'lsk', 'name': ..., coverage_et=(-4734072000.0, 4735368000.0), moon_radii_km=(1737.4, 1737.4, 1737.4), warnings=[], de421_available=True)
+
+    @needs_kernels
+    def test_frozen_pole_against_iau_earth(kernels):
+        """Per epoch (no precession rate assumed): eps(t) = angle(J2000 Z, IAU_EARTH Z) from pxform with the
+        production pck00011; every limb quantity computed with both poles obeys P1/P2/P3 with that epoch's eps.
+        Skipped when the loaded kernels define no Earth orientation (the demo set)."""
+        import spiceypy as sp
+        from lunaops.engine.earth import earth_disk_state, limb_ellipse, limb_extrema, pole_area_bound
+        from lunaops.engine.ephem import Site, earth_geo, sample_target
+        from lunaops import settings
+    
+        try:
+            sp.pxform("IAU_EARTH", "J2000", 0.0)
+        except Exception:  # noqa: BLE001 - SPICE raises when the PCK lacks BODY399 orientation
+            pytest.skip("IAU_EARTH orientation not loaded (production pck00011.tpc not installed)")
+        sv = settings.EARTH_SOLVER
+        t0, t1 = sp.str2et("2000-01-01T12:00:00"), sp.str2et("2049-12-01T00:00:00")
+        ets = np.linspace(t0, t1, 200)
+        site = Site(-89.0, 45.0, 0.0, 0.0)
+        t = sample_target(site, "earth", ets)
+        e, n, u = t.earth["basis"]
+        hp = horizon("sloped", float(np.median(t.az)), float(np.median(t.el)), 0.8)
+        worst = {"eps_arcsec": 0.0, "P1": 0.0, "P2": 0.0, "P3": 0.0}
+        for i, et in enumerate(ets):
+            p_j = t.earth["pole"][i]
+            p_i = np.asarray(sp.pxform("IAU_EARTH", kernels.frame, float(et)))[:, 2]
+            eps = math.acos(min(1.0, float(p_j @ p_i)))
+            worst["eps_arcsec"] = max(worst["eps_arcsec"], math.degrees(eps) * 3600)
+            r = t.unit[i] * t.dist_km[i]
+            Q0, QA, QB = (x[0] for x in limb_ellipse(r[None], p_i[None]))
+            ru, rd, dm, _ = limb_extrema(Q0, QA, QB, u, e, n, math.radians(t.el[i]), math.radians(t.az[i]),
+                                         sv["bracket"], sv["tol"], sv["maxiter"])
+            g1 = earth_geo(t, i)
+            g2 = {**g1, "Q0": Q0, "QA": QA, "QB": QB, "rho_up": ru, "rho_down": rd, "delta_max": dm}
+            eta = (g1["alpha"] - g1["beta"]) * math.sin(eps)
+            for x, y in ((g1["rho_up"], ru), (g1["rho_down"], rd)):
+                assert abs(x - y) <= eta * (1 + 1e-6) + 1e-12
+                worst["P1"] = max(worst["P1"], abs(x - y))
+            s1, s2 = earth_disk_state(hp, g1, force="ellipse"), earth_disk_state(hp, g2, force="ellipse")
+            lim2 = eta * (1 + max(s1["slope_span"], s2["slope_span"]) / min(s1["c_min"], s2["c_min"])) + 1e-12
+            for f in ("g_top", "g_bot"):
+                assert abs(math.radians(s1[f] - s2[f])) <= lim2
+                worst["P2"] = max(worst["P2"], abs(math.radians(s1[f] - s2[f])))
+            assert s1["c"] == s2["c"]
+            if not (math.isnan(s1["f"]) or math.isnan(s2["f"])):
+                assert abs(s1["f"] - s2["f"]) <= pole_area_bound(g1["alpha"], g1["beta"], eta) + 1e-9
+                worst["P3"] = max(worst["P3"], abs(s1["f"] - s2["f"]))
+>       assert math.degrees(worst["P1"]) < 1e-5 and math.degrees(worst["P2"]) < 1e-5
+E       assert (3.1060485246201355e-06 < 1e-05 and 1.816982418390012e-05 < 1e-05)
+E        +  where 3.1060485246201355e-06 = <built-in function degrees>(5.421077348133352e-08)
+E        +    where <built-in function degrees> = math.degrees
+E        +  and   1.816982418390012e-05 = <built-in function degrees>(3.1712325651754875e-07)
+E        +    where <built-in function degrees> = math.degrees
+
+tests/test_phase3_earth.py:338: AssertionError
+=============================== warnings summary ===============================
+tests/test_events_api.py::test_U03_compare_4x3_equals_single_site
+  /home/user/LUNA-OPS/backend/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_kernel_setup.py:104: needs the sandbox test set as the session's kernel source
+SKIPPED [1] tests/test_kernel_setup.py:195: checks the demo folder with the sandbox set
+SKIPPED [1] tests/test_pgda90_integration.py:62: PGDA90 80m files not available on disk
+SKIPPED [1] tests/test_pgda90_integration.py:105: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:136: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:175: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:199: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:227: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:287: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:296: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:333: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+SKIPPED [1] tests/test_pgda90_integration.py:378: PGDA 78 Site01 / PGDA 90 80 m files not on disk (README step 3)
+1 failed, 306 passed, 12 skipped, 1 warning in 471.15s (0:07:51)
+# exit 1
